@@ -1,0 +1,9 @@
+export declare const PARTNER_CREATE_TOPIC = "partner.create";
+export declare const PARTNER_FIND_ALL_TOPIC = "partner.findAll";
+export declare const PARTNER_FIND_ONE_TOPIC = "partner.findOne";
+export declare const PARTNER_UPDATE_TOPIC = "partner.update";
+export declare const PARTNER_DELETE_TOPIC = "partner.delete";
+export declare const PARTNER_EVENT_CREATED_TOPIC = "partner.event.created";
+export declare const PARTNER_EVENT_UPDATED_TOPIC = "partner.event.updated";
+export declare const PARTNER_EVENT_DELETED_TOPIC = "partner.event.deleted";
+export declare const PARTNER_SEARCH_TOPIC = "partner.search";

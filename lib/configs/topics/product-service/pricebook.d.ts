@@ -1,0 +1,15 @@
+export declare const PRODUCT_PRICEBOOK_CREATE_TOPIC = "product.pricebook-create";
+export declare const PRODUCT_PRICEBOOK_UPDATE_TOPIC = "product.pricebook-update";
+export declare const PRODUCT_PRICEBOOK_DELETE_TOPIC = "product.pricebook-delete";
+export declare const PRODUCT_PRICEBOOK_FIND_ONE_TOPIC = "product.pricebook-findOne";
+export declare const PRODUCT_PRICEBOOK_FIND_ALL_TOPIC = "product.pricebook-findAll";
+export declare const PRODUCT_PRICEBOOK_RULE_CREATE_TOPIC = "product.pricebook-rule-create";
+export declare const PRODUCT_PRICEBOOK_RULE_UPDATE_TOPIC = "product.pricebook-rule-update";
+export declare const PRODUCT_PRICEBOOK_RULE_DELETE_TOPIC = "product.pricebook-rule-delete";
+export declare const PRODUCT_PRICEBOOK_RULE_FIND_ONE_TOPIC = "product.pricebook-rule-findOne";
+export declare const PRODUCT_PRICEBOOK_RULE_FIND_ALL_TOPIC = "product.pricebook-rule-findAll";
+export declare const PRODUCT_PRICEBOOK_ITEM_CREATE_TOPIC = "product.pricebook-item-create";
+export declare const PRODUCT_PRICEBOOK_ITEM_UPDATE_TOPIC = "product.pricebook-item-update";
+export declare const PRODUCT_PRICEBOOK_ITEM_DELETE_TOPIC = "product.pricebook-item-delete";
+export declare const PRODUCT_PRICEBOOK_ITEM_FIND_ONE_TOPIC = "product.pricebook-item-findOne";
+export declare const PRODUCT_PRICEBOOK_ITEM_FIND_ALL_TOPIC = "product.pricebook-item-findAll";
