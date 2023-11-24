@@ -4,6 +4,7 @@ import { IStaffProfile } from './iprofile-staff';
 import { IUserDevice } from './iuser-device';
 import { IPosSession } from './ipos-session';
 import { IGroup } from './igroup';
+import { IBranch } from './ibranch';
 export declare namespace IStaff {
     interface ICreate {
         username: string & tags.MinLength<4>;
@@ -19,10 +20,10 @@ export declare namespace IStaff {
         code: string;
         permission?: null | string[];
         groups?: null | IGroup.IGroupResponse[];
-        profileId: string;
         active: boolean;
-        devices?: IUserDevice.IUserDeviceResponse[] | null;
-        sessions?: unknown | IPosSession.IPosSessionResponse[];
+        devices?: null | IUserDevice.IUserDeviceResponse[];
+        sessions?: null | IPosSession.IPosSessionResponse[];
+        branches?: null | IBranch.IBranchResponse[];
     }
     interface IUser {
         user_id?: string;

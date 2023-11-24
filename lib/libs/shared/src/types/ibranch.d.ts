@@ -1,4 +1,6 @@
-import { BaseProfile, BaseProfileResponse, BaseResponse, IShop, IStaff } from '@shared';
+import { BaseProfile, BaseProfileResponse, BaseResponse } from './common.type';
+import { IShop } from './ishop';
+import { IStaff } from './istaff';
 import { tags } from 'typia';
 export declare namespace IBranch {
     interface ICreate extends BaseProfile {

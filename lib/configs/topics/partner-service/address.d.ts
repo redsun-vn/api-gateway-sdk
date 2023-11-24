@@ -1,9 +1,0 @@
-export declare const PARTNER_ADDRESS_CREATE_TOPIC = "partner.address.create";
-export declare const PARTNER_ADDRESS_FIND_ALL_TOPIC = "partner.address.findAll";
-export declare const PARTNER_ADDRESS_FIND_ONE_TOPIC = "partner.address.findOne";
-export declare const PARTNER_ADDRESS_UPDATE_TOPIC = "partner.address.update";
-export declare const PARTNER_ADDRESS_DELETE_TOPIC = "partner.address.delete";
-export declare const PARTNER_ADDRESS_EVENT_CREATED_TOPIC = "partner.address.event.created";
-export declare const PARTNER_ADDRESS_EVENT_UPDATED_TOPIC = "partner.address.event.updated";
-export declare const PARTNER_ADDRESS_EVENT_DELETED_TOPIC = "partner.address.event.deleted";
-export declare const PARTNER_ADDRESS_SEARCH_TOPIC = "partner.address.search";

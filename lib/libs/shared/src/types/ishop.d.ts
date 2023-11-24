@@ -1,6 +1,14 @@
-import { BaseProfile, IBranch, IBrand, IBusinessType, IDomain, IShopConfig, IShopPaymentMethod, IShopSalesChannel, IShopShippingMethod, ISubscription } from '@shared';
+import { BaseProfile, BaseProfileResponse, BaseResponse } from './common.type';
+import { IBranch } from './ibranch';
+import { IBrand } from './ibrand';
+import { IBusinessType } from './ibusiness-type';
+import { IDomain } from './idomain';
+import { IShopConfig } from './ishop-config';
+import { IShopPaymentMethod } from './ishop-payment-method';
+import { IShopSalesChannel } from './ishop-sales-channel';
+import { IShopShippingMethod } from './ishop-shipping-method';
+import { ISubscription } from './isubscription';
 import { tags } from 'typia';
-import { BaseProfileResponse, BaseResponse } from './common.type';
 export declare namespace IShop {
     interface ICreate extends BaseProfile {
         name: string & tags.MinLength<5>;

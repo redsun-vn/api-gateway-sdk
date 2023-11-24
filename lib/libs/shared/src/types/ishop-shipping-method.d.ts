@@ -1,6 +1,6 @@
 import { BaseResponse } from './common.type';
 import { IShippingMethod } from './ishipping-method';
-import { IShippingConfig } from '@shared';
+import { IShippingConfig } from './ishipping-config';
 export declare namespace IShopShippingMethod {
     interface ICreate {
         shipping_method_id: string;

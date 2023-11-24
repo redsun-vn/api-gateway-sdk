@@ -1,9 +1,0 @@
-export declare const PARTNER_TAG_CREATE_TOPIC = "partner.tag.create";
-export declare const PARTNER_TAG_FIND_ALL_TOPIC = "partner.tag.findAll";
-export declare const PARTNER_TAG_FIND_ONE_TOPIC = "partner.tag.findOne";
-export declare const PARTNER_TAG_UPDATE_TOPIC = "partner.tag.update";
-export declare const PARTNER_TAG_DELETE_TOPIC = "partner.tag.delete";
-export declare const PARTNER_TAG_EVENT_CREATED_TOPIC = "partner.tag.event.created";
-export declare const PARTNER_TAG_EVENT_UPDATED_TOPIC = "partner.tag.event.updated";
-export declare const PARTNER_TAG_EVENT_DELETED_TOPIC = "partner.tag.event.deleted";
-export declare const PARTNER_TAG_SEARCH_TOPIC = "partner.tag.search";

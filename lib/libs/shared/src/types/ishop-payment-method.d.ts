@@ -1,6 +1,6 @@
 import { BaseResponse } from './common.type';
 import { IPaymentMethod } from './ipayment-method';
-import { IPaymentConfig } from '@shared';
+import { IPaymentConfig } from './ipayment-config';
 export declare namespace IShopPaymentMethod {
     interface ICreate {
         payment_method_id: string;

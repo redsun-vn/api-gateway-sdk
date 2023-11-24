@@ -51,3 +51,4 @@ export * from './ipartner-tag';
 export * from './ipartner';
 export * from './reservation-service';
 export * from './order-service';
+export * from './inventory-service';
