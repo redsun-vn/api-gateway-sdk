@@ -8,8 +8,9 @@ export declare namespace IPosSession {
         CLOSED = "closed"
     }
     interface ICreate {
-        staff_id: string;
-        branch_id: number;
+        staff_id: number & tags.Type<'int32'>;
+        pos_config_id: number & tags.Type<'int32'>;
+        branch_id: number & tags.Type<'int32'>;
         currencyCode?: string;
         state?: POSSessionState;
         starAt: string & tags.Format<'date-time'>;
@@ -26,10 +27,11 @@ export declare namespace IPosSession {
         totalPaymentsAmount?: number;
         rescue?: boolean;
     }
-    interface IUpdate extends Partial<ICreate> {
+    interface IUpdate extends Omit<Partial<ICreate>, 'pos_config_id'> {
     }
     interface IPosSessionResponse extends BaseResponse {
         staff_id: string | number;
+        pos_config_id: string | number;
         shop_id: number | string;
         branch_id: number | string;
         currencyCode?: string;

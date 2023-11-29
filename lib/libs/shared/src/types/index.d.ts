@@ -52,3 +52,5 @@ export * from './ipartner';
 export * from './reservation-service';
 export * from './order-service';
 export * from './inventory-service';
+export * from './ipos-config';
+export * from './ipos-printer';

@@ -1,13 +1,6 @@
 import { BaseResponse } from './common.type';
 import { ICommentAttachment } from './icomment.attachment';
 export declare namespace IComment {
-    enum CommentEventEmbed {
-        PARTNER = "Partner",
-        DRAFT_ORDER = "DraftOrder",
-        ORDER = "Order",
-        PRODUCT = "Product",
-        PRODUCT_VARIANT = "ProductVariant"
-    }
     interface ICreate {
         staff_id: number;
         object_id: number;
@@ -15,8 +8,8 @@ export declare namespace IComment {
         message: string;
         attributeToApp?: boolean;
         attributeToUser?: boolean;
-        embed: CommentEventEmbed;
-        objectBody?: unknown;
+        embed: string;
+        objectBody?: string;
     }
     interface IUpdate extends Partial<ICreate> {
     }
@@ -28,8 +21,8 @@ export declare namespace IComment {
         message: string;
         attributeToApp: boolean;
         attributeToUser: boolean;
-        embed: CommentEventEmbed;
-        objectBody?: unknown | null;
-        commentAttachments?: unknown | ICommentAttachment.ICommentAttachmentResponse[];
+        embed: string | null;
+        objectBody?: string | null;
+        commentAttachments?: null | ICommentAttachment.ICommentAttachmentResponse[];
     }
 }

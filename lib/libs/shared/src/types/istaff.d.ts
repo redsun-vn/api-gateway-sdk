@@ -8,7 +8,7 @@ import { IBranch } from './ibranch';
 export declare namespace IStaff {
     interface ICreate {
         username: string & tags.MinLength<4>;
-        password: string;
+        password: string & tags.MinLength<3>;
         permission?: string[];
         groups?: string[];
         prefix_code?: string;

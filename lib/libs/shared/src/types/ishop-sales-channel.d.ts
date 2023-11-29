@@ -17,6 +17,6 @@ export declare namespace IShopSalesChannel {
         active: boolean;
         isConnected: boolean;
         salesChannel: ISalesChannel.ISalesChannelResponse;
-        configs?: unknown | ISalesChannelConfig.ISalesChannelConfigResponse[];
+        configs?: null | ISalesChannelConfig.ISalesChannelConfigResponse[];
     }
 }

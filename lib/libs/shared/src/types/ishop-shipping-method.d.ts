@@ -17,6 +17,6 @@ export declare namespace IShopShippingMethod {
         active: boolean;
         isConnected: boolean;
         shippingMethod: IShippingMethod.IShippingMethodResponse;
-        configs?: unknown | IShippingConfig.IShippingConfigResponse[];
+        configs?: null | IShippingConfig.IShippingConfigResponse[];
     }
 }

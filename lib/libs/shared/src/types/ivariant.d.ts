@@ -1,8 +1,14 @@
 import { tags } from 'typia';
 import { BaseResponse } from './common.type';
+import { IStockQuantity } from './inventory-service';
+import { IProduct } from './iproduct';
 export declare namespace IVariant {
+    interface IVariantStockInput {
+        stock_location_id: number & tags.Type<'uint32'>;
+        quantity: number;
+    }
     interface IReqCreateVariant {
-        uom_id: number & tags.Type<'uint32'>;
+        uom_uom_id: number & tags.Type<'uint32'>;
         image_id?: number & tags.Type<'uint32'>;
         product_id: number & tags.Type<'uint32'>;
         barcode: string;
@@ -22,6 +28,7 @@ export declare namespace IVariant {
         weight?: number;
         expiredAt?: string;
         userId?: string;
+        variantStocks?: IVariantStockInput[];
     }
     interface ICreateVariant extends IReqCreateVariant {
         shop_id: number & tags.Type<'uint32'>;
@@ -43,11 +50,12 @@ export declare namespace IVariant {
         weight?: number;
         expiredAt?: string;
         userId?: string;
+        variantStocks?: IVariantStockInput[];
     }
     interface IVariantResponse extends BaseResponse {
         name: string;
         shop_id: number | string | null;
-        uom_id: number | string | null;
+        uom_uom_id: number | string | null;
         image_id: number | string | null;
         product_id: number | string | null;
         barcode: string;
@@ -67,6 +75,8 @@ export declare namespace IVariant {
         expiredAt: string | undefined | null;
         createdBy?: string | undefined | null;
         updatedBy?: string | undefined | null;
+        variantStocks?: IStockQuantity.IStockQuantityResponse[] | null;
+        product?: IProduct.IProductResponse;
     }
     interface IDeleteVariant {
         id: string;

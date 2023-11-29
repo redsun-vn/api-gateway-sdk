@@ -20,6 +20,8 @@ export * as brands from "./brands";
 export * as domains from "./domains";
 export * as groups from "./groups";
 export * as payment_configs from "./payment_configs";
+export * as pos_configs from "./pos_configs";
+export * as pos_printers from "./pos_printers";
 export * as pos_sessions from "./pos_sessions";
 export * as staff from "./staff";
 export * as sales_channel_configs from "./sales_channel_configs";

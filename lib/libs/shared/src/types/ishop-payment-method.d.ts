@@ -17,6 +17,6 @@ export declare namespace IShopPaymentMethod {
         active: boolean;
         isConnected: boolean;
         paymentMethod: IPaymentMethod.IPaymentMethodResponse;
-        configs?: unknown | IPaymentConfig.IPaymentConfigResponse[];
+        configs?: null | IPaymentConfig.IPaymentConfigResponse[];
     }
 }

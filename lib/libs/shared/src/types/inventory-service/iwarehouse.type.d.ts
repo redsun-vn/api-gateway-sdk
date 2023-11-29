@@ -4,8 +4,8 @@ export declare namespace IWarehouse {
     interface ICreateWarehouse {
         shop_id?: number & tags.Type<'uint32'>;
         branch_id: number & tags.Type<'uint32'>;
-        view_location_id?: number & tags.Type<'uint32'>;
         name: string;
+        abbreviation: string;
         country: string;
         city: string;
         state?: string;
@@ -16,6 +16,7 @@ export declare namespace IWarehouse {
     }
     interface IUpdateWarehouse {
         name?: string;
+        abbreviation?: string;
         country?: string;
         city?: string;
         state?: string;
@@ -28,8 +29,10 @@ export declare namespace IWarehouse {
         shop_id: number | string | null;
         branch_id: number | string | null;
         view_location_id: number | string | null;
+        stock_location_id: number | string | null;
         code: string;
         name: string;
+        abbreviation: string;
         country: string;
         city: string;
         state?: string;

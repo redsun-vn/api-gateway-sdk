@@ -2,7 +2,7 @@ import { tags } from 'typia';
 export declare namespace IIdentity {
     interface ICreateUser {
         username: string & tags.MinLength<5>;
-        password: string;
+        password: string & tags.MinLength<3>;
     }
     interface IResetPassword {
         id: string;

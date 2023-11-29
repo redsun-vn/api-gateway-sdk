@@ -7,7 +7,6 @@ export declare namespace IStockLocation {
         warehouse_id: number & tags.Type<'uint32'>;
         parent_id?: number & tags.Type<'uint32'>;
         name: string;
-        barcode: string;
         description?: string;
         active?: boolean;
         isReturnLocation?: boolean;
@@ -20,7 +19,6 @@ export declare namespace IStockLocation {
     }
     interface IUpdateStockLocation {
         name?: string;
-        barcode?: string;
         description?: string;
         active?: boolean;
         isReturnLocation?: boolean;
@@ -36,7 +34,7 @@ export declare namespace IStockLocation {
         warehouse_id?: number | string | null;
         parent_id?: number | string | null;
         name: string;
-        barcode: string;
+        code: string;
         description?: string;
         active: boolean;
         isReturnLocation: boolean;
