@@ -29,10 +29,10 @@ export declare namespace IWarehouse {
         shop_id: number | string | null;
         branch_id: number | string | null;
         view_location_id: number | string | null;
-        stock_location_id: number | string | null;
+        stock_location_id?: number | string | null;
         code: string;
         name: string;
-        abbreviation: string;
+        abbreviation?: string;
         country: string;
         city: string;
         state?: string;

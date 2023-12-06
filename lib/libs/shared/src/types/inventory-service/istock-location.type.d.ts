@@ -34,7 +34,7 @@ export declare namespace IStockLocation {
         warehouse_id?: number | string | null;
         parent_id?: number | string | null;
         name: string;
-        code: string;
+        code?: string;
         description?: string;
         active: boolean;
         isReturnLocation: boolean;

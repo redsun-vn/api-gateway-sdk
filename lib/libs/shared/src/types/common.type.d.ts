@@ -17,6 +17,10 @@ export interface IFiltering {
     rule: string;
     value: string;
 }
+export interface IFilteringMultiple {
+    andFilter: IFiltering[];
+    orFilter: IFiltering[];
+}
 export interface ISearch {
     s: string;
     properties: string[];
@@ -29,6 +33,7 @@ export interface ISearchOptions {
     pagination?: IPaginationOptions;
     sort?: ISorting;
     filter?: IFiltering;
+    filters?: IFilteringMultiple;
     search?: ISearch;
     shopId?: string;
 }
@@ -76,6 +81,8 @@ export interface BaseProfile {
     phone?: string & tags.Pattern<'^(0[0-9]{2})?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$'>;
     country?: string;
     province?: string;
+    ward?: string;
+    district?: string;
     city?: string;
     state?: string;
     address1?: string;
@@ -85,8 +92,18 @@ export interface BaseProfileResponse {
     phone?: string | null;
     country?: string | null;
     province?: string | null;
+    ward?: string | null;
+    district?: string | null;
     city?: string | null;
     state?: string | null;
     address1?: string | null;
     email?: string | null;
+}
+export interface IQuery {
+    page?: number;
+    limit?: number;
+    filter?: string;
+    filters?: string;
+    search?: string;
+    sort?: string;
 }

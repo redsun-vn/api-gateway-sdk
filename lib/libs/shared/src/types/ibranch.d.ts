@@ -5,7 +5,7 @@ import { tags } from 'typia';
 export declare namespace IBranch {
     interface ICreate extends BaseProfile {
         name: string & tags.MinLength<5>;
-        active?: number;
+        active?: boolean;
         zipcode?: string;
         latitude?: string;
         longitude?: string;
@@ -19,7 +19,7 @@ export declare namespace IBranch {
         latitude?: string;
         longitude?: string;
         timeZone?: string;
-        active?: number;
+        active?: boolean;
         isDefault?: boolean;
     }
     interface IBranchResponse extends BaseProfileResponse, BaseResponse {

@@ -5,3 +5,4 @@ export * from './camelize';
 export * from './createConsumerGroupId';
 export * from './file';
 export * from './typeormHelper';
+export * from './validQuery';

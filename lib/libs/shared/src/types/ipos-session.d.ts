@@ -9,6 +9,7 @@ export declare namespace IPosSession {
     }
     interface ICreate {
         staff_id: number & tags.Type<'int32'>;
+        name?: string & tags.Format<'uuid'>;
         pos_config_id: number & tags.Type<'int32'>;
         branch_id: number & tags.Type<'int32'>;
         currencyCode?: string;
@@ -32,6 +33,7 @@ export declare namespace IPosSession {
     interface IPosSessionResponse extends BaseResponse {
         staff_id: string | number;
         pos_config_id: string | number;
+        name?: string | null;
         shop_id: number | string;
         branch_id: number | string;
         currencyCode?: string;

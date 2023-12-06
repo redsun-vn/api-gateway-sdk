@@ -12,6 +12,7 @@ export declare namespace IStaff {
         permission?: string[];
         groups?: string[];
         prefix_code?: string;
+        branches?: string[];
     }
     interface IStaffResponse extends BaseResponse, BaseProfileResponse {
         shop_id: string;

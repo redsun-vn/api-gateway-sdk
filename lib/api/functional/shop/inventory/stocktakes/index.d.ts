@@ -1,8 +1,9 @@
-import type { IConnection, Primitive } from "@nestia/fetcher";
-import type { IResponse, IResponsePagination } from "../../../../../libs/shared/src/types/common.type";
+import type { IConnection, Primitive, Resolved } from "@nestia/fetcher";
+import type { IQuery, IResponse, IResponsePagination } from "../../../../../libs/shared/src/types/common.type";
 import type { IStocktake } from "../../../../../libs/shared/src/types/inventory-service/istocktake.type";
-export declare function findAll(connection: IConnection): Promise<findAll.Output>;
+export declare function findAll(connection: IConnection, query: findAll.Query): Promise<findAll.Output>;
 export declare namespace findAll {
+    type Query = Resolved<IQuery>;
     type Output = Primitive<IResponse<IResponsePagination<IStocktake.IStocktakeResponse>>>;
     const METADATA: {
         readonly method: "GET";
@@ -14,7 +15,7 @@ export declare namespace findAll {
         };
         readonly status: null;
     };
-    const path: () => string;
+    const path: (query: findAll.Query) => string;
 }
 export declare function findOne(connection: IConnection, id: string): Promise<findOne.Output>;
 export declare namespace findOne {

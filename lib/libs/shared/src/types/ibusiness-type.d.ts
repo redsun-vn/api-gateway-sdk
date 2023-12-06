@@ -7,7 +7,6 @@ export declare namespace IBusinessType {
         icon?: string;
         metadata?: string;
         category_business_id: string;
-        code: string;
     }
     interface IUpdate {
         name?: string;
@@ -15,7 +14,6 @@ export declare namespace IBusinessType {
         description?: string;
         icon?: string;
         metadata?: string;
-        code?: string;
     }
     interface IBusinessTypeResponse extends BaseResponse {
         name: string;
@@ -24,6 +22,6 @@ export declare namespace IBusinessType {
         icon?: null | string;
         metadata?: string | null;
         active: boolean;
-        code: string | null;
+        code?: string | null;
     }
 }
