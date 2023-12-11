@@ -1,13 +1,13 @@
 import type { IConnection, Primitive, Resolved } from "@nestia/fetcher";
-import type { IQuery, IResponse, IResponsePagination } from "../../../../libs/shared/src/types/common.type";
-import type { IStaff } from "../../../../libs/shared/src/types/istaff";
+import type { IQuery, IResponse, IResponsePagination } from "../../../../../libs/shared/src/types/common.type";
+import type { IStockRouter } from "../../../../../libs/shared/src/types/inventory-service/istock-router.type";
 export declare function findAll(connection: IConnection, query: findAll.Query): Promise<findAll.Output>;
 export declare namespace findAll {
     type Query = Resolved<IQuery>;
-    type Output = Primitive<IResponse<IResponsePagination<IStaff.IStaffResponse>>>;
+    type Output = Primitive<IResponse<IResponsePagination<IStockRouter.IStockRouterResponse>>>;
     const METADATA: {
         readonly method: "GET";
-        readonly path: "/shop/staffs";
+        readonly path: "/shop/inventory/stock-routers";
         readonly request: null;
         readonly response: {
             readonly type: "application/json";
@@ -19,10 +19,10 @@ export declare namespace findAll {
 }
 export declare function findOne(connection: IConnection, id: string): Promise<findOne.Output>;
 export declare namespace findOne {
-    type Output = Primitive<IResponse<string | IStaff.IStaffResponse>>;
+    type Output = Primitive<IResponse<IStockRouter.IStockRouterResponse>>;
     const METADATA: {
         readonly method: "GET";
-        readonly path: "/shop/staffs/:id";
+        readonly path: "/shop/inventory/stock-routers/:id";
         readonly request: null;
         readonly response: {
             readonly type: "application/json";
@@ -32,13 +32,13 @@ export declare namespace findOne {
     };
     const path: (id: string) => string;
 }
-export declare function create(connection: IConnection, data: create.Input): Promise<create.Output>;
+export declare function create(connection: IConnection, input: create.Input): Promise<create.Output>;
 export declare namespace create {
-    type Input = Primitive<IStaff.ICreate>;
-    type Output = Primitive<IResponse<IStaff.IStaffResponse>>;
+    type Input = Primitive<IStockRouter.ICreateStockRouter>;
+    type Output = Primitive<IResponse<IStockRouter.IStockRouterResponse>>;
     const METADATA: {
         readonly method: "POST";
-        readonly path: "/shop/staffs";
+        readonly path: "/shop/inventory/stock-routers";
         readonly request: {
             readonly type: "application/json";
             readonly encrypted: false;
@@ -51,13 +51,17 @@ export declare namespace create {
     };
     const path: () => string;
 }
-export declare function $delete(connection: IConnection, id: string): Promise<$delete.Output>;
-export declare namespace $delete {
-    type Output = Primitive<IResponse<false | true>>;
+export declare function update(connection: IConnection, id: string, input: update.Input): Promise<update.Output>;
+export declare namespace update {
+    type Input = Primitive<IStockRouter.IUpdateStockRouter>;
+    type Output = Primitive<IResponse<IStockRouter.IStockRouterResponse>>;
     const METADATA: {
-        readonly method: "DELETE";
-        readonly path: "/shop/staffs/:id";
-        readonly request: null;
+        readonly method: "PUT";
+        readonly path: "/shop/inventory/stock-routers/:id";
+        readonly request: {
+            readonly type: "application/json";
+            readonly encrypted: false;
+        };
         readonly response: {
             readonly type: "application/json";
             readonly encrypted: false;
@@ -66,17 +70,13 @@ export declare namespace $delete {
     };
     const path: (id: string) => string;
 }
-export declare function update(connection: IConnection, data: update.Input, id: string): Promise<update.Output>;
-export declare namespace update {
-    type Input = Primitive<IStaff.IUpdate>;
+export declare function $delete(connection: IConnection, id: string): Promise<$delete.Output>;
+export declare namespace $delete {
     type Output = Primitive<IResponse<false | true>>;
     const METADATA: {
-        readonly method: "PUT";
-        readonly path: "/shop/staffs/:id";
-        readonly request: {
-            readonly type: "application/json";
-            readonly encrypted: false;
-        };
+        readonly method: "DELETE";
+        readonly path: "/shop/inventory/stock-routers/:id";
+        readonly request: null;
         readonly response: {
             readonly type: "application/json";
             readonly encrypted: false;

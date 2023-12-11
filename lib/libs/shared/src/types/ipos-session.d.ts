@@ -1,5 +1,6 @@
 import { tags } from 'typia';
 import { BaseResponse } from './common.type';
+import { IStaff } from './istaff';
 export declare namespace IPosSession {
     enum POSSessionState {
         OPENING = "opening",
@@ -15,8 +16,9 @@ export declare namespace IPosSession {
         currencyCode?: string;
         state?: POSSessionState;
         starAt: string & tags.Format<'date-time'>;
-        stopAt: string & tags.Format<'date-time'>;
+        stopAt?: string & tags.Format<'date-time'>;
         openingNotes?: string;
+        closedNotes?: string;
         hasCashControl?: boolean;
         orderCount?: number;
         cashRegisterBalanceEndReal?: number;
@@ -39,8 +41,9 @@ export declare namespace IPosSession {
         currencyCode?: string;
         state: POSSessionState;
         starAt: string;
-        stopAt: string;
+        stopAt?: null | string;
         openingNotes?: null | string;
+        closedNotes?: null | string;
         hasCashControl?: null | boolean;
         orderCount?: null | number;
         cashRegisterBalanceEndReal?: null | number;
@@ -50,6 +53,7 @@ export declare namespace IPosSession {
         cashRegisterDifference?: null | number;
         cashRealTransaction?: null | number;
         totalPaymentsAmount?: null | number;
+        staff?: IStaff.IStaffResponse | null;
         rescue?: null | boolean;
     }
 }

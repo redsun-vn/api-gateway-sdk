@@ -8,6 +8,7 @@ export declare namespace ISalesChannel {
         description?: string;
         icon: string;
         attachment_id?: number;
+        warehouse_id?: number;
         metadata?: string;
     }
     interface IUpdate extends Omit<Partial<ICreate>, 'code_prefix'> {
@@ -18,7 +19,8 @@ export declare namespace ISalesChannel {
         active?: boolean;
         description?: string | null;
         icon: string;
-        attachment_id?: number | null;
+        attachment_id?: string | number | null;
+        warehouse_id?: string | number | null;
         metadata?: string | null;
     }
 }

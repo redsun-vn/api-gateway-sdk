@@ -6,3 +6,4 @@ export * from './createConsumerGroupId';
 export * from './file';
 export * from './typeormHelper';
 export * from './validQuery';
+export * from './auto-generate-code';

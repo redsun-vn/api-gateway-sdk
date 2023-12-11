@@ -8,7 +8,6 @@ export declare namespace IStockQuantity {
         varient_id: number & tags.Type<'uint32'>;
         uom_uom_id: number & tags.Type<'uint32'>;
         stock_location_id: number & tags.Type<'uint32'>;
-        lot_id: number & tags.Type<'uint32'>;
         inventoryQuantity: number;
         availableQuantity: number;
         lastStocktakeQuantity?: number;
@@ -26,7 +25,6 @@ export declare namespace IStockQuantity {
         variant_id: number | string | null;
         uom_uom_id: number | string | null;
         stock_location_id?: number | string | null;
-        lot_id: number | string | null;
         inventoryQuantity: number | string;
         availableQuantity: number | string;
         lastStocktakeQuantity?: number | string;

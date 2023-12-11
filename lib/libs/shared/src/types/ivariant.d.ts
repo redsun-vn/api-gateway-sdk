@@ -26,9 +26,9 @@ export declare namespace IVariant {
     interface IReqCreateVariant {
         image_id?: number & tags.Type<'uint32'>;
         product_id: number & tags.Type<'uint32'>;
-        barcode: string;
         name: string;
-        sku: string;
+        barcode?: string;
+        sku?: string;
         active: boolean;
         icon?: string;
         price: number;

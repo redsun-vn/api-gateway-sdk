@@ -9,3 +9,6 @@ export * from './istock-picking.type';
 export * from './istock-quantity.type';
 export * from './istocktake-line.type';
 export * from './istocktake.type';
+export * from './istock-rule.type';
+export * from './istock-router.type';
+export * from './igroup-warehouse.type';

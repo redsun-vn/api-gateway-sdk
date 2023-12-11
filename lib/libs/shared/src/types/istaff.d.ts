@@ -6,13 +6,13 @@ import { IPosSession } from './ipos-session';
 import { IGroup } from './igroup';
 import { IBranch } from './ibranch';
 export declare namespace IStaff {
-    interface ICreate {
-        username: string & tags.MinLength<4>;
+    interface ICreate extends IStaffProfile.ICreate {
         password: string & tags.MinLength<3>;
         permission?: string[];
         groups?: string[];
         prefix_code?: string;
         branches?: string[];
+        active?: boolean;
     }
     interface IStaffResponse extends BaseResponse, BaseProfileResponse {
         shop_id: string;
@@ -33,11 +33,12 @@ export declare namespace IStaff {
     interface IResetPassword {
         password: string;
     }
-    interface IUpdate {
-        active?: boolean;
+    interface IUpdate extends IStaffProfile.IUpdate {
+        password?: string & tags.MinLength<3>;
         permission?: string[];
         groups?: string[];
         branches?: string[];
+        active?: boolean;
     }
     interface IPermissionMapping {
         permission: string[];

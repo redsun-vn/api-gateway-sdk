@@ -54,7 +54,7 @@ export declare namespace create {
 export declare function update(connection: IConnection, data: update.Input, id: string): Promise<update.Output>;
 export declare namespace update {
     type Input = Primitive<IUserDevice.IUpdate>;
-    type Output = Primitive<IResponse<false | true>>;
+    type Output = Primitive<IResponse<IUserDevice.IUserDeviceResponse>>;
     const METADATA: {
         readonly method: "PUT";
         readonly path: "/shop/staff/user-devices/:id";

@@ -12,7 +12,8 @@ export declare namespace IStockLocation {
         isReturnLocation?: boolean;
         isReplenishLocation?: boolean;
         locationType: string;
-        parentPath: string;
+        parentPath?: string;
+        parentFlattenIds?: string;
         cyclicInventoryFrequency?: number;
         lastStocktakeDate?: string;
         nextStocktakeDate?: string;
@@ -25,6 +26,7 @@ export declare namespace IStockLocation {
         isReplenishLocation?: boolean;
         locationType?: string;
         parentPath?: string;
+        parentFlattenIds?: string;
         cyclicInventoryFrequency?: number;
         lastStocktakeDate?: string;
         nextStocktakeDate?: string;
@@ -41,6 +43,7 @@ export declare namespace IStockLocation {
         isReplenishLocation: boolean;
         locationType: string;
         parentPath: string;
+        parentFlattenIds?: string | null | undefined;
         cyclicInventoryFrequency?: number | string;
         lastStocktakeDate?: string | null;
         nextStocktakeDate?: string | null;
