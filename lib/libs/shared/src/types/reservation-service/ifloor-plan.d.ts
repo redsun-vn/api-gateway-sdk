@@ -16,7 +16,7 @@ export declare namespace IFloorPlan {
         name: string;
         description?: string | null;
         active: boolean;
-        tables?: unknown | ITable.ITableResponse[];
-        rooms?: unknown | IRoom.IRoomResponse[];
+        tables?: null | ITable.ITableResponse[];
+        rooms?: null | IRoom.IRoomResponse[];
     }
 }

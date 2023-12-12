@@ -43,9 +43,9 @@ export declare namespace IReservation {
         status: ReservationStatus;
         reservationCode: string;
         tags?: string | null;
-        productReservations?: unknown | IProductReservation.IProductReservationResponse[];
-        tables?: unknown | ITable.ITableResponse[];
-        rooms?: unknown | IRoom.IRoomResponse[];
+        productReservations?: null | IProductReservation.IProductReservationResponse[];
+        tables?: null | ITable.ITableResponse[];
+        rooms?: null | IRoom.IRoomResponse[];
     }
     interface IReservationOverlap {
         message: string;

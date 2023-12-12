@@ -55,7 +55,7 @@ export declare namespace IPartner {
         website?: string | null;
         note?: string | null;
         gender?: number | null;
-        tags?: unknown | IPartnerTag.IPartnerTagResponse[];
-        addresses?: unknown | IPartnerAddress.IPartnerAddressResponse;
+        tags?: null | IPartnerTag.IPartnerTagResponse[];
+        addresses?: null | IPartnerAddress.IPartnerAddressResponse;
     }
 }

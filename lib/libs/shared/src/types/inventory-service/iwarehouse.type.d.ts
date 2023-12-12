@@ -9,12 +9,12 @@ export declare namespace IWarehouse {
         group_warehouse_id: number & tags.Type<'uint32'>;
         name: string;
         abbreviation: string;
-        country: string;
-        city: string;
+        country?: string;
+        city?: string;
         state?: string;
-        address: string;
-        latitude: string;
-        longitude: string;
+        address?: string;
+        latitude?: string;
+        longitude?: string;
         sequence: number;
     }
     interface IUpdateWarehouse {

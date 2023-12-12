@@ -2,6 +2,8 @@ import { tags } from 'typia';
 import { BaseResponse } from '../common.type';
 import { IStockLocation } from './istock-location.type';
 import { IStockMove } from './istock-move.type';
+import { IStockPicking } from './istock-picking.type';
+import { IStockPickingType } from './istock-picking-type.type';
 export declare namespace IStockMoveLine {
     interface ICreateStockMoveLine {
         shop_id?: number & tags.Type<'uint32'>;
@@ -53,10 +55,10 @@ export declare namespace IStockMoveLine {
         transferQuantity: number | string;
         requestTransferQuantity: number | string;
         receiveQuantity: number | string;
-        stockMove?: IStockMove.IStockMoveResponse;
-        picking?: unknown;
-        pickingType?: unknown;
-        locationSrc?: IStockLocation.IStockLocationResponse;
-        locationDest?: IStockLocation.IStockLocationResponse;
+        stockMove?: IStockMove.IStockMoveResponse | null;
+        picking?: IStockPicking.IStockPickingResponse | null;
+        pickingType?: IStockPickingType.IStockPickingTypeResponse | null;
+        locationSrc?: IStockLocation.IStockLocationResponse | null;
+        locationDest?: IStockLocation.IStockLocationResponse | null;
     }
 }

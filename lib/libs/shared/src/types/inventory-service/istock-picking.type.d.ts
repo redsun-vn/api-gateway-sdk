@@ -1,6 +1,7 @@
 import { tags } from 'typia';
 import { BaseResponse } from '../common.type';
 import { IStockLocation } from './istock-location.type';
+import { IStockPickingType } from './istock-picking-type.type';
 export declare namespace IStockPicking {
     interface ICreateStockPicking {
         shop_id?: number & tags.Type<'uint32'>;
@@ -46,7 +47,7 @@ export declare namespace IStockPicking {
         dateDeadline?: string | Date;
         dateDone?: string | Date;
         printed?: boolean;
-        pickingType?: unknown;
+        pickingType?: IStockPickingType.IStockPickingTypeResponse;
         locationSrc?: IStockLocation.IStockLocationResponse;
         locationDest?: IStockLocation.IStockLocationResponse;
     }

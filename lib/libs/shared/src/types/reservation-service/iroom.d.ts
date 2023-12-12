@@ -17,6 +17,6 @@ export declare namespace IRoom {
         name: string;
         description?: string | null;
         active: boolean;
-        tables?: unknown | ITable.ITableResponse[];
+        tables?: null | ITable.ITableResponse[];
     }
 }

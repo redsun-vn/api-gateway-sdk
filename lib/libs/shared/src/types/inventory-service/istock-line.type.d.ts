@@ -1,5 +1,6 @@
 import { tags } from 'typia';
 import { BaseResponse } from '../common.type';
+import { IStockLot } from './istock-lot.type';
 export declare namespace IStockLine {
     interface ICreateStockLine {
         shop_id?: number & tags.Type<'uint32'>;
@@ -25,6 +26,6 @@ export declare namespace IStockLine {
         staff_id: number | string | null;
         barcode: string;
         qantity: number | string;
-        lot?: unknown | null;
+        lot?: IStockLot.IStockLotResponse | null;
     }
 }

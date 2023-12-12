@@ -45,8 +45,8 @@ export declare namespace IStockPickingType {
         countPickingReady?: number | string;
         countPickingWaiting?: number | string;
         countPickingLate?: number | string;
-        defaultLocationSrc?: IStockLocation.IStockLocationResponse;
-        defaultLocationDest?: IStockLocation.IStockLocationResponse;
-        warehouse?: IWarehouse.IWarehouseResponse;
+        defaultLocationSrc?: IStockLocation.IStockLocationResponse | null;
+        defaultLocationDest?: IStockLocation.IStockLocationResponse | null;
+        warehouse?: IWarehouse.IWarehouseResponse | null;
     }
 }

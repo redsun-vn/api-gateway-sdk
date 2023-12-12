@@ -46,7 +46,7 @@ export declare namespace IStockLot {
         originQuantity?: number | string;
         expiredAt: Date | string | null;
         warehouseAt: Date | string | null;
-        warehouse?: IWarehouse.IWarehouseResponse;
-        stockQuantity?: IStockQuantity.IStockQuantityResponse;
+        warehouse?: IWarehouse.IWarehouseResponse | null;
+        stockQuantity?: IStockQuantity.IStockQuantityResponse | null;
     }
 }

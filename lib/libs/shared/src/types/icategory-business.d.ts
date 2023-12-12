@@ -21,6 +21,6 @@ export declare namespace ICategoryBusiness {
         description?: null | string;
         icon?: null | string;
         metadata?: string | null;
-        businessTypes?: unknown | IBusinessType.IBusinessTypeResponse[];
+        businessTypes?: null | IBusinessType.IBusinessTypeResponse[];
     }
 }

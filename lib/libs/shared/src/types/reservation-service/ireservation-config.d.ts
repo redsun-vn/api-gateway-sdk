@@ -8,7 +8,7 @@ export declare namespace IReservationConfig {
     }
     interface IReservationConfigResponse extends BaseResponse {
         shop_id: number | string;
-        product_ids?: unknown | string[] | null;
-        staff_ids?: unknown | string[] | null;
+        product_ids?: string[] | null;
+        staff_ids?: string[] | null;
     }
 }

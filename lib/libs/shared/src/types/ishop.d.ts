@@ -39,10 +39,10 @@ export declare namespace IShop {
         brand?: null | IBrand.IBrandResponse;
         domain?: null | IDomain.IDomainResponse;
         config?: null | IShopConfig.IShopConfigResponse;
-        branches?: unknown | IBranch.IBranchResponse[];
-        subscriptions?: unknown | ISubscription.ISubscriptionResponse[];
-        shopPaymentMethods?: unknown | IShopPaymentMethod.IShopPaymentMethodResponse[];
-        shopShippingMethods?: unknown | IShopShippingMethod.IShopShippingMethodResponse[];
-        shopSalesChannels?: unknown | IShopSalesChannel.IShopSalesChannelResponse[];
+        branches?: null | IBranch.IBranchResponse[];
+        subscriptions?: null | ISubscription.ISubscriptionResponse[];
+        shopPaymentMethods?: null | IShopPaymentMethod.IShopPaymentMethodResponse[];
+        shopShippingMethods?: null | IShopShippingMethod.IShopShippingMethodResponse[];
+        shopSalesChannels?: null | IShopSalesChannel.IShopSalesChannelResponse[];
     }
 }
