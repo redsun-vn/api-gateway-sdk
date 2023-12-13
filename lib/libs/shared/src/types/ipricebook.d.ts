@@ -1,11 +1,13 @@
 import { tags } from 'typia';
 import { BaseResponse } from './common.type';
+import { IPricebookItem } from './ipricebook-item.type';
+import { IPricebookRule } from './ipricebook-rule.type';
 export declare namespace IPricebook {
     interface IReqCreatePricebook {
         name: string;
         effectiveAt?: Date & tags.Format<'date-time'>;
         expiredAt?: Date & tags.Format<'date-time'>;
-        active: boolean;
+        active?: boolean;
         userId?: string;
     }
     interface ICreatePricebook extends IReqCreatePricebook {
@@ -27,6 +29,8 @@ export declare namespace IPricebook {
         expiredAt?: string | null;
         createdBy?: string | null;
         updatedBy?: string | null;
+        priceBookItems?: IPricebookItem.IPricebookItemResponse[] | null;
+        priceBookRules?: IPricebookRule.IPricebookRuleResponse[] | null;
     }
     interface IDeletePricebook {
         id: string;

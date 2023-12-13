@@ -37,12 +37,12 @@ export declare namespace IWarehouse {
         code: string;
         name: string;
         abbreviation?: string;
-        country: string;
-        city: string;
-        state?: string;
-        address: string;
-        latitude: string;
-        longitude: string;
+        country?: string | null;
+        city?: string | null;
+        state?: string | null;
+        address?: string | null;
+        latitude?: string | null;
+        longitude?: string | null;
         sequence: number | string;
         viewLocation?: IStockLocation.IStockLocationResponse;
         stockLocation?: IStockLocation.IStockLocationResponse;

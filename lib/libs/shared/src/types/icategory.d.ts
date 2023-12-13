@@ -6,6 +6,7 @@ export declare namespace ICategory {
         parent_id?: number & tags.Type<'uint32'>;
         image_id?: number & tags.Type<'uint32'>;
         icon?: string;
+        active?: boolean;
         description?: string;
         htmlContent?: string;
         userId?: string;
@@ -14,29 +15,31 @@ export declare namespace ICategory {
         shop_id: number & tags.Type<'uint32'>;
     }
     interface IUpdateCategory {
-        name: string;
+        name?: string;
         active?: boolean;
         icon?: string | null | undefined;
-        parent_id?: number & tags.Type<'uint32'>;
         image_id?: number & tags.Type<'uint32'>;
-        description?: string | null | undefined;
-        htmlContent?: string | null | undefined;
-        userId?: string | null | undefined;
+        description?: string | null;
+        htmlContent?: string | null;
+        userId?: string | null;
     }
     interface IDetailResponse extends BaseResponse {
         shop_id: string | number | null;
         name: string;
-        description?: string | undefined | null;
-        htmlContent?: string | undefined | null;
-        icon: string | undefined | null;
-        parent_id: string | number | null;
+        description?: string | null;
+        htmlContent?: string | null;
+        icon?: string | null;
+        parent_id?: string | number | null;
         image_id?: string | number | null;
-        level: number;
+        level?: number | string;
         active?: boolean;
-        categoriesSlug: string | undefined | null;
-        parentName?: string | undefined | null;
-        sortOrder?: number | undefined | null;
-        createdBy: string | undefined | null;
-        updatedBy: string | undefined | null;
+        categoriesSlug?: string | null;
+        categoryFlattened?: string | null;
+        parentName?: string | null;
+        sortOrder?: number | null;
+        createdBy?: string | null;
+        updatedBy?: string | null;
+        parent?: IDetailResponse | null;
+        childrens?: IDetailResponse[] | null;
     }
 }
