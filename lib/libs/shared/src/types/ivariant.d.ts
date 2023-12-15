@@ -91,9 +91,9 @@ export declare namespace IVariant {
         expiredAt: string | undefined | null;
         createdBy?: string | undefined | null;
         updatedBy?: string | undefined | null;
-        unit: IUnit.IDetailUnitResponse;
+        unit?: IUnit.IDetailUnitResponse | null;
         variantStocks?: IStockQuantity.IStockQuantityResponse[] | null;
-        product?: IProduct.IProductResponse;
+        product?: IProduct.IProductResponse | null;
     }
     interface IDeleteVariant {
         id: string;

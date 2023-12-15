@@ -24,10 +24,10 @@ export declare namespace IUnit {
         product_id: string | number | null;
         variant_id?: string | number | null;
         uom_uom_id?: string | number | null;
-        is_default: boolean | string;
-        rounding: number | string;
-        factor: number | string;
-        conversion: number | string;
+        isDefault?: boolean | string;
+        rounding?: number | string;
+        factor?: number | string;
+        conversion?: number | string;
         uomUom?: IUomUom.IDetailUomUomResponse;
         variant?: IVariant.IVariantResponse;
     }

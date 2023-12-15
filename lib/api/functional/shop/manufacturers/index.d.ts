@@ -1,13 +1,13 @@
 import type { IConnection, Primitive, Resolved } from "@nestia/fetcher";
-import type { IQuery, IResponse, IResponsePagination } from "../../../../../libs/shared/src/types/common.type";
-import type { IAttribute } from "../../../../../libs/shared/src/types/iattribute";
+import type { IQuery, IResponse, IResponsePagination } from "../../../../libs/shared/src/types/common.type";
+import type { IManufacturer } from "../../../../libs/shared/src/types/imanufacturer";
 export declare function findAll(connection: IConnection, query: findAll.Query): Promise<findAll.Output>;
 export declare namespace findAll {
     type Query = Resolved<IQuery>;
-    type Output = Primitive<IResponse<IResponsePagination<IAttribute.IDetailAttributeResponse>>>;
+    type Output = Primitive<IResponse<IResponsePagination<IManufacturer.IDetailManufacturerResponse>>>;
     const METADATA: {
         readonly method: "GET";
-        readonly path: "/shop/product/attributes";
+        readonly path: "/shop/manufacturers";
         readonly request: null;
         readonly response: {
             readonly type: "application/json";
@@ -19,10 +19,10 @@ export declare namespace findAll {
 }
 export declare function findOne(connection: IConnection, id: string): Promise<findOne.Output>;
 export declare namespace findOne {
-    type Output = Primitive<IResponse<IAttribute.IDetailAttributeResponse>>;
+    type Output = Primitive<IResponse<IManufacturer.IDetailManufacturerResponse>>;
     const METADATA: {
         readonly method: "GET";
-        readonly path: "/shop/product/attributes/:id";
+        readonly path: "/shop/manufacturers/:id";
         readonly request: null;
         readonly response: {
             readonly type: "application/json";
@@ -34,11 +34,11 @@ export declare namespace findOne {
 }
 export declare function create(connection: IConnection, input: create.Input): Promise<create.Output>;
 export declare namespace create {
-    type Input = Primitive<IAttribute.ICreateAttribute>;
-    type Output = Primitive<IResponse<IAttribute.IDetailAttributeResponse>>;
+    type Input = Primitive<IManufacturer.ICreateManufacturer>;
+    type Output = Primitive<IResponse<IManufacturer.IDetailManufacturerResponse>>;
     const METADATA: {
         readonly method: "POST";
-        readonly path: "/shop/product/attributes";
+        readonly path: "/shop/manufacturers";
         readonly request: {
             readonly type: "application/json";
             readonly encrypted: false;
@@ -53,11 +53,11 @@ export declare namespace create {
 }
 export declare function update(connection: IConnection, id: string, input: update.Input): Promise<update.Output>;
 export declare namespace update {
-    type Input = Primitive<IAttribute.IUpdateAttribute>;
-    type Output = Primitive<IResponse<IAttribute.IDetailAttributeResponse>>;
+    type Input = Primitive<IManufacturer.IUpdateManufacturer>;
+    type Output = Primitive<IResponse<IManufacturer.IDetailManufacturerResponse>>;
     const METADATA: {
         readonly method: "PUT";
-        readonly path: "/shop/product/attributes/:id";
+        readonly path: "/shop/manufacturers/:id";
         readonly request: {
             readonly type: "application/json";
             readonly encrypted: false;
@@ -75,7 +75,7 @@ export declare namespace $delete {
     type Output = Primitive<IResponse<false | true>>;
     const METADATA: {
         readonly method: "DELETE";
-        readonly path: "/shop/product/attributes/:id";
+        readonly path: "/shop/manufacturers/:id";
         readonly request: null;
         readonly response: {
             readonly type: "application/json";

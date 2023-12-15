@@ -58,3 +58,4 @@ export * from './ipos-printer';
 export * from './iuom-uom';
 export * from './iuom-category';
 export * from './iunit';
+export * from './imanufacturer';

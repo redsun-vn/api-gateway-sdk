@@ -1,8 +1,7 @@
-import { BaseResponse } from './common.type';
 import { tags } from 'typia';
-import { IPosSession } from './ipos-session';
-import { IPosPrinter } from './ipos-printer';
+import { BaseResponse } from './common.type';
 import { IPaymentMethod } from './ipayment-method';
+import { IPosPrinter } from './ipos-printer';
 export declare namespace IPosConfig {
     enum POSTaxDisplay {
         total = "total",
@@ -72,7 +71,6 @@ export declare namespace IPosConfig {
         iface_request_pay?: boolean;
         is_kitchen?: boolean;
         is_kiosk_mode?: boolean;
-        posSessions?: null | IPosSession.IPosSessionResponse[];
         available_pricelist_ids?: null | string[];
         available_collections_ids?: null | string[];
         available_floor_ids?: null | string[];

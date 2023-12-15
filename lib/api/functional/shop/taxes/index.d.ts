@@ -34,7 +34,7 @@ export declare namespace findOne {
 }
 export declare function create(connection: IConnection, input: create.Input): Promise<create.Output>;
 export declare namespace create {
-    type Input = Primitive<ITax.IReqCreateTax>;
+    type Input = Primitive<ITax.ICreateTax>;
     type Output = Primitive<IResponse<ITax.IDetailTaxResponse>>;
     const METADATA: {
         readonly method: "POST";

@@ -15,8 +15,8 @@ export declare namespace IStockLocation {
         parentPath?: string;
         parentFlattenIds?: string;
         cyclicInventoryFrequency?: number;
-        lastStocktakeDate?: Date & tags.Format<'date-time'>;
-        nextStocktakeDate?: Date & tags.Format<'date-time'>;
+        lastStocktakeDate?: string & tags.Format<'date-time'>;
+        nextStocktakeDate?: string & tags.Format<'date-time'>;
     }
     interface IUpdateStockLocation {
         name?: string;
@@ -28,8 +28,8 @@ export declare namespace IStockLocation {
         parentPath?: string;
         parentFlattenIds?: string;
         cyclicInventoryFrequency?: number;
-        lastStocktakeDate?: Date & tags.Format<'date-time'>;
-        nextStocktakeDate?: Date & tags.Format<'date-time'>;
+        lastStocktakeDate?: string & tags.Format<'date-time'>;
+        nextStocktakeDate?: string & tags.Format<'date-time'>;
     }
     interface IStockLocationResponse extends BaseResponse {
         shop_id: number | string | null;

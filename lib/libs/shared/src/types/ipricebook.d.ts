@@ -5,8 +5,8 @@ import { IPricebookRule } from './ipricebook-rule.type';
 export declare namespace IPricebook {
     interface IReqCreatePricebook {
         name: string;
-        effectiveAt?: Date & tags.Format<'date-time'>;
-        expiredAt?: Date & tags.Format<'date-time'>;
+        effectiveAt?: string & tags.Format<'date-time'>;
+        expiredAt?: string & tags.Format<'date-time'>;
         active?: boolean;
         userId?: string;
     }
@@ -16,8 +16,8 @@ export declare namespace IPricebook {
     interface IUpdatePricebook {
         id?: string;
         name?: string;
-        effectiveAt?: Date & tags.Format<'date-time'>;
-        expiredAt?: Date & tags.Format<'date-time'>;
+        effectiveAt?: string & tags.Format<'date-time'>;
+        expiredAt?: string & tags.Format<'date-time'>;
         active?: boolean;
         userId?: string;
     }

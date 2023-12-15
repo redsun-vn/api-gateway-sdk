@@ -9,13 +9,14 @@ export declare namespace IPricebookRule {
         referentType?: PriceBookRuleReferentType;
         referentValue?: number;
         value?: number;
+        recipeFee?: number | null;
         effectiveHours?: string;
         daysOfTheWeek?: string;
         active?: boolean;
         type: PriceBookRuleType;
         stayOn?: PriceBookRuleStayOn;
-        effectiveAt?: Date & tags.Format<'date-time'>;
-        expiredAt?: Date & tags.Format<'date-time'>;
+        effectiveAt?: string & tags.Format<'date-time'>;
+        expiredAt?: string & tags.Format<'date-time'>;
         userId?: string;
     }
     interface ICreatePricebookRule extends IReqCreatePricebookRule {
@@ -26,13 +27,14 @@ export declare namespace IPricebookRule {
         referentType?: PriceBookRuleReferentType;
         referentValue?: number;
         value?: number;
+        recipeFee?: number | null;
         effectiveHours?: string;
         daysOfTheWeek?: string;
         active?: boolean;
         type?: PriceBookRuleType;
         stayOn?: PriceBookRuleStayOn;
-        effectiveAt?: Date & tags.Format<'date-time'>;
-        expiredAt?: Date & tags.Format<'date-time'>;
+        effectiveAt?: string & tags.Format<'date-time'>;
+        expiredAt?: string & tags.Format<'date-time'>;
         userId?: string;
     }
     interface IPricebookRuleResponse extends BaseResponse {
@@ -42,6 +44,7 @@ export declare namespace IPricebookRule {
         referentType: string;
         referentValue?: number | string;
         value?: number | string;
+        recipeFee?: number | string | null;
         effectiveHours?: string | null;
         daysOfTheWeek?: string | null;
         active?: boolean;

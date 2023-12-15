@@ -7,6 +7,7 @@ export * as partners from "./partners";
 export * as product from "./product";
 export * as categories from "./categories";
 export * as ingredients from "./ingredients";
+export * as manufacturers from "./manufacturers";
 export * as mix_ingredients from "./mix_ingredients";
 export * as pricebooks from "./pricebooks";
 export * as products from "./products";

@@ -1,33 +1,30 @@
 import { tags } from 'typia';
 import { BaseResponse } from './common.type';
 export declare namespace ITax {
-    interface IReqCreateTax {
-        name: string;
-        title: string;
-        description: string;
-        value: number;
-        active: boolean;
-        userId?: string;
-    }
-    interface ICreateTax extends IReqCreateTax {
-        shop_id: number & tags.Type<'uint32'>;
+    interface ICreateTax {
+        shop_id?: number & tags.Type<'uint32'>;
+        name?: string;
+        code: string;
+        description?: string | null;
+        rate: number;
+        ratePercentage: number & tags.Type<'int32'>;
+        active?: boolean;
     }
     interface IUpdateTax {
         name?: string;
-        title?: string;
-        description?: string;
-        value?: number;
+        code?: string;
+        description?: string | null;
+        rate?: number;
+        ratePercentage?: number & tags.Type<'int32'>;
         active?: boolean;
-        userId?: string;
     }
     interface IDetailTaxResponse extends BaseResponse {
-        name: string;
         shop_id: number | string | null;
-        title?: string;
-        description?: string;
-        value?: number | string;
+        code: string;
+        name?: string | null;
+        description?: string | null;
+        rate: number | string;
+        ratePercentage: number | string;
         active?: boolean;
-        createdBy: string | undefined | null;
-        updatedBy: string | undefined | null;
     }
 }

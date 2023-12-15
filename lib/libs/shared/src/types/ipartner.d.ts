@@ -14,7 +14,7 @@ export declare namespace IPartner {
         email?: string & tags.Format<'email'>;
         phone?: string & tags.Pattern<'^(0[0-9]{2})?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$'>;
         company_name?: string;
-        day_of_birth?: Date & tags.Format<'date-time'>;
+        day_of_birth?: string & tags.Format<'date-time'>;
         code?: string;
         active?: boolean;
         orders_count?: number;
