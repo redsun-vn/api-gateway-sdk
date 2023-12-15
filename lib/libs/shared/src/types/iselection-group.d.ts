@@ -1,11 +1,12 @@
 import { tags } from 'typia';
 import { BaseResponse } from './common.type';
+import { ISelection } from './iselection';
 export declare namespace ISelectionGroup {
     interface IReqCreateSelectionGroup {
-        product_id: number & tags.Type<'uint32'>;
+        image_id?: number & tags.Type<'uint32'>;
         name: string;
-        active: boolean;
-        icon?: string | null | undefined;
+        active?: boolean;
+        icon?: string | null;
         userId?: string;
     }
     interface ICreateSelectionGroup extends IReqCreateSelectionGroup {
@@ -13,6 +14,7 @@ export declare namespace ISelectionGroup {
     }
     interface IUpdateSelectionGroup {
         id?: string;
+        image_id?: number & tags.Type<'uint32'>;
         name?: string;
         active?: boolean;
         icon?: string | null | undefined;
@@ -21,12 +23,12 @@ export declare namespace ISelectionGroup {
     interface ISelectionGroupResponse extends BaseResponse {
         shop_id: number | string | null;
         image_id?: number | string | null;
-        product_id: number | string | null;
         name: string;
         active: boolean;
-        icon?: string | null | undefined;
+        icon?: string | null;
         createdBy: string | undefined | null;
         updatedBy: string | undefined | null;
+        selections?: ISelection.ISelectionResponse[] | null;
     }
     interface IDeleteSelectionGroup {
         id: string;

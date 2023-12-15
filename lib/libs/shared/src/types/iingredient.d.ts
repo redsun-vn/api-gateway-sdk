@@ -9,7 +9,7 @@ export declare namespace IIngredient {
         totalInventory?: number | null;
         quantityAvailable?: number | null;
         unitPrice?: number | null;
-        expiredAt: (string & tags.Format<'date-time'>) | null;
+        expiredAt?: (string & tags.Format<'date-time'>) | null;
         userId?: string;
     }
     interface ICreateIngredient extends IReqCreateIngredient {
@@ -35,8 +35,8 @@ export declare namespace IIngredient {
         expiredAt?: string | null;
         createdBy?: string | null;
         updatedBy?: string | null;
-        mixIngredients?: IMixIngredient.IMixIngredientResponse[];
-        uomUom?: IUomUom.IDetailUomUomResponse;
+        mixIngredients?: IMixIngredient.IMixIngredientResponse[] | null;
+        uomUom?: IUomUom.IDetailUomUomResponse | null;
     }
     interface IDeleteIngredient {
         id: string;

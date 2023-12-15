@@ -3,7 +3,7 @@ export * from './iauth';
 export * from './inotification';
 export * from './itag';
 export * from './icategory';
-export * from './ingredient';
+export * from './iingredient';
 export * from './icollection';
 export * from './iproduct';
 export * from './ivariant';
