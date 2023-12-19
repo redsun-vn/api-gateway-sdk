@@ -1,16 +1,17 @@
 import { tags } from 'typia';
 import { BaseResponse } from './common.type';
+import { UomType } from '../enum';
 export declare namespace IUomUom {
     interface ICreateUomUom {
         shop_id?: number & tags.Type<'uint32'>;
         uom_category_id: number & tags.Type<'uint32'>;
         name: string;
-        type: string;
+        type: UomType;
         active?: boolean;
     }
     interface IUpdateUomUom {
         name?: string;
-        type?: string;
+        type?: UomType;
         active?: boolean;
     }
     interface IDetailUomUomResponse extends BaseResponse {

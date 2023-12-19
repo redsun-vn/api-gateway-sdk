@@ -41,7 +41,7 @@ export declare namespace IVariant {
         quantityAvailable?: number;
         totalInventory?: number;
         weight?: number;
-        expiredAt?: string;
+        expiredAt?: string & tags.Format<'date-time'>;
         userId?: string;
         unit: IRefCreateUnit;
         variantStocks?: IVariantStockInput[];
@@ -64,7 +64,7 @@ export declare namespace IVariant {
         quantityAvailable?: number;
         totalInventory?: number;
         weight?: number;
-        expiredAt?: string;
+        expiredAt?: string & tags.Format<'date-time'>;
         userId?: string;
         unit?: IRefUpdateUnit;
         variantStocks?: IVariantStockInput[];
