@@ -1,5 +1,6 @@
 import { tags } from 'typia';
 import { BaseResponse } from './common.type';
+import { IProduct } from './iproduct';
 export declare namespace ICollection {
     interface IInputCondition {
         referentType: string;
@@ -20,6 +21,7 @@ export declare namespace ICollection {
         active?: boolean;
         htmlContent?: string;
         description?: string;
+        salesChannel?: IProduct.ISalesChannel[];
         type: string;
         allowAllConditions: boolean;
         conditions: IInputCondition[];
@@ -35,6 +37,7 @@ export declare namespace ICollection {
         active?: boolean;
         htmlContent?: string;
         description?: string;
+        salesChannel?: IProduct.ISalesChannel[];
         type?: string;
         allowAllConditions?: boolean;
         conditions?: IInputCondition[];
@@ -47,6 +50,7 @@ export declare namespace ICollection {
         icon?: string | undefined | null;
         htmlContent?: string | undefined | null;
         description?: string | null | undefined;
+        salesChannel?: IProduct.ISalesChannel[] | null;
         type?: string;
         active?: boolean;
         allowAllConditions?: boolean;

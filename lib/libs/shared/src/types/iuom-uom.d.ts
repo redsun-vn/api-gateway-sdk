@@ -1,6 +1,7 @@
 import { tags } from 'typia';
 import { BaseResponse } from './common.type';
 import { UomType } from '../enum';
+import { IUomCategory } from './iuom-category';
 export declare namespace IUomUom {
     interface ICreateUomUom {
         shop_id?: number & tags.Type<'uint32'>;
@@ -16,9 +17,10 @@ export declare namespace IUomUom {
     }
     interface IDetailUomUomResponse extends BaseResponse {
         shop_id: string | number | null;
-        uom_category_id: string | number | null;
+        uom_category_id?: string | number | null;
         name: string;
-        type: string;
-        active: boolean | string;
+        type?: string;
+        active?: boolean;
+        uomCategory?: IUomCategory.IDetailUomCategoryResponse | null;
     }
 }

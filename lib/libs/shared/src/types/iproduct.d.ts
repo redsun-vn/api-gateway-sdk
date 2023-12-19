@@ -12,15 +12,20 @@ export declare namespace IProduct {
         VIRTUAL = "virtual",
         BUNDLED = "bundle"
     }
+    interface ISalesChannel {
+        id: string;
+        name?: string;
+        code?: string;
+    }
     interface IReqCreateProduct {
         tax_id?: number & tags.Type<'uint32'>;
         brand_id?: number & tags.Type<'uint32'>;
         manufacturer_id?: number & tags.Type<'uint32'>;
         image_id?: number & tags.Type<'uint32'>;
         categoryIds?: number[];
-        collectionIds?: number[];
         tagIds?: number[];
         selectionGroupIds?: number[];
+        salesChannel?: ISalesChannel[];
         name: string;
         active?: boolean;
         barcode?: string;
@@ -42,9 +47,9 @@ export declare namespace IProduct {
         manufacturer_id?: number & tags.Type<'uint32'>;
         image_id?: number & tags.Type<'uint32'>;
         categoryIds?: number[];
-        collectionIds?: number[];
         tagIds?: number[];
         selectionGroupIds?: number[];
+        salesChannel?: ISalesChannel[];
         name?: string;
         active?: boolean;
         type?: ProductType;
@@ -98,8 +103,8 @@ export declare namespace IProduct {
         price: string | number | null;
         originPrice: string | number | null;
         salePrice: string | number | null;
+        salesChannel?: ISalesChannel[] | null;
         categories?: ICategoryReponse[] | null;
-        collections?: ICollectionReponse[] | null;
         tags?: ITagReponse[] | null;
         selectionGroups?: ISelectionGroupReponse[] | null;
         variants?: IVariant.IVariantResponse[] | null;
