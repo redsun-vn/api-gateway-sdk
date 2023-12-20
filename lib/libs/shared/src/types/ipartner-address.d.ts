@@ -24,6 +24,8 @@ export declare namespace IPartnerAddress {
         address2?: string;
         company?: string;
         note?: string;
+        ward?: string;
+        district?: string;
     }
     type IUpdate = Partial<ICreate>;
     interface IPartnerAddressResponse extends BaseResponse {
@@ -42,5 +44,7 @@ export declare namespace IPartnerAddress {
         address2?: string | null;
         company?: string | null;
         note?: string | null;
+        ward?: null | string;
+        district?: null | string;
     }
 }
