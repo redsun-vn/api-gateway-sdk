@@ -12,6 +12,7 @@ export declare namespace IPosConfig {
         printer_id?: number & tags.Type<'int32'>;
         kitchen_printer_id?: number & tags.Type<'int32'>;
         warehouse_id?: number & tags.Type<'int32'>;
+        tax_id?: number & tags.Type<'int32'>;
         name: string;
         active?: boolean;
         picking_type_id?: number & tags.Type<'int32'>;
@@ -46,6 +47,7 @@ export declare namespace IPosConfig {
         posPrinter?: null | IPosPrinter.IPosPrinterResponse;
         posKitchenPrinter?: null | IPosPrinter.IPosPrinterResponse;
         warehouse_id?: null | number | string;
+        tax_id?: null | number | string;
         branch_id: number | string;
         shop_id: number | string;
         name: string;
