@@ -10,8 +10,10 @@ export declare namespace IWarehouse {
         name: string;
         abbreviation: string;
         country?: string;
-        city?: string;
+        province?: string;
         state?: string;
+        district?: string;
+        ward?: string;
         address?: string;
         latitude?: string;
         longitude?: string;
@@ -21,8 +23,10 @@ export declare namespace IWarehouse {
         name?: string;
         abbreviation?: string;
         country?: string;
-        city?: string;
+        province?: string;
         state?: string;
+        district?: string;
+        ward?: string;
         address?: string;
         latitude?: string;
         longitude?: string;
@@ -38,8 +42,10 @@ export declare namespace IWarehouse {
         name: string;
         abbreviation?: string;
         country?: string | null;
-        city?: string | null;
+        province?: string | null;
         state?: string | null;
+        district?: string | null;
+        ward?: string | null;
         address?: string | null;
         latitude?: string | null;
         longitude?: string | null;

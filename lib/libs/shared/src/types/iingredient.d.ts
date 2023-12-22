@@ -1,6 +1,5 @@
 import { tags } from 'typia';
 import { BaseResponse } from './common.type';
-import { IMixIngredient } from './imix-ingredient';
 import { IUomUom } from './iuom-uom';
 export declare namespace IIngredient {
     interface IReqCreateIngredient {
@@ -35,7 +34,6 @@ export declare namespace IIngredient {
         expiredAt?: string | null;
         createdBy?: string | null;
         updatedBy?: string | null;
-        mixIngredients?: IMixIngredient.IMixIngredientResponse[] | null;
         uomUom?: IUomUom.IDetailUomUomResponse | null;
     }
     interface IDeleteIngredient {

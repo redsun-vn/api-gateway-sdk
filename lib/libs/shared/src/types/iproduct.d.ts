@@ -22,6 +22,7 @@ export declare namespace IProduct {
         brand_id?: number & tags.Type<'uint32'>;
         manufacturer_id?: number & tags.Type<'uint32'>;
         image_id?: number & tags.Type<'uint32'>;
+        partner_id?: number & tags.Type<'uint32'>;
         categoryIds?: number[];
         tagIds?: number[];
         selectionGroupIds?: number[];
@@ -35,6 +36,7 @@ export declare namespace IProduct {
         salePrice?: number;
         originPrice?: number;
         icon?: string;
+        description?: string;
         userId?: string;
     }
     interface ICreateProduct extends IReqCreateProduct {
@@ -46,6 +48,7 @@ export declare namespace IProduct {
         brand_id?: number & tags.Type<'uint32'>;
         manufacturer_id?: number & tags.Type<'uint32'>;
         image_id?: number & tags.Type<'uint32'>;
+        partner_id?: number & tags.Type<'uint32'>;
         categoryIds?: number[];
         tagIds?: number[];
         selectionGroupIds?: number[];
@@ -57,6 +60,7 @@ export declare namespace IProduct {
         salePrice?: number;
         originPrice?: number;
         icon?: string;
+        description?: string;
         userId?: string;
     }
     interface ITagReponse {
@@ -85,6 +89,7 @@ export declare namespace IProduct {
         manufacturer_id?: string | number | null;
         brand_id?: string | number | null;
         image_id?: string | number | null;
+        partner_id?: string | number | null;
         barcode?: string;
         sku?: string;
         name: string;
@@ -103,6 +108,7 @@ export declare namespace IProduct {
         price: string | number | null;
         originPrice: string | number | null;
         salePrice: string | number | null;
+        description?: string | null;
         salesChannel?: ISalesChannel[] | null;
         categories?: ICategoryReponse[] | null;
         tags?: ITagReponse[] | null;
