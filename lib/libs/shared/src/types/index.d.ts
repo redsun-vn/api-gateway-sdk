@@ -59,3 +59,4 @@ export * from './iuom-uom';
 export * from './iuom-category';
 export * from './iunit';
 export * from './imanufacturer';
+export * from './iproduct-image.type';

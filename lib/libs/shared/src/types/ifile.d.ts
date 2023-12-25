@@ -1,5 +1,6 @@
 /// <reference types="multer" />
 import { FileStatus } from '../const';
+import { BaseResponse } from './common.type';
 export declare namespace IFile {
     interface IBase {
         title: string;
@@ -18,24 +19,25 @@ export declare namespace IFile {
             [key: string]: string | string[] | boolean | number | undefined;
         };
     }
-    interface IUpload {
+    interface IReqUpload {
+        branch_id: number | null;
+        parent_id?: number | null;
+        fileUpload: Express.Multer.File;
+    }
+    interface IUpload extends IReqUpload {
         user_id: string;
         shop_id: number | null;
-        branch_id: number | null;
-        parent_id: number | null;
-        fileUpload: Express.Multer.File;
     }
     interface IUploadToService extends IFile.IBase {
         parent_id?: string | number | null;
         buffer: ArrayBuffer;
     }
-    interface IResponse extends IFile.IBase {
-        id: string | number;
+    interface IResponse extends IFile.IBase, BaseResponse {
         status: FileStatus;
+        parent_id?: string | number | null;
         url?: string | null | undefined;
         is_folder: boolean;
-        parent?: unknown;
-        createdAt: string;
-        updatedAt: string;
+        slug?: string;
+        parent?: IResponse | null;
     }
 }
