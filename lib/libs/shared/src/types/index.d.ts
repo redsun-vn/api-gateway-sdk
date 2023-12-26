@@ -61,3 +61,4 @@ export * from './iunit';
 export * from './imanufacturer';
 export * from './isync-acitivity-log';
 export * from './iproduct-image.type';
+export * from './icondition';

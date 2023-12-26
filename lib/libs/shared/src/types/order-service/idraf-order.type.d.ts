@@ -2,6 +2,7 @@ import { tags } from 'typia';
 import { BaseResponse } from '../common.type';
 import { ILineItem } from './iline-item.type';
 import { DrafOrderStatus } from '../../enum';
+import { IOrder } from './iorder.type';
 export declare namespace IDrafOrder {
     interface ICreateDrafOrder {
         branch_id: number & tags.Type<'uint32'>;
@@ -40,6 +41,9 @@ export declare namespace IDrafOrder {
         canceledAt?: string & tags.Format<'date-time'>;
         lineItems?: ILineItem.IUpdateLineItem[];
     }
+    interface IConfirmDrafOrder {
+        warehouse_id: number & tags.Type<'uint32'>;
+    }
     interface IDetailDrafOrderResponse extends BaseResponse {
         shop_id: string | number | null;
         branch_id: string | number | null;
@@ -47,7 +51,8 @@ export declare namespace IDrafOrder {
         sale_channel_id?: string | number | null;
         billing_address_id?: string | number | null;
         shipping_address_id?: string | number | null;
-        partner_id?: string | number | null;
+        order_id?: string | number | null;
+        parent_id?: string | number | null;
         idempotency_key: string | null | number;
         code: string;
         email?: string | null;
@@ -67,5 +72,6 @@ export declare namespace IDrafOrder {
         completedAt?: string | null;
         canceledAt?: string | null;
         lineItems?: ILineItem.IDetailLineItemResponse[] | null;
+        order?: IOrder.IDetailOrderResponse | null;
     }
 }

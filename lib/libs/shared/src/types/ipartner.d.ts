@@ -5,7 +5,7 @@ import { IPartnerAddress } from './ipartner-address';
 export declare namespace IPartner {
     interface ICreate {
         branch_id?: number & tags.Type<'int32'>;
-        user_id?: number & tags.Type<'int32'>;
+        user_id?: string;
         attachment_id?: number & tags.Type<'int32'>;
         uuid?: string;
         first_name?: string;
@@ -33,9 +33,10 @@ export declare namespace IPartner {
     interface IPartnerResponse extends BaseResponse {
         shop_id: number | string;
         uuid?: string | null;
-        branch_id?: number | null;
-        user_id?: number | null;
-        attachment_id?: number | null;
+        branch_id?: number | string | null;
+        created_by_id?: string | null;
+        user_id?: number | string | null;
+        attachment_id?: number | string | null;
         first_name?: string | null;
         last_name?: string | null;
         display_name?: string | null;

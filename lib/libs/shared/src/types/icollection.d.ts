@@ -1,6 +1,7 @@
 import { tags } from 'typia';
 import { BaseResponse } from './common.type';
 import { IProduct } from './iproduct';
+import { ICondition } from './icondition';
 export declare namespace ICollection {
     interface IInputCondition {
         referentType: string;
@@ -54,7 +55,7 @@ export declare namespace ICollection {
         type?: string;
         active?: boolean;
         allowAllConditions?: boolean;
-        conditions?: IResponseCondition[];
+        conditions?: ICondition.IDetailConditionResponse[] | null;
         userId?: string | undefined | null;
         createdBy: string | undefined | null;
         updatedBy: string | undefined | null;
