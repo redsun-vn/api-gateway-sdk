@@ -58,6 +58,7 @@ export * from './ipos-printer';
 export * from './iuom-uom';
 export * from './iuom-category';
 export * from './iunit';
+export * from './fulfillment-service';
 export * from './imanufacturer';
 export * from './isync-acitivity-log';
 export * from './iproduct-image.type';

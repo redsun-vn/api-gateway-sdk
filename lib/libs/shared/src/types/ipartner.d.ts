@@ -6,6 +6,7 @@ export declare namespace IPartner {
     interface ICreate {
         branch_id?: number & tags.Type<'int32'>;
         user_id?: string;
+        created_by_id: string;
         attachment_id?: number & tags.Type<'int32'>;
         uuid?: string;
         first_name?: string;
