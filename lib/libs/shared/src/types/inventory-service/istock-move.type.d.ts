@@ -4,6 +4,7 @@ import { IWarehouse } from './iwarehouse.type';
 import { IStockLocation } from './istock-location.type';
 import { IStockPicking } from './istock-picking.type';
 import { IStockPickingType } from './istock-picking-type.type';
+import { StockMoveState } from '../../enum';
 export declare namespace IStockMove {
     interface ICreateStockMove {
         shop_id?: number & tags.Type<'uint32'>;
@@ -24,7 +25,7 @@ export declare namespace IStockMove {
         priority?: number;
         dateScheduled: string;
         dateDeadline: string;
-        state?: string;
+        state?: StockMoveState;
         inventoryQuantity: number;
         transferQuantity: number;
         requestTransferQuantity: number;
@@ -40,7 +41,7 @@ export declare namespace IStockMove {
         priority?: number;
         dateScheduled?: string;
         dateDeadline?: string;
-        state?: string;
+        state?: StockMoveState;
         inventoryQuantity?: number;
         transferQuantity?: number;
         requestTransferQuantity?: number;

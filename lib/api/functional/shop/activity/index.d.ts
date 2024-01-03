@@ -19,7 +19,7 @@ export declare namespace findAll {
 }
 export declare function create(connection: IConnection, data: create.Input): Promise<create.Output>;
 export declare namespace create {
-    type Input = Primitive<IActivityLog.IActivityLogCreate>;
+    type Input = Primitive<IActivityLog.ICreateActivityLog>;
     type Output = Primitive<IResponse<IActivityLog.IActivityLogResponse>>;
     const METADATA: {
         readonly method: "POST";

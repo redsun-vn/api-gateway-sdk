@@ -2,6 +2,7 @@ import { tags } from 'typia';
 import { BaseResponse } from '../common.type';
 import { IStockLocation } from './istock-location.type';
 import { IStockPickingType } from './istock-picking-type.type';
+import { StockPickingMoveType, StockPickingState } from '../../enum';
 export declare namespace IStockPicking {
     interface ICreateStockPicking {
         shop_id?: number & tags.Type<'uint32'>;
@@ -12,8 +13,8 @@ export declare namespace IStockPicking {
         owner_id?: string;
         name: string;
         note: string;
-        moveType: string;
-        state?: string;
+        moveType: StockPickingMoveType;
+        state?: StockPickingState;
         priority?: number;
         dateScheduled: string;
         dateDeadline: string;

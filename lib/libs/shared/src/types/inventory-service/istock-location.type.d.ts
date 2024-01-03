@@ -1,6 +1,7 @@
 import { tags } from 'typia';
 import { BaseResponse } from '../common.type';
 import { IWarehouse } from './iwarehouse.type';
+import { StockLocationType } from '../../enum';
 export declare namespace IStockLocation {
     interface ICreateStockLocation {
         shop_id?: number & tags.Type<'uint32'>;
@@ -11,7 +12,7 @@ export declare namespace IStockLocation {
         active?: boolean;
         isReturnLocation?: boolean;
         isReplenishLocation?: boolean;
-        locationType: string;
+        locationType: StockLocationType;
         parentPath?: string;
         parentFlattenIds?: string;
         cyclicInventoryFrequency?: number;
@@ -24,7 +25,7 @@ export declare namespace IStockLocation {
         active?: boolean;
         isReturnLocation?: boolean;
         isReplenishLocation?: boolean;
-        locationType?: string;
+        locationType?: StockLocationType;
         parentPath?: string;
         parentFlattenIds?: string;
         cyclicInventoryFrequency?: number;
