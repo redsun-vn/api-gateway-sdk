@@ -10,6 +10,7 @@ export * as ingredients from "./ingredients";
 export * as manufacturers from "./manufacturers";
 export * as mix_ingredients from "./mix_ingredients";
 export * as pricebooks from "./pricebooks";
+export * as product_brands from "./product_brands";
 export * as products from "./products";
 export * as tags from "./tags";
 export * as taxes from "./taxes";

@@ -1,7 +1,7 @@
 import { tags } from 'typia';
 import { BaseResponse } from './common.type';
-export declare namespace IManufacturer {
-    interface ICreateManufacturer {
+export declare namespace IProductBrand {
+    interface ICreateProductBrand {
         shop_id?: number & tags.Type<'uint32'>;
         parent_id?: number & tags.Type<'uint32'>;
         attachment_id?: number & tags.Type<'uint32'>;
@@ -10,14 +10,14 @@ export declare namespace IManufacturer {
         name: string;
         description?: string | null;
     }
-    interface IUpdateManufacturer {
+    interface IUpdateProductBrand {
         attachment_id?: number & tags.Type<'uint32'>;
         avatar_id?: number & tags.Type<'uint32'>;
         active?: boolean;
         name?: string;
         description?: string | null;
     }
-    interface IDetailManufacturerResponse extends BaseResponse {
+    interface IDetailProductBrandResponse extends BaseResponse {
         shop_id: number | string | null;
         parent_id?: number | string | null;
         attachment_id?: number | string | null;
@@ -25,8 +25,8 @@ export declare namespace IManufacturer {
         active?: boolean;
         name: string;
         description?: string | null;
-        manufacturerSlug?: string | null;
-        parent?: IDetailManufacturerResponse | null;
-        childrens?: IDetailManufacturerResponse[] | null;
+        brandSlug?: string | null;
+        parent?: IDetailProductBrandResponse | null;
+        childrens?: IDetailProductBrandResponse[] | null;
     }
 }

@@ -63,3 +63,5 @@ export * from './imanufacturer';
 export * from './isync-acitivity-log';
 export * from './iproduct-image.type';
 export * from './icondition';
+export * from './iproduct-brand';
+export * from './iproduct-collection-view.type';
