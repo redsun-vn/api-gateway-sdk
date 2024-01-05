@@ -1,4 +1,5 @@
 /// <reference types="node" />
+/// <reference types="multer" />
 import { FileStatus } from '../const';
 import { BaseResponse } from './common.type';
 export declare namespace IFile {
@@ -30,7 +31,7 @@ export declare namespace IFile {
     interface IReqUpload {
         branch_id: number | null;
         parent_id?: number | null;
-        fileUpload: IFile.File;
+        fileUpload: Express.Multer.File;
     }
     interface IUpload extends IReqUpload {
         user_id: string;
