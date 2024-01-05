@@ -58,6 +58,6 @@ export declare namespace IPartner {
         note?: string | null;
         gender?: number | null;
         tags?: null | IPartnerTag.IPartnerTagResponse[];
-        addresses?: null | IPartnerAddress.IPartnerAddressResponse;
+        addresses?: null | IPartnerAddress.IPartnerAddressResponse[];
     }
 }
