@@ -1,13 +1,13 @@
 import type { IConnection, Primitive, Resolved } from "@nestia/fetcher";
 import type { IQuery, IResponse, IResponsePagination } from "../../../../../libs/shared/src/types/common.type";
-import type { IPricebookItem } from "../../../../../libs/shared/src/types/ipricebook-item.type";
+import type { IPricebookRule } from "../../../../../libs/shared/src/types/ipricebook-rule.type";
 export declare function findAll(connection: IConnection, query: findAll.Query): Promise<findAll.Output>;
 export declare namespace findAll {
     type Query = Resolved<IQuery>;
-    type Output = Primitive<IResponse<IResponsePagination<IPricebookItem.IPricebookItemResponse>>>;
+    type Output = Primitive<IResponse<IResponsePagination<IPricebookRule.IPricebookRuleResponse>>>;
     const METADATA: {
         readonly method: "GET";
-        readonly path: "/shop/pricebooks/pricebook-items";
+        readonly path: "/shop/pricebook/pricebook-rules";
         readonly request: null;
         readonly response: {
             readonly type: "application/json";
@@ -19,10 +19,10 @@ export declare namespace findAll {
 }
 export declare function findOne(connection: IConnection, id: string): Promise<findOne.Output>;
 export declare namespace findOne {
-    type Output = Primitive<IResponse<IPricebookItem.IPricebookItemResponse>>;
+    type Output = Primitive<IResponse<IPricebookRule.IPricebookRuleResponse>>;
     const METADATA: {
         readonly method: "GET";
-        readonly path: "/shop/pricebooks/pricebook-items/:id";
+        readonly path: "/shop/pricebook/pricebook-rules/:id";
         readonly request: null;
         readonly response: {
             readonly type: "application/json";
@@ -34,11 +34,11 @@ export declare namespace findOne {
 }
 export declare function create(connection: IConnection, input: create.Input): Promise<create.Output>;
 export declare namespace create {
-    type Input = Primitive<IPricebookItem.IReqCreatePricebookItem>;
-    type Output = Primitive<IResponse<IPricebookItem.IPricebookItemResponse>>;
+    type Input = Primitive<IPricebookRule.IReqCreatePricebookRule>;
+    type Output = Primitive<IResponse<IPricebookRule.IPricebookRuleResponse>>;
     const METADATA: {
         readonly method: "POST";
-        readonly path: "/shop/pricebooks/pricebook-items";
+        readonly path: "/shop/pricebook/pricebook-rules";
         readonly request: {
             readonly type: "application/json";
             readonly encrypted: false;
@@ -53,11 +53,11 @@ export declare namespace create {
 }
 export declare function update(connection: IConnection, id: string, input: update.Input): Promise<update.Output>;
 export declare namespace update {
-    type Input = Primitive<IPricebookItem.IUpdatePricebookItem>;
-    type Output = Primitive<IResponse<IPricebookItem.IPricebookItemResponse>>;
+    type Input = Primitive<IPricebookRule.IUpdatePricebookRule>;
+    type Output = Primitive<IResponse<IPricebookRule.IPricebookRuleResponse>>;
     const METADATA: {
         readonly method: "PUT";
-        readonly path: "/shop/pricebooks/pricebook-items/:id";
+        readonly path: "/shop/pricebook/pricebook-rules/:id";
         readonly request: {
             readonly type: "application/json";
             readonly encrypted: false;
@@ -75,7 +75,7 @@ export declare namespace $delete {
     type Output = Primitive<IResponse<false | true>>;
     const METADATA: {
         readonly method: "DELETE";
-        readonly path: "/shop/pricebooks/pricebook-items/:id";
+        readonly path: "/shop/pricebook/pricebook-rules/:id";
         readonly request: null;
         readonly response: {
             readonly type: "application/json";

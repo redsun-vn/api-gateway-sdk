@@ -1,34 +1,26 @@
-import { tags } from 'typia';
-import { BaseResponse } from './common.type';
-import { IPricebook } from './ipricebook';
 export declare namespace IPricebookItem {
-    interface IReqCreatePricebookItem {
-        price_book_id: number & tags.Type<'uint32'>;
-        variant_id: number & tags.Type<'uint32'>;
-        salePrice?: number;
-        differencePrice?: number;
-        userId?: string;
-    }
-    interface ICreatePricebookItem extends IReqCreatePricebookItem {
-        shop_id: number & tags.Type<'uint32'>;
-    }
-    interface IUpdatePricebookItem {
-        id?: string;
-        salePrice?: number;
-        differencePrice?: number;
-        userId?: string;
-    }
-    interface IPricebookItemResponse extends BaseResponse {
-        shop_id: string | number | null;
-        price_book_id?: string | number | null;
-        variant_id: string | number | null;
-        salePrice?: number | string | null;
-        differencePrice?: number | string | null;
-        createdBy?: string | null;
-        updatedBy?: string | null;
-        priceBook?: IPricebook.IPricebookResponse | null;
-    }
-    interface IDeletePricebookItem {
-        id: string;
+    interface IPricebookItemResponse {
+        shop_id: string | number;
+        price_book_id: string | number;
+        price_book_rule_id: string | number;
+        variant_id: string | number;
+        referent_id?: string | number | null;
+        variantPrice: number | string;
+        variantOriginPrice: number | string;
+        salePrice: number | string | null;
+        priceBookName: string | null;
+        foundAt: string | null;
+        foundDate: string | null;
+        priceBookEffectiveAt: string | null;
+        priceBookExpiredAt: string | null;
+        referentType: string | null;
+        ruleReferentValue: string | null;
+        ruleEffectiveHour: string | null;
+        ruleRecipeFee: string | number;
+        ruleType: string | null;
+        ruleStayOn: string | null;
+        ruleExpiredAt: string | null;
+        ruleEffectiveAt: string | null;
+        ruleValue: string | number;
     }
 }

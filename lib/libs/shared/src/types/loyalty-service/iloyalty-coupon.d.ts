@@ -2,6 +2,7 @@ import { tags } from 'typia';
 import { BaseResponse } from '../common.type';
 export declare namespace ILoyaltyCoupon {
     interface ILoyaltyCouponCreate {
+        code?: string;
         program_id: number & tags.Type<'uint32'>;
         currencyCode?: string;
         points?: number;
