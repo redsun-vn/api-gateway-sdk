@@ -40,3 +40,8 @@ export * as inventory from "./inventory";
 export * as activity from "./activity";
 export * as fulfillment_orders from "./fulfillment_orders";
 export * as fulfillments from "./fulfillments";
+export * as loyalty_coupons from "./loyalty_coupons";
+export * as loyalty_programs from "./loyalty_programs";
+export * as loyalty_rewards from "./loyalty_rewards";
+export * as loyalty_rules from "./loyalty_rules";
+export * as loyalty_sale_channels from "./loyalty_sale_channels";
