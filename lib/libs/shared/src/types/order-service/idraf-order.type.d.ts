@@ -39,7 +39,7 @@ export declare namespace IDrafOrder {
         status?: DrafOrderStatus;
         completedAt?: string & tags.Format<'date-time'>;
         canceledAt?: string & tags.Format<'date-time'>;
-        lineItems?: ILineItem.IUpdateLineItem[];
+        lineItems?: Omit<Partial<ILineItem.IInputLineItem>, 'product_id' | 'variant_id' | 'uom_uom_id'>[];
     }
     interface IConfirmDrafOrder {
         warehouse_id: number & tags.Type<'uint32'>;

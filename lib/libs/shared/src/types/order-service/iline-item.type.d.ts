@@ -8,6 +8,7 @@ export declare namespace ILineItem {
     interface IInputLineItem {
         product_id: number & tags.Type<'uint32'>;
         variant_id: number & tags.Type<'uint32'>;
+        uom_uom_id: number & tags.Type<'uint32'>;
         stock_take_id?: (number & tags.Type<'uint32'>) | null;
         kds_area_id?: (number & tags.Type<'uint32'>) | null;
         fulfillment_provider_id?: (number & tags.Type<'uint32'>) | null;
@@ -85,6 +86,7 @@ export declare namespace ILineItem {
         shop_id: number | string | null;
         product_id: number | string | null;
         variant_id: number | string | null;
+        uom_uom_id?: number | string | null;
         stock_take_id?: number | string | null;
         image_id?: string | number | null;
         kds_area_id?: number | string | null;
