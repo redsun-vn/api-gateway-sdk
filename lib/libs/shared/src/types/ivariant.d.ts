@@ -77,7 +77,7 @@ export declare namespace IVariant {
         barcode: string;
         sku: string;
         active: boolean;
-        icon: string;
+        icon?: string | null;
         price: number | string | null;
         originPrice: number | string | null;
         compareAtPrice?: number | string | null;

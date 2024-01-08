@@ -20,6 +20,7 @@ export declare enum OrderTransactionStatus {
     UNKNOWN = "unknown"
 }
 export declare enum KitchenProcessingStatus {
+    NONE = "none",
     NEW = "new",
     PENDING = "pending",
     COOK = "cook",
