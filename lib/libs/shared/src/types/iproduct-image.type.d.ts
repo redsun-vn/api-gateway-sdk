@@ -7,6 +7,7 @@ export declare namespace IProductImage {
         shop_id?: number & tags.Type<'uint32'>;
         product_id: number & tags.Type<'uint32'>;
         image_id?: number & tags.Type<'uint32'>;
+        image_url?: string | null;
         description?: string | null;
         color?: string | null;
         aliasName?: string | null;
@@ -15,6 +16,7 @@ export declare namespace IProductImage {
     interface IUpdateProductImage {
         id?: string;
         image_id?: number & tags.Type<'uint32'>;
+        image_url?: string | null;
         description?: string | null;
         color?: string | null;
         aliasName?: string | null;
@@ -24,6 +26,7 @@ export declare namespace IProductImage {
         shop_id: number | string | null;
         image_id?: string | number | null;
         product_id?: string | number | null;
+        image_url?: string | null;
         description?: string | null;
         color?: string | null;
         aliasName?: string | null;

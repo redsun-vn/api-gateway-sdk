@@ -25,6 +25,7 @@ export declare namespace IProduct {
         partner_id?: number & tags.Type<'uint32'>;
         categoryIds?: number[];
         tagIds?: number[];
+        productAttributeIds?: number[];
         selectionGroupIds?: number[];
         salesChannel?: ISalesChannel[];
         name: string;
@@ -51,6 +52,7 @@ export declare namespace IProduct {
         partner_id?: number & tags.Type<'uint32'>;
         categoryIds?: number[];
         tagIds?: number[];
+        productAttributeIds?: number[];
         selectionGroupIds?: number[];
         salesChannel?: ISalesChannel[];
         name?: string;
@@ -114,7 +116,7 @@ export declare namespace IProduct {
         tags?: ITagReponse[] | null;
         selectionGroups?: ISelectionGroupReponse[] | null;
         variants?: IVariant.IVariantResponse[] | null;
-        productAttributes?: IAttribute.IDetailAttributeResponse[];
+        productAttributes?: IAttribute.IDetailAttributeResponse[] | null;
         tax?: ITax.IDetailTaxResponse | null;
         manufacturer?: IManufacturer.IDetailManufacturerResponse | null;
     }

@@ -1,3 +1,4 @@
+import { IPricebookRule } from './ipricebook-rule.type';
 export declare namespace IPricebookItem {
     interface IPricebookItemResponse {
         shop_id: string | number;
@@ -10,7 +11,7 @@ export declare namespace IPricebookItem {
         foundAtWithoutTz: string | null;
         ruleReferentValue: string | null;
         ruleDaysOfTheWeek: string | null;
-        ruleEffectiveHour: string | null;
+        ruleEffectiveHour: IPricebookRule.IEffectiveHours[] | string | null;
         ruleExpiredAt: string | null;
         ruleEffectiveAt: string | null;
     }

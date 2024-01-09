@@ -3,6 +3,10 @@ import { BaseResponse } from './common.type';
 import { IPricebook } from './ipricebook';
 import { PriceBookRuleReferentType, PriceBookRuleStayOn, PriceBookRuleType } from '../enum';
 export declare namespace IPricebookRule {
+    interface IEffectiveHours {
+        from: string;
+        to: string | null;
+    }
     interface IReqCreatePricebookRule {
         price_book_id: number & tags.Type<'uint32'>;
         referent_id?: number & tags.Type<'uint32'>;
@@ -10,7 +14,7 @@ export declare namespace IPricebookRule {
         referentValue?: number;
         value?: number;
         recipeFee?: number | null;
-        effectiveHours?: string;
+        effectiveHours?: IEffectiveHours[] | null;
         daysOfTheWeek?: string;
         active?: boolean;
         type: PriceBookRuleType;
@@ -28,7 +32,7 @@ export declare namespace IPricebookRule {
         referentValue?: number;
         value?: number;
         recipeFee?: number | null;
-        effectiveHours?: string;
+        effectiveHours?: IEffectiveHours[] | null;
         daysOfTheWeek?: string;
         active?: boolean;
         type?: PriceBookRuleType;
@@ -45,7 +49,7 @@ export declare namespace IPricebookRule {
         referentValue?: number | string;
         value?: number | string;
         recipeFee?: number | string | null;
-        effectiveHours?: string | null;
+        effectiveHours?: IEffectiveHours[] | string | null;
         daysOfTheWeek?: string | null;
         active?: boolean;
         type: string;
