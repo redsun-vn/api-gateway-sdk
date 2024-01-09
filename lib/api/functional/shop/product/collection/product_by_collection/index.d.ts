@@ -1,6 +1,6 @@
 import type { IConnection, Primitive } from "@nestia/fetcher";
 import type { IResponse } from "../../../../../../libs/shared/src/types/common.type";
-import type { IProduct } from "../../../../../../libs/shared/src/types/iproduct";
+import type { IProduct } from "../../../../../../libs/shared/src/types/product-service/iproduct";
 export declare function findProductsByCollectionId(connection: IConnection, id: string): Promise<findProductsByCollectionId.Output>;
 export declare namespace findProductsByCollectionId {
     type Output = Primitive<IResponse<Array<IProduct.IProductResponse>>>;
