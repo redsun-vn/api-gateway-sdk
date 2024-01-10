@@ -10,6 +10,7 @@ export declare namespace IOrder {
         staff_id: number & tags.Type<'uint32'>;
         pos_session_id?: number & tags.Type<'uint32'>;
         sale_channel_id?: number & tags.Type<'uint32'>;
+        price_book_id?: number & tags.Type<'uint32'>;
         billing_address_id?: number & tags.Type<'uint32'>;
         shipping_address_id?: number & tags.Type<'uint32'>;
         draf_order_id?: number & tags.Type<'uint32'>;
@@ -61,6 +62,7 @@ export declare namespace IOrder {
     interface IUpdateOrder {
         billing_address_id?: number & tags.Type<'uint32'>;
         shipping_address_id?: number & tags.Type<'uint32'>;
+        price_book_id?: number & tags.Type<'uint32'>;
         email?: string;
         phone?: string;
         note?: string;
@@ -105,6 +107,7 @@ export declare namespace IOrder {
         staff_id: number | string | null;
         pos_session_id?: number | string | null;
         sale_channel_id?: number | string | null;
+        price_book_id?: number | string | null;
         billing_address_id?: number | string | null;
         shipping_address_id?: number | string | null;
         draf_order_id?: number | string | null;
