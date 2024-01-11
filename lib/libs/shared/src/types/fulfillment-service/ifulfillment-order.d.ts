@@ -5,7 +5,7 @@ export declare namespace IFulfillmentOrder {
     interface ICreateFulfillmentOrder {
         order_id: number & tags.Type<'uint32'>;
         shop_id: number & tags.Type<'uint32'>;
-        partner_id: number & tags.Type<'uint32'>;
+        partner_id: string & tags.Format<'uuid'>;
         shipping_method_id: number & tags.Type<'uint32'>;
         destination_id: number & tags.Type<'uint32'>;
         assigned_location_id: number & tags.Type<'uint32'>;

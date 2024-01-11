@@ -9,9 +9,10 @@ export declare namespace IPartnerAddress {
         OTHER = "other"
     }
     interface ICreate {
-        partner_id: number;
+        partner_id: string | number;
         type: PartnerAddressType;
         function?: string;
+        uuid?: string;
         country?: string;
         first_name?: string;
         last_name?: string;
@@ -31,6 +32,7 @@ export declare namespace IPartnerAddress {
     interface IPartnerAddressResponse extends BaseResponse {
         partner_id: number | string;
         type: string;
+        uuid?: string | null;
         function?: string | null;
         country?: string | null;
         first_name?: string | null;

@@ -10,7 +10,7 @@ export declare namespace IDrafOrder {
         sale_channel_id?: (number & tags.Type<'uint32'>) | null;
         billing_address_id?: (number & tags.Type<'uint32'>) | null;
         shipping_address_id?: (number & tags.Type<'uint32'>) | null;
-        partner_id?: (number & tags.Type<'uint32'>) | null;
+        partner_id?: (string & tags.Format<'uuid'>) | null;
         email?: string | null;
         phone?: string | null;
         currency_code?: string;
@@ -26,6 +26,7 @@ export declare namespace IDrafOrder {
     interface IUpdateDrafOrder {
         billing_address_id?: number & tags.Type<'uint32'>;
         shipping_address_id?: number & tags.Type<'uint32'>;
+        partner_id?: string & tags.Format<'uuid'>;
         email?: string;
         phone?: string;
         currency_code?: string;
@@ -52,7 +53,7 @@ export declare namespace IDrafOrder {
         billing_address_id?: string | number | null;
         shipping_address_id?: string | number | null;
         order_id?: string | number | null;
-        parent_id?: string | number | null;
+        partner_id?: string | number | null;
         idempotency_key: string | null | number;
         code: string;
         email?: string | null;

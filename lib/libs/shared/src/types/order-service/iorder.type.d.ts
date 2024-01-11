@@ -14,7 +14,7 @@ export declare namespace IOrder {
         billing_address_id?: number & tags.Type<'uint32'>;
         shipping_address_id?: number & tags.Type<'uint32'>;
         draf_order_id?: number & tags.Type<'uint32'>;
-        partner_id?: number & tags.Type<'uint32'>;
+        partner_id?: string & tags.Format<'uuid'>;
         warehouse_id: number & tags.Type<'uint32'>;
         currency_code?: string | null;
         email?: string | null;
@@ -63,6 +63,7 @@ export declare namespace IOrder {
         billing_address_id?: number & tags.Type<'uint32'>;
         shipping_address_id?: number & tags.Type<'uint32'>;
         price_book_id?: number & tags.Type<'uint32'>;
+        partner_id?: string & tags.Format<'uuid'>;
         email?: string;
         phone?: string;
         note?: string;
