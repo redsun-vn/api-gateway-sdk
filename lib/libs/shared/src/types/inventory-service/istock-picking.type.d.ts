@@ -9,8 +9,8 @@ export declare namespace IStockPicking {
         location_src_id: number & tags.Type<'uint32'>;
         location_dest_id: number & tags.Type<'uint32'>;
         picking_type_id: number & tags.Type<'uint32'>;
-        staff_id?: string;
-        owner_id?: string;
+        staff_id?: number & tags.Type<'uint32'>;
+        owner_id?: number & tags.Type<'uint32'>;
         name: string;
         note: string;
         moveType: StockPickingMoveType;
@@ -37,8 +37,8 @@ export declare namespace IStockPicking {
         location_src_id: number | string | null;
         location_dest_id: number | string | null;
         picking_type_id: number | string | null;
-        staff_id?: string;
-        owner_id?: string;
+        staff_id?: number | string | null;
+        owner_id?: number | string | null;
         name: string;
         note?: string;
         moveType: string;
