@@ -5,8 +5,9 @@ export declare namespace IStockQuantity {
     interface ICreateStockQuantity {
         shop_id?: number & tags.Type<'uint32'>;
         product_id: number & tags.Type<'uint32'>;
-        varient_id: number & tags.Type<'uint32'>;
+        variant_id: number & tags.Type<'uint32'>;
         uom_uom_id: number & tags.Type<'uint32'>;
+        partner_id?: (number & tags.Type<'uint32'>) | (string & tags.Format<'uuid'>);
         stock_location_id: number & tags.Type<'uint32'>;
         inventoryQuantity: number;
         availableQuantity: number;
@@ -15,7 +16,8 @@ export declare namespace IStockQuantity {
     }
     interface IUpdateStockQuantity {
         quantity?: number;
-        availableQuantity?: number;
+        inventoryQuantity?: number;
+        partner_id?: (number & tags.Type<'uint32'>) | (string & tags.Format<'uuid'>);
         lastStocktakeQuantity?: number;
         lastStocktakeDate?: string;
     }
