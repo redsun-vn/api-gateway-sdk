@@ -5,6 +5,7 @@ import { ITax } from './itax';
 import { IManufacturer } from './imanufacturer';
 import { IAttribute } from './iattribute';
 import { IProductImage } from './iproduct-image.type';
+import { IProductPackage } from './iproduct-package';
 export declare namespace IProduct {
     enum ProductType {
         NORMAL = "normal",
@@ -20,7 +21,7 @@ export declare namespace IProduct {
     }
     interface IReqCreateProduct {
         tax_id?: number & tags.Type<'uint32'>;
-        brand_id?: number & tags.Type<'uint32'>;
+        product_brand_id?: number & tags.Type<'uint32'>;
         manufacturer_id?: number & tags.Type<'uint32'>;
         image_id?: number & tags.Type<'uint32'>;
         partner_id?: number & tags.Type<'uint32'>;
@@ -47,7 +48,7 @@ export declare namespace IProduct {
     interface IUpdateProduct {
         tax_id?: number & tags.Type<'uint32'>;
         shop_id?: number & tags.Type<'uint32'>;
-        brand_id?: number & tags.Type<'uint32'>;
+        product_brand_id?: number & tags.Type<'uint32'>;
         manufacturer_id?: number & tags.Type<'uint32'>;
         image_id?: number & tags.Type<'uint32'>;
         partner_id?: number & tags.Type<'uint32'>;
@@ -90,7 +91,7 @@ export declare namespace IProduct {
         tax_id?: string | number | null;
         shop_id: string | number | null;
         manufacturer_id?: string | number | null;
-        brand_id?: string | number | null;
+        product_brand_id?: string | number | null;
         image_id?: string | number | null;
         partner_id?: string | number | null;
         barcode?: string;
@@ -121,5 +122,6 @@ export declare namespace IProduct {
         productAttributes?: IAttribute.IDetailAttributeResponse[] | null;
         tax?: ITax.IDetailTaxResponse | null;
         manufacturer?: IManufacturer.IDetailManufacturerResponse | null;
+        productPackages?: IProductPackage.IDetailProductPackageResponse[] | null;
     }
 }
