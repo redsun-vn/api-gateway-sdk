@@ -2,6 +2,7 @@ import { IFiltering, IFilteringMultiple, IPaginationOptions, IQuery, ISearch, IS
 export declare class ValidQuery {
     private query;
     constructor(query: IQuery);
+    private handleReplacePrefixByParams;
     private parseConditionsFilter;
     private validFilterQuery;
     private validParams;

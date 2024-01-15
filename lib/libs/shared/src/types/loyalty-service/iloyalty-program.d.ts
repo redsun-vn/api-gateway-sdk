@@ -36,7 +36,7 @@ export declare namespace ILoyaltyProgram {
         currencyCode: string;
         sequence: number | string | null;
         trigger: string | null;
-        description?: string;
+        description?: string | null;
         startDate: string | null;
         expireDate: string | null;
         limitUsage: boolean | null;
