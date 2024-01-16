@@ -16,7 +16,7 @@ export declare namespace IVariant {
         conversion: number;
     }
     interface IRefUpdateUnit {
-        id: string;
+        id?: string;
         uom_uom_id?: number & tags.Type<'uint32'>;
         is_default?: boolean;
         rounding?: number;
@@ -51,6 +51,7 @@ export declare namespace IVariant {
     }
     interface IUpdateVariant {
         id?: string;
+        image_id?: number & tags.Type<'uint32'>;
         name?: string;
         active?: boolean;
         icon?: string;
@@ -66,7 +67,6 @@ export declare namespace IVariant {
         weight?: number;
         expiredAt?: string & tags.Format<'date-time'>;
         userId?: string;
-        unit?: IRefUpdateUnit;
         variantStocks?: IVariantStockInput[];
     }
     interface IVariantResponse extends BaseResponse {
