@@ -14,6 +14,7 @@ export declare namespace IDrafOrder {
         email?: string | null;
         phone?: string | null;
         currency_code?: string;
+        code?: string | null;
         note?: string | null;
         description?: string | null;
         tags?: string | null;
