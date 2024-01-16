@@ -9,6 +9,9 @@ export declare namespace ISyncActivityLog {
         SUCCESS = "success",
         FAILURE = "failure"
     }
+    export interface ICreateTable {
+        branch_id: string;
+    }
     export interface ICreateSyncActivityLog {
         branch_id: number & tags.Type<'uint32'>;
         pos_config_id?: string;
