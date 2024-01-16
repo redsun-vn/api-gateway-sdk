@@ -6,6 +6,7 @@ import { IManufacturer } from './imanufacturer';
 import { IAttribute } from './iattribute';
 import { IProductImage } from './iproduct-image.type';
 import { IProductPackage } from './iproduct-package';
+import { ISelectionGroup } from './iselection-group';
 export declare namespace IProduct {
     enum ProductType {
         NORMAL = "normal",
@@ -27,7 +28,7 @@ export declare namespace IProduct {
         partner_id?: number & tags.Type<'uint32'>;
         categoryIds?: number[];
         tagIds?: number[];
-        productAttributeIds?: number[];
+        productOptionIds?: number[];
         selectionGroupIds?: number[];
         salesChannel?: ISalesChannel[];
         name: string;
@@ -54,7 +55,7 @@ export declare namespace IProduct {
         partner_id?: number & tags.Type<'uint32'>;
         categoryIds?: number[];
         tagIds?: number[];
-        productAttributeIds?: number[];
+        productOptionIds?: number[];
         selectionGroupIds?: number[];
         salesChannel?: ISalesChannel[];
         name?: string;
@@ -78,11 +79,6 @@ export declare namespace IProduct {
         [key: string]: string | string[] | boolean | number | undefined | null;
     }
     interface ICollectionReponse {
-        id: string | number | null;
-        name: string;
-        [key: string]: string | string[] | boolean | number | undefined | null;
-    }
-    interface ISelectionGroupReponse {
         id: string | number | null;
         name: string;
         [key: string]: string | string[] | boolean | number | undefined | null;
@@ -116,9 +112,10 @@ export declare namespace IProduct {
         salesChannel?: ISalesChannel[] | null;
         categories?: ICategoryReponse[] | null;
         tags?: ITagReponse[] | null;
-        selectionGroups?: ISelectionGroupReponse[] | null;
+        selectionGroups?: ISelectionGroup.ISelectionGroupResponse[] | null;
         variants?: IVariant.IVariantResponse[] | null;
         productImages?: IProductImage.IProductImageResponse[] | null;
+        productOptions?: IAttribute.IOptionResponse[] | null;
         productAttributes?: IAttribute.IDetailAttributeResponse[] | null;
         tax?: ITax.IDetailTaxResponse | null;
         manufacturer?: IManufacturer.IDetailManufacturerResponse | null;

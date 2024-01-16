@@ -22,6 +22,7 @@ export declare namespace IAttribute {
         shop_id: string | number | null;
         name?: string;
         active?: boolean;
+        productAttribute?: IDetailAttributeResponse | null;
     }
     interface IDetailAttributeResponse extends BaseResponse {
         shop_id: string | number | null;
