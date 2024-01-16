@@ -1,5 +1,6 @@
 import { tags } from 'typia';
 import { BaseResponse } from '../common.type';
+import { IProductOption } from './iproduct-option';
 export declare namespace IAttribute {
     interface IOptionInput {
         id?: string | number | null;
@@ -16,18 +17,11 @@ export declare namespace IAttribute {
         id?: string;
         active?: boolean;
         name?: string;
-        options?: IOptionInput[];
-    }
-    interface IOptionResponse extends BaseResponse {
-        shop_id: string | number | null;
-        name?: string;
-        active?: boolean;
-        productAttribute?: IDetailAttributeResponse | null;
     }
     interface IDetailAttributeResponse extends BaseResponse {
         shop_id: string | number | null;
         name?: string;
         active?: boolean;
-        options?: IOptionResponse[];
+        options?: IProductOption.IDetailProductOptionResponse[] | null;
     }
 }

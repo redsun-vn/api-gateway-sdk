@@ -7,6 +7,7 @@ import { IAttribute } from './iattribute';
 import { IProductImage } from './iproduct-image.type';
 import { IProductPackage } from './iproduct-package';
 import { ISelectionGroup } from './iselection-group';
+import { IProductOption } from './iproduct-option';
 export declare namespace IProduct {
     enum ProductType {
         NORMAL = "normal",
@@ -115,7 +116,7 @@ export declare namespace IProduct {
         selectionGroups?: ISelectionGroup.ISelectionGroupResponse[] | null;
         variants?: IVariant.IVariantResponse[] | null;
         productImages?: IProductImage.IProductImageResponse[] | null;
-        productOptions?: IAttribute.IOptionResponse[] | null;
+        productOptions?: IProductOption.IDetailProductOptionResponse[] | null;
         productAttributes?: IAttribute.IDetailAttributeResponse[] | null;
         tax?: ITax.IDetailTaxResponse | null;
         manufacturer?: IManufacturer.IDetailManufacturerResponse | null;

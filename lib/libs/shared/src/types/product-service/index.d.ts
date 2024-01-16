@@ -22,3 +22,4 @@ export * from './icondition';
 export * from './iproduct-brand';
 export * from './iproduct-collection-view.type';
 export * from './iproduct-package';
+export * from './iproduct-option';
