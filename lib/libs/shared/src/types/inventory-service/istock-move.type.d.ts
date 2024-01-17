@@ -4,13 +4,14 @@ import { IWarehouse } from './iwarehouse.type';
 import { IStockLocation } from './istock-location.type';
 import { IStockPicking } from './istock-picking.type';
 import { IStockPickingType } from './istock-picking-type.type';
-import { StockMoveState } from '../../enum';
+import { StockMoveState, StockReferentType } from '../../enum';
 import { IStockQuantity } from './istock-quantity.type';
 import { IStockMoveLine } from './istock-move-line.type';
 export declare namespace IStockMove {
     interface ICreateStockMove {
         shop_id?: number & tags.Type<'uint32'>;
         partner_id?: (number & tags.Type<'uint32'>) | (string & tags.Format<'uuid'>);
+        updated_by?: (number & tags.Type<'uint32'>) | (string & tags.Format<'uuid'>);
         product_id: number & tags.Type<'uint32'>;
         variant_id: number & tags.Type<'uint32'>;
         uom_uom_id: number & tags.Type<'uint32'>;
@@ -23,7 +24,7 @@ export declare namespace IStockMove {
         name: string;
         barcode?: string;
         note?: string;
-        internalReference?: string;
+        internalReference?: StockReferentType;
         sequence?: number;
         priority?: number;
         dateScheduled: string | Date;
@@ -41,6 +42,7 @@ export declare namespace IStockMove {
     interface IStockMoveResponse extends BaseResponse {
         shop_id: number | string | null;
         partner_id: number | string | null;
+        updated_by: number | string | null;
         product_id: number | string | null;
         variant_id: number | string | null;
         uom_uom_id: number | string | null;

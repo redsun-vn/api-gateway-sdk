@@ -9,8 +9,9 @@ export declare namespace IStockPicking {
         location_src_id: number & tags.Type<'uint32'>;
         location_dest_id: number & tags.Type<'uint32'>;
         picking_type_id: number & tags.Type<'uint32'>;
-        staff_id?: number & tags.Type<'uint32'>;
-        owner_id?: number & tags.Type<'uint32'>;
+        updated_by?: (number & tags.Type<'uint32'>) | (string & tags.Format<'uuid'>);
+        staff_id?: (number & tags.Type<'uint32'>) | (string & tags.Format<'uuid'>);
+        owner_id?: (number & tags.Type<'uint32'>) | (string & tags.Format<'uuid'>);
         name: string;
         note: string;
         moveType: StockPickingMoveType;
@@ -21,22 +22,14 @@ export declare namespace IStockPicking {
         dateDone: string;
         printed?: boolean;
     }
-    interface IUpdateStockPicking {
-        name?: string;
-        note?: string;
-        moveType?: string;
-        state?: string;
-        priority?: number;
-        dateScheduled?: string;
-        dateDeadline?: string;
-        dateDone?: string;
-        printed?: boolean;
+    interface IUpdateStockPicking extends Omit<Partial<ICreateStockPicking>, 'shop_id' | 'picking_type_id'> {
     }
     interface IStockPickingResponse extends BaseResponse {
         shop_id: number | string | null;
         location_src_id: number | string | null;
         location_dest_id: number | string | null;
         picking_type_id: number | string | null;
+        updated_by?: number | string | null;
         staff_id?: number | string | null;
         owner_id?: number | string | null;
         name: string;

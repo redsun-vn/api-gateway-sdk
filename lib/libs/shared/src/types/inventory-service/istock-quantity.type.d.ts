@@ -15,7 +15,6 @@ export declare namespace IStockQuantity {
         lastStocktakeDate?: string;
     }
     interface IUpdateStockQuantity {
-        quantity?: number;
         inventoryQuantity?: number;
         partner_id?: (number & tags.Type<'uint32'>) | (string & tags.Format<'uuid'>);
         lastStocktakeQuantity?: number;

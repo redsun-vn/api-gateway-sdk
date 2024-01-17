@@ -46,7 +46,10 @@ export declare enum StocktakeType {
 export declare enum StockReferentType {
     SALE_ORDER = "sale_order",
     TRANSFER_ORDER = "transfer_order",
+    INBOUND_ORDER = "inbound_order",
+    OUTBOUND_ORDER = "outbound_order",
     RETURN_ORDER = "return_order",
+    ADJUSTMENT = "adjustment",
     DESTROY = "destroy"
 }
 export declare enum StockRouterReferentAction {
