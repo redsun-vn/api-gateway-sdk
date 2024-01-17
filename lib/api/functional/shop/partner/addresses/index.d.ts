@@ -68,7 +68,7 @@ export declare namespace create {
 }
 export declare function update(connection: IConnection, data: update.Input, id: string): Promise<update.Output>;
 export declare namespace update {
-    type Input = Primitive<Partial<IPartnerAddress.ICreate>>;
+    type Input = Primitive<IPartnerAddress.IUpdate>;
     type Output = Primitive<IResponse<false | true>>;
     const METADATA: {
         readonly method: "PUT";

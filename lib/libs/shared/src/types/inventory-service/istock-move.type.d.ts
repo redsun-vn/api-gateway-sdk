@@ -41,8 +41,8 @@ export declare namespace IStockMove {
     }
     interface IStockMoveResponse extends BaseResponse {
         shop_id: number | string | null;
-        partner_id: number | string | null;
-        updated_by: number | string | null;
+        partner_id?: number | string | null;
+        updated_by?: number | string | null;
         product_id: number | string | null;
         variant_id: number | string | null;
         uom_uom_id: number | string | null;

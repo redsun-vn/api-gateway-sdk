@@ -28,7 +28,7 @@ export declare namespace IPartnerAddress {
         ward?: string;
         district?: string;
     }
-    type IUpdate = Partial<ICreate>;
+    type IUpdate = Omit<Partial<ICreate>, 'partner_id'>;
     interface IPartnerAddressResponse extends BaseResponse {
         partner_id: number | string;
         type: string;
