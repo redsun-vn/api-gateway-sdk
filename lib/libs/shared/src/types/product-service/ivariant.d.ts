@@ -10,7 +10,7 @@ export declare namespace IVariant {
     }
     interface IRefCreateUnit {
         uom_uom_id: number & tags.Type<'uint32'>;
-        is_default: boolean;
+        isDefault: boolean;
         rounding: number;
         factor: number;
         conversion: number;
@@ -18,7 +18,7 @@ export declare namespace IVariant {
     interface IRefUpdateUnit {
         id?: string;
         uom_uom_id?: number & tags.Type<'uint32'>;
-        is_default?: boolean;
+        isDefault?: boolean;
         rounding?: number;
         factor?: number;
         conversion?: number;

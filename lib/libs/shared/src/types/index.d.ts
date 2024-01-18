@@ -44,3 +44,4 @@ export * from './fulfillment-service';
 export * from './isync-acitivity-log';
 export * from './loyalty-service';
 export * from './product-service';
+export * from './reconciliation-service';

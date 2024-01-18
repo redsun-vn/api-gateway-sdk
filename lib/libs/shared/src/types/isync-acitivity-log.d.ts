@@ -22,6 +22,7 @@ export declare namespace ISyncActivityLog {
         table_name: string;
         object_id: string;
         meta: any;
+        request?: any | null;
         endpoint?: string;
     }
     export interface IEventCreateTable {
@@ -39,6 +40,7 @@ export declare namespace ISyncActivityLog {
         status: string;
         object_id: number | string | null;
         meta: any;
+        request?: any | null;
         endpoint: string | null;
         action_date: string;
         createdAt: string;

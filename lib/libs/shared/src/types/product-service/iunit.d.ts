@@ -8,13 +8,13 @@ export declare namespace IUnit {
         variant_id: number & tags.Type<'uint32'>;
         product_id: number & tags.Type<'uint32'>;
         uom_uom_id: number & tags.Type<'uint32'>;
-        is_default: boolean;
+        isDefault: boolean;
         rounding: number;
         factor: number;
         conversion: number;
     }
     interface IUpdateUnit {
-        is_default?: boolean;
+        isDefault?: boolean;
         rounding?: number;
         factor?: number;
         conversion?: number;
