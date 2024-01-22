@@ -8,7 +8,7 @@ export declare namespace ILoyaltyCoupon {
         points?: number;
         expirationDate?: string & tags.Format<'date-time'>;
         order_uuid?: string & tags.Format<'uuid'>;
-        partner_uuid?: string & tags.Format<'uuid'>;
+        partner_uuid?: (string & tags.Format<'uuid'>) | null;
     }
     interface ILoyaltyCouponUpdate extends Omit<Partial<ILoyaltyCouponCreate>, 'program_id'> {
     }
