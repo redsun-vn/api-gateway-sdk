@@ -75,7 +75,7 @@ export declare namespace update {
 export declare function cancel(connection: IConnection, id: string, data: cancel.Input): Promise<cancel.Output>;
 export declare namespace cancel {
     type Input = Primitive<IFulfillmentOrder.ICancelFulfillmentOrder>;
-    type Output = Primitive<IResponse<IFulfillmentOrder.IFulfillmentOrderResponse>>;
+    type Output = Primitive<IResponse<false | true>>;
     const METADATA: {
         readonly method: "POST";
         readonly path: "/shop/fulfillment-orders/:id/cancel";

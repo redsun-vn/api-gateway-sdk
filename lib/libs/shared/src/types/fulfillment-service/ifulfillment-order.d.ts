@@ -4,8 +4,6 @@ import { FULFILLMENT_ORDER_STATUS, FULFILLMENT_REQUEST_STATUS } from '../../enum
 export declare namespace IFulfillmentOrder {
     interface ICreateFulfillmentOrder {
         order_id: number & tags.Type<'uint32'>;
-        shop_id: number & tags.Type<'uint32'>;
-        partner_id: string & tags.Format<'uuid'>;
         shipping_method_id: number & tags.Type<'uint32'>;
         destination_id: number & tags.Type<'uint32'>;
         assigned_location_id: number & tags.Type<'uint32'>;
@@ -18,7 +16,7 @@ export declare namespace IFulfillmentOrder {
         stock_quantity_id: number & tags.Type<'uint32'>;
     }
     interface ICancelFulfillmentOrder {
-        note?: string;
+        cancelReason: string;
     }
     interface ICreateFulfillmentOrderItems {
         fulfillHoleReason?: string;
@@ -40,42 +38,56 @@ export declare namespace IFulfillmentOrder {
         requestStatus?: string & FULFILLMENT_REQUEST_STATUS;
         fulfillHoldReason?: string;
         fulfillHoldReasonNotes?: string;
-        quantity?: number;
-        fulfillableQuantity?: number;
     }
     interface IFulfillmentOrderResponse {
         id: string | number;
-        uuid?: string | null;
+        uuid: string;
+        staff_id: string | number;
+        partner_id: string | number;
         shop_id: string | number;
+        orderCode: string;
         order_id: string | number;
+        order_uuid: string;
         assigned_location_id: string | number;
         destination_id: string | number;
+        weight: number;
         shipping_method_id: string | number;
         status: string;
         requestStatus: string;
         fulfillAt: string | null;
-        fulfillBy: string | null;
+        fulfillBy: number | string | null;
         fulfillHoldReason: string | null;
         fulfillHoldReasonNote: string | null;
-        lineItems: IFulfillmentOrderItem.ILineItemResponse[];
+        cancelReason?: string | null;
+        cancelled_by?: string | number | null;
+        cancelledAt?: string | null;
+        lineItems: IFulfillmentOrderItem.ILineItemResponse[] | [];
         deletedAt: string | null;
         createdAt: string | null;
         updatedAt: string | null;
     }
     interface IFulfillmentOrderDetailResponse {
         id: string | number;
+        uuid?: string;
         shop_id: string | number;
-        uuid?: string | null;
+        staff_id: string | number;
+        partner_id: string | number;
         order_id: string | number;
+        orderCode: string;
+        order_uuid: string;
         assigned_location_id: string | number;
         destination_id: string | number;
         shipping_method_id: string | number;
         status: string;
+        weight: number;
         requestStatus: string;
         fulfillAt: string | null;
-        fulfillBy: string | null;
+        fulfillBy: number | string | null;
         fulfillHoldReason: string | null;
         fulfillHoldReasonNote: string | null;
+        cancelReason?: string | null;
+        cancelled_by?: string | number | null;
+        cancelledAt?: string | null;
         lineItems: IFulfillmentOrderItem.ILineItemResponse[];
         shop: {
             id: string | number;
