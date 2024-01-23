@@ -49,7 +49,6 @@ export declare enum StockReferentType {
     INBOUND_ORDER = "inbound_order",
     OUTBOUND_ORDER = "outbound_order",
     RETURN_ORDER = "return_order",
-    ADJUSTMENT = "adjustment",
     DESTROY = "destroy"
 }
 export declare enum StockRouterReferentAction {
