@@ -6,7 +6,10 @@ export declare namespace IAdminReconciliation {
     interface ICreate {
         shipping_method_id: number & tags.Type<'uint32'>;
         note?: string;
-        items: IAdminReconciliationItem.ICreate[];
+        items: IFulfillmentReconciliation[];
+    }
+    interface IFulfillmentReconciliation {
+        fulfillment_id: number & tags.Type<'uint32'>;
     }
     interface IUpdate {
         status?: string & ADMIN_RECONCILIATION_STATUS_ENUM.CHECKING;

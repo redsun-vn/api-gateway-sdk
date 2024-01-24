@@ -67,6 +67,7 @@ export declare namespace IDrafOrder {
         totalPrice?: number | string;
         subTotal?: number | string;
         taxTotal?: number | string;
+        originTotal?: number | string;
         discountTotal?: number | string;
         totalWeight?: number | string;
         shippingTotal?: number | string;

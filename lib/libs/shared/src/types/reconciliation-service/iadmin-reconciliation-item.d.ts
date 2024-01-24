@@ -11,6 +11,9 @@ export declare namespace IAdminReconciliationItem {
         cod: number;
         chargePrice: number;
     }
+    interface ICreateFromFulfillment {
+        fulfillment_id: number & tags.Type<'uint32'>;
+    }
     interface IResponse extends BaseResponse {
         shop_id: number | string;
         status: string;

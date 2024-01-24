@@ -3,7 +3,7 @@ import type { IResponse } from "../../../../../libs/shared/src/types/common.type
 import type { IAdminReconciliationItem } from "../../../../../libs/shared/src/types/reconciliation-service/iadmin-reconciliation-item";
 export declare function createItem(connection: IConnection, id: string, data: createItem.Input): Promise<createItem.Output>;
 export declare namespace createItem {
-    type Input = Primitive<IAdminReconciliationItem.ICreate>;
+    type Input = Primitive<IAdminReconciliationItem.ICreateFromFulfillment>;
     type Output = Primitive<IResponse<IAdminReconciliationItem.IResponse>>;
     const METADATA: {
         readonly method: "POST";

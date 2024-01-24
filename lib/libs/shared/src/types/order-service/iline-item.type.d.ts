@@ -34,6 +34,7 @@ export declare namespace ILineItem {
         unitPrice?: number;
         price?: number;
         originPrice?: number;
+        discountTotal?: number;
         gram?: number;
         giftCardQuantity?: number;
         processedAt?: (string & tags.Format<'date-time'>) | null;
@@ -73,7 +74,7 @@ export declare namespace ILineItem {
         shippedQuantity?: number;
         subTotal?: number;
         taxTotal?: number;
-        originalTotal?: number;
+        originPrice?: number;
         discountTotal?: number;
         paidTotal?: number;
         giftCardQuantity?: number;
