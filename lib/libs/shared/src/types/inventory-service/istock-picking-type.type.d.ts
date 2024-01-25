@@ -13,7 +13,7 @@ export declare namespace IStockPickingType {
         sequence?: number;
         type: string;
         active?: boolean;
-        print_lable?: boolean;
+        printable?: boolean;
         countPickingDraf?: number;
         countPickingReady?: number;
         countPickingWaiting?: number;
@@ -24,7 +24,7 @@ export declare namespace IStockPickingType {
         sequence?: number;
         type?: string;
         active?: boolean;
-        print_lable?: boolean;
+        printable?: boolean;
         countPickingDraf?: number;
         countPickingReady?: number;
         countPickingWaiting?: number;
@@ -40,7 +40,7 @@ export declare namespace IStockPickingType {
         sequence?: number | string;
         type: string;
         active?: boolean | string;
-        print_lable?: boolean | string;
+        printable?: boolean | string;
         countPickingDraf?: number | string;
         countPickingReady?: number | string;
         countPickingWaiting?: number | string;
