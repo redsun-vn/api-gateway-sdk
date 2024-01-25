@@ -3,8 +3,9 @@ import { BaseResponse } from '../common.type';
 import { IOrder } from './iorder.type';
 export declare namespace ITableReservation {
     interface ICreateTableReservation {
-        shop_id: number & tags.Type<'uint32'>;
-        order_id: number & tags.Type<'uint32'>;
+        shop_id?: number & tags.Type<'uint32'>;
+        order_id?: number & tags.Type<'uint32'>;
+        uuid: string & tags.Format<'uuid'>;
         reservation_id?: number & tags.Type<'uint32'>;
         table_id: number & tags.Type<'uint32'>;
         name?: string | null;
