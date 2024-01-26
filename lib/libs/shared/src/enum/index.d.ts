@@ -7,3 +7,4 @@ export * from './activity-log.state';
 export * from './inventory.state';
 export * from './reconciliation-service';
 export * from './payment.state';
+export * from './report.state';
