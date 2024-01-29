@@ -3,10 +3,13 @@ export declare namespace IOrderRevenue {
     interface IOrderRevenueResponse {
         _id: string;
         shop_id: number | string;
+        branch_id: number | string;
         orderStatus: OrderStatus;
-        date: string;
-        week: string;
-        month: string;
+        hour?: string;
+        date?: string;
+        week?: string;
+        month?: string;
+        quarter?: string;
         year: string;
         revenue: number | string;
         originTotal: number | string;
@@ -20,5 +23,7 @@ export declare namespace IOrderRevenue {
         orderCount: number | string;
         partnerCount: number | string;
         __v?: number | string | null;
+        createdAt?: number | string | null;
+        updatedAt?: number | string | null;
     }
 }
