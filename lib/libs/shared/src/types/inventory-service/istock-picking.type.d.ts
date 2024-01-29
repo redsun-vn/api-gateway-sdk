@@ -9,9 +9,11 @@ export declare namespace IStockPicking {
         location_src_id: number & tags.Type<'uint32'>;
         location_dest_id: number & tags.Type<'uint32'>;
         picking_type_id: number & tags.Type<'uint32'>;
+        picking_address_id?: number & tags.Type<'uint32'>;
         updated_by?: (number & tags.Type<'uint32'>) | (string & tags.Format<'uuid'>);
         staff_id: (number & tags.Type<'uint32'>) | (string & tags.Format<'uuid'>);
         owner_id?: (number & tags.Type<'uint32'>) | (string & tags.Format<'uuid'>);
+        partner_id?: (number & tags.Type<'uint32'>) | (string & tags.Format<'uuid'>);
         referent_id?: number & tags.Type<'uint32'>;
         referentType?: StockReferentType | null;
         name: string;
@@ -31,6 +33,8 @@ export declare namespace IStockPicking {
         location_src_id: number | string | null;
         location_dest_id: number | string | null;
         picking_type_id: number | string | null;
+        picking_address_id?: number | string | null;
+        partner_id?: number | string | null;
         updated_by?: number | string | null;
         staff_id?: number | string | null;
         owner_id?: number | string | null;
