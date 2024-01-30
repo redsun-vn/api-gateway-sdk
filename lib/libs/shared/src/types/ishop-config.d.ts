@@ -14,6 +14,8 @@ export declare namespace IShopConfig {
         shippingPolicy?: string;
         privacyPolicy?: string;
         taxesIncluded?: boolean;
+        available_price_book_ids?: string[];
+        default_price_book_id?: number & tags.Type<'uint32'>;
         table_id?: number | string;
         room_id?: number & tags.Type<'uint32'>;
         branch_id: number & tags.Type<'uint32'>;
@@ -47,5 +49,7 @@ export declare namespace IShopConfig {
         timeClose?: string | null;
         dateStart?: string | null;
         dateEnd?: string | null;
+        available_price_book_ids?: string[] | null;
+        default_price_book_id?: number | string | null;
     }
 }
