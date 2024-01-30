@@ -17,3 +17,6 @@ export declare enum FULFILLMENT_REQUEST_STATUS {
     CANCELLATION_REJECTED = "cancellation_rejected",
     CLOSED = "closed"
 }
+export declare enum SHIPPING_PROVIDER_ENUM {
+    GHN = "ghn"
+}
