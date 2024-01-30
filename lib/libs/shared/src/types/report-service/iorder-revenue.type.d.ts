@@ -26,4 +26,18 @@ export declare namespace IOrderRevenue {
         createdAt?: number | string | null;
         updatedAt?: number | string | null;
     }
+    interface IOrderRevenueSummary {
+        _id: string | object;
+        revenue: number;
+        originTotal: number;
+        taxTotal: number;
+        discountTotal: number;
+        shippingTotal: number;
+        totalWeight: number;
+        total: number;
+        totalPrice: number;
+        refundedTotal: number;
+        orderCount: number;
+        partnerCount: number;
+    }
 }
