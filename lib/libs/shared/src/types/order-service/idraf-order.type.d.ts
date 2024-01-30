@@ -45,6 +45,7 @@ export declare namespace IDrafOrder {
     }
     interface IConfirmDrafOrder {
         warehouse_id: number & tags.Type<'uint32'>;
+        price_book_id?: number & tags.Type<'uint32'>;
     }
     interface IDetailDrafOrderResponse extends BaseResponse {
         shop_id: string | number | null;
