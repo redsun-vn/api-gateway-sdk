@@ -16,8 +16,8 @@ export declare namespace ITransaction {
         errorCode?: TransactionErrorCode;
         status?: TransactionStatus;
         kind?: TransactionKind;
-        authorizationExpiredAt?: Date;
-        processedAt?: Date;
+        authorizationExpiredAt?: string & tags.Format<'date-time'>;
+        processedAt?: string & tags.Format<'date-time'>;
         amount: number;
         receiptJson?: unknown;
         payment?: IPayment.IPaymentResponse;
@@ -32,8 +32,8 @@ export declare namespace ITransaction {
         errorCode?: TransactionErrorCode;
         status?: TransactionStatus;
         kind?: TransactionKind;
-        authorizationExpiredAt?: Date;
-        processedAt?: Date;
+        authorizationExpiredAt?: string & tags.Format<'date-time'>;
+        processedAt?: string & tags.Format<'date-time'>;
         amount?: number;
         receiptJson?: unknown;
     }
@@ -49,8 +49,8 @@ export declare namespace ITransaction {
         errorCode?: string;
         status: string;
         kind: string;
-        authorizationExpiredAt?: Date | string | null;
-        processedAt?: Date | string | null;
+        authorizationExpiredAt?: string | null;
+        processedAt?: string | null;
         amount: number | string;
         receiptJson?: unknown | null;
         payment?: IPayment.IPaymentResponse;

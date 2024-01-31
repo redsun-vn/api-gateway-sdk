@@ -27,7 +27,7 @@ export declare namespace IStockMove {
         internalReference?: StockReferentType;
         sequence?: number;
         priority?: number;
-        dateScheduled: string | Date;
+        dateScheduled: string & tags.Format<'date-time'>;
         dateDeadline?: string | Date | null;
         state?: StockMoveState;
         inventoryQuantity: number;
@@ -58,8 +58,8 @@ export declare namespace IStockMove {
         internalReference?: string | null;
         sequence?: string | number;
         priority?: string | number;
-        dateScheduled: string | Date;
-        dateDeadline?: string | Date | null;
+        dateScheduled: string;
+        dateDeadline?: string | null;
         state?: string;
         inventoryQuantity: number | string;
         transferQuantity: number | string;

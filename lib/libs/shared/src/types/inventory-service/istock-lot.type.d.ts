@@ -17,8 +17,8 @@ export declare namespace IStockLot {
         cost?: number;
         quantity?: number;
         originQuantity?: number;
-        expiredAt: Date;
-        warehouseAt: Date;
+        expiredAt: string & tags.Format<'date-time'>;
+        warehouseAt: string & tags.Format<'date-time'>;
     }
     interface IUpdateStockLot {
         name?: string;
@@ -27,8 +27,8 @@ export declare namespace IStockLot {
         quantity?: number;
         originQuantity?: number;
         cost?: number;
-        expiredAt?: Date;
-        warehouseAt?: Date;
+        expiredAt?: string & tags.Format<'date-time'>;
+        warehouseAt?: string & tags.Format<'date-time'>;
     }
     interface IStockLotResponse extends BaseResponse {
         shop_id: number | string | null;
@@ -44,8 +44,8 @@ export declare namespace IStockLot {
         cost?: number | string;
         quantity?: number | string;
         originQuantity?: number | string;
-        expiredAt: Date | string | null;
-        warehouseAt: Date | string | null;
+        expiredAt: string | null;
+        warehouseAt: string | null;
         warehouse?: IWarehouse.IWarehouseResponse | null;
         stockQuantity?: IStockQuantity.IStockQuantityResponse | null;
     }

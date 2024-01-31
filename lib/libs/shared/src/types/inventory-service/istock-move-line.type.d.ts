@@ -48,9 +48,9 @@ export declare namespace IStockMoveLine {
         picking_type_id?: number | string | null;
         staff_id: string;
         barcode: string;
-        note: string;
-        description: string | Date;
-        dateScheduled: string | Date;
+        note?: string | null;
+        description?: string | null;
+        dateScheduled: string | null;
         state?: string;
         transferQuantity: number | string;
         requestTransferQuantity: number | string;

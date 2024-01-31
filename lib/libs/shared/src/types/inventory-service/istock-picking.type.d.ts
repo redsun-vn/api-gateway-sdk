@@ -41,13 +41,13 @@ export declare namespace IStockPicking {
         referentType?: string | null;
         referent_id?: number | string | null;
         name: string;
-        note?: string;
+        note?: string | null;
         moveType: string;
         state?: string;
         priority?: number | string;
-        dateScheduled?: string | Date;
-        dateDeadline?: string | Date;
-        dateDone?: string | Date;
+        dateScheduled?: string | null;
+        dateDeadline?: string | null;
+        dateDone?: string | null;
         printed?: boolean;
         pickingType?: IStockPickingType.IStockPickingTypeResponse;
         locationSrc?: IStockLocation.IStockLocationResponse;

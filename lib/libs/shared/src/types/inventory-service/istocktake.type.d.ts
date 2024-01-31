@@ -33,7 +33,7 @@ export declare namespace IStocktake {
         totalLine?: number | string;
         type: string;
         status: string;
-        stocktakeDate: string | Date;
+        stocktakeDate: string | null;
         warehouse?: IWarehouse.IWarehouseResponse;
         location?: IStockLocation.IStockLocationResponse;
     }
