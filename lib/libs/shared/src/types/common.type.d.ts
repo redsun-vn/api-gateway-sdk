@@ -4,9 +4,9 @@ export type CustomDataType = {
 };
 export interface BaseResponse {
     id: number | string | null;
-    createdAt: Date | string | null;
-    updatedAt: Date | string | null;
-    deletedAt?: Date | string | null;
+    createdAt: string | null;
+    updatedAt: string | null;
+    deletedAt?: string | null;
 }
 export interface ISorting {
     property: string;

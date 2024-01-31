@@ -29,7 +29,7 @@ export declare namespace IStockQuantity {
         inventoryQuantity: number | string;
         availableQuantity: number | string;
         lastStocktakeQuantity?: number | string;
-        lastStocktakeDate?: string | Date | null;
+        lastStocktakeDate?: string | null;
         stockLocation?: IStockLocation.IStockLocationResponse;
     }
 }

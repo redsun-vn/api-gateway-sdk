@@ -124,8 +124,8 @@ export declare namespace ILineItem {
         shippedQuantity?: number | string;
         giftCardQuantity?: number | string;
         returnedQuantity?: number | string;
-        processedAt?: Date | string | null;
-        completedAt?: Date | string | null;
+        processedAt?: string | null;
+        completedAt?: string | null;
         sequenece?: number | string;
         order?: IOrder.IDetailOrderResponse | null;
         drafOrder?: IDrafOrder.IDetailDrafOrderResponse | null;

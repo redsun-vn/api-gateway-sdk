@@ -28,7 +28,7 @@ export declare namespace IStockMove {
         sequence?: number;
         priority?: number;
         dateScheduled: string & tags.Format<'date-time'>;
-        dateDeadline?: string | Date | null;
+        dateDeadline?: (string & tags.Format<'date-time'>) | null;
         state?: StockMoveState;
         inventoryQuantity: number;
         transferQuantity: number;

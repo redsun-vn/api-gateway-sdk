@@ -10,7 +10,7 @@ export declare namespace IFulfillmentOrderItem {
         stock_quantity_id: string | number | null;
         quantity: number | string;
         fulfillableQuantity: number | string | null;
-        createdAt: Date | string;
-        updatedAt: Date | string;
+        createdAt: string;
+        updatedAt: string;
     }
 }

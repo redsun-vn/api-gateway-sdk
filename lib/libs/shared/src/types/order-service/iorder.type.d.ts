@@ -113,10 +113,10 @@ export declare namespace IOrder {
         orderProcessingStatus?: string;
         fulfillmentStatus?: string;
         financialStatus?: string;
-        completedAt?: Date | string | null;
-        confirmedAt?: Date | string | null;
-        processedAt?: Date | string | null;
-        canceledAt?: Date | string | null;
+        completedAt?: string | null;
+        confirmedAt?: string | null;
+        processedAt?: string | null;
+        canceledAt?: string | null;
         lineItems?: ILineItem.IDetailLineItemResponse[] | null;
         drafOrder?: IDrafOrder.IDetailDrafOrderResponse | null;
         tableReservations?: ITableReservation.IDetailTableReservationResponse[] | null;
