@@ -1,4 +1,21 @@
 export declare namespace IGhnDto {
+    interface IOrderFeeRequest {
+        from_district_id: number;
+        to_district_id: number;
+        to_ward_code: string;
+        height: number;
+        length: number;
+        weight: number;
+        width: number;
+        items: {
+            name: string;
+            quantity: number;
+            height: number;
+            weight: number;
+            length: number;
+            width: number;
+        }[];
+    }
     interface IProvince {
         ProvinceID: number;
         ProvinceName: string;

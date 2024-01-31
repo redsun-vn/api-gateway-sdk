@@ -6,7 +6,6 @@ import { IDrafOrder } from './idraf-order.type';
 import { ITableReservation } from './itable-reservation.type';
 export declare namespace IOrder {
     interface ICreateOrder {
-        shop_id?: number & tags.Type<'uint32'>;
         branch_id: number & tags.Type<'uint32'>;
         staff_id: number & tags.Type<'uint32'>;
         pos_session_id: string & tags.Format<'uuid'>;
@@ -17,19 +16,35 @@ export declare namespace IOrder {
         draf_order_id?: number & tags.Type<'uint32'>;
         partner_id?: string & tags.Format<'uuid'>;
         warehouse_id: number & tags.Type<'uint32'>;
-        currency_code?: string | null;
-        code?: string | null;
+        currencyCode?: string | null;
         email?: string | null;
         phone?: string | null;
+        code?: string | null;
         note?: string | null;
-        uuid?: (string & tags.Format<'uuid'>) | null;
+        uuid: (string & tags.Format<'uuid'>) | null;
         description?: string | null;
         tags?: string | null;
-        refundable?: boolean;
-        refundedTotal?: number;
+        total?: number;
+        totalPrice?: number;
+        totalWeight?: number;
+        subTotal?: number;
         shippingTotal?: number;
+        discountOrder?: number;
+        discountTotal?: number;
+        rawDiscountTotal?: number;
+        taxTotal?: number;
+        originTotal?: number;
+        paidTotal?: number;
+        refundedAmount?: number;
+        refundedTotal?: number;
+        totalGuests?: number;
         customerAcceptMarketing?: boolean;
         taxesIncluded?: boolean;
+        refundable?: boolean;
+        completedAt?: (string & tags.Format<'date-time'>) | null;
+        confirmedAt?: (string & tags.Format<'date-time'>) | null;
+        processedAt?: (string & tags.Format<'date-time'>) | null;
+        canceledAt?: (string & tags.Format<'date-time'>) | null;
         cancelReason?: string | null;
         confirmationCode?: string | null;
         paymentGatewayName?: string | null;
@@ -41,10 +56,6 @@ export declare namespace IOrder {
         orderProcessingStatus?: OrderProcessingStatus;
         fulfillmentStatus?: OrderFulfillmentStatus;
         financialStatus?: OrderFinancialStatus;
-        completedAt?: (string & tags.Format<'date-time'>) | null;
-        confirmedAt?: (string & tags.Format<'date-time'>) | null;
-        processedAt?: (string & tags.Format<'date-time'>) | null;
-        canceledAt?: (string & tags.Format<'date-time'>) | null;
         lineItems: ILineItem.IInputLineItem[];
         tableReservations?: ITableReservation.ICreateTableReservation[];
         userId?: string;
@@ -52,46 +63,14 @@ export declare namespace IOrder {
     interface ICreateOrderKafka extends ICreateOrder {
         shop_id: number & tags.Type<'uint32'>;
     }
-    interface IUpdateOrder {
-        billing_address_id?: number & tags.Type<'uint32'>;
-        shipping_address_id?: number & tags.Type<'uint32'>;
-        price_book_id?: number & tags.Type<'uint32'>;
-        partner_id?: string & tags.Format<'uuid'>;
-        email?: string;
-        phone?: string;
-        note?: string;
-        description?: string;
-        tags?: string;
-        totalWeight?: number;
-        shippingTotal?: number;
-        refundedTotal?: number;
-        totalGuests?: number;
-        customerAcceptMarketing?: boolean;
-        taxesIncluded?: boolean;
-        refundable?: boolean;
-        cancelReason?: string | null;
-        confirmationCode?: string | null;
-        paymentGatewayName?: string | null;
-        clientIp?: string | null;
-        discountCode?: string | null;
-        sourceIdentifier?: string | null;
-        status?: OrderStatus;
-        codStatus?: CODStatus;
-        completedAt?: (string & tags.Format<'date-time'>) | null;
-        confirmedAt?: (string & tags.Format<'date-time'>) | null;
-        processedAt?: (string & tags.Format<'date-time'>) | null;
-        canceledAt?: (string & tags.Format<'date-time'>) | null;
-        orderProcessingStatus?: OrderProcessingStatus;
-        fulfillmentStatus?: OrderFulfillmentStatus;
-        financialStatus?: OrderFinancialStatus;
-        tableReservations?: ITableReservation.IUpdateTableReservation[];
-        userId?: string;
+    interface IUpdateOrder extends Omit<Partial<ICreateOrder>, 'branch_id' | 'staff_id' | 'pos_session_id' | 'sale_channel_id'> {
+        uuid?: string & tags.Format<'uuid'>;
     }
     interface IDetailOrderResponse extends BaseResponse {
-        shop_id: number | string | null;
+        shop_id: number | string;
         branch_id: number | string | null;
         staff_id: number | string | null;
-        pos_session_id?: number | string | null;
+        pos_session_id?: string | null;
         sale_channel_id?: number | string | null;
         price_book_id?: number | string | null;
         billing_address_id?: number | string | null;
@@ -101,8 +80,8 @@ export declare namespace IOrder {
         warehouse_id?: null | number | string;
         idempotency_key: string | number;
         code?: string | null;
-        uuid?: string | null;
-        currency_code?: string | null;
+        uuid?: string;
+        currencyCode?: string | null;
         email?: string | null;
         phone?: string | null;
         note?: string | null;
@@ -112,7 +91,8 @@ export declare namespace IOrder {
         refundable?: boolean;
         refundedTotal?: string | number;
         shippingTotal?: string | number;
-        discountTotal?: string | number;
+        discountTotal?: number | string;
+        discountOrder?: number | string;
         totalWeight?: string | number;
         subTotal?: string | number;
         taxTotal?: string | number;
