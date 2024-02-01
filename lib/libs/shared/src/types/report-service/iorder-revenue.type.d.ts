@@ -12,6 +12,7 @@ export declare namespace IOrderRevenue {
         quarter?: string;
         year: string;
         revenue: number | string;
+        profit?: number | string;
         originTotal: number | string;
         taxTotal: number | string;
         discountTotal: number | string;

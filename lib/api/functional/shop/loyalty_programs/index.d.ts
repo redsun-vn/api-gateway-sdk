@@ -2,6 +2,7 @@ import type { IConnection, Primitive, Resolved } from "@nestia/fetcher";
 import type { IQuery, IResponse, IResponsePagination } from "../../../../libs/shared/src/types/common.type";
 import type { ILoyaltyProgram } from "../../../../libs/shared/src/types/loyalty-service/iloyalty-program";
 export * as order from "./order";
+export * as draft_order from "./draft_order";
 export declare function create(connection: IConnection, data: create.Input): Promise<create.Output>;
 export declare namespace create {
     type Input = Primitive<ILoyaltyProgram.ILoyaltyProgramCreate>;
