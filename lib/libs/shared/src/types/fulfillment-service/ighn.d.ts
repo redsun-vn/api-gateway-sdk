@@ -28,7 +28,7 @@ export declare namespace IGhnDto {
         NameExtension?: string[];
     }
     interface IWard {
-        WardCode: number;
+        WardCode: string;
         DistrictID: number;
         WardName: string;
         NameExtension?: string[];
