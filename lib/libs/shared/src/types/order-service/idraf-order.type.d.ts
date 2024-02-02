@@ -52,7 +52,7 @@ export declare namespace IDrafOrder {
         code?: string;
         email?: string | null;
         currencyCode: string;
-        discountCode?: string;
+        discountCode?: string | null;
         phone?: string | null;
         note?: string | null;
         description?: string | null;

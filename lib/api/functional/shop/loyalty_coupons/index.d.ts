@@ -1,7 +1,6 @@
 import type { IConnection, Primitive, Resolved } from "@nestia/fetcher";
 import type { IQuery, IResponse, IResponsePagination } from "../../../../libs/shared/src/types/common.type";
 import type { ILoyaltyCoupon } from "../../../../libs/shared/src/types/loyalty-service/iloyalty-coupon";
-export * as valid from "./valid";
 export declare function create(connection: IConnection, data: create.Input): Promise<create.Output>;
 export declare namespace create {
     type Input = Primitive<ILoyaltyCoupon.ILoyaltyCouponCreate>;
