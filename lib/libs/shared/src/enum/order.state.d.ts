@@ -7,7 +7,7 @@ export declare enum OrderStatus {
 export declare enum DrafOrderStatus {
     OPEN = "open",
     VERIFIED = "verified",
-    CONFIRMED = "comfirmed",
+    CONFIRMED = "confirmed",
     COMPLETED = "completed",
     CANCELED = "canceled"
 }
