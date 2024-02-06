@@ -6,3 +6,4 @@ export * from './ishipping-line-tax-line.type';
 export * from './ishipping-line.type';
 export * from './iadditional-fee.type';
 export * from './itable-reservation.type';
+export * from './icombining-promotion.type';

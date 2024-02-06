@@ -4,6 +4,18 @@ export declare enum OrderStatus {
     COMPLETED = "completed",
     CANCELED = "canceled"
 }
+export declare enum OrderCombiningPromotionType {
+    ORDER_AMOUNT = "order_amount",
+    LINE_ITEM_AMOUNT = "line_item_amount",
+    SERVICE_AMOUNT = "service_amount",
+    FREE_SHIPPING = "free_shipping",
+    BUY_X_GET_Y = "buy_x_get_y"
+}
+export declare enum CombiningPromotionStatus {
+    OPEN = "open",
+    COMPLETED = "completed",
+    CANCELED = "canceled"
+}
 export declare enum DrafOrderStatus {
     OPEN = "open",
     VERIFIED = "verified",
