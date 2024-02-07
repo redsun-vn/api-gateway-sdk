@@ -16,6 +16,13 @@ export declare enum CombiningPromotionStatus {
     COMPLETED = "completed",
     CANCELED = "canceled"
 }
+export declare enum AdditionalFeeType {
+    SHOP_SHIPPING = "shop_shipping",
+    EXTERNAL_SHIPPING = "external_shipping",
+    SERVICE_FEE = "service_fee",
+    INCIDENTAL_FEE = "incidental_fee",
+    FREE_SHIPPING = "free_shipping"
+}
 export declare enum DrafOrderStatus {
     OPEN = "open",
     VERIFIED = "verified",

@@ -4,6 +4,8 @@ import { ILineItem } from './iline-item.type';
 import { CODStatus, OrderStatus, OrderFinancialStatus, OrderFulfillmentStatus, OrderProcessingStatus } from '../../enum';
 import { IDrafOrder } from './idraf-order.type';
 import { ITableReservation } from './itable-reservation.type';
+import { ICombiningPromotion } from './icombining-promotion.type';
+import { IAdditionalFee } from './iadditional-fee.type';
 export declare namespace IOrder {
     interface ICreateOrder {
         branch_id: number & tags.Type<'uint32'>;
@@ -120,5 +122,7 @@ export declare namespace IOrder {
         lineItems?: ILineItem.IDetailLineItemResponse[] | null;
         drafOrder?: IDrafOrder.IDetailDrafOrderResponse | null;
         tableReservations?: ITableReservation.IDetailTableReservationResponse[] | null;
+        combiningPromotions?: ICombiningPromotion.IDetailCombiningPromotionResponse[] | null;
+        additionalFees?: IAdditionalFee.IDetailAdditionalFeeResponse[] | null;
     }
 }

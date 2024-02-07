@@ -3,6 +3,8 @@ import { BaseResponse } from '../common.type';
 import { ILineItem } from './iline-item.type';
 import { DrafOrderStatus } from '../../enum';
 import { IOrder } from './iorder.type';
+import { ICombiningPromotion } from './icombining-promotion.type';
+import { IAdditionalFee } from './iadditional-fee.type';
 export declare namespace IDrafOrder {
     interface ICreateDrafOrder {
         branch_id: number & tags.Type<'uint32'>;
@@ -71,5 +73,7 @@ export declare namespace IDrafOrder {
         canceledAt?: string | null;
         order?: IOrder.IDetailOrderResponse | null;
         lineItems?: ILineItem.IDetailLineItemResponse[] | null;
+        combiningPromotions?: ICombiningPromotion.IDetailCombiningPromotionResponse[] | null;
+        additionalFees?: IAdditionalFee.IDetailAdditionalFeeResponse[] | null;
     }
 }

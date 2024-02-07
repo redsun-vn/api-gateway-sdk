@@ -8,7 +8,7 @@ export declare namespace IPackage {
         price: number & tags.Type<'uint32'>;
         day: number & tags.Type<'uint32'>;
         month: number & tags.Type<'uint32'>;
-        metadata?: string;
+        metadata?: string[];
         isTrial?: boolean;
     }
     interface IUpdate extends Partial<ICreate> {
@@ -21,6 +21,6 @@ export declare namespace IPackage {
         day: number;
         month: number;
         isTrial?: boolean | null;
-        metadata?: string | null;
+        metadata?: string[] | null;
     }
 }
