@@ -66,6 +66,21 @@ export declare namespace confirm {
     };
     const path: (id: string) => string;
 }
+export declare function complete(connection: IConnection, id: string): Promise<complete.Output>;
+export declare namespace complete {
+    type Output = Primitive<IResponse<IDrafOrder.IDetailDrafOrderResponse>>;
+    const METADATA: {
+        readonly method: "PUT";
+        readonly path: "/shop/order/draf-orders/:id/complete";
+        readonly request: null;
+        readonly response: {
+            readonly type: "application/json";
+            readonly encrypted: false;
+        };
+        readonly status: null;
+    };
+    const path: (id: string) => string;
+}
 export declare function create(connection: IConnection, input: create.Input): Promise<create.Output>;
 export declare namespace create {
     type Input = Primitive<IDrafOrder.ICreateDrafOrder>;
