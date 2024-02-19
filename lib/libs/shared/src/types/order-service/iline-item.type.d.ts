@@ -17,6 +17,7 @@ export declare namespace ILineItem {
         kitchenProcessingStatus?: KitchenProcessingStatus | null;
         fulfillmentStatus?: OrderFulfillmentStatus | null;
         isGiftcard?: boolean;
+        isGift?: boolean;
         isReturn?: boolean;
         isRequiredShipping?: boolean;
         isPrioritize?: boolean;
@@ -55,6 +56,7 @@ export declare namespace ILineItem {
         kitchenProcessingStatus?: string;
         fulfillmentStatus?: string;
         isGiftcard?: boolean;
+        isGift?: boolean;
         isReturn?: boolean;
         isRequiredShipping?: boolean;
         isPrioritize?: boolean;
@@ -96,6 +98,7 @@ export declare namespace ILineItem {
         order_id?: number | string | null;
         draf_order_id?: number | string | null;
         isGiftcard?: boolean;
+        isGift?: boolean;
         isReturn?: boolean;
         isRequiredShipping?: boolean;
         isPrioritize?: boolean;

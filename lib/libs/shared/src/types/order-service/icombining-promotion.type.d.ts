@@ -25,6 +25,7 @@ export declare namespace ICombiningPromotion {
     interface IDetailCombiningPromotionResponse extends BaseResponse {
         shop_id: number | string | null;
         order_id?: number | string | null;
+        program_id?: number | string | null;
         draf_order_id?: number | string | null;
         line_item_id?: number | string | null;
         uuid?: string;

@@ -2,11 +2,13 @@ import { tags } from 'typia';
 import { BaseResponse } from '../common.type';
 export declare namespace ILineItemTaxLine {
     interface IInputLineItemTaxLine {
+        id?: string;
         code: string;
         rate: number;
         ratePercentage: number;
     }
     interface ICreateLineItemTaxLine {
+        shop_id?: number & tags.Type<'uint32'>;
         line_item_id: number & tags.Type<'uint32'>;
         name: string;
         code: string;
