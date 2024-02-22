@@ -34,6 +34,7 @@ export declare namespace IProduct {
         salesChannel?: ISalesChannel[];
         name: string;
         active?: boolean;
+        needToCook?: boolean;
         barcode?: string;
         sku?: string;
         type?: ProductType;
@@ -61,6 +62,7 @@ export declare namespace IProduct {
         salesChannel?: ISalesChannel[];
         name?: string;
         active?: boolean;
+        needToCook?: boolean;
         type?: ProductType;
         price?: number;
         salePrice?: number;
@@ -95,6 +97,7 @@ export declare namespace IProduct {
         sku?: string;
         name: string;
         active: boolean;
+        needToCook?: boolean;
         type: string;
         icon?: string | null;
         lowLimit?: number | string | null;

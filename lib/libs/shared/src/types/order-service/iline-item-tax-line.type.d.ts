@@ -3,6 +3,7 @@ import { BaseResponse } from '../common.type';
 export declare namespace ILineItemTaxLine {
     interface IInputLineItemTaxLine {
         id?: string;
+        name?: string;
         code: string;
         rate: number;
         ratePercentage: number;

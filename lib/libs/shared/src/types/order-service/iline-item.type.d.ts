@@ -23,6 +23,7 @@ export declare namespace ILineItem {
         isPrioritize?: boolean;
         refundable?: boolean;
         taxable?: boolean;
+        needToCook?: boolean;
         variantTitle?: string | null;
         title?: string | null;
         uuid?: string & tags.Format<'uuid'>;
@@ -62,6 +63,7 @@ export declare namespace ILineItem {
         isPrioritize?: boolean;
         refundable?: boolean;
         taxable?: boolean;
+        needToCook?: boolean;
         variantTitle?: string;
         title?: string;
         sku?: string;
@@ -102,6 +104,7 @@ export declare namespace ILineItem {
         isReturn?: boolean;
         isRequiredShipping?: boolean;
         isPrioritize?: boolean;
+        needToCook?: boolean;
         sku?: string | null;
         barcode?: string | null;
         uuid: string | null;
