@@ -29,6 +29,8 @@ export declare namespace IFulfillmentOrder {
         variant_id: number & tags.Type<'uint32'>;
     }
     interface IFulfillmentOrderRequestShipping {
+        cod: number;
+        weight: number;
         length: number;
         width: number;
         height: number;
@@ -48,6 +50,7 @@ export declare namespace IFulfillmentOrder {
         orderCode: string;
         order_id: string | number;
         order_uuid: string;
+        fulfillment_id: string | number | null;
         assigned_location_id: string | number;
         destination_id: string | number;
         weight: number;
