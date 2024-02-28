@@ -1,5 +1,7 @@
 import { tags } from 'typia';
 import { BaseResponse } from './common.type';
+import { PACKAGE_LEVEL_SUPPORT_ENUM } from '../enum/shop-service';
+import { IPackageAddition } from './ipackage-addition';
 export declare namespace IPackage {
     interface ICreate {
         name: string;
@@ -10,17 +12,31 @@ export declare namespace IPackage {
         month: number & tags.Type<'uint32'>;
         metadata?: string[];
         isTrial?: boolean;
+        limitUser?: number;
+        limitDevice?: number;
+        limitBranch?: number;
+        numberOfGuides?: number;
+        supportLevel?: string & PACKAGE_LEVEL_SUPPORT_ENUM;
+        level?: number;
+        packageAdditions: IPackageAddition.ICreate[];
     }
-    interface IUpdate extends Partial<ICreate> {
+    interface IUpdate extends Omit<Partial<ICreate>, 'packageAdditions'> {
     }
     interface IPackageResponse extends BaseResponse {
         name: string;
         active: boolean;
         description?: string | null;
-        price: number;
+        price: number | string;
         day: number;
         month: number;
         isTrial?: boolean | null;
         metadata?: string[] | null;
+        limitUser?: number | null;
+        limitDevice?: number | null;
+        limiBranch?: number | null;
+        numberOfGuides?: number | null;
+        supportLevel?: string | null;
+        level?: number | null;
+        packageAdditions?: IPackageAddition.IResponse[];
     }
 }

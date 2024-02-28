@@ -1,16 +1,9 @@
-import { tags } from 'typia';
 import { BaseResponse } from './common.type';
-import { IPackage } from './ipackage';
+import { IPackagePlan } from './ipackage-plan';
 export declare namespace ISubscription {
     interface ICreate {
         package_id: string;
-        name: string;
-        price: number & tags.Type<'uint32'>;
-        day: number & tags.Type<'uint32'>;
-        month: number & tags.Type<'uint32'>;
-        starDate: string & tags.Format<'date-time'>;
-        endDate: string & tags.Format<'date-time'>;
-        trialEndsAt: string & tags.Format<'date-time'>;
+        packageAdditionIds?: number[];
     }
     interface IUpdate extends Partial<ICreate> {
     }
@@ -19,11 +12,11 @@ export declare namespace ISubscription {
         shop_id: string;
         name: string;
         day: number;
-        price: number;
-        month: number;
-        starDate: string;
-        endDate: string;
-        trialEndsAt: string;
-        package: IPackage.IPackageResponse;
+        price: number | string;
+        month: number | string;
+        startDate: string | Date;
+        endDate: string | Date;
+        trialEndsAt: string | Date | null;
+        packagePlans?: IPackagePlan.IResponse[];
     }
 }

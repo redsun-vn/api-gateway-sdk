@@ -30,6 +30,7 @@ export declare namespace IFulfillmentOrder {
     }
     interface IFulfillmentOrderRequestShipping {
         cod: number;
+        note?: string;
         weight: number;
         length: number;
         width: number;

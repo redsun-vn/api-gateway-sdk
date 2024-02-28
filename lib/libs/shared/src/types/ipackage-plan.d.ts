@@ -1,0 +1,21 @@
+import { BaseResponse } from './common.type';
+export declare namespace IPackagePlan {
+    interface IResponse extends BaseResponse {
+        shop_id: number | string;
+        subcription_id: number | string;
+        package_id: number | string;
+        package_addition_id: number | string;
+        name: string;
+        price: number | string;
+        discount?: number | string | null;
+        total: number | string;
+        isDefault: boolean;
+        type: string;
+        target: string;
+        value: number;
+        active: boolean;
+        description?: string | null;
+        startDate: string;
+        endDate: string;
+    }
+}

@@ -17,6 +17,29 @@ export declare enum FULFILLMENT_REQUEST_STATUS {
     CANCELLATION_REJECTED = "cancellation_rejected",
     CLOSED = "closed"
 }
+export declare enum FULFILLMENT_SHIPPING_STATUS {
+    DRAFT = "draft",
+    WAITING = "waitting",
+    PICKED = "picked",
+    DELIVERING = "delevering",
+    DELIVERED = "delivered",
+    SUCCESS = "success",
+    CANCEL = "cancel",
+    FAIL = "fail",
+    WAITING_RETURN = "waiting_return",
+    RETURNING = "returning",
+    RETURNED = "returned"
+}
+export declare enum FULFILLMENT_STATUS {
+    PENDING = "pending",
+    OPEN = "open",
+    PROGRESSING = "progressing",
+    SUCCESS = "success",
+    CANCELLED = "cancelled",
+    ERROR = "error",
+    FAILURE = "failure",
+    CLOSED = "closed"
+}
 export declare enum SHIPPING_PROVIDER_ENUM {
     GHN = "ghn"
 }
