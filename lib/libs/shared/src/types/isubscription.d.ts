@@ -14,8 +14,8 @@ export declare namespace ISubscription {
         day: number;
         price: number | string;
         month: number | string;
-        startDate: string | Date;
-        endDate: string | Date;
+        startDate?: string | Date;
+        endDate?: string | Date;
         trialEndsAt: string | Date | null;
         packagePlans?: IPackagePlan.IResponse[];
     }

@@ -39,6 +39,7 @@ export declare namespace IOrder {
         paidTotal?: number;
         refundedAmount?: number;
         refundedTotal?: number;
+        returnedTotal?: number;
         totalGuests?: number;
         customerAcceptMarketing?: boolean;
         taxesIncluded?: boolean;
@@ -48,6 +49,8 @@ export declare namespace IOrder {
         processedAt?: (string & tags.Format<'date-time'>) | null;
         canceledAt?: (string & tags.Format<'date-time'>) | null;
         cancelReason?: string | null;
+        returnReason?: string | null;
+        isReturn?: boolean;
         confirmationCode?: string | null;
         paymentGatewayName?: string | null;
         clientIp?: string | null;
@@ -92,6 +95,7 @@ export declare namespace IOrder {
         totalGuests?: string | number;
         refundable?: boolean;
         refundedTotal?: string | number;
+        returnedTotal?: number | string;
         shippingTotal?: string | number;
         discountTotal?: number | string;
         discountOrder?: number | string;
@@ -105,6 +109,8 @@ export declare namespace IOrder {
         customerAcceptMarketing?: boolean;
         taxesIncluded?: boolean;
         cancelReason?: string | null;
+        returnReason?: string | null;
+        isReturn?: boolean | string;
         confirmationCode?: string | null;
         paymentGatewayName?: string | null;
         clientIp?: string | null;

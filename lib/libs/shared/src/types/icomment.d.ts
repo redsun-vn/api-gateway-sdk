@@ -9,7 +9,7 @@ export declare namespace IComment {
         attributeToApp?: boolean;
         attributeToUser?: boolean;
         embed: string;
-        objectBody?: string;
+        objectBody?: Record<string, unknown>;
     }
     interface IUpdate extends Partial<ICreate> {
     }
@@ -22,7 +22,7 @@ export declare namespace IComment {
         attributeToApp: boolean;
         attributeToUser: boolean;
         embed: string | null;
-        objectBody?: string | null;
+        objectBody?: Record<string, unknown> | null;
         commentAttachments?: null | ICommentAttachment.ICommentAttachmentResponse[];
     }
 }
