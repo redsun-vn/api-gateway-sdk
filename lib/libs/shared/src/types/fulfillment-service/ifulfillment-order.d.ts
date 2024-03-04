@@ -1,6 +1,6 @@
 import { tags } from 'typia';
 import { IFulfillmentOrderItem } from './ifulfillment-line-item';
-import { FULFILLMENT_ORDER_STATUS, FULFILLMENT_REQUEST_STATUS } from '../../enum';
+import { FULFILLMENT_ORDER_STATUS, FULFILLMENT_REQUEST_STATUS, PAYMENT_TARGET, RECEIVE_METHOD } from '../../enum';
 export declare namespace IFulfillmentOrder {
     interface ICreateFulfillmentOrder {
         order_id: number & tags.Type<'uint32'>;
@@ -30,6 +30,8 @@ export declare namespace IFulfillmentOrder {
     }
     interface IFulfillmentOrderRequestShipping {
         cod: number;
+        paymentTarget: string & PAYMENT_TARGET;
+        receiveMethod: string & RECEIVE_METHOD;
         note?: string;
         weight: number;
         length: number;
@@ -66,6 +68,11 @@ export declare namespace IFulfillmentOrder {
         cancelled_by?: string | number | null;
         cancelledAt?: string | null;
         lineItems: IFulfillmentOrderItem.ILineItemResponse[] | [];
+        paymentTarget?: (string & PAYMENT_TARGET) | null;
+        receiveMethod?: (string & RECEIVE_METHOD) | null;
+        length?: number;
+        width?: number;
+        height?: number;
         deletedAt: string | null;
         createdAt: string | null;
         updatedAt: string | null;
@@ -92,6 +99,11 @@ export declare namespace IFulfillmentOrder {
         cancelReason?: string | null;
         cancelled_by?: string | number | null;
         cancelledAt?: string | null;
+        paymentTarget?: (string & PAYMENT_TARGET) | null;
+        receiveMethod?: (string & RECEIVE_METHOD) | null;
+        length?: number;
+        width?: number;
+        height?: number;
         lineItems: IFulfillmentOrderItem.ILineItemResponse[];
         shop: {
             id: string | number;

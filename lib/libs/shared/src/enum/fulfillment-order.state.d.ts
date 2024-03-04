@@ -40,6 +40,14 @@ export declare enum FULFILLMENT_STATUS {
     FAILURE = "failure",
     CLOSED = "closed"
 }
+export declare enum PAYMENT_TARGET {
+    SENDER = "sender",
+    RECEIVER = "receiver"
+}
+export declare enum RECEIVE_METHOD {
+    ALLOW_CHECK = "allow_check",
+    NONE_CHECK = "none_check"
+}
 export declare enum SHIPPING_PROVIDER_ENUM {
     GHN = "ghn"
 }
