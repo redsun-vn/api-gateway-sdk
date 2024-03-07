@@ -33,7 +33,7 @@ export declare namespace IPackage {
         metadata?: string[] | null;
         limitUser?: number | null;
         limitDevice?: number | null;
-        limiBranch?: number | null;
+        limitBranch?: number | null;
         numberOfGuides?: number | null;
         supportLevel?: string | null;
         level?: number | null;

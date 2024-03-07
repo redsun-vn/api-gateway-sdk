@@ -49,7 +49,7 @@ export declare namespace IPayment {
         amountRounding: number | string;
         status: string;
         code: string;
-        checkout?: ICheckout.ICheckoutResponse;
-        bankAccount?: IBankAccount.IBankAccountResponse;
+        checkout?: ICheckout.ICheckoutResponse | null;
+        bankAccount?: IBankAccount.IBankAccountResponse | null;
     }
 }
