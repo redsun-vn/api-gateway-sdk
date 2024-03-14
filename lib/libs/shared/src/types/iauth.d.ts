@@ -1,6 +1,7 @@
 import { tags } from 'typia';
 export declare namespace IAuth {
     interface ILogin {
+        shopId: string;
         username: string & tags.MinLength<3> & tags.MaxLength<50>;
         password: string;
         deviceId: string;

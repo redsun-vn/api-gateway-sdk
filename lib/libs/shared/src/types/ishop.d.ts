@@ -45,4 +45,18 @@ export declare namespace IShop {
         shopShippingMethods?: null | IShopShippingMethod.IShopShippingMethodResponse[];
         shopSalesChannels?: null | IShopSalesChannel.IShopSalesChannelResponse[];
     }
+    interface IShopResponseWithoutConfig extends BaseResponse, BaseProfileResponse {
+        name: string;
+        zipcode?: string | null;
+        active: boolean;
+        needConfig: boolean;
+        multiBranchEnabled: boolean;
+        defaultCurrencyCode: string;
+        business_type_id?: null | string;
+        shopOwnerId: string;
+        metadata?: string | null;
+        businessType?: null | IBusinessType.IBusinessTypeResponse;
+        brand?: null | IBrand.IBrandResponse;
+        domain?: null | IDomain.IDomainResponse;
+    }
 }
