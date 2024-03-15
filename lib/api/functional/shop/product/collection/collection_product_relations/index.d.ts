@@ -1,4 +1,4 @@
-import type { IConnection, Resolved, Primitive } from "@nestia/fetcher";
+import type { IConnection, Primitive, Resolved } from "@nestia/fetcher";
 import type { IQuery, IResponse } from "../../../../../../libs/shared/src/types/common.type";
 import type { IProductCollectionView } from "../../../../../../libs/shared/src/types/product-service/iproduct-collection-view.type";
 export declare function findProductCollectionRelation(connection: IConnection, query: findProductCollectionRelation.Query): Promise<findProductCollectionRelation.Output>;
