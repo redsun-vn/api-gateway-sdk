@@ -4,6 +4,7 @@ import { KitchenProcessingStatus, OrderFulfillmentStatus } from '../../enum';
 import { ILineItemTaxLine } from './iline-item-tax-line.type';
 import { IOrder } from './iorder.type';
 import { IDrafOrder } from './idraf-order.type';
+import { ILineItemSelectionGroup } from './iline-item-selection-group.type';
 export declare namespace ILineItem {
     interface IInputLineItem {
         product_id: number & tags.Type<'uint32'>;
@@ -45,6 +46,7 @@ export declare namespace ILineItem {
         completedAt?: (string & tags.Format<'date-time'>) | null;
         sequenece?: number;
         lineItemTaxLines?: ILineItemTaxLine.IInputLineItemTaxLine[] | null;
+        selectionGroups?: ILineItemSelectionGroup.IInputLineItemSelectionGroup[] | null;
     }
     interface ICreateLineItem extends IInputLineItem {
         order_id?: number & tags.Type<'uint32'>;
@@ -140,5 +142,6 @@ export declare namespace ILineItem {
         order?: IOrder.IDetailOrderResponse | null;
         drafOrder?: IDrafOrder.IDetailDrafOrderResponse | null;
         lineItemTaxLines?: ILineItemTaxLine.IDetailLineItemTaxLineResponse[] | null;
+        selectionGroups?: ILineItemSelectionGroup.IDetailLineItemSelectionGroupResponse[] | null;
     }
 }
