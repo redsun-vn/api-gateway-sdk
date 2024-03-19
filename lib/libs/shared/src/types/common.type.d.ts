@@ -59,7 +59,7 @@ export interface IResponse<T> {
     errorCode?: number | string | null;
     data: T;
     message?: string | Array<string>;
-    statusCode?: number & tags.Type<'uint32'>;
+    statusCode?: number & tags.Type<'uint64'>;
 }
 export declare enum SORT_TYPE {
     'DESC' = "desc",

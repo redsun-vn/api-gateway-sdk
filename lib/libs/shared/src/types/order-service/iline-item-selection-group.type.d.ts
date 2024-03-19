@@ -3,26 +3,26 @@ import { BaseResponse } from '../common.type';
 export declare namespace ILineItemSelectionGroup {
     interface IInputLineItemSelectionGroup {
         id?: string;
-        group_id: number & tags.Type<'uint32'>;
-        selection_id: number & tags.Type<'uint32'>;
+        group_id: number & tags.Type<'uint64'>;
+        selection_id: number & tags.Type<'uint64'>;
         name?: string;
         price: number;
     }
     interface ICreateLineItemSelectionGroup {
-        shop_id?: number & tags.Type<'uint32'>;
-        line_item_id: number & tags.Type<'uint32'>;
-        group_id: number & tags.Type<'uint32'>;
-        selection_id: number & tags.Type<'uint32'>;
+        shop_id?: number & tags.Type<'uint64'>;
+        line_item_id: number & tags.Type<'uint64'>;
+        group_id: number & tags.Type<'uint64'>;
+        selection_id: number & tags.Type<'uint64'>;
         name?: string;
         price: number;
     }
     interface ICreateLineItemSelectionGroupKafka extends ICreateLineItemSelectionGroup {
-        shop_id: number & tags.Type<'uint32'>;
+        shop_id: number & tags.Type<'uint64'>;
     }
     interface IUpdateLineItemSelectionGroup {
         id?: string;
-        group_id?: number & tags.Type<'uint32'>;
-        selection_id?: number & tags.Type<'uint32'>;
+        group_id?: number & tags.Type<'uint64'>;
+        selection_id?: number & tags.Type<'uint64'>;
         name?: string;
         price?: number;
     }
