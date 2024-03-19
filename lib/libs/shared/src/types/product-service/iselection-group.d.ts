@@ -30,7 +30,7 @@ export declare namespace ISelectionGroup {
         icon?: string | null;
         createdBy: string | undefined | null;
         updatedBy: string | undefined | null;
-        sequence: number | string | null;
+        sequence?: number | string | null;
         selections?: ISelection.ISelectionResponse[] | null;
     }
     interface IDeleteSelectionGroup {
