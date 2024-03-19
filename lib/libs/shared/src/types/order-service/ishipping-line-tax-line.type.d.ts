@@ -2,7 +2,7 @@ import { tags } from 'typia';
 import { BaseResponse } from '../common.type';
 export declare namespace IShippingLineTaxLine {
     interface ICreateShippingLineTaxLine {
-        shipping_line_id: number & tags.Type<'uint32'>;
+        shipping_line_id: number & tags.Type<'uint64'>;
         name: string;
         code: string;
         rate: number;
@@ -10,7 +10,7 @@ export declare namespace IShippingLineTaxLine {
         userId?: string;
     }
     interface ICreateShippingLineTaxLineKafka extends ICreateShippingLineTaxLine {
-        shop_id: number & tags.Type<'uint32'>;
+        shop_id: number & tags.Type<'uint64'>;
     }
     interface IUpdateShippingLineTaxLine {
         name?: string;

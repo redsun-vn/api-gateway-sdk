@@ -3,8 +3,8 @@ import { BaseResponse } from '../common.type';
 import { ISelectionGroup } from './iselection-group';
 export declare namespace ISelection {
     interface IReqCreateSelection {
-        image_id?: number & tags.Type<'uint32'>;
-        selection_group_id: number & tags.Type<'uint32'>;
+        image_id?: number & tags.Type<'uint64'>;
+        selection_group_id: number & tags.Type<'uint64'>;
         name: string;
         active?: boolean;
         icon?: string | null;
@@ -13,11 +13,11 @@ export declare namespace ISelection {
         userId?: string;
     }
     interface ICreateSelection extends IReqCreateSelection {
-        shop_id: number & tags.Type<'uint32'>;
+        shop_id: number & tags.Type<'uint64'>;
     }
     interface IUpdateSelection {
         id?: string;
-        image_id?: number & tags.Type<'uint32'>;
+        image_id?: number & tags.Type<'uint64'>;
         name?: string;
         active?: boolean;
         icon?: string | null;

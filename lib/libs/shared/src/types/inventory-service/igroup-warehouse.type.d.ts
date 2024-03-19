@@ -2,7 +2,7 @@ import { tags } from 'typia';
 import { BaseResponse } from '../common.type';
 export declare namespace IGroupWarehouse {
     interface ICreateGroupWarehouse {
-        shop_id?: number & tags.Type<'uint32'>;
+        shop_id?: number & tags.Type<'uint64'>;
         name: string;
         country: string;
         city: string;

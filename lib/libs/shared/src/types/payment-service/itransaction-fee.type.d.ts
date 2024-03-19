@@ -4,8 +4,8 @@ import { ITransaction } from './itransaction.type';
 import { TransactionFeeType } from '../../enum';
 export declare namespace ITransactionFee {
     interface ICreateTransactionFee {
-        shop_id?: number & tags.Type<'uint32'>;
-        transaction_id: number & tags.Type<'uint32'>;
+        shop_id?: number & tags.Type<'uint64'>;
+        transaction_id: number & tags.Type<'uint64'>;
         name: string;
         amount: number;
         flatFee: number;

@@ -3,12 +3,12 @@ import { BaseResponse } from '../common.type';
 import { IStockLocation } from './istock-location.type';
 export declare namespace IStockQuantity {
     interface ICreateStockQuantity {
-        shop_id?: number & tags.Type<'uint32'>;
-        product_id: number & tags.Type<'uint32'>;
-        variant_id: number & tags.Type<'uint32'>;
-        uom_uom_id: number & tags.Type<'uint32'>;
-        partner_id?: (number & tags.Type<'uint32'>) | (string & tags.Format<'uuid'>);
-        stock_location_id: number & tags.Type<'uint32'>;
+        shop_id?: number & tags.Type<'uint64'>;
+        product_id: number & tags.Type<'uint64'>;
+        variant_id: number & tags.Type<'uint64'>;
+        uom_uom_id: number & tags.Type<'uint64'>;
+        partner_id?: (number & tags.Type<'uint64'>) | (string & tags.Format<'uuid'>);
+        stock_location_id: number & tags.Type<'uint64'>;
         inventoryQuantity: number;
         availableQuantity: number;
         lastStocktakeQuantity?: number;
@@ -16,7 +16,7 @@ export declare namespace IStockQuantity {
     }
     interface IUpdateStockQuantity {
         inventoryQuantity?: number;
-        partner_id?: (number & tags.Type<'uint32'>) | (string & tags.Format<'uuid'>);
+        partner_id?: (number & tags.Type<'uint64'>) | (string & tags.Format<'uuid'>);
         lastStocktakeQuantity?: number;
         lastStocktakeDate?: string;
     }

@@ -16,11 +16,11 @@ export declare namespace IShopConfig {
         privacyPolicy?: string;
         taxesIncluded?: boolean;
         available_price_book_ids?: string[];
-        default_price_book_id?: number & tags.Type<'uint32'>;
+        default_price_book_id?: number & tags.Type<'uint64'>;
         table_id?: number | string;
-        room_id?: number & tags.Type<'uint32'>;
-        branch_id: number & tags.Type<'uint32'>;
-        staff_id?: number & tags.Type<'uint32'>;
+        room_id?: number & tags.Type<'uint64'>;
+        branch_id: number & tags.Type<'uint64'>;
+        staff_id?: number & tags.Type<'uint64'>;
         timeOpen?: string & tags.Pattern<'^(?:[01]?[0-9]|2[0-3]):[0-5]?[0-9](?::[0-5]?[0-9])?$'>;
         timeClose?: string & tags.Pattern<'^(?:[01]?[0-9]|2[0-3]):[0-5]?[0-9](?::[0-5]?[0-9])?$'>;
         dateStart?: string & tags.Format<'date'>;

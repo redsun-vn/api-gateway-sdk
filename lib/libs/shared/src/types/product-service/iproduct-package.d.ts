@@ -4,9 +4,9 @@ import { IVariant } from './ivariant';
 import { IProduct } from './iproduct';
 export declare namespace IProductPackage {
     interface ICreateProductPackage {
-        shop_id?: number & tags.Type<'uint32'>;
-        product_id: number & tags.Type<'uint32'>;
-        variant_id: number & tags.Type<'uint32'>;
+        shop_id?: number & tags.Type<'uint64'>;
+        product_id: number & tags.Type<'uint64'>;
+        variant_id: number & tags.Type<'uint64'>;
         description?: string | null;
         quantity: number;
         price?: number;

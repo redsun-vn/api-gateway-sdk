@@ -3,17 +3,17 @@ import { IFulfillmentOrderItem } from './ifulfillment-line-item';
 import { FULFILLMENT_ORDER_STATUS, FULFILLMENT_REQUEST_STATUS, PAYMENT_TARGET, RECEIVE_METHOD } from '../../enum';
 export declare namespace IFulfillmentOrder {
     interface ICreateFulfillmentOrder {
-        order_id: number & tags.Type<'uint32'>;
-        shipping_method_id: number & tags.Type<'uint32'>;
-        destination_id: number & tags.Type<'uint32'>;
-        assigned_location_id: number & tags.Type<'uint32'>;
+        order_id: number & tags.Type<'uint64'>;
+        shipping_method_id: number & tags.Type<'uint64'>;
+        destination_id: number & tags.Type<'uint64'>;
+        assigned_location_id: number & tags.Type<'uint64'>;
         fulfillHoleReason?: string;
         fulfillHoleReasonNotes?: string;
         lineItems: ICreateFulfillmentOrderItems[];
     }
     interface IUpdateFulfillmentOrderItem {
-        stock_move_line_id: number & tags.Type<'uint32'>;
-        stock_quantity_id: number & tags.Type<'uint32'>;
+        stock_move_line_id: number & tags.Type<'uint64'>;
+        stock_quantity_id: number & tags.Type<'uint64'>;
     }
     interface ICancelFulfillmentOrder {
         cancelReason: string;
@@ -21,12 +21,12 @@ export declare namespace IFulfillmentOrder {
     interface ICreateFulfillmentOrderItems {
         fulfillHoleReason?: string;
         fulfillHoleReasonNotes?: string;
-        line_item_id: number & tags.Type<'uint32'>;
-        stock_move_line_id?: number & tags.Type<'uint32'>;
-        stock_quantity_id?: number & tags.Type<'uint32'>;
+        line_item_id: number & tags.Type<'uint64'>;
+        stock_move_line_id?: number & tags.Type<'uint64'>;
+        stock_quantity_id?: number & tags.Type<'uint64'>;
         quantity?: number;
         fulfillableQuantity?: number;
-        variant_id: number & tags.Type<'uint32'>;
+        variant_id: number & tags.Type<'uint64'>;
     }
     interface IFulfillmentOrderRequestShipping {
         cod: number;

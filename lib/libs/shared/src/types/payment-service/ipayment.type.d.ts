@@ -5,12 +5,12 @@ import { IBankAccount } from './ibank-account.type';
 import { PaymentStatus } from '../../enum';
 export declare namespace IPayment {
     interface ICreatePayment {
-        shop_id?: number & tags.Type<'uint32'>;
-        partner_id: (number & tags.Type<'uint32'>) | (string & tags.Format<'uuid'>);
-        payment_method_id: number & tags.Type<'uint32'>;
-        bank_account_id?: number & tags.Type<'uint32'>;
-        order_id?: number & tags.Type<'uint32'>;
-        checkout_id: number & tags.Type<'uint32'>;
+        shop_id?: number & tags.Type<'uint64'>;
+        partner_id: (number & tags.Type<'uint64'>) | (string & tags.Format<'uuid'>);
+        payment_method_id: number & tags.Type<'uint64'>;
+        bank_account_id?: number & tags.Type<'uint64'>;
+        order_id?: number & tags.Type<'uint64'>;
+        checkout_id: number & tags.Type<'uint64'>;
         uuid?: string;
         amount: number;
         taxAmount?: number;
@@ -24,7 +24,7 @@ export declare namespace IPayment {
         bankAccount?: IBankAccount.IBankAccountResponse;
     }
     interface IUpdatePayment {
-        bank_account_id?: number & tags.Type<'uint32'>;
+        bank_account_id?: number & tags.Type<'uint64'>;
         amount?: number;
         taxAmount?: number;
         discountAmount?: number;

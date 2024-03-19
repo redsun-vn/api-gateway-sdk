@@ -8,16 +8,16 @@ import { ICombiningPromotion } from './icombining-promotion.type';
 import { IAdditionalFee } from './iadditional-fee.type';
 export declare namespace IOrder {
     interface ICreateOrder {
-        branch_id: number & tags.Type<'uint32'>;
-        staff_id: number & tags.Type<'uint32'>;
+        branch_id: number & tags.Type<'uint64'>;
+        staff_id: number & tags.Type<'uint64'>;
         pos_session_id: string & tags.Format<'uuid'>;
-        sale_channel_id?: number & tags.Type<'uint32'>;
-        price_book_id?: number & tags.Type<'uint32'>;
-        billing_address_id?: number & tags.Type<'uint32'>;
-        shipping_address_id?: number & tags.Type<'uint32'>;
-        draf_order_id?: number & tags.Type<'uint32'>;
+        sale_channel_id?: number & tags.Type<'uint64'>;
+        price_book_id?: number & tags.Type<'uint64'>;
+        billing_address_id?: number & tags.Type<'uint64'>;
+        shipping_address_id?: number & tags.Type<'uint64'>;
+        draf_order_id?: number & tags.Type<'uint64'>;
         partner_id?: string & tags.Format<'uuid'>;
-        warehouse_id: number & tags.Type<'uint32'>;
+        warehouse_id: number & tags.Type<'uint64'>;
         currencyCode?: string | null;
         email?: string | null;
         phone?: string | null;
@@ -66,7 +66,7 @@ export declare namespace IOrder {
         userId?: string;
     }
     interface ICreateOrderKafka extends ICreateOrder {
-        shop_id: number & tags.Type<'uint32'>;
+        shop_id: number & tags.Type<'uint64'>;
     }
     interface IUpdateOrder extends Omit<Partial<ICreateOrder>, 'branch_id' | 'staff_id' | 'pos_session_id' | 'sale_channel_id'> {
         uuid?: string & tags.Format<'uuid'>;

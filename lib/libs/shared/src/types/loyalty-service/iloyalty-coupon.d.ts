@@ -3,7 +3,7 @@ import { BaseResponse } from '../common.type';
 export declare namespace ILoyaltyCoupon {
     interface ILoyaltyCouponCreate {
         code?: string;
-        program_id: number & tags.Type<'uint32'>;
+        program_id: number & tags.Type<'uint64'>;
         currencyCode?: string;
         points?: number;
         expirationDate?: string & tags.Format<'date-time'>;

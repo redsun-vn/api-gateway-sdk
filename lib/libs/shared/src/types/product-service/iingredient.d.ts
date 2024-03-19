@@ -3,7 +3,7 @@ import { BaseResponse } from '../common.type';
 import { IUomUom } from './iuom-uom';
 export declare namespace IIngredient {
     interface IReqCreateIngredient {
-        uom_uom_id: number & tags.Type<'uint32'>;
+        uom_uom_id: number & tags.Type<'uint64'>;
         name: string;
         totalInventory?: number | null;
         quantityAvailable?: number | null;
@@ -12,11 +12,11 @@ export declare namespace IIngredient {
         userId?: string;
     }
     interface ICreateIngredient extends IReqCreateIngredient {
-        shop_id: number & tags.Type<'uint32'>;
+        shop_id: number & tags.Type<'uint64'>;
     }
     interface IUpdateIngredient {
         id?: string;
-        uom_uom_id?: number & tags.Type<'uint32'>;
+        uom_uom_id?: number & tags.Type<'uint64'>;
         name?: string;
         totalInventory?: number | null;
         quantityAvailable?: number | null;

@@ -2,8 +2,8 @@ import { tags } from 'typia';
 import { BaseResponse } from '../common.type';
 export declare namespace ILoyaltyRewardProduct {
     interface ILoyaltyRewardProductCreate {
-        product_id: number & tags.Type<'uint32'>;
-        variant_id: number & tags.Type<'uint32'>;
+        product_id: number & tags.Type<'uint64'>;
+        variant_id: number & tags.Type<'uint64'>;
     }
     interface ILoyaltyRewardProductResponse extends BaseResponse {
         reward_id: string | number;

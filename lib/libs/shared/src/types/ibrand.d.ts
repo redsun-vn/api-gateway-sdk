@@ -2,7 +2,7 @@ import { tags } from 'typia';
 import { BaseResponse } from './common.type';
 export declare namespace IBrand {
     interface ICreate {
-        attachment_id?: number & tags.Type<'uint32'>;
+        attachment_id?: number & tags.Type<'uint64'>;
         description?: string;
         slogan?: string;
     }

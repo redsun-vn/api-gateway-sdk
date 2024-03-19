@@ -2,7 +2,7 @@ import { tags } from 'typia';
 import { BaseResponse } from '../common.type';
 export declare namespace ITax {
     interface ICreateTax {
-        shop_id?: number & tags.Type<'uint32'>;
+        shop_id?: number & tags.Type<'uint64'>;
         name?: string;
         code: string;
         description?: string | null;

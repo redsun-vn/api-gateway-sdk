@@ -4,7 +4,7 @@ import { RECONCILIATION_STATUS_ENUM } from '../../enum';
 import { ITransactionReconciliation } from './itransaction-reconciliation';
 export declare namespace IReconciliation {
     interface ICreate {
-        shipping_method_id: number & tags.Type<'uint32'>;
+        shipping_method_id: number & tags.Type<'uint64'>;
         note?: string;
     }
     interface IUpdate {

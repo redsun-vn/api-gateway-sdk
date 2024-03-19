@@ -10,14 +10,14 @@ export declare namespace IActivityLog {
         NONE = "NONE"
     }
     interface ICreateActivityLog {
-        shop_id?: number & tags.Type<'uint32'>;
-        branch_id?: number & tags.Type<'uint32'>;
-        staff_id: number & tags.Type<'uint32'>;
+        shop_id?: number & tags.Type<'uint64'>;
+        branch_id?: number & tags.Type<'uint64'>;
+        staff_id: number & tags.Type<'uint64'>;
         device_code: string;
         ip?: string;
         message?: string;
         objectTarget: string;
-        objectId: number & tags.Type<'uint32'>;
+        objectId: number & tags.Type<'uint64'>;
         objectBody: Record<string, unknown>;
         objectResponse: Record<string, unknown>;
         embed?: string;

@@ -7,13 +7,13 @@ import { ICombiningPromotion } from './icombining-promotion.type';
 import { IAdditionalFee } from './iadditional-fee.type';
 export declare namespace IDrafOrder {
     interface ICreateDrafOrder {
-        branch_id: number & tags.Type<'uint32'>;
-        staff_id: number & tags.Type<'uint32'>;
-        sale_channel_id?: number & tags.Type<'uint32'>;
-        price_book_id?: number & tags.Type<'uint32'>;
-        billing_address_id?: number & tags.Type<'uint32'>;
-        shipping_address_id?: number & tags.Type<'uint32'>;
-        order_id?: (number & tags.Type<'uint32'>) | null;
+        branch_id: number & tags.Type<'uint64'>;
+        staff_id: number & tags.Type<'uint64'>;
+        sale_channel_id?: number & tags.Type<'uint64'>;
+        price_book_id?: number & tags.Type<'uint64'>;
+        billing_address_id?: number & tags.Type<'uint64'>;
+        shipping_address_id?: number & tags.Type<'uint64'>;
+        order_id?: (number & tags.Type<'uint64'>) | null;
         partner_id?: string & tags.Format<'uuid'>;
         currencyCode?: string;
         discountCode?: string;
@@ -31,13 +31,13 @@ export declare namespace IDrafOrder {
         lineItems: ILineItem.IInputLineItem[];
     }
     interface ICreateDrafOrderKafka extends ICreateDrafOrder {
-        shop_id: number & tags.Type<'uint32'>;
+        shop_id: number & tags.Type<'uint64'>;
     }
     interface IUpdateDrafOrder extends Omit<Partial<ICreateDrafOrder>, 'branch_id' | 'staff_id' | 'sale_channel_id'> {
     }
     interface IConfirmDrafOrder {
-        warehouse_id: number & tags.Type<'uint32'>;
-        price_book_id?: number & tags.Type<'uint32'>;
+        warehouse_id: number & tags.Type<'uint64'>;
+        price_book_id?: number & tags.Type<'uint64'>;
     }
     interface IDetailDrafOrderResponse extends BaseResponse {
         shop_id: string | number;

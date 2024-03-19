@@ -4,9 +4,9 @@ import { IWarehouse } from './iwarehouse.type';
 import { StockLocationType } from '../../enum';
 export declare namespace IStockLocation {
     interface ICreateStockLocation {
-        shop_id?: number & tags.Type<'uint32'>;
-        warehouse_id: number & tags.Type<'uint32'>;
-        parent_id?: number & tags.Type<'uint32'>;
+        shop_id?: number & tags.Type<'uint64'>;
+        warehouse_id: number & tags.Type<'uint64'>;
+        parent_id?: number & tags.Type<'uint64'>;
         name: string;
         description?: string;
         active?: boolean;

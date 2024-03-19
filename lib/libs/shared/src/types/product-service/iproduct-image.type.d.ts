@@ -4,9 +4,9 @@ import { IProduct } from './iproduct';
 import { IFile } from '../ifile';
 export declare namespace IProductImage {
     interface ICreateProductImage {
-        shop_id?: number & tags.Type<'uint32'>;
-        product_id: number & tags.Type<'uint32'>;
-        image_id?: number & tags.Type<'uint32'>;
+        shop_id?: number & tags.Type<'uint64'>;
+        product_id: number & tags.Type<'uint64'>;
+        image_id?: number & tags.Type<'uint64'>;
         image_url?: string | null;
         description?: string | null;
         color?: string | null;
@@ -15,7 +15,7 @@ export declare namespace IProductImage {
     }
     interface IUpdateProductImage {
         id?: string;
-        image_id?: number & tags.Type<'uint32'>;
+        image_id?: number & tags.Type<'uint64'>;
         image_url?: string | null;
         description?: string | null;
         color?: string | null;

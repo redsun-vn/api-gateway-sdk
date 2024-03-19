@@ -12,13 +12,13 @@ export declare namespace IAuth {
         password: string & tags.MinLength<3>;
         deviceId: string;
         deviceInfo: string;
-        branch_id: number & tags.Type<'uint32'>;
+        branch_id: number & tags.Type<'uint64'>;
     }
     interface ILoginResponse {
         accessToken: string;
         refreshToken: string;
-        expiresIn: number & tags.Type<'uint32'>;
-        refreshExpiresIn: number & tags.Type<'uint32'>;
+        expiresIn: number & tags.Type<'uint64'>;
+        refreshExpiresIn: number & tags.Type<'uint64'>;
         tokenType: string;
         scope: string;
         sessionState: string;

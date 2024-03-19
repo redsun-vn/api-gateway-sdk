@@ -4,9 +4,9 @@ import { IStockLocation } from './istock-location.type';
 import { IGroupWarehouse } from './igroup-warehouse.type';
 export declare namespace IWarehouse {
     interface ICreateWarehouse {
-        shop_id?: number & tags.Type<'uint32'>;
-        branch_id: number & tags.Type<'uint32'>;
-        group_warehouse_id: number & tags.Type<'uint32'>;
+        shop_id?: number & tags.Type<'uint64'>;
+        branch_id: number & tags.Type<'uint64'>;
+        group_warehouse_id: number & tags.Type<'uint64'>;
         name: string;
         abbreviation: string;
         country?: string;

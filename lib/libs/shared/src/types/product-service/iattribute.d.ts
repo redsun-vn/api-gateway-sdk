@@ -8,7 +8,7 @@ export declare namespace IAttribute {
         active?: boolean;
     }
     interface ICreateAttribute {
-        shop_id?: number & tags.Type<'uint32'>;
+        shop_id?: number & tags.Type<'uint64'>;
         active?: boolean;
         name: string;
         options?: IOptionInput[];

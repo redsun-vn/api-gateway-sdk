@@ -4,7 +4,7 @@ export declare namespace IPosPrinter {
     interface ICreate {
         name: string;
         ip: string & tags.Format<'ipv4'>;
-        branch_id: number & tags.Type<'uint32'>;
+        branch_id: number & tags.Type<'uint64'>;
     }
     interface IUpdate {
         name?: string;

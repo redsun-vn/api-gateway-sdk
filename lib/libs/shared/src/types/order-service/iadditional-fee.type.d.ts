@@ -5,10 +5,10 @@ import { IOrder } from './iorder.type';
 import { IDrafOrder } from './idraf-order.type';
 export declare namespace IAdditionalFee {
     interface ICreateAdditionalFee {
-        shop_id?: number & tags.Type<'uint32'>;
-        staff_id: number & tags.Type<'uint32'>;
-        order_id?: number & tags.Type<'uint32'>;
-        draf_order_id?: number & tags.Type<'uint32'>;
+        shop_id?: number & tags.Type<'uint64'>;
+        staff_id: number & tags.Type<'uint64'>;
+        order_id?: number & tags.Type<'uint64'>;
+        draf_order_id?: number & tags.Type<'uint64'>;
         name: string;
         amount: number;
         type: AdditionalFeeType;

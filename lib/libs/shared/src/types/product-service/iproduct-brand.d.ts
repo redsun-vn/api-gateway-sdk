@@ -2,17 +2,17 @@ import { tags } from 'typia';
 import { BaseResponse } from '../common.type';
 export declare namespace IProductBrand {
     interface ICreateProductBrand {
-        shop_id?: number & tags.Type<'uint32'>;
-        parent_id?: number & tags.Type<'uint32'>;
-        attachment_id?: number & tags.Type<'uint32'>;
-        avatar_id?: number & tags.Type<'uint32'>;
+        shop_id?: number & tags.Type<'uint64'>;
+        parent_id?: number & tags.Type<'uint64'>;
+        attachment_id?: number & tags.Type<'uint64'>;
+        avatar_id?: number & tags.Type<'uint64'>;
         active?: boolean;
         name: string;
         description?: string | null;
     }
     interface IUpdateProductBrand {
-        attachment_id?: number & tags.Type<'uint32'>;
-        avatar_id?: number & tags.Type<'uint32'>;
+        attachment_id?: number & tags.Type<'uint64'>;
+        avatar_id?: number & tags.Type<'uint64'>;
         active?: boolean;
         name?: string;
         description?: string | null;

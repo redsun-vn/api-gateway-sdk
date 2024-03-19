@@ -22,7 +22,7 @@ export declare namespace ILoyaltyProgram {
     interface ILoyaltyProgramUpdate extends Omit<Partial<ILoyaltyProgramCreate>, 'programType' | 'saleChannelIds' | 'rules' | 'rewards'> {
     }
     interface ILoyaltyProgramValidate {
-        shop_id: number & tags.Type<'uint32'>;
+        shop_id: number & tags.Type<'uint64'>;
         order_id: string & tags.Format<'uuid'>;
         couponCode?: string;
     }

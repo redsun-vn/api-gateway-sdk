@@ -4,9 +4,9 @@ import { IWarehouse } from './iwarehouse.type';
 import { IStockLocation } from './istock-location.type';
 export declare namespace IStocktake {
     interface ICreateStocktake {
-        shop_id?: number & tags.Type<'uint32'>;
-        warehouse_id: number & tags.Type<'uint32'>;
-        stock_location_id: number & tags.Type<'uint32'>;
+        shop_id?: number & tags.Type<'uint64'>;
+        warehouse_id: number & tags.Type<'uint64'>;
+        stock_location_id: number & tags.Type<'uint64'>;
         code: string;
         name: string;
         note?: string;

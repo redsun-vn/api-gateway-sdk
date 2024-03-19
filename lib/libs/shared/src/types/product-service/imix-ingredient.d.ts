@@ -4,13 +4,13 @@ import { ISelection } from './iselection';
 import { IIngredient } from './iingredient';
 export declare namespace IMixIngredient {
     interface IReqCreateMixIngredient {
-        ingredient_id: number & tags.Type<'uint32'>;
-        selection_id: number & tags.Type<'uint32'>;
+        ingredient_id: number & tags.Type<'uint64'>;
+        selection_id: number & tags.Type<'uint64'>;
         value?: number;
         userId?: string;
     }
     interface ICreateMixIngredient extends IReqCreateMixIngredient {
-        shop_id: number & tags.Type<'uint32'>;
+        shop_id: number & tags.Type<'uint64'>;
     }
     interface IUpdateMixIngredient {
         id?: string;
