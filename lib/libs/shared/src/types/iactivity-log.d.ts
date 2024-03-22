@@ -36,7 +36,7 @@ export declare namespace IActivityLog {
         objectBody: Record<string, unknown>;
         objectResponse: Record<string, unknown>;
         staff?: IStaff.IStaffResponse | null;
-        embed?: string;
+        embed?: string | null;
         action: string;
     }
     interface IActivityOnEvent {

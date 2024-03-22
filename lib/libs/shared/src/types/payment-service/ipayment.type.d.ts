@@ -9,7 +9,8 @@ export declare namespace IPayment {
         partner_id: (number & tags.Type<'uint64'>) | (string & tags.Format<'uuid'>);
         payment_method_id: number & tags.Type<'uint64'>;
         bank_account_id?: number & tags.Type<'uint64'>;
-        order_id?: number & tags.Type<'uint64'>;
+        target: string;
+        target_id: number & tags.Type<'uint64'>;
         checkout_id: number & tags.Type<'uint64'>;
         uuid?: string;
         amount: number;
@@ -38,7 +39,8 @@ export declare namespace IPayment {
         partner_id: number | string | null;
         payment_method_id: number | string | null;
         bank_account_id?: number | string | null;
-        order_id?: number | string | null;
+        target?: string | null;
+        target_id?: number | string | null;
         checkout_id?: number | string | null;
         uuid?: string;
         amount: number | string;
