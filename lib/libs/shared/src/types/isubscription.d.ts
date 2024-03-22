@@ -4,12 +4,16 @@ export declare namespace ISubscription {
     interface ICreate {
         package_id: string;
         packageAdditionIds?: number[];
+        paymentCode?: string;
     }
-    interface IUpdate extends Partial<ICreate> {
+    interface IUpdate {
+        active?: boolean;
     }
     interface ISubscriptionResponse extends BaseResponse {
         package_id: string;
         shop_id: string;
+        active?: boolean | null;
+        paymentCode?: string | null;
         name: string;
         day: number;
         price: number | string;
