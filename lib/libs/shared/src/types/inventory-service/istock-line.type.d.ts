@@ -3,17 +3,17 @@ import { BaseResponse } from '../common.type';
 import { IStockLot } from './istock-lot.type';
 export declare namespace IStockLine {
     interface ICreateStockLine {
-        shop_id?: number & tags.Type<'uint32'>;
-        product_id: number & tags.Type<'uint32'>;
-        variant_id: number & tags.Type<'uint32'>;
-        stocktake_line_id: number & tags.Type<'uint32'>;
-        stock_lot_id: number & tags.Type<'uint32'>;
+        shop_id?: number & tags.Type<'uint64'>;
+        product_id: number & tags.Type<'uint64'>;
+        variant_id: number & tags.Type<'uint64'>;
+        stocktake_line_id: number & tags.Type<'uint64'>;
+        stock_lot_id: number & tags.Type<'uint64'>;
         barcode: string;
         qantity: number;
         staff_id?: string;
     }
     interface IUpdateStockLine {
-        stock_lot_id?: number & tags.Type<'uint32'>;
+        stock_lot_id?: number & tags.Type<'uint64'>;
         qantity?: number;
         staff_id?: string;
     }

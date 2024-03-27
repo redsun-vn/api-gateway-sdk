@@ -3,7 +3,7 @@ import { BaseResponse } from '../common.type';
 import { IUomUom } from './iuom-uom';
 export declare namespace IUomCategory {
     interface ICreateUomCategory {
-        shop_id?: number & tags.Type<'uint32'>;
+        shop_id?: number & tags.Type<'uint64'>;
         name: string;
     }
     interface IUpdateUomCategory {

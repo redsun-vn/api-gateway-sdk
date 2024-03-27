@@ -3,22 +3,24 @@ import { BaseResponse } from '../common.type';
 import { ISelection } from './iselection';
 export declare namespace ISelectionGroup {
     interface IReqCreateSelectionGroup {
-        image_id?: number & tags.Type<'uint32'>;
+        image_id?: number & tags.Type<'uint64'>;
         name: string;
         active?: boolean;
         icon?: string | null;
         userId?: string;
+        sequence?: number;
     }
     interface ICreateSelectionGroup extends IReqCreateSelectionGroup {
-        shop_id: number & tags.Type<'uint32'>;
+        shop_id: number & tags.Type<'uint64'>;
     }
     interface IUpdateSelectionGroup {
         id?: string;
-        image_id?: number & tags.Type<'uint32'>;
+        image_id?: number & tags.Type<'uint64'>;
         name?: string;
         active?: boolean;
         icon?: string | null | undefined;
         userId?: string;
+        sequence?: number;
     }
     interface ISelectionGroupResponse extends BaseResponse {
         shop_id: number | string | null;
@@ -28,6 +30,7 @@ export declare namespace ISelectionGroup {
         icon?: string | null;
         createdBy: string | undefined | null;
         updatedBy: string | undefined | null;
+        sequence?: number | string | null;
         selections?: ISelection.ISelectionResponse[] | null;
     }
     interface IDeleteSelectionGroup {

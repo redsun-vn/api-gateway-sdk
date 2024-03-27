@@ -4,14 +4,14 @@ import { ICollection } from './icollection';
 import { ConditionType } from '../../enum';
 export declare namespace ICondition {
     interface ICreateCondition {
-        shop_id?: number & tags.Type<'uint32'>;
-        referent_id: number & tags.Type<'uint32'>;
-        collection_id: number & tags.Type<'uint32'>;
+        shop_id?: number & tags.Type<'uint64'>;
+        referent_id: number & tags.Type<'uint64'>;
+        collection_id: number & tags.Type<'uint64'>;
         referentType: ConditionType;
         value: string;
     }
     interface IUpdateCondition {
-        referent_id?: number & tags.Type<'uint32'>;
+        referent_id?: number & tags.Type<'uint64'>;
         referentType?: ConditionType;
         value?: string;
     }

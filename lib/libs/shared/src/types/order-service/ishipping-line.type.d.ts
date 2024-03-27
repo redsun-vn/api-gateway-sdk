@@ -2,15 +2,15 @@ import { tags } from 'typia';
 import { BaseResponse } from '../common.type';
 export declare namespace IShippingLine {
     interface ICreateShippingLine {
-        shipping_method_id: number & tags.Type<'uint32'>;
-        requested_fulfillment_id: number & tags.Type<'uint32'>;
-        line_item_id: number & tags.Type<'uint32'>;
+        shipping_method_id: number & tags.Type<'uint64'>;
+        requested_fulfillment_id: number & tags.Type<'uint64'>;
+        line_item_id: number & tags.Type<'uint64'>;
         title: string;
         phone: string;
         userId?: string;
     }
     interface ICreateShippingLineKafka extends ICreateShippingLine {
-        shop_id: number & tags.Type<'uint32'>;
+        shop_id: number & tags.Type<'uint64'>;
     }
     interface IUpdateShippingLine {
         title?: string;

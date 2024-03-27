@@ -6,8 +6,8 @@ import { IProduct } from './iproduct';
 export declare namespace IPricebook {
     interface IReqCreatePricebook {
         name: string;
-        branch_id?: number & tags.Type<'uint32'>;
-        department_id?: number & tags.Type<'uint32'>;
+        branch_id?: number & tags.Type<'uint64'>;
+        department_id?: number & tags.Type<'uint64'>;
         salesChannel?: IProduct.ISalesChannel[];
         effectiveAt?: string & tags.Format<'date-time'>;
         expiredAt?: string & tags.Format<'date-time'>;
@@ -15,12 +15,12 @@ export declare namespace IPricebook {
         userId?: string;
     }
     interface ICreatePricebook extends IReqCreatePricebook {
-        shop_id: number & tags.Type<'uint32'>;
+        shop_id: number & tags.Type<'uint64'>;
     }
     interface IUpdatePricebook {
         id?: string;
-        branch_id?: number & tags.Type<'uint32'>;
-        department_id?: number & tags.Type<'uint32'>;
+        branch_id?: number & tags.Type<'uint64'>;
+        department_id?: number & tags.Type<'uint64'>;
         salesChannel?: IProduct.ISalesChannel[];
         name?: string;
         effectiveAt?: string & tags.Format<'date-time'>;

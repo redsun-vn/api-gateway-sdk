@@ -4,11 +4,11 @@ import { IStockLocation } from './istock-location.type';
 import { IWarehouse } from './iwarehouse.type';
 export declare namespace IStockPickingType {
     interface ICreateStockPickingType {
-        shop_id?: number & tags.Type<'uint32'>;
-        warehouse_id: number & tags.Type<'uint32'>;
-        default_location_src_id?: number & tags.Type<'uint32'>;
-        default_location_dest_id?: number & tags.Type<'uint32'>;
-        return_picking_type_id?: number & tags.Type<'uint32'>;
+        shop_id?: number & tags.Type<'uint64'>;
+        warehouse_id: number & tags.Type<'uint64'>;
+        default_location_src_id?: number & tags.Type<'uint64'>;
+        default_location_dest_id?: number & tags.Type<'uint64'>;
+        return_picking_type_id?: number & tags.Type<'uint64'>;
         name: string;
         sequence?: number;
         type: string;

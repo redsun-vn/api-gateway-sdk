@@ -4,12 +4,12 @@ import { IAdminReconciliationItem } from './iadmin-reconciliation-item';
 import { ADMIN_RECONCILIATION_STATUS_ENUM } from '../../enum';
 export declare namespace IAdminReconciliation {
     interface ICreate {
-        shipping_method_id: number & tags.Type<'uint32'>;
+        shipping_method_id: number & tags.Type<'uint64'>;
         note?: string;
         items: IFulfillmentReconciliation[];
     }
     interface IFulfillmentReconciliation {
-        fulfillment_id: number & tags.Type<'uint32'>;
+        fulfillment_id: number & tags.Type<'uint64'>;
     }
     interface IUpdate {
         status?: string & ADMIN_RECONCILIATION_STATUS_ENUM.CHECKING;

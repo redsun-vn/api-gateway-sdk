@@ -4,11 +4,11 @@ import { ILoyaltyRuleProduct } from './iloyalty-rule-product';
 import { LOYALTY_RULE_MODE_ENUM, LOYALTY_RULE_REWARD_POINT_MODE_ENUM, LOYALTY_RULE_TAX_MODE_ENUM } from '../../enum/loyalty-service';
 export declare namespace ILoyaltyRule {
     interface ILoyaltyRuleCreate {
-        program_id?: number & tags.Type<'uint32'>;
+        program_id?: number & tags.Type<'uint64'>;
         active?: boolean;
         code?: string;
-        product_category_id?: number & tags.Type<'uint32'>;
-        product_tag_id?: number & tags.Type<'uint32'>;
+        product_category_id?: number & tags.Type<'uint64'>;
+        product_tag_id?: number & tags.Type<'uint64'>;
         mode?: string & LOYALTY_RULE_MODE_ENUM;
         rewardPointMode?: string & LOYALTY_RULE_REWARD_POINT_MODE_ENUM;
         minimunAmountTaxMode?: string & LOYALTY_RULE_TAX_MODE_ENUM;

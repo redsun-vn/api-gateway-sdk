@@ -8,8 +8,8 @@ export declare namespace IPricebookRule {
         to: string | null;
     }
     interface IReqCreatePricebookRule {
-        price_book_id: number & tags.Type<'uint32'>;
-        referent_id?: number & tags.Type<'uint32'>;
+        price_book_id: number & tags.Type<'uint64'>;
+        referent_id?: number & tags.Type<'uint64'>;
         referentType?: PriceBookRuleReferentType;
         referentValue?: number;
         value?: number;
@@ -24,7 +24,7 @@ export declare namespace IPricebookRule {
         userId?: string;
     }
     interface ICreatePricebookRule extends IReqCreatePricebookRule {
-        shop_id: number & tags.Type<'uint32'>;
+        shop_id: number & tags.Type<'uint64'>;
     }
     interface IUpdatePricebookRule {
         id?: string;

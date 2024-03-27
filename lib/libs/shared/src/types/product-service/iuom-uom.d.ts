@@ -4,8 +4,8 @@ import { UomType } from '../../enum';
 import { IUomCategory } from './iuom-category';
 export declare namespace IUomUom {
     interface ICreateUomUom {
-        shop_id?: number & tags.Type<'uint32'>;
-        uom_category_id: number & tags.Type<'uint32'>;
+        shop_id?: number & tags.Type<'uint64'>;
+        uom_category_id: number & tags.Type<'uint64'>;
         name: string;
         type: UomType;
         active?: boolean;

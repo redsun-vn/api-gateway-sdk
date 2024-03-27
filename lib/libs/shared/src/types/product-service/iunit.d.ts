@@ -4,10 +4,10 @@ import { IUomUom } from './iuom-uom';
 import { IVariant } from './ivariant';
 export declare namespace IUnit {
     interface ICreateUnit {
-        shop_id: number & tags.Type<'uint32'>;
-        variant_id: number & tags.Type<'uint32'>;
-        product_id: number & tags.Type<'uint32'>;
-        uom_uom_id: number & tags.Type<'uint32'>;
+        shop_id: number & tags.Type<'uint64'>;
+        variant_id: number & tags.Type<'uint64'>;
+        product_id: number & tags.Type<'uint64'>;
+        uom_uom_id: number & tags.Type<'uint64'>;
         isDefault: boolean;
         rounding: number;
         factor: number;

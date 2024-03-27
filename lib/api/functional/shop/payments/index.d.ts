@@ -50,7 +50,7 @@ export declare namespace $delete {
 export declare function create(connection: IConnection, data: create.Input): Promise<create.Output>;
 export declare namespace create {
     type Input = Primitive<IPayment.ICreatePayment>;
-    type Output = Primitive<IResponse<IPayment.IPaymentResponse>>;
+    type Output = Primitive<IResponse<any>>;
     const METADATA: {
         readonly method: "POST";
         readonly path: "/shop/payments";

@@ -5,16 +5,16 @@ import { IStockPickingType } from './istock-picking-type.type';
 import { IWarehouse } from './iwarehouse.type';
 export declare namespace IStockRule {
     interface ICreateStockRule {
-        shop_id?: number & tags.Type<'uint32'>;
-        location_src_id: number & tags.Type<'uint32'>;
-        location_dest_id: number & tags.Type<'uint32'>;
-        picking_type_id: number & tags.Type<'uint32'>;
-        warehouse_id: number & tags.Type<'uint32'>;
+        shop_id?: number & tags.Type<'uint64'>;
+        location_src_id: number & tags.Type<'uint64'>;
+        location_dest_id: number & tags.Type<'uint64'>;
+        picking_type_id: number & tags.Type<'uint64'>;
+        warehouse_id: number & tags.Type<'uint64'>;
         sequence: number;
         active?: boolean;
     }
     interface IUpdateStockRule {
-        shop_id?: number & tags.Type<'uint32'>;
+        shop_id?: number & tags.Type<'uint64'>;
         sequence?: number;
         active?: boolean;
     }

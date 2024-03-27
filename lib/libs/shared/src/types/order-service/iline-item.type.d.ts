@@ -4,16 +4,17 @@ import { KitchenProcessingStatus, OrderFulfillmentStatus } from '../../enum';
 import { ILineItemTaxLine } from './iline-item-tax-line.type';
 import { IOrder } from './iorder.type';
 import { IDrafOrder } from './idraf-order.type';
+import { ILineItemSelectionGroup } from './iline-item-selection-group.type';
 export declare namespace ILineItem {
     interface IInputLineItem {
-        product_id: number & tags.Type<'uint32'>;
-        variant_id: number & tags.Type<'uint32'>;
-        uom_uom_id: number & tags.Type<'uint32'>;
-        stock_take_id?: (number & tags.Type<'uint32'>) | null;
-        kds_area_id?: (number & tags.Type<'uint32'>) | null;
-        fulfillment_provider_id?: (number & tags.Type<'uint32'>) | null;
-        reward_id?: (number & tags.Type<'uint32'>) | null;
-        imgae_id?: (number & tags.Type<'uint32'>) | null;
+        product_id: number & tags.Type<'uint64'>;
+        variant_id: number & tags.Type<'uint64'>;
+        uom_uom_id: number & tags.Type<'uint64'>;
+        stock_take_id?: (number & tags.Type<'uint64'>) | null;
+        kds_area_id?: (number & tags.Type<'uint64'>) | null;
+        fulfillment_provider_id?: (number & tags.Type<'uint64'>) | null;
+        reward_id?: (number & tags.Type<'uint64'>) | null;
+        imgae_id?: (number & tags.Type<'uint64'>) | null;
         kitchenProcessingStatus?: KitchenProcessingStatus | null;
         fulfillmentStatus?: OrderFulfillmentStatus | null;
         isGiftcard?: boolean;
@@ -45,13 +46,14 @@ export declare namespace ILineItem {
         completedAt?: (string & tags.Format<'date-time'>) | null;
         sequenece?: number;
         lineItemTaxLines?: ILineItemTaxLine.IInputLineItemTaxLine[] | null;
+        selectionGroups?: ILineItemSelectionGroup.IInputLineItemSelectionGroup[] | null;
     }
     interface ICreateLineItem extends IInputLineItem {
-        order_id?: number & tags.Type<'uint32'>;
-        draf_order_id?: number & tags.Type<'uint32'>;
+        order_id?: number & tags.Type<'uint64'>;
+        draf_order_id?: number & tags.Type<'uint64'>;
     }
     interface ICreateLineItemKafka extends ICreateLineItem {
-        shop_id: number & tags.Type<'uint32'>;
+        shop_id: number & tags.Type<'uint64'>;
     }
     interface IUpdateLineItem {
         id?: number | string | null;
@@ -140,5 +142,6 @@ export declare namespace ILineItem {
         order?: IOrder.IDetailOrderResponse | null;
         drafOrder?: IDrafOrder.IDetailDrafOrderResponse | null;
         lineItemTaxLines?: ILineItemTaxLine.IDetailLineItemTaxLineResponse[] | null;
+        selectionGroups?: ILineItemSelectionGroup.IDetailLineItemSelectionGroupResponse[] | null;
     }
 }

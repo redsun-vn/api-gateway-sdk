@@ -7,9 +7,9 @@ export declare namespace IPackage {
         name: string;
         active?: boolean;
         description?: string;
-        price: number & tags.Type<'uint32'>;
-        day: number & tags.Type<'uint32'>;
-        month: number & tags.Type<'uint32'>;
+        price: number & tags.Type<'uint64'>;
+        day: number & tags.Type<'uint64'>;
+        month: number & tags.Type<'uint64'>;
         metadata?: string[];
         isTrial?: boolean;
         limitUser?: number;
@@ -33,7 +33,7 @@ export declare namespace IPackage {
         metadata?: string[] | null;
         limitUser?: number | null;
         limitDevice?: number | null;
-        limiBranch?: number | null;
+        limitBranch?: number | null;
         numberOfGuides?: number | null;
         supportLevel?: string | null;
         level?: number | null;

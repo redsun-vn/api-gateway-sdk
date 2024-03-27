@@ -3,8 +3,8 @@ import { BaseResponse } from '../common.type';
 import { IAttribute } from './iattribute';
 export declare namespace IProductOption {
     interface ICreateProductOption {
-        shop_id?: number & tags.Type<'uint32'>;
-        attribute_id: number & tags.Type<'uint32'>;
+        shop_id?: number & tags.Type<'uint64'>;
+        attribute_id: number & tags.Type<'uint64'>;
         active?: boolean;
         name: string;
     }

@@ -4,12 +4,12 @@ import { IStocktake } from './istocktake.type';
 import { IStockLocation } from './istock-location.type';
 export declare namespace IStocktakeLine {
     interface ICreateStocktakeLine {
-        shop_id?: number & tags.Type<'uint32'>;
-        product_id: number & tags.Type<'uint32'>;
-        variant_id: number & tags.Type<'uint32'>;
-        uom_uom_id: number & tags.Type<'uint32'>;
-        stocktake_id: number & tags.Type<'uint32'>;
-        stock_location_id: number & tags.Type<'uint32'>;
+        shop_id?: number & tags.Type<'uint64'>;
+        product_id: number & tags.Type<'uint64'>;
+        variant_id: number & tags.Type<'uint64'>;
+        uom_uom_id: number & tags.Type<'uint64'>;
+        stocktake_id: number & tags.Type<'uint64'>;
+        stock_location_id: number & tags.Type<'uint64'>;
         barcode: string;
         qantity: number;
         inventoryQuantity: number;

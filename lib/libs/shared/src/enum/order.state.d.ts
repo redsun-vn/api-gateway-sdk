@@ -60,16 +60,14 @@ export declare enum OrderFinancialStatus {
     CANCELED = "canceled"
 }
 export declare enum OrderFulfillmentStatus {
-    OPEN = "open",
-    SCHEDULED = "scheduled",
-    IN_PROGRESS = "in_progress",
-    FULFILLED = "fulfilled",
-    CANCEL = "cancel",
-    RESTOCKED = "restocked",
     PENDING = "pending",
-    DONT_MEET_CUSTOMER = "dont_meet_customer",
-    WAITING_RESTOCK = "waitting_restock",
-    UNFULFILLED = "unfulfilled"
+    OPEN = "open",
+    PROGRESSING = "progressing",
+    SUCCESS = "success",
+    CANCELLED = "cancelled",
+    ERROR = "error",
+    FAILURE = "failure",
+    CLOSED = "closed"
 }
 export declare enum OrderProcessingStatus {
     VERIFIED = "verified",

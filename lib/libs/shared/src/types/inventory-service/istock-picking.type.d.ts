@@ -5,16 +5,16 @@ import { IStockPickingType } from './istock-picking-type.type';
 import { StockPickingMoveType, StockPickingState, StockReferentType } from '../../enum';
 export declare namespace IStockPicking {
     interface ICreateStockPicking {
-        shop_id?: number & tags.Type<'uint32'>;
-        location_src_id: number & tags.Type<'uint32'>;
-        location_dest_id: number & tags.Type<'uint32'>;
-        picking_type_id: number & tags.Type<'uint32'>;
-        picking_address_id?: number & tags.Type<'uint32'>;
-        updated_by?: (number & tags.Type<'uint32'>) | (string & tags.Format<'uuid'>);
-        staff_id: (number & tags.Type<'uint32'>) | (string & tags.Format<'uuid'>);
-        owner_id?: (number & tags.Type<'uint32'>) | (string & tags.Format<'uuid'>);
-        partner_id?: (number & tags.Type<'uint32'>) | (string & tags.Format<'uuid'>);
-        referent_id?: number & tags.Type<'uint32'>;
+        shop_id?: number & tags.Type<'uint64'>;
+        location_src_id: number & tags.Type<'uint64'>;
+        location_dest_id: number & tags.Type<'uint64'>;
+        picking_type_id: number & tags.Type<'uint64'>;
+        picking_address_id?: number & tags.Type<'uint64'>;
+        updated_by?: (number & tags.Type<'uint64'>) | (string & tags.Format<'uuid'>);
+        staff_id: (number & tags.Type<'uint64'>) | (string & tags.Format<'uuid'>);
+        owner_id?: (number & tags.Type<'uint64'>) | (string & tags.Format<'uuid'>);
+        partner_id?: (number & tags.Type<'uint64'>) | (string & tags.Format<'uuid'>);
+        referent_id?: number & tags.Type<'uint64'>;
         referentType?: StockReferentType | null;
         name: string;
         note: string;

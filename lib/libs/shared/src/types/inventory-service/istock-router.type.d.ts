@@ -4,15 +4,15 @@ import { IStockRule } from './istock-rule.type';
 import { IWarehouse } from './iwarehouse.type';
 export declare namespace IStockRouter {
     interface ICreateStockRouter {
-        shop_id?: number & tags.Type<'uint32'>;
-        stock_rule_id: number & tags.Type<'uint32'>;
-        warehouse_id: number & tags.Type<'uint32'>;
+        shop_id?: number & tags.Type<'uint64'>;
+        stock_rule_id: number & tags.Type<'uint64'>;
+        warehouse_id: number & tags.Type<'uint64'>;
         referentType: string;
         referentAction: string;
         active?: boolean;
     }
     interface IUpdateStockRouter {
-        shop_id?: number & tags.Type<'uint32'>;
+        shop_id?: number & tags.Type<'uint64'>;
         referentType?: string;
         referentAction?: string;
         active?: boolean;

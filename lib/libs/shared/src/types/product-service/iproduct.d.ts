@@ -22,11 +22,11 @@ export declare namespace IProduct {
         code?: string;
     }
     interface IReqCreateProduct {
-        tax_id?: number & tags.Type<'uint32'>;
-        product_brand_id?: number & tags.Type<'uint32'>;
-        manufacturer_id?: number & tags.Type<'uint32'>;
-        image_id?: number & tags.Type<'uint32'>;
-        partner_id?: number & tags.Type<'uint32'>;
+        tax_id?: number & tags.Type<'uint64'>;
+        product_brand_id?: number & tags.Type<'uint64'>;
+        manufacturer_id?: number & tags.Type<'uint64'>;
+        image_id?: number & tags.Type<'uint64'>;
+        partner_id?: number & tags.Type<'uint64'>;
         categoryIds?: number[];
         tagIds?: number[];
         productOptionIds?: number[];
@@ -46,15 +46,15 @@ export declare namespace IProduct {
         userId?: string;
     }
     interface ICreateProduct extends IReqCreateProduct {
-        shop_id: number & tags.Type<'uint32'>;
+        shop_id: number & tags.Type<'uint64'>;
     }
     interface IUpdateProduct {
-        tax_id?: number & tags.Type<'uint32'>;
-        shop_id?: number & tags.Type<'uint32'>;
-        product_brand_id?: number & tags.Type<'uint32'>;
-        manufacturer_id?: number & tags.Type<'uint32'>;
-        image_id?: number & tags.Type<'uint32'>;
-        partner_id?: number & tags.Type<'uint32'>;
+        tax_id?: number & tags.Type<'uint64'>;
+        shop_id?: number & tags.Type<'uint64'>;
+        product_brand_id?: number & tags.Type<'uint64'>;
+        manufacturer_id?: number & tags.Type<'uint64'>;
+        image_id?: number & tags.Type<'uint64'>;
+        partner_id?: number & tags.Type<'uint64'>;
         categoryIds?: number[];
         tagIds?: number[];
         productOptionIds?: number[];

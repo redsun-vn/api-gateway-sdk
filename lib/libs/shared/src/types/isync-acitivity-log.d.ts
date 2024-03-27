@@ -13,10 +13,10 @@ export declare namespace ISyncActivityLog {
         branch_id: string;
     }
     export interface ICreateSyncActivityLog {
-        branch_id: number & tags.Type<'uint32'>;
+        branch_id: number & tags.Type<'uint64'>;
         pos_config_id?: string;
         pos_session_uuid: string;
-        staff_id: number & tags.Type<'uint32'>;
+        staff_id: number & tags.Type<'uint64'>;
         status: string & STATUS;
         action: string & ACTION;
         table_name: string;

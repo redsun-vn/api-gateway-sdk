@@ -5,11 +5,11 @@ import { IProduct } from './iproduct';
 import { IUnit } from './iunit';
 export declare namespace IVariant {
     interface IVariantStockInput {
-        stock_location_id: number & tags.Type<'uint32'>;
+        stock_location_id: number & tags.Type<'uint64'>;
         quantity: number;
     }
     interface IRefCreateUnit {
-        uom_uom_id: number & tags.Type<'uint32'>;
+        uom_uom_id: number & tags.Type<'uint64'>;
         isDefault: boolean;
         rounding: number;
         factor: number;
@@ -17,15 +17,15 @@ export declare namespace IVariant {
     }
     interface IRefUpdateUnit {
         id?: string;
-        uom_uom_id?: number & tags.Type<'uint32'>;
+        uom_uom_id?: number & tags.Type<'uint64'>;
         isDefault?: boolean;
         rounding?: number;
         factor?: number;
         conversion?: number;
     }
     interface IReqCreateVariant {
-        image_id?: number & tags.Type<'uint32'>;
-        product_id: number & tags.Type<'uint32'>;
+        image_id?: number & tags.Type<'uint64'>;
+        product_id: number & tags.Type<'uint64'>;
         name: string;
         barcode?: string;
         sku?: string;
@@ -47,11 +47,11 @@ export declare namespace IVariant {
         variantStocks?: IVariantStockInput[];
     }
     interface ICreateVariant extends IReqCreateVariant {
-        shop_id: number & tags.Type<'uint32'>;
+        shop_id: number & tags.Type<'uint64'>;
     }
     interface IUpdateVariant {
         id?: string;
-        image_id?: number & tags.Type<'uint32'>;
+        image_id?: number & tags.Type<'uint64'>;
         name?: string;
         active?: boolean;
         icon?: string;

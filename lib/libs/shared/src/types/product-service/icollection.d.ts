@@ -5,7 +5,7 @@ import { ICondition } from './icondition';
 export declare namespace ICollection {
     interface IInputCondition {
         referentType: string;
-        referent_id: number & tags.Type<'uint32'>;
+        referent_id: number & tags.Type<'uint64'>;
         value: string;
     }
     interface IResponseCondition {
@@ -16,7 +16,7 @@ export declare namespace ICollection {
         value: string;
     }
     interface IReqCreateCollection {
-        image_id?: number & tags.Type<'uint32'>;
+        image_id?: number & tags.Type<'uint64'>;
         name: string;
         icon?: string;
         active?: boolean;
@@ -29,10 +29,10 @@ export declare namespace ICollection {
         userId?: string;
     }
     interface ICreateCollection extends IReqCreateCollection {
-        shop_id: number & tags.Type<'uint32'>;
+        shop_id: number & tags.Type<'uint64'>;
     }
     interface IUpdateCollection {
-        image_id?: number & tags.Type<'uint32'>;
+        image_id?: number & tags.Type<'uint64'>;
         icon?: string;
         name?: string;
         active?: boolean;

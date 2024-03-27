@@ -19,13 +19,14 @@ export declare enum FULFILLMENT_REQUEST_STATUS {
 }
 export declare enum FULFILLMENT_SHIPPING_STATUS {
     DRAFT = "draft",
-    WAITING = "waitting",
+    WAITING = "waiting",
     PICKED = "picked",
-    DELIVERING = "delevering",
+    DELIVERING = "delivering",
     DELIVERED = "delivered",
     SUCCESS = "success",
     CANCEL = "cancel",
     FAIL = "fail",
+    ERROR = "error",
     WAITING_RETURN = "waiting_return",
     RETURNING = "returning",
     RETURNED = "returned"
@@ -39,6 +40,14 @@ export declare enum FULFILLMENT_STATUS {
     ERROR = "error",
     FAILURE = "failure",
     CLOSED = "closed"
+}
+export declare enum PAYMENT_TARGET {
+    SENDER = "sender",
+    RECEIVER = "receiver"
+}
+export declare enum RECEIVE_METHOD {
+    ALLOW_CHECK = "allow_check",
+    NONE_CHECK = "none_check"
 }
 export declare enum SHIPPING_PROVIDER_ENUM {
     GHN = "ghn"

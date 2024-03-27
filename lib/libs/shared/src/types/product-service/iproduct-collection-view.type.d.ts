@@ -1,11 +1,11 @@
 import { tags } from 'typia';
 export declare namespace IProductCollectionView {
     interface IFilterById {
-        shop_id: number & tags.Type<'uint32'>;
+        shop_id: number & tags.Type<'uint64'>;
         id: string;
     }
     interface IFilterByCollectionIds {
-        shop_id: number & tags.Type<'uint32'>;
+        shop_id: number & tags.Type<'uint64'>;
         collectionIds: string;
     }
     interface IProductCollectionViewResponse {

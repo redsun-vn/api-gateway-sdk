@@ -5,13 +5,13 @@ import { IDrafOrder } from './idraf-order.type';
 import { CombiningPromotionStatus, OrderCombiningPromotionType } from '../../enum';
 export declare namespace ICombiningPromotion {
     interface ICreateCombiningPromotion {
-        shop_id?: number & tags.Type<'uint32'>;
-        program_id?: number & tags.Type<'uint32'>;
-        order_id?: number & tags.Type<'uint32'>;
-        draf_order_id?: number & tags.Type<'uint32'>;
-        line_item_id?: number & tags.Type<'uint32'>;
-        variant_x_id?: number & tags.Type<'uint32'>;
-        variant_y_id?: number & tags.Type<'uint32'>;
+        shop_id?: number & tags.Type<'uint64'>;
+        program_id?: number & tags.Type<'uint64'>;
+        order_id?: number & tags.Type<'uint64'>;
+        draf_order_id?: number & tags.Type<'uint64'>;
+        line_item_id?: number & tags.Type<'uint64'>;
+        variant_x_id?: number & tags.Type<'uint64'>;
+        variant_y_id?: number & tags.Type<'uint64'>;
         uuid?: string & tags.Format<'uuid'>;
         description?: string;
         discountCode?: string;

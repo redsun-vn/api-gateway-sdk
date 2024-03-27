@@ -4,12 +4,12 @@ import { IWarehouse } from './iwarehouse.type';
 import { IStockQuantity } from './istock-quantity.type';
 export declare namespace IStockLot {
     interface ICreateStockLot {
-        shop_id?: number & tags.Type<'uint32'>;
-        warehouse_id: number & tags.Type<'uint32'>;
-        stock_quantity_id: number & tags.Type<'uint32'>;
-        partner_id: number & tags.Type<'uint32'>;
-        product_id: number & tags.Type<'uint32'>;
-        variant_id: number & tags.Type<'uint32'>;
+        shop_id?: number & tags.Type<'uint64'>;
+        warehouse_id: number & tags.Type<'uint64'>;
+        stock_quantity_id: number & tags.Type<'uint64'>;
+        partner_id: number & tags.Type<'uint64'>;
+        product_id: number & tags.Type<'uint64'>;
+        variant_id: number & tags.Type<'uint64'>;
         name: string;
         state: string;
         note?: string;

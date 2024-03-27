@@ -5,9 +5,9 @@ import { IPaymentGateway } from './ipayment-gateway.type';
 import { TransactionErrorCode, TransactionKind, TransactionStatus } from '../../enum';
 export declare namespace ITransaction {
     interface ICreateTransaction {
-        shop_id?: number & tags.Type<'uint32'>;
-        payment_id: number & tags.Type<'uint32'>;
-        payment_gateway_id?: number & tags.Type<'uint32'>;
+        shop_id?: number & tags.Type<'uint64'>;
+        payment_id: number & tags.Type<'uint64'>;
+        payment_gateway_id?: number & tags.Type<'uint64'>;
         accountNumber?: string;
         currencyCode?: string;
         authorizationCode?: string;

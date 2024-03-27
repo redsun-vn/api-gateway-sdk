@@ -2,13 +2,13 @@ import { tags } from 'typia';
 import { BaseResponse } from '../common.type';
 export declare namespace ITrayItem {
     interface IReqCreateTrayItem {
-        branch_id: number & tags.Type<'uint32'>;
+        branch_id: number & tags.Type<'uint64'>;
         code: string;
         shortTrayCode: string;
         userId?: string;
     }
     interface ICreateTrayItem extends IReqCreateTrayItem {
-        shop_id: number & tags.Type<'uint32'>;
+        shop_id: number & tags.Type<'uint64'>;
     }
     interface IUpdateTrayItem {
         id?: string;

@@ -2,6 +2,7 @@ import { tags } from 'typia';
 import { BaseResponse } from './common.type';
 export declare namespace IShopConfig {
     interface ICreate {
+        displayName?: string;
         supportEmail?: string & tags.Format<'email'>;
         technicalEmail?: string & tags.Format<'email'>;
         technicalPhone?: string & tags.Pattern<'^(0[0-9]{2})?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$'>;
@@ -15,11 +16,11 @@ export declare namespace IShopConfig {
         privacyPolicy?: string;
         taxesIncluded?: boolean;
         available_price_book_ids?: string[];
-        default_price_book_id?: number & tags.Type<'uint32'>;
+        default_price_book_id?: number & tags.Type<'uint64'>;
         table_id?: number | string;
-        room_id?: number & tags.Type<'uint32'>;
-        branch_id: number & tags.Type<'uint32'>;
-        staff_id?: number & tags.Type<'uint32'>;
+        room_id?: number & tags.Type<'uint64'>;
+        branch_id: number & tags.Type<'uint64'>;
+        staff_id?: number & tags.Type<'uint64'>;
         timeOpen?: string & tags.Pattern<'^(?:[01]?[0-9]|2[0-3]):[0-5]?[0-9](?::[0-5]?[0-9])?$'>;
         timeClose?: string & tags.Pattern<'^(?:[01]?[0-9]|2[0-3]):[0-5]?[0-9](?::[0-5]?[0-9])?$'>;
         dateStart?: string & tags.Format<'date'>;
@@ -29,6 +30,7 @@ export declare namespace IShopConfig {
     }
     interface IShopConfigResponse extends BaseResponse {
         shop_id: string;
+        displayName?: string | null;
         supportEmail?: string | null;
         technicalEmail?: string | null;
         technicalPhone?: string | null;

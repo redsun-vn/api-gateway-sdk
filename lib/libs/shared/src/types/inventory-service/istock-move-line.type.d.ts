@@ -6,15 +6,15 @@ import { IStockPicking } from './istock-picking.type';
 import { IStockPickingType } from './istock-picking-type.type';
 export declare namespace IStockMoveLine {
     interface ICreateStockMoveLine {
-        shop_id?: number & tags.Type<'uint32'>;
-        product_id: number & tags.Type<'uint32'>;
-        variant_id: number & tags.Type<'uint32'>;
-        uom_uom_id: number & tags.Type<'uint32'>;
-        stock_move_id: number & tags.Type<'uint32'>;
-        location_src_id: number & tags.Type<'uint32'>;
-        location_dest_id: number & tags.Type<'uint32'>;
-        picking_id: number & tags.Type<'uint32'>;
-        picking_type_id: number & tags.Type<'uint32'>;
+        shop_id?: number & tags.Type<'uint64'>;
+        product_id: number & tags.Type<'uint64'>;
+        variant_id: number & tags.Type<'uint64'>;
+        uom_uom_id: number & tags.Type<'uint64'>;
+        stock_move_id: number & tags.Type<'uint64'>;
+        location_src_id: number & tags.Type<'uint64'>;
+        location_dest_id: number & tags.Type<'uint64'>;
+        picking_id: number & tags.Type<'uint64'>;
+        picking_type_id: number & tags.Type<'uint64'>;
         staff_id?: string;
         barcode: string;
         note: string;
@@ -26,8 +26,8 @@ export declare namespace IStockMoveLine {
         receiveQuantity: number;
     }
     interface IUpdateStockMoveLine {
-        picking_id?: number & tags.Type<'uint32'>;
-        picking_type_id?: number & tags.Type<'uint32'>;
+        picking_id?: number & tags.Type<'uint64'>;
+        picking_type_id?: number & tags.Type<'uint64'>;
         note?: string;
         description?: string;
         dateScheduled?: string;

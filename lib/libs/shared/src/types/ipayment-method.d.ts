@@ -3,7 +3,7 @@ import { BaseResponse } from './common.type';
 export declare namespace IPaymentMethod {
     interface ICreate {
         name: string;
-        code_prefix?: string & tags.MinLength<2> & tags.MaxLength<2>;
+        code?: string & tags.MinLength<2> & tags.MaxLength<10>;
         active?: boolean;
         description?: string;
         icon: string & tags.MinLength<10> & tags.MaxLength<10>;

@@ -43,11 +43,11 @@ export declare namespace IPage {
         query?: CustomDataType;
     }
     interface IMeta {
-        totalItems: number & tags.Type<'uint32'>;
-        itemCount: number & tags.Type<'uint32'>;
-        itemsPerPage: number & tags.Type<'uint32'>;
-        totalPages: number & tags.Type<'uint32'>;
-        currentPage: number & tags.Type<'uint32'>;
+        totalItems: number & tags.Type<'uint64'>;
+        itemCount: number & tags.Type<'uint64'>;
+        itemsPerPage: number & tags.Type<'uint64'>;
+        totalPages: number & tags.Type<'uint64'>;
+        currentPage: number & tags.Type<'uint64'>;
     }
 }
 export interface IResponsePagination<T> {
@@ -59,7 +59,7 @@ export interface IResponse<T> {
     errorCode?: number | string | null;
     data: T;
     message?: string | Array<string>;
-    statusCode?: number & tags.Type<'uint32'>;
+    statusCode?: number & tags.Type<'uint64'>;
 }
 export declare enum SORT_TYPE {
     'DESC' = "desc",

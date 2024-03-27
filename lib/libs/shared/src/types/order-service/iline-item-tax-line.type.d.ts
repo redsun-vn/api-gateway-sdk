@@ -9,8 +9,8 @@ export declare namespace ILineItemTaxLine {
         ratePercentage: number;
     }
     interface ICreateLineItemTaxLine {
-        shop_id?: number & tags.Type<'uint32'>;
-        line_item_id: number & tags.Type<'uint32'>;
+        shop_id?: number & tags.Type<'uint64'>;
+        line_item_id: number & tags.Type<'uint64'>;
         name: string;
         code: string;
         rate: number;
@@ -18,7 +18,7 @@ export declare namespace ILineItemTaxLine {
         userId?: string;
     }
     interface ICreateLineItemTaxLineKafka extends ICreateLineItemTaxLine {
-        shop_id: number & tags.Type<'uint32'>;
+        shop_id: number & tags.Type<'uint64'>;
     }
     interface IUpdateLineItemTaxLine {
         name?: string;
