@@ -1,4 +1,4 @@
-import { IFulfillmentOrder } from "./ifulfillment-order";
+import { IFulfillmentOrder } from './ifulfillment-order';
 export declare namespace IFulfillment {
     interface IFulfillmentResponse {
         id: number | string;
@@ -22,5 +22,8 @@ export declare namespace IFulfillment {
         deletedAt: string | null;
         createdAt: string | null;
         updatedAt: string | null;
+    }
+    interface IUpdateCod {
+        cod: number;
     }
 }
