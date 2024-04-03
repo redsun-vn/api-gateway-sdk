@@ -4,6 +4,7 @@ export declare namespace ITransactionReconService {
         shop_id: number | string;
         shipping_method_id: number | string;
         admin_reconciliation_id: number | string;
+        admin_reconciliation_item_id: number | string;
         fulfillment_id: number | string;
         orderCode: string;
         type: string;
