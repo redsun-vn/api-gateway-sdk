@@ -5,12 +5,13 @@ export declare namespace ITransactionReconService {
         shipping_method_id: number | string;
         admin_reconciliation_id: number | string;
         admin_reconciliation_item_id: number | string;
+        uuid: string;
         fulfillment_id: number | string;
         orderCode: string;
-        type: string;
+        shippingCode: string;
         name?: string;
-        amount: number;
-        serviceFee: number;
+        amount: number | string;
+        serviceFee: number | string;
         status: string;
     }
 }
