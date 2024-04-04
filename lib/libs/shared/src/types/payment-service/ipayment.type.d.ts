@@ -5,8 +5,6 @@ import { IBankAccount } from './ibank-account.type';
 import { PaymentStatus } from '../../enum';
 export declare namespace IPayment {
     interface ICreatePayment {
-        shop_id?: number & tags.Type<'uint64'>;
-        partner_id: (number & tags.Type<'uint64'>) | (string & tags.Format<'uuid'>);
         payment_method_id: number & tags.Type<'uint64'>;
         bank_account_id?: number & tags.Type<'uint64'>;
         target: string;
@@ -53,5 +51,6 @@ export declare namespace IPayment {
         code: string;
         checkout?: ICheckout.ICheckoutResponse | null;
         bankAccount?: IBankAccount.IBankAccountResponse | null;
+        qrCode?: string;
     }
 }
