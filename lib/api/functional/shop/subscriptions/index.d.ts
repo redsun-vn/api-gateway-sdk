@@ -1,6 +1,7 @@
-import type { IConnection, Resolved, Primitive } from "@nestia/fetcher";
+import type { IConnection, Primitive, Resolved } from "@nestia/fetcher";
 import type { IQuery, IResponse, IResponsePagination } from "../../../../libs/shared/src/types/common.type";
 import type { ISubscription } from "../../../../libs/shared/src/types/isubscription";
+export * as stats from "./stats";
 export declare function findAll(connection: IConnection, query: findAll.Query): Promise<findAll.Output>;
 export declare namespace findAll {
     type Query = Resolved<IQuery>;
@@ -65,23 +66,4 @@ export declare namespace create {
         readonly status: null;
     };
     const path: () => string;
-}
-export declare function update(connection: IConnection, data: update.Input, id: string): Promise<update.Output>;
-export declare namespace update {
-    type Input = Primitive<ISubscription.IUpdate>;
-    type Output = Primitive<IResponse<false | true>>;
-    const METADATA: {
-        readonly method: "PUT";
-        readonly path: "/shop/subscriptions/:id";
-        readonly request: {
-            readonly type: "application/json";
-            readonly encrypted: false;
-        };
-        readonly response: {
-            readonly type: "application/json";
-            readonly encrypted: false;
-        };
-        readonly status: null;
-    };
-    const path: (id: string) => string;
 }

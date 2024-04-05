@@ -9,6 +9,12 @@ export declare namespace ISubscription {
     interface IUpdate {
         active?: boolean;
     }
+    type IStats = {
+        branchTotalRemain: number;
+        deviceRemain: number;
+        daysRemain: number;
+        userRemain: number;
+    };
     interface ISubscriptionResponse extends BaseResponse {
         package_id: string;
         shop_id: string;

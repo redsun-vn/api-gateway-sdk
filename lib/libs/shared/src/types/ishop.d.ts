@@ -25,6 +25,9 @@ export declare namespace IShop {
         paymentMethods?: string[];
         shippingMethods?: string[];
     }
+    interface IAdminUpdate extends BaseProfile {
+        active?: boolean;
+    }
     interface IShopResponse extends BaseResponse, BaseProfileResponse {
         name: string;
         zipcode?: string | null;

@@ -1,4 +1,4 @@
-import type { IConnection, Resolved, Primitive } from "@nestia/fetcher";
+import type { IConnection, Primitive, Resolved } from "@nestia/fetcher";
 import type { IQuery, IResponse, IResponsePagination } from "../../../../libs/shared/src/types/common.type";
 import type { ISalesChannelConfig } from "../../../../libs/shared/src/types/isales-channel-config";
 export declare function findAll(connection: IConnection, query: findAll.Query): Promise<findAll.Output>;
