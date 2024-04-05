@@ -50,3 +50,4 @@ export * from './report-service';
 export * from './ipackage-addition';
 export * from './webhook';
 export * from './iapi-key.type';
+export * from './admin-service';
