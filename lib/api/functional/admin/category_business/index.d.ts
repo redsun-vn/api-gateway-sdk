@@ -1,13 +1,13 @@
 import type { IConnection, Primitive, Resolved } from "@nestia/fetcher";
 import type { IQuery, IResponse, IResponsePagination } from "../../../../libs/shared/src/types/common.type";
-import type { IBusinessType } from "../../../../libs/shared/src/types/ibusiness-type";
+import type { ICategoryBusiness } from "../../../../libs/shared/src/types/icategory-business";
 export declare function findAll(connection: IConnection, query: findAll.Query): Promise<findAll.Output>;
 export declare namespace findAll {
     type Query = Resolved<IQuery>;
-    type Output = Primitive<IResponse<IResponsePagination<IBusinessType.IBusinessTypeResponse>>>;
+    type Output = Primitive<IResponse<IResponsePagination<ICategoryBusiness.ICategoryBusinessResponse>>>;
     const METADATA: {
         readonly method: "GET";
-        readonly path: "/admin/business-types";
+        readonly path: "/admin/category-business";
         readonly request: null;
         readonly response: {
             readonly type: "application/json";
@@ -19,10 +19,10 @@ export declare namespace findAll {
 }
 export declare function findOne(connection: IConnection, id: string): Promise<findOne.Output>;
 export declare namespace findOne {
-    type Output = Primitive<IResponse<IBusinessType.IBusinessTypeResponse>>;
+    type Output = Primitive<IResponse<ICategoryBusiness.ICategoryBusinessResponse>>;
     const METADATA: {
         readonly method: "GET";
-        readonly path: "/admin/business-types/:id";
+        readonly path: "/admin/category-business/:id";
         readonly request: null;
         readonly response: {
             readonly type: "application/json";
@@ -34,11 +34,11 @@ export declare namespace findOne {
 }
 export declare function create(connection: IConnection, data: create.Input): Promise<create.Output>;
 export declare namespace create {
-    type Input = Primitive<IBusinessType.ICreate>;
-    type Output = Primitive<IResponse<any>>;
+    type Input = Primitive<ICategoryBusiness.ICreate>;
+    type Output = Primitive<IResponse<ICategoryBusiness.ICategoryBusinessResponse>>;
     const METADATA: {
         readonly method: "POST";
-        readonly path: "/admin/business-types";
+        readonly path: "/admin/category-business";
         readonly request: {
             readonly type: "application/json";
             readonly encrypted: false;
@@ -53,11 +53,11 @@ export declare namespace create {
 }
 export declare function update(connection: IConnection, data: update.Input, id: string): Promise<update.Output>;
 export declare namespace update {
-    type Input = Primitive<IBusinessType.IUpdate>;
+    type Input = Primitive<ICategoryBusiness.IUpdate>;
     type Output = Primitive<IResponse<false | true>>;
     const METADATA: {
         readonly method: "PUT";
-        readonly path: "/admin/business-types/:id";
+        readonly path: "/admin/category-business/:id";
         readonly request: {
             readonly type: "application/json";
             readonly encrypted: false;
@@ -75,7 +75,7 @@ export declare namespace $delete {
     type Output = Primitive<IResponse<false | true>>;
     const METADATA: {
         readonly method: "DELETE";
-        readonly path: "/admin/business-types/:id";
+        readonly path: "/admin/category-business/:id";
         readonly request: null;
         readonly response: {
             readonly type: "application/json";
