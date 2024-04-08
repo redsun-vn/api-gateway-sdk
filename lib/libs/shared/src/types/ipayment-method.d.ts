@@ -6,7 +6,7 @@ export declare namespace IPaymentMethod {
         code?: string & tags.MinLength<2> & tags.MaxLength<10>;
         active?: boolean;
         description?: string;
-        icon: string & tags.MinLength<10> & tags.MaxLength<10>;
+        icon?: string;
         attachment_id?: number | string;
         metadata?: string;
     }
@@ -17,7 +17,7 @@ export declare namespace IPaymentMethod {
         code: string;
         active: boolean;
         description?: null | string;
-        icon: string;
+        icon?: string | null;
         attachment_id?: null | number | string;
         metadata?: null | string;
     }

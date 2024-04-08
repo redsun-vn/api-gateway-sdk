@@ -6,7 +6,7 @@ export declare namespace ISalesChannel {
         code_prefix?: string & tags.MinLength<2> & tags.MaxLength<2>;
         active?: boolean;
         description?: string;
-        icon: string;
+        icon?: string;
         attachment_id?: number;
         warehouse_id?: number;
         metadata?: string;
@@ -18,7 +18,7 @@ export declare namespace ISalesChannel {
         code?: string;
         active?: boolean;
         description?: string | null;
-        icon: string;
+        icon?: string | null;
         attachment_id?: string | number | null;
         warehouse_id?: string | number | null;
         metadata?: string | null;
