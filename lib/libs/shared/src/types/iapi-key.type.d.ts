@@ -1,14 +1,16 @@
 import { BaseResponse } from './common.type';
 export declare namespace IApiKey {
     interface ICreate {
-        shop_id: number;
+        name: string;
     }
     interface IUpdate {
-        active: boolean;
+        active?: boolean;
+        name?: string;
     }
     interface IResponse extends BaseResponse {
         shop_id: number | string;
         apiKey: string;
+        name: string;
         active: boolean;
     }
 }

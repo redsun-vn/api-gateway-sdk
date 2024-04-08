@@ -16,13 +16,17 @@ export declare namespace findAll {
     };
     const path: () => string;
 }
-export declare function create(connection: IConnection): Promise<create.Output>;
+export declare function create(connection: IConnection, data: create.Input): Promise<create.Output>;
 export declare namespace create {
+    type Input = Primitive<IApiKey.ICreate>;
     type Output = Primitive<IResponse<IApiKey.IResponse>>;
     const METADATA: {
         readonly method: "POST";
         readonly path: "/shop/api-keys";
-        readonly request: null;
+        readonly request: {
+            readonly type: "application/json";
+            readonly encrypted: false;
+        };
         readonly response: {
             readonly type: "application/json";
             readonly encrypted: false;
@@ -31,7 +35,7 @@ export declare namespace create {
     };
     const path: () => string;
 }
-export declare function update(connection: IConnection, data: update.Input, id: string): Promise<update.Output>;
+export declare function update(connection: IConnection, id: string, data: update.Input): Promise<update.Output>;
 export declare namespace update {
     type Input = Primitive<IApiKey.IUpdate>;
     type Output = Primitive<IResponse<IApiKey.IResponse>>;
@@ -42,6 +46,21 @@ export declare namespace update {
             readonly type: "application/json";
             readonly encrypted: false;
         };
+        readonly response: {
+            readonly type: "application/json";
+            readonly encrypted: false;
+        };
+        readonly status: null;
+    };
+    const path: (id: string) => string;
+}
+export declare function $delete(connection: IConnection, id: string): Promise<$delete.Output>;
+export declare namespace $delete {
+    type Output = Primitive<IResponse<false | true>>;
+    const METADATA: {
+        readonly method: "DELETE";
+        readonly path: "/shop/api-keys/:id";
+        readonly request: null;
         readonly response: {
             readonly type: "application/json";
             readonly encrypted: false;
