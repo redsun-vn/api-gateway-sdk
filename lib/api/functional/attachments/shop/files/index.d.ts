@@ -1,5 +1,5 @@
 import type { IConnection, Primitive, Resolved } from "@nestia/fetcher";
-import type { IQuery, IResponse, IResponsePagination } from "../../../../../libs/shared/src/types/common.type";
+import type { IResponse, IQuery, IResponsePagination } from "../../../../../libs/shared/src/types/common.type";
 import type { IFile } from "../../../../../libs/shared/src/types/ifile";
 export * as hard from "./hard";
 export declare function upload(connection: IConnection, input: upload.Input): Promise<upload.Output>;
