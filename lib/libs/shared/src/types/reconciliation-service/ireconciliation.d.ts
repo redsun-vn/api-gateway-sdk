@@ -15,9 +15,7 @@ export declare namespace IReconciliation {
         cancelReason: string;
     }
     interface IRelease {
-        accountBankNumber: string;
-        accountBankName: string;
-        accountBankCode: string;
+        bank_account_id: number & tags.Type<'uint64'>;
     }
     interface IResponse extends BaseResponse {
         code: string;

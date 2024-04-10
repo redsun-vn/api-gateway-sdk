@@ -23,5 +23,6 @@ export declare namespace IWebhook {
         referenceCode: string;
         accumulated: number;
         id: number;
+        shop_id?: number | string;
     }
 }

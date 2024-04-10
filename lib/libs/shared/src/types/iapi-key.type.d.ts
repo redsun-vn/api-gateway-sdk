@@ -1,4 +1,5 @@
 import { BaseResponse } from './common.type';
+import { IShop } from './ishop';
 export declare namespace IApiKey {
     interface ICreate {
         name: string;
@@ -12,5 +13,6 @@ export declare namespace IApiKey {
         apiKey: string;
         name: string;
         active: boolean;
+        shop?: IShop.IShopResponse;
     }
 }

@@ -60,6 +60,7 @@ export interface IResponse<T> {
     data: T;
     message?: string | Array<string>;
     statusCode?: number & tags.Type<'uint64'>;
+    success?: boolean;
 }
 export declare enum SORT_TYPE {
     'DESC' = "desc",

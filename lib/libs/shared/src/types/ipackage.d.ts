@@ -22,6 +22,9 @@ export declare namespace IPackage {
     }
     interface IUpdate extends Omit<Partial<ICreate>, 'packageAdditions'> {
     }
+    interface ICreateAdditions {
+        packageAdditions: IPackageAddition.ICreate[];
+    }
     interface IPackageResponse extends BaseResponse {
         name: string;
         active: boolean;
