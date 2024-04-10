@@ -18,7 +18,7 @@ export declare namespace IPackage {
         numberOfGuides?: number;
         supportLevel?: string & PACKAGE_LEVEL_SUPPORT_ENUM;
         level?: number;
-        packageAdditions: IPackageAddition.ICreate[];
+        packageAdditions?: IPackageAddition.ICreate[];
     }
     interface IUpdate extends Omit<Partial<ICreate>, 'packageAdditions'> {
     }
