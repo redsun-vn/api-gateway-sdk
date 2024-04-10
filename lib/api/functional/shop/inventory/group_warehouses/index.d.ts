@@ -1,4 +1,4 @@
-import type { IConnection, Resolved, Primitive } from "@nestia/fetcher";
+import type { IConnection, Primitive, Resolved } from "@nestia/fetcher";
 import type { IQuery, IResponse, IResponsePagination } from "../../../../../libs/shared/src/types/common.type";
 import type { IGroupWarehouse } from "../../../../../libs/shared/src/types/inventory-service/igroup-warehouse.type";
 export declare function findAll(connection: IConnection, query: findAll.Query): Promise<findAll.Output>;

@@ -1,4 +1,4 @@
-import type { IConnection, Resolved, Primitive } from "@nestia/fetcher";
+import type { IConnection, Primitive, Resolved } from "@nestia/fetcher";
 import type { IQuery, IResponse, IResponsePagination } from "../../../../../libs/shared/src/types/common.type";
 import type { IReservation } from "../../../../../libs/shared/src/types/reservation-service/ireservation";
 export declare function findAllBooked(connection: IConnection, query: findAllBooked.Query): Promise<findAllBooked.Output>;

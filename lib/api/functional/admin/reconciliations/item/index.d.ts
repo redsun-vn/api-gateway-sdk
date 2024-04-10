@@ -4,7 +4,7 @@ import type { IAdminReconciliationItem } from "../../../../../libs/shared/src/ty
 export declare function createItem(connection: IConnection, id: string, data: createItem.Input): Promise<createItem.Output>;
 export declare namespace createItem {
     type Input = Primitive<IAdminReconciliationItem.ICreateFromFulfillment>;
-    type Output = Primitive<IResponse<IAdminReconciliationItem.IResponse>>;
+    type Output = Primitive<IResponse<Array<IAdminReconciliationItem.IResponse>>>;
     const METADATA: {
         readonly method: "POST";
         readonly path: "/admin/reconciliations/:id/item";

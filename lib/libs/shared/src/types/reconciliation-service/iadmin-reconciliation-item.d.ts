@@ -1,5 +1,6 @@
 import { tags } from 'typia';
 import { BaseResponse } from '../common.type';
+import { IAdminReconciliation } from './iadmin-reconciliation';
 export declare namespace IAdminReconciliationItem {
     interface ICreate {
         shop_id: number & tags.Type<'uint64'>;
@@ -12,7 +13,7 @@ export declare namespace IAdminReconciliationItem {
         chargePrice: number;
     }
     interface ICreateFromFulfillment {
-        fulfillment_id: number & tags.Type<'uint64'>;
+        items: IAdminReconciliation.IFulfillmentReconciliation[];
     }
     interface IResponse extends BaseResponse {
         shop_id: number | string;
