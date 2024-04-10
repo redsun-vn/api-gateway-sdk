@@ -6,10 +6,12 @@ export declare namespace IShopPaymentMethod {
         payment_method_id: string;
         active?: boolean;
         isConnected?: boolean;
+        bank_account_id?: string;
     }
     interface IUpdate {
         active?: boolean;
         isConnected?: boolean;
+        bank_account_id?: string;
     }
     interface IShopPaymentMethodResponse extends BaseResponse {
         payment_method_id: string;
@@ -18,5 +20,6 @@ export declare namespace IShopPaymentMethod {
         isConnected: boolean;
         paymentMethod: IPaymentMethod.IPaymentMethodResponse;
         configs?: null | IPaymentConfig.IPaymentConfigResponse[];
+        bank_account_id?: string | number | null;
     }
 }
