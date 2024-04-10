@@ -12,6 +12,7 @@ export declare namespace IPaymentReconciliation {
         accountBankNumber: string;
         accountBankName: string;
         accountBankCode: string;
+        bankBin?: string | null;
         status: string;
         amount: number | string;
         succeedAtt?: string | null;

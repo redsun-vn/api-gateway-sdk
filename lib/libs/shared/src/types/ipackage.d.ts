@@ -25,6 +25,9 @@ export declare namespace IPackage {
     interface ICreateAdditions {
         packageAdditions: IPackageAddition.ICreate[];
     }
+    interface IDeleteAddition {
+        additionIds: number[];
+    }
     interface IPackageResponse extends BaseResponse {
         name: string;
         active: boolean;

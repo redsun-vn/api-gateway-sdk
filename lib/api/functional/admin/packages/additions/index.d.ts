@@ -20,3 +20,22 @@ export declare namespace createAdditions {
     };
     const path: (id: string) => string;
 }
+export declare function deleteAdditions(connection: IConnection, data: deleteAdditions.Input, id: string): Promise<deleteAdditions.Output>;
+export declare namespace deleteAdditions {
+    type Input = Primitive<IPackage.IDeleteAddition>;
+    type Output = Primitive<IResponse<false | true>>;
+    const METADATA: {
+        readonly method: "DELETE";
+        readonly path: "/admin/packages/:id/additions";
+        readonly request: {
+            readonly type: "application/json";
+            readonly encrypted: false;
+        };
+        readonly response: {
+            readonly type: "application/json";
+            readonly encrypted: false;
+        };
+        readonly status: null;
+    };
+    const path: (id: string) => string;
+}
