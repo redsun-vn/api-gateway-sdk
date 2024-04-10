@@ -1,5 +1,5 @@
 import type { IConnection, Primitive, Resolved } from "@nestia/fetcher";
-import type { IQuery, IResponse, IResponsePagination } from "../../../libs/shared/src/types/common.type";
+import type { IResponse, IQuery, IResponsePagination } from "../../../libs/shared/src/types/common.type";
 import type { ISyncActivityLog } from "../../../libs/shared/src/types/isync-acitivity-log";
 export * as create_table from "./create_table";
 export declare function create(connection: IConnection, data: create.Input): Promise<create.Output>;

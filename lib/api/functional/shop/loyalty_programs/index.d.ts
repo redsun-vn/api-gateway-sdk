@@ -1,5 +1,5 @@
 import type { IConnection, Primitive, Resolved } from "@nestia/fetcher";
-import type { IQuery, IResponse, IResponsePagination } from "../../../../libs/shared/src/types/common.type";
+import type { IResponse, IQuery, IResponsePagination } from "../../../../libs/shared/src/types/common.type";
 import type { ILoyaltyProgram } from "../../../../libs/shared/src/types/loyalty-service/iloyalty-program";
 export * as order from "./order";
 export * as draft_order from "./draft_order";

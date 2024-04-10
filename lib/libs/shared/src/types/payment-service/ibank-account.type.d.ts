@@ -10,6 +10,10 @@ export declare namespace IBankAccount {
         bankAddress?: string;
         bankCountry?: string;
         active?: boolean;
+        bankFullName?: string;
+        bankCode?: string;
+        bankBin?: string;
+        bankSwiftCode?: string;
     }
     interface IUpdateBankAccount {
         qr_image_id?: number & tags.Type<'uint64'>;
@@ -19,6 +23,10 @@ export declare namespace IBankAccount {
         bankAddress?: string;
         bankCountry?: string;
         active?: boolean;
+        bankFullName?: string;
+        bankCode?: string;
+        bankBin?: string;
+        bankSwiftCode?: string;
     }
     interface IBankAccountResponse extends BaseResponse {
         shop_id: number | string | null;
@@ -29,5 +37,9 @@ export declare namespace IBankAccount {
         bankAddress?: string | null;
         bankCountry?: string | null;
         active: boolean;
+        bankFullName?: string | null;
+        bankCode?: string | null;
+        bankBin?: string | null;
+        bankSwiftCode?: string | null;
     }
 }
