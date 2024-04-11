@@ -20,6 +20,7 @@ export declare namespace ICheckout {
         customerLocale?: string;
         totalAmount?: number;
         totalDiscount?: number;
+        totalTax?: number;
         note?: string;
     }
     interface ICheckoutResponse extends BaseResponse {
@@ -33,6 +34,7 @@ export declare namespace ICheckout {
         customerLocale: string;
         totalAmount: number | string;
         totalDiscount: number | string;
-        note: string;
+        totalTax: number | string;
+        note?: string;
     }
 }
