@@ -3,7 +3,7 @@ export type CustomDataType = {
     [key: string]: string | string[] | boolean | number | undefined;
 };
 export interface BaseResponse {
-    id: number | string;
+    id: number | string | null;
     createdAt: string;
     updatedAt: string;
     deletedAt?: string | null;
