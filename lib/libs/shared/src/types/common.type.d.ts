@@ -3,10 +3,12 @@ export type CustomDataType = {
     [key: string]: string | string[] | boolean | number | undefined;
 };
 export interface BaseResponse {
-    id: number | string | null;
-    createdAt: string | null;
-    updatedAt: string | null;
+    id: number | string;
+    createdAt: string;
+    updatedAt: string;
     deletedAt?: string | null;
+    createdById?: number | string | null;
+    updatedById?: number | string | null;
 }
 export interface ISorting {
     property: string;
