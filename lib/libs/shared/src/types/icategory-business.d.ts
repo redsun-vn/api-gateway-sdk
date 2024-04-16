@@ -7,6 +7,7 @@ export declare namespace ICategoryBusiness {
         description?: string;
         icon?: string;
         metadata?: string;
+        active?: boolean;
     }
     interface IUpdate {
         name?: string;
@@ -14,6 +15,7 @@ export declare namespace ICategoryBusiness {
         icon?: string;
         metadata?: string;
         code?: string;
+        active?: boolean;
     }
     interface ICategoryBusinessResponse extends BaseResponse {
         name: string;
@@ -21,6 +23,7 @@ export declare namespace ICategoryBusiness {
         description?: null | string;
         icon?: null | string;
         metadata?: string | null;
+        active?: boolean;
         businessTypes?: null | IBusinessType.IBusinessTypeResponse[];
     }
 }
