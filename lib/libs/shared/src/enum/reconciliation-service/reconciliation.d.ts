@@ -19,9 +19,12 @@ export declare enum PAYMENT_TYPE {
     RECEIPT = "receipt"
 }
 export declare enum PAYMENT_RECONCILIATION_STATUS {
+    OPEN = "open",
     PROCESSING = "processing",
+    PROCEED = "proceed",
     SUCCESS = "success",
-    ERROR = "error"
+    ERROR = "error",
+    CANCEL = "cancel"
 }
 export declare enum PAYMENT_METHOD {
     CASH = "cash",

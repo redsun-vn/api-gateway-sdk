@@ -1,5 +1,13 @@
+import { tags } from 'typia';
+import { PAYMENT_RECONCILIATION_STATUS } from '../../enum';
 import { BaseResponse } from '../common.type';
 export declare namespace IPaymentReconciliation {
+    interface IAdminUpdate {
+        status?: string & (PAYMENT_RECONCILIATION_STATUS.PROCESSING | PAYMENT_RECONCILIATION_STATUS.PROCEED);
+    }
+    interface IShopUpdate {
+        bank_account_id?: number & tags.Type<'uint64'>;
+    }
     interface IResponse extends BaseResponse {
         code: string;
         shop_id: number | string;
