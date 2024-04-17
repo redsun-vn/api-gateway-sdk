@@ -15,4 +15,16 @@ export declare namespace IApiKey {
         active: boolean;
         shop?: IShop.IShopResponse;
     }
+    interface IAdminCreate {
+        name: string;
+    }
+    interface IAdminUpdate {
+        active?: boolean;
+        name?: string;
+    }
+    interface IAdminResponse extends BaseResponse {
+        apiKey: string;
+        name: string;
+        active: boolean;
+    }
 }
