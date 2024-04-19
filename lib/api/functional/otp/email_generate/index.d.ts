@@ -1,13 +1,13 @@
 import type { IConnection, Primitive } from "@nestia/fetcher";
-import type { IResponse } from "../../../../../libs/shared/src/types/common.type";
-import type { IAuth } from "../../../../../libs/shared/src/types/iauth";
-export declare function sendOTPSMS(connection: IConnection, input: sendOTPSMS.Input): Promise<sendOTPSMS.Output>;
-export declare namespace sendOTPSMS {
-    type Input = Primitive<IAuth.IOTPSMS>;
+import type { IResponse } from "../../../../libs/shared/src/types/common.type";
+import type { IAuth } from "../../../../libs/shared/src/types/iauth";
+export declare function sendOTPEmail(connection: IConnection, input: sendOTPEmail.Input): Promise<sendOTPEmail.Output>;
+export declare namespace sendOTPEmail {
+    type Input = Primitive<IAuth.IOTPEmail>;
     type Output = Primitive<IResponse<null | IAuth.IOTPResponse>>;
     const METADATA: {
         readonly method: "POST";
-        readonly path: "/auth/otp/phone-generate";
+        readonly path: "/otp/email-generate";
         readonly request: {
             readonly type: "application/json";
             readonly encrypted: false;
