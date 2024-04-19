@@ -21,4 +21,8 @@ export declare namespace INotification {
         email?: string;
         phone?: string;
     }
+    interface ITriggerPayloadOptions {
+        workflowIdentifier: string;
+        data: any;
+    }
 }

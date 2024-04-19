@@ -31,4 +31,25 @@ export declare namespace IAuth {
     interface IRefreshToken {
         refresh_token: string;
     }
+    interface IOTPSMS {
+        shop_id: string;
+        phone: string & tags.Pattern<'^(0[0-9]{2})?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$'>;
+    }
+    interface IOTPEmail {
+        shop_id: string;
+        email: string & tags.Format<'email'>;
+    }
+    interface IResetPassword {
+        shop_id: string;
+        user_id: string & tags.Format<'uuid'>;
+        type: 'phone' | 'email';
+        payload: string;
+        otp: string;
+        password: string;
+        confirmPassword: string;
+    }
+    interface IOTPResponse {
+        shop_id: string;
+        user_id: string & tags.Format<'uuid'>;
+    }
 }
