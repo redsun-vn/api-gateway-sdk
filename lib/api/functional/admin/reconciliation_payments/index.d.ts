@@ -1,5 +1,5 @@
 import type { IConnection, Primitive, Resolved } from "@nestia/fetcher";
-import type { IResponse, IQuery, IResponsePagination } from "../../../../libs/shared/src/types/common.type";
+import type { IQuery, IResponse, IResponsePagination } from "../../../../libs/shared/src/types/common.type";
 import type { IPaymentReconciliation } from "../../../../libs/shared/src/types/reconciliation-service/ipayment-reconciliation";
 export declare function detail(connection: IConnection, id: string): Promise<detail.Output>;
 export declare namespace detail {
@@ -35,13 +35,17 @@ export declare namespace update {
     };
     const path: (id: string) => string;
 }
-export declare function cancel(connection: IConnection, id: string): Promise<cancel.Output>;
+export declare function cancel(connection: IConnection, id: string, data: cancel.Input): Promise<cancel.Output>;
 export declare namespace cancel {
+    type Input = Primitive<IPaymentReconciliation.IAdminCancel>;
     type Output = Primitive<IResponse<false | true>>;
     const METADATA: {
         readonly method: "PUT";
         readonly path: "/admin/reconciliation-payments/:id/cancel";
-        readonly request: null;
+        readonly request: {
+            readonly type: "application/json";
+            readonly encrypted: false;
+        };
         readonly response: {
             readonly type: "application/json";
             readonly encrypted: false;

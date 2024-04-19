@@ -5,6 +5,9 @@ export declare namespace IPaymentReconciliation {
     interface IAdminUpdate {
         status?: string & (PAYMENT_RECONCILIATION_STATUS.PROCESSING | PAYMENT_RECONCILIATION_STATUS.PROCEED);
     }
+    interface IAdminCancel {
+        cancelReason: string;
+    }
     interface IShopUpdate {
         bank_account_id?: number & tags.Type<'uint64'>;
     }
