@@ -1,4 +1,5 @@
 export * as auth from "./auth";
+export * as comments from "./comments";
 export * as business_types from "./business_types";
 export * as category_business from "./category_business";
 export * as packages from "./packages";
