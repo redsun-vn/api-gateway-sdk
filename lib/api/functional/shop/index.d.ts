@@ -53,4 +53,5 @@ export * as reconciliations from "./reconciliations";
 export * as reconciliation_transactions from "./reconciliation_transactions";
 export * as report from "./report";
 export * as payment from "./payment";
+export * as payment_links from "./payment_links";
 export * as payments from "./payments";
