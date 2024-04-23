@@ -31,3 +31,7 @@ export declare enum PAYMENT_METHOD {
     TRANSFER = "transfer",
     OTHER = "other"
 }
+export declare enum ORDER_RECONCILIATION_ENUM {
+    WAITING = "waiting",
+    CHECKED = "checked"
+}
