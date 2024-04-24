@@ -1,6 +1,7 @@
 import type { IConnection, Primitive } from "@nestia/fetcher";
 import type { IResponse } from "../../../../libs/shared/src/types/common.type";
 import type { IPaymentLink } from "../../../../libs/shared/src/types/payment-service/ipayment-link.type";
+export * as order from "./order";
 export declare function $delete(connection: IConnection, id: string): Promise<$delete.Output>;
 export declare namespace $delete {
     type Output = Primitive<IResponse<false | true>>;
@@ -34,23 +35,4 @@ export declare namespace create {
         readonly status: null;
     };
     const path: () => string;
-}
-export declare function update(connection: IConnection, data: update.Input, id: string): Promise<update.Output>;
-export declare namespace update {
-    type Input = Primitive<IPaymentLink.IPaymentLinkUpdate>;
-    type Output = Primitive<IResponse<IPaymentLink.IPaymentLinkResponse>>;
-    const METADATA: {
-        readonly method: "PUT";
-        readonly path: "/shop/payment-links/:id";
-        readonly request: {
-            readonly type: "application/json";
-            readonly encrypted: false;
-        };
-        readonly response: {
-            readonly type: "application/json";
-            readonly encrypted: false;
-        };
-        readonly status: null;
-    };
-    const path: (id: string) => string;
 }
