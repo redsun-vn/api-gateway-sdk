@@ -1,5 +1,13 @@
 import { IFulfillmentOrder } from './ifulfillment-order';
 export declare namespace IFulfillment {
+    interface IFulfillmentUpdate {
+        cod?: number;
+        chargePrice?: number;
+        status?: string;
+        shippingStatus?: string;
+        note?: string;
+        trackingUrl?: string;
+    }
     interface IFulfillmentResponse {
         id: number | string;
         status: string;

@@ -33,6 +33,25 @@ export declare namespace detail {
     };
     const path: (id: string) => string;
 }
+export declare function update(connection: IConnection, id: string, data: update.Input): Promise<update.Output>;
+export declare namespace update {
+    type Input = Primitive<IFulfillment.IUpdateCod>;
+    type Output = Primitive<IResponse<IFulfillment.IFulfillmentResponse>>;
+    const METADATA: {
+        readonly method: "PUT";
+        readonly path: "/shop/fulfillments/:id";
+        readonly request: {
+            readonly type: "application/json";
+            readonly encrypted: false;
+        };
+        readonly response: {
+            readonly type: "application/json";
+            readonly encrypted: false;
+        };
+        readonly status: null;
+    };
+    const path: (id: string) => string;
+}
 export declare function cancel(connection: IConnection, id: string): Promise<cancel.Output>;
 export declare namespace cancel {
     type Output = Primitive<IResponse<IFulfillment.IFulfillmentResponse>>;
