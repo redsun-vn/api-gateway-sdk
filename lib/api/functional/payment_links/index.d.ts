@@ -16,3 +16,18 @@ export declare namespace findOne {
     };
     const path: (code: string) => string;
 }
+export declare function updatePayment(connection: IConnection, code: string): Promise<updatePayment.Output>;
+export declare namespace updatePayment {
+    type Output = Primitive<IResponse<IPaymentLink.IUpdatePaymentResponse>>;
+    const METADATA: {
+        readonly method: "PUT";
+        readonly path: "/payment-links/:code";
+        readonly request: null;
+        readonly response: {
+            readonly type: "application/json";
+            readonly encrypted: false;
+        };
+        readonly status: null;
+    };
+    const path: (code: string) => string;
+}

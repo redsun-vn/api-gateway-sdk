@@ -6,6 +6,7 @@ export declare namespace IAuth {
         password: string;
         deviceId: string;
         deviceInfo: string;
+        ip?: string;
     }
     interface ICreateUser {
         username: string & tags.MinLength<3> & tags.MaxLength<50>;

@@ -1,9 +1,8 @@
-import { tags } from 'typia';
 import { BaseResponse } from './common.type';
 export declare namespace ISalesChannel {
     interface ICreate {
         name: string;
-        code_prefix?: string & tags.MinLength<2> & tags.MaxLength<2>;
+        code: string;
         active?: boolean;
         description?: string;
         icon?: string;
@@ -11,8 +10,7 @@ export declare namespace ISalesChannel {
         warehouse_id?: number;
         metadata?: string;
     }
-    interface IUpdate extends Omit<Partial<ICreate>, 'code_prefix'> {
-    }
+    type IUpdate = Omit<Partial<ICreate>, 'code'>;
     interface ISalesChannelResponse extends BaseResponse {
         name?: string;
         code?: string;

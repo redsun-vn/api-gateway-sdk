@@ -1,17 +1,15 @@
-import { tags } from 'typia';
 import { BaseResponse } from './common.type';
 export declare namespace IShippingMethod {
     interface ICreate {
         name: string;
-        code_prefix?: string & tags.MinLength<2> & tags.MaxLength<2>;
+        code: string;
         active?: boolean;
         description?: string;
         icon?: string;
         attachment_id?: number;
         metadata?: string;
     }
-    interface IUpdate extends Partial<ICreate> {
-    }
+    type IUpdate = Omit<Partial<ICreate>, 'code'>;
     interface IShippingMethodResponse extends BaseResponse {
         name: string;
         code: string;

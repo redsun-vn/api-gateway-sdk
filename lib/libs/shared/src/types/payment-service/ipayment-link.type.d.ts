@@ -15,6 +15,9 @@ export declare namespace IPaymentLink {
         expiredAt?: string;
         bank_account_id?: number & tags.Type<'uint64'>;
     }
+    interface IUpdatePaymentResponse {
+        paymentCode: string;
+    }
     interface IPaymentLinkResponse extends BaseResponse {
         shop_id: number | string;
         order_id: number | string;
