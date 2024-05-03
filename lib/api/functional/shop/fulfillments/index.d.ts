@@ -35,7 +35,7 @@ export declare namespace detail {
 }
 export declare function update(connection: IConnection, id: string, data: update.Input): Promise<update.Output>;
 export declare namespace update {
-    type Input = Primitive<IFulfillment.IUpdateCod>;
+    type Input = Primitive<IFulfillment.IFulfillmentUpdate>;
     type Output = Primitive<IResponse<IFulfillment.IFulfillmentResponse>>;
     const METADATA: {
         readonly method: "PUT";
