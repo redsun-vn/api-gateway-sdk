@@ -7,7 +7,7 @@ import { IGroup } from './igroup';
 import { IBranch } from './ibranch';
 export declare namespace IStaff {
     interface ICreate extends IStaffProfile.ICreate {
-        password: string & tags.MinLength<3>;
+        password: string & tags.MinLength<6>;
         permission?: string[];
         groups?: string[];
         prefix_code?: string;
@@ -32,6 +32,12 @@ export declare namespace IStaff {
     }
     interface IResetPassword {
         password: string;
+    }
+    interface IUpdatePassword {
+        password: string & tags.MinLength<6>;
+        newPassword: string & tags.MinLength<6>;
+        confirmPassword: string & tags.MinLength<6>;
+        username: string;
     }
     interface IUpdate extends IStaffProfile.IUpdate {
         password?: string & tags.MinLength<3>;

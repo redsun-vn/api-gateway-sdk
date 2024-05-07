@@ -3,7 +3,7 @@ export declare namespace ISchedule {
     interface IScheduleResponse {
         _id: string;
         target: TaskTarget;
-        sequenece: number;
+        sequence: number;
         success: number;
         failure: number;
         retry: number;

@@ -8,9 +8,14 @@ export declare namespace IAuth {
         deviceInfo: string;
         ip?: string;
     }
+    interface IValidPassword {
+        shopId: string;
+        username: string & tags.MinLength<3> & tags.MaxLength<50>;
+        password: string;
+    }
     interface ICreateUser {
         username: string & tags.MinLength<3> & tags.MaxLength<50>;
-        password: string & tags.MinLength<3>;
+        password: string & tags.MinLength<6>;
         deviceId: string;
         deviceInfo: string;
         branch_id: number & tags.Type<'uint64'>;
