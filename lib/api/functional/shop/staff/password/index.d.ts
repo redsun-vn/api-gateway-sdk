@@ -7,7 +7,7 @@ export declare namespace updatePwd {
     type Output = Primitive<IResponse<false | true>>;
     const METADATA: {
         readonly method: "PUT";
-        readonly path: "/shop/staffs/password";
+        readonly path: "/shop/staff/password";
         readonly request: {
             readonly type: "application/json";
             readonly encrypted: false;
