@@ -8,3 +8,4 @@ export * from './iadditional-fee.type';
 export * from './itable-reservation.type';
 export * from './icombining-promotion.type';
 export * from './iline-item-selection-group.type';
+export * from './ikds-item.type';

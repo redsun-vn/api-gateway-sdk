@@ -122,3 +122,13 @@ export declare enum TransactionFeeType {
     VERIFY = "verify",
     CHANGE = "change"
 }
+export declare enum KDSState {
+    NONE = "none",
+    NEW = "new",
+    PENDING = "pending",
+    PROCESSING = "processing",
+    COMPLETED = "completed",
+    CANCELED = "canceled",
+    RECALLED = "recalled",
+    RETURNED = "returned"
+}
