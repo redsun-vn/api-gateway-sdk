@@ -5,6 +5,7 @@ export declare namespace IReportOrderItem {
         count: number;
         variant_id: number | string;
         shop_id: number | string;
+        branch_id: number | string;
         from_date?: string;
         to_date?: string;
     }
@@ -14,5 +15,6 @@ export declare namespace IReportOrderItem {
         month: number;
         year: number;
         staff_id: number | string;
+        branch_id: number | string;
     }
 }

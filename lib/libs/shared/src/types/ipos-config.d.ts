@@ -7,6 +7,10 @@ export declare namespace IPosConfig {
         total = "total",
         subtotal = "subtotal"
     }
+    enum POSMethodOfOperation {
+        PAIDFIRST = "paid_first",
+        PREPARATIONFIRST = "preparation_first"
+    }
     interface ICreate {
         branch_id: number & tags.Type<'int32'>;
         printer_id?: number & tags.Type<'int32'>;
@@ -40,6 +44,7 @@ export declare namespace IPosConfig {
         available_collections_ids?: string[];
         available_floor_ids?: string[];
         available_payment_method_ids?: string[];
+        methodOfOperation?: POSMethodOfOperation;
     }
     interface IUpdate extends Omit<Partial<ICreate>, 'shop_id' | 'branch_id'> {
     }
@@ -77,5 +82,6 @@ export declare namespace IPosConfig {
         available_collections_ids?: null | string[];
         available_floor_ids?: null | string[];
         availablePaymentMethods?: null | IPaymentMethod.IPaymentMethodResponse[];
+        methodOfOperation?: POSMethodOfOperation;
     }
 }
