@@ -10,11 +10,18 @@ export declare namespace IReportOrderItem {
         to_date?: string;
     }
     interface IStaffBestSelling {
-        total_order: number;
-        total_revenue: number;
-        month: number;
-        year: number;
+        _id: string;
         staff_id: number | string;
         branch_id: number | string;
+        shop_id: number | string;
+        sale_channel_id: number | string;
+        totalRevenue: number;
+        totalProfit: number;
+        totalOrder: number;
+        day?: number;
+        week?: number;
+        month?: number;
+        quarter?: number;
+        year?: number;
     }
 }
