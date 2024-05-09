@@ -1,13 +1,18 @@
 export declare namespace IReportOrderItem {
     interface IProductBestSelling {
-        total_quantity: number;
-        revenue: number;
-        count: number;
         variant_id: number | string;
-        shop_id: number | string;
+        totalQuantity: number;
+        totalRevenue: number;
+        totalOrder: number;
+        totalProfit: number;
         branch_id: number | string;
-        from_date?: string;
-        to_date?: string;
+        shop_id: number | string;
+        sale_channel_id: number | string;
+        day?: number;
+        week?: number;
+        month?: number;
+        quarter?: number;
+        year?: number;
     }
     interface IStaffBestSelling {
         _id: string;
