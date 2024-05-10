@@ -16,7 +16,6 @@ export declare namespace IReportOrderItem {
         date?: string;
     }
     interface IStaffBestSelling {
-        _id: string;
         staff_id: number | string;
         branch_id: number | string;
         shop_id: number | string;
