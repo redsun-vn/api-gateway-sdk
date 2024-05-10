@@ -13,6 +13,7 @@ export declare namespace IReportOrderItem {
         month?: number;
         quarter?: number;
         year?: number;
+        date?: string;
     }
     interface IStaffBestSelling {
         _id: string;
@@ -28,5 +29,6 @@ export declare namespace IReportOrderItem {
         month?: number;
         quarter?: number;
         year?: number;
+        date?: string;
     }
 }

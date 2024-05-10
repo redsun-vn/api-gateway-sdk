@@ -1,4 +1,4 @@
-import type { IConnection, Resolved, Primitive } from "@nestia/fetcher";
+import type { IConnection, Primitive, Resolved } from "@nestia/fetcher";
 import type { IQuery, IResponse } from "../../../../../libs/shared/src/types/common.type";
 import type { IReportOrderItem } from "../../../../../libs/shared/src/types/report-service/iorder-items.type";
 export declare function productBestSelling(connection: IConnection, query: productBestSelling.Query): Promise<productBestSelling.Output>;
