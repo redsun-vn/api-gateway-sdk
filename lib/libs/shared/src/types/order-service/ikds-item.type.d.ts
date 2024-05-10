@@ -11,6 +11,7 @@ export declare namespace IKDSItem {
         variant_id: number & tags.Type<'uint64'>;
         table_id?: number & tags.Type<'uint64'>;
         uom_uom_id?: number & tags.Type<'uint64'>;
+        order_code?: string;
         order_uuid?: string & tags.Format<'uuid'>;
         line_item_uuid?: string & tags.Format<'uuid'>;
         uuid?: string | null;
@@ -38,6 +39,7 @@ export declare namespace IKDSItem {
         variant_id: number | string;
         table_id?: number | string | null;
         uom_uom_id?: number | string | null;
+        order_code?: string | null;
         order_uuid?: string | null;
         line_item_uuid?: string | null;
         uuid?: string | null;

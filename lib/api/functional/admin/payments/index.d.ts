@@ -1,4 +1,4 @@
-import type { IConnection, Primitive, Resolved } from "@nestia/fetcher";
+import type { IConnection, Resolved, Primitive } from "@nestia/fetcher";
 import type { IQuery, IResponse, IResponsePagination } from "../../../../libs/shared/src/types/common.type";
 import type { IPayment } from "../../../../libs/shared/src/types/payment-service/ipayment.type";
 export * as code from "./code";

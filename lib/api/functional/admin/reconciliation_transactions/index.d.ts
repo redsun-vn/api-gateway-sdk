@@ -1,5 +1,5 @@
 import type { IConnection, Primitive, Resolved } from "@nestia/fetcher";
-import type { IQuery, IResponse, IResponsePagination } from "../../../../libs/shared/src/types/common.type";
+import type { IResponse, IQuery, IResponsePagination } from "../../../../libs/shared/src/types/common.type";
 import type { ITransactionReconService } from "../../../../libs/shared/src/types/reconciliation-service/itransaction";
 export declare function detail(connection: IConnection, id: string): Promise<detail.Output>;
 export declare namespace detail {
