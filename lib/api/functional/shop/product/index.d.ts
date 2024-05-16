@@ -3,6 +3,8 @@ export * as collections from "./collections";
 export * as collection from "./collection";
 export * as product_images from "./product_images";
 export * as product_options from "./product_options";
+export * as $import from "./$import";
+export * as template from "./template";
 export * as selection_groups from "./selection_groups";
 export * as selections from "./selections";
 export * as units from "./units";

@@ -37,6 +37,19 @@ export declare namespace IFile {
         user_id: string;
         shop_id: number | null;
     }
+    interface IUploadAdmin {
+        fileUpload: Express.Multer.File;
+        title: string;
+        mime: string;
+        ext: string;
+        path: string;
+        size: string | number;
+        user_id: string;
+        alt: string | null;
+    }
+    interface IUploadAdminToService extends Omit<IUploadAdmin, 'fileUpload'> {
+        buffer: ArrayBuffer;
+    }
     interface IUploadToService extends IFile.IBase {
         parent_id?: string | number | null;
         buffer: ArrayBuffer;
