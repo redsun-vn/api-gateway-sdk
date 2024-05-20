@@ -3,6 +3,7 @@ import { BaseResponse } from '../common.type';
 import { IStockQuantity } from '../inventory-service';
 import { IProduct } from './iproduct';
 import { IUnit } from './iunit';
+import { IProductOption } from './iproduct-option';
 export declare namespace IVariant {
     interface IVariantStockInput {
         stock_location_id: number & tags.Type<'uint64'>;
@@ -43,7 +44,8 @@ export declare namespace IVariant {
         weight?: number;
         expiredAt?: string & tags.Format<'date-time'>;
         userId?: string;
-        unit: IRefCreateUnit;
+        unit?: IRefCreateUnit;
+        selectedOptionIds?: number[];
         variantStocks?: IVariantStockInput[];
     }
     interface ICreateVariant extends IReqCreateVariant {
@@ -67,6 +69,7 @@ export declare namespace IVariant {
         weight?: number;
         expiredAt?: string & tags.Format<'date-time'>;
         userId?: string;
+        selectedOptionIds?: number[];
         variantStocks?: IVariantStockInput[];
     }
     interface IVariantResponse extends BaseResponse {
@@ -93,6 +96,7 @@ export declare namespace IVariant {
         updatedBy?: string | undefined | null;
         unit?: IUnit.IDetailUnitResponse | null;
         variantStocks?: IStockQuantity.IStockQuantityResponse[] | null;
+        selectedOptions?: IProductOption.IDetailProductOptionResponse[] | null;
         product?: IProduct.IProductResponse | null;
     }
     interface IDeleteVariant {
