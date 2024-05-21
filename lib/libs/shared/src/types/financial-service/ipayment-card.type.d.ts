@@ -45,7 +45,7 @@ export declare namespace IPaymentCard {
         amount: number | string;
         currency: string;
         taxNumber: number | string;
-        taxCode: string;
+        taxCode?: string | null;
         archivedDate?: string | null;
     }
 }
