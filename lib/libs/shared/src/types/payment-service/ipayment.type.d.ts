@@ -37,6 +37,7 @@ export declare namespace IPayment {
     }
     interface IPaymentResponse extends BaseResponse {
         shop_id: number | string | null;
+        branch_id: number | string | null;
         partner_id?: number | string | null;
         staff_id?: number | string | null;
         payment_method_id: number | string | null;
