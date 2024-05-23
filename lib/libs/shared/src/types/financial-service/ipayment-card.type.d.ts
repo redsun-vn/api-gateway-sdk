@@ -48,4 +48,22 @@ export declare namespace IPaymentCard {
         taxCode?: string | null;
         archivedDate?: string | null;
     }
+    interface IResponseReport {
+        shop_id: number;
+        branch_id?: number | string;
+        category_card_id?: number | string;
+        payment_method_id?: number | string;
+        staff_id?: number | string;
+        partner_id?: number | string;
+        totalAmount: number;
+        type?: string;
+        target?: string;
+        currency?: string;
+        day?: number;
+        week?: number;
+        month?: number;
+        quarter?: number;
+        year?: number;
+        date?: string;
+    }
 }
