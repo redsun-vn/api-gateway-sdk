@@ -7,6 +7,7 @@ export declare namespace ICombiningPromotion {
     interface ICreateCombiningPromotion {
         shop_id?: number & tags.Type<'uint64'>;
         program_id?: number & tags.Type<'uint64'>;
+        coupon_id?: number & tags.Type<'uint64'>;
         order_id?: number & tags.Type<'uint64'>;
         draf_order_id?: number & tags.Type<'uint64'>;
         line_item_id?: number & tags.Type<'uint64'>;
@@ -25,9 +26,12 @@ export declare namespace ICombiningPromotion {
     interface IDetailCombiningPromotionResponse extends BaseResponse {
         shop_id: number | string | null;
         order_id?: number | string | null;
+        coupon_id?: number | string | null;
         program_id?: number | string | null;
         draf_order_id?: number | string | null;
         line_item_id?: number | string | null;
+        variant_x_id?: number | string | null;
+        variant_y_id?: number | string | null;
         uuid?: string;
         description?: string;
         discountCode?: string;

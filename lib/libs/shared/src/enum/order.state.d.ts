@@ -9,7 +9,8 @@ export declare enum OrderCombiningPromotionType {
     LINE_ITEM_AMOUNT = "line_item_amount",
     SERVICE_AMOUNT = "service_amount",
     FREE_SHIPPING = "free_shipping",
-    BUY_X_GET_Y = "buy_x_get_y"
+    BUY_X_GET_Y = "buy_x_get_y",
+    NEXT_ORDER = "next_order"
 }
 export declare enum CombiningPromotionStatus {
     OPEN = "open",
