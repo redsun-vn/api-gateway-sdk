@@ -8,10 +8,12 @@ export declare namespace ICategoryCard {
         description?: string;
     }
     interface IUpdate {
+        name?: string;
         active?: boolean;
         description?: string;
     }
     interface IResponse extends BaseResponse {
+        type: string;
         shop_id: number | string;
         active: boolean;
         code: string;
