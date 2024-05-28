@@ -55,3 +55,5 @@ export * as report from "./report";
 export * as payment from "./payment";
 export * as payment_links from "./payment_links";
 export * as payments from "./payments";
+export * as category_cards from "./category_cards";
+export * as payment_cards from "./payment_cards";
