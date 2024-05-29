@@ -18,13 +18,9 @@ export declare namespace IPaymentCard {
         amount: number;
         currency?: string;
         taxNumber?: number;
+        archivedDate?: string;
     }
-    interface IUpdate {
-        status?: string & PAYMENT_CARD_STATUS;
-        amount?: number;
-        taxNumber?: number;
-        note?: string;
-        referenceCode?: string;
+    interface IUpdate extends Partial<ICreate> {
     }
     interface IResponse extends BaseResponse {
         active: boolean;
