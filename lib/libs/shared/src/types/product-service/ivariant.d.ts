@@ -71,9 +71,10 @@ export declare namespace IVariant {
         userId?: string;
         selectedOptionIds?: number[];
         variantStocks?: IVariantStockInput[];
+        unit?: IRefCreateUnit;
     }
     interface IVariantResponse extends BaseResponse {
-        name: string;
+        name?: string | null;
         shop_id: number | string | null;
         image_id: number | string | null;
         product_id: number | string | null;

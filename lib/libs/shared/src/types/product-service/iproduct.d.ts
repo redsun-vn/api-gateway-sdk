@@ -95,7 +95,7 @@ export declare namespace IProduct {
         partner_id?: string | number | null;
         barcode?: string;
         sku?: string;
-        name: string;
+        name?: string | null;
         active: boolean;
         needToCook?: boolean;
         type: string;

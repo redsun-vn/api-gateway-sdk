@@ -22,6 +22,7 @@ export declare namespace ICategory {
         description?: string | null;
         htmlContent?: string | null;
         userId?: string | null;
+        parent_id?: number & tags.Type<'uint64'>;
     }
     interface IDetailResponse extends BaseResponse {
         shop_id: string | number | null;

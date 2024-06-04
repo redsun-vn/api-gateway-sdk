@@ -36,6 +36,7 @@ export interface ISearchOptions {
     sort?: ISorting;
     filter?: IFiltering;
     filters?: IFilteringMultiple;
+    groupBy?: string;
     search?: ISearch;
     shopId?: string;
 }
@@ -107,6 +108,7 @@ export interface IQuery {
     limit?: number;
     filter?: string;
     filters?: string;
+    groupBy?: string;
     search?: string;
     sort?: string;
 }
