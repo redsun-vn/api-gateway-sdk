@@ -30,6 +30,7 @@ export * as payment_configs from "./payment_configs";
 export * as pos_configs from "./pos_configs";
 export * as pos_printers from "./pos_printers";
 export * as pos_sessions from "./pos_sessions";
+export * as print_template from "./print_template";
 export * as staff from "./staff";
 export * as sales_channel_configs from "./sales_channel_configs";
 export * as shipping_configs from "./shipping_configs";

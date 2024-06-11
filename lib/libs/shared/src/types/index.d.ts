@@ -52,3 +52,4 @@ export * from './webhook';
 export * from './iapi-key.type';
 export * from './admin-service';
 export * from './financial-service';
+export * from './shop-service';

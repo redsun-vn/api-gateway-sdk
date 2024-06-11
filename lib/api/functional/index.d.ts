@@ -6,6 +6,7 @@ export * as shop from "./shop";
 export * as orders from "./orders";
 export * as business_types from "./business_types";
 export * as category_business from "./category_business";
+export * as category_print_template from "./category_print_template";
 export * as packages from "./packages";
 export * as payment_methods from "./payment_methods";
 export * as sales_channels from "./sales_channels";

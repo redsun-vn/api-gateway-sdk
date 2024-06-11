@@ -112,3 +112,6 @@ export interface IQuery {
     search?: string;
     sort?: string;
 }
+export interface IHealthCheck {
+    [key: string]: boolean;
+}
