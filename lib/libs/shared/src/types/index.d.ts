@@ -53,3 +53,4 @@ export * from './iapi-key.type';
 export * from './admin-service';
 export * from './financial-service';
 export * from './shop-service';
+export * from './ielastic-search.type';
