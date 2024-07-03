@@ -25,6 +25,8 @@ export declare namespace IShopConfig {
         timeClose?: string & tags.Pattern<'^(?:[01]?[0-9]|2[0-3]):[0-5]?[0-9](?::[0-5]?[0-9])?$'>;
         dateStart?: string & tags.Format<'date'>;
         dateEnd?: string & tags.Format<'date'>;
+        inventoryEnabled?: boolean;
+        shippingEnabled?: boolean;
     }
     interface IUpdate extends Partial<ICreate> {
     }
@@ -53,5 +55,7 @@ export declare namespace IShopConfig {
         dateEnd?: string | null;
         available_price_book_ids?: string[] | null;
         default_price_book_id?: number | string | null;
+        inventoryEnabled?: boolean;
+        shippingEnabled?: boolean;
     }
 }
