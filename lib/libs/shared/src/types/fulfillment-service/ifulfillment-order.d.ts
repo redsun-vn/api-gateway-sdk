@@ -37,6 +37,7 @@ export declare namespace IFulfillmentOrder {
         length: number;
         width: number;
         height: number;
+        shift_id?: number | string;
     }
     interface IUpdateFulfillmentOrder {
         status?: string & FULFILLMENT_ORDER_STATUS;
