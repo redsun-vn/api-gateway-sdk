@@ -44,6 +44,7 @@ export declare namespace IProduct {
         icon?: string;
         description?: string;
         userId?: string;
+        isManageInventory?: boolean;
     }
     interface ICreateProduct extends IReqCreateProduct {
         shop_id: number & tags.Type<'uint64'>;
@@ -70,6 +71,7 @@ export declare namespace IProduct {
         icon?: string;
         description?: string;
         userId?: string;
+        isManageInventory?: boolean;
     }
     interface ITagReponse {
         id: string | number | null;
@@ -98,6 +100,7 @@ export declare namespace IProduct {
         name?: string | null;
         active: boolean;
         needToCook?: boolean;
+        isManageInventory?: boolean;
         type: string;
         icon?: string | null;
         lowLimit?: number | string | null;
