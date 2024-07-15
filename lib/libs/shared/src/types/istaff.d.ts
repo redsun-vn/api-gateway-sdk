@@ -14,8 +14,12 @@ export declare namespace IStaff {
         branches?: string[];
         active?: boolean;
     }
+    interface ICreateRegister {
+        password: string & tags.MinLength<6>;
+        phone: string;
+    }
     interface IStaffResponse extends BaseResponse, BaseProfileResponse {
-        shop_id: string;
+        shop_id: string | null;
         user_id: string;
         profile: IStaffProfile.IStaffProfileResponse | null;
         code: string;
@@ -25,6 +29,11 @@ export declare namespace IStaff {
         devices?: null | IUserDevice.IUserDeviceResponse[];
         sessions?: null | IPosSession.IPosSessionResponse[];
         branches?: null | IBranch.IBranchResponse[];
+    }
+    interface IRegisterResponse extends BaseResponse {
+        user_id: string;
+        code: string;
+        active: boolean;
     }
     interface IUser {
         user_id?: string;

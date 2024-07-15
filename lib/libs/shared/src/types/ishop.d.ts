@@ -12,7 +12,8 @@ import { tags } from 'typia';
 export declare namespace IShop {
     interface ICreate extends BaseProfile {
         name: string & tags.MinLength<5>;
-        password: string & tags.MinLength<6>;
+        shopOwnerId: string;
+        business_type_id?: string;
     }
     interface IUpdate extends BaseProfile {
         active?: boolean;
