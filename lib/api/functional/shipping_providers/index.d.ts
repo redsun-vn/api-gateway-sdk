@@ -22,7 +22,7 @@ export declare namespace schedule {
 }
 export declare function detail(connection: IConnection, shippingCode: string, orderCode: string): Promise<detail.Output>;
 export declare namespace detail {
-    type Output = Primitive<IResponse<IGhnDto.IOrderInfo>>;
+    type Output = Primitive<IResponse<any>>;
     const METADATA: {
         readonly method: "GET";
         readonly path: "/shipping-providers/:shippingCode/detail/:orderCode";

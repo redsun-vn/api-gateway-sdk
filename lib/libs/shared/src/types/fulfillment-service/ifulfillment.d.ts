@@ -13,7 +13,7 @@ export declare namespace IFulfillment {
         status: string;
         fulfillment_order_uuid?: string;
         orderCode?: string;
-        trackingUrl?: string;
+        trackingUrl?: string | null;
         chargePrice?: number | string | null;
         order_uuid: string;
         shop_id: number | string;
