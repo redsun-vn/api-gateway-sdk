@@ -3,3 +3,4 @@ export * from './ifulfillment-line-item';
 export * from './ifulfillment';
 export * from './ishipping-provider';
 export * from './ighn';
+export * from './ivnpost.type';
