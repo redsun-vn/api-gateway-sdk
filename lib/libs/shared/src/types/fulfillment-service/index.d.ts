@@ -4,3 +4,4 @@ export * from './ifulfillment';
 export * from './ishipping-provider';
 export * from './ighn';
 export * from './ivnpost.type';
+export * from './ishop-shipping-config.type';

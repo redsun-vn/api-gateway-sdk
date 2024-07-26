@@ -1,13 +1,12 @@
 import type { IConnection, Primitive } from "@nestia/fetcher";
 import type { IResponse } from "../../../libs/shared/src/types/common.type";
-import type { IGhnDto } from "../../../libs/shared/src/types/fulfillment-service/ighn";
 export * as order_fee from "./order_fee";
 export * as provinces from "./provinces";
 export * as districts from "./districts";
 export * as wards from "./wards";
 export declare function schedule(connection: IConnection, shippingCode: string): Promise<schedule.Output>;
 export declare namespace schedule {
-    type Output = Primitive<IResponse<Array<IGhnDto.IShiftSchedule>>>;
+    type Output = Primitive<IResponse<Array<any>>>;
     const METADATA: {
         readonly method: "GET";
         readonly path: "/shipping-providers/:shippingCode/schedule";
