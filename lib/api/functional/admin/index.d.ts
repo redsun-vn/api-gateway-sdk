@@ -20,4 +20,5 @@ export * as health_check from "./health_check";
 export * as api_keys from "./api_keys";
 export * as global_configs from "./global_configs";
 export * as groups from "./groups";
+export * as notify from "./notify";
 export * as users from "./users";
