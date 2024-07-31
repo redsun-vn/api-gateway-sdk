@@ -27,6 +27,7 @@ export declare namespace IShopConfig {
         dateEnd?: string & tags.Format<'date'>;
         inventoryEnabled?: boolean;
         shippingEnabled?: boolean;
+        orderAdvancedEnabled?: boolean;
         lockScreenEnabled?: boolean;
         lockScreenTimeout?: number & tags.Type<'int32'>;
     }
@@ -59,6 +60,7 @@ export declare namespace IShopConfig {
         default_price_book_id?: number | string | null;
         inventoryEnabled?: boolean;
         shippingEnabled?: boolean;
+        orderAdvancedEnabled?: boolean;
         lockScreenEnabled?: boolean;
         lockScreenTimeout?: number | string | null;
     }
