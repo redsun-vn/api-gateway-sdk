@@ -13,6 +13,7 @@ export declare namespace IDrafOrder {
         price_book_id?: number & tags.Type<'uint64'>;
         billing_address_id?: number & tags.Type<'uint64'>;
         shipping_address_id?: number & tags.Type<'uint64'>;
+        shipping_method_id?: number & tags.Type<'uint64'>;
         order_id?: (number & tags.Type<'uint64'>) | null;
         partner_id?: string & tags.Format<'uuid'>;
         currencyCode?: string;
@@ -47,6 +48,7 @@ export declare namespace IDrafOrder {
         price_book_id?: string | number | null;
         billing_address_id?: string | number | null;
         shipping_address_id?: string | number | null;
+        shipping_method_id?: string | number | null;
         partner_id?: string | null;
         order_id?: string | number | null;
         uuid?: string | number | null;

@@ -15,6 +15,7 @@ export declare namespace IOrder {
         price_book_id?: number & tags.Type<'uint64'>;
         billing_address_id?: number & tags.Type<'uint64'>;
         shipping_address_id?: number & tags.Type<'uint64'>;
+        shipping_method_id?: number & tags.Type<'uint64'>;
         draf_order_id?: number & tags.Type<'uint64'>;
         partner_id?: string & tags.Format<'uuid'>;
         warehouse_id: number & tags.Type<'uint64'>;
@@ -80,6 +81,7 @@ export declare namespace IOrder {
         price_book_id?: number | string | null;
         billing_address_id?: number | string | null;
         shipping_address_id?: number | string | null;
+        shipping_method_id?: string | number | null;
         draf_order_id?: number | string | null;
         partner_id?: null | number | string;
         warehouse_id?: null | number | string;
