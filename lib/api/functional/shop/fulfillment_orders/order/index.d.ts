@@ -1,8 +1,8 @@
 import type { IConnection, Primitive } from "@nestia/fetcher";
 import type { IResponse } from "../../../../../libs/shared/src/types/common.type";
 import type { IFulfillmentOrder } from "../../../../../libs/shared/src/types/fulfillment-service/ifulfillment-order";
-export declare function getByOrderCode(connection: IConnection, orderId: string): Promise<getByOrderCode.Output>;
-export declare namespace getByOrderCode {
+export declare function getByOrderId(connection: IConnection, orderId: string): Promise<getByOrderId.Output>;
+export declare namespace getByOrderId {
     type Output = Primitive<IResponse<Array<IFulfillmentOrder.IFulfillmentOrderResponse>>>;
     const METADATA: {
         readonly method: "GET";
