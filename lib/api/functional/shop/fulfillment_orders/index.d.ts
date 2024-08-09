@@ -3,6 +3,7 @@ import type { IResponse, IQuery, IResponsePagination } from "../../../../libs/sh
 import type { IFulfillmentOrder } from "../../../../libs/shared/src/types/fulfillment-service/ifulfillment-order";
 export * as request from "./request";
 export * as item from "./item";
+export * as order from "./order";
 export declare function create(connection: IConnection, data: create.Input): Promise<create.Output>;
 export declare namespace create {
     type Input = Primitive<IFulfillmentOrder.ICreateFulfillmentOrder>;

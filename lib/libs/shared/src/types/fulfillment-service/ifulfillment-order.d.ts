@@ -1,6 +1,7 @@
 import { tags } from 'typia';
 import { IFulfillmentOrderItem } from './ifulfillment-line-item';
 import { FULFILLMENT_ORDER_STATUS, FULFILLMENT_REQUEST_STATUS, PAYMENT_TARGET, RECEIVE_METHOD } from '../../enum';
+import { IFulfillment } from './ifulfillment';
 export declare namespace IFulfillmentOrder {
     interface ICreateFulfillmentOrder {
         order_id: number & tags.Type<'uint64'>;
@@ -74,6 +75,7 @@ export declare namespace IFulfillmentOrder {
         length?: number;
         width?: number;
         height?: number;
+        fulfillment?: IFulfillment.IFulfillmentResponse;
         deletedAt: string | null;
         createdAt: string | null;
         updatedAt: string | null;

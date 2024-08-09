@@ -53,5 +53,6 @@ export declare namespace IAuth {
     }
     interface IOTPResponse {
         user_id: string & tags.Format<'uuid'>;
+        otp?: string;
     }
 }
