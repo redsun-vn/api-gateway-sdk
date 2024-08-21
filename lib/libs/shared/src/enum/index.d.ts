@@ -9,3 +9,4 @@ export * from './reconciliation-service';
 export * from './payment.state';
 export * from './report.state';
 export * from './financial-service';
+export * from './vnpay-qrcode';
