@@ -4,7 +4,7 @@ import type { IVNPayQRCode } from "../../../../../libs/shared/src/types/payment-
 export declare function createQRCode(connection: IConnection, data: createQRCode.Input): Promise<createQRCode.Output>;
 export declare namespace createQRCode {
     type Input = Primitive<IVNPayQRCode.ICreate>;
-    type Output = Primitive<IResponse<IVNPayQRCode.IServerResponse>>;
+    type Output = Primitive<IResponse<IVNPayQRCode.IQRCodeResponse>>;
     const METADATA: {
         readonly method: "POST";
         readonly path: "/shop/vnpay-qrcode/create";

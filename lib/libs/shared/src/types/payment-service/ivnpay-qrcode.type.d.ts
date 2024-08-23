@@ -56,6 +56,10 @@ export declare namespace IVNPayQRCode {
         url: string | null;
         checksum: string;
     }
+    interface IQRCodeResponse {
+        content: string;
+        message: string;
+    }
     interface IVerifyIPNRequest {
         shop_id: number | string;
         code: string;
