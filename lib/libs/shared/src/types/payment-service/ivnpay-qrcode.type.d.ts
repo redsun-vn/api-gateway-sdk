@@ -23,7 +23,7 @@ export declare namespace IVNPayQRCode {
         billNumber: string;
         amount: number;
         desc?: string;
-        expDate?: string;
+        expDate: string;
         consumerID?: string;
         productId?: string;
         txnId?: string;
@@ -57,7 +57,7 @@ export declare namespace IVNPayQRCode {
         checksum: string;
     }
     interface IVerifyIPNRequest {
-        shop_id: number & tags.Type<'uint64'>;
+        shop_id: number | string;
         code: string;
         message: string;
         msgType: string;
