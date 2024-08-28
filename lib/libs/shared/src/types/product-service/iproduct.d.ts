@@ -88,6 +88,29 @@ export declare namespace IProduct {
         name: string;
         [key: string]: string | string[] | boolean | number | undefined | null;
     }
+    enum ProductCopyOmit {
+        Category = "categories",
+        SaleChannel = "salesChannel",
+        ProductBrand = "product_brand_id",
+        Tax = "tax",
+        SelectionGroup = "selectionGroups",
+        Supllier = "partner_id",
+        Tag = "tags",
+        Variant = "variants",
+        VariantImage = "variantImage",
+        ProductImage = "productImage",
+        VariantStock = "variantStock",
+        Description = "description",
+        ProductPackage = "productPackage"
+    }
+    interface IProductCopyCondition {
+        name?: string;
+        active?: boolean;
+        needToCook?: boolean;
+        isManageInventory?: boolean;
+        userId?: string;
+        omit?: Array<ProductCopyOmit>;
+    }
     interface IProductResponse extends BaseResponse {
         tax_id?: string | number | null;
         shop_id: string | number | null;

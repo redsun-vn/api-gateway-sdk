@@ -28,6 +28,7 @@ export declare namespace ITableReservation {
         order_id?: number | string | null;
         table_id: number | string | null;
         reservation_id?: number | string | null;
+        uuid?: string | null;
         name?: string | null;
         peopleCount?: number | null;
         effectiveAt?: string | null;
