@@ -44,10 +44,12 @@ export declare namespace IVNPayQRCode {
     interface IResponse extends BaseResponse, IConfig {
         shop_id: number | string | null;
         payment_method_id: number | string | null;
+        merchantSecretKey: string | null;
     }
     interface IResponseWithoutSecret extends Omit<IResponse, 'secretKey'> {
         shop_id: number | string | null;
         payment_method_id: number | string | null;
+        merchantSecretKey: string | null;
     }
     interface IServerResponse {
         code: string;
