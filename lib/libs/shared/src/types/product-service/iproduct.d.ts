@@ -50,12 +50,12 @@ export declare namespace IProduct {
         shop_id: number & tags.Type<'uint64'>;
     }
     interface IUpdateProduct {
-        tax_id?: number & tags.Type<'uint64'>;
+        tax_id?: (number & tags.Type<'uint64'>) | null;
         shop_id?: number & tags.Type<'uint64'>;
-        product_brand_id?: number & tags.Type<'uint64'>;
-        manufacturer_id?: number & tags.Type<'uint64'>;
-        image_id?: number & tags.Type<'uint64'>;
-        partner_id?: number & tags.Type<'uint64'>;
+        product_brand_id?: (number & tags.Type<'uint64'>) | null;
+        manufacturer_id?: (number & tags.Type<'uint64'>) | null;
+        image_id?: (number & tags.Type<'uint64'>) | null;
+        partner_id?: (number & tags.Type<'uint64'>) | null;
         categoryIds?: number[];
         tagIds?: number[];
         productOptionIds?: number[];

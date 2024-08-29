@@ -9,3 +9,4 @@ export declare const SHIPPING_PROVIDER_CONFIG_KEY: {
     GHN: string[];
     GHTK: string[];
 };
+export declare const PAGINATE_LIMIT_NUMBER = 200;
