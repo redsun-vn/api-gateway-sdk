@@ -49,7 +49,7 @@ export declare namespace IStaff {
         username: string;
     }
     interface IUpdate extends IStaffProfile.IUpdate {
-        password?: string & tags.MinLength<3>;
+        password?: string & tags.MinLength<6>;
         permission?: string[];
         groups?: string[];
         branches?: string[];

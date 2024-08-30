@@ -90,7 +90,7 @@ export interface BaseProfile {
     city?: string;
     state?: string;
     address1?: string;
-    email?: string & tags.Format<'email'>;
+    email?: (string & tags.Format<'email'>) | null;
 }
 export interface BaseProfileResponse {
     phone?: string | null;
