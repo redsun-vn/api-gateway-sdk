@@ -31,6 +31,10 @@ export declare namespace IDrafOrder {
         canceledAt?: (string & tags.Format<'date-time'>) | null;
         lineItems: ILineItem.IInputLineItem[];
     }
+    interface ICreateDraftCopy {
+        staffId: string;
+        draftId: string;
+    }
     interface ICreateDrafOrderKafka extends ICreateDrafOrder {
         shop_id: number & tags.Type<'uint64'>;
     }
