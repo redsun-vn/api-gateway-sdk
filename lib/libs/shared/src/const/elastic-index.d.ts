@@ -20,6 +20,8 @@ export declare const ELASTIC_INDEX: {
     CONDITION: string;
     DOMAIN: string;
     DRAF_ORDER: string;
+    EMENU_QR_ITEM: string;
+    EMENU_CONFIG: string;
     FULFILLMENT: string;
     FULFILLMENT_ORDER: string;
     GROUP: string;

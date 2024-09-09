@@ -10,3 +10,4 @@ export * from './payment.state';
 export * from './report.state';
 export * from './financial-service';
 export * from './vnpay-qrcode';
+export * from './permissions';

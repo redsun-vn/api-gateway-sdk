@@ -12,7 +12,7 @@ export declare namespace getByOrderId {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: null;
+        readonly status: 200;
     };
     const path: (orderId: string) => string;
 }

@@ -12,7 +12,7 @@ export declare namespace createCopy {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: null;
+        readonly status: 201;
     };
     const path: (draftId: string) => string;
 }

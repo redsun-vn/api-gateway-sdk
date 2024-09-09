@@ -14,7 +14,7 @@ export declare namespace findAll {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: null;
+        readonly status: 200;
     };
     const path: (query: findAll.Query) => string;
 }
@@ -29,13 +29,13 @@ export declare namespace findOne {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: null;
+        readonly status: 200;
     };
     const path: (id: string) => string;
 }
 export declare function create(connection: IConnection, input: create.Input): Promise<create.Output>;
 export declare namespace create {
-    type Input = Primitive<IProduct.IReqCreateProduct>;
+    type Input = Resolved<IProduct.IReqCreateProduct>;
     type Output = Primitive<IResponse<IProduct.IProductResponse>>;
     const METADATA: {
         readonly method: "POST";
@@ -48,13 +48,13 @@ export declare namespace create {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: null;
+        readonly status: 201;
     };
     const path: () => string;
 }
 export declare function update(connection: IConnection, id: string, input: update.Input): Promise<update.Output>;
 export declare namespace update {
-    type Input = Primitive<IProduct.IUpdateProduct>;
+    type Input = Resolved<IProduct.IUpdateProduct>;
     type Output = Primitive<IResponse<IProduct.IProductResponse>>;
     const METADATA: {
         readonly method: "PUT";
@@ -67,7 +67,7 @@ export declare namespace update {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: null;
+        readonly status: 200;
     };
     const path: (id: string) => string;
 }
@@ -82,7 +82,7 @@ export declare namespace $delete {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: null;
+        readonly status: 200;
     };
     const path: (id: string) => string;
 }

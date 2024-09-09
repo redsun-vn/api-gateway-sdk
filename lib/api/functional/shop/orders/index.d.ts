@@ -13,9 +13,25 @@ export declare namespace findAll {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: null;
+        readonly status: 200;
     };
     const path: (query: findAll.Query) => string;
+}
+export declare function $export(connection: IConnection, query: $export.Query): Promise<$export.Output>;
+export declare namespace $export {
+    type Query = Resolved<IQuery>;
+    type Output = Primitive<any>;
+    const METADATA: {
+        readonly method: "GET";
+        readonly path: "/shop/orders/export";
+        readonly request: null;
+        readonly response: {
+            readonly type: "application/json";
+            readonly encrypted: false;
+        };
+        readonly status: 200;
+    };
+    const path: (query: $export.Query) => string;
 }
 export declare function findOne(connection: IConnection, id: string): Promise<findOne.Output>;
 export declare namespace findOne {
@@ -28,13 +44,13 @@ export declare namespace findOne {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: null;
+        readonly status: 200;
     };
     const path: (id: string) => string;
 }
 export declare function create(connection: IConnection, input: create.Input): Promise<create.Output>;
 export declare namespace create {
-    type Input = Primitive<IOrder.ICreateOrder>;
+    type Input = Resolved<IOrder.ICreateOrder>;
     type Output = Primitive<IResponse<IOrder.IDetailOrderResponse>>;
     const METADATA: {
         readonly method: "POST";
@@ -47,13 +63,13 @@ export declare namespace create {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: null;
+        readonly status: 201;
     };
     const path: () => string;
 }
 export declare function update(connection: IConnection, id: string, input: update.Input): Promise<update.Output>;
 export declare namespace update {
-    type Input = Primitive<IOrder.IUpdateOrder>;
+    type Input = Resolved<IOrder.IUpdateOrder>;
     type Output = Primitive<IResponse<IOrder.IDetailOrderResponse>>;
     const METADATA: {
         readonly method: "PUT";
@@ -66,7 +82,7 @@ export declare namespace update {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: null;
+        readonly status: 200;
     };
     const path: (id: string) => string;
 }
@@ -81,7 +97,7 @@ export declare namespace $delete {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: null;
+        readonly status: 200;
     };
     const path: (id: string) => string;
 }

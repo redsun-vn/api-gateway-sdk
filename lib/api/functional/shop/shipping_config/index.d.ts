@@ -1,9 +1,9 @@
-import type { IConnection, Primitive } from "@nestia/fetcher";
+import type { IConnection, Resolved, Primitive } from "@nestia/fetcher";
 import type { IResponse } from "../../../../libs/shared/src/types/common.type";
 import type { IShopShippingConfig } from "../../../../libs/shared/src/types/fulfillment-service/ishop-shipping-config.type";
 export declare function create(connection: IConnection, data: create.Input): Promise<create.Output>;
 export declare namespace create {
-    type Input = Primitive<IShopShippingConfig.ICreate>;
+    type Input = Resolved<IShopShippingConfig.ICreate>;
     type Output = Primitive<IResponse<IShopShippingConfig.IResponse>>;
     const METADATA: {
         readonly method: "POST";
@@ -16,7 +16,7 @@ export declare namespace create {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: null;
+        readonly status: 201;
     };
     const path: () => string;
 }
@@ -31,7 +31,7 @@ export declare namespace detail {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: null;
+        readonly status: 200;
     };
     const path: (id: string) => string;
 }
@@ -46,7 +46,7 @@ export declare namespace findAllByProvider {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: null;
+        readonly status: 200;
     };
     const path: (providerCode: string) => string;
 }
@@ -61,7 +61,7 @@ export declare namespace $delete {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: null;
+        readonly status: 200;
     };
     const path: (id: string) => string;
 }

@@ -15,13 +15,13 @@ export declare namespace findAll {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: null;
+        readonly status: 200;
     };
     const path: (query: findAll.Query) => string;
 }
 export declare function update(connection: IConnection, data: update.Input, id: string): Promise<update.Output>;
 export declare namespace update {
-    type Input = Primitive<IShop.IAdminUpdate>;
+    type Input = Resolved<IShop.IAdminUpdate>;
     type Output = Primitive<IResponse<false | true>>;
     const METADATA: {
         readonly method: "PUT";
@@ -34,7 +34,7 @@ export declare namespace update {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: null;
+        readonly status: 200;
     };
     const path: (id: string) => string;
 }
@@ -49,7 +49,7 @@ export declare namespace $delete {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: null;
+        readonly status: 200;
     };
     const path: (id: string) => string;
 }
@@ -64,7 +64,7 @@ export declare namespace restore {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: null;
+        readonly status: 200;
     };
     const path: (id: string) => string;
 }
