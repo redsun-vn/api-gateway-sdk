@@ -1,7 +1,8 @@
 export declare enum LOYALTY_REWARD_TYPE_ENUM {
     PRODUCT = "free_product",
     DISCOUNT = "discount",
-    SHIPPING = "free_shipping"
+    SHIPPING = "free_shipping",
+    POINTS = "points"
 }
 export declare enum LOYALTY_REWARD_DISCOUNT_MODE_ENUM {
     PERCENT = "percent",
