@@ -5,3 +5,6 @@ export * from './iloyalty-reward-product';
 export * from './iloyalty-rule';
 export * from './iloyalty-rule-product';
 export * from './iloyalty-program-sale-channel';
+export * from './iloyalty-level';
+export * from './ipoint-partner';
+export * from './ipoint-transaction';

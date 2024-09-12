@@ -32,6 +32,7 @@ export declare const ELASTIC_INDEX: {
     LINE_ITEM_TAX_LINE: string;
     LINE_ITEM_SELECTION_GROUP: string;
     LOYALTY_COUPON: string;
+    LOYALTY_LEVEL: string;
     LOYALTY_PROGRAM: string;
     MANUFACTURER: string;
     MIX_INGREDIENT: string;
@@ -47,6 +48,7 @@ export declare const ELASTIC_INDEX: {
     PAYMENT: string;
     PAYMENT_GATEWAY: string;
     PAYMENT_RECONCILIATION: string;
+    POINT_PARTNER: string;
     POS_CONFIG: string;
     POS_PRINTER: string;
     POS_SESSION: string;

@@ -19,7 +19,7 @@ export declare namespace IEMenuConfig {
     interface IResponse extends BaseResponse {
         shop_id: number | string;
         name: string | null;
-        uuid: string;
+        uuid?: string | null;
         active: boolean;
         currencyCode: string;
         use_pricelist: boolean;
