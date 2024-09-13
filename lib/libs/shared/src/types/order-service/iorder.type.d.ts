@@ -66,6 +66,9 @@ export declare namespace IOrder {
         tableReservations?: ITableReservation.ICreateTableReservation[];
         userId?: string;
     }
+    interface ICreateOrderPublic extends ICreateOrder {
+        shop_id: number & tags.Type<'uint64'>;
+    }
     interface ICreateOrderKafka extends ICreateOrder {
         shop_id: number & tags.Type<'uint64'>;
     }
