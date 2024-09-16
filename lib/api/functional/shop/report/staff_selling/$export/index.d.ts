@@ -12,7 +12,7 @@ export declare namespace staffBestSellingExport {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: 200;
+        readonly status: null;
     };
     const path: (query: staffBestSellingExport.Query) => string;
 }

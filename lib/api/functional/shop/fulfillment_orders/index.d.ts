@@ -1,4 +1,4 @@
-import type { IConnection, Resolved, Primitive } from "@nestia/fetcher";
+import type { IConnection, Primitive, Resolved } from "@nestia/fetcher";
 import type { IResponse, IQuery, IResponsePagination } from "../../../../libs/shared/src/types/common.type";
 import type { IFulfillmentOrder } from "../../../../libs/shared/src/types/fulfillment-service/ifulfillment-order";
 export * as request from "./request";
@@ -6,7 +6,7 @@ export * as item from "./item";
 export * as order from "./order";
 export declare function create(connection: IConnection, data: create.Input): Promise<create.Output>;
 export declare namespace create {
-    type Input = Resolved<IFulfillmentOrder.ICreateFulfillmentOrder>;
+    type Input = Primitive<IFulfillmentOrder.ICreateFulfillmentOrder>;
     type Output = Primitive<IResponse<IFulfillmentOrder.IFulfillmentOrderResponse>>;
     const METADATA: {
         readonly method: "POST";
@@ -19,7 +19,7 @@ export declare namespace create {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: 201;
+        readonly status: null;
     };
     const path: () => string;
 }
@@ -35,7 +35,7 @@ export declare namespace findAll {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: 200;
+        readonly status: null;
     };
     const path: (query: findAll.Query) => string;
 }
@@ -50,13 +50,13 @@ export declare namespace getDetail {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: 200;
+        readonly status: null;
     };
     const path: (id: string) => string;
 }
 export declare function update(connection: IConnection, id: string, data: update.Input): Promise<update.Output>;
 export declare namespace update {
-    type Input = Resolved<IFulfillmentOrder.IUpdateFulfillmentOrder>;
+    type Input = Primitive<IFulfillmentOrder.IUpdateFulfillmentOrder>;
     type Output = Primitive<IResponse<IFulfillmentOrder.IFulfillmentOrderResponse>>;
     const METADATA: {
         readonly method: "PUT";
@@ -69,13 +69,13 @@ export declare namespace update {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: 200;
+        readonly status: null;
     };
     const path: (id: string) => string;
 }
 export declare function cancel(connection: IConnection, id: string, data: cancel.Input): Promise<cancel.Output>;
 export declare namespace cancel {
-    type Input = Resolved<IFulfillmentOrder.ICancelFulfillmentOrder>;
+    type Input = Primitive<IFulfillmentOrder.ICancelFulfillmentOrder>;
     type Output = Primitive<IResponse<false | true>>;
     const METADATA: {
         readonly method: "POST";
@@ -88,7 +88,7 @@ export declare namespace cancel {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: 201;
+        readonly status: null;
     };
     const path: (id: string) => string;
 }

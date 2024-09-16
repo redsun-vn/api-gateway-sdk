@@ -11,7 +11,7 @@ export declare namespace getWards {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: 200;
+        readonly status: null;
     };
     const path: (shippingCode: string, districtId: string) => string;
 }

@@ -45,6 +45,7 @@ export * as activity from "./activity";
 export * as fulfillment_orders from "./fulfillment_orders";
 export * as fulfillments from "./fulfillments";
 export * as shipping_config from "./shipping_config";
+export * as loyalty_config from "./loyalty_config";
 export * as loyalty_coupons from "./loyalty_coupons";
 export * as loyalty_levels from "./loyalty_levels";
 export * as loyalty_programs from "./loyalty_programs";

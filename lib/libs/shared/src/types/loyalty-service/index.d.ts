@@ -8,3 +8,4 @@ export * from './iloyalty-program-sale-channel';
 export * from './iloyalty-level';
 export * from './ipoint-partner';
 export * from './ipoint-transaction';
+export * from './iloyalty-config';
