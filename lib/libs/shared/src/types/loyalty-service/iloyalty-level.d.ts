@@ -2,7 +2,7 @@ import { BaseResponse } from '../common.type';
 export declare namespace ILoyaltyLevel {
     interface IResponse extends BaseResponse {
         shop_id: number | string;
-        image_id?: number | string;
+        image_id?: number | string | null;
         name: number | string;
         limitDiscount: boolean;
         discount: number;

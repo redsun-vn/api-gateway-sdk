@@ -3,7 +3,7 @@ import type { IResponse } from "../../../../libs/shared/src/types/common.type";
 import type { ILoyaltyConfig } from "../../../../libs/shared/src/types/loyalty-service/iloyalty-config";
 export declare function detail(connection: IConnection, shop_id: string): Promise<detail.Output>;
 export declare namespace detail {
-    type Output = Primitive<IResponse<ILoyaltyConfig.IResponse>>;
+    type Output = Primitive<IResponse<null | ILoyaltyConfig.IResponse>>;
     const METADATA: {
         readonly method: "GET";
         readonly path: "/shop/loyalty-config/:shop_id";
