@@ -9,8 +9,8 @@ import { IAdditionalFee } from './iadditional-fee.type';
 export declare namespace IOrder {
     interface ICreateOrder {
         branch_id: number & tags.Type<'uint64'>;
-        staff_id: number & tags.Type<'uint64'>;
-        pos_session_id: string & tags.Format<'uuid'>;
+        staff_id?: number & tags.Type<'uint64'>;
+        pos_session_id?: string & tags.Format<'uuid'>;
         sale_channel_id?: number & tags.Type<'uint64'>;
         price_book_id?: number & tags.Type<'uint64'>;
         billing_address_id?: number & tags.Type<'uint64'>;
@@ -18,7 +18,7 @@ export declare namespace IOrder {
         shipping_method_id?: number & tags.Type<'uint64'>;
         draf_order_id?: number & tags.Type<'uint64'>;
         partner_id?: string & tags.Format<'uuid'>;
-        warehouse_id: number & tags.Type<'uint64'>;
+        warehouse_id?: number & tags.Type<'uint64'>;
         currencyCode?: string | null;
         email?: string | null;
         phone?: string | null;
