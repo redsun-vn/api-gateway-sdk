@@ -13,7 +13,7 @@ export declare namespace findAll {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: 200;
+        readonly status: null;
     };
     const path: (query: findAll.Query) => string;
 }
@@ -28,13 +28,13 @@ export declare namespace findOne {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: 200;
+        readonly status: null;
     };
     const path: (id: string) => string;
 }
 export declare function create(connection: IConnection, input: create.Input): Promise<create.Output>;
 export declare namespace create {
-    type Input = Resolved<IStockQuantity.ICreateStockQuantity>;
+    type Input = Primitive<IStockQuantity.ICreateStockQuantity>;
     type Output = Primitive<IResponse<IStockQuantity.IStockQuantityResponse>>;
     const METADATA: {
         readonly method: "POST";
@@ -47,13 +47,13 @@ export declare namespace create {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: 201;
+        readonly status: null;
     };
     const path: () => string;
 }
 export declare function update(connection: IConnection, id: string, input: update.Input): Promise<update.Output>;
 export declare namespace update {
-    type Input = Resolved<IStockQuantity.IUpdateStockQuantity>;
+    type Input = Primitive<IStockQuantity.IUpdateStockQuantity>;
     type Output = Primitive<IResponse<IStockQuantity.IStockQuantityResponse>>;
     const METADATA: {
         readonly method: "PUT";
@@ -66,7 +66,7 @@ export declare namespace update {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: 200;
+        readonly status: null;
     };
     const path: (id: string) => string;
 }
@@ -81,7 +81,7 @@ export declare namespace $delete {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: 200;
+        readonly status: null;
     };
     const path: (id: string) => string;
 }

@@ -15,7 +15,7 @@ export declare namespace schedule {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: 200;
+        readonly status: null;
     };
     const path: (shippingCode: string) => string;
 }
@@ -30,7 +30,7 @@ export declare namespace detail {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: 200;
+        readonly status: null;
     };
     const path: (shippingCode: string, orderCode: string) => string;
 }

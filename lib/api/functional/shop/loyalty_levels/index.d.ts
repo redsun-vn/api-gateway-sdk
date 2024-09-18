@@ -12,7 +12,7 @@ export declare namespace detail {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: 200;
+        readonly status: null;
     };
     const path: (id: string) => string;
 }
@@ -28,13 +28,13 @@ export declare namespace list {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: 200;
+        readonly status: null;
     };
     const path: (query: list.Query) => string;
 }
 export declare function create(connection: IConnection, data: create.Input): Promise<create.Output>;
 export declare namespace create {
-    type Input = Resolved<ILoyaltyLevel.ICreate>;
+    type Input = Primitive<ILoyaltyLevel.ICreate>;
     type Output = Primitive<IResponse<ILoyaltyLevel.IResponse>>;
     const METADATA: {
         readonly method: "POST";
@@ -47,13 +47,13 @@ export declare namespace create {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: 201;
+        readonly status: null;
     };
     const path: () => string;
 }
 export declare function update(connection: IConnection, id: string, data: update.Input): Promise<update.Output>;
 export declare namespace update {
-    type Input = Resolved<Partial<ILoyaltyLevel.ICreate>>;
+    type Input = Primitive<Partial<ILoyaltyLevel.ICreate>>;
     type Output = Primitive<IResponse<ILoyaltyLevel.IResponse>>;
     const METADATA: {
         readonly method: "PUT";
@@ -66,22 +66,7 @@ export declare namespace update {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: 200;
-    };
-    const path: (id: string) => string;
-}
-export declare function $delete(connection: IConnection, id: string): Promise<$delete.Output>;
-export declare namespace $delete {
-    type Output = Primitive<IResponse<false | true>>;
-    const METADATA: {
-        readonly method: "DELETE";
-        readonly path: "/shop/loyalty-levels/:id";
-        readonly request: null;
-        readonly response: {
-            readonly type: "application/json";
-            readonly encrypted: false;
-        };
-        readonly status: 200;
+        readonly status: null;
     };
     const path: (id: string) => string;
 }

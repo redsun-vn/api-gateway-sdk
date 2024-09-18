@@ -12,7 +12,7 @@ export declare namespace findOne {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: 200;
+        readonly status: null;
     };
     const path: (code: string) => string;
 }
@@ -27,7 +27,7 @@ export declare namespace updatePayment {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: 200;
+        readonly status: null;
     };
     const path: (code: string) => string;
 }

@@ -1,9 +1,9 @@
-import type { IConnection, Resolved, Primitive } from "@nestia/fetcher";
+import type { IConnection, Primitive, Resolved } from "@nestia/fetcher";
 import type { IResponse, IQuery, IResponsePagination } from "../../../../libs/shared/src/types/common.type";
 import type { ILoyaltyCoupon } from "../../../../libs/shared/src/types/loyalty-service/iloyalty-coupon";
 export declare function create(connection: IConnection, data: create.Input): Promise<create.Output>;
 export declare namespace create {
-    type Input = Resolved<ILoyaltyCoupon.ILoyaltyCouponCreate>;
+    type Input = Primitive<ILoyaltyCoupon.ILoyaltyCouponCreate>;
     type Output = Primitive<IResponse<ILoyaltyCoupon.ILoyaltyCouponResponse>>;
     const METADATA: {
         readonly method: "POST";
@@ -16,7 +16,7 @@ export declare namespace create {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: 201;
+        readonly status: null;
     };
     const path: () => string;
 }
@@ -32,7 +32,7 @@ export declare namespace list {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: 200;
+        readonly status: null;
     };
     const path: (query: list.Query) => string;
 }
@@ -47,13 +47,13 @@ export declare namespace detail {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: 200;
+        readonly status: null;
     };
     const path: (id: string) => string;
 }
 export declare function update(connection: IConnection, id: string, data: update.Input): Promise<update.Output>;
 export declare namespace update {
-    type Input = Resolved<ILoyaltyCoupon.ILoyaltyCouponUpdate>;
+    type Input = Primitive<ILoyaltyCoupon.ILoyaltyCouponUpdate>;
     type Output = Primitive<IResponse<ILoyaltyCoupon.ILoyaltyCouponResponse>>;
     const METADATA: {
         readonly method: "PUT";
@@ -66,7 +66,7 @@ export declare namespace update {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: 200;
+        readonly status: null;
     };
     const path: (id: string) => string;
 }
@@ -81,7 +81,7 @@ export declare namespace $delete {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: 200;
+        readonly status: null;
     };
     const path: (id: string) => string;
 }

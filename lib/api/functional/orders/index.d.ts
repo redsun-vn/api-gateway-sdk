@@ -1,4 +1,4 @@
-import type { IConnection, Primitive, Resolved } from "@nestia/fetcher";
+import type { IConnection, Primitive } from "@nestia/fetcher";
 import type { IResponse } from "../../../libs/shared/src/types/common.type";
 import type { IOrder } from "../../../libs/shared/src/types/order-service/iorder.type";
 export declare function findOnePublic(connection: IConnection, id: string): Promise<findOnePublic.Output>;
@@ -12,13 +12,13 @@ export declare namespace findOnePublic {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: 200;
+        readonly status: null;
     };
     const path: (id: string) => string;
 }
 export declare function create(connection: IConnection, input: create.Input): Promise<create.Output>;
 export declare namespace create {
-    type Input = Resolved<IOrder.ICreateOrderPublic>;
+    type Input = Primitive<IOrder.ICreateOrderPublic>;
     type Output = Primitive<IResponse<IOrder.IDetailOrderResponse>>;
     const METADATA: {
         readonly method: "POST";
@@ -31,13 +31,13 @@ export declare namespace create {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: 201;
+        readonly status: null;
     };
     const path: () => string;
 }
 export declare function update(connection: IConnection, id: string, input: update.Input): Promise<update.Output>;
 export declare namespace update {
-    type Input = Resolved<IOrder.IUpdateOrder>;
+    type Input = Primitive<IOrder.IUpdateOrder>;
     type Output = Primitive<IResponse<IOrder.IDetailOrderResponse>>;
     const METADATA: {
         readonly method: "PUT";
@@ -50,7 +50,7 @@ export declare namespace update {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: 200;
+        readonly status: null;
     };
     const path: (id: string) => string;
 }
@@ -65,7 +65,7 @@ export declare namespace $delete {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: 200;
+        readonly status: null;
     };
     const path: (id: string) => string;
 }

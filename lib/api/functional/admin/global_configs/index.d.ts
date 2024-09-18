@@ -1,4 +1,4 @@
-import type { IConnection, Primitive, Resolved } from "@nestia/fetcher";
+import type { IConnection, Primitive } from "@nestia/fetcher";
 import type { IGlobalConfig } from "../../../../libs/shared/src/types/admin-service/iconfig";
 import type { IResponse } from "../../../../libs/shared/src/types/common.type";
 export declare function findAllConfig(connection: IConnection): Promise<findAllConfig.Output>;
@@ -12,13 +12,13 @@ export declare namespace findAllConfig {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: 200;
+        readonly status: null;
     };
     const path: () => string;
 }
 export declare function createOrUpdate(connection: IConnection, input: createOrUpdate.Input): Promise<createOrUpdate.Output>;
 export declare namespace createOrUpdate {
-    type Input = Resolved<IGlobalConfig.IDataCreate>;
+    type Input = Primitive<IGlobalConfig.IDataCreate>;
     type Output = Primitive<IResponse<Array<IGlobalConfig.IResponse>>>;
     const METADATA: {
         readonly method: "POST";
@@ -31,7 +31,7 @@ export declare namespace createOrUpdate {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: 201;
+        readonly status: null;
     };
     const path: () => string;
 }
@@ -46,7 +46,7 @@ export declare namespace $delete {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: 200;
+        readonly status: null;
     };
     const path: (key: string) => string;
 }

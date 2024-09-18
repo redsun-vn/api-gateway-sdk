@@ -15,7 +15,7 @@ export declare namespace orderFee {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: 201;
+        readonly status: null;
     };
     const path: (shippingCode: string) => string;
 }
