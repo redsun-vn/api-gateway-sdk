@@ -1,4 +1,4 @@
-import type { IConnection, Primitive } from "@nestia/fetcher";
+import type { IConnection, Primitive, Resolved } from "@nestia/fetcher";
 import type { IResponse } from "../../../../../libs/shared/src/types/common.type";
 import type { IVNPayQRCode } from "../../../../../libs/shared/src/types/payment-service/ivnpay-qrcode.type";
 export * as find_one from "./find_one";
@@ -13,13 +13,13 @@ export declare namespace $delete {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: null;
+        readonly status: 200;
     };
     const path: (id: string) => string;
 }
 export declare function create(connection: IConnection, id: string, data: create.Input): Promise<create.Output>;
 export declare namespace create {
-    type Input = Primitive<IVNPayQRCode.IConfig>;
+    type Input = Resolved<IVNPayQRCode.IConfig>;
     type Output = Primitive<IResponse<IVNPayQRCode.IResponseWithoutSecret>>;
     const METADATA: {
         readonly method: "POST";
@@ -32,13 +32,13 @@ export declare namespace create {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: null;
+        readonly status: 201;
     };
     const path: (id: string) => string;
 }
 export declare function update(connection: IConnection, data: update.Input, id: string): Promise<update.Output>;
 export declare namespace update {
-    type Input = Primitive<IVNPayQRCode.IUpdateConfig>;
+    type Input = Resolved<IVNPayQRCode.IUpdateConfig>;
     type Output = Primitive<IResponse<IVNPayQRCode.IResponseWithoutSecret>>;
     const METADATA: {
         readonly method: "PUT";
@@ -51,7 +51,7 @@ export declare namespace update {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: null;
+        readonly status: 200;
     };
     const path: (id: string) => string;
 }

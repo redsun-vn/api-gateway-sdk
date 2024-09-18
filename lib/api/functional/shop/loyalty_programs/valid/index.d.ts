@@ -12,7 +12,7 @@ export declare namespace validCode {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: null;
+        readonly status: 200;
     };
     const path: (code: string) => string;
 }

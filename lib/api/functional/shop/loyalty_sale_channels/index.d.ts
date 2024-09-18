@@ -1,9 +1,9 @@
-import type { IConnection, Primitive } from "@nestia/fetcher";
+import type { IConnection, Resolved, Primitive } from "@nestia/fetcher";
 import type { IResponse } from "../../../../libs/shared/src/types/common.type";
 import type { ILoyaltyProgramSaleChannel } from "../../../../libs/shared/src/types/loyalty-service/iloyalty-program-sale-channel";
 export declare function create(connection: IConnection, data: create.Input): Promise<create.Output>;
 export declare namespace create {
-    type Input = Primitive<ILoyaltyProgramSaleChannel.ILoyaltyProgramSaleChannelCreate>;
+    type Input = Resolved<ILoyaltyProgramSaleChannel.ILoyaltyProgramSaleChannelCreate>;
     type Output = Primitive<IResponse<ILoyaltyProgramSaleChannel.ILoyaltyProgramSaleChannelResponse>>;
     const METADATA: {
         readonly method: "POST";
@@ -16,7 +16,7 @@ export declare namespace create {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: null;
+        readonly status: 201;
     };
     const path: () => string;
 }
@@ -31,7 +31,7 @@ export declare namespace detail {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: null;
+        readonly status: 200;
     };
     const path: (id: string) => string;
 }

@@ -1,9 +1,9 @@
-import type { IConnection, Primitive } from "@nestia/fetcher";
+import type { IConnection, Resolved, Primitive } from "@nestia/fetcher";
 import type { IResponse } from "../../../../libs/shared/src/types/common.type";
 import type { IAuth } from "../../../../libs/shared/src/types/iauth";
 export declare function sendOTPEmail(connection: IConnection, input: sendOTPEmail.Input): Promise<sendOTPEmail.Output>;
 export declare namespace sendOTPEmail {
-    type Input = Primitive<IAuth.IOTPEmail>;
+    type Input = Resolved<IAuth.IOTPEmail>;
     type Output = Primitive<IResponse<null | IAuth.IOTPResponse>>;
     const METADATA: {
         readonly method: "POST";
@@ -16,7 +16,7 @@ export declare namespace sendOTPEmail {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: null;
+        readonly status: 201;
     };
     const path: () => string;
 }

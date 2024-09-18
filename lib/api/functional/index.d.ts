@@ -21,6 +21,7 @@ export * as shops from "./shops";
 export * as otp from "./otp";
 export * as staffs from "./staffs";
 export * as shipping_providers from "./shipping_providers";
+export * as loyalty_programs from "./loyalty_programs";
 export * as sync_activity_logs from "./sync_activity_logs";
 export * as payment_links from "./payment_links";
 export * as notify from "./notify";
