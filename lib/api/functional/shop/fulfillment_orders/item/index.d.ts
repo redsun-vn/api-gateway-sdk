@@ -1,10 +1,10 @@
-import type { IConnection, Primitive } from "@nestia/fetcher";
+import type { IConnection, Resolved, Primitive } from "@nestia/fetcher";
 import type { IResponse } from "../../../../../libs/shared/src/types/common.type";
 import type { IFulfillmentOrderItem } from "../../../../../libs/shared/src/types/fulfillment-service/ifulfillment-line-item";
 import type { IFulfillmentOrder } from "../../../../../libs/shared/src/types/fulfillment-service/ifulfillment-order";
 export declare function updateItem(connection: IConnection, id: string, itemId: string, data: updateItem.Input): Promise<updateItem.Output>;
 export declare namespace updateItem {
-    type Input = Primitive<IFulfillmentOrder.IUpdateFulfillmentOrderItem>;
+    type Input = Resolved<IFulfillmentOrder.IUpdateFulfillmentOrderItem>;
     type Output = Primitive<IResponse<IFulfillmentOrderItem.ILineItemResponse>>;
     const METADATA: {
         readonly method: "PUT";
@@ -17,7 +17,7 @@ export declare namespace updateItem {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: null;
+        readonly status: 200;
     };
     const path: (id: string, itemId: string) => string;
 }

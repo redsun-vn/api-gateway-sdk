@@ -1,10 +1,10 @@
-import type { IConnection, Primitive, Resolved } from "@nestia/fetcher";
+import type { IConnection, Resolved, Primitive } from "@nestia/fetcher";
 import type { IResponse, IQuery, IResponsePagination } from "../../../../../libs/shared/src/types/common.type";
 import type { IFile } from "../../../../../libs/shared/src/types/ifile";
 export * as hard from "./hard";
 export declare function upload(connection: IConnection, input: upload.Input): Promise<upload.Output>;
 export declare namespace upload {
-    type Input = Primitive<IFile.IReqUpload>;
+    type Input = Resolved<IFile.IReqUpload>;
     type Output = Primitive<IResponse<IFile.IResponse>>;
     const METADATA: {
         readonly method: "POST";
@@ -17,7 +17,7 @@ export declare namespace upload {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: null;
+        readonly status: 201;
     };
     const path: () => string;
 }
@@ -33,7 +33,7 @@ export declare namespace findAll {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: null;
+        readonly status: 200;
     };
     const path: (query: findAll.Query) => string;
 }
@@ -48,7 +48,7 @@ export declare namespace findOne {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: null;
+        readonly status: 200;
     };
     const path: (id: string) => string;
 }
@@ -63,7 +63,7 @@ export declare namespace $delete {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: null;
+        readonly status: 200;
     };
     const path: (id: string) => string;
 }
