@@ -29,6 +29,9 @@ export declare namespace IVNPayQRCode {
         txnId?: string;
         tipAndFee?: string;
     }
+    interface ICreatePublic extends ICreate {
+        shop_id: number;
+    }
     interface IRequest extends IConfig, Omit<ICreate, 'shop_id'> {
     }
     interface IRequestQRContent extends Omit<IConfig, 'secretKey' | 'vnpayHost' | 'paymentEndpoint' | 'testMode' | 'hashAlgorithm'>, Omit<ICreate, 'shop_id'> {
