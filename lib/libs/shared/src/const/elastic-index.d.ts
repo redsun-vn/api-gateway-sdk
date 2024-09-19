@@ -49,6 +49,7 @@ export declare const ELASTIC_INDEX: {
     PAYMENT_GATEWAY: string;
     PAYMENT_RECONCILIATION: string;
     POINT_PARTNER: string;
+    POINT_TRANSACTION: string;
     POS_CONFIG: string;
     POS_PRINTER: string;
     POS_SESSION: string;

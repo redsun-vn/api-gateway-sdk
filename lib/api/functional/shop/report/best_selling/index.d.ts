@@ -14,7 +14,7 @@ export declare namespace productBestSelling {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: 200;
+        readonly status: null;
     };
     const path: (query: productBestSelling.Query) => string;
 }

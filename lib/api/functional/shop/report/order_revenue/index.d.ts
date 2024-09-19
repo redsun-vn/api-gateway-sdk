@@ -13,7 +13,7 @@ export declare namespace summary {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: 200;
+        readonly status: null;
     };
     const path: (query: summary.Query) => string;
 }

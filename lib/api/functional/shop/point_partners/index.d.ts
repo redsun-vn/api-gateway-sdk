@@ -1,5 +1,5 @@
 import type { IConnection, Primitive, Resolved } from "@nestia/fetcher";
-import type { IResponse } from "../../../../libs/shared/src/types/common.type";
+import type { IResponse, IQuery, IResponsePagination } from "../../../../libs/shared/src/types/common.type";
 import type { IPointPartner } from "../../../../libs/shared/src/types/loyalty-service/ipoint-partner";
 export declare function detail(connection: IConnection, partner_id: string): Promise<detail.Output>;
 export declare namespace detail {
@@ -12,13 +12,29 @@ export declare namespace detail {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: 200;
+        readonly status: null;
     };
     const path: (partner_id: string) => string;
 }
+export declare function list(connection: IConnection, query: list.Query): Promise<list.Output>;
+export declare namespace list {
+    type Query = Resolved<IQuery>;
+    type Output = Primitive<IResponse<IResponsePagination<IPointPartner.IResponse>>>;
+    const METADATA: {
+        readonly method: "GET";
+        readonly path: "/shop/point-partners";
+        readonly request: null;
+        readonly response: {
+            readonly type: "application/json";
+            readonly encrypted: false;
+        };
+        readonly status: null;
+    };
+    const path: (query: list.Query) => string;
+}
 export declare function create(connection: IConnection, data: create.Input): Promise<create.Output>;
 export declare namespace create {
-    type Input = Resolved<IPointPartner.ICreate>;
+    type Input = Primitive<IPointPartner.ICreate>;
     type Output = Primitive<IResponse<IPointPartner.IResponse>>;
     const METADATA: {
         readonly method: "POST";
@@ -31,13 +47,13 @@ export declare namespace create {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: 201;
+        readonly status: null;
     };
     const path: () => string;
 }
 export declare function update(connection: IConnection, id: string, data: update.Input): Promise<update.Output>;
 export declare namespace update {
-    type Input = Resolved<IPointPartner.IUpdate>;
+    type Input = Primitive<IPointPartner.IUpdate>;
     type Output = Primitive<IResponse<IPointPartner.IResponse>>;
     const METADATA: {
         readonly method: "PUT";
@@ -50,7 +66,7 @@ export declare namespace update {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: 200;
+        readonly status: null;
     };
     const path: (id: string) => string;
 }
@@ -65,7 +81,7 @@ export declare namespace $delete {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: 200;
+        readonly status: null;
     };
     const path: (id: string) => string;
 }

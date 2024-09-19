@@ -10,7 +10,7 @@ export declare namespace exportTemplate {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: 200;
+        readonly status: null;
     };
     const path: () => string;
 }

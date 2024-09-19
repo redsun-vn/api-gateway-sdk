@@ -13,7 +13,7 @@ export declare namespace findProductsByCollectionId {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: 200;
+        readonly status: null;
     };
     const path: (id: string, query: findProductsByCollectionId.Query) => string;
 }

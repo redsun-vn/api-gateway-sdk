@@ -12,7 +12,7 @@ export declare namespace detail {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: 200;
+        readonly status: null;
     };
     const path: (id: string) => string;
 }
@@ -28,7 +28,7 @@ export declare namespace list {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: 200;
+        readonly status: null;
     };
     const path: (query: list.Query) => string;
 }

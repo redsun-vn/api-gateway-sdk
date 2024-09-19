@@ -1,9 +1,9 @@
-import type { IConnection, Resolved, Primitive } from "@nestia/fetcher";
+import type { IConnection, Primitive } from "@nestia/fetcher";
 import type { IResponse } from "../../../../libs/shared/src/types/common.type";
 import type { IAuth } from "../../../../libs/shared/src/types/iauth";
 export declare function logOut(connection: IConnection, input: logOut.Input): Promise<logOut.Output>;
 export declare namespace logOut {
-    type Input = Resolved<IAuth.IRefreshToken>;
+    type Input = Primitive<IAuth.IRefreshToken>;
     type Output = Primitive<IResponse<false | true>>;
     const METADATA: {
         readonly method: "POST";
@@ -16,7 +16,7 @@ export declare namespace logOut {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: 201;
+        readonly status: null;
     };
     const path: () => string;
 }
