@@ -10,6 +10,7 @@ export declare namespace IPointPartner {
         expireDate?: string;
     }
     interface IUpdate {
+        active?: boolean;
         totalPoints?: number;
         availablePoints?: number;
         loyalty_level_id?: string | number | null;

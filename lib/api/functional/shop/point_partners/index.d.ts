@@ -51,13 +51,13 @@ export declare namespace create {
     };
     const path: () => string;
 }
-export declare function update(connection: IConnection, id: string, data: update.Input): Promise<update.Output>;
+export declare function update(connection: IConnection, partner_id: string, data: update.Input): Promise<update.Output>;
 export declare namespace update {
     type Input = Primitive<IPointPartner.IUpdate>;
     type Output = Primitive<IResponse<IPointPartner.IResponse>>;
     const METADATA: {
         readonly method: "PUT";
-        readonly path: "/shop/point-partners/:id";
+        readonly path: "/shop/point-partners/:partner_id";
         readonly request: {
             readonly type: "application/json";
             readonly encrypted: false;
@@ -68,7 +68,7 @@ export declare namespace update {
         };
         readonly status: null;
     };
-    const path: (id: string) => string;
+    const path: (partner_id: string) => string;
 }
 export declare function $delete(connection: IConnection, id: string): Promise<$delete.Output>;
 export declare namespace $delete {
