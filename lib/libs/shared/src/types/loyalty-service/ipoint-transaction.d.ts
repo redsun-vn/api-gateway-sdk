@@ -5,8 +5,8 @@ export declare namespace IPointTransaction {
         partner_id: string | number;
         points: number;
         transactionType: string & POINT_TRANSACTION_TYPE_ENUM;
-        program_id: string | number;
-        reward_id: string | number;
+        program_id?: string | number;
+        reward_id?: string | number;
         description?: string | null;
     }
     interface IResponse extends BaseResponse {
@@ -14,8 +14,8 @@ export declare namespace IPointTransaction {
         partner_id: string | number;
         points: string | number;
         transactionType: string | number;
-        program_id: string | number;
-        reward_id: string | number;
+        program_id?: string | number | null;
+        reward_id?: string | number | null;
         description?: string | null;
     }
 }
