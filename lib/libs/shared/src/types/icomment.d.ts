@@ -12,6 +12,9 @@ export declare namespace IComment {
         embed: string;
         objectBody?: Record<string, unknown>;
     }
+    interface ICreatePublic extends Partial<ICreate> {
+        shop_id: number;
+    }
     interface ICreateLogAdmin extends IComment.ICreate {
         objectResponse?: Record<string, unknown>;
         objectTarget?: string;

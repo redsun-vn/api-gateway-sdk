@@ -12,7 +12,7 @@ export declare namespace paymentCardExport {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: null;
+        readonly status: 200;
     };
     const path: (query: paymentCardExport.Query) => string;
 }

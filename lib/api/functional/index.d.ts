@@ -3,6 +3,8 @@ export * as admin from "./admin";
 export * as auth from "./auth";
 export * as notification from "./notification";
 export * as shop from "./shop";
+export * as comments from "./comments";
+export * as order from "./order";
 export * as orders from "./orders";
 export * as product from "./product";
 export * as pricebook from "./pricebook";
