@@ -21,6 +21,7 @@ export * as payment_method from "./payment_method";
 export * as sales_channels from "./sales_channels";
 export * as sales_channel from "./sales_channel";
 export * as shipping_methods from "./shipping_methods";
+export * as shop_configs from "./shop_configs";
 export * as shop_payment_methods from "./shop_payment_methods";
 export * as shops from "./shops";
 export * as shop_sales_channels from "./shop_sales_channels";
