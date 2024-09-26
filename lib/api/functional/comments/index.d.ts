@@ -1,9 +1,9 @@
-import type { IConnection, Resolved, Primitive } from "@nestia/fetcher";
+import type { IConnection, Primitive } from "@nestia/fetcher";
 import type { IResponse } from "../../../libs/shared/src/types/common.type";
 import type { IComment } from "../../../libs/shared/src/types/icomment";
 export declare function create(connection: IConnection, data: create.Input): Promise<create.Output>;
 export declare namespace create {
-    type Input = Resolved<IComment.ICreatePublic>;
+    type Input = Primitive<IComment.ICreatePublic>;
     type Output = Primitive<IResponse<IComment.ICommentResponse>>;
     const METADATA: {
         readonly method: "POST";
@@ -16,7 +16,7 @@ export declare namespace create {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: 201;
+        readonly status: null;
     };
     const path: () => string;
 }

@@ -1,9 +1,9 @@
-import type { IConnection, Resolved, Primitive } from "@nestia/fetcher";
+import type { IConnection, Primitive } from "@nestia/fetcher";
 import type { IResponse } from "../../../../libs/shared/src/types/common.type";
 import type { ILoyaltyRule } from "../../../../libs/shared/src/types/loyalty-service/iloyalty-rule";
 export declare function create(connection: IConnection, data: create.Input): Promise<create.Output>;
 export declare namespace create {
-    type Input = Resolved<ILoyaltyRule.ILoyaltyRuleCreate>;
+    type Input = Primitive<ILoyaltyRule.ILoyaltyRuleCreate>;
     type Output = Primitive<IResponse<ILoyaltyRule.ILoyaltyRuleResponse>>;
     const METADATA: {
         readonly method: "POST";
@@ -16,7 +16,7 @@ export declare namespace create {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: 201;
+        readonly status: null;
     };
     const path: () => string;
 }
@@ -31,13 +31,13 @@ export declare namespace detail {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: 200;
+        readonly status: null;
     };
     const path: (id: string) => string;
 }
 export declare function update(connection: IConnection, id: string, data: update.Input): Promise<update.Output>;
 export declare namespace update {
-    type Input = Resolved<ILoyaltyRule.ILoyaltyRuleUpdate>;
+    type Input = Primitive<ILoyaltyRule.ILoyaltyRuleUpdate>;
     type Output = Primitive<IResponse<ILoyaltyRule.ILoyaltyRuleResponse>>;
     const METADATA: {
         readonly method: "PUT";
@@ -50,7 +50,7 @@ export declare namespace update {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: 200;
+        readonly status: null;
     };
     const path: (id: string) => string;
 }
@@ -65,7 +65,7 @@ export declare namespace $delete {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: 200;
+        readonly status: null;
     };
     const path: (id: string) => string;
 }

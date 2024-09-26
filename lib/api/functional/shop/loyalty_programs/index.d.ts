@@ -1,4 +1,4 @@
-import type { IConnection, Resolved, Primitive } from "@nestia/fetcher";
+import type { IConnection, Primitive, Resolved } from "@nestia/fetcher";
 import type { IResponse, IQuery, IResponsePagination } from "../../../../libs/shared/src/types/common.type";
 import type { ILoyaltyProgram } from "../../../../libs/shared/src/types/loyalty-service/iloyalty-program";
 export * as order from "./order";
@@ -6,7 +6,7 @@ export * as draft_order from "./draft_order";
 export * as valid from "./valid";
 export declare function create(connection: IConnection, data: create.Input): Promise<create.Output>;
 export declare namespace create {
-    type Input = Resolved<ILoyaltyProgram.ILoyaltyProgramCreate>;
+    type Input = Primitive<ILoyaltyProgram.ILoyaltyProgramCreate>;
     type Output = Primitive<IResponse<ILoyaltyProgram.ILoyaltyProgramResponse>>;
     const METADATA: {
         readonly method: "POST";
@@ -19,7 +19,7 @@ export declare namespace create {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: 201;
+        readonly status: null;
     };
     const path: () => string;
 }
@@ -35,7 +35,7 @@ export declare namespace list {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: 200;
+        readonly status: null;
     };
     const path: (query: list.Query) => string;
 }
@@ -50,13 +50,13 @@ export declare namespace detail {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: 200;
+        readonly status: null;
     };
     const path: (id: string) => string;
 }
 export declare function update(connection: IConnection, id: string, data: update.Input): Promise<update.Output>;
 export declare namespace update {
-    type Input = Resolved<ILoyaltyProgram.ILoyaltyProgramUpdate>;
+    type Input = Primitive<ILoyaltyProgram.ILoyaltyProgramUpdate>;
     type Output = Primitive<IResponse<ILoyaltyProgram.ILoyaltyProgramResponse>>;
     const METADATA: {
         readonly method: "PUT";
@@ -69,7 +69,7 @@ export declare namespace update {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: 200;
+        readonly status: null;
     };
     const path: (id: string) => string;
 }
@@ -84,7 +84,7 @@ export declare namespace $delete {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: 200;
+        readonly status: null;
     };
     const path: (id: string) => string;
 }
