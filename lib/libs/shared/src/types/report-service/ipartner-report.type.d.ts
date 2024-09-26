@@ -2,7 +2,7 @@ export declare namespace IPartnerReport {
     interface IPartnerReportResponse {
         partner_id: number | string;
         shop_id: number | string;
-        lastDateOrder: string;
+        lastDateOrder: string | null;
         totalPayment: number;
         totalOrder: number;
         week?: number;
