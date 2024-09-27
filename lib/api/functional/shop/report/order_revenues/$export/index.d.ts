@@ -12,7 +12,7 @@ export declare namespace orderRevenueExport {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: null;
+        readonly status: 200;
     };
     const path: (query: orderRevenueExport.Query) => string;
 }

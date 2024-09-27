@@ -1,9 +1,9 @@
-import type { IConnection, Primitive } from "@nestia/fetcher";
+import type { IConnection, Resolved, Primitive } from "@nestia/fetcher";
 import type { IResponse } from "../../../../../libs/shared/src/types/common.type";
 import type { IFulfillmentOrder } from "../../../../../libs/shared/src/types/fulfillment-service/ifulfillment-order";
 export declare function requestFulfillment(connection: IConnection, id: string, data: requestFulfillment.Input): Promise<requestFulfillment.Output>;
 export declare namespace requestFulfillment {
-    type Input = Primitive<IFulfillmentOrder.IFulfillmentOrderRequestShipping>;
+    type Input = Resolved<IFulfillmentOrder.IFulfillmentOrderRequestShipping>;
     type Output = Primitive<IResponse<IFulfillmentOrder.IFulfillmentOrderResponse>>;
     const METADATA: {
         readonly method: "POST";
@@ -16,7 +16,7 @@ export declare namespace requestFulfillment {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: null;
+        readonly status: 201;
     };
     const path: (id: string) => string;
 }

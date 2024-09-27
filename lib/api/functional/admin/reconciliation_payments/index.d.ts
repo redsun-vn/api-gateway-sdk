@@ -12,13 +12,13 @@ export declare namespace detail {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: null;
+        readonly status: 200;
     };
     const path: (id: string) => string;
 }
 export declare function update(connection: IConnection, id: string, data: update.Input): Promise<update.Output>;
 export declare namespace update {
-    type Input = Primitive<IPaymentReconciliation.IAdminUpdate>;
+    type Input = Resolved<IPaymentReconciliation.IAdminUpdate>;
     type Output = Primitive<IResponse<IPaymentReconciliation.IResponse>>;
     const METADATA: {
         readonly method: "PUT";
@@ -31,13 +31,13 @@ export declare namespace update {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: null;
+        readonly status: 200;
     };
     const path: (id: string) => string;
 }
 export declare function cancel(connection: IConnection, id: string, data: cancel.Input): Promise<cancel.Output>;
 export declare namespace cancel {
-    type Input = Primitive<IPaymentReconciliation.IAdminCancel>;
+    type Input = Resolved<IPaymentReconciliation.IAdminCancel>;
     type Output = Primitive<IResponse<false | true>>;
     const METADATA: {
         readonly method: "PUT";
@@ -50,7 +50,7 @@ export declare namespace cancel {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: null;
+        readonly status: 200;
     };
     const path: (id: string) => string;
 }
@@ -66,7 +66,7 @@ export declare namespace list {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: null;
+        readonly status: 200;
     };
     const path: (query: list.Query) => string;
 }

@@ -14,7 +14,7 @@ export declare namespace findAll {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: null;
+        readonly status: 200;
     };
     const path: (query: findAll.Query) => string;
 }
@@ -29,7 +29,7 @@ export declare namespace findOne {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: null;
+        readonly status: 200;
     };
     const path: (id: string) => string;
 }
@@ -44,13 +44,13 @@ export declare namespace $delete {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: null;
+        readonly status: 200;
     };
     const path: (id: string) => string;
 }
 export declare function create(connection: IConnection, data: create.Input): Promise<create.Output>;
 export declare namespace create {
-    type Input = Primitive<ISubscription.ICreate>;
+    type Input = Resolved<ISubscription.ICreate>;
     type Output = Primitive<IResponse<ISubscription.ISubscriptionResponse>>;
     const METADATA: {
         readonly method: "POST";
@@ -63,7 +63,7 @@ export declare namespace create {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: null;
+        readonly status: 201;
     };
     const path: () => string;
 }

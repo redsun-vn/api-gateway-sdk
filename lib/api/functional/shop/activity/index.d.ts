@@ -13,13 +13,13 @@ export declare namespace findAll {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: null;
+        readonly status: 200;
     };
     const path: (query: findAll.Query) => string;
 }
 export declare function create(connection: IConnection, data: create.Input): Promise<create.Output>;
 export declare namespace create {
-    type Input = Primitive<IActivityLog.ICreateActivityLog>;
+    type Input = Resolved<IActivityLog.ICreateActivityLog>;
     type Output = Primitive<IResponse<IActivityLog.IActivityLogResponse>>;
     const METADATA: {
         readonly method: "POST";
@@ -32,7 +32,7 @@ export declare namespace create {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: null;
+        readonly status: 201;
     };
     const path: () => string;
 }

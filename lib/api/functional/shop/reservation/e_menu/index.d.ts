@@ -1,4 +1,4 @@
-import type { IConnection, Primitive } from "@nestia/fetcher";
+import type { IConnection, Primitive, Resolved } from "@nestia/fetcher";
 import type { IResponse } from "../../../../../libs/shared/src/types/common.type";
 import type { IEMenuConfig } from "../../../../../libs/shared/src/types/reservation-service/iemenu-config";
 export * as config from "./config";
@@ -13,13 +13,13 @@ export declare namespace $delete {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: null;
+        readonly status: 200;
     };
     const path: (id: string) => string;
 }
 export declare function create(connection: IConnection, data: create.Input): Promise<create.Output>;
 export declare namespace create {
-    type Input = Primitive<IEMenuConfig.ICreate>;
+    type Input = Resolved<IEMenuConfig.ICreate>;
     type Output = Primitive<IResponse<IEMenuConfig.IResponse>>;
     const METADATA: {
         readonly method: "POST";
@@ -32,13 +32,13 @@ export declare namespace create {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: null;
+        readonly status: 201;
     };
     const path: () => string;
 }
 export declare function update(connection: IConnection, data: update.Input, id: string): Promise<update.Output>;
 export declare namespace update {
-    type Input = Primitive<Partial<IEMenuConfig.ICreate>>;
+    type Input = Resolved<Partial<IEMenuConfig.ICreate>>;
     type Output = Primitive<IResponse<IEMenuConfig.IResponse>>;
     const METADATA: {
         readonly method: "PUT";
@@ -51,7 +51,7 @@ export declare namespace update {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: null;
+        readonly status: 200;
     };
     const path: (id: string) => string;
 }

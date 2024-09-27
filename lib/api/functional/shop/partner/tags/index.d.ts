@@ -13,7 +13,7 @@ export declare namespace findAll {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: null;
+        readonly status: 200;
     };
     const path: (query: findAll.Query) => string;
 }
@@ -28,7 +28,7 @@ export declare namespace findOne {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: null;
+        readonly status: 200;
     };
     const path: (id: string) => string;
 }
@@ -43,13 +43,13 @@ export declare namespace $delete {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: null;
+        readonly status: 200;
     };
     const path: (id: string) => string;
 }
 export declare function create(connection: IConnection, data: create.Input): Promise<create.Output>;
 export declare namespace create {
-    type Input = Primitive<IPartnerTag.ICreate>;
+    type Input = Resolved<IPartnerTag.ICreate>;
     type Output = Primitive<IResponse<IPartnerTag.IPartnerTagResponse>>;
     const METADATA: {
         readonly method: "POST";
@@ -62,13 +62,13 @@ export declare namespace create {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: null;
+        readonly status: 201;
     };
     const path: () => string;
 }
 export declare function update(connection: IConnection, data: update.Input, id: string): Promise<update.Output>;
 export declare namespace update {
-    type Input = Primitive<Partial<IPartnerTag.ICreate>>;
+    type Input = Resolved<Partial<IPartnerTag.ICreate>>;
     type Output = Primitive<IResponse<false | true>>;
     const METADATA: {
         readonly method: "PUT";
@@ -81,7 +81,7 @@ export declare namespace update {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: null;
+        readonly status: 200;
     };
     const path: (id: string) => string;
 }
