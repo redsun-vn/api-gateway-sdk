@@ -13,7 +13,7 @@ export declare namespace getPartnerReport {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: null;
+        readonly status: 200;
     };
     const path: (query: getPartnerReport.Query) => string;
 }
@@ -29,7 +29,7 @@ export declare namespace getPartnerDetailReport {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: null;
+        readonly status: 200;
     };
     const path: (query: getPartnerDetailReport.Query, partnerId: string) => string;
 }

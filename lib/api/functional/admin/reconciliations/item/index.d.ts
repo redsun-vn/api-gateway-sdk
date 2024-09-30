@@ -1,9 +1,9 @@
-import type { IConnection, Primitive } from "@nestia/fetcher";
+import type { IConnection, Resolved, Primitive } from "@nestia/fetcher";
 import type { IResponse } from "../../../../../libs/shared/src/types/common.type";
 import type { IAdminReconciliationItem } from "../../../../../libs/shared/src/types/reconciliation-service/iadmin-reconciliation-item";
 export declare function createItem(connection: IConnection, id: string, data: createItem.Input): Promise<createItem.Output>;
 export declare namespace createItem {
-    type Input = Primitive<IAdminReconciliationItem.ICreateFromFulfillment>;
+    type Input = Resolved<IAdminReconciliationItem.ICreateFromFulfillment>;
     type Output = Primitive<IResponse<Array<IAdminReconciliationItem.IResponse>>>;
     const METADATA: {
         readonly method: "POST";
@@ -16,7 +16,7 @@ export declare namespace createItem {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: null;
+        readonly status: 201;
     };
     const path: (id: string) => string;
 }
@@ -31,7 +31,7 @@ export declare namespace removeItem {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: null;
+        readonly status: 200;
     };
     const path: (id: string, itemId: string) => string;
 }

@@ -7,6 +7,7 @@ export declare enum OrderStatus {
 export declare enum OrderCombiningPromotionType {
     ORDER_AMOUNT = "order_amount",
     PARTNER_LEVEL = "partner_level",
+    PARTNER_POINT = "partner_point",
     LINE_ITEM_AMOUNT = "line_item_amount",
     SERVICE_AMOUNT = "service_amount",
     FREE_SHIPPING = "free_shipping",

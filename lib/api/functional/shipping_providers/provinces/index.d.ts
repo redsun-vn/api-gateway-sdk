@@ -11,7 +11,7 @@ export declare namespace getProvinces {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: null;
+        readonly status: 200;
     };
     const path: (shippingCode: string) => string;
 }
