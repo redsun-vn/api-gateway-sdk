@@ -13,13 +13,13 @@ export declare namespace findAll {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: 200;
+        readonly status: null;
     };
     const path: (query: findAll.Query) => string;
 }
 export declare function create(connection: IConnection, data: create.Input): Promise<create.Output>;
 export declare namespace create {
-    type Input = Resolved<ICategoryCard.ICreate>;
+    type Input = Primitive<ICategoryCard.ICreate>;
     type Output = Primitive<IResponse<ICategoryCard.IResponse>>;
     const METADATA: {
         readonly method: "POST";
@@ -32,7 +32,7 @@ export declare namespace create {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: 201;
+        readonly status: null;
     };
     const path: () => string;
 }
@@ -47,13 +47,13 @@ export declare namespace detail {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: 200;
+        readonly status: null;
     };
     const path: (id: string) => string;
 }
 export declare function update(connection: IConnection, id: string, data: update.Input): Promise<update.Output>;
 export declare namespace update {
-    type Input = Resolved<ICategoryCard.IUpdate>;
+    type Input = Primitive<ICategoryCard.IUpdate>;
     type Output = Primitive<IResponse<ICategoryCard.IResponse>>;
     const METADATA: {
         readonly method: "PUT";
@@ -66,7 +66,7 @@ export declare namespace update {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: 200;
+        readonly status: null;
     };
     const path: (id: string) => string;
 }
@@ -81,7 +81,7 @@ export declare namespace $delete {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: 200;
+        readonly status: null;
     };
     const path: (id: string) => string;
 }

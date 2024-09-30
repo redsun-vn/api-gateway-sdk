@@ -14,7 +14,7 @@ export declare namespace findCompleted {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: 200;
+        readonly status: null;
     };
     const path: (query: findCompleted.Query) => string;
 }

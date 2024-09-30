@@ -1,9 +1,9 @@
-import type { IConnection, Resolved, Primitive } from "@nestia/fetcher";
+import type { IConnection, Primitive } from "@nestia/fetcher";
 import type { IResponse } from "../../../../libs/shared/src/types/common.type";
 import type { ICombiningPromotion } from "../../../../libs/shared/src/types/order-service/icombining-promotion.type";
 export declare function create(connection: IConnection, input: create.Input): Promise<create.Output>;
 export declare namespace create {
-    type Input = Resolved<ICombiningPromotion.ICreateCombiningPromotion>;
+    type Input = Primitive<ICombiningPromotion.ICreateCombiningPromotion>;
     type Output = Primitive<IResponse<ICombiningPromotion.IDetailCombiningPromotionResponse>>;
     const METADATA: {
         readonly method: "POST";
@@ -16,7 +16,7 @@ export declare namespace create {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: 201;
+        readonly status: null;
     };
     const path: () => string;
 }
@@ -31,7 +31,7 @@ export declare namespace $delete {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: 200;
+        readonly status: null;
     };
     const path: (id: string) => string;
 }

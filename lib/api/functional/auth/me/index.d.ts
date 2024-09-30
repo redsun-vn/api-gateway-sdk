@@ -12,7 +12,7 @@ export declare namespace getMe {
             readonly type: "application/json";
             readonly encrypted: false;
         };
-        readonly status: 200;
+        readonly status: null;
     };
     const path: () => string;
 }

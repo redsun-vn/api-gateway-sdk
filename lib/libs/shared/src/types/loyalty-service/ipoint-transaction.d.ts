@@ -4,6 +4,7 @@ export declare namespace IPointTransaction {
     interface ICreate {
         partner_id: string | number;
         points: number;
+        resource?: string;
         transactionType: string & POINT_TRANSACTION_TYPE_ENUM;
         program_id?: string | number;
         reward_id?: string | number;
@@ -14,6 +15,7 @@ export declare namespace IPointTransaction {
         partner_id: string | number;
         points: number;
         transactionType: string | number;
+        resource?: string | null;
         program_id?: string | number | null;
         reward_id?: string | number | null;
         description?: string | null;
