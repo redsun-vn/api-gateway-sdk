@@ -32,7 +32,7 @@ export declare namespace IPaymentLink {
         code: string;
         expiredAt?: string | null;
         checkout?: ICheckout.ICheckoutResponse;
-        bankAccount?: IBankAccount.IBankAccountResponse;
+        bankAccount?: IBankAccount.IBankAccountResponse | null;
         payment?: IPayment.IPaymentResponse;
     }
 }
