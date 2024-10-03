@@ -5,7 +5,7 @@ import { IPayment } from './ipayment.type';
 import { BaseResponse } from '../common.type';
 export declare namespace IPaymentLink {
     interface IPaymentLinkCreate {
-        shop_id: number & tags.Type<'uint64'>;
+        shop_id?: number & tags.Type<'uint64'>;
         order_id: number & tags.Type<'uint64'>;
         bank_account_id?: number & tags.Type<'uint64'>;
         checkout_id: number & tags.Type<'uint64'>;
