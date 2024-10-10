@@ -1,3 +1,4 @@
+/// <reference types="multer" />
 import { tags } from 'typia';
 import { BaseResponse } from './common.type';
 import { IPartnerTag } from './ipartner-tag';
@@ -29,6 +30,11 @@ export declare namespace IPartner {
         note?: string;
         gender?: number & tags.Maximum<1>;
         tagIds?: string[];
+    }
+    type TypePartnerUpload = 'customer' | 'supplier';
+    interface IUpload {
+        fileUpload: Express.Multer.File;
+        type: TypePartnerUpload;
     }
     type IUpdate = Partial<ICreate>;
     interface IPartnerResponse extends BaseResponse {
