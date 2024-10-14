@@ -18,6 +18,13 @@ export declare namespace IStaff {
         password: string & tags.MinLength<6>;
         phone: string;
     }
+    interface IInvite {
+        phone: string;
+        shopName: string;
+        shopId?: string;
+        branchIds?: number[];
+        groupIds?: number[];
+    }
     interface IStaffResponse extends BaseResponse, BaseProfileResponse {
         shop_id: string | null;
         user_id: string;
