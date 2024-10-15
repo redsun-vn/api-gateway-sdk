@@ -18,7 +18,7 @@ export declare namespace IStaff {
         password: string & tags.MinLength<6>;
         phone: string;
     }
-    interface ICreate2 {
+    interface ICreate2 extends IStaffProfile.ICreate {
         permission?: string[];
         groups?: string[];
         branches?: string[];
