@@ -20,12 +20,17 @@ export declare const ELASTIC_INDEX: {
     CONDITION: string;
     DOMAIN: string;
     DRAF_ORDER: string;
+    DEPARTMENT: string;
     EMENU_QR_ITEM: string;
     EMENU_CONFIG: string;
     FULFILLMENT: string;
     FULFILLMENT_ORDER: string;
     GROUP: string;
     GROUP_WAREHOUSE: string;
+    HR_ATTENDANCE_DETAIL: string;
+    HR_ATTENDANCE_SHIFT: string;
+    HR_ATTENDANCE_QR: string;
+    HR_ATTENDANCE_REQUEST: string;
     INGREDIENT: string;
     KDS_ORDER_ITEM: string;
     LINE_ITEM: string;

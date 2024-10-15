@@ -14,3 +14,5 @@ export * from './reservation';
 export * from './inventory';
 export * from './fulfillment';
 export * from './emenu';
+export * from './department';
+export * from './attendance';

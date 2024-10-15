@@ -22,6 +22,7 @@ export * as uom_uoms from "./uom_uoms";
 export * as reservation from "./reservation";
 export * as reservations from "./reservations";
 export * as api_keys from "./api_keys";
+export * as hr from "./hr";
 export * as branches from "./branches";
 export * as brands from "./brands";
 export * as domains from "./domains";
