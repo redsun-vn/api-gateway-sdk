@@ -17,3 +17,22 @@ export declare namespace findAll {
     };
     const path: (query: findAll.Query) => string;
 }
+export declare function create(connection: IConnection, data: create.Input): Promise<create.Output>;
+export declare namespace create {
+    type Input = Resolved<IStaff.ICreate2>;
+    type Output = Primitive<IResponse<IStaff.IStaffResponse>>;
+    const METADATA: {
+        readonly method: "POST";
+        readonly path: "/staffs";
+        readonly request: {
+            readonly type: "application/json";
+            readonly encrypted: false;
+        };
+        readonly response: {
+            readonly type: "application/json";
+            readonly encrypted: false;
+        };
+        readonly status: 201;
+    };
+    const path: () => string;
+}

@@ -18,6 +18,14 @@ export declare namespace IStaff {
         password: string & tags.MinLength<6>;
         phone: string;
     }
+    interface ICreate2 {
+        permission?: string[];
+        groups?: string[];
+        branches?: string[];
+        active?: boolean;
+        shopId: string;
+        userId: string;
+    }
     interface IInvite {
         phone: string;
         shopName: string;
