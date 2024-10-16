@@ -32,6 +32,7 @@ export declare namespace IShopConfig {
         lockScreenTimeout?: number & tags.Type<'int32'>;
         isInventoryAlert?: boolean;
         amountInventoryAlert?: number & tags.Type<'uint32'>;
+        attendanceEnabled?: boolean;
     }
     interface IUpdate extends Partial<ICreate> {
     }
@@ -67,5 +68,6 @@ export declare namespace IShopConfig {
         lockScreenTimeout?: number | string | null;
         isInventoryAlert?: boolean;
         amountInventoryAlert?: number | string | null;
+        attendanceEnabled?: boolean;
     }
 }

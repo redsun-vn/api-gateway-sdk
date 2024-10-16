@@ -13,6 +13,7 @@ export declare namespace IStaff {
         prefix_code?: string;
         branches?: string[];
         active?: boolean;
+        department_id?: string;
     }
     interface ICreateRegister {
         password: string & tags.MinLength<6>;
@@ -44,6 +45,7 @@ export declare namespace IStaff {
         devices?: null | IUserDevice.IUserDeviceResponse[];
         sessions?: null | IPosSession.IPosSessionResponse[];
         branches?: null | IBranch.IBranchResponse[];
+        department_id?: number | string | null;
     }
     interface IRegisterResponse extends BaseResponse {
         user_id: string;
@@ -69,6 +71,7 @@ export declare namespace IStaff {
         groups?: string[];
         branches?: string[];
         active?: boolean;
+        department_id?: string;
     }
     interface IPermissionMapping {
         permission: string[];
