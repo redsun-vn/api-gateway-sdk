@@ -5,6 +5,7 @@ import { IAttendanceShift } from './shift';
 export declare namespace IAttendanceDetail {
     interface IRequestCreate {
         branch_id: number;
+        qr_uuid: string;
         attendance_type: string;
         shift_id: number | string;
         in_latitude?: string;

@@ -63,4 +63,13 @@ export declare namespace IShop {
         brand?: null | IBrand.IBrandResponse;
         domain?: null | IDomain.IDomainResponse;
     }
+    interface IShopReportResponse {
+        active: boolean;
+        totalShop: number;
+        day?: number;
+        week?: number;
+        month?: number;
+        quarter?: number;
+        year?: number;
+    }
 }
