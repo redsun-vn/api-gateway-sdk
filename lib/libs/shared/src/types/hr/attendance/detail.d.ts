@@ -41,6 +41,11 @@ export declare namespace IAttendanceDetail {
         out_device_info?: string;
         check_out: string;
     }
+    interface IUpdateTime {
+        check_out?: string;
+        check_in?: string;
+        updated_by_id?: string;
+    }
     interface IResponse extends BaseResponse {
         shop_id: number | string;
         branch_id: number | string;
