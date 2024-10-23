@@ -67,11 +67,11 @@ export declare namespace IStaff {
     }
     interface IUpdate extends IStaffProfile.IUpdate {
         password?: string & tags.MinLength<6>;
-        permission?: string[];
-        groups?: string[];
-        branches?: string[];
+        permission?: string[] | null;
+        groups?: string[] | null;
+        branches?: string[] | null;
         active?: boolean;
-        department_id?: string;
+        department_id?: string | null;
     }
     interface IPermissionMapping {
         permission: string[];
