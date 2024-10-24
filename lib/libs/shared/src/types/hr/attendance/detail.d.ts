@@ -45,6 +45,7 @@ export declare namespace IAttendanceDetail {
         check_out?: string;
         check_in?: string;
         updated_by_id?: string;
+        description?: string;
     }
     interface IResponse extends BaseResponse {
         shop_id: number | string;

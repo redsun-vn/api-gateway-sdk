@@ -18,6 +18,22 @@ export declare namespace findAll {
     };
     const path: (query: findAll.Query) => string;
 }
+export declare function $export(connection: IConnection, query: $export.Query): Promise<$export.Output>;
+export declare namespace $export {
+    type Query = Resolved<IQuery>;
+    type Output = Primitive<any>;
+    const METADATA: {
+        readonly method: "GET";
+        readonly path: "/shop/hr/attendance/details/export";
+        readonly request: null;
+        readonly response: {
+            readonly type: "application/json";
+            readonly encrypted: false;
+        };
+        readonly status: 200;
+    };
+    const path: (query: $export.Query) => string;
+}
 export declare function findOne(connection: IConnection, id: string): Promise<findOne.Output>;
 export declare namespace findOne {
     type Output = Primitive<IResponse<IAttendanceDetail.IResponse>>;
