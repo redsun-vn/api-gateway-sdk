@@ -75,5 +75,8 @@ export declare namespace IAttendanceDetail {
         worked_hours: number | string | null;
         is_late_in: boolean;
         is_early_out: boolean;
+        time_worked?: string | null;
+        time_late_in?: string | null;
+        time_early_out?: string | null;
     }
 }
