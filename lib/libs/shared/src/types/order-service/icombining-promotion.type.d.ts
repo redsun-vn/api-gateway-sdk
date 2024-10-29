@@ -3,6 +3,7 @@ import { BaseResponse } from '../common.type';
 import { IOrder } from './iorder.type';
 import { IDrafOrder } from './idraf-order.type';
 import { CombiningPromotionStatus, OrderCombiningPromotionType } from '../../enum';
+import { ISaleOrder } from './isale-order';
 export declare namespace ICombiningPromotion {
     interface ICreateCombiningPromotion {
         shop_id?: number & tags.Type<'uint64'>;
@@ -10,6 +11,7 @@ export declare namespace ICombiningPromotion {
         coupon_id?: number & tags.Type<'uint64'>;
         order_id?: number & tags.Type<'uint64'>;
         draf_order_id?: number & tags.Type<'uint64'>;
+        sale_order_id?: number & tags.Type<'uint64'>;
         line_item_id?: number & tags.Type<'uint64'>;
         variant_x_id?: number & tags.Type<'uint64'>;
         variant_y_id?: number & tags.Type<'uint64'>;
@@ -29,6 +31,7 @@ export declare namespace ICombiningPromotion {
         coupon_id?: number | string | null;
         program_id?: number | string | null;
         draf_order_id?: number | string | null;
+        sale_order_id?: number | string | null;
         line_item_id?: number | string | null;
         variant_x_id?: number | string | null;
         variant_y_id?: number | string | null;
@@ -41,5 +44,6 @@ export declare namespace ICombiningPromotion {
         type: OrderCombiningPromotionType;
         order?: IOrder.IDetailOrderResponse;
         drafOrder?: IDrafOrder.IDetailDrafOrderResponse;
+        saleOrder?: ISaleOrder.IResponse;
     }
 }

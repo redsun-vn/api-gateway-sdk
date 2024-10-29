@@ -1,3 +1,5 @@
+export * from './debt';
+export * from './invoice';
 export declare enum CARD_TYPE {
     PAYMENT = "payment",
     RECEIPT = "receipt"

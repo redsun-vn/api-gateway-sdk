@@ -10,3 +10,9 @@ export declare enum DraftOrdersPermission {
     UPDATE = "order_draft-update",
     DELETE = "order_draft-delete"
 }
+export declare enum SaleOrdersPermission {
+    VIEW = "order_sale-view",
+    CREATE = "order_sale-create",
+    UPDATE = "order_sale-update",
+    DELETE = "order_sale-delete"
+}

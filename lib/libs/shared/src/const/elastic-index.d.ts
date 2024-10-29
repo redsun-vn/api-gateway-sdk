@@ -21,6 +21,7 @@ export declare const ELASTIC_INDEX: {
     DOMAIN: string;
     DRAF_ORDER: string;
     DEPARTMENT: string;
+    DEBT: string;
     EMENU_QR_ITEM: string;
     EMENU_CONFIG: string;
     FULFILLMENT: string;
@@ -32,6 +33,7 @@ export declare const ELASTIC_INDEX: {
     HR_ATTENDANCE_QR: string;
     HR_ATTENDANCE_REQUEST: string;
     INGREDIENT: string;
+    INVOICE: string;
     KDS_ORDER_ITEM: string;
     LINE_ITEM: string;
     LINE_ITEM_TAX_LINE: string;
@@ -67,6 +69,10 @@ export declare const ELASTIC_INDEX: {
     PRODUCT_IMAGE: string;
     PRODUCT_BRAND: string;
     PRODUCT_ATTRIBUTE: string;
+    PAYMENT_TERM: string;
+    PAYMENT_REMINDER: string;
+    PARTNER_CREDIT_RATING: string;
+    PARTNER_CREDIT_RATING_HISTORY: string;
     RESERVATION: string;
     RESERVATION_FLOOR_PLAN: string;
     RESERVATION_ROOM: string;
@@ -103,6 +109,7 @@ export declare const ELASTIC_INDEX: {
     STOCK_ROUTER: string;
     STOCK_RULE: string;
     SUBSCRIPTION: string;
+    SALE_ORDER: string;
     UOM: string;
     UOM_CATEGORY: string;
     UNIT: string;

@@ -5,6 +5,7 @@ import { ILineItemTaxLine } from './iline-item-tax-line.type';
 import { IOrder } from './iorder.type';
 import { IDrafOrder } from './idraf-order.type';
 import { ILineItemSelectionGroup } from './iline-item-selection-group.type';
+import { ISaleOrder } from './isale-order';
 export declare namespace ILineItem {
     interface IInputLineItem {
         product_id: number & tags.Type<'uint64'>;
@@ -51,6 +52,7 @@ export declare namespace ILineItem {
     interface ICreateLineItem extends IInputLineItem {
         order_id?: number & tags.Type<'uint64'>;
         draf_order_id?: number & tags.Type<'uint64'>;
+        sale_order_id?: number & tags.Type<'uint64'>;
     }
     interface ICreateLineItemKafka extends ICreateLineItem {
         shop_id: number & tags.Type<'uint64'>;
@@ -104,6 +106,7 @@ export declare namespace ILineItem {
         reward_id?: number | string | null;
         order_id?: number | string | null;
         draf_order_id?: number | string | null;
+        sale_order_id?: number | string | null;
         isGiftcard?: boolean;
         isGift?: boolean;
         isReturn?: boolean;
@@ -143,5 +146,6 @@ export declare namespace ILineItem {
         drafOrder?: IDrafOrder.IDetailDrafOrderResponse | null;
         lineItemTaxLines?: ILineItemTaxLine.IDetailLineItemTaxLineResponse[] | null;
         selectionGroups?: ILineItemSelectionGroup.IDetailLineItemSelectionGroupResponse[] | null;
+        saleOrder?: ISaleOrder.IResponse | null;
     }
 }

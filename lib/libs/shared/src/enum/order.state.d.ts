@@ -135,3 +135,10 @@ export declare enum KDSState {
     RECALLED = "recalled",
     RETURNED = "returned"
 }
+export declare enum SaleOrderStatus {
+    DRAFT = "draft",
+    SENT = "sent",
+    SALE_ORDER = "sale",
+    DONE = "done",
+    CANCEL = "cancel"
+}
