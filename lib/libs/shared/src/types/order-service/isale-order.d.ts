@@ -43,6 +43,10 @@ export declare namespace ISaleOrder {
         warehouse_id: number & tags.Type<'uint64'>;
         price_book_id?: number & tags.Type<'uint64'>;
     }
+    interface IQuerySaleOrder {
+        phone?: string;
+        email?: string;
+    }
     interface IResponse extends BaseResponse {
         shop_id: string | number;
         branch_id: string | number | null;
