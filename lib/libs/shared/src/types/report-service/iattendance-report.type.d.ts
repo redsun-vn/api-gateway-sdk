@@ -20,6 +20,7 @@ export declare namespace IAttendanceReport {
     interface IOverviewReport {
         shop_id: number;
         branch_id?: number;
+        user_id?: string;
         timeOfDay?: string;
         attendanceType?: string;
         shift_id?: number;
