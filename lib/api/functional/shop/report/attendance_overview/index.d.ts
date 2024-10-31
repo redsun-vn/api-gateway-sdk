@@ -17,3 +17,19 @@ export declare namespace findAll {
     };
     const path: (query: findAll.Query) => string;
 }
+export declare function detail(connection: IConnection, userId: string, query: detail.Query): Promise<detail.Output>;
+export declare namespace detail {
+    type Query = Resolved<IQuery>;
+    type Output = Primitive<IResponse<IResponsePagination<IAttendanceReport.IOverviewReport>>>;
+    const METADATA: {
+        readonly method: "GET";
+        readonly path: "/shop/report/attendance-overview/:user_id";
+        readonly request: null;
+        readonly response: {
+            readonly type: "application/json";
+            readonly encrypted: false;
+        };
+        readonly status: 200;
+    };
+    const path: (userId: string, query: detail.Query) => string;
+}
