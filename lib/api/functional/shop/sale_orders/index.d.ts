@@ -102,3 +102,18 @@ export declare namespace update {
     };
     const path: (id: string) => string;
 }
+export declare function cancel(connection: IConnection, id: string): Promise<cancel.Output>;
+export declare namespace cancel {
+    type Output = Primitive<IResponse<ISaleOrder.IResponse>>;
+    const METADATA: {
+        readonly method: "POST";
+        readonly path: "/shop/sale-orders/:id/cancel";
+        readonly request: null;
+        readonly response: {
+            readonly type: "application/json";
+            readonly encrypted: false;
+        };
+        readonly status: 201;
+    };
+    const path: (id: string) => string;
+}
