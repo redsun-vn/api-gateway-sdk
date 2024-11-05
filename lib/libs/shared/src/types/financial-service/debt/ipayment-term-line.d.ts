@@ -11,6 +11,9 @@ export declare namespace IPaymentTermLine {
     interface ICreate extends ICreateBase {
         term_id: number & tags.Type<'uint64'>;
     }
+    interface ICreateMultiple {
+        lines: ICreateBase[];
+    }
     type IUpdate = Partial<ICreateBase>;
     interface IResponse extends BaseResponse {
         term_id: number | string;

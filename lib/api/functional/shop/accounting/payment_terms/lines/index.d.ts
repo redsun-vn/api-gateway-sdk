@@ -1,6 +1,7 @@
 import type { IConnection, Resolved, Primitive } from "@nestia/fetcher";
 import type { IResponse } from "../../../../../../libs/shared/src/types/common.type";
 import type { IPaymentTermLine } from "../../../../../../libs/shared/src/types/financial-service/debt/ipayment-term-line";
+export * as multiple from "./multiple";
 export declare function createLine(connection: IConnection, id: string, data: createLine.Input): Promise<createLine.Output>;
 export declare namespace createLine {
     type Input = Resolved<IPaymentTermLine.ICreateBase>;
