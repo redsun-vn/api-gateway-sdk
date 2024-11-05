@@ -2,7 +2,6 @@ import { tags } from 'typia';
 import { BaseResponse } from '../common.type';
 import { ILineItem } from './iline-item.type';
 import { IOrder } from './iorder.type';
-import { SaleOrderStatus } from '../../enum';
 import { ICombiningPromotion } from './icombining-promotion.type';
 import { IAdditionalFee } from './iadditional-fee.type';
 export declare namespace ISaleOrder {
@@ -61,11 +60,11 @@ export declare namespace ISaleOrder {
         shipping_address_uuid: string | null;
         order_id: string | number | null;
         idempotency_key: string | number;
-        uuid: string;
-        code: string;
-        email: string;
-        currencyCode: string;
-        phone: string;
+        uuid: string | null;
+        code: string | null;
+        email: string | null;
+        currencyCode: string | null;
+        phone: string | null;
         note: string | null;
         discountCode: string | null;
         total: string | number;
@@ -77,15 +76,15 @@ export declare namespace ISaleOrder {
         discountTotal: string | number | null;
         shippingTotal: string | number;
         totalWeight: string | number;
-        status: SaleOrderStatus;
+        status: string;
         completedAt: string | null;
         canceledAt: string | null;
         expectedDate: string | null;
         dateOrder: string | null;
         isExpired: boolean;
-        order: IOrder.IDetailOrderResponse | null;
-        lineItems: ILineItem.IDetailLineItemResponse[] | null;
-        combiningPromotions: ICombiningPromotion.IDetailCombiningPromotionResponse[] | null;
+        order?: IOrder.IDetailOrderResponse | null;
+        lineItems?: ILineItem.IDetailLineItemResponse[] | null;
+        combiningPromotions?: ICombiningPromotion.IDetailCombiningPromotionResponse[] | null;
         additionalFees?: IAdditionalFee.IDetailAdditionalFeeResponse[] | null;
     }
 }

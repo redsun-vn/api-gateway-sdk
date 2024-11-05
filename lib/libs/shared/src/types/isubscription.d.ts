@@ -29,4 +29,17 @@ export declare namespace ISubscription {
         trialEndsAt: string | Date | null;
         packagePlans?: IPackagePlan.IResponse[];
     }
+    interface ISubscriptionReportResponse {
+        shop_id?: number;
+        package_id: number;
+        packageLevel?: number;
+        packagePrice?: number;
+        paymentPrice?: number;
+        day?: number;
+        week?: number;
+        month?: number;
+        quarter?: number;
+        year?: number;
+        date?: string;
+    }
 }
