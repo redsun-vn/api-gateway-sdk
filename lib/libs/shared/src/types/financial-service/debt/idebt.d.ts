@@ -4,8 +4,8 @@ import { DEBT_TYPE, DEBT_STATUS, DEBT_PAYMENT_STATUS, DEBT_SOURCE } from '../../
 import { IPaymentTerm } from './ipayment-term';
 export declare namespace IDebt {
     interface ICreate {
-        branch_id?: number & tags.Type<'uint64'>;
-        responsible_uuid?: string & tags.Format<'uuid'>;
+        branch_id?: (number & tags.Type<'uint64'>);
+        responsible_uuid?: (string & tags.Format<'uuid'>) | null;
         created_by_uuid: string & tags.Format<'uuid'>;
         partner_uuid: string & tags.Format<'uuid'>;
         source_id?: number & tags.Type<'uint64'>;
@@ -16,10 +16,10 @@ export declare namespace IDebt {
         amount?: number;
         debt_date?: string & tags.Format<'date-time'>;
         due_date: string & tags.Format<'date-time'>;
-        payment_term_id?: number & tags.Type<'uint64'>;
-        payment_method_id?: number & tags.Type<'uint64'>;
-        invoice_id?: number & tags.Type<'uint64'>;
-        sale_channel_id?: number & tags.Type<'uint64'>;
+        payment_term_id?: (number & tags.Type<'uint64'>) | null;
+        payment_method_id?: (number & tags.Type<'uint64'>) | null;
+        invoice_id?: (number & tags.Type<'uint64'>) | null;
+        sale_channel_id?: (number & tags.Type<'uint64'>) | null;
         payment_amount?: number;
         payment_status?: DEBT_PAYMENT_STATUS;
         payment_date?: string & tags.Format<'date-time'>;
@@ -46,7 +46,7 @@ export declare namespace IDebt {
         debt_date: string | null;
         due_date: string | null;
         payment_term_id: number | string | null;
-        payment_term: IPaymentTerm.IResponse | null;
+        payment_term?: IPaymentTerm.IResponse | null;
         payment_method_id: number | string | null;
         invoice_id: number | string | null;
         sale_channel_id: number | string | null;
