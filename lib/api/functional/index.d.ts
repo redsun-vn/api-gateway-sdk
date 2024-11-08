@@ -7,6 +7,7 @@ export * as comments from "./comments";
 export * as order from "./order";
 export * as orders from "./orders";
 export * as sale_orders from "./sale_orders";
+export * as partners from "./partners";
 export * as product from "./product";
 export * as pricebook from "./pricebook";
 export * as products from "./products";

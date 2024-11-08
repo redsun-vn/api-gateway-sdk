@@ -15,3 +15,4 @@ export declare const fieldDataReportMapping: FieldMappingExternalType[];
 export interface IQueryReportExport extends IQuery {
     fieldExport?: string;
 }
+export declare const REPORT_CACHE_TIME: number;

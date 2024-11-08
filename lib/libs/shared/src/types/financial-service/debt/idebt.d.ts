@@ -4,7 +4,7 @@ import { DEBT_TYPE, DEBT_STATUS, DEBT_PAYMENT_STATUS, DEBT_SOURCE } from '../../
 import { IPaymentTerm } from './ipayment-term';
 export declare namespace IDebt {
     interface ICreate {
-        branch_id?: (number & tags.Type<'uint64'>);
+        branch_id?: number & tags.Type<'uint64'>;
         responsible_uuid?: (string & tags.Format<'uuid'>) | null;
         created_by_uuid: string & tags.Format<'uuid'>;
         partner_uuid: string & tags.Format<'uuid'>;
