@@ -11,6 +11,7 @@ export * as partners from "./partners";
 export * as product from "./product";
 export * as pricebook from "./pricebook";
 export * as products from "./products";
+export * as uom_uoms from "./uom_uoms";
 export * as variants from "./variants";
 export * as e_menu from "./e_menu";
 export * as qr_order from "./qr_order";
