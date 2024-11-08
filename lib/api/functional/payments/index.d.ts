@@ -50,3 +50,22 @@ export declare namespace create {
     };
     const path: () => string;
 }
+export declare function update(connection: IConnection, data: update.Input, id: string): Promise<update.Output>;
+export declare namespace update {
+    type Input = Resolved<IPayment.IUpdatePayment>;
+    type Output = Primitive<IResponse<IPayment.IPaymentResponse>>;
+    const METADATA: {
+        readonly method: "PUT";
+        readonly path: "/payments/:id";
+        readonly request: {
+            readonly type: "application/json";
+            readonly encrypted: false;
+        };
+        readonly response: {
+            readonly type: "application/json";
+            readonly encrypted: false;
+        };
+        readonly status: 200;
+    };
+    const path: (id: string) => string;
+}
