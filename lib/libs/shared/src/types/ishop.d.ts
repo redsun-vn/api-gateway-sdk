@@ -72,4 +72,20 @@ export declare namespace IShop {
         quarter?: number;
         year?: number;
     }
+    interface IPublicShopResponse extends BaseResponse, BaseProfileResponse {
+        name: string;
+        zipcode?: string | null;
+        active: boolean;
+        needConfig: boolean;
+        multiBranchEnabled: boolean;
+        defaultCurrencyCode: string;
+        business_type_id?: null | string;
+        shopOwnerId: string;
+        metadata?: string | null;
+        businessType?: null | IBusinessType.IBusinessTypeResponse;
+        brand?: null | IBrand.IBrandResponse;
+        domain?: null | IDomain.IDomainResponse;
+        config?: null | IShopConfig.IShopConfigResponse;
+        branches?: null | IBranch.IBranchResponse[];
+    }
 }
