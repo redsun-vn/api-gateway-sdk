@@ -7,3 +7,4 @@ export * from './ibank-account.type';
 export * from './ipayment-provider.type';
 export * from './ipayment-link.type';
 export * from './ivnpay-qrcode.type';
+export * from './ivnpay-web.type';

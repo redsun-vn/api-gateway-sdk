@@ -38,5 +38,6 @@ export * as payment from "./payment";
 export * as payment_links from "./payment_links";
 export * as payments from "./payments";
 export * as vnpay_qrcode from "./vnpay_qrcode";
+export * as vnpay_web from "./vnpay_web";
 export * as notify from "./notify";
 export * as debts from "./debts";
