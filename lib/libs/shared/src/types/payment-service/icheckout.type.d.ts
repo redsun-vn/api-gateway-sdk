@@ -14,6 +14,7 @@ export declare namespace ICheckout {
         totalDiscount?: number;
         totalTax?: number;
         note?: string;
+        target?: string;
     }
     interface IUpdateCheckout {
         currency?: string;
@@ -38,5 +39,6 @@ export declare namespace ICheckout {
         totalDiscount: number | string;
         totalTax: number | string;
         note?: string;
+        target?: string | null;
     }
 }
