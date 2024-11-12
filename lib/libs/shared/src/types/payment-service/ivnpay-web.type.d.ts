@@ -1,6 +1,6 @@
 import { tags } from 'typia';
 import { BaseResponse } from '../common.type';
-import { VnpCardType } from '@redsun-vn/vnpay';
+import { VnpCardType, Bank as IVNPayBank } from '@redsun-vn/vnpay';
 export type TShopIdSiPos = 'sipos';
 export declare namespace IVNPayWebConfig {
     interface ICreate {
@@ -39,6 +39,7 @@ export declare namespace IVNPayWeb {
         ip_address: string & tags.Format<'ipv4'>;
         return_url: string & tags.Format<'url'>;
         order_info: string;
+        bank_code: string;
     }
     interface ICreatePublicPaymentURL {
         shop_id: number & tags.Type<'uint64'>;
@@ -46,6 +47,7 @@ export declare namespace IVNPayWeb {
         ip_address: string & tags.Format<'ipv4'>;
         return_url: string & tags.Format<'url'>;
         order_info: string;
+        bank_code: string;
     }
     interface IResponsePaymentURL {
         payment_url: string & tags.Format<'url'>;
@@ -66,4 +68,5 @@ export declare namespace IVNPayWeb {
         vnp_SecureHashType?: string;
         vnp_SecureHash?: string;
     }
+    type IBank = IVNPayBank;
 }
