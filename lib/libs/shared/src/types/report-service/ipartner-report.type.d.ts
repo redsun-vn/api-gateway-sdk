@@ -1,5 +1,5 @@
 export declare namespace IPartnerReport {
-    interface IPartnerReportResponse {
+    interface IPartnerOrderReportResponse {
         partner_id: number | string;
         shop_id: number | string;
         lastDateOrder: string | null;
@@ -14,5 +14,16 @@ export declare namespace IPartnerReport {
             product_id: string | number;
             variant_id: string | number;
         }[] | null;
+    }
+    interface IPartnerReportResponse {
+        shop_id: number | string;
+        branch_id: number | string;
+        province?: string;
+        totalPartner: number;
+        day?: number;
+        week?: number;
+        month?: number;
+        quarter?: number;
+        year?: number;
     }
 }

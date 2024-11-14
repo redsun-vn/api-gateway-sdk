@@ -1,6 +1,7 @@
 import type { IConnection, Primitive } from "@nestia/fetcher";
 import type { IResponse } from "../../../../../libs/shared/src/types/common.type";
 import type { IReportShopInActive } from "../../../../../libs/shared/src/types/report-service/index";
+export * as latest from "./latest";
 export declare function getShopInActive(connection: IConnection, subtractNum: number): Promise<getShopInActive.Output>;
 export declare namespace getShopInActive {
     type Output = Primitive<IResponse<IReportShopInActive>>;
