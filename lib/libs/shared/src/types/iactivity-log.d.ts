@@ -43,4 +43,11 @@ export declare namespace IActivityLog {
         resData: CustomDataType | boolean;
         context: ExecutionContext;
     }
+    interface IQueryLatestActivity {
+        shopIds: string;
+    }
+    interface ILatestActivity {
+        shop_id: string | number;
+        latest_time: string;
+    }
 }
