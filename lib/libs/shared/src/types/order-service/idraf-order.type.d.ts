@@ -16,7 +16,7 @@ export declare namespace IDrafOrder {
         shipping_method_id?: number & tags.Type<'uint64'>;
         order_id?: (number & tags.Type<'uint64'>) | null;
         partner_id?: string & tags.Format<'uuid'>;
-        shift_id?: string & tags.Format<'uuid'>;
+        shift_id?: number & tags.Type<'uint64'>;
         currencyCode?: string;
         discountCode?: string;
         code?: string;
