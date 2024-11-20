@@ -8,4 +8,5 @@ export * as template from "./template";
 export * as selection_groups from "./selection_groups";
 export * as selections from "./selections";
 export * as units from "./units";
+export * as variant_period_pricings from "./variant_period_pricings";
 export * as variants from "./variants";

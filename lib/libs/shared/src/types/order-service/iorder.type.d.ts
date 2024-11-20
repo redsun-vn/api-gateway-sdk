@@ -13,6 +13,7 @@ export declare namespace IOrder {
         pos_session_id?: string & tags.Format<'uuid'>;
         sale_channel_id?: number & tags.Type<'uint64'>;
         price_book_id?: number & tags.Type<'uint64'>;
+        shift_id?: number & tags.Type<'uint64'>;
         billing_address_id?: number & tags.Type<'uint64'>;
         shipping_address_id?: number & tags.Type<'uint64'>;
         shipping_method_id?: number & tags.Type<'uint64'>;
@@ -88,6 +89,7 @@ export declare namespace IOrder {
         draf_order_id?: number | string | null;
         partner_id?: null | number | string;
         warehouse_id?: null | number | string;
+        shift_id?: number | string | null;
         idempotency_key: string | number;
         code?: string | null;
         uuid?: string;

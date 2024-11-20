@@ -16,6 +16,7 @@ export declare namespace IDrafOrder {
         shipping_method_id?: number & tags.Type<'uint64'>;
         order_id?: (number & tags.Type<'uint64'>) | null;
         partner_id?: string & tags.Format<'uuid'>;
+        shift_id?: string & tags.Format<'uuid'>;
         currencyCode?: string;
         discountCode?: string;
         code?: string;
@@ -55,6 +56,7 @@ export declare namespace IDrafOrder {
         shipping_method_id?: string | number | null;
         partner_id?: string | null;
         order_id?: string | number | null;
+        shift_id?: number | string | null;
         uuid?: string | number | null;
         idempotency_key: string | number;
         code?: string;

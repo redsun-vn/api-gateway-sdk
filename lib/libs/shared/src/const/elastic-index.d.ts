@@ -77,6 +77,7 @@ export declare const ELASTIC_INDEX: {
     RESERVATION_FLOOR_PLAN: string;
     RESERVATION_ROOM: string;
     RESERVATION_TABLE: string;
+    RECURRENCE_PERIOD_CONFIG: string;
     TABLE_RESERVATION: string;
     TAG: string;
     TAX: string;
@@ -116,4 +117,5 @@ export declare const ELASTIC_INDEX: {
     USER_DEVICE: string;
     WAREHOUSE: string;
     VARIANT: string;
+    VARIANT_PERIOD_PRICING: string;
 };

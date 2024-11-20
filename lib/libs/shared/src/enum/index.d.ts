@@ -12,3 +12,10 @@ export * from './financial-service';
 export * from './vnpay-qrcode';
 export * from './permissions';
 export * from './hr';
+export declare enum RecurrencePeriod {
+    HOURLY = "HOURLY",
+    DAILY = "DAILY",
+    WEEKLY = "WEEKLY",
+    MONTHLY = "MONTHLY",
+    YEARLY = "YEARLY"
+}

@@ -15,6 +15,8 @@ export * as pricebooks from "./pricebooks";
 export * as product_brands from "./product_brands";
 export * as product_packages from "./product_packages";
 export * as products from "./products";
+export * as recurrence_period_configs from "./recurrence_period_configs";
+export * as recurrence_period_configs_default from "./recurrence_period_configs_default";
 export * as tags from "./tags";
 export * as taxes from "./taxes";
 export * as tray_items from "./tray_items";

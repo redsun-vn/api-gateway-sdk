@@ -45,6 +45,8 @@ export declare namespace IProduct {
         description?: string;
         userId?: string;
         isManageInventory?: boolean;
+        isCalculatedByHour?: boolean;
+        isRecurring?: boolean;
     }
     interface ICreateProduct extends IReqCreateProduct {
         shop_id: number & tags.Type<'uint64'>;
@@ -72,6 +74,8 @@ export declare namespace IProduct {
         description?: string;
         userId?: string;
         isManageInventory?: boolean;
+        isCalculatedByHour?: boolean;
+        isRecurring?: boolean;
     }
     interface ITagReponse {
         id: string | number | null;
@@ -108,6 +112,8 @@ export declare namespace IProduct {
         active?: boolean;
         needToCook?: boolean;
         isManageInventory?: boolean;
+        isCalculatedByHour?: boolean;
+        isRecurring?: boolean;
         userId?: string;
         omit?: Array<ProductCopyOmit>;
     }
@@ -150,5 +156,7 @@ export declare namespace IProduct {
         tax?: ITax.IDetailTaxResponse | null;
         manufacturer?: IManufacturer.IDetailManufacturerResponse | null;
         productPackages?: IProductPackage.IDetailProductPackageResponse[] | null;
+        isCalculatedByHour?: boolean;
+        isRecurring?: boolean;
     }
 }

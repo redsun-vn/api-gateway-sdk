@@ -33,6 +33,8 @@ export declare namespace IShopConfig {
         isInventoryAlert?: boolean;
         amountInventoryAlert?: number & tags.Type<'uint32'>;
         attendanceEnabled?: boolean;
+        productPriceByHourEnabled?: boolean;
+        productPriceBlockTime?: number & tags.Type<'uint32'>;
     }
     interface IUpdate extends Partial<ICreate> {
     }
@@ -69,5 +71,7 @@ export declare namespace IShopConfig {
         isInventoryAlert?: boolean;
         amountInventoryAlert?: number | string | null;
         attendanceEnabled?: boolean;
+        productPriceByHourEnabled?: boolean;
+        productPriceBlockTime?: number | string | null;
     }
 }
