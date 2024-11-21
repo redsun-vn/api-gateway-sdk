@@ -7,6 +7,7 @@ export declare namespace IReportOrderItem {
         totalProfit: number;
         branch_id: number | string;
         shop_id: number | string;
+        shift_id?: number | string;
         sale_channel_id: number | string;
         day?: number;
         week?: number;
@@ -20,6 +21,7 @@ export declare namespace IReportOrderItem {
         branch_id: number | string;
         shop_id: number | string;
         sale_channel_id: number | string;
+        shift_id?: number | string;
         totalRevenue: number;
         totalProfit: number;
         totalOrder: number;

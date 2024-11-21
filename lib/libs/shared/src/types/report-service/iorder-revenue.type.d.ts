@@ -5,6 +5,7 @@ export declare namespace IOrderRevenue {
         shop_id: number | string;
         branch_id: number | string;
         sale_channel_id?: number | string;
+        shift_id?: number | string;
         orderStatus: OrderStatus;
         hour?: string;
         date?: string;

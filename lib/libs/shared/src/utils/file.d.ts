@@ -1,5 +1,8 @@
+/// <reference types="express-serve-static-core" />
+/// <reference types="multer" />
+/// <reference types="passport" />
+/// <reference types="request-ip" />
 /// <reference types="node" />
-import { Express } from 'express';
 export declare const IMAGE_MIME_TYPES: string[];
 export declare const PUBLIC_FOLDER = "public";
 export declare const UPLOADS_FOLDER = "uploads";
