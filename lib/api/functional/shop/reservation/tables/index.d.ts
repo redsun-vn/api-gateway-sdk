@@ -1,6 +1,7 @@
 import type { IConnection, Resolved, Primitive } from "@nestia/fetcher";
 import type { IQuery, IResponse, IResponsePagination } from "../../../../../libs/shared/src/types/common.type";
 import type { ITable } from "../../../../../libs/shared/src/types/reservation-service/itable";
+export * as $import from "./$import";
 export declare function findAll(connection: IConnection, query: findAll.Query): Promise<findAll.Output>;
 export declare namespace findAll {
     type Query = Resolved<IQuery>;
@@ -16,6 +17,22 @@ export declare namespace findAll {
         readonly status: 200;
     };
     const path: (query: findAll.Query) => string;
+}
+export declare function $export(connection: IConnection, query: $export.Query): Promise<$export.Output>;
+export declare namespace $export {
+    type Query = Resolved<IQuery>;
+    type Output = Primitive<any>;
+    const METADATA: {
+        readonly method: "GET";
+        readonly path: "/shop/reservation/tables/export";
+        readonly request: null;
+        readonly response: {
+            readonly type: "application/json";
+            readonly encrypted: false;
+        };
+        readonly status: 200;
+    };
+    const path: (query: $export.Query) => string;
 }
 export declare function findOne(connection: IConnection, id: string): Promise<findOne.Output>;
 export declare namespace findOne {
