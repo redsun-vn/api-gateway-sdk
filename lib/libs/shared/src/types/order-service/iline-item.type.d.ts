@@ -169,6 +169,6 @@ export declare namespace ILineItem {
         subscription_id?: number | string | null;
         tableId?: number | string | null;
         roomId?: number | string | null;
-        timeSlots?: ITimeSlot[];
+        timeSlots?: ITimeSlot[] | null;
     }
 }

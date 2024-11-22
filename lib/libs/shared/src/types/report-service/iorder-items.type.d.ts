@@ -32,4 +32,21 @@ export declare namespace IReportOrderItem {
         year?: number;
         date?: string;
     }
+    interface IOrderPromotionReport {
+        shop_id?: number | string;
+        branch_id?: number | string;
+        staff_id?: number | string;
+        shift_id?: number | string;
+        program_id?: number | string;
+        paymentName?: string;
+        type?: string;
+        totalOrderApply: number;
+        totalDiscountAmount: number;
+        date?: string;
+        day?: number;
+        week?: number;
+        month?: number;
+        quarter?: number;
+        year?: number;
+    }
 }
