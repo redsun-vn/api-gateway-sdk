@@ -14,6 +14,7 @@ export declare namespace IAdditionalFee {
         name: string;
         amount: number;
         type: AdditionalFeeType;
+        subscription_id?: number & tags.Type<'uint64'>;
     }
     interface IUpdateAdditionalFee extends Omit<Partial<ICreateAdditionalFee>, 'shop_id' | 'staff_id'> {
     }
@@ -23,6 +24,7 @@ export declare namespace IAdditionalFee {
         order_id?: number | string | null;
         draf_order_id?: number | string | null;
         sale_order_id?: number | string | null;
+        subscription_id?: number | string | null;
         name: string;
         amount: number | string;
         type: string;

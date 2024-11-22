@@ -3,6 +3,7 @@ export * as comments from "./comments";
 export * as order from "./order";
 export * as orders from "./orders";
 export * as sale_orders from "./sale_orders";
+export * as order_subscriptions from "./order_subscriptions";
 export * as partner from "./partner";
 export * as partners from "./partners";
 export * as product from "./product";

@@ -110,6 +110,7 @@ export declare const ELASTIC_INDEX: {
     STOCK_ROUTER: string;
     STOCK_RULE: string;
     SUBSCRIPTION: string;
+    SUBSCRIPTION_ORDER: string;
     SALE_ORDER: string;
     UOM: string;
     UOM_CATEGORY: string;

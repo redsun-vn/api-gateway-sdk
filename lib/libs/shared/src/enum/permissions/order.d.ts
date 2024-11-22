@@ -16,3 +16,9 @@ export declare enum SaleOrdersPermission {
     UPDATE = "order_sale-update",
     DELETE = "order_sale-delete"
 }
+export declare enum SubscriptionOrdersPermission {
+    VIEW = "order_subscription-view",
+    CREATE = "order_subscription-create",
+    UPDATE = "order_subscription-update",
+    DELETE = "order_subscription-delete"
+}

@@ -1,5 +1,5 @@
 import { tags } from 'typia';
-import { BaseResponse } from '../common.type';
+import { BaseResponse, ITimeSlot } from '../common.type';
 import { KitchenProcessingStatus, OrderFulfillmentStatus } from '../../enum';
 import { ILineItemTaxLine } from './iline-item-tax-line.type';
 import { IOrder } from './iorder.type';
@@ -48,11 +48,19 @@ export declare namespace ILineItem {
         sequenece?: number;
         lineItemTaxLines?: ILineItemTaxLine.IInputLineItemTaxLine[] | null;
         selectionGroups?: ILineItemSelectionGroup.IInputLineItemSelectionGroup[] | null;
+        isCalculatedByHour?: boolean;
+        isRecurring?: boolean;
+        recurrencePeriod?: string;
+        recurrenceDuration?: number | string;
+        tableId?: number & tags.Type<'uint64'>;
+        roomId?: number & tags.Type<'uint64'>;
+        timeSlots?: ITimeSlot[];
     }
     interface ICreateLineItem extends IInputLineItem {
         order_id?: number & tags.Type<'uint64'>;
         draf_order_id?: number & tags.Type<'uint64'>;
         sale_order_id?: number & tags.Type<'uint64'>;
+        subscription_id?: number & tags.Type<'uint64'>;
     }
     interface ICreateLineItemKafka extends ICreateLineItem {
         shop_id: number & tags.Type<'uint64'>;
@@ -93,6 +101,13 @@ export declare namespace ILineItem {
         completedAt?: (string & tags.Format<'date-time'>) | null;
         sequenece?: number;
         userId?: string;
+        isCalculatedByHour?: boolean;
+        isRecurring?: boolean;
+        recurrencePeriod?: string;
+        recurrenceDuration?: number | string;
+        tableId?: number & tags.Type<'uint64'>;
+        roomId?: number & tags.Type<'uint64'>;
+        timeSlots?: ITimeSlot[];
     }
     interface IDetailLineItemResponse extends BaseResponse {
         shop_id: number | string | null;
@@ -147,5 +162,13 @@ export declare namespace ILineItem {
         lineItemTaxLines?: ILineItemTaxLine.IDetailLineItemTaxLineResponse[] | null;
         selectionGroups?: ILineItemSelectionGroup.IDetailLineItemSelectionGroupResponse[] | null;
         saleOrder?: ISaleOrder.IResponse | null;
+        isCalculatedByHour?: boolean;
+        isRecurring?: boolean;
+        recurrencePeriod?: string;
+        recurrenceDuration?: number | string;
+        subscription_id?: number | string | null;
+        tableId?: number | string | null;
+        roomId?: number | string | null;
+        timeSlots?: ITimeSlot[];
     }
 }

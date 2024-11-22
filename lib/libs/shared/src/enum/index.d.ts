@@ -19,3 +19,9 @@ export declare enum RecurrencePeriod {
     MONTHLY = "MONTHLY",
     YEARLY = "YEARLY"
 }
+export declare enum SubscriptionStatus {
+    ACTIVE = "active",
+    CANCELLED = "cancelled",
+    EXPIRED = "expired",
+    TRIAL = "trial"
+}

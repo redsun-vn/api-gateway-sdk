@@ -115,3 +115,7 @@ export interface IQuery {
 export interface IHealthCheck {
     [key: string]: boolean;
 }
+export interface ITimeSlot {
+    start: string;
+    end: string;
+}
