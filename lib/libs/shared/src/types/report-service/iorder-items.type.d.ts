@@ -49,4 +49,18 @@ export declare namespace IReportOrderItem {
         quarter?: number;
         year?: number;
     }
+    interface ITableReservationReport {
+        shop_id?: number | string;
+        branch_id?: number | string;
+        table_id?: number | string;
+        total: number;
+        totalOrder: number;
+        totalDiscount: number;
+        date?: string;
+        day?: number;
+        week?: number;
+        month?: number;
+        quarter?: number;
+        year?: number;
+    }
 }
