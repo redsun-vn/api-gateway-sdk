@@ -13,6 +13,17 @@ export declare const ELASTIC_INDEX: {
     CATEGORY_BUSINESS: string;
     CATEGORY_CARD: string;
     CATEGORY_PRINT_TEMPLATE: string;
+    CMS_WEBSITE: string;
+    CMS_WEBSITE_THEME: string;
+    CMS_WEBSITE_THEME_CATEGORY: string;
+    CMS_WEBSITE_THEME_TAG: string;
+    CMS_WEBSITE_MENU: string;
+    CMS_PAGE: string;
+    CMS_POST: string;
+    CMS_CATEGORY: string;
+    CMS_TAG: string;
+    CMS_DOCUMENT: string;
+    CMS_TEMPLATE: string;
     CHECKOUT: string;
     COLLECTION: string;
     COMMENT: string;

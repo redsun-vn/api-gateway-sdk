@@ -72,3 +72,4 @@ export * as vnpay_web from "./vnpay_web";
 export * as category_cards from "./category_cards";
 export * as accounting from "./accounting";
 export * as payment_cards from "./payment_cards";
+export * as cms from "./cms";

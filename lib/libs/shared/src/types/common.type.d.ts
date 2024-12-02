@@ -119,3 +119,31 @@ export interface ITimeSlot {
     start: string;
     end: string;
 }
+export type NoCodeComponentEntry = {
+    _component: string;
+    _id: string;
+    [key: string]: any;
+};
+export interface SEOBase {
+    metaTitle?: string | null;
+    metaDescription?: string | null;
+    metaKeywords?: string | null;
+    metaOgImage?: number | string | null;
+}
+export interface SEOBaseResponse extends BaseResponse {
+    metaTitle?: string | null;
+    metaDescription?: string | null;
+    metaKeywords?: string | null;
+    metaOgImage?: number | string | null;
+}
+export interface CMSBaseResponse extends SEOBaseResponse {
+    shop_id?: number | string | null;
+    isPublished: boolean;
+    author_id: number | string | null;
+    updated_by_id: number | string | null;
+    title: string;
+    slug: string;
+    description: string | null;
+    content: string | null;
+    attachment_id: number | string | null;
+}

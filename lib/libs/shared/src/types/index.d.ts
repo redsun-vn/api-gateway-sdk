@@ -55,3 +55,4 @@ export * from './financial-service';
 export * from './print-template';
 export * from './ielastic-search.type';
 export * from './hr';
+export * from './cms-service';

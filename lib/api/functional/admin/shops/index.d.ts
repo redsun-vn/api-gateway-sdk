@@ -19,6 +19,21 @@ export declare namespace findAll {
     };
     const path: (query: findAll.Query) => string;
 }
+export declare function reindex(connection: IConnection): Promise<reindex.Output>;
+export declare namespace reindex {
+    type Output = Primitive<IResponse<false | true>>;
+    const METADATA: {
+        readonly method: "GET";
+        readonly path: "/admin/shops/reindex";
+        readonly request: null;
+        readonly response: {
+            readonly type: "application/json";
+            readonly encrypted: false;
+        };
+        readonly status: 200;
+    };
+    const path: () => string;
+}
 export declare function update(connection: IConnection, data: update.Input, id: string): Promise<update.Output>;
 export declare namespace update {
     type Input = Resolved<IShop.IAdminUpdate>;

@@ -23,3 +23,4 @@ export * as global_configs from "./global_configs";
 export * as groups from "./groups";
 export * as notify from "./notify";
 export * as users from "./users";
+export * as cms from "./cms";

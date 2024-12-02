@@ -16,3 +16,4 @@ export * from './fulfillment';
 export * from './emenu';
 export * from './department';
 export * from './attendance';
+export * from './cms';
