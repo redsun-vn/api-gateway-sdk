@@ -41,3 +41,4 @@ export * as vnpay_qrcode from "./vnpay_qrcode";
 export * as vnpay_web from "./vnpay_web";
 export * as notify from "./notify";
 export * as debts from "./debts";
+export * as cms from "./cms";

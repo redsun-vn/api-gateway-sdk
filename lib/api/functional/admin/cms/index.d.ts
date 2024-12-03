@@ -1,3 +1,4 @@
+export * as menus from "./menus";
 export * as theme_categories from "./theme_categories";
 export * as documents from "./documents";
 export * as theme_tags from "./theme_tags";

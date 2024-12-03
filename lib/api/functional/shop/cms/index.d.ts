@@ -1,4 +1,5 @@
 export * as categories from "./categories";
+export * as menus from "./menus";
 export * as pages from "./pages";
 export * as posts from "./posts";
 export * as tags from "./tags";

@@ -2,6 +2,9 @@ import { tags } from 'typia';
 import { SEOBaseResponse, SEOBase } from '../common.type';
 import { ITheme } from './itheme';
 export declare namespace IWebsite {
+    interface IQueryFindByDomain {
+        domain?: string;
+    }
     interface ICreateReq extends SEOBase {
         domain: string;
         homeUrl: string;

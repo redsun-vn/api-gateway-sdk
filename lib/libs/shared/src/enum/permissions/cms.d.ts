@@ -40,3 +40,9 @@ export declare enum CMSPostPermission {
     UPDATE = "cms_post-update",
     DELETE = "cms_post-delete"
 }
+export declare enum CMSMenuPermission {
+    VIEW = "cms_menu-view",
+    CREATE = "cms_menu-create",
+    UPDATE = "cms_menu-update",
+    DELETE = "cms_menu-delete"
+}
