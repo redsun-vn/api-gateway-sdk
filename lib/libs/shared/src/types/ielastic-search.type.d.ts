@@ -72,6 +72,7 @@ export declare namespace IElastic {
         filters?: IFilteringMultiple;
         search?: ISearch;
         shopId?: string;
+        script?: string;
     }
     namespace IPage {
         interface IMeta {

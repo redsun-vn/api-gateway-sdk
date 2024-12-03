@@ -39,6 +39,7 @@ export interface ISearchOptions {
     groupBy?: string;
     search?: ISearch;
     shopId?: string;
+    script?: string;
 }
 export declare namespace IPage {
     interface IRequestFindAll {
@@ -111,6 +112,7 @@ export interface IQuery {
     groupBy?: string;
     search?: string;
     sort?: string;
+    script?: string;
 }
 export interface IHealthCheck {
     [key: string]: boolean;
