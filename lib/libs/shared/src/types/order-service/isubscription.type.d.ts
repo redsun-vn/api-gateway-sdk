@@ -48,7 +48,8 @@ export declare namespace ISubscriptionOrder {
     interface IResponse extends BaseResponse {
         shop_id: number | string;
         branch_id: number | string | null;
-        staff_id: number | string | null;
+        created_by: number | string | null;
+        updated_by: number | string | null;
         price_book_id: number | string | null;
         partner_uuid: string;
         email: string | null;
@@ -56,7 +57,6 @@ export declare namespace ISubscriptionOrder {
         code: string | null;
         uuid: string;
         description: string | null;
-        price: number | string;
         period: string;
         duration: number | string;
         autoRenew: boolean;

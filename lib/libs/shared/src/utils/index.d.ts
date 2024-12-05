@@ -9,3 +9,4 @@ export * from './validQuery';
 export * from './auto-generate-code';
 export * from './parseToken';
 export * from './vnpay-qrcode';
+export * from './parseErrorData';
