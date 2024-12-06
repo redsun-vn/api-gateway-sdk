@@ -16,6 +16,7 @@ export declare namespace IStaff {
         department_id?: string;
     }
     interface ICreateRegister {
+        first_name?: null | string;
         password: string & tags.MinLength<6>;
         phone: string;
     }
