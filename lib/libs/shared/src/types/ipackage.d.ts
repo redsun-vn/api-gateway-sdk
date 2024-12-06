@@ -5,6 +5,7 @@ import { IPackageAddition } from './ipackage-addition';
 export declare namespace IPackage {
     interface ICreate {
         name: string;
+        code?: string;
         active?: boolean;
         description?: string;
         price: number & tags.Type<'uint64'>;
@@ -20,7 +21,7 @@ export declare namespace IPackage {
         level?: number;
         packageAdditions?: IPackageAddition.ICreate[];
     }
-    interface IUpdate extends Omit<Partial<ICreate>, 'packageAdditions'> {
+    interface IUpdate extends Omit<Partial<ICreate>, 'packageAdditions' | 'code'> {
     }
     interface ICreateAdditions {
         packageAdditions: IPackageAddition.ICreate[];
@@ -30,6 +31,7 @@ export declare namespace IPackage {
     }
     interface IPackageResponse extends BaseResponse {
         name: string;
+        code?: string | null;
         active: boolean;
         description?: string | null;
         price: number | string;

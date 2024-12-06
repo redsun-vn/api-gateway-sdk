@@ -3,6 +3,7 @@ export declare const ELASTIC_INDEX: {
     ADDITION_FEE: string;
     ADMIN_RECONCILIATION: string;
     ADMIN_GROUP: string;
+    ADMIN_CUSTOMER: string;
     ADMIN_USER: string;
     ATTACHMENT: string;
     BANK_ACCOUNT: string;
