@@ -18,8 +18,8 @@ export declare namespace IFile {
         path: string;
         size: string | number;
         user_id: string;
-        shop_id: string | number | null;
-        branch_id: string | number | null;
+        shop_id?: string | number | null;
+        branch_id?: string | number | null;
         alt: string | null;
         caption: string | null;
         width: string | number | null;
@@ -29,7 +29,12 @@ export declare namespace IFile {
         };
     }
     interface IReqUpload {
-        branch_id: number | null;
+        branch_id?: number | null;
+        parent_id?: number | null;
+        fileUpload: Express.Multer.File;
+    }
+    interface IAdminReqUpload {
+        user_id: string;
         parent_id?: number | null;
         fileUpload: Express.Multer.File;
     }
