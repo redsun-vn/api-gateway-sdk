@@ -1,6 +1,7 @@
 import { tags } from 'typia';
 import { IAdminGroup } from './igroup';
 import { BaseResponse } from '../common.type';
+import { ADMIN_USER_ROLE } from '../../enum';
 export declare namespace IAdminUser {
     interface ICreate {
         email: string & tags.Format<'email'>;
@@ -11,6 +12,8 @@ export declare namespace IAdminUser {
         isTwoFactorAuthenticationEnabled?: boolean;
         createdById?: number | string;
         permissions?: string[];
+        role?: ADMIN_USER_ROLE;
+        parentId?: number;
     }
     interface IUpdate {
         email?: string & tags.Format<'email'>;
@@ -19,6 +22,8 @@ export declare namespace IAdminUser {
         groups?: string[];
         permissions?: string[];
         updatedById?: number | string;
+        role?: ADMIN_USER_ROLE;
+        parentId?: number;
     }
     interface IUpdatePassword {
         password: string & tags.MinLength<6>;
@@ -33,6 +38,10 @@ export declare namespace IAdminUser {
         permissions?: null | string[];
         isTwoFactorAuthenticationEnabled: boolean;
         twoFactorAuthenticationSecret?: string | null;
+        role?: ADMIN_USER_ROLE;
+        parent_id?: number | string | null;
+        parent?: null | IResponse;
+        children?: null | IResponse[];
     }
     interface IResponseWithoutSecret extends BaseResponse {
         name: string;
@@ -41,5 +50,9 @@ export declare namespace IAdminUser {
         email: string;
         permissions?: null | string[];
         isTwoFactorAuthenticationEnabled: boolean;
+        role?: ADMIN_USER_ROLE;
+        parent_id?: number | string | null;
+        parent?: null | IResponseWithoutSecret;
+        children?: null | IResponseWithoutSecret[];
     }
 }

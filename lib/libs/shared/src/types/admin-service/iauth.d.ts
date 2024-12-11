@@ -5,6 +5,9 @@ export declare namespace IAdminAuth {
         email: string & tags.Format<'email'>;
         password: string;
     }
+    interface IRefreshToken {
+        refreshToken: string;
+    }
     interface ITokenPayload {
         userId: string;
         email: string;
@@ -16,5 +19,7 @@ export declare namespace IAdminAuth {
         tokenType: string;
         user: IAdminUser.IResponseWithoutSecret;
         permissions: string[];
+        refreshToken: string;
+        refreshTokenExpiresIn: number | string;
     }
 }

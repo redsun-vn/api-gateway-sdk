@@ -2,6 +2,7 @@ import { tags } from 'typia';
 import { BaseResponse } from './common.type';
 import { PACKAGE_LEVEL_SUPPORT_ENUM } from '../enum/shop-service';
 import { IPackageAddition } from './ipackage-addition';
+import { IApplicationPlan } from './shop-service';
 export declare namespace IPackage {
     interface ICreate {
         name: string;
@@ -20,8 +21,11 @@ export declare namespace IPackage {
         supportLevel?: string & PACKAGE_LEVEL_SUPPORT_ENUM;
         level?: number;
         packageAdditions?: IPackageAddition.ICreate[];
+        appPlanIds?: number[] | [];
+        business_id?: number | null;
+        category_business_id?: number | null;
     }
-    interface IUpdate extends Omit<Partial<ICreate>, 'packageAdditions' | 'code'> {
+    interface IUpdate extends Omit<Partial<ICreate>, 'packageAdditions' | 'code' | 'appPlanIds'> {
     }
     interface ICreateAdditions {
         packageAdditions: IPackageAddition.ICreate[];
@@ -32,6 +36,8 @@ export declare namespace IPackage {
     interface IPackageResponse extends BaseResponse {
         name: string;
         code?: string | null;
+        business_id?: string | number | null;
+        category_business_id?: string | number | null;
         active: boolean;
         description?: string | null;
         price: number | string;
@@ -46,5 +52,6 @@ export declare namespace IPackage {
         supportLevel?: string | null;
         level?: number | null;
         packageAdditions?: IPackageAddition.IResponse[];
+        appPlan?: IApplicationPlan.IResponse[];
     }
 }

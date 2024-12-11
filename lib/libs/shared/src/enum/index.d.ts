@@ -25,3 +25,12 @@ export declare enum SubscriptionStatus {
     EXPIRED = "expired",
     TRIAL = "trial"
 }
+export declare enum ADMIN_USER_ROLE {
+    SYSTEM_ADMIN = "system",
+    BOSS = "boss",
+    CUSTOMER_SUPPORT = "customer_support",
+    CUSTOMER_SUPPORT_USER = "customer_support_user",
+    SALES_ADMIN = "sales",
+    SALES_USER = "sales_user",
+    USER = "user"
+}

@@ -15,6 +15,7 @@ export * as uom_uoms from "./uom_uoms";
 export * as variants from "./variants";
 export * as e_menu from "./e_menu";
 export * as qr_order from "./qr_order";
+export * as application from "./application";
 export * as business_types from "./business_types";
 export * as category_business from "./category_business";
 export * as category_print_template from "./category_print_template";
