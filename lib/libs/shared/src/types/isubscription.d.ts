@@ -4,6 +4,7 @@ export declare namespace ISubscription {
     interface ICreate {
         package_id: string;
         packageAdditionIds?: number[];
+        appPlanIds?: number[];
         paymentCode?: string;
     }
     interface IUpdate {

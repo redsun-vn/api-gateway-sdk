@@ -4,7 +4,8 @@ export declare namespace IPackagePlan {
         shop_id: number | string;
         subscription_id: number | string;
         package_id: number | string;
-        package_addition_id: number | string;
+        package_addition_id?: number | string | null;
+        app_plan_id?: number | string | null;
         name: string;
         price: number | string;
         discount?: number | string | null;

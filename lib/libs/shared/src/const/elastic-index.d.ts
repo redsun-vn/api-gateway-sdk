@@ -85,6 +85,7 @@ export declare const ELASTIC_INDEX: {
     PAYMENT_REMINDER: string;
     PARTNER_CREDIT_RATING: string;
     PARTNER_CREDIT_RATING_HISTORY: string;
+    RECEIPT: string;
     RESERVATION: string;
     RESERVATION_FLOOR_PLAN: string;
     RESERVATION_ROOM: string;
