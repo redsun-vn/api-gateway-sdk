@@ -38,7 +38,7 @@ export declare namespace IAuth {
         refresh_token: string;
     }
     interface IOTPSMS {
-        phone: string & tags.Pattern<'^(0[0-9]{2})?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$'>;
+        phone: string;
     }
     interface IOTPEmail {
         email: string & tags.Format<'email'>;
