@@ -15,6 +15,7 @@ export declare namespace ISubscription {
         deviceRemain: number;
         daysRemain: number;
         userRemain: number;
+        plans: IPackagePlan.IResponse[];
     };
     interface ISubscriptionResponse extends BaseResponse {
         package_id: string;
