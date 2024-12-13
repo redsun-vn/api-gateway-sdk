@@ -1,21 +1,6 @@
-import type { IConnection, Primitive, Resolved } from "@nestia/fetcher";
+import type { IConnection, Resolved, Primitive } from "@nestia/fetcher";
 import type { IResponse } from "../../../../libs/shared/src/types/common.type";
 import type { IApplication } from "../../../../libs/shared/src/types/shop-service/application/application";
-export declare function findOne(connection: IConnection, id: string): Promise<findOne.Output>;
-export declare namespace findOne {
-    type Output = Primitive<IResponse<IApplication.IResponse>>;
-    const METADATA: {
-        readonly method: "GET";
-        readonly path: "/admin/application/:id";
-        readonly request: null;
-        readonly response: {
-            readonly type: "application/json";
-            readonly encrypted: false;
-        };
-        readonly status: 200;
-    };
-    const path: (id: string) => string;
-}
 export declare function create(connection: IConnection, data: create.Input): Promise<create.Output>;
 export declare namespace create {
     type Input = Resolved<IApplication.ICreate>;
