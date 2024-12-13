@@ -1,3 +1,4 @@
+import { tags } from 'typia';
 import { BaseResponse } from './common.type';
 import { IPackagePlan } from './ipackage-plan';
 export declare namespace ISubscription {
@@ -6,6 +7,9 @@ export declare namespace ISubscription {
         packageAdditionIds?: number[];
         appPlanIds?: number[];
         paymentCode?: string;
+        email?: string & tags.Format<'email'>;
+        phone?: string;
+        address?: string;
     }
     interface IUpdate {
         active?: boolean;

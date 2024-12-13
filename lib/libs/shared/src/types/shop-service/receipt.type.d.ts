@@ -1,8 +1,12 @@
+import { tags } from 'typia';
 import { RECEIPT_LINE_ITEM_TYPE_ENUM, RECEIPT_STATUS_ENUM } from '../../enum/shop-service';
 import { BaseResponse } from '../common.type';
 export declare namespace IReceipt {
     interface IUpdate {
         status?: string & RECEIPT_STATUS_ENUM;
+        email?: string & tags.Format<'email'>;
+        phone?: string;
+        address?: string;
         note?: string;
         allowPrint?: boolean;
         taxTotal?: number;
@@ -19,6 +23,9 @@ export declare namespace IReceipt {
         status: string;
         source: string;
         sourceType: string;
+        email?: string | null;
+        phone?: string | null;
+        address?: string | null;
         note?: string | null;
         allowPrint: boolean;
         total: number;
