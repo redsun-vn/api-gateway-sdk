@@ -17,7 +17,7 @@ export declare namespace IReceipt {
     }
     interface ICreate {
         note?: string;
-        paymentCode: string;
+        paymentCode?: string;
         allowPrint?: boolean;
         taxTotal?: number;
         taxPercentageTotal?: number;
@@ -36,6 +36,7 @@ export declare namespace IReceipt {
         status: string;
         source: string;
         sourceType: string;
+        paymentCode?: string | null;
         email?: string | null;
         phone?: string | null;
         address?: string | null;
