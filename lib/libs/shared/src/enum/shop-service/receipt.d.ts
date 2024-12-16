@@ -13,5 +13,7 @@ export declare enum RECEIPT_STATUS_ENUM {
 }
 export declare enum RECEIPT_LINE_ITEM_TYPE_ENUM {
     PACKAGE_ADDITION = "package_addition",
-    APP_PLAN = "app_plan"
+    APP_PLAN = "app_plan",
+    STAFF_QUANTITY = "staff_quantity",
+    BRANCH_QUANTITY = "branch_quantity"
 }

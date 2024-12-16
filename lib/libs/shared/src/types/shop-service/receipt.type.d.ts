@@ -15,6 +15,19 @@ export declare namespace IReceipt {
         taxPercentageTotalManual?: number;
         updatedBy?: string | number;
     }
+    interface ICreate {
+        note?: string;
+        paymentCode: string;
+        allowPrint?: boolean;
+        taxTotal?: number;
+        taxPercentageTotal?: number;
+        taxTotalManual?: number;
+        taxPercentageTotalManual?: number;
+        email?: string & tags.Format<'email'>;
+        phone?: string;
+        address?: string;
+        lineItems: IReceiptLineItems[];
+    }
     interface IResponse extends BaseResponse {
         shop_id: string;
         package_id: string | number | null;
@@ -39,12 +52,13 @@ export declare namespace IReceipt {
         lineItems?: IReceiptLineItems[] | null;
     }
     interface IReceiptLineItems {
-        item_id: string | number;
+        item_id?: string | number;
         type: RECEIPT_LINE_ITEM_TYPE_ENUM;
         name?: string;
         price: number;
         discount: number;
         total: number;
+        quantity?: number;
         value?: number;
         unit?: string | null;
     }
