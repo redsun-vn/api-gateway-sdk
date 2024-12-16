@@ -24,13 +24,13 @@ export declare namespace IApplicationPlan {
     }
     interface IResponse extends BaseResponse {
         name: string;
-        description?: string;
+        description?: string | null;
         isActive?: boolean;
         price?: number | string | null;
         value?: number | string | null;
         unit?: string | null;
         salePrice?: number | string | null;
-        appId?: number | string;
+        appId?: number | string | null;
         app?: IApplication.IResponse | null;
         controllers?: IApplicationController.IResponse[] | null;
     }
