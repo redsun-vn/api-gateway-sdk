@@ -25,7 +25,7 @@ export declare namespace IPackage {
         business_id?: number | null;
         category_business_id?: number | null;
     }
-    interface IUpdate extends Omit<Partial<ICreate>, 'packageAdditions' | 'code'> {
+    interface IUpdate extends Omit<Partial<ICreate>, 'packageAdditions'> {
     }
     interface ICreateAdditions {
         packageAdditions: IPackageAddition.ICreate[];
