@@ -1,4 +1,4 @@
-import { BaseResponse } from './common.type';
+import { BaseResponse } from '../common.type';
 import { tags } from 'typia';
 export declare namespace IPartnerAddress {
     enum PartnerAddressType {

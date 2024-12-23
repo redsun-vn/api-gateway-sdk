@@ -5,6 +5,7 @@ export * as orders from "./orders";
 export * as sale_orders from "./sale_orders";
 export * as order_subscriptions from "./order_subscriptions";
 export * as partner from "./partner";
+export * as partner_categories from "./partner_categories";
 export * as partners from "./partners";
 export * as product from "./product";
 export * as categories from "./categories";

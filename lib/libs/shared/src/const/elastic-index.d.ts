@@ -62,6 +62,7 @@ export declare const ELASTIC_INDEX: {
     PAYMENT_CARD: string;
     PAYMENT_METHOD: string;
     PARTNER: string;
+    PARTNER_CATEGORY: string;
     PARTNER_ADDRESS: string;
     PARTNER_TAG: string;
     PAYMENT: string;

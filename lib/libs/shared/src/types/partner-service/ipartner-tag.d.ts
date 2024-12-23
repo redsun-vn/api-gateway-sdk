@@ -1,4 +1,4 @@
-import { BaseResponse } from './common.type';
+import { BaseResponse } from '../common.type';
 export declare namespace IPartnerTag {
     interface ICreate {
         name: string;
