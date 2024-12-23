@@ -22,7 +22,7 @@ export declare namespace IPackage {
         level?: number;
         packageAdditions?: IPackageAddition.ICreate[];
         appPlanIds?: number[] | [];
-        business_id?: number | null;
+        business_ids?: string[];
         category_business_id?: number | null;
     }
     interface IUpdate extends Omit<Partial<ICreate>, 'packageAdditions'> {
@@ -36,7 +36,7 @@ export declare namespace IPackage {
     interface IPackageResponse extends BaseResponse {
         name: string;
         code?: string | null;
-        business_id?: string | number | null;
+        business_ids?: string[] | null;
         category_business_id?: string | number | null;
         active: boolean;
         description?: string | null;

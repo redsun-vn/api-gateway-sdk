@@ -17,3 +17,4 @@ export * from './emenu';
 export * from './department';
 export * from './attendance';
 export * from './cms';
+export * from './receipt';

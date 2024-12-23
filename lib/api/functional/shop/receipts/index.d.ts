@@ -51,18 +51,3 @@ export declare namespace findOne {
     };
     const path: (id: string) => string;
 }
-export declare function clone(connection: IConnection, id: string): Promise<clone.Output>;
-export declare namespace clone {
-    type Output = Primitive<IResponse<IReceipt.IResponse>>;
-    const METADATA: {
-        readonly method: "POST";
-        readonly path: "/shop/receipts/:id/clone";
-        readonly request: null;
-        readonly response: {
-            readonly type: "application/json";
-            readonly encrypted: false;
-        };
-        readonly status: 201;
-    };
-    const path: (id: string) => string;
-}
