@@ -7,6 +7,7 @@ export declare namespace IAdminUser {
     interface ICreate {
         email: string & tags.Format<'email'>;
         name: string;
+        code?: string;
         active?: boolean;
         password: string & tags.MinLength<6>;
         groups?: string[];
@@ -36,6 +37,7 @@ export declare namespace IAdminUser {
         groups?: null | IAdminGroup.IResponse[];
         active: boolean;
         email: string;
+        code?: string | null;
         permissions?: null | string[];
         isTwoFactorAuthenticationEnabled: boolean;
         twoFactorAuthenticationSecret?: string | null;
@@ -50,6 +52,7 @@ export declare namespace IAdminUser {
         groups?: null | IAdminGroup.IResponse[];
         active: boolean;
         email: string;
+        code?: string | null;
         permissions?: null | string[];
         isTwoFactorAuthenticationEnabled: boolean;
         role?: ADMIN_USER_ROLE;

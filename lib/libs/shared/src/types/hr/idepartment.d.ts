@@ -16,5 +16,6 @@ export declare namespace IDepartment {
         parent_id: string | number | null;
         description: string | null;
         parent_flatten_ids: string | null;
+        role: string;
     }
 }
