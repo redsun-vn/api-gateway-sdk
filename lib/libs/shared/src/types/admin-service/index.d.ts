@@ -4,3 +4,4 @@ export * from './iauth';
 export * from './iconfig';
 export * from './inotify';
 export * from './icustomer';
+export * from './ticket';
