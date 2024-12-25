@@ -2,6 +2,7 @@ import { tags } from 'typia';
 import { IAdminGroup } from './igroup';
 import { BaseResponse } from '../common.type';
 import { ADMIN_USER_ROLE } from '../../enum';
+import { IDepartment } from '../hr/idepartment';
 export declare namespace IAdminUser {
     interface ICreate {
         email: string & tags.Format<'email'>;
@@ -42,6 +43,7 @@ export declare namespace IAdminUser {
         parent_id?: number | string | null;
         parent?: null | IResponse;
         children?: null | IResponse[];
+        department?: null | IDepartment.IResponse;
     }
     interface IResponseWithoutSecret extends BaseResponse {
         name: string;
@@ -54,5 +56,6 @@ export declare namespace IAdminUser {
         parent_id?: number | string | null;
         parent?: null | IResponseWithoutSecret;
         children?: null | IResponseWithoutSecret[];
+        department?: null | IDepartment.IResponse;
     }
 }
