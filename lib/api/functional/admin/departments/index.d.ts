@@ -1,10 +1,10 @@
 import type { IConnection, Resolved, Primitive } from "@nestia/fetcher";
+import type { IAdminDepartment } from "../../../../libs/shared/src/types/admin-service/iadmin-department.type";
 import type { IQuery, IResponse, IResponsePagination } from "../../../../libs/shared/src/types/common.type";
-import type { IDepartment } from "../../../../libs/shared/src/types/hr/idepartment";
 export declare function findAll(connection: IConnection, query: findAll.Query): Promise<findAll.Output>;
 export declare namespace findAll {
     type Query = Resolved<IQuery>;
-    type Output = Primitive<IResponse<IResponsePagination<IDepartment.IResponse>>>;
+    type Output = Primitive<IResponse<IResponsePagination<IAdminDepartment.IResponse>>>;
     const METADATA: {
         readonly method: "GET";
         readonly path: "/admin/departments";
@@ -19,7 +19,7 @@ export declare namespace findAll {
 }
 export declare function findOne(connection: IConnection, id: string): Promise<findOne.Output>;
 export declare namespace findOne {
-    type Output = Primitive<IResponse<IDepartment.IResponse>>;
+    type Output = Primitive<IResponse<IAdminDepartment.IResponse>>;
     const METADATA: {
         readonly method: "GET";
         readonly path: "/admin/departments/:id";
@@ -34,8 +34,8 @@ export declare namespace findOne {
 }
 export declare function create(connection: IConnection, data: create.Input): Promise<create.Output>;
 export declare namespace create {
-    type Input = Resolved<IDepartment.ICreate>;
-    type Output = Primitive<IResponse<IDepartment.IResponse>>;
+    type Input = Resolved<IAdminDepartment.ICreate>;
+    type Output = Primitive<IResponse<IAdminDepartment.IResponse>>;
     const METADATA: {
         readonly method: "POST";
         readonly path: "/admin/departments";
@@ -53,8 +53,8 @@ export declare namespace create {
 }
 export declare function update(connection: IConnection, data: update.Input, id: string): Promise<update.Output>;
 export declare namespace update {
-    type Input = Resolved<IDepartment.IUpdate>;
-    type Output = Primitive<IResponse<IDepartment.IResponse>>;
+    type Input = Resolved<IAdminDepartment.IUpdate>;
+    type Output = Primitive<IResponse<IAdminDepartment.IResponse>>;
     const METADATA: {
         readonly method: "PUT";
         readonly path: "/admin/departments/:id";
