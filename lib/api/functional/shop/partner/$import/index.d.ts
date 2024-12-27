@@ -1,6 +1,6 @@
 import type { IConnection, Resolved, Primitive } from "@nestia/fetcher";
 import type { IResponse } from "../../../../../libs/shared/src/types/common.type";
-import type { IPartner } from "../../../../../libs/shared/src/types/ipartner";
+import type { IPartner } from "../../../../../libs/shared/src/types/partner-service/ipartner";
 export declare function upload(connection: IConnection, input: upload.Input): Promise<upload.Output>;
 export declare namespace upload {
     type Input = Resolved<IPartner.IUpload>;

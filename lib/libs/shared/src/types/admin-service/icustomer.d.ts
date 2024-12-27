@@ -3,6 +3,7 @@ import { BaseResponse } from '../common.type';
 export declare namespace IAdminCustomer {
     interface ICreate {
         email?: (string & tags.Format<'email'>) | null;
+        refCode?: string;
         name?: string | null;
         phone?: string | null;
         country?: string | null;
@@ -40,5 +41,7 @@ export declare namespace IAdminCustomer {
         avatar_id?: number | string | null;
         responsible_id?: number | string | null;
         gender?: number | string | null;
+        salesman_id?: number | string | null;
+        refCode?: string | null;
     }
 }

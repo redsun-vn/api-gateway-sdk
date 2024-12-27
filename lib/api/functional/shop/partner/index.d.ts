@@ -1,6 +1,6 @@
 import type { IConnection, Resolved, Primitive } from "@nestia/fetcher";
 import type { IQuery } from "../../../../libs/shared/src/types/common.type";
-import type { IPartner } from "../../../../libs/shared/src/types/ipartner";
+import type { IPartner } from "../../../../libs/shared/src/types/partner-service/ipartner";
 export * as addresses from "./addresses";
 export * as $import from "./$import";
 export * as tags from "./tags";

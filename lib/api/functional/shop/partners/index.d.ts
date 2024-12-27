@@ -1,6 +1,6 @@
 import type { IConnection, Resolved, Primitive } from "@nestia/fetcher";
 import type { IQuery, IResponse, IResponsePagination } from "../../../../libs/shared/src/types/common.type";
-import type { IPartner } from "../../../../libs/shared/src/types/ipartner";
+import type { IPartner } from "../../../../libs/shared/src/types/partner-service/ipartner";
 export declare function findAll(connection: IConnection, query: findAll.Query): Promise<findAll.Output>;
 export declare namespace findAll {
     type Query = Resolved<IQuery>;

@@ -10,7 +10,6 @@ export declare namespace IDepartment {
     }
     type IUpdate = Omit<Partial<ICreate>, 'owner_id'>;
     interface IResponse extends BaseResponse {
-        shop_id: string | number;
         name: string;
         active: boolean;
         owner_id: string | number | null;

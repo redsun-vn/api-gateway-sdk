@@ -1,8 +1,9 @@
 /// <reference types="multer" />
 import { tags } from 'typia';
-import { BaseResponse } from './common.type';
-import { IPartnerTag } from './ipartner-tag';
+import { BaseResponse } from '../common.type';
 import { IPartnerAddress } from './ipartner-address';
+import { IPartnerTag } from './ipartner-tag';
+import { IPartnerCategory } from './ipartner-category';
 export declare namespace IPartner {
     interface ICreate {
         branch_id?: number & tags.Type<'int32'>;
@@ -30,6 +31,7 @@ export declare namespace IPartner {
         note?: string;
         gender?: number & tags.Maximum<1>;
         tagIds?: string[];
+        partnerCategoryIds?: number[];
     }
     type TypePartnerUpload = 'customer' | 'supplier';
     interface IUpload {
@@ -65,5 +67,6 @@ export declare namespace IPartner {
         gender?: number | null;
         tags?: null | IPartnerTag.IPartnerTagResponse[];
         addresses?: null | IPartnerAddress.IPartnerAddressResponse[];
+        partnerCategories?: null | IPartnerCategory.IResponse[];
     }
 }

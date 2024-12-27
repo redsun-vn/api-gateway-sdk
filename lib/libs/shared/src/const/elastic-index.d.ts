@@ -1,10 +1,14 @@
 export declare const ELASTIC_INDEX: {
     ACTIVITY_LOGS: string;
     ADDITION_FEE: string;
+    ADMIN_DEPARTMENT: string;
     ADMIN_RECONCILIATION: string;
     ADMIN_GROUP: string;
     ADMIN_CUSTOMER: string;
     ADMIN_USER: string;
+    ADMIN_TICKET_INDEX_NAME: string;
+    ADMIN_TICKET_CATEGORY_INDEX_NAME: string;
+    ADMIN_TICKET_COMMENT_INDEX_NAME: string;
     ATTACHMENT: string;
     BANK_ACCOUNT: string;
     BRAND: string;
@@ -62,6 +66,7 @@ export declare const ELASTIC_INDEX: {
     PAYMENT_CARD: string;
     PAYMENT_METHOD: string;
     PARTNER: string;
+    PARTNER_CATEGORY: string;
     PARTNER_ADDRESS: string;
     PARTNER_TAG: string;
     PAYMENT: string;

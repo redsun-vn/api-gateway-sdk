@@ -21,14 +21,14 @@ export declare namespace IVNPayWebConfig {
         payment_method_id: number | string | null;
         tmnCode: string;
         secureSecret?: string;
-        testMode: string;
+        testMode: boolean;
         currency: string;
     }
     interface IResponseWithoutSecret extends BaseResponse {
         shop_id: number | string | null;
         payment_method_id: number | string | null;
         tmnCode: string;
-        testMode: string;
+        testMode: boolean;
         currency: string;
     }
 }
