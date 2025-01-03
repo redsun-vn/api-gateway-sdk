@@ -63,4 +63,23 @@ export declare namespace IReportOrderItem {
         quarter?: number;
         year?: number;
     }
+    interface IStaffOrderReport {
+        staff_id?: number;
+        shop_id?: number;
+        sale_channel_id?: number;
+        branch_id?: number;
+        shift_id?: number;
+        payment_name?: number;
+        totalItemQuantity: number;
+        totalOrder: number;
+        totalItem: number;
+        totalRevenue: number;
+        totalProfit: number;
+        date?: string;
+        day?: number;
+        week?: number;
+        month?: number;
+        quarter?: number;
+        year?: number;
+    }
 }
