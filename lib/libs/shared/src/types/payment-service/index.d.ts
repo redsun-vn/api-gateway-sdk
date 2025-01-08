@@ -10,3 +10,4 @@ export * from './ivnpay-qrcode.type';
 export * from './ivnpay-web.type';
 export * from './itomotek-config.type';
 export * from './itomotek-order.type';
+export * from './itomotek-device.type';
