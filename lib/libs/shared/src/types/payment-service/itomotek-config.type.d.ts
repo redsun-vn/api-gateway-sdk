@@ -22,6 +22,10 @@ export declare namespace ITomotekConfig {
         branch_id: number | string;
         workspaceId: number | string;
         partnerId: number | string;
+        name?: string;
+        fullName?: string;
+        phone?: string | null;
+        address?: string | null;
         token: string;
         bankAccountName: string;
         bankAccount: string;

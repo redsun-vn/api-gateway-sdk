@@ -1,6 +1,7 @@
 import type { IConnection, Resolved, Primitive } from "@nestia/fetcher";
 import type { IResponse } from "../../../../libs/shared/src/types/common.type";
 import type { ITomotekConfig } from "../../../../libs/shared/src/types/payment-service/itomotek-config.type";
+export * as access_token from "./access_token";
 export declare function createConfig(connection: IConnection, createConfigDto: createConfig.Input): Promise<createConfig.Output>;
 export declare namespace createConfig {
     type Input = Resolved<ITomotekConfig.ICreate>;
