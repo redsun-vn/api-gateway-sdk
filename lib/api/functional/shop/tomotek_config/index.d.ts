@@ -21,13 +21,13 @@ export declare namespace createConfig {
     };
     const path: () => string;
 }
-export declare function updateConfig(connection: IConnection, shopId: string, updateConfigDto: updateConfig.Input): Promise<updateConfig.Output>;
+export declare function updateConfig(connection: IConnection, id: string, updateConfigDto: updateConfig.Input): Promise<updateConfig.Output>;
 export declare namespace updateConfig {
     type Input = Resolved<ITomotekConfig.IUpdate>;
     type Output = Primitive<IResponse<ITomotekConfig.IResponse>>;
     const METADATA: {
         readonly method: "PUT";
-        readonly path: "/shop/tomotek-config/:shopId";
+        readonly path: "/shop/tomotek-config/:id";
         readonly request: {
             readonly type: "application/json";
             readonly encrypted: false;
@@ -38,7 +38,7 @@ export declare namespace updateConfig {
         };
         readonly status: 200;
     };
-    const path: (shopId: string) => string;
+    const path: (id: string) => string;
 }
 export declare function getConfig(connection: IConnection, id: string): Promise<getConfig.Output>;
 export declare namespace getConfig {
