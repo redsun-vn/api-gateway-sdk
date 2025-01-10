@@ -40,6 +40,7 @@ export declare namespace IReportOrderItem {
         program_id?: number | string;
         paymentName?: string;
         type?: string;
+        totalRevenue: number;
         totalOrderApply: number;
         totalDiscountAmount: number;
         date?: string;
