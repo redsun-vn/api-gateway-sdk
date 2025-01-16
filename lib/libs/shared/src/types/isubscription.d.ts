@@ -3,6 +3,7 @@ import { BaseResponse } from './common.type';
 import { IPackagePlan } from './ipackage-plan';
 export declare namespace ISubscription {
     interface ICreate {
+        targetValue?: number;
         package_id: string;
         packageAdditionIds?: number[];
         appPlanIds?: number[];
