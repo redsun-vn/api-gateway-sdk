@@ -4,6 +4,7 @@ export declare namespace IPackageAddition {
     interface ICreate {
         name: string;
         description?: string;
+        sellPrice?: number;
         price: number;
         isDefault?: boolean;
         type: string & PACKAGE_ADDITION_TYPE_ENUM;
@@ -17,6 +18,7 @@ export declare namespace IPackageAddition {
         name: string;
         description?: string | null;
         price: number | string;
+        sellPrice?: number | string;
         isDefault?: boolean;
         type: (string & PACKAGE_ADDITION_TYPE_ENUM) | null;
         target: (string & PACKAGE_ADDITION_TARGET_ENUM) | null;
