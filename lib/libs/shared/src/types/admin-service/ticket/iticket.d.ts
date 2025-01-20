@@ -22,9 +22,9 @@ export declare namespace ITicket {
     interface IResponse extends BaseResponse {
         title: string;
         description: string | null;
-        firstResponseTime: Date | null;
-        lastResponseTime: Date | null;
-        closedAt: Date | null;
+        firstResponseTime: string | null;
+        lastResponseTime: string | null;
+        closedAt: string | null;
         shopAssignId?: number | string | null;
         categoryId?: number | string | null;
         customerId?: number | string | null;
