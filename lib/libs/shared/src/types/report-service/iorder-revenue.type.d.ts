@@ -43,4 +43,9 @@ export declare namespace IOrderRevenue {
         orderCount: number;
         partnerCount: number;
     }
+    interface IOrderRevenueStats {
+        totalRevenue: number;
+        totalPartner: number;
+        totalOrder: number;
+    }
 }

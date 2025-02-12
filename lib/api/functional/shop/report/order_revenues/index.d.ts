@@ -18,3 +18,19 @@ export declare namespace findAll {
     };
     const path: (query: findAll.Query) => string;
 }
+export declare function stats(connection: IConnection, query: stats.Query): Promise<stats.Output>;
+export declare namespace stats {
+    type Query = Resolved<IQuery>;
+    type Output = Primitive<IResponse<IOrderRevenue.IOrderRevenueStats>>;
+    const METADATA: {
+        readonly method: "GET";
+        readonly path: "/shop/report/order-revenues/stats";
+        readonly request: null;
+        readonly response: {
+            readonly type: "application/json";
+            readonly encrypted: false;
+        };
+        readonly status: 200;
+    };
+    const path: (query: stats.Query) => string;
+}
