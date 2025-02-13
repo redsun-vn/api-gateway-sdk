@@ -19,6 +19,7 @@ export declare namespace IAdminCustomer {
         day_of_birth?: (string & tags.Format<'date-time'>) | null;
         avatar_id?: (number & tags.Type<'uint64'>) | null;
         responsible_id?: (number & tags.Type<'uint64'>) | null;
+        salesman_id?: number & tags.Type<'uint64'>;
         gender?: (number & tags.Maximum<1>) | null;
     }
     interface IUpdate extends Partial<ICreate> {
