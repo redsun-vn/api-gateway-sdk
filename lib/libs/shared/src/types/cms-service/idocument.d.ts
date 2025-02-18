@@ -5,9 +5,9 @@ export declare namespace IDocument {
         website_id?: string & tags.Format<'uuid'>;
         theme_id?: string & tags.Format<'uuid'>;
         type?: string | null;
-        target: string;
-        target_id: string & tags.Format<'uuid'>;
-        version: number;
+        target?: string;
+        target_id?: string & tags.Format<'uuid'>;
+        version?: number;
         entry: NoCodeComponentEntry;
     }
     interface ICreate extends ICreateReq {
