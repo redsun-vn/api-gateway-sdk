@@ -3,6 +3,8 @@ import { BaseResponse, NoCodeComponentEntry } from '../common.type';
 export declare namespace IDocument {
     interface ICreateReq {
         website_id?: string & tags.Format<'uuid'>;
+        theme_id?: string & tags.Format<'uuid'>;
+        type?: string | null;
         target: string;
         target_id: string & tags.Format<'uuid'>;
         version: number;
@@ -19,6 +21,8 @@ export declare namespace IDocument {
     interface IResponse extends BaseResponse {
         shop_id?: number | string | null;
         website_id?: string | null;
+        theme_id?: string | null;
+        type?: string | null;
         target?: string | null;
         target_id?: string | null;
         version: number | string | null;

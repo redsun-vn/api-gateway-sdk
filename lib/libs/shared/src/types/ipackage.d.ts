@@ -23,6 +23,7 @@ export declare namespace IPackage {
         packageAdditions?: IPackageAddition.ICreate[];
         appPlanIds?: number[] | [];
         business_ids?: string[];
+        sale_channel_ids?: string[];
         category_business_id?: number | null;
     }
     interface IUpdate extends Omit<Partial<ICreate>, 'packageAdditions'> {
@@ -37,6 +38,7 @@ export declare namespace IPackage {
         name: string;
         code?: string | null;
         business_ids?: string[] | null;
+        sale_channel_ids?: string | number | null;
         category_business_id?: string | number | null;
         active: boolean;
         description?: string | null;
