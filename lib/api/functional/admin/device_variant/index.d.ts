@@ -1,6 +1,6 @@
 import type { IConnection, Resolved, Primitive } from "@nestia/fetcher";
 import type { IDeviceVariant } from "../../../../libs/shared/src/types/admin-service/device/idevice-variant.type";
-import type { IResponse } from "../../../../libs/shared/src/types/common.type";
+import type { IResponse, IQuery, IResponsePagination } from "../../../../libs/shared/src/types/common.type";
 export declare function create(connection: IConnection, data: create.Input): Promise<create.Output>;
 export declare namespace create {
     type Input = Resolved<IDeviceVariant.ICreate>;
@@ -53,6 +53,22 @@ export declare namespace findOne {
         readonly status: 200;
     };
     const path: (id: string) => string;
+}
+export declare function findAll(connection: IConnection, query: findAll.Query): Promise<findAll.Output>;
+export declare namespace findAll {
+    type Query = Resolved<IQuery>;
+    type Output = Primitive<IResponse<IResponsePagination<IDeviceVariant.IResponse>>>;
+    const METADATA: {
+        readonly method: "GET";
+        readonly path: "/admin/device-variant";
+        readonly request: null;
+        readonly response: {
+            readonly type: "application/json";
+            readonly encrypted: false;
+        };
+        readonly status: 200;
+    };
+    const path: (query: findAll.Query) => string;
 }
 export declare function $delete(connection: IConnection, id: string): Promise<$delete.Output>;
 export declare namespace $delete {
