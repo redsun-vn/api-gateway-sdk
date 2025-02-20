@@ -11,7 +11,7 @@ export declare namespace ITheme {
         salePrice?: number;
         category_uuid?: string;
         tags?: string[];
-        imagePreviewId?: number;
+        imagePreviewId?: number | string;
     }
     interface ICreate extends ICreateReq {
         shop_id?: (number & tags.Type<'uint64'>) | null;
@@ -27,11 +27,11 @@ export declare namespace ITheme {
         isSystem: boolean | null;
         isPublic: boolean | null;
         isActive: boolean | null;
-        price: number | null;
-        salePrice: number | null;
+        price: number | string | null;
+        salePrice: number | string | null;
         category_uuid: string | null;
         category?: IThemeCategory.IResponse | null;
         tags?: IThemeTag.IResponse[] | null;
-        imagePreviewId?: number;
+        imagePreviewId?: number | string | null;
     }
 }

@@ -9,6 +9,7 @@ export declare namespace ITemplate {
         entry: NoCodeComponentEntry;
         width?: number;
         widthAuto?: boolean;
+        isUserDefined?: boolean;
     }
     interface ICreate extends ICreateReq {
         shop_id?: (number & tags.Type<'uint64'>) | null;

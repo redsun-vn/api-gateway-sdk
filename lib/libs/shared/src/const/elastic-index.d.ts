@@ -9,6 +9,10 @@ export declare const ELASTIC_INDEX: {
     ADMIN_TICKET_INDEX_NAME: string;
     ADMIN_TICKET_CATEGORY_INDEX_NAME: string;
     ADMIN_TICKET_COMMENT_INDEX_NAME: string;
+    ADMIN_WAREHOUSE: string;
+    ADMIN_DEVICE: string;
+    ADMIN_DEVICE_CATEGORY: string;
+    ADMIN_DEVICE_VARIANT: string;
     ATTACHMENT: string;
     BANK_ACCOUNT: string;
     BRAND: string;
