@@ -1,5 +1,5 @@
 import { BaseResponse } from '../../common.type';
-import { IDevice } from './idevice.type';
+import { IAdminDevice } from './idevice.type';
 import { IAdminWarehouse } from './iwarehouse.type';
 export declare namespace IDeviceVariant {
     interface ICreate {
@@ -38,6 +38,6 @@ export declare namespace IDeviceVariant {
         warehouse_id: number | string;
         quantity: number;
         warehouse?: IAdminWarehouse.IResponse | null;
-        device?: IDevice.IResponse | null;
+        device?: IAdminDevice.IResponse | null;
     }
 }

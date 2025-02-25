@@ -1,7 +1,7 @@
 import { BaseResponse } from '../../common.type';
 import { IDeviceCategory } from './idevice-category.type';
 import { IDeviceVariant } from './idevice-variant.type';
-export declare namespace IDevice {
+export declare namespace IAdminDevice {
     interface ICreate {
         name?: string;
         barcode?: string;
