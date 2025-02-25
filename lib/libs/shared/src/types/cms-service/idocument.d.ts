@@ -2,11 +2,11 @@ import { tags } from 'typia';
 import { BaseResponse, NoCodeComponentEntry } from '../common.type';
 export declare namespace IDocument {
     interface ICreateReq {
-        website_id?: string & tags.Format<'uuid'>;
-        theme_id?: string & tags.Format<'uuid'>;
+        websiteId?: string & tags.Format<'uuid'>;
+        themeId?: string & tags.Format<'uuid'>;
         type?: string | null;
         target?: string;
-        target_id?: string & tags.Format<'uuid'>;
+        targetId?: string & tags.Format<'uuid'>;
         version?: number;
         entry: NoCodeComponentEntry;
     }
@@ -20,11 +20,11 @@ export declare namespace IDocument {
     }
     interface IResponse extends BaseResponse {
         shop_id?: number | string | null;
-        website_id?: string | null;
-        theme_id?: string | null;
+        websiteId?: string | null;
+        themeId?: string | null;
         type?: string | null;
         target?: string | null;
-        target_id?: string | null;
+        targetId?: string | null;
         version: number | string | null;
         entry: NoCodeComponentEntry;
     }

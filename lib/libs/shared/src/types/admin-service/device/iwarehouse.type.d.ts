@@ -12,7 +12,7 @@ export declare namespace IAdminWarehouse {
     }
     interface IResponse extends BaseResponse {
         name: string;
-        description?: string;
+        description?: string | null;
         active: boolean;
     }
 }

@@ -22,7 +22,7 @@ export declare namespace IDeviceVariant {
     }
     interface IResponse extends BaseResponse {
         name: string;
-        description?: string;
+        description?: string | null;
         bio?: string | null;
         icon?: string | null;
         image_id?: number | string | null;
