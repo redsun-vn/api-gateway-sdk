@@ -28,6 +28,11 @@ export declare namespace IReceipt {
         address?: string;
         lineItems: IReceiptLineItems[];
     }
+    interface IAdminCreate extends ICreate {
+        shop_id: string;
+        package_id: string | number | null;
+        subscription_id: string;
+    }
     interface IResponse extends BaseResponse {
         shop_id: string;
         package_id: string | number | null;

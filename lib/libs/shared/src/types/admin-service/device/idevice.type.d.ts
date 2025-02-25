@@ -16,7 +16,7 @@ export declare namespace IDevice {
     }
     interface IResponse extends BaseResponse {
         name: string;
-        barcode?: string;
+        barcode?: string | null;
         serialNumber?: string | null;
         description?: string | null;
         active?: boolean;
