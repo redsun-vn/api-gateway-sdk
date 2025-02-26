@@ -30,8 +30,8 @@ export declare namespace IReceipt {
     }
     interface IAdminCreate extends ICreate {
         shop_id: string;
-        package_id: string | number | null;
-        subscription_id: string;
+        package_id?: number;
+        subscription_id?: number;
     }
     interface IResponse extends BaseResponse {
         shop_id: string;
