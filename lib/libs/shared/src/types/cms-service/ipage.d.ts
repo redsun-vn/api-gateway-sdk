@@ -11,6 +11,9 @@ export declare namespace ICMSPage {
         website_ids?: string[] | null;
         themeId?: string | null;
         isHome?: boolean;
+        isIndex?: boolean;
+        type?: string | null;
+        template?: string | null;
     }
     interface ICreate extends ICreateReq {
         shop_id?: (number & tags.Type<'uint64'>) | null;
@@ -24,6 +27,7 @@ export declare namespace ICMSPage {
         updated_by_id?: number & tags.Type<'uint64'>;
     }
     interface IResponse extends CMSBaseResponse {
+        type?: string | null;
         themeId?: string | null;
         isHome?: boolean;
         template?: string | null;

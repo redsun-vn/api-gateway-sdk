@@ -12,6 +12,7 @@ export declare namespace ICMSPost {
         tag_ids?: number[] | string[];
         slug?: string;
         website_ids?: string[] | null;
+        isIndex?: boolean;
     }
     interface ICreate extends ICreateReq {
         shop_id?: (number & tags.Type<'uint64'>) | null;

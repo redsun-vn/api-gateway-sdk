@@ -148,4 +148,5 @@ export interface CMSBaseResponse extends SEOBaseResponse {
     description: string | null;
     content: string | null;
     attachment_id: number | string | null;
+    isIndex: boolean;
 }
