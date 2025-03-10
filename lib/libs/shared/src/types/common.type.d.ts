@@ -41,6 +41,10 @@ export interface ISearchOptions {
     shopId?: string;
     script?: string;
 }
+export interface IFilterTranslation {
+    keyTranslation: string;
+    langCode: string;
+}
 export declare namespace IPage {
     interface IRequestFindAll {
         pagination: IPaginationOptions;

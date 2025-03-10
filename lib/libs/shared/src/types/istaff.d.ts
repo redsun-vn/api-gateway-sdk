@@ -14,6 +14,17 @@ export declare namespace IStaff {
         branches?: string[];
         active?: boolean;
         department_id?: string;
+        social_insurance?: boolean;
+        social_insurance_code?: string;
+        health_insurance_code?: string;
+        start_date?: string;
+        end_date?: string;
+        id_card?: string;
+        tax_code?: string;
+        bank_account?: string;
+        bank_name?: string;
+        bank_branch?: string;
+        position?: string;
     }
     interface ICreateRegister {
         first_name?: null | string;
@@ -47,6 +58,17 @@ export declare namespace IStaff {
         sessions?: null | IPosSession.IPosSessionResponse[];
         branches?: null | IBranch.IBranchResponse[];
         department_id?: number | string | null;
+        social_insurance?: boolean;
+        social_insurance_code?: string | null;
+        health_insurance_code?: string | null;
+        start_date?: string | null;
+        end_date?: string | null;
+        id_card?: string | null;
+        tax_code?: string | null;
+        bank_account?: string | null;
+        bank_name?: string | null;
+        bank_branch?: string | null;
+        position?: string | null;
     }
     interface IRegisterResponse extends BaseResponse {
         user_id: string;

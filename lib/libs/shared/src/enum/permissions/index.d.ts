@@ -18,3 +18,4 @@ export * from './department';
 export * from './attendance';
 export * from './cms';
 export * from './receipt';
+export * from './salary';

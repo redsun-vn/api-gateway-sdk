@@ -20,6 +20,17 @@ export declare namespace IAttendanceShift {
         break_period_to?: string;
         minute_late_in?: number;
         minute_early_out?: number;
+        overtime_before_shift_enable?: boolean;
+        overtime_before_shift_minutes?: number;
+        overtime_before_shift_max_minutes?: number;
+        overtime_after_shift_enable?: boolean;
+        overtime_after_shift_minutes?: number;
+        overtime_after_shift_max_minutes?: number;
+        overtime_rate_percentage?: number;
+        overtime_holiday_rate_percentage?: number;
+        overtime_night_rate_percentage?: number;
+        night_shift_from?: string;
+        night_shift_to?: string;
     }
     interface ICreate {
         shop_id: number;
@@ -61,5 +72,16 @@ export declare namespace IAttendanceShift {
         break_period_to: string | null;
         minute_late_in: number | null;
         minute_early_out: number | null;
+        overtime_before_shift_enable?: boolean;
+        overtime_before_shift_minutes?: number | string | null;
+        overtime_before_shift_max_minutes?: number | string | null;
+        overtime_after_shift_enable?: boolean;
+        overtime_after_shift_minutes?: number | string | null;
+        overtime_after_shift_max_minutes?: number | string | null;
+        overtime_rate_percentage?: number | string | null;
+        overtime_holiday_rate_percentage?: number | string | null;
+        overtime_night_rate_percentage?: number | string | null;
+        night_shift_from?: string | null;
+        night_shift_to?: string | null;
     }
 }
