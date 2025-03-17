@@ -22,6 +22,7 @@ export * as application_plan from "./application_plan";
 export * as business_types from "./business_types";
 export * as category_business from "./category_business";
 export * as category_print_template from "./category_print_template";
+export * as locales from "./locales";
 export * as packages from "./packages";
 export * as payment_methods from "./payment_methods";
 export * as payment_method from "./payment_method";

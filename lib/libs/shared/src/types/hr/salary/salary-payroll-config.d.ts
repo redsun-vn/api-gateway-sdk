@@ -14,8 +14,8 @@ export declare namespace ISalaryPayrollConfig {
         monthly_closing_day?: number;
         semi_monthly_closing_days?: number[];
         weekly_closing_day?: string;
-        include_month13_in_december?: boolean;
-        include_tet_bonus_in_december?: boolean;
+        include_month13?: boolean;
+        include_tet_bonus?: boolean;
         month13_bonus_config_id?: number;
         tet_bonus_config_id?: number;
         auto_calculate?: boolean;
@@ -27,6 +27,7 @@ export declare namespace ISalaryPayrollConfig {
         calculation_hour?: number;
         calculation_minute?: number;
         notification_staff_ids?: string[];
+        applicable_month?: number;
     }
     type IUpdate = Omit<Partial<ICreate>, 'shop_id'>;
     interface IResponse extends BaseResponse {
@@ -39,8 +40,8 @@ export declare namespace ISalaryPayrollConfig {
         monthly_closing_day?: number | string | null;
         semi_monthly_closing_days?: number[];
         weekly_closing_day?: string;
-        include_month13_in_december?: boolean;
-        include_tet_bonus_in_december?: boolean;
+        include_month13?: boolean;
+        include_tet_bonus?: boolean;
         month13_bonus_config_id?: number | string | null;
         tet_bonus_config_id?: number | string | null;
         auto_calculate: boolean;
@@ -56,5 +57,6 @@ export declare namespace ISalaryPayrollConfig {
         calculation_hour?: number;
         calculation_minute?: number;
         notification_staff_ids?: string[];
+        applicable_month?: number | string | null;
     }
 }

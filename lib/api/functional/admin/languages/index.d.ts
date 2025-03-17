@@ -32,6 +32,25 @@ export declare namespace findOne {
     };
     const path: (id: string) => string;
 }
+export declare function update(connection: IConnection, data: update.Input, id: string): Promise<update.Output>;
+export declare namespace update {
+    type Input = Resolved<ILanguage.IUpdate>;
+    type Output = Primitive<IResponse<ILanguage.ILanguageResponse>>;
+    const METADATA: {
+        readonly method: "PUT";
+        readonly path: "/admin/languages/:id";
+        readonly request: {
+            readonly type: "application/json";
+            readonly encrypted: false;
+        };
+        readonly response: {
+            readonly type: "application/json";
+            readonly encrypted: false;
+        };
+        readonly status: 200;
+    };
+    const path: (id: string) => string;
+}
 export declare function create(connection: IConnection, data: create.Input): Promise<create.Output>;
 export declare namespace create {
     type Input = Resolved<ILanguage.ICreate>;

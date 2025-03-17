@@ -6,6 +6,7 @@ export * as commissions from "./commissions";
 export * as configs from "./configs";
 export * as holidays from "./holidays";
 export * as insurances from "./insurances";
+export * as payroll_analysis from "./payroll_analysis";
 export * as payrolls from "./payrolls";
 export * as penalties from "./penalties";
 export * as performances from "./performances";

@@ -40,7 +40,7 @@ export * as ticket_categories from "./ticket_categories";
 export * as ticket_comments from "./ticket_comments";
 export * as tickets from "./tickets";
 export * as translation from "./translation";
-export * as translation_import from "./translation_import";
+export * as translation_key from "./translation_key";
 export * as users from "./users";
 export * as warehouses from "./warehouses";
 export * as cms from "./cms";

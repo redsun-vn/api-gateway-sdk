@@ -21,6 +21,7 @@ export declare namespace ISalaryCalculation {
         performance_multiplier: number | string;
     }
     interface IAttendance {
+        total_hours: number | string;
         total_days: number | string;
         present_days: number | string;
         absent_days: number | string;

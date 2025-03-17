@@ -31,7 +31,7 @@ export declare namespace ISalaryPenaltyConfig {
         penalty_type: string;
         penalty_amount: number | string;
         penalty_percentage?: number | string | null;
-        penalty_base?: string;
+        penalty_base?: string | null;
         staffs?: IStaff.IStaffResponse[];
         departments?: IDepartment.IResponse[];
         penalty_code?: string | null;
