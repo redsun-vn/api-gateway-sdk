@@ -58,6 +58,6 @@ export * from './partner-service';
 export * from './ilanguage.type';
 export * from './inamespace.type';
 export * from './itranslation.type';
-export * from './itranslation-history.type';
+export * from './itranslation-versions.type';
 export * from './itranslation-import.type';
 export * from './itranslation-key.type';

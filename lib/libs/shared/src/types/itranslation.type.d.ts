@@ -4,6 +4,7 @@ import { ILanguage } from './ilanguage.type';
 import { INameSpace } from './inamespace.type';
 import { ITranslationImport } from './itranslation-import.type';
 import { ITranslationKey } from './itranslation-key.type';
+import { ITranslationVersions } from './itranslation-versions.type';
 export declare namespace ITranslations {
     interface ICreate {
         namespace_id: string | number;
@@ -25,5 +26,6 @@ export declare namespace ITranslations {
         translation_key?: null | ITranslationKey.IResponse;
         namespace?: null | INameSpace.IResponse;
         language?: null | ILanguage.ILanguageResponse;
+        versions?: null | ITranslationVersions.IResponse[];
     }
 }

@@ -1,7 +1,7 @@
 import type { IConnection, Primitive } from "@nestia/fetcher";
 export declare function findAll(connection: IConnection, ns: string, lang: string): Promise<findAll.Output>;
 export declare namespace findAll {
-    type Output = Primitive<any>;
+    type Output = Primitive<Record<string, string>>;
     const METADATA: {
         readonly method: "GET";
         readonly path: "/locales/:ns/:lang/translation.json";
