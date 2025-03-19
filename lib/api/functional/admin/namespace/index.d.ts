@@ -1,7 +1,6 @@
 import type { IConnection, Resolved, Primitive } from "@nestia/fetcher";
 import type { IQuery, IResponse, IResponsePagination } from "../../../../libs/shared/src/types/common.type";
 import type { INameSpace } from "../../../../libs/shared/src/types/inamespace.type";
-import type { ITranslationImport } from "../../../../libs/shared/src/types/itranslation-import.type";
 export declare function findAll(connection: IConnection, query: findAll.Query): Promise<findAll.Output>;
 export declare namespace findAll {
     type Query = Resolved<IQuery>;
@@ -52,9 +51,9 @@ export declare namespace create {
     };
     const path: () => string;
 }
-export declare function $import(connection: IConnection, body: $import.Input): Promise<$import.Output>;
+export declare function $import(connection: IConnection, bodyString: $import.Input): Promise<$import.Output>;
 export declare namespace $import {
-    type Input = Resolved<ITranslationImport.ImportDto>;
+    type Input = Primitive<string>;
     type Output = Primitive<IResponse<false | true>>;
     const METADATA: {
         readonly method: "POST";

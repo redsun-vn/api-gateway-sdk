@@ -14,5 +14,6 @@ export declare namespace INameSpace {
         description?: string | null;
         parent_id?: number | null;
         is_active?: boolean;
+        parent?: IResponse | null;
     }
 }

@@ -31,6 +31,7 @@ export declare namespace IDrafOrder {
         completedAt?: (string & tags.Format<'date-time'>) | null;
         canceledAt?: (string & tags.Format<'date-time'>) | null;
         lineItems: ILineItem.IInputLineItem[];
+        cart_session_id?: string;
     }
     interface ICreateDraftCopy {
         staffId: string;
@@ -83,5 +84,15 @@ export declare namespace IDrafOrder {
         lineItems?: ILineItem.IDetailLineItemResponse[] | null;
         combiningPromotions?: ICombiningPromotion.IDetailCombiningPromotionResponse[] | null;
         additionalFees?: IAdditionalFee.IDetailAdditionalFeeResponse[] | null;
+        cart_session_id?: string | null;
+        expires_at?: string | null;
+    }
+    interface IGetCart {
+        shopId?: string;
+        sessionId: string;
+        partnerId?: string;
+    }
+    interface IUpdateCart extends Omit<Partial<ICreateDrafOrder>, 'branch_id' | 'staff_id' | 'sale_channel_id'> {
+        cart_session_id: string;
     }
 }

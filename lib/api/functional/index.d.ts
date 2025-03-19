@@ -5,6 +5,7 @@ export * as notification from "./notification";
 export * as shop from "./shop";
 export * as comments from "./comments";
 export * as order from "./order";
+export * as carts from "./carts";
 export * as orders from "./orders";
 export * as sale_orders from "./sale_orders";
 export * as partners from "./partners";

@@ -1,6 +1,22 @@
-import type { IConnection, Primitive, Resolved } from "@nestia/fetcher";
-import type { IResponse } from "../../../../libs/shared/src/types/common.type";
+import type { IConnection, Resolved, Primitive } from "@nestia/fetcher";
+import type { IQuery, IResponse, IResponsePagination } from "../../../../libs/shared/src/types/common.type";
 import type { ITranslationKey } from "../../../../libs/shared/src/types/itranslation-key.type";
+export declare function findAll(connection: IConnection, query: findAll.Query): Promise<findAll.Output>;
+export declare namespace findAll {
+    type Query = Resolved<IQuery>;
+    type Output = Primitive<IResponse<IResponsePagination<ITranslationKey.IResponse>>>;
+    const METADATA: {
+        readonly method: "GET";
+        readonly path: "/admin/translation-key";
+        readonly request: null;
+        readonly response: {
+            readonly type: "application/json";
+            readonly encrypted: false;
+        };
+        readonly status: 200;
+    };
+    const path: (query: findAll.Query) => string;
+}
 export declare function findOne(connection: IConnection, id: string): Promise<findOne.Output>;
 export declare namespace findOne {
     type Output = Primitive<IResponse<ITranslationKey.IResponse>>;

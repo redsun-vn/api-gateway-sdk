@@ -2,7 +2,6 @@
 import { BaseResponse, IQuery } from './common.type';
 import { ILanguage } from './ilanguage.type';
 import { INameSpace } from './inamespace.type';
-import { ITranslationImport } from './itranslation-import.type';
 import { ITranslationKey } from './itranslation-key.type';
 import { ITranslationVersions } from './itranslation-versions.type';
 export declare namespace ITranslations {
@@ -13,7 +12,7 @@ export declare namespace ITranslations {
         value: string;
     }
     interface IImport {
-        body: ITranslationImport.ImportDto;
+        body: string;
         query?: IQuery;
         file: Express.Multer.File;
     }
