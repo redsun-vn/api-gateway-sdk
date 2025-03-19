@@ -28,7 +28,7 @@ export declare namespace ISalaryAllowanceConfig {
         active: boolean;
         allowance_type: string;
         amount: number | string;
-        percentage?: number | string;
+        percentage?: number | string | null;
         percentage_base?: string;
         taxable: boolean;
         payment_frequency: string;
