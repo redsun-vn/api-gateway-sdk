@@ -29,10 +29,10 @@ export declare namespace ISalaryAllowanceConfig {
         allowance_type: string;
         amount: number | string;
         percentage?: number | string | null;
-        percentage_base?: string;
+        percentage_base?: string | null;
         taxable: boolean;
         payment_frequency: string;
-        salary_config_id?: number | string;
+        salary_config_id?: number | string | null;
         staffs?: IStaff.IStaffResponse[];
         departments?: IDepartment.IResponse[];
     }
