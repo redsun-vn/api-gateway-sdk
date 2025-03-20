@@ -47,7 +47,7 @@ export declare namespace ISalaryInsuranceConfig {
         min_salary_limit: number | string;
         max_salary_limit: number | string;
         include_allowances: boolean;
-        included_allowance_types?: IAllowance[];
+        included_allowance_types?: IAllowance[] | null;
         effective_date?: string | null;
         expiry_date?: string | null;
         created_by_id?: string | null;
