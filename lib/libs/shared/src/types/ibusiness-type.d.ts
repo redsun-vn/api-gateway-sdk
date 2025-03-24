@@ -1,7 +1,7 @@
 import { BaseResponse } from './common.type';
 export declare namespace IBusinessType {
     interface ICreate {
-        code: string;
+        code_business_type: string;
         name: string;
         active?: boolean;
         description?: string;
@@ -10,7 +10,7 @@ export declare namespace IBusinessType {
         category_business_id: string;
     }
     interface IUpdate {
-        code?: string;
+        code_business_type?: string;
         name?: string;
         active?: boolean;
         description?: string;
@@ -24,6 +24,6 @@ export declare namespace IBusinessType {
         icon?: null | string;
         metadata?: string | null;
         active: boolean;
-        code?: string | null;
+        code_business_type?: string | null;
     }
 }

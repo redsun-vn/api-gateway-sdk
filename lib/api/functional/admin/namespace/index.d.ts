@@ -72,7 +72,7 @@ export declare namespace $import {
 }
 export declare function update(connection: IConnection, data: update.Input, id: string): Promise<update.Output>;
 export declare namespace update {
-    type Input = Resolved<Partial<INameSpace.ICreate>>;
+    type Input = Resolved<INameSpace.IUpdate>;
     type Output = Primitive<IResponse<INameSpace.IResponse>>;
     const METADATA: {
         readonly method: "PUT";

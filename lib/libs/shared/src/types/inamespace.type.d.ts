@@ -6,8 +6,16 @@ export declare namespace INameSpace {
         description?: string;
         parent_id?: number | null;
         is_active?: boolean;
+        createdById?: number | string;
     }
-    type IUpdate = Partial<ICreate>;
+    interface IUpdate {
+        code: string;
+        name: string;
+        description?: string;
+        parent_id?: number | null;
+        is_active?: boolean;
+        updatedById?: number | string;
+    }
     interface IResponse extends BaseResponse {
         code: string;
         name: string;

@@ -10,13 +10,20 @@ export declare namespace ITranslations {
         key_id: string | number;
         language_id: string | number;
         value: string;
+        createdById?: number | string;
     }
     interface IImport {
         body: string;
         query?: IQuery;
         file: Express.Multer.File;
     }
-    type IUpdate = Partial<ICreate>;
+    interface IUpdate {
+        namespace_id: string | number;
+        key_id: string | number;
+        language_id: string | number;
+        value: string;
+        updatedById?: number | string;
+    }
     interface IResponse extends BaseResponse {
         namespace_id: string | number;
         key_id: string | number;

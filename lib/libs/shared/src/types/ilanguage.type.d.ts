@@ -4,11 +4,13 @@ export declare namespace ILanguage {
         code: string;
         name: string;
         is_default?: boolean;
+        createdById?: number | string;
     }
     interface IUpdate {
         code: string;
         name: string;
         is_default?: boolean;
+        updatedById?: number | string;
     }
     interface ILanguageResponse extends BaseResponse {
         code: string;

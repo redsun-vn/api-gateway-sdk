@@ -4,8 +4,13 @@ export declare namespace ITranslationKey {
     interface ICreate {
         key: string;
         description?: string | null;
+        createdById?: number | string;
     }
-    type IUpdate = Partial<ICreate>;
+    interface IUpdate {
+        key: string;
+        description?: string | null;
+        updatedById?: number | string;
+    }
     interface IResponse extends BaseResponse {
         key: string;
         description?: string | null;

@@ -34,7 +34,7 @@ export declare namespace findOne {
 }
 export declare function update(connection: IConnection, data: update.Input, id: string): Promise<update.Output>;
 export declare namespace update {
-    type Input = Resolved<Partial<ITranslations.ICreate>>;
+    type Input = Resolved<ITranslations.IUpdate>;
     type Output = Primitive<IResponse<ITranslations.IResponse>>;
     const METADATA: {
         readonly method: "PUT";
