@@ -39,7 +39,7 @@ export declare namespace ISalaryPayrollConfig {
         payroll_cycle: string;
         monthly_closing_day?: number | string | null;
         semi_monthly_closing_days?: number[];
-        weekly_closing_day?: string;
+        weekly_closing_day?: string | null;
         include_month13?: boolean;
         include_tet_bonus?: boolean;
         month13_bonus_config_id?: number | string | null;
@@ -56,7 +56,7 @@ export declare namespace ISalaryPayrollConfig {
         tet_bonus_config?: ISalaryBonusConfig.IResponse | null;
         calculation_hour?: number;
         calculation_minute?: number;
-        notification_staff_ids?: string[];
+        notification_staff_ids?: string[] | null;
         applicable_month?: number | string | null;
     }
 }

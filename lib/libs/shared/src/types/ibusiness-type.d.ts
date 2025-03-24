@@ -25,5 +25,6 @@ export declare namespace IBusinessType {
         metadata?: string | null;
         active: boolean;
         code_business_type?: string | null;
+        code?: string | null;
     }
 }
