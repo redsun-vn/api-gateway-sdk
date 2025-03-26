@@ -31,7 +31,7 @@ export declare namespace IStaffPerformance {
         month?: number | null;
         quarter?: number | null;
         evaluation_period: string;
-        performance_score: number;
+        performance_score: number | string;
         attendance_score?: number | null;
         quality_score?: number | null;
         productivity_score?: number | null;
