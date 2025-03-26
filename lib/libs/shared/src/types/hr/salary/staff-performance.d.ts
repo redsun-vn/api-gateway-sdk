@@ -32,11 +32,11 @@ export declare namespace IStaffPerformance {
         quarter?: number | null;
         evaluation_period: string;
         performance_score: number | string;
-        attendance_score?: number | null;
-        quality_score?: number | null;
-        productivity_score?: number | null;
-        teamwork_score?: number | null;
-        initiative_score?: number | null;
+        attendance_score?: number | string | null;
+        quality_score?: number | string | null;
+        productivity_score?: number | string | null;
+        teamwork_score?: number | string | null;
+        initiative_score?: number | string | null;
         comments?: string | null;
         evaluated_by_id?: string | null;
         evaluation_date?: string | null;
