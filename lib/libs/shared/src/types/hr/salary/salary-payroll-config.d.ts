@@ -38,7 +38,7 @@ export declare namespace ISalaryPayrollConfig {
         active: boolean;
         payroll_cycle: string;
         monthly_closing_day?: number | string | null;
-        semi_monthly_closing_days?: number[];
+        semi_monthly_closing_days?: number[] | null;
         weekly_closing_day?: string | null;
         include_month13?: boolean;
         include_tet_bonus?: boolean;
