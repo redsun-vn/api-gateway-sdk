@@ -1,5 +1,5 @@
 import type { IConnection, Primitive } from "@nestia/fetcher";
-import type { Bank } from "@redsun-vn/vnpay/lib/types/bank.type";
+import type { Bank } from "@redsun-vn/vnpay/types/bank.type";
 import type { IResponse } from "../../../../../libs/shared/src/types/common.type";
 export declare function getBankList(connection: IConnection): Promise<getBankList.Output>;
 export declare namespace getBankList {

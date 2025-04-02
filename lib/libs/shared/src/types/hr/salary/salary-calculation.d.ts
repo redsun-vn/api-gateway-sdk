@@ -191,6 +191,18 @@ export declare namespace ISalaryCalculation {
         total_insurance_employer?: number | string | null;
         payroll_config_id?: number | string | null;
     }
+    interface ISalaryDetails {
+        base_salary: number | string;
+        daily_salary: number | string;
+        standard_working_days: number | string;
+        actual_working_days: number | string;
+        total_salary: number | string;
+    }
+    interface IHoliday {
+        id: number | string;
+        name: string;
+        amount: number | string;
+    }
     interface ICalculationDetails {
         allowances?: IAllowance[];
         bonuses?: IBonus[];
@@ -204,5 +216,7 @@ export declare namespace ISalaryCalculation {
         payroll_config_id?: number | string;
         advance_payment?: ISalaryAdvance.IResponse[];
         income_tax?: IIncomeTax;
+        salary_details?: ISalaryDetails;
+        holidays?: IHoliday[];
     }
 }
