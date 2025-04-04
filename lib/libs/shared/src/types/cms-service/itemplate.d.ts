@@ -10,6 +10,7 @@ export declare namespace ITemplate {
         width?: number;
         widthAuto?: boolean;
         isUserDefined?: boolean;
+        group?: string;
     }
     interface ICreate extends ICreateReq {
         shop_id?: (number & tags.Type<'uint64'>) | null;
@@ -19,6 +20,7 @@ export declare namespace ITemplate {
         entry?: NoCodeComponentEntry;
         width?: number;
         widthAuto?: boolean;
+        group?: string;
     }
     interface IUpdate extends IUpdateReq {
         id: string;
@@ -35,5 +37,6 @@ export declare namespace ITemplate {
         width?: number | string | null;
         widthAuto?: boolean | null;
         entry: NoCodeComponentEntry;
+        group?: string | null;
     }
 }

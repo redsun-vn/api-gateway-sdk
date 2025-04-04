@@ -51,6 +51,17 @@ export declare namespace IAttendanceShift {
         break_period_to?: string;
         minute_late_in?: number;
         minute_early_out?: number;
+        overtime_before_shift_enable?: boolean;
+        overtime_before_shift_minutes?: number;
+        overtime_before_shift_max_minutes?: number;
+        overtime_after_shift_enable?: boolean;
+        overtime_after_shift_minutes?: number;
+        overtime_after_shift_max_minutes?: number;
+        overtime_rate_percentage?: number;
+        overtime_holiday_rate_percentage?: number;
+        overtime_night_rate_percentage?: number;
+        night_shift_from?: string;
+        night_shift_to?: string;
     }
     type IUpdate = Omit<Partial<ICreate>, 'shop_id'>;
     interface IResponse extends BaseResponse {
