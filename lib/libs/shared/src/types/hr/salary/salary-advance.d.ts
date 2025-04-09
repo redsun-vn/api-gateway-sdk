@@ -48,4 +48,9 @@ export declare namespace ISalaryAdvance {
         is_settled?: boolean;
         salary_calculation_id?: number | string | null;
     }
+    interface IPayRequest {
+        payment_method: string;
+        payment_reference?: string;
+        payment_date: string;
+    }
 }

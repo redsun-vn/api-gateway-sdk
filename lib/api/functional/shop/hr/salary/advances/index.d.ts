@@ -119,3 +119,22 @@ export declare namespace $delete {
     };
     const path: (id: string) => string;
 }
+export declare function pay(connection: IConnection, id: string, data: pay.Input): Promise<pay.Output>;
+export declare namespace pay {
+    type Input = Resolved<ISalaryAdvance.IPayRequest>;
+    type Output = Primitive<IResponse<ISalaryAdvance.IResponse>>;
+    const METADATA: {
+        readonly method: "PUT";
+        readonly path: "/shop/hr/salary/advances/:id/pay";
+        readonly request: {
+            readonly type: "application/json";
+            readonly encrypted: false;
+        };
+        readonly response: {
+            readonly type: "application/json";
+            readonly encrypted: false;
+        };
+        readonly status: 200;
+    };
+    const path: (id: string) => string;
+}

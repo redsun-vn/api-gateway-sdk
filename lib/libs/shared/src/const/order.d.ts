@@ -20,6 +20,16 @@ export declare const statusFulfillmentOrderMapping: {
     pending: string;
     success: string;
 };
+export declare const paymentGatewayNameMapping: {
+    bank: string;
+    cash: string;
+    vietqr: string;
+    cod: string;
+    card: string;
+    vnpayqr: string;
+    point: string;
+    vnpay: string;
+};
 export declare const statusFinancialOrderMapping: {
     canceled: string;
     not_paid: string;
