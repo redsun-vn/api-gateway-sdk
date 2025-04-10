@@ -28,6 +28,7 @@ export declare namespace ISalaryPayrollConfig {
         calculation_minute?: number;
         notification_staff_ids?: string[];
         applicable_month?: number;
+        auto_approve_after_days?: number;
     }
     type IUpdate = Omit<Partial<ICreate>, 'shop_id'>;
     interface IResponse extends BaseResponse {
@@ -46,6 +47,7 @@ export declare namespace ISalaryPayrollConfig {
         tet_bonus_config_id?: number | string | null;
         auto_calculate: boolean;
         auto_approve: boolean;
+        auto_approve_after_days?: number | string | null;
         notify_on_calculation: boolean;
         notification_recipients?: string[];
         created_by_id?: number | string | null;
