@@ -95,6 +95,17 @@ export declare namespace IStaff {
         branches?: string[] | null;
         active?: boolean;
         department_id?: string | null;
+        social_insurance?: boolean;
+        social_insurance_code?: string;
+        health_insurance_code?: string;
+        start_date?: string;
+        end_date?: string;
+        id_card?: string;
+        tax_code?: string;
+        bank_account?: string;
+        bank_name?: string;
+        bank_branch?: string;
+        position?: string;
     }
     interface IPermissionMapping {
         permission: string[];
