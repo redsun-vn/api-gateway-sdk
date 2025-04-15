@@ -13,6 +13,7 @@ export declare namespace IPricebookRule {
         referentType?: PriceBookRuleReferentType;
         referentValue?: number;
         value?: number;
+        recipeFeePercent?: number | null;
         recipeFee?: number | null;
         effectiveHours?: IEffectiveHours[] | null;
         daysOfTheWeek?: string;
@@ -31,6 +32,7 @@ export declare namespace IPricebookRule {
         referentType?: PriceBookRuleReferentType;
         referentValue?: number;
         value?: number;
+        recipeFeePercent?: number | null;
         recipeFee?: number | null;
         effectiveHours?: IEffectiveHours[] | null;
         daysOfTheWeek?: string;
@@ -48,6 +50,7 @@ export declare namespace IPricebookRule {
         referentType: string;
         referentValue?: number | string;
         value?: number | string;
+        recipeFeePercent?: number | string | null;
         recipeFee?: number | string | null;
         effectiveHours?: IEffectiveHours[] | string | null;
         daysOfTheWeek?: string | null;

@@ -190,6 +190,9 @@ export declare namespace ISalaryCalculation {
         total_insurance_employee?: number | string | null;
         total_insurance_employer?: number | string | null;
         payroll_config_id?: number | string | null;
+        code?: string | null;
+        start_date?: string | null;
+        end_date?: string | null;
     }
     interface ISalaryDetails {
         base_salary: number | string;
