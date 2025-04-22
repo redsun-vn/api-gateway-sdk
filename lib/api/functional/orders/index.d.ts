@@ -1,6 +1,7 @@
 import type { IConnection, Primitive, Resolved } from "@nestia/fetcher";
 import type { IResponse } from "../../../libs/shared/src/types/common.type";
 import type { IOrder } from "../../../libs/shared/src/types/order-service/iorder.type";
+export * as code from "./code";
 export declare function findOnePublic(connection: IConnection, id: string): Promise<findOnePublic.Output>;
 export declare namespace findOnePublic {
     type Output = Primitive<IResponse<IOrder.IDetailOrderResponse>>;

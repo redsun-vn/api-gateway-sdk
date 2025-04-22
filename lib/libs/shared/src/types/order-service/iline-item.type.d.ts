@@ -171,4 +171,48 @@ export declare namespace ILineItem {
         roomId?: number | string | null;
         timeSlots?: ITimeSlot[] | null;
     }
+    interface IDetailLineItemPublicResponse extends BaseResponse {
+        shop_id: number | string | null;
+        product_id: number | string | null;
+        variant_id: number | string | null;
+        uom_uom_id?: number | string | null;
+        image_id?: string | number | null;
+        kds_area_id?: number | string | null;
+        fulfillment_provider_id?: number | string | null;
+        reward_id?: number | string | null;
+        order_id?: number | string | null;
+        draf_order_id?: number | string | null;
+        sale_order_id?: number | string | null;
+        isGiftcard?: boolean;
+        isGift?: boolean;
+        isReturn?: boolean;
+        isRequiredShipping?: boolean;
+        isPrioritize?: boolean;
+        needToCook?: boolean;
+        sku?: string | null;
+        barcode?: string | null;
+        uuid: string | null;
+        variantTitle?: string | null;
+        title?: string | null;
+        description?: string | null;
+        note?: string | null;
+        kitchenProcessingStatus?: string | null;
+        fulfillmentStatus?: string | null;
+        refundable?: boolean;
+        taxable?: boolean;
+        uomRatio?: number | string;
+        quantity?: number | string;
+        unitPrice?: number | string;
+        price?: number | string;
+        discountTotal?: number | string;
+        paidTotal?: number | string;
+        gram?: number | string;
+        processedAt?: string | null;
+        completedAt?: string | null;
+        sequenece?: number | string;
+        isCalculatedByHour?: boolean;
+        isRecurring?: boolean;
+        recurrencePeriod?: string;
+        recurrenceDuration?: number | string;
+    }
 }
