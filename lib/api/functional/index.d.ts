@@ -9,6 +9,7 @@ export * as carts from "./carts";
 export * as orders from "./orders";
 export * as sale_orders from "./sale_orders";
 export * as partners from "./partners";
+export * as categories from "./categories";
 export * as product from "./product";
 export * as pricebook from "./pricebook";
 export * as products from "./products";
