@@ -7,12 +7,14 @@ export declare namespace INotify {
         htmlContent?: string;
         startDate?: string;
         endDate?: string;
+        isUpdateVersionApp?: boolean;
     }
     interface IUpdate extends ICreate {
     }
     interface IResponse extends BaseResponse {
         active: boolean;
         isMaintance: boolean;
+        isUpdateVersionApp?: boolean;
         htmlContent: string | null;
         message: string | null;
         startDate: string | null;
