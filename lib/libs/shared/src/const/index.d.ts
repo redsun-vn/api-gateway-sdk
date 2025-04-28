@@ -9,6 +9,7 @@ export * from './report';
 export * from './partner';
 export * from './hr';
 export * from './table';
+export * from './regex';
 export declare const UNIT_TIME: string[];
 export declare const SHIPPING_PROVIDER_CONFIG_KEY: {
     GHN: string[];

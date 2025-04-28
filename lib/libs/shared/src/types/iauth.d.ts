@@ -55,4 +55,16 @@ export declare namespace IAuth {
         user_id: string & tags.Format<'uuid'>;
         otp?: string;
     }
+    interface IRegisterTemporaryResponse {
+        verification_id: string & tags.Format<'uuid'>;
+        otp?: string;
+    }
+    interface IRegisterTemporaryRequest {
+        verification_id: string & tags.Format<'uuid'>;
+        otp: string;
+        password: string & tags.MinLength<6>;
+        confirm_password: string & tags.MinLength<6>;
+        phone: string;
+        first_name?: null | string;
+    }
 }
