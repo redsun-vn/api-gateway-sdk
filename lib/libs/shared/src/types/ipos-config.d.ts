@@ -43,6 +43,7 @@ export declare namespace IPosConfig {
         available_pricelist_ids?: string[];
         available_collections_ids?: string[];
         available_floor_ids?: string[];
+        available_staff_ids?: string[];
         available_payment_method_ids?: string[];
         methodOfOperation?: POSMethodOfOperation;
     }
@@ -81,6 +82,7 @@ export declare namespace IPosConfig {
         available_pricelist_ids?: null | string[];
         available_collections_ids?: null | string[];
         available_floor_ids?: null | string[];
+        available_staff_ids?: null | string[];
         availablePaymentMethods?: null | IPaymentMethod.IPaymentMethodResponse[];
         methodOfOperation?: POSMethodOfOperation;
     }
