@@ -124,3 +124,24 @@ export declare enum StaffPerformanceEvaluationPeriod {
     Quarterly = "quarterly",
     Yearly = "yearly"
 }
+export declare enum LeaveRequestStatus {
+    PENDING = "pending",
+    APPROVED = "approved",
+    REJECTED = "rejected",
+    CANCELLED = "cancelled"
+}
+export declare enum LeaveTypeCode {
+    ANNUAL = "ANNUAL",
+    UNPAID = "UNPAID",
+    SICK = "SICK",
+    MATERNITY = "MATERNITY",
+    MARRIAGE = "MARRIAGE",
+    FUNERAL = "FUNERAL",
+    CHILD_SICK = "CHILD_SICK",
+    MISCARRIAGE = "MISCARRIAGE",
+    PATERNITY = "PATERNITY",
+    COMPENSATORY = "COMPENSATORY",
+    BUSINESS_TRIP = "BUSINESS_TRIP",
+    WORK_FROM_HOME = "WORK_FROM_HOME",
+    OTHER = "OTHER"
+}

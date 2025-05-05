@@ -10,3 +10,4 @@ export * from './insurance-config';
 export * from './staff-performance';
 export * from './salary-advance';
 export * from './salary-payroll-analysis';
+export * from './leave';

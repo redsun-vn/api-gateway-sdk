@@ -66,3 +66,17 @@ export declare enum SalaryStaffPerformancePermission {
     UPDATE = "salary_staff_performance-update",
     DELETE = "salary_staff_performance-delete"
 }
+export declare enum SalaryLeaveTypePermission {
+    VIEW = "salary_leave_type-view",
+    CREATE = "salary_leave_type-create",
+    UPDATE = "salary_leave_type-update",
+    DELETE = "salary_leave_type-delete"
+}
+export declare enum SalaryLeaveRequestPermission {
+    VIEW = "salary_leave_request-view",
+    CREATE = "salary_leave_request-create",
+    UPDATE = "salary_leave_request-update",
+    DELETE = "salary_leave_request-delete",
+    APPROVE = "salary_leave_request-approve",
+    REJECT = "salary_leave_request-reject"
+}

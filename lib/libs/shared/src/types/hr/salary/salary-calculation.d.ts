@@ -1,6 +1,7 @@
 import { BaseResponse } from '../../common.type';
 import { ISalaryAdvance } from './salary-advance';
 import { SalaryCalculationStatus } from '../../../enum/hr/salary';
+import { ILeave } from './leave';
 export declare namespace ISalaryCalculation {
     interface IOvertime {
         total_hours: number | string;
@@ -27,6 +28,12 @@ export declare namespace ISalaryCalculation {
         absent_days: number | string;
         late_minutes: number | string;
         early_leave_minutes: number | string;
+        start_date?: string;
+        end_date?: string;
+        total_shifts?: number | string;
+        leave_days_paid?: number | string;
+        leave_days_unpaid?: number | string;
+        leave_summary?: ILeave.ILeaveSummary;
     }
     interface IPayroll {
         payroll_config_id: number | string;
