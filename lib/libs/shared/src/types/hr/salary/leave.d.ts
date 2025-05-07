@@ -26,11 +26,11 @@ export declare namespace ILeave {
         end_date: string;
         total_days: number | string;
         reason?: string | null;
-        status: LeaveRequestStatus;
+        status: LeaveRequestStatus | string;
         approved_by_id?: string | null;
         approved_at?: string | null;
         rejection_reason?: string | null;
-        attachments?: string[];
+        attachments?: string[] | null;
     }
     interface ILeaveDetail {
         leave_type_id: number | string;
