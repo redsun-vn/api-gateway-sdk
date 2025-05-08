@@ -80,3 +80,9 @@ export declare enum SalaryLeaveRequestPermission {
     APPROVE = "salary_leave_request-approve",
     REJECT = "salary_leave_request-reject"
 }
+export declare enum SalaryLeavePolicyPermission {
+    VIEW = "salary_leave_policy-view",
+    CREATE = "salary_leave_policy-create",
+    UPDATE = "salary_leave_policy-update",
+    DELETE = "salary_leave_policy-delete"
+}

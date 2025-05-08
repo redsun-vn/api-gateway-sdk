@@ -65,6 +65,7 @@ export declare const ELASTIC_INDEX: {
     HR_SALARY_ADVANCE: string;
     HR_SALARY_LEAVE_TYPE: string;
     HR_SALARY_LEAVE_REQUEST: string;
+    HR_SALARY_LEAVE_SUMMARY: string;
     INGREDIENT: string;
     INVOICE: string;
     KDS_ORDER_ITEM: string;

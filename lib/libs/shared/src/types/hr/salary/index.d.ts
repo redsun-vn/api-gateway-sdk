@@ -11,3 +11,5 @@ export * from './staff-performance';
 export * from './salary-advance';
 export * from './salary-payroll-analysis';
 export * from './leave';
+export * from './leave-summary';
+export * from './leave-policy';
