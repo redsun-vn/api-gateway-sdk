@@ -48,4 +48,14 @@ export declare namespace IOrderRevenue {
         totalPartner: number;
         totalOrder: number;
     }
+    interface IOrderReturnReport {
+        pos_session_id: number | string | null;
+        branch_id: number | string;
+        staff_id: number | string;
+        totalRevenue: number;
+        totalPartner: number;
+        totalRefunded: number;
+        totalOrder: number;
+        itemRefundedQuantity: number | 0;
+    }
 }
