@@ -15,7 +15,7 @@ export declare namespace IPartner {
         last_name?: string;
         display_name?: string;
         email?: string & tags.Format<'email'>;
-        phone?: string & tags.Pattern<'^(0[0-9]{2})?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$'>;
+        phone?: string;
         company_name?: string;
         day_of_birth?: string & tags.Format<'date-time'>;
         code?: string;
@@ -32,6 +32,7 @@ export declare namespace IPartner {
         gender?: number & tags.Maximum<1>;
         tagIds?: string[];
         partnerCategoryIds?: number[];
+        website_user_uuid?: string;
     }
     type TypePartnerUpload = 'customer' | 'supplier';
     interface IUpload {
@@ -68,5 +69,6 @@ export declare namespace IPartner {
         tags?: null | IPartnerTag.IPartnerTagResponse[];
         addresses?: null | IPartnerAddress.IPartnerAddressResponse[];
         partnerCategories?: null | IPartnerCategory.IResponse[];
+        website_user_uuid?: string | null;
     }
 }

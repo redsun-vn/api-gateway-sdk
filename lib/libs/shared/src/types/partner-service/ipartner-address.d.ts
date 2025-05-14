@@ -1,5 +1,4 @@
 import { BaseResponse } from '../common.type';
-import { tags } from 'typia';
 export declare namespace IPartnerAddress {
     enum PartnerAddressType {
         CONTACT = "contact",
@@ -16,7 +15,7 @@ export declare namespace IPartnerAddress {
         country?: string;
         first_name?: string;
         last_name?: string;
-        phone?: string & tags.Pattern<'^(0[0-9]{2})?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$'>;
+        phone?: string;
         province?: string;
         city?: string;
         state?: string;

@@ -87,7 +87,7 @@ export type PaginateParams = {
     limit: number;
 };
 export interface BaseProfile {
-    phone?: string & tags.Pattern<'^(0[0-9]{2})?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$'>;
+    phone?: string;
     country?: string;
     province?: string;
     ward?: string;

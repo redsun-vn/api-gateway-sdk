@@ -51,3 +51,4 @@ export * as admin_customer from "./admin_customer";
 export * as notify from "./notify";
 export * as debts from "./debts";
 export * as cms from "./cms";
+export * as web_builder from "./web_builder";

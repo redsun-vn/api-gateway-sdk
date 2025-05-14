@@ -52,4 +52,7 @@ export declare namespace IWebsite {
         customCodeFooter?: string | null;
         robotsTxt?: string | null;
     }
+    interface ICreateRealmReq {
+        domain: string;
+    }
 }

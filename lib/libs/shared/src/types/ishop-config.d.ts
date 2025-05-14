@@ -5,7 +5,7 @@ export declare namespace IShopConfig {
         displayName?: string;
         supportEmail?: string & tags.Format<'email'>;
         technicalEmail?: string & tags.Format<'email'>;
-        technicalPhone?: string & tags.Pattern<'^(0[0-9]{2})?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$'>;
+        technicalPhone?: string;
         moneyFormat?: string;
         orderPrefix?: string;
         weightUnit?: string;

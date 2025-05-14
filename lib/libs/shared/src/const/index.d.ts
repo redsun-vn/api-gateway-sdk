@@ -17,3 +17,4 @@ export declare const SHIPPING_PROVIDER_CONFIG_KEY: {
 };
 export declare const PAGINATE_LIMIT_NUMBER = 200;
 export declare const MOMENT_VN_TIMEZONE = "Asia/Ho_Chi_Minh";
+export declare const DOMAIN_HEADER_KEY = "sipos-x-domain";
