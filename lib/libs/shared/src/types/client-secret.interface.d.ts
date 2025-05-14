@@ -1,4 +1,5 @@
 import UserRepresentation from '@keycloak/keycloak-admin-client/lib/defs/userRepresentation';
+import { tags } from 'typia';
 export interface IClientSecret {
     domainName: string;
     clientId: string;
@@ -21,4 +22,13 @@ export interface ICustomerLogin {
 export interface IValidationPattern {
     email: RegExp;
     phone: RegExp;
+}
+export interface ICustomerOTP {
+    email: string & tags.Format<'email'>;
+}
+export interface ICustomerResetPassword {
+    email: string & tags.Format<'email'>;
+    otp: string & tags.MinLength<6> & tags.MaxLength<6>;
+    password: string;
+    confirmPassword: string;
 }
