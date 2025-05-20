@@ -32,3 +32,17 @@ export interface ICustomerResetPassword {
     password: string;
     confirmPassword: string;
 }
+export interface IUserFromToken {
+    iss: string;
+    exp: number;
+    iat: number;
+    typ: string;
+    azp: string;
+    session_state: string;
+    sub: string;
+    email?: string;
+    name?: string;
+    preferred_username?: string;
+    given_name?: string;
+    family_name?: string;
+}

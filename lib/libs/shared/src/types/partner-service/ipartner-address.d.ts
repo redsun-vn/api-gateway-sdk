@@ -48,4 +48,24 @@ export declare namespace IPartnerAddress {
         ward?: null | string;
         district?: null | string;
     }
+    interface ICreateFromWebsite {
+        type: PartnerAddressType;
+        function?: string;
+        uuid?: string;
+        country?: string;
+        first_name?: string;
+        last_name?: string;
+        phone?: string;
+        province?: string;
+        city?: string;
+        state?: string;
+        zipcode?: string;
+        address1?: string;
+        address2?: string;
+        company?: string;
+        note?: string;
+        ward?: string;
+        district?: string;
+    }
+    type IUpdateFromWebsite = Omit<Partial<ICreateFromWebsite>, 'uuid'>;
 }

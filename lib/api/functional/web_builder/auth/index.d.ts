@@ -7,6 +7,7 @@ export * as refresh_token from "./refresh_token";
 export * as logout from "./logout";
 export * as otp_email from "./otp_email";
 export * as reset_password from "./reset_password";
+export * as me from "./me";
 export declare function register(connection: IConnection, credentials: register.Input): Promise<register.Output>;
 export declare namespace register {
     type Input = Resolved<ICustomerRegister>;

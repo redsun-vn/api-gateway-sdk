@@ -71,4 +71,14 @@ export declare namespace IPartner {
         partnerCategories?: null | IPartnerCategory.IResponse[];
         website_user_uuid?: string | null;
     }
+    interface IUpdateWebsite {
+        attachment_id?: number & tags.Type<'int32'>;
+        first_name?: string;
+        display_name?: string;
+        phone?: string;
+        day_of_birth?: string & tags.Format<'date-time'>;
+        accepts_marketing?: boolean;
+        website?: string;
+        gender?: number & tags.Maximum<1>;
+    }
 }
