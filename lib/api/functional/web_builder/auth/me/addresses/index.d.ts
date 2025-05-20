@@ -55,3 +55,18 @@ export declare namespace updateAddressFromWebsite {
     };
     const path: (id: string) => string;
 }
+export declare function deleteAddressFromWebsite(connection: IConnection, id: string): Promise<deleteAddressFromWebsite.Output>;
+export declare namespace deleteAddressFromWebsite {
+    type Output = Primitive<IResponse<false | true>>;
+    const METADATA: {
+        readonly method: "DELETE";
+        readonly path: "/web-builder/auth/me/addresses/:id";
+        readonly request: null;
+        readonly response: {
+            readonly type: "application/json";
+            readonly encrypted: false;
+        };
+        readonly status: 200;
+    };
+    const path: (id: string) => string;
+}
