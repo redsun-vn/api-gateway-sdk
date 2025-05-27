@@ -47,6 +47,24 @@ export declare namespace IAttendanceDetail {
         updated_by_id?: string;
         description?: string;
     }
+    interface IImport {
+        shop_id: number;
+        branch_id: number;
+        user_id: string;
+        shift_id: number | string;
+        check_in: string;
+        check_out: string;
+        created_by_id: string;
+        description?: string;
+    }
+    interface IImportRequest {
+        branch_id: number;
+        user_id: string;
+        shift_id: number | string;
+        check_in: string;
+        check_out: string;
+        description?: string;
+    }
     interface IResponse extends BaseResponse {
         shop_id: number | string;
         branch_id: number | string;

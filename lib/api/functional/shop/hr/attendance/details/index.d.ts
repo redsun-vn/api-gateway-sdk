@@ -102,3 +102,22 @@ export declare namespace $delete {
     };
     const path: (id: string) => string;
 }
+export declare function $import(connection: IConnection, data: $import.Input): Promise<$import.Output>;
+export declare namespace $import {
+    type Input = Resolved<IAttendanceDetail.IImportRequest>;
+    type Output = Primitive<IResponse<IAttendanceDetail.IResponse>>;
+    const METADATA: {
+        readonly method: "POST";
+        readonly path: "/shop/hr/attendance/details/import";
+        readonly request: {
+            readonly type: "application/json";
+            readonly encrypted: false;
+        };
+        readonly response: {
+            readonly type: "application/json";
+            readonly encrypted: false;
+        };
+        readonly status: 201;
+    };
+    const path: () => string;
+}
