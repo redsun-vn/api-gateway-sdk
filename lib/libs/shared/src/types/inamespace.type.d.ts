@@ -6,6 +6,8 @@ export declare namespace INameSpace {
         description?: string;
         parent_id?: number | null;
         is_active?: boolean;
+        is_master?: boolean;
+        is_category?: boolean;
         createdById?: number | string;
     }
     interface IUpdate {
@@ -14,6 +16,8 @@ export declare namespace INameSpace {
         description?: string;
         parent_id?: number | null;
         is_active?: boolean;
+        is_master?: boolean;
+        is_category?: boolean;
         updatedById?: number | string;
     }
     interface IResponse extends BaseResponse {
@@ -22,6 +26,8 @@ export declare namespace INameSpace {
         description?: string | null;
         parent_id?: number | null;
         is_active?: boolean;
+        is_master?: boolean;
+        is_category?: boolean;
         parent?: IResponse | null;
     }
 }
