@@ -85,3 +85,22 @@ export declare namespace update {
     };
     const path: (id: string) => string;
 }
+export declare function duplicate(connection: IConnection, data: duplicate.Input): Promise<duplicate.Output>;
+export declare namespace duplicate {
+    type Input = Resolved<ITheme.IDuplicateReq>;
+    type Output = Primitive<IResponse<ITheme.IResponse>>;
+    const METADATA: {
+        readonly method: "POST";
+        readonly path: "/admin/cms/themes/duplicate";
+        readonly request: {
+            readonly type: "application/json";
+            readonly encrypted: false;
+        };
+        readonly response: {
+            readonly type: "application/json";
+            readonly encrypted: false;
+        };
+        readonly status: 201;
+    };
+    const path: () => string;
+}

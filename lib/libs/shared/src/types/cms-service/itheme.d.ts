@@ -16,6 +16,13 @@ export declare namespace ITheme {
     interface ICreate extends ICreateReq {
         shop_id?: (number & tags.Type<'uint64'>) | null;
     }
+    interface IDuplicateReq {
+        website_id?: string & tags.Format<'uuid'>;
+        theme_id: string & tags.Format<'uuid'>;
+    }
+    interface IDuplicate extends IDuplicateReq {
+        shop_id?: (number & tags.Type<'uint64'>) | null;
+    }
     interface IUpdateReq extends Partial<ICreate> {
     }
     interface IUpdate extends IUpdateReq {
