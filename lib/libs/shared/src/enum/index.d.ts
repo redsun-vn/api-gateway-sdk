@@ -12,6 +12,7 @@ export * from './financial-service';
 export * from './vnpay-qrcode';
 export * from './permissions';
 export * from './hr';
+export * from './shop-service';
 export declare enum RecurrencePeriod {
     HOURLY = "HOURLY",
     DAILY = "DAILY",

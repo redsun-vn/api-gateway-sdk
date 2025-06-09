@@ -14,6 +14,8 @@ export declare namespace IReceipt {
         taxTotalManual?: number;
         taxPercentageTotalManual?: number;
         updatedBy?: string | number;
+        paymentCode?: string;
+        voucherCode?: string;
     }
     interface ICreate {
         note?: string;
@@ -27,6 +29,7 @@ export declare namespace IReceipt {
         phone?: string;
         address?: string;
         lineItems: IReceiptLineItems[];
+        voucherCode?: string;
     }
     interface IAdminCreate extends ICreate {
         shop_id: string;
@@ -56,6 +59,9 @@ export declare namespace IReceipt {
         deletedBy: number | string | null;
         completedAt: string | null;
         lineItems?: IReceiptLineItems[] | null;
+        voucherCode?: string | null;
+        originalTotal?: number | string | null;
+        totalDiscount?: number | string | null;
     }
     interface IReceiptLineItems {
         item_id?: string | number;
@@ -67,5 +73,20 @@ export declare namespace IReceipt {
         quantity?: number;
         value?: number;
         unit?: string | null;
+    }
+    interface ICreatSubsFromReceipt {
+        note?: string;
+        email?: string & tags.Format<'email'>;
+        phone?: string;
+        address?: string;
+        voucherCode?: string;
+        package_id: string;
+        packageAdditionIds?: number[];
+    }
+    interface ICreatSubsFromReceiptAdminReq extends ICreatSubsFromReceipt {
+        shop_id: string;
+    }
+    interface ICreatSubsFromReceiptAdmin extends ICreatSubsFromReceiptAdminReq {
+        createdById: string;
     }
 }

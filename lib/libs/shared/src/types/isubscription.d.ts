@@ -35,6 +35,8 @@ export declare namespace ISubscription {
         endDate?: string | Date;
         trialEndsAt: string | Date | null;
         packagePlans?: IPackagePlan.IResponse[];
+        extendStaff?: number | string | null;
+        extendBranch?: number | string | null;
     }
     interface ISubscriptionReportResponse {
         shop_id?: number;
