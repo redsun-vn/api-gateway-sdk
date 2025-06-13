@@ -28,7 +28,7 @@ export declare namespace IPromotion {
         usageLimit: number | string | null;
         amountLimit: number | string | null;
         maxDiscountPercent: number | string | null;
-        allowedStaffIds: string[];
+        allowedStaffIds: string[] | null;
         targets: IPromotionTargetMapping.IResponse[];
         rewards: IPromotionReward.IResponse[];
         vouchers?: IPromotionVoucher.IResponse[];
@@ -52,7 +52,7 @@ export declare namespace IPromotionTargetMapping {
     }
     interface IResponse extends BaseResponse {
         promotionId: number | string;
-        promotion: IPromotion.IResponse | null;
+        promotion?: IPromotion.IResponse | null;
         targetType: PromotionTargetType | string;
         targetId: string;
     }
@@ -67,7 +67,7 @@ export declare namespace IPromotionReward {
     }
     interface IResponse extends BaseResponse {
         promotionId: number | string;
-        promotion: IPromotion.IResponse | null;
+        promotion?: IPromotion.IResponse | null;
         type: PromotionRewardType | string;
         value: number | string | null;
         unit: PromotionRewardUnit | string;
@@ -91,7 +91,7 @@ export declare namespace IPromotionVoucher {
     }
     interface IResponse extends BaseResponse {
         promotionId: number | string;
-        promotion: IPromotion.IResponse | null;
+        promotion?: IPromotion.IResponse | null;
         code: string | null;
         usageLimit: number | string | null;
         usedCount: number | string | null;
@@ -116,7 +116,7 @@ export declare namespace IPromotionUsage {
     }
     interface IResponse extends BaseResponse {
         promotionId: number | string;
-        promotion: IPromotion.IResponse | null;
+        promotion?: IPromotion.IResponse | null;
         customerId: string;
         shopId: number | string;
         usedAt: string;

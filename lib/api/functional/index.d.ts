@@ -21,6 +21,7 @@ export * as application from "./application";
 export * as app_controller from "./app_controller";
 export * as application_main from "./application_main";
 export * as application_plan from "./application_plan";
+export * as $public from "./$public";
 export * as business_types from "./business_types";
 export * as category_business from "./category_business";
 export * as category_print_template from "./category_print_template";

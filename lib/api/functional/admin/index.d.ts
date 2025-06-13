@@ -13,6 +13,7 @@ export * as packages from "./packages";
 export * as payment_methods from "./payment_methods";
 export * as print_template from "./print_template";
 export * as promotions from "./promotions";
+export * as vouchers from "./vouchers";
 export * as receipts from "./receipts";
 export * as sales_channels from "./sales_channels";
 export * as shipping_methods from "./shipping_methods";
