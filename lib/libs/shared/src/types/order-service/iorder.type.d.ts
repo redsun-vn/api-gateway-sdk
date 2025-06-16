@@ -23,6 +23,7 @@ export declare namespace IOrder {
         currencyCode?: string | null;
         email?: string | null;
         phone?: string | null;
+        target?: string | null;
         code?: string | null;
         note?: string | null;
         uuid: (string & tags.Format<'uuid'>) | null;
@@ -96,6 +97,7 @@ export declare namespace IOrder {
         currencyCode?: string | null;
         email?: string | null;
         phone?: string | null;
+        target?: string | null;
         note?: string | null;
         description?: string | null;
         tags?: string | null;
