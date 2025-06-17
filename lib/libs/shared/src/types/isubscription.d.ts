@@ -15,6 +15,12 @@ export declare namespace ISubscription {
     interface IUpdate {
         active?: boolean;
     }
+    interface IShopUpdate {
+        paymentCode?: string;
+        email?: string & tags.Format<'email'>;
+        phone?: string;
+        address?: string;
+    }
     type IStats = {
         branchTotalRemain: number;
         deviceRemain: number;

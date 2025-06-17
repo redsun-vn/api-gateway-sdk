@@ -17,6 +17,13 @@ export declare namespace IReceipt {
         paymentCode?: string;
         voucherCode?: string;
     }
+    interface IShopUpdate {
+        email?: string & tags.Format<'email'>;
+        phone?: string;
+        address?: string;
+        note?: string;
+        paymentCode?: string;
+    }
     interface ICreate {
         note?: string;
         paymentCode?: string;

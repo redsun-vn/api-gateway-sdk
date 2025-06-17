@@ -37,6 +37,25 @@ export declare namespace create {
     };
     const path: () => string;
 }
+export declare function update(connection: IConnection, id: string, data: update.Input): Promise<update.Output>;
+export declare namespace update {
+    type Input = Resolved<IReceipt.IShopUpdate>;
+    type Output = Primitive<IResponse<IReceipt.IResponse>>;
+    const METADATA: {
+        readonly method: "PUT";
+        readonly path: "/shop/receipts/:id";
+        readonly request: {
+            readonly type: "application/json";
+            readonly encrypted: false;
+        };
+        readonly response: {
+            readonly type: "application/json";
+            readonly encrypted: false;
+        };
+        readonly status: 200;
+    };
+    const path: (id: string) => string;
+}
 export declare function findOne(connection: IConnection, id: string): Promise<findOne.Output>;
 export declare namespace findOne {
     type Output = Primitive<IResponse<IReceipt.IResponse>>;
