@@ -44,7 +44,7 @@ export declare namespace IReceipt {
         subscription_id?: number;
     }
     interface IResponse extends BaseResponse {
-        shop_id: string;
+        shop_id: string | number;
         package_id: string | number | null;
         subscription_id: string | number | null;
         code: string;
@@ -72,7 +72,7 @@ export declare namespace IReceipt {
     }
     interface IReceiptLineItems {
         item_id?: string | number;
-        type: RECEIPT_LINE_ITEM_TYPE_ENUM;
+        type: RECEIPT_LINE_ITEM_TYPE_ENUM | string;
         name?: string;
         price: number;
         discount: number;

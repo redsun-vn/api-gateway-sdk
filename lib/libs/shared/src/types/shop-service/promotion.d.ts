@@ -14,6 +14,7 @@ export declare namespace IPromotion {
         allowedStaffIds?: string[];
         targets: IPromotionTargetMapping.ICreate[];
         rewards: IPromotionReward.ICreate[];
+        staffId?: string;
     }
     interface IUpdate extends Partial<ICreate> {
         id: number;
@@ -33,6 +34,8 @@ export declare namespace IPromotion {
         rewards: IPromotionReward.IResponse[];
         vouchers?: IPromotionVoucher.IResponse[];
         usages?: IPromotionUsage.IResponse[];
+        createdBy?: string | null;
+        updatedBy?: string | null;
     }
     interface ICalculateReward {
         discount: number;
@@ -82,6 +85,7 @@ export declare namespace IPromotionVoucher {
         isActive?: boolean;
         assignedToCustomerId?: string;
         expiredAt?: string;
+        staffId?: string;
     }
     interface IUpdate extends Partial<ICreate> {
         id?: number;
@@ -98,6 +102,8 @@ export declare namespace IPromotionVoucher {
         isActive: boolean;
         assignedToCustomerId: string | null;
         expiredAt: string | null;
+        createdBy?: string | null;
+        updatedBy?: string | null;
     }
 }
 export declare namespace IPromotionUsage {
@@ -121,7 +127,7 @@ export declare namespace IPromotionUsage {
         shopId: number | string;
         usedAt: string;
         voucherCode: string | null;
-        appliedByStaffId: string;
+        appliedByStaffId: string | null;
         rewardAppliedDetails: any;
         amountDiscounted: number | string | null;
         receiptId: string | null;
