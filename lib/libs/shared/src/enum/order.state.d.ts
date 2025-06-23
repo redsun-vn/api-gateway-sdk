@@ -60,7 +60,9 @@ export declare enum OrderFinancialStatus {
     PARTIALLY_REFUNDED = "partially_refunded",
     REFUNDED = "refunded",
     NOT_PAID = "not_paid",
-    CANCELED = "canceled"
+    CANCELED = "canceled",
+    DEBT = "debt",
+    DEBT_PAID = "debt_paid"
 }
 export declare enum OrderFulfillmentStatus {
     PENDING = "pending",

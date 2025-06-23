@@ -143,6 +143,10 @@ export declare namespace IOrder {
         tableReservations?: ITableReservation.IDetailTableReservationResponse[] | null;
         combiningPromotions?: ICombiningPromotion.IDetailCombiningPromotionResponse[] | null;
         additionalFees?: IAdditionalFee.IDetailAdditionalFeeResponse[] | null;
+        debtAmount?: number;
+        isDebtOrder?: boolean;
+        debtDueDate?: Date | string | null;
+        debtPaidAt?: Date | string | null;
     }
     interface IDetailOrderPublicResponse extends Omit<IDetailOrderResponse, 'draf_order_id' | 'shift_id' | 'idempotency_key' | 'subTotal' | 'taxTotal' | 'originTotal' | 'shippingTotal' | 'refundable' | 'refundedTotal' | 'returnedTotal' | 'customerAcceptMarketing' | 'clientIp' | 'discountCode' | 'drafOrder' | 'combiningPromotions'> {
         lineItems?: ILineItem.IDetailLineItemPublicResponse[] | null;

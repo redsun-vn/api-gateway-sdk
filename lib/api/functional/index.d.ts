@@ -1,4 +1,5 @@
 export * as attachments from "./attachments";
+export * as editor_js from "./editor_js";
 export * as admin from "./admin";
 export * as auth from "./auth";
 export * as notification from "./notification";

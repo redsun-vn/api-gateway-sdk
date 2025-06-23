@@ -68,3 +68,19 @@ export declare namespace IFile {
         parent?: IResponse | null;
     }
 }
+export interface EditorJsUploadResponse {
+    success: number;
+    file: {
+        url: string;
+        [key: string]: any;
+    };
+}
+export interface EditorJsUrlRequest {
+    url: string;
+    additionalRequestData?: any;
+}
+export interface EditorJsUploadInput {
+    shop_id: number;
+    user_id: string;
+    branch_id?: number;
+}
