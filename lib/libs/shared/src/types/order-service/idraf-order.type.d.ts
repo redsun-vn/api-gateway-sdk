@@ -32,6 +32,10 @@ export declare namespace IDrafOrder {
         canceledAt?: (string & tags.Format<'date-time'>) | null;
         lineItems: ILineItem.IInputLineItem[];
         cart_session_id?: string;
+        debtAmount?: number;
+        isDebtOrder?: boolean;
+        debtDueDate?: Date | string | null;
+        debtPaidAt?: Date | string | null;
     }
     interface ICreateDraftCopy {
         staffId: string;

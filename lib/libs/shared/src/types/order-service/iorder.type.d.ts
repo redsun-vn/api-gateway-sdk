@@ -67,6 +67,10 @@ export declare namespace IOrder {
         lineItems: ILineItem.IInputLineItem[];
         tableReservations?: ITableReservation.ICreateTableReservation[];
         userId?: string;
+        debtAmount?: number;
+        isDebtOrder?: boolean;
+        debtDueDate?: Date | string | null;
+        debtPaidAt?: Date | string | null;
     }
     interface ICreateOrderPublic extends ICreateOrder {
         shop_id: number & tags.Type<'uint64'>;
@@ -74,7 +78,7 @@ export declare namespace IOrder {
     interface ICreateOrderKafka extends ICreateOrder {
         shop_id: number & tags.Type<'uint64'>;
     }
-    interface IUpdateOrder extends Omit<Partial<ICreateOrder>, 'branch_id' | 'staff_id' | 'pos_session_id' | 'sale_channel_id'> {
+    interface IUpdateOrder extends Omit<Partial<ICreateOrder>, 'branch_id' | 'staff_id' | 'pos_session_id' | 'sale_channel_id' | 'isDebtOrder' | 'debtAmount' | 'debtDueDate' | 'debtPaidAt'> {
         uuid?: string & tags.Format<'uuid'>;
     }
     interface IDetailOrderResponse extends BaseResponse {
