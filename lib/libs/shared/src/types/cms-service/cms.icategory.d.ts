@@ -27,6 +27,7 @@ export declare namespace ICMSCategory {
         parent_uuid?: string | null;
         attachment_id?: number | string | null;
         websites?: IWebsite.IResponse[] | null;
+        parent?: IResponse;
     }
 }
 export declare namespace ICMSTag {

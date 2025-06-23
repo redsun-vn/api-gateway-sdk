@@ -90,8 +90,8 @@ export declare namespace IDrafOrder {
         additionalFees?: IAdditionalFee.IDetailAdditionalFeeResponse[] | null;
         cart_session_id?: string | null;
         expires_at?: string | null;
-        debtAmount?: number;
-        isDebtOrder?: boolean;
+        debtAmount?: string | number | null;
+        isDebtOrder?: boolean | null;
         debtDueDate?: Date | string | null;
         debtPaidAt?: Date | string | null;
     }

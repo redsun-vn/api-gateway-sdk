@@ -143,8 +143,8 @@ export declare namespace IOrder {
         tableReservations?: ITableReservation.IDetailTableReservationResponse[] | null;
         combiningPromotions?: ICombiningPromotion.IDetailCombiningPromotionResponse[] | null;
         additionalFees?: IAdditionalFee.IDetailAdditionalFeeResponse[] | null;
-        debtAmount?: number;
-        isDebtOrder?: boolean;
+        debtAmount?: string | number | null;
+        isDebtOrder?: boolean | null;
         debtDueDate?: Date | string | null;
         debtPaidAt?: Date | string | null;
     }
