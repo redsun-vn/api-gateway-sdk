@@ -87,5 +87,8 @@ export declare namespace IShop {
         domain?: null | IDomain.IDomainResponse;
         config?: null | IShopConfig.IShopConfigResponse;
         branches?: null | IBranch.IBranchResponse[];
+        shopPaymentMethods?: null | IShopPaymentMethod.IShopPaymentMethodResponse[];
+        shopShippingMethods?: null | IShopShippingMethod.IShopShippingMethodResponse[];
+        shopSalesChannels?: null | IShopSalesChannel.IShopSalesChannelResponse[];
     }
 }
