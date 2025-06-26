@@ -51,7 +51,7 @@ export declare namespace $delete {
 export declare function create(connection: IConnection, data: create.Input): Promise<create.Output>;
 export declare namespace create {
     type Input = Resolved<IReservation.ICreate>;
-    type Output = Primitive<IResponse<IReservation.IReservationResponse | IReservation.IReservationOverlap>>;
+    type Output = Primitive<IResponse<IReservation.IReservationResponse>>;
     const METADATA: {
         readonly method: "POST";
         readonly path: "/shop/reservations";
@@ -70,7 +70,7 @@ export declare namespace create {
 export declare function update(connection: IConnection, data: update.Input, id: string): Promise<update.Output>;
 export declare namespace update {
     type Input = Resolved<IReservation.IUpdate>;
-    type Output = Primitive<IResponse<false | true | IReservation.IReservationOverlap>>;
+    type Output = Primitive<IResponse<false | true>>;
     const METADATA: {
         readonly method: "PUT";
         readonly path: "/shop/reservations/:id";

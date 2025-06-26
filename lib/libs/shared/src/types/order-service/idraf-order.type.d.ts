@@ -52,8 +52,8 @@ export declare namespace IDrafOrder {
     }
     interface IDetailDrafOrderResponse extends BaseResponse {
         shop_id: string | number;
-        branch_id: string | number;
-        staff_id: string | number;
+        branch_id: string | number | null;
+        staff_id: string | number | null;
         sale_channel_id?: string | number | null;
         price_book_id?: string | number | null;
         billing_address_id?: string | number | null;
