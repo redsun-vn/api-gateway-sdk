@@ -9,7 +9,8 @@ export declare namespace IReservation {
         ASSIGNED = "assigned",
         RECEIVED = "received",
         PAST = "past",
-        CANCELED = "canceled"
+        CANCELED = "canceled",
+        COMPLETED = "completed"
     }
     interface ICreate {
         branch_id: number;
