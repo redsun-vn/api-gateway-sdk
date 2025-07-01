@@ -7,9 +7,9 @@ export declare namespace ICMSPost {
         title: string;
         description?: string | null;
         content?: string | null;
-        attachment_id?: number & tags.Type<'uint64'>;
-        category_ids?: number[] | string[];
-        tag_ids?: number[] | string[];
+        attachment_id?: (number & tags.Type<'uint64'>) | null;
+        category_ids?: number[] | string[] | null;
+        tag_ids?: number[] | string[] | null;
         slug?: string;
         website_ids?: string[] | null;
         isIndex?: boolean;

@@ -20,6 +20,8 @@ export declare namespace IWebsite {
         customCodeHead?: string;
         customCodeFooter?: string;
         robotsTxt?: string;
+        priceBookId?: number;
+        warehouseId?: number;
     }
     interface ICreate extends ICreateReq {
         shop_id?: (number & tags.Type<'uint64'>) | null;
@@ -51,6 +53,8 @@ export declare namespace IWebsite {
         customCodeHead?: string | null;
         customCodeFooter?: string | null;
         robotsTxt?: string | null;
+        priceBookId?: number | string | null;
+        warehouseId?: number | string | null;
     }
     interface ICreateRealmReq {
         domain: string;
