@@ -12,6 +12,7 @@ export declare namespace ITheme {
         category_uuid?: string;
         tags?: string[];
         imagePreviewId?: number | string;
+        isDefault?: boolean;
     }
     interface ICreate extends ICreateReq {
         shop_id?: (number & tags.Type<'uint64'>) | null;
@@ -40,5 +41,6 @@ export declare namespace ITheme {
         category?: IThemeCategory.IResponse | null;
         tags?: IThemeTag.IResponse[] | null;
         imagePreviewId?: number | string | null;
+        isDefault?: boolean;
     }
 }
