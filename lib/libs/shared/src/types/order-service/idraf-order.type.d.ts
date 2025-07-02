@@ -44,7 +44,7 @@ export declare namespace IDrafOrder {
     interface ICreateDrafOrderKafka extends ICreateDrafOrder {
         shop_id: number & tags.Type<'uint64'>;
     }
-    interface IUpdateDrafOrder extends Omit<Partial<ICreateDrafOrder>, 'branch_id' | 'staff_id' | 'sale_channel_id'> {
+    interface IUpdateDrafOrder extends Omit<Partial<ICreateDrafOrder>, 'branch_id' | 'staff_id'> {
     }
     interface IConfirmDrafOrder {
         warehouse_id: number & tags.Type<'uint64'>;
@@ -100,7 +100,7 @@ export declare namespace IDrafOrder {
         sessionId: string;
         partnerId?: string;
     }
-    interface IUpdateCart extends Omit<Partial<ICreateDrafOrder>, 'branch_id' | 'staff_id' | 'sale_channel_id'> {
+    interface IUpdateCart extends Omit<Partial<ICreateDrafOrder>, 'branch_id' | 'staff_id'> {
         cart_session_id: string;
     }
 }
