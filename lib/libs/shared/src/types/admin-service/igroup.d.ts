@@ -5,11 +5,13 @@ export declare namespace IAdminGroup {
         name: string & tags.MinLength<3> & tags.MaxLength<50>;
         active?: boolean;
         permission: string[];
+        parent_id?: number;
     }
     type IUpdate = Partial<ICreate>;
     interface IResponse extends BaseResponse {
         name: string;
         active: boolean;
         permission: string[];
+        parent_id?: number | string | null;
     }
 }

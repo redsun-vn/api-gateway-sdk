@@ -12,4 +12,6 @@ export declare class ValidQuery {
     filter(params: string[]): IFiltering | undefined;
     filters(params: string[]): IFilteringMultiple | undefined;
     groupBy(groups: string[]): string | undefined;
+    productSearch(): ISearch | undefined;
+    productFilters(): IFilteringMultiple | undefined;
 }

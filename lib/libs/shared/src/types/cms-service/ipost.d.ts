@@ -13,6 +13,7 @@ export declare namespace ICMSPost {
         slug?: string;
         website_ids?: string[] | null;
         isIndex?: boolean;
+        isPublished?: boolean;
     }
     interface ICreate extends ICreateReq {
         shop_id?: (number & tags.Type<'uint64'>) | null;

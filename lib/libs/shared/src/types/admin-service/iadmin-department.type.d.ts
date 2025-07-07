@@ -8,6 +8,7 @@ export declare namespace IAdminDepartment {
         description?: string;
         parent_flatten_ids?: string;
         role?: string;
+        canUseRoleIds?: string[];
     }
     type IUpdate = Omit<Partial<ICreate>, 'owner_id'>;
     interface IResponse extends BaseResponse {
@@ -18,5 +19,6 @@ export declare namespace IAdminDepartment {
         description: string | null;
         parent_flatten_ids: string | null;
         role: string;
+        canUseRoleIds?: string[];
     }
 }
