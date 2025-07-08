@@ -17,6 +17,15 @@ export declare namespace IAdminUser {
         role?: ADMIN_USER_ROLE;
         parentId?: number;
         departmentId?: number | null;
+        phone?: string;
+        address?: string;
+        position?: string;
+        workLocationType?: string;
+        gender?: string;
+        birthday?: string;
+        avatarId?: string;
+        employeeType?: string;
+        description?: string;
     }
     interface IUpdate {
         email?: string & tags.Format<'email'>;
@@ -28,6 +37,15 @@ export declare namespace IAdminUser {
         role?: ADMIN_USER_ROLE;
         parentId?: number;
         departmentId?: number | null;
+        phone?: string;
+        address?: string;
+        position?: string;
+        workLocationType?: string;
+        gender?: string;
+        birthday?: string;
+        avatarId?: string;
+        employeeType?: string;
+        description?: string;
     }
     interface IUpdatePassword {
         password: string & tags.MinLength<6>;
@@ -49,6 +67,15 @@ export declare namespace IAdminUser {
         children?: null | IResponse[];
         departmentId?: number | string | null;
         department?: null | IAdminDepartment.IResponse;
+        phone?: string | null;
+        address?: string | null;
+        position?: string | null;
+        workLocationType?: string | null;
+        gender?: string | null;
+        birthday?: string | null;
+        avatarId?: string | null;
+        employeeType?: string | null;
+        description?: string | null;
     }
     interface IResponseWithoutSecret extends BaseResponse {
         name: string;
@@ -64,5 +91,14 @@ export declare namespace IAdminUser {
         children?: null | IResponseWithoutSecret[];
         departmentId?: number | string | null;
         department?: null | IAdminDepartment.IResponse;
+        phone?: string | null;
+        address?: string | null;
+        position?: string | null;
+        workLocationType?: string | null;
+        gender?: string | null;
+        birthday?: string | null;
+        avatarId?: string | null;
+        employeeType?: string | null;
+        description?: string | null;
     }
 }
