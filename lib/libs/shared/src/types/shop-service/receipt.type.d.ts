@@ -96,6 +96,7 @@ export declare namespace IReceipt {
     }
     interface ICreatSubsFromReceiptAdminReq extends ICreatSubsFromReceipt {
         shop_id: string;
+        createdById?: string;
     }
     interface ICreatSubsFromReceiptAdmin extends ICreatSubsFromReceiptAdminReq {
         createdById: string;
