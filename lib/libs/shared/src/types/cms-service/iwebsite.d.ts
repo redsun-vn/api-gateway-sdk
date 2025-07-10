@@ -22,6 +22,8 @@ export declare namespace IWebsite {
         robotsTxt?: string;
         priceBookId?: number;
         warehouseId?: number;
+        availablePaymentMethodIds?: string[];
+        availableShippingMethodIds?: string[];
     }
     interface ICreate extends ICreateReq {
         shop_id?: (number & tags.Type<'uint64'>) | null;
@@ -55,6 +57,8 @@ export declare namespace IWebsite {
         robotsTxt?: string | null;
         priceBookId?: number | string | null;
         warehouseId?: number | string | null;
+        availablePaymentMethodIds?: string[] | null;
+        availableShippingMethodIds?: string[] | null;
     }
     interface ICreateRealmReq {
         domain: string;
