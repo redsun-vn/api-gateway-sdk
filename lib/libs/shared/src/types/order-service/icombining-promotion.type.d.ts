@@ -36,12 +36,12 @@ export declare namespace ICombiningPromotion {
         variant_x_id?: number | string | null;
         variant_y_id?: number | string | null;
         uuid?: string;
-        description?: string;
-        discountCode?: string;
+        description?: string | null;
+        discountCode?: string | null;
         value: number | string;
         amount: number | string;
-        status: CombiningPromotionStatus;
-        type: OrderCombiningPromotionType;
+        status: CombiningPromotionStatus | string;
+        type: OrderCombiningPromotionType | string;
         order?: IOrder.IDetailOrderResponse;
         drafOrder?: IDrafOrder.IDetailDrafOrderResponse;
         saleOrder?: ISaleOrder.IResponse;
