@@ -117,6 +117,7 @@ export interface IQuery {
     search?: string;
     sort?: string;
     script?: string;
+    shopId?: string;
 }
 export interface IHealthCheck {
     [key: string]: boolean;
