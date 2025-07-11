@@ -24,4 +24,15 @@ export declare namespace IAttribute {
         active?: boolean;
         options?: IProductOption.IDetailProductOptionResponse[] | null;
     }
+    interface AttributeOptionsResponse {
+        attribute_id: string | number;
+        attribute_name: string | number;
+        attribute_active: boolean;
+        shop_id: string | number;
+        options: {
+            option_name: string;
+            option_sequence: number | string;
+            option_active: boolean;
+        }[];
+    }
 }

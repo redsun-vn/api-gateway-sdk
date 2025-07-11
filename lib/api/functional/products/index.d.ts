@@ -2,6 +2,7 @@ import type { IConnection, Resolved, Primitive } from "@nestia/fetcher";
 import type { IQuery, IResponse, IResponsePagination } from "../../../libs/shared/src/types/common.type";
 import type { IProduct } from "../../../libs/shared/src/types/product-service/iproduct";
 export * as attributes from "./attributes";
+export * as attribute_options from "./attribute_options";
 export * as product_brands from "./product_brands";
 export * as comments from "./comments";
 export * as tags from "./tags";
