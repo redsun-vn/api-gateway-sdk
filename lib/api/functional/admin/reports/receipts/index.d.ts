@@ -7,7 +7,7 @@ export declare namespace getReportReceipt {
     type Output = Primitive<IResponse<IResponsePagination<IAdminReceipt.IReceiptReportResponse>>>;
     const METADATA: {
         readonly method: "GET";
-        readonly path: "/admin/reports/receitps";
+        readonly path: "/admin/reports/receipts";
         readonly request: null;
         readonly response: {
             readonly type: "application/json";
