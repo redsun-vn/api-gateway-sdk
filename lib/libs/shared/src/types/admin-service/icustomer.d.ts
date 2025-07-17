@@ -21,6 +21,9 @@ export declare namespace IAdminCustomer {
         responsible_id?: (number & tags.Type<'uint64'>) | null;
         salesman_id?: number & tags.Type<'uint64'>;
         gender?: (number & tags.Maximum<1>) | null;
+        utm_medium_id?: (number & tags.Type<'uint64'>) | null;
+        utm_source_id?: (number & tags.Type<'uint64'>) | null;
+        utm_campaign_id?: (number & tags.Type<'uint64'>) | null;
     }
     interface IUpdate extends Partial<ICreate> {
     }
@@ -44,5 +47,8 @@ export declare namespace IAdminCustomer {
         gender?: number | string | null;
         salesman_id?: number | string | null;
         refCode?: string | null;
+        utm_campaign_id?: number | string | null;
+        utm_medium_id?: number | string | null;
+        utm_source_id?: number | string | null;
     }
 }

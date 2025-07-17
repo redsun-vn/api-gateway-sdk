@@ -13,6 +13,12 @@ export declare const ELASTIC_INDEX: {
     ADMIN_DEVICE: string;
     ADMIN_DEVICE_CATEGORY: string;
     ADMIN_DEVICE_VARIANT: string;
+    ADMIN_UTM_SOURCE_INDEX_NAME: string;
+    ADMIN_UTM_MEDIUM_INDEX_NAME: string;
+    ADMIN_UTM_CAMPAIGN_INDEX_NAME: string;
+    ADMIN_UTM_LINK_INDEX_NAME: string;
+    ADMIN_UTM_LINK_CLICK_INDEX_NAME: string;
+    ADMIN_UTM_TAG_INDEX_NAME: string;
     ATTACHMENT: string;
     BANK_ACCOUNT: string;
     BRAND: string;
