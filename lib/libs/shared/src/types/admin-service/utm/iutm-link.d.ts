@@ -22,7 +22,7 @@ export declare namespace IUtmLink {
         active: boolean;
         name?: string | null;
         code: string;
-        click_count: number;
+        click_count: number | string;
         description?: string | null;
         origin_url: string;
         redirect_url: string;

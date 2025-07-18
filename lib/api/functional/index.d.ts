@@ -53,6 +53,7 @@ export * as vnpay_web from "./vnpay_web";
 export * as admin_customer from "./admin_customer";
 export * as notify from "./notify";
 export * as utm_campaigns from "./utm_campaigns";
+export * as utm_links from "./utm_links";
 export * as utm_mediums from "./utm_mediums";
 export * as utm_sources from "./utm_sources";
 export * as debts from "./debts";
