@@ -7,4 +7,5 @@ export * as line_item_tax_lines from "./line_item_tax_lines";
 export * as line_items from "./line_items";
 export * as shipping_line_tax_lines from "./shipping_line_tax_lines";
 export * as shipping_lines from "./shipping_lines";
+export * as shipping_fee_configs from "./shipping_fee_configs";
 export * as table_reservation from "./table_reservation";

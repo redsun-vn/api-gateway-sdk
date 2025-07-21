@@ -144,3 +144,21 @@ export declare enum SaleOrderStatus {
     DONE = "done",
     CANCEL = "cancel"
 }
+export declare enum FEE_CALCULATION_TYPE {
+    FIXED = "FIXED",
+    WEIGHT_BASED = "WEIGHT_BASED",
+    DISTANCE_BASED = "DISTANCE_BASED",
+    PROVIDER_API = "PROVIDER_API",
+    CUSTOM_FORMULA = "CUSTOM_FORMULA"
+}
+export declare enum MARKUP_TYPE {
+    FIXED = "FIXED",
+    PERCENTAGE = "PERCENTAGE"
+}
+export declare const FEE_CALCULATION_DESCRIPTION: {
+    FIXED: string;
+    WEIGHT_BASED: string;
+    DISTANCE_BASED: string;
+    PROVIDER_API: string;
+    CUSTOM_FORMULA: string;
+};

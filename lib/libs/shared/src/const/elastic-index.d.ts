@@ -139,6 +139,7 @@ export declare const ELASTIC_INDEX: {
     SELECTION: string;
     SELECTION_GROUP: string;
     SHIPPING_CONFIG: string;
+    SHIPPING_FEE_CONFIG: string;
     SHIPPING_LINE: string;
     SHIPPING_LINE_TAX_LINE: string;
     SHIPPING_METHOD: string;

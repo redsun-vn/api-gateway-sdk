@@ -11,3 +11,4 @@ export * from './iline-item-selection-group.type';
 export * from './ikds-item.type';
 export * from './isale-order';
 export * from './isubscription.type';
+export * from './ishipping-fee-config.type';
