@@ -24,6 +24,7 @@ export declare namespace IAdminCustomer {
         utm_medium_id?: (number & tags.Type<'uint64'>) | null;
         utm_source_id?: (number & tags.Type<'uint64'>) | null;
         utm_campaign_id?: (number & tags.Type<'uint64'>) | null;
+        companyId?: string;
     }
     interface IUpdate extends Partial<ICreate> {
     }

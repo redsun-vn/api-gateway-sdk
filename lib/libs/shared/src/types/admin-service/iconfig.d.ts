@@ -3,6 +3,7 @@ export declare namespace IGlobalConfig {
         fieldKey: string;
         fieldValue?: string;
         fieldType?: string;
+        companyId?: string;
     }
     interface IDataCreate {
         data: ICreate[];
@@ -12,5 +13,6 @@ export declare namespace IGlobalConfig {
         fieldKey: string;
         fieldValue?: string;
         fieldType?: string;
+        companyId?: string;
     }
 }

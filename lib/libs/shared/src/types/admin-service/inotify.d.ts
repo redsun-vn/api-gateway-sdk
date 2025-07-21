@@ -1,4 +1,4 @@
-import { BaseResponse } from '../common.type';
+import { AdminBaseResponse as BaseResponse } from '../common.type';
 export declare namespace INotify {
     interface ICreate {
         active?: boolean;
@@ -8,6 +8,7 @@ export declare namespace INotify {
         startDate?: string;
         endDate?: string;
         isUpdateVersionApp?: boolean;
+        companyId?: string;
     }
     interface IUpdate extends ICreate {
     }

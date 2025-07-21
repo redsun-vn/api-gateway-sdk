@@ -1,4 +1,4 @@
-import { BaseResponse } from '../../common.type';
+import { AdminBaseResponse as BaseResponse } from '../../common.type';
 import { IUtmTag } from './iutm-tag';
 export declare namespace IUtmCampaign {
     interface ICreate {
@@ -7,6 +7,7 @@ export declare namespace IUtmCampaign {
         description?: string;
         createdById?: number;
         tagIds?: number[] | null;
+        companyId?: string;
     }
     interface IUpdate extends Partial<ICreate> {
         updatedById?: number;

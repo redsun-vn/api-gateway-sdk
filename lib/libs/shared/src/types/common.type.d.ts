@@ -155,3 +155,6 @@ export interface CMSBaseResponse extends SEOBaseResponse {
     attachment_id: number | string | null;
     isIndex: boolean;
 }
+export interface AdminBaseResponse extends BaseResponse {
+    companyId?: string | null;
+}

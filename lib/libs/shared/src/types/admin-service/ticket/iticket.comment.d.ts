@@ -1,4 +1,4 @@
-import { BaseResponse } from '../../common.type';
+import { AdminBaseResponse as BaseResponse } from '../../common.type';
 import { IAdminUser } from '../iuser';
 export declare namespace ITicketComment {
     interface ICreate {
@@ -6,6 +6,7 @@ export declare namespace ITicketComment {
         ticketId: number;
         parentId?: number;
         authorId?: number;
+        companyId?: string;
     }
     type IUpdate = Partial<ICreate>;
     interface IResponse extends BaseResponse {

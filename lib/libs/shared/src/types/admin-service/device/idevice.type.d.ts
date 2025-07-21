@@ -1,4 +1,4 @@
-import { BaseResponse } from '../../common.type';
+import { AdminBaseResponse as BaseResponse } from '../../common.type';
 import { IDeviceCategory } from './idevice-category.type';
 import { IDeviceVariant } from './idevice-variant.type';
 export declare namespace IAdminDevice {
@@ -11,6 +11,7 @@ export declare namespace IAdminDevice {
         icon?: string;
         category_id: number | string;
         deviceVariants: IDeviceVariant.ICreate[];
+        companyId?: string;
     }
     interface IUpdate extends Omit<Partial<ICreate>, 'deviceVariants'> {
     }

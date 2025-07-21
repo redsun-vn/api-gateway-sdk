@@ -1,5 +1,5 @@
 import { tags } from 'typia';
-import { BaseResponse } from '../../common.type';
+import { AdminBaseResponse as BaseResponse } from '../../common.type';
 export declare namespace IUtmLink {
     interface ICreate {
         origin_url: string & tags.Format<'url'>;
@@ -14,6 +14,7 @@ export declare namespace IUtmLink {
         description?: string;
         name?: string;
         createdById?: number;
+        companyId?: string;
     }
     interface IUpdate extends Partial<ICreate> {
         updatedById?: number;

@@ -1,4 +1,4 @@
-import { BaseResponse } from '../common.type';
+import { AdminBaseResponse as BaseResponse } from '../common.type';
 export declare namespace IAdminDepartment {
     interface ICreate {
         name: string;
@@ -9,6 +9,7 @@ export declare namespace IAdminDepartment {
         parent_flatten_ids?: string;
         role?: string;
         canUseRoleIds?: string[];
+        companyId?: string;
     }
     type IUpdate = Omit<Partial<ICreate>, 'owner_id'>;
     interface IResponse extends BaseResponse {

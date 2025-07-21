@@ -1,4 +1,4 @@
-import { BaseResponse } from '../../common.type';
+import { AdminBaseResponse as BaseResponse } from '../../common.type';
 import { IAdminDevice } from './idevice.type';
 import { IAdminWarehouse } from './iwarehouse.type';
 export declare namespace IDeviceVariant {
@@ -13,6 +13,7 @@ export declare namespace IDeviceVariant {
         price: number;
         sellPrice: number;
         variantWarehouses?: IWDeviceVariantCreate[];
+        companyId?: string;
     }
     interface IWDeviceVariantCreate {
         warehouse_id: number;

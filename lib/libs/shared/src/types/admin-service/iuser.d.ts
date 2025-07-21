@@ -1,6 +1,6 @@
 import { tags } from 'typia';
 import { IAdminGroup } from './igroup';
-import { BaseResponse } from '../common.type';
+import { AdminBaseResponse as BaseResponse } from '../common.type';
 import { ADMIN_USER_ROLE } from '../../enum';
 import { IAdminDepartment } from './iadmin-department.type';
 export declare namespace IAdminUser {
@@ -26,6 +26,7 @@ export declare namespace IAdminUser {
         avatarId?: string;
         employeeType?: string;
         description?: string;
+        companyId?: string;
     }
     interface IUpdate {
         email?: string & tags.Format<'email'>;
@@ -46,6 +47,7 @@ export declare namespace IAdminUser {
         avatarId?: string;
         employeeType?: string;
         description?: string;
+        companyId?: string;
     }
     interface IUpdatePassword {
         password: string & tags.MinLength<6>;

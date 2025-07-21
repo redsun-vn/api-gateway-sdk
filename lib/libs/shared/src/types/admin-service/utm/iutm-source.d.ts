@@ -1,10 +1,11 @@
-import { BaseResponse } from '../../common.type';
+import { AdminBaseResponse as BaseResponse } from '../../common.type';
 export declare namespace IUtmSource {
     interface ICreate {
         active?: boolean;
         name: string;
         description?: string;
         createdById?: number;
+        companyId?: string;
     }
     interface IUpdate extends Partial<ICreate> {
         updatedById?: number;

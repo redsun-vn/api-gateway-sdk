@@ -8,3 +8,4 @@ export * from './ticket';
 export * from './iadmin-department.type';
 export * from './device';
 export * from './utm';
+export * from './crm';

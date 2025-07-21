@@ -1,4 +1,4 @@
-import { BaseResponse } from '../../common.type';
+import { AdminBaseResponse as BaseResponse } from '../../common.type';
 import { IAdminCustomer } from '../icustomer';
 import { IAdminUser } from '../iuser';
 import { ITicketCategory } from './iticket.category';
@@ -15,6 +15,7 @@ export declare namespace ITicket {
         creatorId?: number;
         assigneesIds?: number[];
         shopAssignId?: number;
+        companyId?: string;
     }
     interface IUpdate extends Partial<ICreate> {
         status?: string;
