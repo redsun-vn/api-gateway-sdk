@@ -27,6 +27,7 @@ export * as reconciliation_transactions from "./reconciliation_transactions";
 export * as reports from "./reports";
 export * as sync_report from "./sync_report";
 export * as payments from "./payments";
+export * as activities from "./activities";
 export * as health_check from "./health_check";
 export * as api_keys from "./api_keys";
 export * as companies from "./companies";

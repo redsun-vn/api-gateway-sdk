@@ -9,3 +9,4 @@ export * from './iadmin-department.type';
 export * from './device';
 export * from './utm';
 export * from './crm';
+export * from './iactivity';
