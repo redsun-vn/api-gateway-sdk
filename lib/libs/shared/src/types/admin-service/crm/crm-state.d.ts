@@ -6,6 +6,8 @@ export declare namespace ICrmState {
         isWon: boolean;
         teamId: string[];
         companyId: string | null;
+        color?: string | null;
+        icon?: string | null;
     }
     interface ICreateRequest {
         name: string;
@@ -13,6 +15,8 @@ export declare namespace ICrmState {
         isWon?: boolean;
         teamId?: string[];
         companyId?: string;
+        color?: string;
+        icon?: string;
     }
     interface IUpdateRequest extends Partial<ICreateRequest> {
         id: number;
