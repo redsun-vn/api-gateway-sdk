@@ -20,6 +20,7 @@ export declare const ELASTIC_INDEX: {
     ADMIN_UTM_LINK_CLICK_INDEX_NAME: string;
     ADMIN_UTM_TAG_INDEX_NAME: string;
     ADMIN_CRM_TEAM_INDEX_NAME: string;
+    ADMIN_CRM_STATE_INDEX_NAME: string;
     ADMIN_COMPANY_INDEX_NAME: string;
     ADMIN_ACTIVITY_INDEX_NAME: string;
     ATTACHMENT: string;
