@@ -1,6 +1,6 @@
 import { AdminBaseResponse as BaseResponse } from '../../common.type';
 import { DEAL_AVAILABLE_PRIORITIES, DEAL_LINE_ITEM_TYPE, DEAL_TYPE } from '../../../enum';
-import { ICrmState } from './crm-state';
+import { ICrmStage } from './crm-stage';
 import { IAdminCustomer } from '../icustomer';
 import { IUtmSource, IUtmMedium, IUtmCampaign } from '../utm';
 import { ICRMTeam } from './team';
@@ -58,7 +58,7 @@ export declare namespace ICRMDeal {
         probability?: number | string | null;
         refCode?: string | null;
         stage_id?: number | string | null;
-        stage?: ICrmState.IResponse | null;
+        stage?: ICrmStage.IResponse | null;
         type?: DEAL_TYPE | string | null;
         priority?: DEAL_AVAILABLE_PRIORITIES | string | null;
         customer_id?: number | string | null;

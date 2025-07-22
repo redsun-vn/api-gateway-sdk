@@ -1,5 +1,5 @@
 import { BaseResponse } from '../../common.type';
-export declare namespace ICrmState {
+export declare namespace ICrmStage {
     interface IResponse extends BaseResponse {
         name: string;
         sequence: number;
