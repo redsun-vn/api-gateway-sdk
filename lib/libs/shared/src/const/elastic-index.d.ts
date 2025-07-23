@@ -24,6 +24,7 @@ export declare const ELASTIC_INDEX: {
     ADMIN_COMPANY_INDEX_NAME: string;
     ADMIN_ACTIVITY_INDEX_NAME: string;
     ADMIN_CRM_DEAL_INDEX_NAME: string;
+    ADMIN_CRM_QUOTE_INDEX_NAME: string;
     ATTACHMENT: string;
     BANK_ACCOUNT: string;
     BRAND: string;
