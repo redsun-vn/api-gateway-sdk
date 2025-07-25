@@ -1,26 +1,28 @@
 import { tags } from 'typia';
-import { ActivityResult, ActivityStatus, ActivityType } from '../../enum';
+import { AdminActivityResult, AdminActivityStatus, AdminActivityType } from '../../enum';
 import { BaseResponse } from '../common.type';
-export declare namespace IActivity {
+export declare namespace IAdminActivity {
     interface ICreate {
         customer_id?: number | null;
-        type: ActivityType;
+        type: AdminActivityType;
         phone?: string | null;
         address?: string | null;
-        email?: string | null;
+        meeting_address?: string | null;
+        duration_minutes?: number | null;
+        email?: (string & tags.Format<'email'>) | null;
         deal_id?: number | null;
         priority?: string | null;
         startDate?: string | null;
         endDate?: string | null;
-        status?: ActivityStatus;
+        status?: AdminActivityStatus;
         title?: string | null;
         description?: string | null;
         targetContent?: string | null;
-        result?: ActivityResult | null;
+        result?: AdminActivityResult | null;
         rate?: (number & tags.Minimum<0> & tags.Maximum<5>) | null;
         resultNote?: string | null;
         nextActionRequired?: boolean;
-        nextActionType?: ActivityType | null;
+        nextActionType?: AdminActivityType | null;
         nextActionDate?: string | null;
         nextActionDescription?: string | null;
         attachment_ids?: string[] | null;
@@ -57,5 +59,7 @@ export declare namespace IActivity {
         canceledDate?: string | null;
         canceledReason?: string | null;
         canceledById?: number | string | null;
+        meeting_address?: string | null;
+        duration_minutes?: number | string | null;
     }
 }

@@ -1,10 +1,10 @@
 import type { IConnection, Resolved, Primitive } from "@nestia/fetcher";
-import type { IActivity } from "../../../../libs/shared/src/types/admin-service/iactivity";
+import type { IAdminActivity } from "../../../../libs/shared/src/types/admin-service/iactivity";
 import type { IQuery, IResponse, IResponsePagination } from "../../../../libs/shared/src/types/common.type";
 export declare function findAll(connection: IConnection, query: findAll.Query): Promise<findAll.Output>;
 export declare namespace findAll {
     type Query = Resolved<IQuery>;
-    type Output = Primitive<IResponse<IResponsePagination<IActivity.IResponse>>>;
+    type Output = Primitive<IResponse<IResponsePagination<IAdminActivity.IResponse>>>;
     const METADATA: {
         readonly method: "GET";
         readonly path: "/admin/activities";
@@ -19,7 +19,7 @@ export declare namespace findAll {
 }
 export declare function findOne(connection: IConnection, id: string): Promise<findOne.Output>;
 export declare namespace findOne {
-    type Output = Primitive<IResponse<IActivity.IResponse>>;
+    type Output = Primitive<IResponse<IAdminActivity.IResponse>>;
     const METADATA: {
         readonly method: "GET";
         readonly path: "/admin/activities/:id";
@@ -34,8 +34,8 @@ export declare namespace findOne {
 }
 export declare function create(connection: IConnection, data: create.Input): Promise<create.Output>;
 export declare namespace create {
-    type Input = Resolved<IActivity.ICreate>;
-    type Output = Primitive<IResponse<IActivity.IResponse>>;
+    type Input = Resolved<IAdminActivity.ICreate>;
+    type Output = Primitive<IResponse<IAdminActivity.IResponse>>;
     const METADATA: {
         readonly method: "POST";
         readonly path: "/admin/activities";
@@ -53,8 +53,8 @@ export declare namespace create {
 }
 export declare function update(connection: IConnection, data: update.Input, id: string): Promise<update.Output>;
 export declare namespace update {
-    type Input = Resolved<IActivity.IUpdate>;
-    type Output = Primitive<IResponse<IActivity.IResponse>>;
+    type Input = Resolved<IAdminActivity.IUpdate>;
+    type Output = Primitive<IResponse<IAdminActivity.IResponse>>;
     const METADATA: {
         readonly method: "PUT";
         readonly path: "/admin/activities/:id";
