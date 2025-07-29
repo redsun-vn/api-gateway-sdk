@@ -10,7 +10,8 @@ export declare namespace IAdminActivity {
         meeting_address?: string | null;
         duration_minutes?: number | null;
         email?: (string & tags.Format<'email'>) | null;
-        deal_id?: number | null;
+        target_id?: number | null;
+        target?: string | null;
         priority?: string | null;
         startDate?: string | null;
         endDate?: string | null;
@@ -40,7 +41,8 @@ export declare namespace IAdminActivity {
         phone?: string | null;
         address?: string | null;
         email?: string | null;
-        deal_id?: number | string | null;
+        target_id?: number | string | null;
+        target?: string | null;
         priority?: string | null;
         startDate?: string | null;
         endDate?: string | null;
