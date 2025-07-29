@@ -28,6 +28,8 @@ export declare const ELASTIC_INDEX: {
     ADMIN_CRM_EVENT_INDEX_NAME: string;
     ADMIN_CRM_BUDGET_INDEX_NAME: string;
     ADMIN_CRM_BUDGET_EXPENSE_INDEX_NAME: string;
+    ADMIN_CRM_LEAD: string;
+    ADMIN_CRM_LEAD_SCORING_CONFIG: string;
     ATTACHMENT: string;
     BANK_ACCOUNT: string;
     BRAND: string;

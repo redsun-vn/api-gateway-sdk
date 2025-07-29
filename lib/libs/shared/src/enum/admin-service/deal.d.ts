@@ -19,3 +19,23 @@ export declare enum DEAL_LINE_ITEM_TYPE {
     THEME = "theme",
     OTHER = "other"
 }
+export declare enum LEAD_STATUS {
+    NEW = "new",
+    CONTACTED = "contacted",
+    QUALIFIED = "qualified",
+    DISQUALIFIED = "disqualified",
+    CONVERTED = "converted",
+    LOST = "lost"
+}
+export declare enum DECISION_MAKER_LEVEL {
+    C_LEVEL = "c_level",
+    DIRECTOR = "director",
+    MANAGER = "manager",
+    STAFF = "staff"
+}
+export declare enum DEAL_CLASSIFICATION {
+    COLD = "cold",
+    WARM = "warm",
+    HOT = "hot",
+    SALES_READY = "sales_ready"
+}
