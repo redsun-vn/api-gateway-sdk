@@ -8,6 +8,9 @@ export declare namespace ICRMTeam {
         team_leader_id?: number | string | null;
         team_members?: string[];
         companyId?: string;
+        country?: string;
+        province?: string;
+        ward?: string;
     }
     interface IUpdate extends ICreate {
         id: number | string;
@@ -19,5 +22,8 @@ export declare namespace ICRMTeam {
         active: boolean;
         team_leader_id?: number | string | null;
         team_members?: string[];
+        country?: string | null;
+        province?: string | null;
+        ward?: string | null;
     }
 }

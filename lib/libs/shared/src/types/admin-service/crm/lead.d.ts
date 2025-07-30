@@ -72,6 +72,10 @@ export declare namespace ICRMLead {
         competitors?: string;
         priority?: DEAL_AVAILABLE_PRIORITIES;
         classification?: DEAL_CLASSIFICATION;
+        description_detail?: string;
+        assignment_rules?: string;
+        need_score?: string;
+        timeline_score?: string;
     }
     interface IUpdate extends Partial<ICreate> {
         id: number | string;
@@ -129,6 +133,10 @@ export declare namespace ICRMLead {
         updatedBy?: number | string | null;
         deal_id?: number | string | null;
         competitors?: string | null;
+        description_detail?: string | null;
+        assignment_rules?: string | null;
+        need_score?: string | null;
+        timeline_score?: string | null;
     }
     interface IFindByClassification {
         classification: string;
@@ -207,6 +215,10 @@ export declare namespace ICRMLead {
             competitors?: string;
             priority?: string;
             score_classification?: string;
+            description_detail?: string;
+            assignment_rules?: string;
+            need_score?: string;
+            timeline_score?: string;
         }>;
         user_id: number;
         options?: {

@@ -1,0 +1,29 @@
+export declare enum EventType {
+    MEETING = "MEETING",
+    APPOINTMENT = "APPOINTMENT",
+    TASK = "TASK",
+    REMINDER = "REMINDER",
+    OTHER = "OTHER"
+}
+export declare enum PriorityLevel {
+    LOW = "LOW",
+    MEDIUM = "MEDIUM",
+    HIGH = "HIGH",
+    URGENT = "URGENT"
+}
+export declare enum EventPurpose {
+    INTRODUCTION = "INTRODUCTION",
+    DISCUSSION = "DISCUSSION",
+    PRESENTATION = "PRESENTATION",
+    NEGOTIATION = "NEGOTIATION",
+    FOLLOW_UP = "FOLLOW_UP",
+    TECH_SUPPORT = "TECH_SUPPORT",
+    RELATIONSHIP = "RELATIONSHIP",
+    OTHER = "OTHER"
+}
+export declare enum AddressType {
+    OFFICE = "OFFICE",
+    CUSTOMER_ADDRESS = "CUSTOMER_ADDRESS",
+    ONLINE = "ONLINE",
+    OTHER = "OTHER"
+}
