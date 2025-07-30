@@ -6,6 +6,8 @@ export * as assignment from "./assignment";
 export * as auto_assign from "./auto_assign";
 export * as convert_to_deal from "./convert_to_deal";
 export * as assign_user from "./assign_user";
+export * as bant_score from "./bant_score";
+export * as bant_follow_up_urgent from "./bant_follow_up_urgent";
 export declare function $import(connection: IConnection, data: $import.Input): Promise<$import.Output>;
 export declare namespace $import {
     type Input = Resolved<ICRMLead.IImport>;

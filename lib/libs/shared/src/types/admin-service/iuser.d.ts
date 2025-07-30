@@ -27,6 +27,11 @@ export declare namespace IAdminUser {
         employeeType?: string;
         description?: string;
         companyId?: string;
+        province?: string | null;
+        district?: string | null;
+        ward?: string | null;
+        identityCard?: string | null;
+        startWorkDate?: string | null;
     }
     interface IUpdate {
         email?: string & tags.Format<'email'>;
@@ -48,6 +53,11 @@ export declare namespace IAdminUser {
         employeeType?: string;
         description?: string;
         companyId?: string;
+        province?: string | null;
+        district?: string | null;
+        ward?: string | null;
+        identityCard?: string | null;
+        startWorkDate?: string | null;
     }
     interface IUpdatePassword {
         password: string & tags.MinLength<6>;
@@ -102,5 +112,10 @@ export declare namespace IAdminUser {
         avatarId?: string | null;
         employeeType?: string | null;
         description?: string | null;
+        province?: string | null;
+        district?: string | null;
+        ward?: string | null;
+        identityCard?: string | null;
+        startWorkDate?: string | null;
     }
 }

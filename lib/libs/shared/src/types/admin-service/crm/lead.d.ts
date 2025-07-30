@@ -272,4 +272,82 @@ export declare namespace ICRMLead {
             average_score: number | string;
         }>;
     }
+    interface IBANTScore {
+        budget: IBANTBudgetScore;
+        authority: IBANTAuthorityScore;
+        need: IBANTNeedScore;
+        timeline: IBANTTimelineScore;
+        overall: IBANTOverallScore;
+    }
+    interface IBANTBudgetScore {
+        score: number;
+        status: 'excellent' | 'good' | 'fair' | 'poor' | 'unknown';
+        value: number;
+        range: string;
+        description: string;
+    }
+    interface IBANTAuthorityScore {
+        score: number;
+        status: 'excellent' | 'good' | 'fair' | 'poor' | 'unknown';
+        level: string;
+        description: string;
+    }
+    interface IBANTNeedScore {
+        score: number;
+        status: 'excellent' | 'good' | 'fair' | 'poor' | 'unknown';
+        urgency: string;
+        engagement_level: string;
+        description: string;
+    }
+    interface IBANTTimelineScore {
+        score: number;
+        status: 'excellent' | 'good' | 'fair' | 'poor' | 'unknown';
+        urgency: string;
+        days_until_follow_up: number;
+        description: string;
+    }
+    interface IBANTOverallScore {
+        total_score: number;
+        status: 'excellent' | 'good' | 'fair' | 'poor';
+        classification: string;
+        recommendation: string;
+    }
+    interface IBANTQuickAction {
+        type: string;
+        title: string;
+        description: string;
+        priority: string;
+    }
+    interface IBANTSummary {
+        lead_id: number;
+        lead_name: string;
+        company_name?: string;
+        bant_score: IBANTScore;
+        quick_actions: IBANTQuickAction[];
+        next_steps: string[];
+    }
+    interface IBANTAnalytics {
+        average_scores: {
+            budget: number;
+            authority: number;
+            need: number;
+            timeline: number;
+            overall: number;
+        };
+        score_distribution: {
+            excellent: number;
+            good: number;
+            fair: number;
+            poor: number;
+        };
+        improvement_areas: string[];
+        top_performers: IBANTScore[];
+    }
+    interface IBANTFollowUpUrgentLead extends IBANTSummary {
+        urgency_reason: string;
+    }
+    interface IBANTFollowUpUrgentResult {
+        total_urgent: number | string;
+        leads: IBANTFollowUpUrgentLead[];
+    }
 }
