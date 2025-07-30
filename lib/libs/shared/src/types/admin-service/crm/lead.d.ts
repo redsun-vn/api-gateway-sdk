@@ -1,6 +1,6 @@
 import { AdminBaseResponse as BaseResponse } from '../../common.type';
 import { IAdminUser as IUser } from '../iuser';
-import { DEAL_AVAILABLE_PRIORITIES, DEAL_CLASSIFICATION, DECISION_MAKER_LEVEL, LEAD_STATUS } from '../../../enum';
+import { DEAL_AVAILABLE_PRIORITIES, DEAL_CLASSIFICATION, DECISION_MAKER_LEVEL, LEAD_STATUS, ASSIGNMENT_RULES, NEED_SCORE, TIMELINE_SCORE } from '../../../enum';
 import { ICRMTeam } from './team';
 import { IAdminCustomer as ICustomer } from '../icustomer';
 import { IUtmSource, IUtmMedium, IUtmCampaign } from '../utm';
@@ -73,9 +73,9 @@ export declare namespace ICRMLead {
         priority?: DEAL_AVAILABLE_PRIORITIES;
         classification?: DEAL_CLASSIFICATION;
         description_detail?: string;
-        assignment_rules?: string;
-        need_score?: string;
-        timeline_score?: string;
+        assignment_rules?: ASSIGNMENT_RULES;
+        need_score?: NEED_SCORE;
+        timeline_score?: TIMELINE_SCORE;
     }
     interface IUpdate extends Partial<ICreate> {
         id: number | string;

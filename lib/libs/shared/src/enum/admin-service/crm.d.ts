@@ -58,3 +58,24 @@ export declare enum CRMBudgetPermission {
     DELETE = "crm-budget:delete",
     APPROVE = "crm-budget:approve"
 }
+export declare enum ASSIGNMENT_RULES {
+    ROUND_ROBIN = "round_robin",
+    BY_EXPERTISE = "by_expertise",
+    BY_REGION = "by_region",
+    BY_VOLUME = "by_volume",
+    MANUAL = "manual"
+}
+export declare enum NEED_SCORE {
+    VERY_HIGH = "very_high",
+    HIGH = "high",
+    MEDIUM = "medium",
+    LOW = "low",
+    VERY_LOW = "very_low"
+}
+export declare enum TIMELINE_SCORE {
+    NOW = "now",
+    ONE_TO_THREE_MONTHS = "1-3_months",
+    THREE_TO_SIX_MONTHS = "3-6_months",
+    SIX_TO_TWELVE_MONTHS = "6-12_months",
+    OVER_ONE_YEAR = "over_1_year"
+}
