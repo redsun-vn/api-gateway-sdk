@@ -1,5 +1,6 @@
 import { tags } from 'typia';
 import { BaseResponse } from '../common.type';
+import { AdminCustomerCompanySize, AdminCustomerExpectedBudgetRange, AdminCustomerLevelInterest, AdminCustomerPriority, AdminCustomerStatus, AdminCustomerType } from '../../enum';
 export declare namespace IAdminCustomer {
     interface ICreate {
         email?: (string & tags.Format<'email'>) | null;
@@ -25,6 +26,20 @@ export declare namespace IAdminCustomer {
         utm_source_id?: (number & tags.Type<'uint64'>) | null;
         utm_campaign_id?: (number & tags.Type<'uint64'>) | null;
         companyId?: string;
+        status?: AdminCustomerStatus | null;
+        type?: AdminCustomerType | null;
+        priority?: AdminCustomerPriority | null;
+        levelInterest?: AdminCustomerLevelInterest | null;
+        expectedBudget?: AdminCustomerExpectedBudgetRange | null;
+        companySize?: AdminCustomerCompanySize | null;
+        industry?: string | null;
+        position?: string | null;
+        representative?: string | null;
+        tags?: string | null;
+        interestedServices?: string[] | null;
+        taxCode?: string | null;
+        dateFirstContact?: string | null;
+        dateNextFollowUp?: string | null;
     }
     interface IUpdate extends Partial<ICreate> {
     }
@@ -51,5 +66,19 @@ export declare namespace IAdminCustomer {
         utm_campaign_id?: number | string | null;
         utm_medium_id?: number | string | null;
         utm_source_id?: number | string | null;
+        status?: AdminCustomerStatus | null;
+        type?: AdminCustomerType | null;
+        priority?: AdminCustomerPriority | null;
+        levelInterest?: AdminCustomerLevelInterest | null;
+        expectedBudget?: AdminCustomerExpectedBudgetRange | null;
+        companySize?: AdminCustomerCompanySize | null;
+        industry?: string | null;
+        position?: string | null;
+        representative?: string | null;
+        tags?: string | null;
+        interestedServices?: string[] | null;
+        taxCode?: string | null;
+        dateFirstContact?: string | null;
+        dateNextFollowUp?: string | null;
     }
 }
