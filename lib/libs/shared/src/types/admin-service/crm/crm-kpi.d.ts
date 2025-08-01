@@ -54,8 +54,8 @@ export declare namespace ICRMKPI {
         actualValue: number | string;
         achievementRate: number | string;
         weight: number | string;
-        startDate: string;
-        endDate: string;
+        startDate: string | null;
+        endDate: string | null;
         hierarchyLevel: string & KPI_HIERARCHY_LEVEL;
         parentKpiId: number | null;
         teamId: number | null;
@@ -91,12 +91,12 @@ export declare namespace ICRMKPI {
         children?: IHierarchyResponse[] | null;
     }
     interface IKPIStats {
-        totalKPIs: number;
-        activeKPIs: number;
-        averageAchievementRate: number;
-        onTrackKPIs: number;
-        atRiskKPIs: number;
-        overdueKPIs: number;
+        totalKPIs?: number | string;
+        activeKPIs?: number | string;
+        averageAchievementRate?: number | string;
+        onTrackKPIs?: number | string;
+        atRiskKPIs?: number | string;
+        overdueKPIs?: number | string;
     }
     interface CascadeKPIRequest {
         targetTeamIds?: number[];

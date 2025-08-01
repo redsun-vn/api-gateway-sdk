@@ -53,6 +53,7 @@ export declare namespace ICRMLead {
         source?: string;
         company_size?: number;
         decision_maker_level?: DECISION_MAKER_LEVEL;
+        score_classification?: DEAL_CLASSIFICATION;
         budget_range?: number;
         website_visits?: number;
         content_downloads?: number;
