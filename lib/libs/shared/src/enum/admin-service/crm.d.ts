@@ -51,6 +51,50 @@ export declare enum EXPENSE_PRIORITY {
     HIGH = "high",
     URGENT = "urgent"
 }
+export declare enum KPI_TYPE {
+    REVENUE = "revenue",
+    SALES_VOLUME = "sales_volume",
+    LEAD_GENERATION = "lead_generation",
+    CONVERSION_RATE = "conversion_rate",
+    CUSTOMER_SATISFACTION = "customer_satisfaction",
+    COST_REDUCTION = "cost_reduction",
+    PRODUCTIVITY = "productivity",
+    QUALITY = "quality",
+    ATTENDANCE = "attendance",
+    TRAINING = "training",
+    OTHER = "other"
+}
+export declare enum KPI_STATUS {
+    DRAFT = "draft",
+    PENDING = "pending",
+    APPROVED = "approved",
+    ACTIVE = "active",
+    COMPLETED = "completed",
+    CANCELLED = "cancelled",
+    OVERDUE = "overdue"
+}
+export declare enum KPI_PERIOD {
+    DAILY = "daily",
+    WEEKLY = "weekly",
+    MONTHLY = "monthly",
+    QUARTERLY = "quarterly",
+    YEARLY = "yearly"
+}
+export declare enum KPI_UNIT {
+    VND = "VND",
+    USD = "USD",
+    COUNT = "count",
+    PERCENTAGE = "percentage",
+    HOUR = "hour",
+    DAY = "day",
+    POINT = "point"
+}
+export declare enum KPI_HIERARCHY_LEVEL {
+    COMPANY = "company",
+    DEPARTMENT = "department",
+    TEAM = "team",
+    INDIVIDUAL = "individual"
+}
 export declare enum CRMBudgetPermission {
     VIEW = "crm-budget:view",
     CREATE = "crm-budget:create",
@@ -78,4 +122,11 @@ export declare enum TIMELINE_SCORE {
     THREE_TO_SIX_MONTHS = "3-6_months",
     SIX_TO_TWELVE_MONTHS = "6-12_months",
     OVER_ONE_YEAR = "over_1_year"
+}
+export declare enum CRMKPIPermission {
+    VIEW = "crm-kpi:view",
+    CREATE = "crm-kpi:create",
+    UPDATE = "crm-kpi:update",
+    DELETE = "crm-kpi:delete",
+    MANAGE_HIERARCHY = "crm-kpi:manage-hierarchy"
 }

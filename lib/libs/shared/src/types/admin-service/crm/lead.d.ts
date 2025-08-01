@@ -76,6 +76,7 @@ export declare namespace ICRMLead {
         assignment_rules?: ASSIGNMENT_RULES;
         need_score?: NEED_SCORE;
         timeline_score?: TIMELINE_SCORE;
+        tags?: string[];
     }
     interface IUpdate extends Partial<ICreate> {
         id: number | string;
@@ -137,6 +138,7 @@ export declare namespace ICRMLead {
         assignment_rules?: string | null;
         need_score?: string | null;
         timeline_score?: string | null;
+        tags?: string[] | null;
     }
     interface IFindByClassification {
         classification: string;
@@ -219,6 +221,7 @@ export declare namespace ICRMLead {
             assignment_rules?: string;
             need_score?: string;
             timeline_score?: string;
+            tags?: string[];
         }>;
         user_id: number;
         options?: {

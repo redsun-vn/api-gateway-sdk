@@ -8,3 +8,4 @@ export * from './crm-budget';
 export * from './crm-expense';
 export * from './lead-scoring-config';
 export * from './lead';
+export * from './crm-kpi';
