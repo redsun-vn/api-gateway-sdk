@@ -43,6 +43,7 @@ export declare namespace ICRMKPI {
         notes?: string;
     }
     interface IResponse extends BaseResponse {
+        id: number | string;
         name: string;
         code?: string | null;
         description: string | null;
