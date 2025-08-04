@@ -2,6 +2,8 @@ import type { IConnection, Resolved, Primitive } from "@nestia/fetcher";
 import type { ICRMLead } from "../../../../../libs/shared/src/types/admin-service/crm/lead";
 import type { IResponse } from "../../../../../libs/shared/src/types/common.type";
 export * as scoring from "./scoring";
+export * as source from "./source";
+export * as status from "./status";
 export * as assignment from "./assignment";
 export * as auto_assign from "./auto_assign";
 export * as convert_to_deal from "./convert_to_deal";

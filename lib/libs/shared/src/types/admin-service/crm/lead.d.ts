@@ -252,6 +252,13 @@ export declare namespace ICRMLead {
     }
     interface IAnalyticsScoringResult {
         total_leads: number | string;
+        new_leads: number | string;
+        qualified_leads: number | string;
+        qualified_increase: number | string;
+        conversion_rate: number | string;
+        conversion_increase: number | string;
+        average_score: number | string;
+        score_change: number | string;
         score_distribution: {
             cold: number | string;
             warm: number | string;
@@ -269,6 +276,16 @@ export declare namespace ICRMLead {
             behavioral: number | string;
             engagement: number | string;
             total: number | string;
+        };
+        quality_leads: {
+            total_quality_leads: number | string;
+            quality_score: number | string;
+            quality_criteria: {
+                high_score_leads: number | string;
+                engaged_leads: number | string;
+                qualified_leads: number | string;
+                converted_leads: number | string;
+            };
         };
     }
     interface IAnalyticsAssignmentResult {
@@ -365,5 +382,77 @@ export declare namespace ICRMLead {
     interface IBANTFollowUpUrgentResult {
         total_urgent: number | string;
         leads: IBANTFollowUpUrgentLead[];
+    }
+    interface IAnalyticsSourceResult {
+        total_leads: number | string;
+        source_distribution: Array<{
+            source_id: number | string;
+            source_name: string;
+            total_leads: number | string;
+            conversion_rate: number | string;
+            average_score: number | string;
+            qualified_leads: number | string;
+            converted_leads: number | string;
+        }>;
+        top_sources: Array<{
+            source_id: number | string;
+            source_name: string;
+            total_leads: number | string;
+            conversion_rate: number | string;
+            average_score: number | string;
+        }>;
+        source_performance: {
+            best_performing_source: {
+                source_id: number | string;
+                source_name: string;
+                conversion_rate: number | string;
+                average_score: number | string;
+            };
+            worst_performing_source: {
+                source_id: number | string;
+                source_name: string;
+                conversion_rate: number | string;
+                average_score: number | string;
+            };
+        };
+    }
+    interface IAnalyticsStatusResult {
+        total_leads: number | string;
+        status_distribution: {
+            new: number | string;
+            contacted: number | string;
+            qualified: number | string;
+            disqualified: number | string;
+            converted: number | string;
+            lost: number | string;
+        };
+        status_performance: {
+            best_performing_status: {
+                status: string;
+                total_leads: number | string;
+                conversion_rate: number | string;
+                average_score: number | string;
+            };
+            worst_performing_status: {
+                status: string;
+                total_leads: number | string;
+                conversion_rate: number | string;
+                average_score: number | string;
+            };
+        };
+        status_trends: {
+            new_increase: number | string;
+            contacted_increase: number | string;
+            qualified_increase: number | string;
+            disqualified_increase: number | string;
+            converted_increase: number | string;
+            lost_increase: number | string;
+        };
+        conversion_funnel: {
+            new_to_contacted: number | string;
+            contacted_to_qualified: number | string;
+            qualified_to_converted: number | string;
+            overall_conversion: number | string;
+        };
     }
 }

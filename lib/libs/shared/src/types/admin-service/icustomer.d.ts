@@ -40,7 +40,6 @@ export declare namespace IAdminCustomer {
         taxCode?: string | null;
         dateFirstContact?: string | null;
         dateNextFollowUp?: string | null;
-        identityCard?: string | null;
     }
     interface IUpdate extends Partial<ICreate> {
     }
@@ -81,6 +80,5 @@ export declare namespace IAdminCustomer {
         taxCode?: string | null;
         dateFirstContact?: string | null;
         dateNextFollowUp?: string | null;
-        identityCard?: string | null;
     }
 }
