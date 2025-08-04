@@ -29,6 +29,7 @@ export * as sync_report from "./sync_report";
 export * as payments from "./payments";
 export * as activities from "./activities";
 export * as health_check from "./health_check";
+export * as package_controller from "./package_controller";
 export * as api_keys from "./api_keys";
 export * as companies from "./companies";
 export * as global_configs from "./global_configs";

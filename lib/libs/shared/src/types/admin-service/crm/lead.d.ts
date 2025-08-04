@@ -252,6 +252,13 @@ export declare namespace ICRMLead {
     }
     interface IAnalyticsScoringResult {
         total_leads: number | string;
+        new_leads: number | string;
+        qualified_leads: number | string;
+        qualified_increase: number | string;
+        conversion_rate: number | string;
+        conversion_increase: number | string;
+        average_score: number | string;
+        score_change: number | string;
         score_distribution: {
             cold: number | string;
             warm: number | string;
@@ -269,6 +276,16 @@ export declare namespace ICRMLead {
             behavioral: number | string;
             engagement: number | string;
             total: number | string;
+        };
+        quality_leads: {
+            total_quality_leads: number | string;
+            quality_score: number | string;
+            quality_criteria: {
+                high_score_leads: number | string;
+                engaged_leads: number | string;
+                qualified_leads: number | string;
+                converted_leads: number | string;
+            };
         };
     }
     interface IAnalyticsAssignmentResult {

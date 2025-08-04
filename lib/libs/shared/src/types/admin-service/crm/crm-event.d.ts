@@ -2,6 +2,7 @@ import { AdminBaseResponse as BaseResponse } from '../../common.type';
 import { EventPurpose, EventType, PriorityLevel } from '../../../enum/admin-service/event';
 import { IEventCustomerEntity } from './crm-event-customer';
 import { IEventEmployeeEntity } from './crm-event-employee';
+import { ICRMDeal } from './deal';
 export declare namespace ICRMEvent {
     interface ICreate {
         company_id?: string;
@@ -48,6 +49,7 @@ export declare namespace ICRMEvent {
         expected_outcomes?: string;
         reminder_enabled: boolean;
         deal_id?: number | string | null;
+        deal?: ICRMDeal.IResponse;
         invitedCustomers?: IEventCustomerEntity[];
         invitedEmployees?: IEventEmployeeEntity[];
     }
