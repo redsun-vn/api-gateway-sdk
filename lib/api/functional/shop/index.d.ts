@@ -32,6 +32,7 @@ export * as branches from "./branches";
 export * as brands from "./brands";
 export * as domains from "./domains";
 export * as groups from "./groups";
+export * as invoices from "./invoices";
 export * as payment_configs from "./payment_configs";
 export * as pos_configs from "./pos_configs";
 export * as pos_printers from "./pos_printers";

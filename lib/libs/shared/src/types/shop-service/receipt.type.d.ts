@@ -1,9 +1,15 @@
 import { tags } from 'typia';
-import { RECEIPT_LINE_ITEM_TYPE_ENUM, RECEIPT_STATUS_ENUM } from '../../enum/shop-service';
+import { RECEIPT_LINE_ITEM_TYPE_ENUM, RECEIPT_PAYMENT_METHOD_ENUM, RECEIPT_PAYMENT_STATUS_ENUM, RECEIPT_PRIORITY_ENUM, RECEIPT_PROCESSING_STATUS_ENUM, RECEIPT_STATUS_ENUM, RECEIPT_TYPE_ENUM } from '../../enum/shop-service';
 import { BaseResponse } from '../common.type';
 export declare namespace IReceipt {
     interface IUpdate {
         status?: string & RECEIPT_STATUS_ENUM;
+        priority?: string & RECEIPT_PRIORITY_ENUM;
+        receiptType?: string & RECEIPT_TYPE_ENUM;
+        paymentStatus?: string & RECEIPT_PAYMENT_STATUS_ENUM;
+        paymentMethod?: string & RECEIPT_PAYMENT_METHOD_ENUM;
+        processingStatus?: string & RECEIPT_PROCESSING_STATUS_ENUM;
+        crm_quote_id?: string | number;
         email?: string & tags.Format<'email'>;
         phone?: string;
         address?: string;
@@ -13,6 +19,14 @@ export declare namespace IReceipt {
         taxPercentageTotal?: number;
         taxTotalManual?: number;
         taxPercentageTotalManual?: number;
+        approvedBy?: string | number;
+        rejectedBy?: string | number;
+        approvedAt?: string;
+        rejectedAt?: string;
+        paidAt?: string;
+        expiredAt?: string;
+        dueDate?: string;
+        rejectionReason?: string;
         updatedBy?: string | number;
         paymentCode?: string;
         voucherCode?: string;
@@ -25,6 +39,9 @@ export declare namespace IReceipt {
         paymentCode?: string;
     }
     interface ICreate {
+        crm_quote_id?: string | number;
+        priority?: string & RECEIPT_PRIORITY_ENUM;
+        receiptType?: string & RECEIPT_TYPE_ENUM;
         note?: string;
         paymentCode?: string;
         allowPrint?: boolean;
@@ -45,29 +62,45 @@ export declare namespace IReceipt {
         subscription_id?: number;
     }
     interface IResponse extends BaseResponse {
-        shop_id: string | number;
+        shop_id: string;
         package_id: string | number | null;
+        priority: string & RECEIPT_PRIORITY_ENUM;
+        receiptType: string & RECEIPT_TYPE_ENUM;
+        paymentStatus: string & RECEIPT_PAYMENT_STATUS_ENUM;
+        paymentMethod: string & RECEIPT_PAYMENT_METHOD_ENUM;
+        processingStatus: string & RECEIPT_PROCESSING_STATUS_ENUM;
+        crm_quote_id?: number | null;
         subscription_id: string | number | null;
         code: string;
         status: string;
         source: string;
         sourceType: string;
         paymentCode?: string | null;
+        refCode?: string | null;
         email?: string | null;
         phone?: string | null;
         address?: string | null;
         note?: string | null;
         allowPrint: boolean;
+        paidAmount?: number | string;
+        outstandingAmount?: number | string;
+        refundedAmount?: number | string;
         total: number;
         taxTotal: number;
         taxPercentageTotal: number;
         taxTotalManual: number;
         taxPercentageTotalManual: number;
-        updatedBy: number | string | null;
-        deletedBy: number | string | null;
-        createdBy: number | string | null;
-        refCode?: string | null;
-        completedAt: string | null;
+        updatedBy: number | string;
+        deletedBy: number | string;
+        approvedBy?: string | number | null;
+        rejectedBy?: string | number | null;
+        approvedAt?: string | null;
+        rejectedAt?: string | null;
+        paidAt?: string | null;
+        expiredAt?: string | null;
+        dueDate?: string | null;
+        completedAt: string;
+        rejectionReason?: string | null;
         lineItems?: IReceiptLineItems[] | null;
         voucherCode?: string | null;
         originalTotal?: number | string | null;
