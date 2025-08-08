@@ -258,6 +258,7 @@ export declare namespace ICRMLead {
         conversion_rate: number | string;
         conversion_increase: number | string;
         average_score: number | string;
+        average_score_normalized: number | string;
         score_change: number | string;
         score_distribution: {
             cold: number | string;
