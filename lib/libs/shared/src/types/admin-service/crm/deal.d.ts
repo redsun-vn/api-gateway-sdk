@@ -1,8 +1,8 @@
+import { DEAL_AVAILABLE_PRIORITIES, DEAL_LINE_ITEM_TYPE, DEAL_STATUS, DEAL_TYPE } from '../../../enum';
 import { AdminBaseResponse as BaseResponse } from '../../common.type';
-import { DEAL_AVAILABLE_PRIORITIES, DEAL_LINE_ITEM_TYPE, DEAL_TYPE } from '../../../enum';
-import { ICrmStage } from './crm-stage';
 import { IAdminCustomer } from '../icustomer';
-import { IUtmSource, IUtmMedium, IUtmCampaign } from '../utm';
+import { IUtmCampaign, IUtmMedium, IUtmSource } from '../utm';
+import { ICrmStage } from './crm-stage';
 import { ICRMTeam } from './team';
 export declare namespace ICRMDeal {
     interface IDealLineItem {
@@ -27,6 +27,7 @@ export declare namespace ICRMDeal {
         stage_id?: number;
         type?: DEAL_TYPE | string;
         priority?: DEAL_AVAILABLE_PRIORITIES | string;
+        status?: DEAL_STATUS | null;
         customer_id?: number;
         phone?: string;
         email?: string;
@@ -61,6 +62,7 @@ export declare namespace ICRMDeal {
         stage?: ICrmStage.IResponse | null;
         type?: DEAL_TYPE | string | null;
         priority?: DEAL_AVAILABLE_PRIORITIES | string | null;
+        status?: DEAL_STATUS | string | null;
         customer_id?: number | string | null;
         customer?: IAdminCustomer.IResponse | null;
         phone?: string | null;

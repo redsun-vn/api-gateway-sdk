@@ -18,7 +18,7 @@ export declare namespace ICRMEvent {
         location_type: string;
         specific_address?: string | null;
         location_notes?: string | null;
-        email?: string;
+        email?: string | null;
         main_purpose: EventPurpose;
         agenda_details?: string;
         expected_outcomes?: string;
@@ -43,7 +43,7 @@ export declare namespace ICRMEvent {
         location_type: string;
         specific_address?: string | null;
         location_notes?: string | null;
-        email?: string;
+        email?: string | null;
         main_purpose?: EventPurpose;
         agenda_details?: string;
         expected_outcomes?: string;

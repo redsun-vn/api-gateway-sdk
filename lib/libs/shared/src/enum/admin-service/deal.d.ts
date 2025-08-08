@@ -10,6 +10,13 @@ export declare enum DEAL_TYPE {
     RENEWAL = "renewal",
     CROSS_SELL = "cross_sell"
 }
+export declare enum DEAL_STATUS {
+    Potential = "potential",
+    Negotiating = "negotiating",
+    Propose = "propose",
+    CloseDeal = "close_deal",
+    Fail = "fail"
+}
 export declare enum DEAL_LINE_ITEM_TYPE {
     PACKAGE_ADDITION = "package_addition",
     APP_PLAN = "app_plan",
