@@ -98,7 +98,7 @@ export declare namespace ICRMBudget {
         totalApprovedExpenses?: number | string | null;
         pendingExpensesCount?: number | string | null;
         overdueExpensesCount?: number | string | null;
-        expensesByCategory?: Record<string, number> | null;
+        expensesByCategory?: Record<string, number | string> | null;
         remainingAmount?: number | string | null;
         spentPercentage?: number | string | null;
         isOverBudget?: boolean | null;

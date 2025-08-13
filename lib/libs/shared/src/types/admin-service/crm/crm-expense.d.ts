@@ -83,7 +83,7 @@ export declare namespace ICRMBudgetExpense {
         variancePercentage?: number;
         isOverBudget?: boolean;
         completionPercentage?: number;
-        daysUntilDue: number;
+        daysUntilDue?: number | string;
         isOverdue?: boolean;
     }
     interface IFilter {
