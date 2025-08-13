@@ -456,4 +456,8 @@ export declare namespace ICRMLead {
             overall_conversion: number | string;
         };
     }
+    interface IConvertToDeal {
+        lead_id: number;
+        user_id: number;
+    }
 }
