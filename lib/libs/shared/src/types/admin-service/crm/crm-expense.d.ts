@@ -76,7 +76,7 @@ export declare namespace ICRMBudgetExpense {
         tags: string[] | null;
         attachments: string[] | null;
         notes: string | null;
-        budget: ICRMBudget.IResponse;
+        budget?: ICRMBudget.IResponse | null;
         parent?: ICRMBudgetExpense.IResponse | null;
         children?: ICRMBudgetExpense.IResponse[] | null;
         varianceAmount?: number;
