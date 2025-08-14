@@ -1,12 +1,12 @@
 import type { IConnection, Primitive } from "@nestia/fetcher";
-import type { ICRMBudget } from "../../../../../../libs/shared/src/types/admin-service/crm/crm-budget";
-import type { IResponse } from "../../../../../../libs/shared/src/types/common.type";
+import type { ICRMBudget } from "../../../../../libs/shared/src/types/admin-service/crm/crm-budget";
+import type { IResponse } from "../../../../../libs/shared/src/types/common.type";
 export declare function getStats(connection: IConnection): Promise<getStats.Output>;
 export declare namespace getStats {
     type Output = Primitive<IResponse<ICRMBudget.IBudgetStats>>;
     const METADATA: {
         readonly method: "GET";
-        readonly path: "/admin/crm/budgets/stats";
+        readonly path: "/admin/crm/budgets-stats";
         readonly request: null;
         readonly response: {
             readonly type: "application/json";

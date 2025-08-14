@@ -135,17 +135,17 @@ export declare namespace ICRMBudget {
         rejectionReason: string;
     }
     interface IBudgetStats {
-        totalBudgets: number;
-        totalAllocated: number;
-        totalSpent: number;
-        totalCommitted: number;
-        totalAvailable: number;
-        averageUtilization: number;
+        totalBudgets: number | string;
+        totalAllocated: number | string;
+        totalSpent: number | string;
+        totalCommitted: number | string;
+        totalAvailable: number | string;
+        averageUtilization: number | string | null;
         budgetsByStatus: Record<string, number>;
-        budgetsByType: Record<string, number>;
-        budgetsByPeriod: Record<string, number>;
-        overdueCount: number;
-        warningLevelCount: number;
-        criticalLevelCount: number;
+        budgetsByType: Record<string, number | string>;
+        budgetsByPeriod: Record<string, number | string>;
+        overdueCount: number | string;
+        warningLevelCount: number | string;
+        criticalLevelCount: number | string;
     }
 }

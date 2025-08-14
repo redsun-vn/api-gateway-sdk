@@ -1,4 +1,6 @@
+export * as budgets_expenses from "./budgets_expenses";
 export * as budgets from "./budgets";
+export * as budgets_stats from "./budgets_stats";
 export * as deals from "./deals";
 export * as event from "./event";
 export * as leads_analytics from "./leads_analytics";

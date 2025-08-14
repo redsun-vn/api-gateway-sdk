@@ -6,34 +6,34 @@ import { IAdminCustomer as ICustomer } from '../icustomer';
 import { IUtmSource, IUtmMedium, IUtmCampaign } from '../utm';
 export declare namespace ICRMLead {
     interface IDemographicScore {
-        company_size: number;
-        industry_match: number;
-        budget_range: number;
-        decision_maker: number;
+        company_size: number | string;
+        industry_match: number | string;
+        budget_range: number | string;
+        decision_maker: number | string;
     }
     interface IBehavioralScore {
-        website_visits: number;
-        content_downloads: number;
-        email_engagement: number;
-        demo_request: number;
+        website_visits: number | string;
+        content_downloads: number | string;
+        email_engagement: number | string;
+        demo_request: number | string;
     }
     interface IEngagementScore {
-        phone_answered: number;
-        meeting_attended: number;
-        proposal_requested: number;
+        phone_answered: number | string;
+        meeting_attended: number | string;
+        proposal_requested: number | string;
     }
     interface IScoringDetails {
-        demographic_score: number;
-        behavioral_score: number;
-        engagement_score: number;
-        config_version: number;
-        config_id: number;
+        demographic_score: number | string;
+        behavioral_score: number | string;
+        engagement_score: number | string;
+        config_version: number | string;
+        config_id: number | string;
     }
     interface IAssignmentDetails {
-        location_score: number;
-        industry_expertise_score: number;
-        workload_score: number;
-        total_assignment_score: number;
+        location_score: number | string;
+        industry_expertise_score: number | string;
+        workload_score: number | string;
+        total_assignment_score: number | string;
     }
     interface ICreate {
         companyId?: string;
@@ -102,11 +102,11 @@ export declare namespace ICRMLead {
         description?: string | null;
         status?: string | null;
         source?: string | null;
-        score_classification?: DEAL_CLASSIFICATION | null;
+        score_classification?: DEAL_CLASSIFICATION | string | null;
         total_score: number | string | null;
         priority?: DEAL_AVAILABLE_PRIORITIES | string | null;
         company_size?: number | null;
-        decision_maker_level?: string | null;
+        decision_maker_level?: DECISION_MAKER_LEVEL | string | null;
         budget_range?: number | string | null;
         website_visits: number | string | null;
         content_downloads: number | string | null;
@@ -131,8 +131,6 @@ export declare namespace ICRMLead {
         source_utm?: IUtmSource.IResponse | null;
         medium_utm?: IUtmMedium.IResponse | null;
         campaign_utm?: IUtmCampaign.IResponse | null;
-        createdBy?: number | string | null;
-        updatedBy?: number | string | null;
         deal_id?: number | string | null;
         competitors?: string | null;
         description_detail?: string | null;

@@ -1,7 +1,6 @@
 import type { IConnection, Resolved, Primitive } from "@nestia/fetcher";
 import type { ICRMBudget } from "../../../../../libs/shared/src/types/admin-service/crm/crm-budget";
 import type { IQuery, IResponse, IResponsePagination } from "../../../../../libs/shared/src/types/common.type";
-export * as stats from "./stats";
 export * as expenses from "./expenses";
 export declare function findAll(connection: IConnection, query: findAll.Query): Promise<findAll.Output>;
 export declare namespace findAll {
