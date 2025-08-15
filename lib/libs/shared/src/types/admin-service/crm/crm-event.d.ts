@@ -11,9 +11,7 @@ export declare namespace ICRMEvent {
         event_type: EventType;
         priority_level: PriorityLevel;
         start_date: string;
-        start_time: string;
-        end_date?: string;
-        end_time?: string;
+        end_date: string;
         is_all_day: boolean;
         location_type: string;
         specific_address?: string | null;
@@ -36,9 +34,7 @@ export declare namespace ICRMEvent {
         event_type: EventType;
         priority_level: PriorityLevel;
         start_date: string;
-        start_time: string;
-        end_date?: string;
-        end_time?: string;
+        end_date: string;
         is_all_day: boolean;
         location_type: string;
         specific_address?: string | null;

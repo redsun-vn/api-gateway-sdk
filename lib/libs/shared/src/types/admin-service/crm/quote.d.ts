@@ -10,7 +10,7 @@ export declare namespace ICRMQuote {
         delivery_note?: string;
         payment_method?: string;
         currency?: string;
-        refCode?: string;
+        ref_code?: string;
         stage?: CRM_QUOTE_STAGE | string;
         customer_id?: number;
         name: string;
@@ -38,7 +38,7 @@ export declare namespace ICRMQuote {
         delivery_note?: string | null;
         payment_method?: string | null;
         currency?: string | null;
-        refCode?: string | null;
+        ref_code?: string | null;
         stage?: string | null;
         sub_total?: number | string | null;
         total?: number | string | null;
