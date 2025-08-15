@@ -1,6 +1,10 @@
 import { AdminBaseResponse as BaseResponse } from '../../common.type';
 import { ICRMLeadScoringConfigRule } from './lead-scoring-config-rule';
 export declare namespace ICRMLeadScoringConfig {
+    interface IRuleValue extends Partial<ICRMLeadScoringConfigRule.ICreate> {
+        id: number | string | null;
+        updatedBy?: number | null;
+    }
     interface ISetDefault {
         industry: string;
         configId: number;
