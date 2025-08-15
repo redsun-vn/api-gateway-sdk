@@ -30,6 +30,7 @@ export declare const ELASTIC_INDEX: {
     ADMIN_CRM_BUDGET_EXPENSE_INDEX_NAME: string;
     ADMIN_CRM_LEAD: string;
     ADMIN_CRM_LEAD_SCORING_CONFIG: string;
+    ADMIN_CRM_LEAD_SCORING_CONFIG_RULE: string;
     ADMIN_CRM_KPI_INDEX_NAME: string;
     ATTACHMENT: string;
     BANK_ACCOUNT: string;

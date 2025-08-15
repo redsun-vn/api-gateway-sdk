@@ -130,3 +130,16 @@ export declare enum CRMKPIPermission {
     DELETE = "crm-kpi:delete",
     MANAGE_HIERARCHY = "crm-kpi:manage-hierarchy"
 }
+export declare enum LEAD_SCORING_RULE_TYPE {
+    COMPANY_SIZE = "company_size",
+    BUDGET_RANGE = "budget_range"
+}
+export declare enum LEAD_SCORING_RULE_OPERATOR {
+    EQUALS = "equals",
+    GREATER_THAN = "greater_than",
+    GREATER_THAN_EQUALS = "greater_than_equals",
+    LESS_THAN = "less_than",
+    LESS_THAN_EQUALS = "less_than_equals",
+    BETWEEN = "between",
+    IN = "in"
+}

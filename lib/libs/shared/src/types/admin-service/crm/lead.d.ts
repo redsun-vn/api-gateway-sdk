@@ -102,11 +102,11 @@ export declare namespace ICRMLead {
         description?: string | null;
         status?: string | null;
         source?: string | null;
-        score_classification?: DEAL_CLASSIFICATION | string | null;
+        score_classification?: string | null;
         total_score: number | string | null;
-        priority?: DEAL_AVAILABLE_PRIORITIES | string | null;
+        priority?: string | null;
         company_size?: number | null;
-        decision_maker_level?: DECISION_MAKER_LEVEL | string | null;
+        decision_maker_level?: string | null;
         budget_range?: number | string | null;
         website_visits: number | string | null;
         content_downloads: number | string | null;

@@ -1,4 +1,5 @@
 import { AdminBaseResponse as BaseResponse } from '../../common.type';
+import { ICRMLeadScoringConfigRule } from './lead-scoring-config-rule';
 export declare namespace ICRMLeadScoringConfig {
     interface ISetDefault {
         industry: string;
@@ -109,6 +110,7 @@ export declare namespace ICRMLeadScoringConfig {
         classificationThresholds: IClassificationThresholds;
         assignmentWeights: IAssignmentWeights;
         version: number;
+        rules?: ICRMLeadScoringConfigRule.IResponse[];
     }
     interface IGetActiveConfig {
         industry: string;

@@ -17,11 +17,11 @@ export declare namespace ICRMTeam {
     }
     interface IResponse extends BaseResponse {
         name: string;
-        sequence?: number | string;
-        description?: string;
+        sequence?: number | string | null;
+        description?: string | null;
         active: boolean;
         team_leader_id?: number | string | null;
-        team_members?: string[];
+        team_members?: string[] | null;
         country?: string | null;
         province?: string | null;
         ward?: string | null;

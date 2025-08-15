@@ -4,6 +4,7 @@ export * as budgets_stats from "./budgets_stats";
 export * as deals from "./deals";
 export * as event from "./event";
 export * as leads_analytics from "./leads_analytics";
+export * as lead_scoring_config_rules from "./lead_scoring_config_rules";
 export * as lead_scoring_configs from "./lead_scoring_configs";
 export * as leads from "./leads";
 export * as quotes from "./quotes";
