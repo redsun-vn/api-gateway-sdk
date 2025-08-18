@@ -62,13 +62,13 @@ export declare namespace IReceipt {
         subscription_id?: number;
     }
     interface IResponse extends BaseResponse {
-        shop_id: string;
+        shop_id: string | number;
         package_id: string | number | null;
-        priority: string & RECEIPT_PRIORITY_ENUM;
-        receiptType: string & RECEIPT_TYPE_ENUM;
-        paymentStatus: string & RECEIPT_PAYMENT_STATUS_ENUM;
-        paymentMethod: string & RECEIPT_PAYMENT_METHOD_ENUM;
-        processingStatus: string & RECEIPT_PROCESSING_STATUS_ENUM;
+        priority?: (string & RECEIPT_PRIORITY_ENUM) | null;
+        receiptType?: (string & RECEIPT_TYPE_ENUM) | null;
+        paymentStatus?: (string & RECEIPT_PAYMENT_STATUS_ENUM) | null;
+        paymentMethod?: (string & RECEIPT_PAYMENT_METHOD_ENUM) | null;
+        processingStatus?: (string & RECEIPT_PROCESSING_STATUS_ENUM) | null;
         crm_quote_id?: number | null;
         subscription_id: string | number | null;
         code: string;
