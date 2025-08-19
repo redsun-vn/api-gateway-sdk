@@ -85,7 +85,7 @@ export declare namespace IReceipt {
         paidAmount?: number | string | null;
         outstandingAmount?: number | string | null;
         refundedAmount?: number | string | null;
-        total: number | string | null;
+        total: number | string;
         taxTotal: number | string | null;
         taxPercentageTotal: number | string | null;
         taxTotalManual: number | string | null;
