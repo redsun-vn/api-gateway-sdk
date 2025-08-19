@@ -8,7 +8,8 @@ export declare namespace ICRMKPI {
         type: string & KPI_TYPE;
         period: string & KPI_PERIOD;
         unit?: string & KPI_UNIT;
-        targetValue: number;
+        targetValue?: number;
+        actualValue?: number;
         weight?: number;
         startDate: string;
         endDate: string;
@@ -43,7 +44,6 @@ export declare namespace ICRMKPI {
         notes?: string;
     }
     interface IResponse extends BaseResponse {
-        id: number | string;
         name: string;
         code?: string | null;
         description: string | null;
@@ -51,9 +51,9 @@ export declare namespace ICRMKPI {
         status: string & KPI_STATUS;
         period: string & KPI_PERIOD;
         unit: string & KPI_UNIT;
-        targetValue: number | string;
-        actualValue: number | string;
-        achievementRate: number | string;
+        targetValue: number | string | null;
+        actualValue: number | string | null;
+        achievementRate: number | string | null;
         weight: number | string;
         startDate: string | null;
         endDate: string | null;
@@ -65,8 +65,6 @@ export declare namespace ICRMKPI {
         user: any | null;
         parentKpi: any | null;
         childKpis?: any[] | null;
-        createdAt: string;
-        updatedAt: string;
     }
     interface IFilter {
         hierarchyLevel?: string;
