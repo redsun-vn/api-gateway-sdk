@@ -73,11 +73,11 @@ export declare namespace ICRMBudget {
         rejectedById?: number | string | null;
         rejectedDate?: string | null;
         rejectionReason?: string | null;
-        teamId?: number | null;
-        departmentId?: number | null;
-        ownerId?: number | null;
+        teamId?: number | string | null;
+        departmentId?: number | string | null;
+        ownerId?: number | string | null;
         approverId?: number | string | null;
-        stakeholderIds?: number[] | null;
+        stakeholderIds?: (number | string)[] | null;
         isActive: boolean;
         isRollover: boolean;
         autoApprove: boolean;
