@@ -1,5 +1,8 @@
 import { KPI_HIERARCHY_LEVEL, KPI_PERIOD, KPI_STATUS, KPI_TYPE, KPI_UNIT } from '../../../enum';
 import { BaseResponse } from '../../common.type';
+import { IAdminDepartment } from '../iadmin-department.type';
+import { IAdminUser } from '../iuser';
+import { ICRMTeam } from './team';
 export declare namespace ICRMKPI {
     interface ICreate {
         name: string;
@@ -17,6 +20,7 @@ export declare namespace ICRMKPI {
         parentKpiId?: number;
         teamId?: number;
         userId?: number;
+        departmentId?: number;
         roleRequired?: string;
         autoCalculate?: boolean;
         calculationFormula?: string;
@@ -58,13 +62,15 @@ export declare namespace ICRMKPI {
         startDate: string | null;
         endDate: string | null;
         hierarchyLevel: string & KPI_HIERARCHY_LEVEL;
-        parentKpiId: number | null;
-        teamId: number | null;
-        userId: number | null;
-        team: any | null;
-        user: any | null;
-        parentKpi: any | null;
-        childKpis?: any[] | null;
+        parentKpiId: number | string | null;
+        teamId: number | string | null;
+        userId: number | string | null;
+        departmentId: number | string | null;
+        team?: ICRMTeam.IResponse | null;
+        user?: IAdminUser.IResponse | null;
+        department?: IAdminDepartment.IResponse | null;
+        parentKpi?: ICRMKPI.IResponse | null;
+        childKpis?: ICRMKPI.IResponse[] | null;
     }
     interface IFilter {
         hierarchyLevel?: string;
