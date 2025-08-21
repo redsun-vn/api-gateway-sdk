@@ -100,7 +100,7 @@ export declare namespace IDrafOrder {
         sessionId: string;
         partnerId?: string;
     }
-    interface IUpdateCart extends Omit<Partial<ICreateDrafOrder>, 'branch_id' | 'staff_id'> {
+    interface IUpdateCart extends Omit<Partial<ICreateDrafOrder>, 'staff_id'> {
         cart_session_id: string;
     }
 }
