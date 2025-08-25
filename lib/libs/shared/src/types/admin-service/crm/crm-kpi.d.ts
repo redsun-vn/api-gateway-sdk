@@ -119,15 +119,15 @@ export declare namespace ICRMKPI {
         trends: ITrendData[];
     }
     interface ITopPerformer {
-        id: number;
+        id: number | string;
         name: string;
-        achievementRate: number;
-        targetValue: number;
-        actualValue: number;
+        achievementRate: number | string;
+        targetValue: number | string;
+        actualValue: number | string;
         hierarchyLevel: string;
-        userName?: string;
-        userEmail?: string;
-        teamName?: string;
+        userName?: string | null;
+        userEmail?: string | null;
+        teamName?: string | null;
     }
     interface IPerformanceDistribution {
         excellent: number;
