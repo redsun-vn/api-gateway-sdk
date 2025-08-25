@@ -40,6 +40,7 @@ export * as crm_kpis_stats from "./crm_kpis_stats";
 export * as crm_kpis_hierarchy from "./crm_kpis_hierarchy";
 export * as crm_kpis_analytics from "./crm_kpis_analytics";
 export * as crm_kpis_team_comparison from "./crm_kpis_team_comparison";
+export * as crm_kpis_export from "./crm_kpis_export";
 export * as customer from "./customer";
 export * as departments from "./departments";
 export * as device_category from "./device_category";

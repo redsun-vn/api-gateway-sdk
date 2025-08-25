@@ -11,6 +11,7 @@ export declare namespace ICRMTeam {
         country?: string;
         province?: string;
         ward?: string;
+        department_id?: number | string | null;
     }
     interface IUpdate extends ICreate {
         id: number | string;
@@ -25,5 +26,6 @@ export declare namespace ICRMTeam {
         country?: string | null;
         province?: string | null;
         ward?: string | null;
+        department_id?: number | string | null;
     }
 }

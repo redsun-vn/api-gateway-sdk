@@ -38,7 +38,7 @@ export declare namespace ICheckout {
         totalAmount: number | string;
         totalDiscount: number | string;
         totalTax: number | string;
-        note?: string;
+        note?: string | null;
         target?: string | null;
     }
 }

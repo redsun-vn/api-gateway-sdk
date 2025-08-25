@@ -185,4 +185,67 @@ export declare namespace ICRMKPI {
         formula: string;
         dependencies: number[];
     }
+    interface IQueryExportKPI {
+        filters: string;
+        format?: string;
+    }
+    interface IKPIExportExcelResponse {
+        filename: string;
+        buffer: {
+            type: 'Buffer';
+            data: any;
+        };
+        contentType: string;
+    }
+    interface IKPIExportDataResponse {
+        summary: IKPISummaries;
+        kpis: ICRMKPI.IResponse[];
+        hierarchyPerformance: ICRMKPI.IHierarchyResponse[];
+        scoreAnalysis: ICRMKPI.IScoreAnalysisResponse;
+        totalScore: number;
+        maxTotalScore: number;
+    }
+    interface IScoreAnalysisResponse {
+        excellent: {
+            count: number;
+            percentage: number;
+            avgScore: number;
+            totalScore: number;
+        };
+        good: {
+            count: number;
+            percentage: number;
+            avgScore: number;
+            totalScore: number;
+        };
+        average: {
+            count: number;
+            percentage: number;
+            avgScore: number;
+            totalScore: number;
+        };
+        belowAverage: {
+            count: number;
+            percentage: number;
+            avgScore: number;
+            totalScore: number;
+        };
+        poor: {
+            count: number;
+            percentage: number;
+            avgScore: number;
+            totalScore: number;
+        };
+    }
+    interface IKPISummaries {
+        totalKPIs: number;
+        period: string;
+        activeKPIs: number;
+        averageAchievementRate: number;
+        onTrackKPIs: number;
+        atRiskKPIs: number;
+        overdueKPIs: number;
+        generatedAt: Date | string;
+        hierarchyLevel: string;
+    }
 }
