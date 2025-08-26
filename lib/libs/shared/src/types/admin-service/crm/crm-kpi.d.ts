@@ -16,6 +16,9 @@ export declare namespace ICRMKPI {
         weight?: number;
         startDate: string;
         endDate: string;
+        fiscalYear?: number;
+        fiscalQuarter?: number;
+        fiscalMonth?: number;
         hierarchyLevel: string & KPI_HIERARCHY_LEVEL;
         parentKpiId?: number;
         teamId?: number;
@@ -95,6 +98,8 @@ export declare namespace ICRMKPI {
         fiscalYear?: number;
         fiscalQuarter?: number;
         fiscalMonth?: number;
+        startDate?: string;
+        endDate?: string;
     }
     interface IHierarchyResponse {
         id: number | string;
@@ -260,5 +265,20 @@ export declare namespace ICRMKPI {
         overdueKPIs: number;
         generatedAt: Date | string;
         hierarchyLevel: string;
+    }
+    interface IMonthlyProgress {
+        year: number;
+        month: number;
+        completionPercentage: number;
+        totalKPIs: number;
+        completedKPIs: number;
+        activeKPIs: number;
+        approvedKPIs: number;
+        averageAchievementRate: number;
+        totalTargetValue: number;
+        totalActualValue: number;
+    }
+    interface IMonthlyProgressResponse {
+        monthlyData: IMonthlyProgress[];
     }
 }
