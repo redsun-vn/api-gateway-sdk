@@ -169,14 +169,14 @@ export declare namespace ICRMKPI {
         totalProcessed: number;
     }
     interface ITeamComparison {
-        teamId: number;
+        teamId: number | string;
         teamName: string;
         avgAchievementRate: number;
-        totalActual: number;
-        totalTarget: number;
-        totalKPIs: number;
-        efficiency: number;
-        ranking: number;
+        totalActual: number | string;
+        totalTarget: number | string;
+        totalKPIs: number | string;
+        efficiency: number | string;
+        ranking: number | string;
     }
     interface IExportResult {
         filename: string;
