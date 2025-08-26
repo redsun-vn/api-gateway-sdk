@@ -61,7 +61,15 @@ export declare namespace ICRMKPI {
         weight: number | string;
         startDate: string | null;
         endDate: string | null;
+        warningThreshold: number | string | null;
+        criticalThreshold: number | string | null;
         hierarchyLevel: string & KPI_HIERARCHY_LEVEL;
+        calculationFormula?: string | null;
+        autoCalculate: boolean;
+        dataSource?: string | null;
+        fiscalYear: number | string | null;
+        fiscalQuarter: number | string | null;
+        fiscalMonth: number | string | null;
         parentKpiId: number | string | null;
         teamId: number | string | null;
         userId: number | string | null;
@@ -71,6 +79,11 @@ export declare namespace ICRMKPI {
         department?: IAdminDepartment.IResponse | null;
         parentKpi?: ICRMKPI.IResponse | null;
         childKpis?: ICRMKPI.IResponse[] | null;
+        approvedById?: number | string | null;
+        approvedDate?: string | null;
+        approvalNote?: string | null;
+        tags?: string[] | null;
+        notes: string | null;
     }
     interface IFilter {
         hierarchyLevel?: string;
