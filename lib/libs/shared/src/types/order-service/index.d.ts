@@ -12,3 +12,4 @@ export * from './ikds-item.type';
 export * from './isale-order';
 export * from './isubscription.type';
 export * from './ishipping-fee-config.type';
+export * from './imisa-invoice.type';

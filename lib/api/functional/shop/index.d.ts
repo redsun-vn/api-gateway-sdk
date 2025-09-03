@@ -1,6 +1,7 @@
 export * as comment from "./comment";
 export * as comments from "./comments";
 export * as order from "./order";
+export * as e_invoice from "./e_invoice";
 export * as orders from "./orders";
 export * as sale_orders from "./sale_orders";
 export * as order_subscriptions from "./order_subscriptions";
