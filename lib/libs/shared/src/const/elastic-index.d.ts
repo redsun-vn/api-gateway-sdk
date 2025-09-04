@@ -133,6 +133,8 @@ export declare const ELASTIC_INDEX: {
     PROMOTION: string;
     PROMOTION_VOUCHER: string;
     PROMOTION_USAGE: string;
+    PRODUCT_HOUR_CONFIG_INDEX_NAME: string;
+    PRODUCT_HOUR_CONFIG_INDEX_TYPE: string;
     RECEIPT: string;
     RESERVATION: string;
     RESERVATION_FLOOR_PLAN: string;
