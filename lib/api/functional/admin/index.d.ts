@@ -57,6 +57,7 @@ export * as tickets from "./tickets";
 export * as translation from "./translation";
 export * as translation_key from "./translation_key";
 export * as users from "./users";
+export * as users_reset_password from "./users_reset_password";
 export * as utm_campaigns from "./utm_campaigns";
 export * as utm_links from "./utm_links";
 export * as utm_link_clicks from "./utm_link_clicks";

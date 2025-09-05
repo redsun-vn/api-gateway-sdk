@@ -64,6 +64,11 @@ export declare namespace IAdminUser {
         newPassword: string & tags.MinLength<6>;
         confirmPassword: string & tags.MinLength<6>;
     }
+    interface IResetPassword {
+        id: string;
+        newPassword: string & tags.MinLength<6>;
+        confirmPassword: string & tags.MinLength<6>;
+    }
     interface IResponse extends BaseResponse {
         name: string;
         groups?: null | IAdminGroup.IResponse[];
