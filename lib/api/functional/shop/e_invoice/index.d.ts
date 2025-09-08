@@ -4,6 +4,7 @@ import type { IMisaInvoice } from "../../../../libs/shared/src/types/order-servi
 export * as upsert from "./upsert";
 export * as cancel from "./cancel";
 export * as publish from "./publish";
+export * as print from "./print";
 export * as test_connection from "./test_connection";
 export declare function findOne(connection: IConnection, shopId: string): Promise<findOne.Output>;
 export declare namespace findOne {

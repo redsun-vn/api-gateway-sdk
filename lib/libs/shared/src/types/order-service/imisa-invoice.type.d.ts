@@ -184,4 +184,7 @@ export declare namespace IMisaInvoice {
         createdAt: Date | string;
         updatedAt: Date | string;
     }
+    interface IInvoicePrintParams {
+        isDev?: boolean;
+    }
 }

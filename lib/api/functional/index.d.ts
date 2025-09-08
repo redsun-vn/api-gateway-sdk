@@ -9,6 +9,7 @@ export * as order from "./order";
 export * as carts from "./carts";
 export * as shipping_fee_configs from "./shipping_fee_configs";
 export * as shipping_fees from "./shipping_fees";
+export * as e_invoice from "./e_invoice";
 export * as orders from "./orders";
 export * as sale_orders from "./sale_orders";
 export * as partners from "./partners";
