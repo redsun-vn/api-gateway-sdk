@@ -123,4 +123,10 @@ export declare namespace IAdminUser {
         identityCard?: string | null;
         startWorkDate?: string | null;
     }
+    interface IResponsePublic {
+        name: string;
+        email: string;
+        phone?: string | null;
+        code?: string | null;
+    }
 }
