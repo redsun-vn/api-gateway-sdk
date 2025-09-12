@@ -28,7 +28,7 @@ export declare namespace IPaymentCard {
         branch_id?: number | string | null;
         category_card_id?: number | string | null;
         payment_method_id: number | string;
-        staff_id: number | string;
+        staff_id?: number | string | null;
         partner_id?: number | string | null;
         target?: string | null;
         target_id?: number | string | null;
