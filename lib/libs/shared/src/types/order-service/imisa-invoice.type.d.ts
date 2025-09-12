@@ -142,6 +142,7 @@ export declare namespace IMisaInvoice {
     }
     interface IMisaShopConfig {
         shopId: number | string;
+        appId: string;
         username: string;
         password: string;
         companyTaxCode: string;
@@ -156,6 +157,7 @@ export declare namespace IMisaInvoice {
     interface IMisaShopConfigInput {
         username: string;
         password: string;
+        appId: string | null;
         companyTaxCode: string;
         invSeries: string;
         invoiceName: string;
