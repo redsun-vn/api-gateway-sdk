@@ -47,6 +47,7 @@ export declare namespace IProduct {
         isManageInventory?: boolean;
         isCalculatedByHour?: boolean;
         isRecurring?: boolean;
+        isWallet?: boolean;
     }
     interface ICreateProduct extends IReqCreateProduct {
         shop_id: number & tags.Type<'uint64'>;
@@ -76,6 +77,7 @@ export declare namespace IProduct {
         isManageInventory?: boolean;
         isCalculatedByHour?: boolean;
         isRecurring?: boolean;
+        isWallet?: boolean;
     }
     interface ITagReponse {
         id: string | number | null;
@@ -158,5 +160,6 @@ export declare namespace IProduct {
         productPackages?: IProductPackage.IDetailProductPackageResponse[] | null;
         isCalculatedByHour?: boolean;
         isRecurring?: boolean;
+        isWallet?: boolean;
     }
 }
