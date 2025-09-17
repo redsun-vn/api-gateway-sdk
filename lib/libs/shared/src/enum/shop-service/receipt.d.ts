@@ -24,7 +24,9 @@ export declare enum RECEIPT_LINE_ITEM_TYPE_ENUM {
     PACKAGE_ADDITION = "package_addition",
     APP_PLAN = "app_plan",
     STAFF_QUANTITY = "staff_quantity",
-    BRANCH_QUANTITY = "branch_quantity"
+    BRANCH_QUANTITY = "branch_quantity",
+    THEME = "theme",
+    DOMAIN = "domain"
 }
 export declare enum RECEIPT_PRIORITY_ENUM {
     URGENT = "urgent",
@@ -45,7 +47,8 @@ export declare enum RECEIPT_TYPE_ENUM {
     UPGRADE = "upgrade",
     ADDON = "addon",
     REFUND = "refund",
-    ADJUSTMENT = "adjustment"
+    ADJUSTMENT = "adjustment",
+    DIGITAL_PURCHASE = "digital_purchase"
 }
 export declare enum RECEIPT_PAYMENT_METHOD_ENUM {
     CREDIT_CARD = "credit_card",
@@ -64,3 +67,14 @@ export declare enum RECEIPT_PROCESSING_STATUS_ENUM {
     REJECTED = "rejected",
     COMPLETED = "completed"
 }
+export declare const RECEIPT_STATUS_WORKFLOW: {
+    BASIC_FLOW: RECEIPT_STATUS_ENUM[];
+    REFUND_FLOW: RECEIPT_STATUS_ENUM[];
+    FINAL_STATES: RECEIPT_STATUS_ENUM[];
+    PROCESSABLE_STATES: RECEIPT_STATUS_ENUM[];
+};
+export declare const RECEIPT_AUTO_TRANSITION_RULES: {
+    AUTO_EXPIRE_DAYS: number;
+    AUTO_PROCESS_ON_PAYMENT: boolean;
+    AUTO_COMPLETE_ON_FULL_PAYMENT: boolean;
+};
