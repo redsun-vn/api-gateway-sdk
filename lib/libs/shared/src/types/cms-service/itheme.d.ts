@@ -42,5 +42,6 @@ export declare namespace ITheme {
         tags?: IThemeTag.IResponse[] | null;
         imagePreviewId?: number | string | null;
         isDefault?: boolean;
+        parentId?: string | null;
     }
 }
