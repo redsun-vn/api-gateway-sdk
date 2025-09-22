@@ -1,0 +1,21 @@
+export * from './itheme-category';
+export * from './itheme';
+export * from './iwebsite';
+export * from './idocument';
+export * from './itemplate';
+export * from './cms.icategory';
+export * from './ipage';
+export * from './ipost';
+export * from './imenu';
+
+export const THEME_CATEGORY_ENTITY_NAME = 'CMSThemeCategoryEntity';
+export const THEME_ENTITY_NAME = 'CMSThemeEntity';
+export const THEME_TAG_ENTITY_NAME = 'CMSThemeTagEntity';
+export const WEBSITE_ENTITY_NAME = 'CMSWebsiteEntity';
+export const DOCUMENT_ENTITY_NAME = 'CMSDocumentEntity';
+export const TEMPLATE_ENTITY_NAME = 'CMSTemplateEntity';
+export const CMS_CATEGORY_ENTITY_NAME = 'CMSCategoryEntity';
+export const CMS_PAGE_ENTITY_NAME = 'CMSPageEntity';
+export const CMS_POST_ENTITY_NAME = 'CMSPostEntity';
+export const CMS_TAG_ENTITY_NAME = 'CMSTagEntity';
+export const CMS_MENU_ENTITY_NAME = 'CMSMenuEntity';

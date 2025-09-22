@@ -1,0 +1,17 @@
+import { BaseResponse } from '../common.type';
+/* eslint-disable @typescript-eslint/no-namespace */
+
+export namespace IOrderReconciliation {
+	export interface IResponse extends BaseResponse {
+		shop_id: number | string;
+		status: string;
+		admin_reconciliation_id: number | string | null;
+		shipping_method_id: number | string;
+		fulfillment_id: number | string;
+		shippingCode: string;
+		orderCode: string;
+		cod: number | string;
+		chargePrice: number | string;
+		fulfillmentShippingStatus: string;
+	}
+}
