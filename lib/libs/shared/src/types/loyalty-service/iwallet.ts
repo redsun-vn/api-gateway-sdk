@@ -4,9 +4,14 @@ import { BaseResponse } from '../common.type';
 
 export namespace IWallet {
 	export interface ICreate {
+		partner_id: string;
 		active?: boolean;
-		partner_id: string | number;
-		opt: string;
+	}
+
+	export interface ICreateFromAdminShop extends ICreate {}
+
+	export interface ICreateFromPOSShop extends ICreate {
+		otp: string;
 	}
 
 	export interface IUpdate {
@@ -17,10 +22,15 @@ export namespace IWallet {
 		partner_id: string;
 	}
 
+	export interface IPartner {
+		display_name?: string;
+	}
+
 	export interface IResponse extends BaseResponse {
 		active?: boolean | null;
 		shop_id?: string | number | null;
-		totalAmount: number;
+		totalAmount: string | number | null;
 		uuid: string;
+		partner: IPartner;
 	}
 }

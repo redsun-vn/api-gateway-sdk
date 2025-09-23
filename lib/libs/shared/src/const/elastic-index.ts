@@ -271,6 +271,7 @@ export const ELASTIC_INDEX = {
 	// W
 	WAREHOUSE: 'warehouse',
 	WALLET: 'wallet',
+	WALLET_TRANSACTION: 'wallet-transaction',
 
 	// V
 	VARIANT: 'variant',
