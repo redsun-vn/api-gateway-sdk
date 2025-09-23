@@ -189,6 +189,8 @@ export declare const ELASTIC_INDEX: {
     UNIT: string;
     USER_DEVICE: string;
     WAREHOUSE: string;
+    WALLET: string;
+    WALLET_TRANSACTION: string;
     VARIANT: string;
     VARIANT_PERIOD_PRICING: string;
 };

@@ -9,3 +9,5 @@ export * from './iloyalty-level';
 export * from './ipoint-partner';
 export * from './ipoint-transaction';
 export * from './iloyalty-config';
+export * from './iwallet';
+export * from './iwallet-transaction';

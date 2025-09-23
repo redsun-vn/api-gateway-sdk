@@ -1,6 +1,0 @@
-export enum ACTION {
-	CREATE = 'CREATE',
-	UPDATE = 'UPDATE',
-	DELETE = 'DELETE',
-	NONE = 'NONE',
-}
