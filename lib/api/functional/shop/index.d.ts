@@ -64,6 +64,8 @@ export * as loyalty_rules from "./loyalty_rules";
 export * as loyalty_sale_channels from "./loyalty_sale_channels";
 export * as point_partners from "./point_partners";
 export * as point_transactions from "./point_transactions";
+export * as wallets from "./wallets";
+export * as wallet from "./wallet";
 export * as reconciliation_payments from "./reconciliation_payments";
 export * as reconciliations from "./reconciliations";
 export * as reconciliation_transactions from "./reconciliation_transactions";
