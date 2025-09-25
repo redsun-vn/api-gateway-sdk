@@ -11,6 +11,8 @@ export declare namespace ITemplate {
         widthAuto?: boolean;
         isUserDefined?: boolean;
         group?: string;
+        thumbnail?: string | null;
+        thumbnailLabel?: string | null;
     }
     interface ICreate extends ICreateReq {
         shop_id?: (number & tags.Type<'uint64'>) | null;
@@ -21,6 +23,8 @@ export declare namespace ITemplate {
         width?: number;
         widthAuto?: boolean;
         group?: string;
+        thumbnail?: string | null;
+        thumbnailLabel?: string | null;
     }
     interface IUpdate extends IUpdateReq {
         id: string;
