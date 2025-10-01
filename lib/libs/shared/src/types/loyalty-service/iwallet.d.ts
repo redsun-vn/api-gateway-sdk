@@ -24,5 +24,6 @@ export declare namespace IWallet {
         totalAmount: string | number | null;
         uuid: string;
         partner: IPartner;
+        partner_id: string;
     }
 }

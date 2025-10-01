@@ -37,6 +37,7 @@ export declare namespace IFile {
         user_id: string;
         parent_id?: number | null;
         fileUpload: Express.Multer.File;
+        shop_id?: number | null;
     }
     interface IUpload extends IReqUpload {
         user_id: string;

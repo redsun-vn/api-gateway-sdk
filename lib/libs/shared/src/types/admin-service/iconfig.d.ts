@@ -13,6 +13,6 @@ export declare namespace IGlobalConfig {
         fieldKey: string;
         fieldValue?: string;
         fieldType?: string;
-        companyId?: string;
+        companyId?: string | null;
     }
 }
