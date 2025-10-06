@@ -1,19 +1,19 @@
 import { BaseResponse } from '../common.type';
 export declare namespace IWallet {
-    interface ICreate {
-        partner_id: string;
+    interface ICreateFromAdminShop {
         active?: boolean;
+        partner_id: string;
     }
-    interface ICreateFromAdminShop extends ICreate {
-    }
-    interface ICreateFromPOSShop extends ICreate {
+    interface ICreateFromPOSShop {
         otp: string;
+        partner_id: string;
     }
     interface IUpdate {
         active?: boolean;
     }
     interface ISendOTP {
         partner_id: string;
+        action: string;
     }
     interface IPartner {
         display_name?: string;

@@ -11,6 +11,7 @@ export * from './hr';
 export * from './table';
 export * from './regex';
 export * from './team';
+export * from './wallet';
 export declare const UNIT_TIME: string[];
 export declare const SHIPPING_PROVIDER_CONFIG_KEY: {
     GHN: string[];
