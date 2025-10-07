@@ -36,3 +36,9 @@ export declare enum ADMIN_USER_ROLE {
     SALES_USER = "sales_user",
     USER = "user"
 }
+export declare enum CATEGORY_BUSINESS_TYPE_ENUMS {
+    SALON = "salon",
+    FNB = "fnb",
+    HOTEL = "hotel",
+    RETAILS = "retails"
+}
