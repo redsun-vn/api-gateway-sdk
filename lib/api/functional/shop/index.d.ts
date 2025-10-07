@@ -67,7 +67,7 @@ export * as point_partners from "./point_partners";
 export * as point_transactions from "./point_transactions";
 export * as wallet_transactions from "./wallet_transactions";
 export * as wallets from "./wallets";
-export * as pos from "./pos";
+export * as bo from "./bo";
 export * as reconciliation_payments from "./reconciliation_payments";
 export * as reconciliations from "./reconciliations";
 export * as reconciliation_transactions from "./reconciliation_transactions";

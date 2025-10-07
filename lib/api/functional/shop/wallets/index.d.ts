@@ -3,7 +3,7 @@ import type { IResponse, IQuery, IResponsePagination } from "../../../../libs/sh
 import type { IWallet } from "../../../../libs/shared/src/types/loyalty-service/iwallet";
 export declare function create(connection: IConnection, data: create.Input): Promise<create.Output>;
 export declare namespace create {
-    type Input = Resolved<IWallet.ICreateFromAdminShop>;
+    type Input = Resolved<IWallet.ICreateFromPOSShop>;
     type Output = Primitive<IResponse<IWallet.IResponse>>;
     const METADATA: {
         readonly method: "POST";
