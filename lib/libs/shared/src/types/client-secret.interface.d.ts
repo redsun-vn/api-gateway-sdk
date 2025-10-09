@@ -46,3 +46,10 @@ export interface IUserFromToken {
     given_name?: string;
     family_name?: string;
 }
+export interface ICustomerSendContact {
+    subject?: string;
+    name: string;
+    email?: string & tags.Format<'email'>;
+    phone?: string;
+    content: string;
+}
