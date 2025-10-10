@@ -1,5 +1,6 @@
 import { tags } from 'typia';
 import { BaseResponse } from './common.type';
+import { E_INVOICE_PROVIDER_ENUM } from '../enum';
 export declare namespace IShopConfig {
     interface ICreate {
         displayName?: string;
@@ -35,6 +36,10 @@ export declare namespace IShopConfig {
         attendanceEnabled?: boolean;
         productPriceByHourEnabled?: boolean;
         productPriceBlockTime?: number & tags.Type<'uint32'>;
+        eInvoiceProvider?: {
+            name: E_INVOICE_PROVIDER_ENUM;
+            enabled: boolean;
+        } | null;
     }
     interface IUpdate extends Partial<ICreate> {
     }
@@ -73,5 +78,9 @@ export declare namespace IShopConfig {
         attendanceEnabled?: boolean;
         productPriceByHourEnabled?: boolean;
         productPriceBlockTime?: number | string | null;
+        eInvoiceProvider?: {
+            name: E_INVOICE_PROVIDER_ENUM;
+            enabled: boolean;
+        } | null;
     }
 }
