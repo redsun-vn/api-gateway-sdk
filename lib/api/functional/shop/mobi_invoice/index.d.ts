@@ -4,6 +4,7 @@ import type { IMobiInvoice } from "../../../../libs/shared/src/types/order-servi
 export * as upsert from "./upsert";
 export * as cancel from "./cancel";
 export * as publish from "./publish";
+export * as publish_with_signature from "./publish_with_signature";
 export * as print from "./print";
 export * as download from "./download";
 export * as templates from "./templates";

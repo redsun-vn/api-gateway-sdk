@@ -1,6 +1,7 @@
 import { tags } from 'typia';
 import { SEOBaseResponse, SEOBase } from '../common.type';
 import { IThemeCategory, IThemeTag } from './itheme-category';
+import { THEME_REVIEW_STATUS } from '../../enum';
 export declare namespace ITheme {
     interface ICreateReq extends SEOBase {
         name: string;
@@ -13,6 +14,9 @@ export declare namespace ITheme {
         tags?: string[];
         imagePreviewId?: number | string;
         isDefault?: boolean;
+        description?: string | null;
+        content?: string | null;
+        config?: Record<string, any> | null;
     }
     interface ICreate extends ICreateReq {
         shop_id?: (number & tags.Type<'uint64'>) | null;
@@ -28,6 +32,8 @@ export declare namespace ITheme {
     }
     interface IUpdate extends IUpdateReq {
         id: string;
+        reviewStatus?: string & THEME_REVIEW_STATUS;
+        reviewById?: number & tags.Type<'uint64'>;
     }
     interface IResponse extends SEOBaseResponse {
         shop_id?: number | string | null;
@@ -43,5 +49,10 @@ export declare namespace ITheme {
         imagePreviewId?: number | string | null;
         isDefault?: boolean;
         parentId?: string | null;
+        reviewStatus?: string & THEME_REVIEW_STATUS;
+        description?: string | null;
+        content?: string | null;
+        config?: Record<string, any> | null;
+        reviewById?: number & tags.Type<'uint64'>;
     }
 }
