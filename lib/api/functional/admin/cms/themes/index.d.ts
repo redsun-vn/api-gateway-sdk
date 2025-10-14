@@ -104,3 +104,22 @@ export declare namespace duplicate {
     };
     const path: () => string;
 }
+export declare function review(connection: IConnection, data: review.Input): Promise<review.Output>;
+export declare namespace review {
+    type Input = Resolved<ITheme.IReview>;
+    type Output = Primitive<IResponse<ITheme.IResponse>>;
+    const METADATA: {
+        readonly method: "POST";
+        readonly path: "/admin/cms/themes/review";
+        readonly request: {
+            readonly type: "application/json";
+            readonly encrypted: false;
+        };
+        readonly response: {
+            readonly type: "application/json";
+            readonly encrypted: false;
+        };
+        readonly status: 201;
+    };
+    const path: () => string;
+}

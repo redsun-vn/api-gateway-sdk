@@ -38,6 +38,11 @@ export declare namespace ITheme {
     interface IDuplicateSystemReq {
         theme_id: string & tags.Format<'uuid'>;
     }
+    interface IReview {
+        id: string;
+        reviewStatus: string & THEME_REVIEW_STATUS;
+        reviewById: number & tags.Type<'uint64'>;
+    }
     interface IResponse extends SEOBaseResponse {
         shop_id?: number | string | null;
         name: string;
@@ -52,10 +57,10 @@ export declare namespace ITheme {
         imagePreviewId?: number | string | null;
         isDefault?: boolean;
         parentId?: string | null;
-        reviewStatus?: string & THEME_REVIEW_STATUS;
+        reviewStatus?: string | null;
         description?: string | null;
         content?: string | null;
         config?: Record<string, any> | null;
-        reviewById?: number & tags.Type<'uint64'>;
+        reviewById?: number | string | null;
     }
 }
