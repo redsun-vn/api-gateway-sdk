@@ -87,7 +87,7 @@ export declare namespace update {
 }
 export declare function duplicate(connection: IConnection, data: duplicate.Input): Promise<duplicate.Output>;
 export declare namespace duplicate {
-    type Input = Resolved<ITheme.IDuplicateReq>;
+    type Input = Resolved<ITheme.IDuplicateSystemReq>;
     type Output = Primitive<IResponse<ITheme.IResponse>>;
     const METADATA: {
         readonly method: "POST";

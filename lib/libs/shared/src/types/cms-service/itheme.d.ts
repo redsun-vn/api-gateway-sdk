@@ -35,6 +35,9 @@ export declare namespace ITheme {
         reviewStatus?: string & THEME_REVIEW_STATUS;
         reviewById?: number & tags.Type<'uint64'>;
     }
+    interface IDuplicateSystemReq {
+        theme_id: string & tags.Format<'uuid'>;
+    }
     interface IResponse extends SEOBaseResponse {
         shop_id?: number | string | null;
         name: string;
