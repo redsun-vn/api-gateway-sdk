@@ -4,3 +4,9 @@ export declare enum FileStatus {
     UPLOADED = "uploaded",
     FAILED = "failed"
 }
+export declare enum FileSpaceType {
+    PERSONAL = "personal",
+    SHOP = "shop",
+    COMPANY = "company",
+    SHARED = "shared"
+}

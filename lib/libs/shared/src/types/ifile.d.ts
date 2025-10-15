@@ -1,6 +1,6 @@
 /// <reference types="node" />
 /// <reference types="multer" />
-import { FileStatus } from '../const';
+import { FileSpaceType, FileStatus } from '../const';
 import { BaseResponse } from './common.type';
 export declare namespace IFile {
     interface File {
@@ -31,6 +31,7 @@ export declare namespace IFile {
     interface IReqUpload {
         branch_id?: number | null;
         parent_id?: number | null;
+        space_id?: number | null;
         fileUpload: Express.Multer.File;
     }
     interface IAdminReqUpload {
@@ -58,6 +59,7 @@ export declare namespace IFile {
     }
     interface IUploadToService extends IFile.IBase {
         parent_id?: string | number | null;
+        space_id?: string | number | null;
         buffer: ArrayBuffer;
     }
     interface IResponse extends IFile.IBase, BaseResponse {
@@ -84,4 +86,36 @@ export interface EditorJsUploadInput {
     shop_id: number;
     user_id: string;
     branch_id?: number;
+}
+export declare namespace ISpace {
+    interface IBase {
+        type?: FileSpaceType;
+        name?: string;
+        description?: string | null;
+        owner_id?: string;
+        shop_id?: number | null;
+        parent_id?: number | null;
+        storage_limit?: number | null;
+        storage_used?: number | null;
+        is_active?: boolean | null;
+        is_limited?: boolean | null;
+    }
+    interface ICreate extends IBase {
+        type?: FileSpaceType;
+    }
+    interface IUpdate extends Partial<ICreate> {
+        id: number;
+    }
+    interface IResponse extends BaseResponse {
+        type: FileSpaceType;
+        name: string;
+        description?: string | null;
+        owner_id: string;
+        shop_id: number | null;
+        parent_id?: number | null;
+        storage_limit?: number | null;
+        storage_used?: number | null;
+        is_active?: boolean;
+        is_limited?: boolean;
+    }
 }
