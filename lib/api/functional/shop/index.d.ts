@@ -1,6 +1,7 @@
 export * as comment from "./comment";
 export * as comments from "./comments";
 export * as order from "./order";
+export * as e_invoice from "./e_invoice";
 export * as misa_invoice from "./misa_invoice";
 export * as mobi_invoice from "./mobi_invoice";
 export * as wallet from "./wallet";
