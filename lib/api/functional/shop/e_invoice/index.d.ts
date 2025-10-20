@@ -36,3 +36,18 @@ export declare namespace deactive {
     };
     const path: (shopId: string, provider: IEInvoice.INVOICE_PROVIDER_ENUM) => string;
 }
+export declare function findAll(connection: IConnection, shopId: string): Promise<findAll.Output>;
+export declare namespace findAll {
+    type Output = Primitive<IResponse<Array<IFptInvoice.IEInvoiceConfigResponse>>>;
+    const METADATA: {
+        readonly method: "GET";
+        readonly path: "/shop/e-invoice/:shopId";
+        readonly request: null;
+        readonly response: {
+            readonly type: "application/json";
+            readonly encrypted: false;
+        };
+        readonly status: 200;
+    };
+    const path: (shopId: string) => string;
+}
