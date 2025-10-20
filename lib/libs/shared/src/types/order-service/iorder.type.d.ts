@@ -18,7 +18,7 @@ export declare namespace IOrder {
         shipping_address_id?: number & tags.Type<'uint64'>;
         shipping_method_id?: number & tags.Type<'uint64'>;
         draf_order_id?: number & tags.Type<'uint64'>;
-        partner_id?: string & tags.Format<'uuid'>;
+        partner_id?: (string & tags.Format<'uuid'>) | null;
         warehouse_id?: number & tags.Type<'uint64'>;
         currencyCode?: string | null;
         email?: string | null;

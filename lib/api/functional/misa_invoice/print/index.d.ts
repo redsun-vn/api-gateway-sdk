@@ -7,7 +7,7 @@ export declare namespace printInvoice {
     type Output = Primitive<IResponse<any>>;
     const METADATA: {
         readonly method: "GET";
-        readonly path: "/e-invoice/:orderId/print";
+        readonly path: "/misa-invoice/:orderId/print";
         readonly request: null;
         readonly response: {
             readonly type: "application/json";
