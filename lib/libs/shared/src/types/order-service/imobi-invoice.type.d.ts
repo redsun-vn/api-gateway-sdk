@@ -43,7 +43,7 @@ export declare namespace IMobiInvoice {
     }
     interface IPublishRequest {
         templateId: string;
-        taxCode: string;
+        taxCode?: string;
         address?: string;
         sendEmail?: boolean;
         receiverEmail?: string;
