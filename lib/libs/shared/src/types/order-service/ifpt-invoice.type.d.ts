@@ -1,4 +1,4 @@
-import { IEInvoice } from './ie-invoice.type';
+import { E_INVOICE_PROVIDER_ENUM } from '../../enum';
 export declare namespace IFptInvoice {
     interface IFptShopConfig {
         target: string;
@@ -8,7 +8,7 @@ export declare namespace IFptInvoice {
         timeout?: number;
         autoPublishEnabled?: boolean;
         isActive?: boolean;
-        provider?: IEInvoice.INVOICE_PROVIDER_ENUM;
+        provider?: E_INVOICE_PROVIDER_ENUM;
         companyTaxCode: string;
     }
     interface IFptShopConfigInput {
@@ -26,7 +26,7 @@ export declare namespace IFptInvoice {
         targetId: number | string;
         username: string;
         password: string;
-        provider: IEInvoice.INVOICE_PROVIDER_ENUM;
+        provider: E_INVOICE_PROVIDER_ENUM;
         timeout?: number;
         autoPublishEnabled?: boolean;
         isActive?: boolean;

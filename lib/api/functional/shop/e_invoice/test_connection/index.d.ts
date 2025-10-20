@@ -1,7 +1,7 @@
 import type { IConnection, Primitive } from "@nestia/fetcher";
+import type { E_INVOICE_PROVIDER_ENUM } from "../../../../../libs/shared/src/enum/shop-service/index";
 import type { IResponse } from "../../../../../libs/shared/src/types/common.type";
-import type { IEInvoice } from "../../../../../libs/shared/src/types/order-service/ie-invoice.type";
-export declare function testConnection(connection: IConnection, provider: IEInvoice.INVOICE_PROVIDER_ENUM, shopId: string): Promise<testConnection.Output>;
+export declare function testConnection(connection: IConnection, provider: E_INVOICE_PROVIDER_ENUM, shopId: string): Promise<testConnection.Output>;
 export declare namespace testConnection {
     type Output = Primitive<IResponse<any>>;
     const METADATA: {
@@ -14,5 +14,5 @@ export declare namespace testConnection {
         };
         readonly status: 200;
     };
-    const path: (provider: IEInvoice.INVOICE_PROVIDER_ENUM, shopId: string) => string;
+    const path: (provider: E_INVOICE_PROVIDER_ENUM, shopId: string) => string;
 }

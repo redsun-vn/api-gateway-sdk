@@ -1,14 +1,14 @@
-import type { IConnection, Primitive } from "@nestia/fetcher";
-import type { IResponse } from "../../../../libs/shared/src/types/common.type";
+import type { IConnection, Primitive, Resolved } from "@nestia/fetcher";
+import type { E_INVOICE_PROVIDER_ENUM } from "../../../../libs/shared/src/enum/shop-service/index";
+import type { IResponse, IQuery, IResponsePagination } from "../../../../libs/shared/src/types/common.type";
 import type { IEInvoice } from "../../../../libs/shared/src/types/order-service/ie-invoice.type";
-import type { IFptInvoice } from "../../../../libs/shared/src/types/order-service/ifpt-invoice.type";
 export * as publish_with_signature from "./publish_with_signature";
 export * as download from "./download";
 export * as test_connection from "./test_connection";
 export * as upsert from "./upsert";
-export declare function findOne(connection: IConnection, shopId: string, provider: IEInvoice.INVOICE_PROVIDER_ENUM): Promise<findOne.Output>;
+export declare function findOne(connection: IConnection, shopId: string, provider: E_INVOICE_PROVIDER_ENUM): Promise<findOne.Output>;
 export declare namespace findOne {
-    type Output = Primitive<IResponse<IFptInvoice.IEInvoiceConfigResponse>>;
+    type Output = Primitive<IResponse<IEInvoice.IEInvoiceConfigResponse>>;
     const METADATA: {
         readonly method: "GET";
         readonly path: "/shop/e-invoice/:provider/:shopId";
@@ -19,11 +19,11 @@ export declare namespace findOne {
         };
         readonly status: 200;
     };
-    const path: (shopId: string, provider: IEInvoice.INVOICE_PROVIDER_ENUM) => string;
+    const path: (shopId: string, provider: E_INVOICE_PROVIDER_ENUM) => string;
 }
-export declare function deactive(connection: IConnection, shopId: string, provider: IEInvoice.INVOICE_PROVIDER_ENUM): Promise<deactive.Output>;
+export declare function deactive(connection: IConnection, shopId: string, provider: E_INVOICE_PROVIDER_ENUM): Promise<deactive.Output>;
 export declare namespace deactive {
-    type Output = Primitive<IResponse<any>>;
+    type Output = Primitive<IResponse<false | true>>;
     const METADATA: {
         readonly method: "DELETE";
         readonly path: "/shop/e-invoice/:provider/:shopId/deactive";
@@ -34,11 +34,12 @@ export declare namespace deactive {
         };
         readonly status: 200;
     };
-    const path: (shopId: string, provider: IEInvoice.INVOICE_PROVIDER_ENUM) => string;
+    const path: (shopId: string, provider: E_INVOICE_PROVIDER_ENUM) => string;
 }
-export declare function findAll(connection: IConnection, shopId: string): Promise<findAll.Output>;
+export declare function findAll(connection: IConnection, shopId: string, query: findAll.Query): Promise<findAll.Output>;
 export declare namespace findAll {
-    type Output = Primitive<IResponse<Array<IFptInvoice.IEInvoiceConfigResponse>>>;
+    type Query = Resolved<IQuery>;
+    type Output = Primitive<IResponse<IResponsePagination<IEInvoice.IEInvoiceConfigResponse>>>;
     const METADATA: {
         readonly method: "GET";
         readonly path: "/shop/e-invoice/:shopId";
@@ -49,5 +50,5 @@ export declare namespace findAll {
         };
         readonly status: 200;
     };
-    const path: (shopId: string) => string;
+    const path: (shopId: string, query: findAll.Query) => string;
 }
