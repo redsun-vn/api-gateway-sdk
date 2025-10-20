@@ -1,10 +1,8 @@
-import type { IConnection, Resolved, Primitive } from "@nestia/fetcher";
-import type { IResponse } from "../../../../libs/shared/src/types/common.type";
+import type { IConnection, Resolved } from "@nestia/fetcher";
 import type { IMisaInvoice } from "../../../../libs/shared/src/types/order-service/imisa-invoice.type";
-export declare function downloadInvoice(connection: IConnection, orderId: string, params: downloadInvoice.Query): Promise<downloadInvoice.Output>;
+export declare function downloadInvoice(connection: IConnection, orderId: string, params: downloadInvoice.Query): Promise<void>;
 export declare namespace downloadInvoice {
     type Query = Resolved<IMisaInvoice.IInvoicePrintParams>;
-    type Output = Primitive<IResponse<any>>;
     const METADATA: {
         readonly method: "GET";
         readonly path: "/e-invoice/:orderId/download";
