@@ -16,6 +16,7 @@ export declare namespace IEInvoice {
         defaultExchangeRate?: number | string;
     }
     interface IEInvoiceConfigResponse {
+        id: number | string;
         target: string;
         targetId: string;
         username: string;
