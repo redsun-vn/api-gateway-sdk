@@ -1,7 +1,6 @@
 import { E_INVOICE_PROVIDER_ENUM } from '../../enum';
 export declare namespace IEInvoice {
     interface IEInvoiceConfigRequest {
-        shopId: number | string;
         username: string;
         password: string;
         provider: E_INVOICE_PROVIDER_ENUM;
