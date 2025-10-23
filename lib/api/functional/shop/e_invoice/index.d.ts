@@ -27,7 +27,22 @@ export declare namespace findOne {
     type Output = Primitive<IResponse<IEInvoice.IEInvoiceConfigResponse>>;
     const METADATA: {
         readonly method: "GET";
-        readonly path: "/shop/e-invoice/:provider/:shopId";
+        readonly path: "/shop/e-invoice/:shopId/:provider";
+        readonly request: null;
+        readonly response: {
+            readonly type: "application/json";
+            readonly encrypted: false;
+        };
+        readonly status: 200;
+    };
+    const path: (shopId: string, provider: E_INVOICE_PROVIDER_ENUM) => string;
+}
+export declare function $delete(connection: IConnection, shopId: string, provider: E_INVOICE_PROVIDER_ENUM): Promise<$delete.Output>;
+export declare namespace $delete {
+    type Output = Primitive<IResponse<false | true>>;
+    const METADATA: {
+        readonly method: "DELETE";
+        readonly path: "/shop/e-invoice/:shopId/:provider";
         readonly request: null;
         readonly response: {
             readonly type: "application/json";
