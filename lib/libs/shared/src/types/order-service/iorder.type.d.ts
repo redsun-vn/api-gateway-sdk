@@ -150,7 +150,7 @@ export declare namespace IOrder {
         debtPaidAt?: Date | string | null;
         isEInvoice?: boolean;
     }
-    interface IDetailOrderPublicResponse extends Omit<IDetailOrderResponse, 'draf_order_id' | 'shift_id' | 'idempotency_key' | 'subTotal' | 'taxTotal' | 'originTotal' | 'shippingTotal' | 'refundable' | 'refundedTotal' | 'returnedTotal' | 'customerAcceptMarketing' | 'clientIp' | 'discountCode' | 'drafOrder' | 'combiningPromotions'> {
+    interface IDetailOrderPublicResponse extends Omit<IDetailOrderResponse, 'draf_order_id' | 'shift_id' | 'idempotency_key' | 'originTotal' | 'shippingTotal' | 'refundable' | 'refundedTotal' | 'returnedTotal' | 'customerAcceptMarketing' | 'clientIp' | 'discountCode' | 'drafOrder' | 'combiningPromotions'> {
         lineItems?: ILineItem.IDetailLineItemPublicResponse[] | null;
     }
 }
