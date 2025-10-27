@@ -110,11 +110,11 @@ export declare namespace ISpace {
         type: FileSpaceType;
         name: string;
         description?: string | null;
-        owner_id: string;
-        shop_id: number | null;
-        parent_id?: number | null;
-        storage_limit?: number | null;
-        storage_used?: number | null;
+        owner_id: string | number | null;
+        shop_id: number | string | null;
+        parent_id?: number | string | null;
+        storage_limit?: number | string | null;
+        storage_used?: number | string | null;
         is_active?: boolean;
         is_limited?: boolean;
     }

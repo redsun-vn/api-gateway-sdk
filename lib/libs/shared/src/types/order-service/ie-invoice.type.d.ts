@@ -28,6 +28,10 @@ export declare namespace IEInvoice {
         defaultExchangeRate?: number | string;
         companyCode?: string;
         templateId?: string;
+        clientId?: string;
+        clientSecret?: string;
+        invoiceSymbolMTT?: string;
+        invoiceSymbolGTGT?: string;
     }
     interface IPublishRequest {
         templateId?: string;
