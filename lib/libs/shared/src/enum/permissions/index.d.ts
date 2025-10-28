@@ -20,3 +20,4 @@ export * from './cms';
 export * from './receipt';
 export * from './salary';
 export * from './wallet';
+export * from './e-invoice';

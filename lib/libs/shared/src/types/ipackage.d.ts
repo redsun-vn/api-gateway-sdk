@@ -38,7 +38,7 @@ export declare namespace IPackage {
         name: string;
         code?: string | null;
         business_ids?: string[] | null;
-        sale_channel_ids?: string | number | null;
+        sale_channel_ids?: string[] | null;
         category_business_id?: string | number | null;
         active: boolean;
         description?: string | null;
