@@ -14,6 +14,8 @@ export declare namespace IPackageAddition {
         freeValue?: number;
         freePrice?: number;
         freeUnit?: string & PACKAGE_ADDITION_TARGET_ENUM;
+        storageLimit?: number | string | null;
+        isLimited?: boolean | null;
     }
     interface IUpdate extends Partial<ICreate> {
     }
@@ -30,5 +32,7 @@ export declare namespace IPackageAddition {
         freeValue?: number | null;
         freePrice?: number | string | null;
         freeUnit?: (string & PACKAGE_ADDITION_TARGET_ENUM) | null;
+        storageLimit?: number | string | null;
+        isLimited?: boolean | null;
     }
 }
