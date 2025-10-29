@@ -4,7 +4,7 @@ import type { IEInvoice } from "../../../../../libs/shared/src/types/order-servi
 export declare function testConnection(connection: IConnection, data: testConnection.Input): Promise<testConnection.Output>;
 export declare namespace testConnection {
     type Input = Resolved<IEInvoice.IEInvoiceTestConnectionInput>;
-    type Output = Primitive<IResponse<any>>;
+    type Output = Primitive<IResponse<false | true>>;
     const METADATA: {
         readonly method: "POST";
         readonly path: "/shop/e-invoice/test-connection";
