@@ -74,4 +74,12 @@ export declare namespace IEInvoice {
         value: string;
         id: string;
     }
+    interface IEInvoiceTestConnectionInput {
+        provider: E_INVOICE_PROVIDER_ENUM;
+        username: string;
+        password: string;
+        isEncryptUsername: boolean;
+        isEncryptPassword: boolean;
+        [key: string]: any;
+    }
 }

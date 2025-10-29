@@ -7,6 +7,7 @@ export * as download from "./download";
 export * as upsert from "./upsert";
 export * as invoice_templates from "./invoice_templates";
 export * as publish from "./publish";
+export * as test_connection from "./test_connection";
 export declare function findAll(connection: IConnection, shopId: string, query: findAll.Query): Promise<findAll.Output>;
 export declare namespace findAll {
     type Query = Resolved<IQuery>;
