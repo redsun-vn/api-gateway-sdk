@@ -15,6 +15,7 @@ export * from './hr';
 export * from './shop-service';
 export * from './admin-service';
 export * from './cms';
+export * from './seed-data.enum';
 export declare enum RecurrencePeriod {
     HOURLY = "HOURLY",
     DAILY = "DAILY",

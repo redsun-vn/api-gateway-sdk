@@ -91,4 +91,7 @@ export declare namespace IShop {
         shopShippingMethods?: null | IShopShippingMethod.IShopShippingMethodResponse[];
         shopSalesChannels?: null | IShopSalesChannel.IShopSalesChannelResponse[];
     }
+    interface ISoftDelete {
+        name: string;
+    }
 }
