@@ -1,5 +1,6 @@
 export declare enum SeedDataModule {
     PRODUCT = "product",
     ORDER = "order",
-    SHOP = "shop"
+    SHOP = "shop",
+    FINANCIAL = "financial"
 }

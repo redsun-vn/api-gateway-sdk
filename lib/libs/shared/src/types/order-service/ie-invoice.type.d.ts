@@ -82,4 +82,7 @@ export declare namespace IEInvoice {
         isEncryptPassword: boolean;
         [key: string]: any;
     }
+    interface IEInvoicePrintParams {
+        isDev?: boolean;
+    }
 }
