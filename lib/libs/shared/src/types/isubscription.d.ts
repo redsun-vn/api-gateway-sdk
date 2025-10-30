@@ -1,6 +1,7 @@
 import { tags } from 'typia';
 import { BaseResponse } from './common.type';
 import { IPackagePlan } from './ipackage-plan';
+import { CREATE_SHOP_FROM_SOURCE_ENUM } from '../enum';
 export declare namespace ISubscription {
     interface ICreate {
         targetValue?: number;
@@ -11,6 +12,7 @@ export declare namespace ISubscription {
         email?: string & tags.Format<'email'>;
         phone?: string;
         address?: string;
+        source?: CREATE_SHOP_FROM_SOURCE_ENUM;
     }
     interface IUpdate {
         active?: boolean;
@@ -43,6 +45,7 @@ export declare namespace ISubscription {
         packagePlans?: IPackagePlan.IResponse[];
         extendStaff?: number | string | null;
         extendBranch?: number | string | null;
+        source?: string | null;
     }
     interface ISubscriptionReportResponse {
         shop_id?: number;

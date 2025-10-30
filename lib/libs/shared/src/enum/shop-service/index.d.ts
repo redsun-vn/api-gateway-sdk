@@ -9,3 +9,7 @@ export declare enum E_INVOICE_PROVIDER_ENUM {
     VNPAY_INVOICE = "vnpay",
     FPT_INVOICE = "fpt"
 }
+export declare enum CREATE_SHOP_FROM_SOURCE_ENUM {
+    SIPOS = "sipos.vn",
+    WEBINO = "webino.vn"
+}

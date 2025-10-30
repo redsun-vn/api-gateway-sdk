@@ -9,11 +9,13 @@ import { IShopSalesChannel } from './ishop-sales-channel';
 import { IShopShippingMethod } from './ishop-shipping-method';
 import { ISubscription } from './isubscription';
 import { tags } from 'typia';
+import { CREATE_SHOP_FROM_SOURCE_ENUM } from '../enum';
 export declare namespace IShop {
     interface ICreate extends BaseProfile {
         name: string & tags.MinLength<5>;
         shopOwnerId: string;
         business_type_id?: string;
+        source?: CREATE_SHOP_FROM_SOURCE_ENUM;
     }
     interface IUpdate extends BaseProfile {
         active?: boolean;
@@ -48,6 +50,7 @@ export declare namespace IShop {
         shopPaymentMethods?: null | IShopPaymentMethod.IShopPaymentMethodResponse[];
         shopShippingMethods?: null | IShopShippingMethod.IShopShippingMethodResponse[];
         shopSalesChannels?: null | IShopSalesChannel.IShopSalesChannelResponse[];
+        source?: string | null;
     }
     interface IShopResponseWithoutConfig extends BaseResponse, BaseProfileResponse {
         name: string;
@@ -62,6 +65,7 @@ export declare namespace IShop {
         businessType?: null | IBusinessType.IBusinessTypeResponse;
         brand?: null | IBrand.IBrandResponse;
         domain?: null | IDomain.IDomainResponse;
+        source?: string | null;
     }
     interface IShopReportResponse {
         active: boolean;
@@ -90,6 +94,7 @@ export declare namespace IShop {
         shopPaymentMethods?: null | IShopPaymentMethod.IShopPaymentMethodResponse[];
         shopShippingMethods?: null | IShopShippingMethod.IShopShippingMethodResponse[];
         shopSalesChannels?: null | IShopSalesChannel.IShopSalesChannelResponse[];
+        source?: string | null;
     }
     interface ISoftDelete {
         name: string;
