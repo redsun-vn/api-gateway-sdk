@@ -1,12 +1,12 @@
 import type { IConnection, Resolved, Primitive } from "@nestia/fetcher";
 import type { IEInvoice } from "../../../../../libs/shared/src/types/order-service/ie-invoice.type";
-export declare function upsertConfig(connection: IConnection, shopId: string, data: upsertConfig.Input): Promise<upsertConfig.Output>;
+export declare function upsertConfig(connection: IConnection, data: upsertConfig.Input): Promise<upsertConfig.Output>;
 export declare namespace upsertConfig {
     type Input = Resolved<IEInvoice.IEInvoiceConfigRequest>;
     type Output = Primitive<any>;
     const METADATA: {
         readonly method: "POST";
-        readonly path: "/shop/e-invoice/:shopId/upsert";
+        readonly path: "/shop/e-invoice/upsert";
         readonly request: {
             readonly type: "application/json";
             readonly encrypted: false;
@@ -17,5 +17,5 @@ export declare namespace upsertConfig {
         };
         readonly status: 201;
     };
-    const path: (shopId: string) => string;
+    const path: () => string;
 }
