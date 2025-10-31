@@ -78,8 +78,6 @@ export declare namespace IEInvoice {
         provider: E_INVOICE_PROVIDER_ENUM;
         username: string;
         password: string;
-        isEncryptUsername: boolean;
-        isEncryptPassword: boolean;
         [key: string]: any;
     }
     interface IEInvoicePrintParams {
