@@ -40,7 +40,7 @@ export declare namespace ISubscription {
         price: number | string;
         month: number | string;
         startDate?: string | Date;
-        endDate?: string | Date;
+        endDate?: string | Date | null;
         trialEndsAt: string | Date | null;
         packagePlans?: IPackagePlan.IResponse[];
         extendStaff?: number | string | null;

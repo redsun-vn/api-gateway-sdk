@@ -11,6 +11,7 @@ export declare namespace IComment {
         attributeToUser?: boolean;
         embed: string;
         objectBody?: Record<string, unknown>;
+        objectTarget?: string;
     }
     interface ICreatePublic extends Partial<ICreate> {
         shop_id: number;

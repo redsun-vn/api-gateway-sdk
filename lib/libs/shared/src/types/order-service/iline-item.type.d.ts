@@ -55,7 +55,6 @@ export declare namespace ILineItem {
         tableId?: number & tags.Type<'uint64'>;
         roomId?: number & tags.Type<'uint64'>;
         timeSlots?: ITimeSlot[];
-        isWallet?: boolean;
     }
     interface ICreateLineItem extends IInputLineItem {
         order_id?: number & tags.Type<'uint64'>;
@@ -171,7 +170,6 @@ export declare namespace ILineItem {
         tableId?: number | string | null;
         roomId?: number | string | null;
         timeSlots?: ITimeSlot[] | null;
-        isWallet?: boolean;
     }
     interface IDetailLineItemPublicResponse extends BaseResponse {
         shop_id: number | string | null;

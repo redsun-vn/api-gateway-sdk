@@ -3,7 +3,6 @@ import type { E_INVOICE_PROVIDER_ENUM } from "../../../../libs/shared/src/enum/s
 import type { IQuery, IResponse, IResponsePagination } from "../../../../libs/shared/src/types/common.type";
 import type { IEInvoice } from "../../../../libs/shared/src/types/order-service/ie-invoice.type";
 export * as publish_with_signature from "./publish_with_signature";
-export * as download from "./download";
 export * as upsert from "./upsert";
 export * as invoice_templates from "./invoice_templates";
 export * as publish from "./publish";
