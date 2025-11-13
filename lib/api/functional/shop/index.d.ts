@@ -1,5 +1,13 @@
 export * as comment from "./comment";
 export * as comments from "./comments";
+export * as rating_criteria_templates from "./rating_criteria_templates";
+export * as rating_criteria_templates_count from "./rating_criteria_templates_count";
+export * as rating_criteria_templates_bulk from "./rating_criteria_templates_bulk";
+export * as rating_criteria_templates_initialize from "./rating_criteria_templates_initialize";
+export * as rating_criteria_templates_clone from "./rating_criteria_templates_clone";
+export * as rating_criteria_templates_reset from "./rating_criteria_templates_reset";
+export * as rating_criteria_templates_reorder from "./rating_criteria_templates_reorder";
+export * as ratings from "./ratings";
 export * as order from "./order";
 export * as e_invoice from "./e_invoice";
 export * as misa_invoice from "./misa_invoice";

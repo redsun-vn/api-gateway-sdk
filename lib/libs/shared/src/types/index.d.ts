@@ -31,6 +31,7 @@ export * from './ishop-shipping-method';
 export * from './icategory-business';
 export * from './icomment';
 export * from './icomment.attachment';
+export * from './comment-service';
 export * from './reservation-service';
 export * from './order-service';
 export * from './inventory-service';
