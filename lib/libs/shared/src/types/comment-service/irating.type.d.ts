@@ -50,6 +50,7 @@ export declare namespace IRating {
     }
     interface IRatingResponse extends BaseResponse {
         shop_id: number | string;
+        branch_id: number | string | null;
         object_id: string;
         objectType: string;
         customer_id: number | null;
