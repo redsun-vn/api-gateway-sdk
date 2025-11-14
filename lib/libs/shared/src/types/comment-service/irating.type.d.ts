@@ -63,7 +63,7 @@ export declare namespace IRating {
         overallRating: number | string;
         comment: string | null;
         shopResponse: string | null;
-        shopResponseAt: Date | null;
+        shopResponseAt: string | null;
         shopResponseBy: number | null;
         isActive: boolean;
         isVerified: boolean;
