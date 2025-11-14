@@ -32,7 +32,7 @@ export declare namespace IRating {
     }
     interface IShopResponse {
         shop_response: string;
-        shop_response_by: number;
+        shop_response_by: number | string;
     }
     interface IToggleVisibility {
         isPublic: boolean;
@@ -64,7 +64,7 @@ export declare namespace IRating {
         comment: string | null;
         shopResponse: string | null;
         shopResponseAt: string | null;
-        shopResponseBy: number | null;
+        shopResponseBy: number | string | null;
         isActive: boolean;
         isVerified: boolean;
         isPublic: boolean;
