@@ -1,9 +1,10 @@
-import { CATEGORY_BUSINESS_TYPE_ENUMS } from '../../enum';
+import { CATEGORY_BUSINESS_TYPE_ENUMS, RATING_CRITERIA_CONTEXT_ENUMS } from '../../enum';
 import { BaseResponse } from '../common.type';
 export declare namespace IRatingCriteriaTemplate {
     interface ICreate {
         shopId: number;
         businessType: CATEGORY_BUSINESS_TYPE_ENUMS;
+        criteriaContext?: RATING_CRITERIA_CONTEXT_ENUMS;
         criteriaCode: string;
         criteriaName: string;
         description?: string | null;
@@ -16,6 +17,7 @@ export declare namespace IRatingCriteriaTemplate {
     }
     interface IUpdate {
         criteriaName?: string;
+        criteriaContext?: RATING_CRITERIA_CONTEXT_ENUMS;
         description?: string | null;
         weight?: number;
         displayOrder?: number;
@@ -28,6 +30,7 @@ export declare namespace IRatingCriteriaTemplate {
     interface IResponse extends BaseResponse {
         shop_id: number | string;
         businessType: CATEGORY_BUSINESS_TYPE_ENUMS;
+        criteriaContext?: RATING_CRITERIA_CONTEXT_ENUMS | null;
         criteriaCode: string;
         criteriaName: string;
         description: string | null;
