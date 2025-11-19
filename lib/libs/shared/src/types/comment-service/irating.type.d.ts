@@ -9,7 +9,7 @@ export declare namespace IRating {
     }
     interface ICreate {
         shop_id: number | string;
-        branh_id?: number;
+        branch_id?: number;
         object_id: string;
         object_type: string;
         customer_id?: number | null;
