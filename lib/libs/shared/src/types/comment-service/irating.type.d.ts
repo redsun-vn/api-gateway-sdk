@@ -84,6 +84,7 @@ export declare namespace IRating {
         object_id?: string;
         objectType?: string;
         businessType?: string;
+        criteriaContext?: string;
     }
     interface IQueryShop extends Omit<IRating.IQueryStatistics, 'shopId'> {
         fromDate?: string;
