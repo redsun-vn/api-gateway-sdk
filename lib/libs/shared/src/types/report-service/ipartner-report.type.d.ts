@@ -17,7 +17,7 @@ export declare namespace IPartnerReport {
     }
     interface IPartnerReportResponse {
         shop_id: number | string;
-        branch_id: number | string;
+        branch_id?: number | string;
         province?: string;
         totalPartner: number;
         day?: number;
