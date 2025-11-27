@@ -93,4 +93,10 @@ export declare namespace ILoyaltyReport {
         memberOrder: IResponsePagination<MemberOrderReportDto>;
         memberDetail: MemberDetailReportDto;
     }
+    interface LoyaltySummaryReportDto {
+        total_customers: number;
+        new_customers: number;
+        members_with_loyalty_level: number;
+        multiple_order_rate: number;
+    }
 }
