@@ -92,6 +92,7 @@ export * as vnpay_qrcode from "./vnpay_qrcode";
 export * as vnpay_web from "./vnpay_web";
 export * as category_cards from "./category_cards";
 export * as accounting from "./accounting";
+export * as financial_reports from "./financial_reports";
 export * as payment_cards from "./payment_cards";
 export * as cms from "./cms";
 export * as seed from "./seed";
