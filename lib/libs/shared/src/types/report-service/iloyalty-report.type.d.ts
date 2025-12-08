@@ -18,9 +18,9 @@ export declare namespace ILoyaltyReport {
     }
     interface PointActivityReportDto {
         shop_id: number;
-        partner_id: string;
-        loyalty_level_id: number | null;
-        loyalty_level_name: string | null;
+        partner_id?: string;
+        loyalty_level_id?: number | null;
+        loyalty_level_name?: string | null;
         total_points_earned: number;
         earn_transaction_count: number;
         total_points_redeemed: number;
