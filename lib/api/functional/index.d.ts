@@ -49,6 +49,7 @@ export * as shop_sales_channels from "./shop_sales_channels";
 export * as otp from "./otp";
 export * as staffs from "./staffs";
 export * as public_inventory from "./public_inventory";
+export * as omnichannel from "./omnichannel";
 export * as shipping_providers from "./shipping_providers";
 export * as loyalty_programs from "./loyalty_programs";
 export * as sync_activity_logs from "./sync_activity_logs";

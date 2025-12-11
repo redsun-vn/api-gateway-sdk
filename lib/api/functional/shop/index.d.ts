@@ -61,6 +61,7 @@ export * as shipping_methods from "./shipping_methods";
 export * as staffs from "./staffs";
 export * as subscriptions from "./subscriptions";
 export * as inventory from "./inventory";
+export * as omnichannel_configs from "./omnichannel_configs";
 export * as activity from "./activity";
 export * as fulfillment_orders from "./fulfillment_orders";
 export * as fulfillments from "./fulfillments";

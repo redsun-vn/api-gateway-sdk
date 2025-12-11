@@ -119,6 +119,9 @@ export declare namespace IOmnichannelShopConfig {
             errors?: string[];
         };
     }
+    interface IToggleActiveRequest {
+        isActive: boolean;
+    }
     interface IPricingRule {
         id: string;
         name: string;
