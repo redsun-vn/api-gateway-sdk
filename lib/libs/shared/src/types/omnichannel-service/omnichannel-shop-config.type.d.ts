@@ -92,10 +92,10 @@ export declare namespace IOmnichannelShopConfig {
         notifyLowStock: boolean;
         lowStockThreshold: number | string;
         notificationChannels: string[];
-        lastProductSyncAt: Date | null;
-        lastOrderSyncAt: Date | null;
-        lastInventorySyncAt: Date | null;
-        lastPriceSyncAt: Date | null;
+        lastProductSyncAt: string | null;
+        lastOrderSyncAt: string | null;
+        lastInventorySyncAt: string | null;
+        lastPriceSyncAt: string | null;
         warehouseId: number | string;
         priceListId: number | string;
         customSettings: Record<string, any>;
