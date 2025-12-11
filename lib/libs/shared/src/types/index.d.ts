@@ -65,3 +65,4 @@ export * from './itranslation-key.type';
 export * from './client-secret.interface';
 export * from './admin-service';
 export * from './seed-data.type';
+export * from './omnichannel-service';
