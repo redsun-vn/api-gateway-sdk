@@ -62,16 +62,18 @@ export declare namespace IOmnichannelShopConfig {
     interface IResponse extends BaseResponse {
         shop_id: number | string;
         isActive: boolean;
-        taxEnabled: boolean;
-        taxRate: number | string;
-        taxIncludedInPrice: boolean;
         autoConfirmOrder: boolean;
         autoConfirmMinutes: number | string;
         autoCancelReturnOrder: boolean;
         autoCancelReturnReasons: string[];
+        autoSyncOrder: boolean;
+        syncOrderSchedule: string | null;
+        orderStatusMapping: Record<string, string>;
+        notifyNewOrder: boolean;
+        lastOrderSyncAt: string | null;
         autoSyncProduct: boolean;
         syncProductDirection: string;
-        syncProductSchedule: string;
+        syncProductSchedule: string | null;
         syncProductFields: string[];
         autoSyncInventory: boolean;
         syncInventoryDirection: string;
@@ -82,24 +84,22 @@ export declare namespace IOmnichannelShopConfig {
         pricingPolicyType: string;
         pricingAdjustment: number | string;
         pricingRules: Record<string, any>;
-        autoSyncOrder: boolean;
-        syncOrderSchedule: string | null;
-        orderStatusMapping: Record<string, string>;
-        assignedStaffId: number | string;
-        assignedStaffName: string;
-        backupStaffIds: number[];
-        notifyNewOrder: boolean;
         notifyLowStock: boolean;
         lowStockThreshold: number | string;
         notificationChannels: string[];
         lastProductSyncAt: string | null;
-        lastOrderSyncAt: string | null;
         lastInventorySyncAt: string | null;
         lastPriceSyncAt: string | null;
+        taxEnabled: boolean;
+        taxRate: number | string;
+        taxIncludedInPrice: boolean;
         warehouseId: number | string;
         priceListId: number | string;
         customSettings: Record<string, any>;
         notes: string | null;
+        assignedStaffId: number | string;
+        assignedStaffName: string;
+        backupStaffIds: number[];
     }
     interface IListResponse {
         items: IResponse[];
