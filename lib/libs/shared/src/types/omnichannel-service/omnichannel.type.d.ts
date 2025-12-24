@@ -22,4 +22,8 @@ export declare namespace IOmnichannel {
     interface IUpdate {
         [key: string]: any;
     }
+    interface IAuthorizeToken {
+        code: string;
+        provider: OMNI_CHANNEL_PROVIDER_ENUM;
+    }
 }

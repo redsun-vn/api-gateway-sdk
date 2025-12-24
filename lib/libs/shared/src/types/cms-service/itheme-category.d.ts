@@ -3,6 +3,9 @@ export declare namespace IThemeCategory {
     interface ICreate {
         name: string;
         isActive?: boolean;
+        description?: string;
+        color?: string;
+        icon?: string;
     }
     interface IUpdateReq extends Partial<ICreate> {
     }
@@ -12,12 +15,18 @@ export declare namespace IThemeCategory {
     interface IResponse extends BaseResponse {
         name: string;
         isActive: boolean;
+        description?: string | null;
+        color?: string | null;
+        icon?: string | null;
     }
 }
 export declare namespace IThemeTag {
     interface ICreate {
         name: string;
         isActive?: boolean;
+        description?: string;
+        color?: string;
+        icon?: string;
     }
     interface IUpdateReq extends Partial<ICreate> {
     }
@@ -27,5 +36,8 @@ export declare namespace IThemeTag {
     interface IResponse extends BaseResponse {
         name: string;
         isActive: boolean;
+        description?: string | null;
+        color?: string | null;
+        icon?: string | null;
     }
 }

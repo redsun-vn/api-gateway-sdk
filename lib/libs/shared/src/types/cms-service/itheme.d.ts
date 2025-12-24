@@ -17,6 +17,13 @@ export declare namespace ITheme {
         description?: string | null;
         content?: string | null;
         config?: Record<string, any> | null;
+        isFeatured?: boolean;
+        isPopular?: boolean;
+        isNew?: boolean;
+        isBestSeller?: boolean;
+        rating?: number;
+        totalReview?: number;
+        sequence?: number;
     }
     interface ICreate extends ICreateReq {
         shop_id?: (number & tags.Type<'uint64'>) | null;
@@ -62,5 +69,12 @@ export declare namespace ITheme {
         content?: string | null;
         config?: Record<string, any> | null;
         reviewById?: number | string | null;
+        isFeatured?: boolean;
+        isPopular?: boolean;
+        isNew?: boolean;
+        isBestSeller?: boolean;
+        rating?: number | string | null;
+        totalReview?: number | string | null;
+        sequence?: number | string | null;
     }
 }

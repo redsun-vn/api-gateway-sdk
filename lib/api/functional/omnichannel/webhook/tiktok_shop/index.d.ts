@@ -1,10 +1,10 @@
 import type { IConnection, Primitive } from "@nestia/fetcher";
-export declare function webhookCallbackFromTiktokShop(connection: IConnection): Promise<webhookCallbackFromTiktokShop.Output>;
-export declare namespace webhookCallbackFromTiktokShop {
+export declare function webhookFromTiktokShop(connection: IConnection): Promise<webhookFromTiktokShop.Output>;
+export declare namespace webhookFromTiktokShop {
     type Output = Primitive<any>;
     const METADATA: {
         readonly method: "POST";
-        readonly path: "/omnichannel/tiktok-shop/webhook/callback";
+        readonly path: "/omnichannel/webhook/tiktok-shop";
         readonly request: null;
         readonly response: {
             readonly type: "application/json";
