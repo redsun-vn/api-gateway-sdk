@@ -75,6 +75,16 @@ export declare namespace ILineItemReport {
         pending_count?: number;
         processing_count?: number;
     }
+    interface ISaleChannelItem {
+        sale_channel_id: number;
+        total_items: number;
+        total_quantity: number;
+        total_revenue: number;
+        total_cost?: number;
+        total_profit?: number;
+        total_discount?: number;
+        order_count?: number;
+    }
     interface IReportMeta {
         totalItems: number;
         itemCount: number;
