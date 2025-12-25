@@ -1,6 +1,7 @@
 export * as payment_cards from "./payment_cards";
 export * as attendance_overview from "./attendance_overview";
 export * as attendance from "./attendance";
+export * as categories_selling from "./categories_selling";
 export * as best_selling from "./best_selling";
 export * as staff_selling from "./staff_selling";
 export * as order_promotions from "./order_promotions";

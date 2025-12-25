@@ -5,6 +5,7 @@ export * from './ipartner-report.type';
 export * from './iattendance-report.type';
 export * from './iadmin-receipt-report.type';
 export * from './iloyalty-report.type';
+export * from './line-item-report.type';
 export interface IReportShopInActive {
     [key: number]: number[];
 }
