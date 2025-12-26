@@ -75,6 +75,19 @@ export declare namespace ILineItemReport {
         pending_count?: number;
         processing_count?: number;
     }
+    interface IHourlyRevenueItem {
+        hour: number;
+        date?: string;
+        total_revenue: number;
+        total_quantity: number;
+        total_profit?: number;
+        total_discount?: number;
+        order_count: number;
+        product_count?: number;
+        avg_revenue_per_day?: number;
+        avg_order_value?: number;
+        days_count?: number;
+    }
     interface ISaleChannelItem {
         sale_channel_id: number;
         total_items: number;

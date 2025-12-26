@@ -19,6 +19,13 @@ export declare namespace IApplication {
         appDependencies?: number[] | null;
         mainId: number & tags.Type<'uint64'>;
         controllerIds?: number[] | null;
+        code?: string;
+        color?: string;
+        sequence?: number;
+        isFeatured?: boolean;
+        isPopular?: boolean;
+        rating?: number;
+        totalRating?: number;
     }
     interface IUpdate extends Partial<ICreate> {
     }
@@ -39,5 +46,12 @@ export declare namespace IApplication {
         main?: IApplicationMain.IResponse | null;
         controllers?: IApplicationController.IResponse[] | null;
         appPlans?: IApplicationPlan.IResponse[] | null;
+        code?: string | null;
+        color?: string | null;
+        sequence?: number | string | null;
+        isFeatured?: boolean | null;
+        isPopular?: boolean | null;
+        rating?: number | string | null;
+        totalRating?: number | string | null;
     }
 }
