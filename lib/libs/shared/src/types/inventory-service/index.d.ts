@@ -12,3 +12,4 @@ export * from './istocktake.type';
 export * from './istock-rule.type';
 export * from './istock-router.type';
 export * from './igroup-warehouse.type';
+export * from './ireport-inventory.type';

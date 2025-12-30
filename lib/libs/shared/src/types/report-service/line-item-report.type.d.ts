@@ -98,6 +98,24 @@ export declare namespace ILineItemReport {
         total_discount?: number;
         order_count?: number;
     }
+    interface IOperationalPerformanceItem {
+        kds_area_id: number;
+        kds_area_name?: string | null;
+        department_name?: string;
+        department_code?: string | null;
+        department_type?: string | null;
+        total_items: number;
+        total_quantity: number;
+        total_revenue: number;
+        total_profit?: number;
+        order_count: number;
+        completed_items: number;
+        pending_items: number;
+        working_days: number;
+        avg_processing_time_seconds: number;
+        completion_rate: number;
+        avg_revenue_per_day: number;
+    }
     interface IReportMeta {
         totalItems: number;
         itemCount: number;

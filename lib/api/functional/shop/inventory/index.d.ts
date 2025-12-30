@@ -1,4 +1,5 @@
 export * as group_warehouses from "./group_warehouses";
+export * as report from "./report";
 export * as stock_locations from "./stock_locations";
 export * as stock_lots from "./stock_lots";
 export * as stock_moves from "./stock_moves";

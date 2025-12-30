@@ -5,6 +5,7 @@ export * as categories_selling from "./categories_selling";
 export * as channel_selling from "./channel_selling";
 export * as top_selling from "./top_selling";
 export * as revenue_by_hourly from "./revenue_by_hourly";
+export * as operational_performance from "./operational_performance";
 export * as best_selling from "./best_selling";
 export * as staff_selling from "./staff_selling";
 export * as order_promotions from "./order_promotions";
