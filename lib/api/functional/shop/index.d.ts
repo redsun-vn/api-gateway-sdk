@@ -70,6 +70,7 @@ export * as loyalty_config from "./loyalty_config";
 export * as loyalty_coupons from "./loyalty_coupons";
 export * as loyalty_levels from "./loyalty_levels";
 export * as loyalty_programs from "./loyalty_programs";
+export * as loyalty_report from "./loyalty_report";
 export * as loyalty_rewards from "./loyalty_rewards";
 export * as loyalty_rules from "./loyalty_rules";
 export * as loyalty_sale_channels from "./loyalty_sale_channels";

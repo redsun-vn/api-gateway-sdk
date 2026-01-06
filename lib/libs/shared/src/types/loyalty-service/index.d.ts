@@ -11,3 +11,4 @@ export * from './ipoint-transaction';
 export * from './iloyalty-config';
 export * from './iwallet';
 export * from './iwallet-transaction';
+export * from './ireport';
