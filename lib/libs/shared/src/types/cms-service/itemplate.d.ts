@@ -43,4 +43,13 @@ export declare namespace ITemplate {
         entry: NoCodeComponentEntry;
         group?: string | null;
     }
+    interface IGroupCountTree {
+        group: string | null;
+        matchedCount: number;
+        total: number;
+    }
+    type IGroupCountMap = Record<string, {
+        matchedCount: number;
+        total: number;
+    }>;
 }
