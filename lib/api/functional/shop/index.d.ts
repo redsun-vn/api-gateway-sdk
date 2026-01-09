@@ -44,6 +44,7 @@ export * as branches from "./branches";
 export * as brands from "./brands";
 export * as domains from "./domains";
 export * as groups from "./groups";
+export * as hr_report from "./hr_report";
 export * as invoices from "./invoices";
 export * as payment_configs from "./payment_configs";
 export * as pos_configs from "./pos_configs";
