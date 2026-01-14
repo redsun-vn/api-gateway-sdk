@@ -64,13 +64,16 @@ export declare namespace IPackage {
         name: string;
         description?: string | null;
         code?: string | null;
-        channel?: string | null;
+        channel: string;
         subscribers: number;
         revenue: number;
         growth: number;
-        price: number | string;
+        price: number;
         active: boolean;
         isTrial: boolean;
+        rankByRevenue?: number;
+        rankByGrowth?: number;
+        rankBySubscribers?: number;
         packageAdditions?: Array<{
             id: number | string;
             name: string;
@@ -95,9 +98,6 @@ export declare namespace IPackage {
         totalSubscribers: number;
         totalRevenue: number;
         averageGrowth: number;
-        topPackageByRevenue: PackageReportItem | null;
-        topPackageByGrowth: PackageReportItem | null;
-        topPackageBySubscribers: PackageReportItem | null;
         revenueByChannel: Record<string, number>;
         subscribersByChannel: Record<string, number>;
     }

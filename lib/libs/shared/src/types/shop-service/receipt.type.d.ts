@@ -126,6 +126,7 @@ export declare namespace IReceipt {
         package_id: string;
         packageAdditionIds?: number[];
         refCode?: string;
+        paymentMethod?: string;
     }
     interface ICreatSubsFromReceiptAdminReq extends ICreatSubsFromReceipt {
         shop_id: string;
