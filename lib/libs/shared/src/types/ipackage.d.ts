@@ -56,4 +56,55 @@ export declare namespace IPackage {
         packageAdditions?: IPackageAddition.IResponse[];
         appPlan?: IApplicationPlan.IResponse[];
     }
+    interface PackageReportRequest {
+        periodDays?: number;
+    }
+    interface PackageReportItem {
+        id: number | string;
+        name: string;
+        description?: string | null;
+        code?: string | null;
+        channel?: string | null;
+        subscribers: number;
+        revenue: number;
+        growth: number;
+        price: number | string;
+        active: boolean;
+        isTrial: boolean;
+        packageAdditions?: Array<{
+            id: number | string;
+            name: string;
+            type: string;
+            target: string;
+            value: number;
+            price: number | string;
+        }>;
+        appPlans?: Array<{
+            id: number | string;
+            name: string;
+            code?: string;
+        }>;
+        limitUser?: number | null;
+        limitDevice?: number | null;
+        limitBranch?: number | null;
+        supportLevel?: string | null;
+        level?: number | null;
+    }
+    interface PackageReportSummary {
+        totalPackages: number;
+        totalSubscribers: number;
+        totalRevenue: number;
+        averageGrowth: number;
+        topPackageByRevenue: PackageReportItem | null;
+        topPackageByGrowth: PackageReportItem | null;
+        topPackageBySubscribers: PackageReportItem | null;
+        revenueByChannel: Record<string, number>;
+        subscribersByChannel: Record<string, number>;
+    }
+    interface PackageReport {
+        packages: PackageReportItem[];
+        summary: PackageReportSummary;
+        generatedAt: Date | string;
+        periodDays: number;
+    }
 }
