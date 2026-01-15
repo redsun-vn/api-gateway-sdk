@@ -64,7 +64,7 @@ export declare namespace IPackage {
         name: string;
         description?: string | null;
         code?: string | null;
-        channel: string;
+        channel: string[] | null;
         subscribers: number;
         revenue: number;
         growth: number;
