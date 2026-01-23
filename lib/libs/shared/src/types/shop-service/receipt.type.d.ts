@@ -135,4 +135,15 @@ export declare namespace IReceipt {
     interface ICreatSubsFromReceiptAdmin extends ICreatSubsFromReceiptAdminReq {
         createdById: string;
     }
+    interface IStatsFilter {
+        startDate?: string;
+        endDate?: string;
+    }
+    interface IStats {
+        totalReceipts: number;
+        totalPaidAmount: number;
+        totalPendingAmount: number;
+        totalOverdueAmount: number;
+        overdueCount: number;
+    }
 }

@@ -86,3 +86,19 @@ export declare namespace $delete {
     };
     const path: (id: string) => string;
 }
+export declare function stats(connection: IConnection, query: stats.Query): Promise<stats.Output>;
+export declare namespace stats {
+    type Query = Resolved<IQuery>;
+    type Output = Primitive<IResponse<IReceipt.IStats>>;
+    const METADATA: {
+        readonly method: "GET";
+        readonly path: "/admin/receipts/stats";
+        readonly request: null;
+        readonly response: {
+            readonly type: "application/json";
+            readonly encrypted: false;
+        };
+        readonly status: 200;
+    };
+    const path: (query: stats.Query) => string;
+}
