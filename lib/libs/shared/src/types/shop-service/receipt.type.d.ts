@@ -105,6 +105,41 @@ export declare namespace IReceipt {
         voucherCode?: string | null;
         originalTotal?: number | string | null;
         totalDiscount?: number | string | null;
+        metadata?: {
+            payment_gateway?: string;
+            transaction_id?: string;
+            payment_reference?: string;
+            refund_reference?: string;
+            processor_response?: any;
+            retry_count?: number;
+            last_retry_at?: string;
+            refund_request?: {
+                reason?: string;
+                reasonDetail?: string;
+                requestedAmount?: number;
+                refundType?: 'full' | 'partial';
+                requestedBy?: string | number;
+                requestedAt?: string;
+                status?: string;
+                lineItemIds?: (string | number)[];
+                approvedAmount?: number;
+                approvedBy?: string | number;
+                approvedAt?: string;
+                rejectedBy?: string | number;
+                rejectedAt?: string;
+                rejectionReason?: string;
+                processedBy?: string | number;
+                processedAt?: string;
+                completedBy?: string | number;
+                completedAt?: string;
+                transactionId?: string;
+                paymentGateway?: string;
+                finalRefundedAmount?: number;
+                deactivateSubscription?: boolean;
+                note?: string;
+            };
+            [key: string]: any;
+        } | null;
     }
     interface IReceiptLineItems {
         item_id?: string | number;
@@ -145,5 +180,116 @@ export declare namespace IReceipt {
         totalPendingAmount: number;
         totalOverdueAmount: number;
         overdueCount: number;
+    }
+    enum REFUND_REASON_ENUM {
+        CUSTOMER_REQUEST = "customer_request",
+        SERVICE_ISSUE = "service_issue",
+        DUPLICATE_PAYMENT = "duplicate_payment",
+        WRONG_PURCHASE = "wrong_purchase",
+        FEATURE_NOT_WORKING = "feature_not_working",
+        OTHER = "other"
+    }
+    enum REFUND_STATUS_ENUM {
+        PENDING = "pending",
+        APPROVED = "approved",
+        REJECTED = "rejected",
+        PROCESSING = "processing",
+        COMPLETED = "completed",
+        FAILED = "failed"
+    }
+    interface IRefundRequest {
+        receipt_id: string | number;
+        shop_id: string | number;
+        reason: REFUND_REASON_ENUM;
+        reasonDetail?: string;
+        refundAmount?: number;
+        refundType?: 'full' | 'partial';
+        requestedBy?: string | number;
+        lineItemIds?: (string | number)[];
+    }
+    interface IRefundApprove {
+        receipt_id: string | number;
+        approvedAmount: number;
+        approvedBy: string | number;
+        note?: string;
+        deactivateSubscription?: boolean;
+    }
+    interface IRefundReject {
+        receipt_id: string | number;
+        rejectedBy: string | number;
+        rejectionReason: string;
+    }
+    interface IRefundProcess {
+        receipt_id: string | number;
+        processedBy: string | number;
+        transactionId?: string;
+        paymentGateway?: string;
+        note?: string;
+    }
+    interface IRefundComplete {
+        receipt_id: string | number;
+        completedBy: string | number;
+        refundedAmount: number;
+        transactionId?: string;
+        note?: string;
+    }
+    interface IRefundResponse {
+        id: string | number;
+        receipt_id: string | number;
+        shop_id: string | number;
+        originalReceipt: IResponse;
+        refundStatus: REFUND_STATUS_ENUM;
+        reason?: REFUND_REASON_ENUM | string;
+        reasonDetail?: string;
+        requestedAmount?: number;
+        approvedAmount?: number;
+        refundedAmount: number;
+        refundType?: 'full' | 'partial';
+        requestedBy?: string | number;
+        approvedBy?: string | number;
+        rejectedBy?: string | number;
+        processedBy?: string | number;
+        completedBy?: string | number;
+        requestedAt?: string;
+        approvedAt?: string;
+        rejectedAt?: string;
+        processedAt?: string;
+        completedAt?: string;
+        rejectionReason?: string;
+        transactionId?: string;
+        paymentGateway?: string;
+        note?: string;
+        subscriptionDeactivated: boolean;
+    }
+    interface IRefundStatsFilter {
+        startDate?: string;
+        endDate?: string;
+        status?: REFUND_STATUS_ENUM;
+    }
+    interface IRefundStats {
+        totalRefundRequests: number;
+        totalRefundedAmount: number;
+        totalPendingRefunds: number;
+        totalApprovedRefunds: number;
+        totalRejectedRefunds: number;
+        totalCompletedRefunds: number;
+        averageRefundAmount: number;
+        refundsByReason: Record<string, number>;
+        refundsByStatus: Record<string, number>;
+    }
+    interface IRecalculateReportRequest {
+        startDate: string;
+        endDate: string;
+        includeRefunds?: boolean;
+        recalculateSubscriptions?: boolean;
+    }
+    interface IRecalculateReportResponse {
+        originalTotal: number;
+        adjustedTotal: number;
+        totalRefunds: number;
+        totalReceipts: number;
+        totalActiveSubscriptions: number;
+        totalDeactivatedSubscriptions: number;
+        calculatedAt: string;
     }
 }
