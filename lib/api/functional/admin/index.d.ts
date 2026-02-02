@@ -21,6 +21,7 @@ export * as sales_channels from "./sales_channels";
 export * as shipping_methods from "./shipping_methods";
 export * as shops from "./shops";
 export * as subscriptions from "./subscriptions";
+export * as system_pricebook from "./system_pricebook";
 export * as fulfillments from "./fulfillments";
 export * as order_reconciliations from "./order_reconciliations";
 export * as reconciliation_payments from "./reconciliation_payments";

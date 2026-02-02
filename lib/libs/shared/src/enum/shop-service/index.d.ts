@@ -2,6 +2,7 @@ export * from './package.state';
 export * from './receipt';
 export * from './promotion';
 export * from './invoice';
+export * from './system-pricebook';
 export declare enum E_INVOICE_PROVIDER_ENUM {
     MOBI_INVOICE = "mobi",
     VIETTEL_INVOICE = "viettel",

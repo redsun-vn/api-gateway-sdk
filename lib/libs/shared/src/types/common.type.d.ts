@@ -40,6 +40,7 @@ export interface ISearchOptions {
     search?: ISearch;
     shopId?: string;
     script?: string;
+    scriptShould?: string;
 }
 export interface IFilterTranslation {
     keyTranslation: string;

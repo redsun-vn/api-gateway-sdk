@@ -187,6 +187,9 @@ export declare const ELASTIC_INDEX: {
     APPLICATION_INDEX_NAME: string;
     APPLICATION_MAIN_INDEX_NAME: string;
     SALE_ORDER: string;
+    SYSTEM_PRICEBOOK_INDEX_NAME: string;
+    SYSTEM_PRICEBOOK_ENTRY_INDEX_NAME: string;
+    SYSTEM_PRICEBOOK_TIER_INDEX_NAME: string;
     UOM: string;
     UOM_CATEGORY: string;
     UNIT: string;
