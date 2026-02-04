@@ -55,7 +55,7 @@ export declare namespace ISystemPricebook {
     interface IResponse extends BaseResponse {
         name: string;
         code: string;
-        description?: string;
+        description?: string | null;
         status: string;
         type: string;
         scope: string;
