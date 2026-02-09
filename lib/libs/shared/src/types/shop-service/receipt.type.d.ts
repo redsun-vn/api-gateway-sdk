@@ -1,5 +1,5 @@
 import { tags } from 'typia';
-import { RECEIPT_LINE_ITEM_TYPE_ENUM, RECEIPT_PAYMENT_METHOD_ENUM, RECEIPT_PAYMENT_STATUS_ENUM, RECEIPT_PRIORITY_ENUM, RECEIPT_PROCESSING_STATUS_ENUM, RECEIPT_STATUS_ENUM, RECEIPT_TYPE_ENUM } from '../../enum/shop-service';
+import { RECEIPT_LINE_ITEM_TYPE_ENUM, RECEIPT_PAYMENT_METHOD_ENUM, RECEIPT_PAYMENT_STATUS_ENUM, RECEIPT_PRIORITY_ENUM, RECEIPT_PROCESSING_STATUS_ENUM, RECEIPT_STATUS_ENUM, RECEIPT_TYPE_ENUM, REFUND_REASON_ENUM, REFUND_STATUS_ENUM } from '../../enum/shop-service';
 import { BaseResponse } from '../common.type';
 export declare namespace IReceipt {
     interface IUpdate {
@@ -202,22 +202,6 @@ export declare namespace IReceipt {
         totalOverdueAmount: number;
         overdueCount: number;
     }
-    enum REFUND_REASON_ENUM {
-        CUSTOMER_REQUEST = "customer_request",
-        SERVICE_ISSUE = "service_issue",
-        DUPLICATE_PAYMENT = "duplicate_payment",
-        WRONG_PURCHASE = "wrong_purchase",
-        FEATURE_NOT_WORKING = "feature_not_working",
-        OTHER = "other"
-    }
-    enum REFUND_STATUS_ENUM {
-        PENDING = "pending",
-        APPROVED = "approved",
-        REJECTED = "rejected",
-        PROCESSING = "processing",
-        COMPLETED = "completed",
-        FAILED = "failed"
-    }
     interface IRefundRequest {
         receipt_id: string | number;
         shop_id: string | number;
@@ -366,7 +350,7 @@ export declare namespace IReceipt {
     interface RefundReceiptV2Result {
         success: boolean;
         receipt: ReceiptSimpleResponse;
-        refundStatus: IReceipt.REFUND_STATUS_ENUM;
+        refundStatus: REFUND_STATUS_ENUM;
         refundedAmount: number;
         subscriptionReverted: boolean;
         appPlansRemoved: number[];

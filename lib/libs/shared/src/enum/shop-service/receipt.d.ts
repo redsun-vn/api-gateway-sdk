@@ -78,3 +78,19 @@ export declare const RECEIPT_AUTO_TRANSITION_RULES: {
     AUTO_PROCESS_ON_PAYMENT: boolean;
     AUTO_COMPLETE_ON_FULL_PAYMENT: boolean;
 };
+export declare enum REFUND_REASON_ENUM {
+    CUSTOMER_REQUEST = "customer_request",
+    SERVICE_ISSUE = "service_issue",
+    DUPLICATE_PAYMENT = "duplicate_payment",
+    WRONG_PURCHASE = "wrong_purchase",
+    FEATURE_NOT_WORKING = "feature_not_working",
+    OTHER = "other"
+}
+export declare enum REFUND_STATUS_ENUM {
+    PENDING = "pending",
+    APPROVED = "approved",
+    REJECTED = "rejected",
+    PROCESSING = "processing",
+    COMPLETED = "completed",
+    FAILED = "failed"
+}
