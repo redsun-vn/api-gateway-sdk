@@ -7,6 +7,7 @@ export * as refund_approve from "./refund_approve";
 export * as refund_reject from "./refund_reject";
 export * as refund_process from "./refund_process";
 export * as refund_complete from "./refund_complete";
+export * as activated from "./activated";
 export declare function findAll(connection: IConnection, query: findAll.Query): Promise<findAll.Output>;
 export declare namespace findAll {
     type Query = Resolved<IQuery>;

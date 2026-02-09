@@ -54,7 +54,28 @@ export declare namespace IReceipt {
         address?: string;
         lineItems: IReceiptLineItems[];
         voucherCode?: string;
-        refCode?: string;
+        refCode?: string | null;
+    }
+    interface IShopCreateV2 {
+        shopId: number;
+        packageId?: number;
+        packageAdditionIds?: number[];
+        appPlanIds?: number[];
+        billingCycle?: string;
+        quantity?: number;
+        paymentMethod?: string;
+        voucherCode?: string;
+        note?: string;
+        email?: string;
+        phone?: string;
+        address?: string;
+        receiptType?: string;
+        refCode?: string | null;
+        createdById?: number;
+        lineItems?: Array<Partial<IReceipt.IReceiptLineItems>>;
+    }
+    interface IActivateReceipt {
+        paymentCode?: string;
     }
     interface IAdminCreate extends ICreate {
         shop_id: string;
@@ -145,7 +166,7 @@ export declare namespace IReceipt {
         item_id?: string | number;
         type: RECEIPT_LINE_ITEM_TYPE_ENUM | string;
         name?: string;
-        price: number;
+        price: number | string;
         discount: number;
         total: number;
         quantity?: number;
@@ -291,5 +312,66 @@ export declare namespace IReceipt {
         totalActiveSubscriptions: number;
         totalDeactivatedSubscriptions: number;
         calculatedAt: string;
+    }
+    interface ReceiptSimpleResponse {
+        id: number | string;
+        code: string;
+        shopId: number | string;
+        packageId: number | string | null;
+        status: string;
+        total: number;
+        originalTotal: number;
+        totalDiscount: number;
+        lineItems: IReceipt.IReceiptLineItems[];
+        paymentMethod: string;
+        note?: string | null;
+        email?: string | null;
+        phone?: string | null;
+        address?: string | null;
+        receiptType?: string;
+        createdAt: string;
+    }
+    interface ActivateReceiptSimpleResult {
+        receipt: ReceiptSimpleResponse;
+        subscription: {
+            id: number | string;
+            shopId: number | string;
+            packageId: number | string | null;
+            name?: string | null;
+            startDate: string | null;
+            endDate: string | null;
+            active: boolean;
+            price: number;
+            isRenewal: boolean;
+            day?: number;
+            month?: number;
+            trialEndsAt?: string | null;
+            extendStaff?: number;
+            extendBranch?: number;
+            refCode?: string | null;
+            source?: string;
+            paymentCode?: string | null;
+            packagePlans?: Array<{
+                id: number | string;
+                name: string | null;
+                type: string;
+                target?: string;
+                value?: number;
+                price?: number;
+                startDate?: string | null;
+                endDate?: string | null;
+            }>;
+        } | null;
+    }
+    interface RefundReceiptV2Result {
+        success: boolean;
+        receipt: ReceiptSimpleResponse;
+        refundStatus: IReceipt.REFUND_STATUS_ENUM;
+        refundedAmount: number;
+        subscriptionReverted: boolean;
+        appPlansRemoved: number[];
+        digitalPurchaseReverted: boolean;
+        previousSubscriptionId?: number;
+        message?: string;
     }
 }

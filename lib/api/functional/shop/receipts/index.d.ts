@@ -2,6 +2,7 @@ import type { IConnection, Resolved, Primitive } from "@nestia/fetcher";
 import type { IQuery, IResponse, IResponsePagination } from "../../../../libs/shared/src/types/common.type";
 import type { IReceipt } from "../../../../libs/shared/src/types/shop-service/receipt.type";
 export * as create_subs_from_receipt from "./create_subs_from_receipt";
+export * as create_v2 from "./create_v2";
 export declare function findAll(connection: IConnection, query: findAll.Query): Promise<findAll.Output>;
 export declare namespace findAll {
     type Query = Resolved<IQuery>;
