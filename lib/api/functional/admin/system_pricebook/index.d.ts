@@ -2,6 +2,7 @@ import type { IConnection, Resolved, Primitive } from "@nestia/fetcher";
 import type { IResponse, IQuery, IResponsePagination } from "../../../../libs/shared/src/types/common.type";
 import type { ISystemPricebook } from "../../../../libs/shared/src/types/shop-service/system-pricebook.type";
 export * as entry from "./entry";
+export * as entry_bulk from "./entry_bulk";
 export declare function create(connection: IConnection, data: create.Input): Promise<create.Output>;
 export declare namespace create {
     type Input = Resolved<ISystemPricebook.ICreate>;
