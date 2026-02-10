@@ -79,7 +79,7 @@ export declare namespace ISystemPricebook {
     interface IEntryCreate {
         pricebookId?: number;
         productType: string & PRICEBOOK_PRODUCT_TYPE_ENUM;
-        productId?: number;
+        productId?: number | string;
         externalProductCode?: string;
         serviceSource?: string;
         sku?: string;
@@ -116,7 +116,7 @@ export declare namespace ISystemPricebook {
     }
     interface IEntryUpdate {
         productType?: string & PRICEBOOK_PRODUCT_TYPE_ENUM;
-        productId?: number;
+        productId?: number | string;
         externalProductCode?: string;
         serviceSource?: string;
         sku?: string;
@@ -247,7 +247,7 @@ export declare namespace ISystemPricebook {
     }
     interface IProductPriceRequest {
         productType: string;
-        productId?: number;
+        productId?: number | string;
         externalProductCode?: string;
         options?: {
             shopId?: number;
@@ -259,7 +259,7 @@ export declare namespace ISystemPricebook {
     interface IPriceCalculationRequest {
         shopId?: number;
         productType: string & PRICEBOOK_PRODUCT_TYPE_ENUM;
-        productId?: number;
+        productId?: number | string;
         externalProductCode?: string;
         quantity?: number;
         billingCycle?: string & BILLING_CYCLE_ENUM;
@@ -315,7 +315,7 @@ export declare namespace ISystemPricebook {
     interface IEntryFilter {
         pricebookId?: number;
         productType?: string | string[];
-        productId?: number;
+        productId?: number | string;
         status?: string | string[];
         pricingModel?: string;
         billingCycle?: string;
@@ -345,7 +345,7 @@ export declare namespace ISystemPricebook {
     interface IApplicablePricebookRequest {
         shopId?: number;
         productType: string;
-        productId?: number;
+        productId?: number | string;
         externalProductCode?: string;
         customerGroup?: string;
         region?: string;
