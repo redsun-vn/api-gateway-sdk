@@ -357,4 +357,22 @@ export declare namespace ISystemPricebook {
         entry: IEntryResponse;
         reason: string;
     }
+    interface IListApplicablePricebookRequest {
+        shopId?: number;
+        items: Array<{
+            productType: PRICEBOOK_PRODUCT_TYPE_ENUM;
+            productId?: number | string;
+            externalProductCode?: string;
+            region?: string;
+            customerGroup?: string;
+            orderValue?: number;
+            currentDate?: string;
+        }>;
+    }
+    interface IListApplicablePricebookResponse extends Array<{
+        item: any;
+        result?: ISystemPricebook.IApplicablePricebookResponse;
+        error?: string;
+    }> {
+    }
 }
