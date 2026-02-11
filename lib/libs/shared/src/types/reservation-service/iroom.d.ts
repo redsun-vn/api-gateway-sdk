@@ -7,6 +7,7 @@ export declare namespace IRoom {
         name: string;
         description?: string;
         active?: boolean;
+        product_id?: number;
     }
     interface IUpdate extends Partial<ICreate> {
     }
@@ -17,6 +18,7 @@ export declare namespace IRoom {
         name: string;
         description?: string | null;
         active: boolean;
+        product_id?: number | string | null;
         tables?: null | ITable.ITableResponse[];
     }
 }

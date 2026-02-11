@@ -27,6 +27,7 @@ export declare namespace IReservation {
         tags?: string;
         tableIds?: string[];
         roomIds?: string[];
+        personInChargeId?: number;
     }
     interface IUpdate extends Partial<ICreate> {
     }
@@ -47,6 +48,7 @@ export declare namespace IReservation {
         productReservations?: null | IProductReservation.IProductReservationResponse[];
         tables?: null | ITable.ITableResponse[];
         rooms?: null | IRoom.IRoomResponse[];
+        personInChargeId?: number | string | null;
     }
     interface IReservationOverlap {
         message: string;
