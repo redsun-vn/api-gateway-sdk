@@ -100,3 +100,4 @@ export * as financial_reports from "./financial_reports";
 export * as payment_cards from "./payment_cards";
 export * as cms from "./cms";
 export * as seed from "./seed";
+export * as ai from "./ai";

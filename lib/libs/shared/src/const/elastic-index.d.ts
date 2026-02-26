@@ -1,5 +1,10 @@
 export declare const ELASTIC_INDEX: {
     ACTIVITY_LOGS: string;
+    AI_CONTENT_JOBS: string;
+    AI_CREDIT_TRANSACTIONS: string;
+    AI_BRAND_VOICES: string;
+    AI_CREDIT_PACKAGES: string;
+    AI_CREDIT_PACKAGE_PURCHASES: string;
     ADDITION_FEE: string;
     ADMIN_DEPARTMENT: string;
     ADMIN_RECONCILIATION: string;

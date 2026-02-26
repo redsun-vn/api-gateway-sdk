@@ -32,8 +32,8 @@ export declare namespace ISystemPricebook {
         currencyCode?: string;
         isDefault?: boolean;
         priority?: number;
-        validFrom?: string;
-        validTo?: string;
+        validFrom?: string | null;
+        validTo?: string | null;
         usageLimit?: number;
         minOrderValue?: number;
         applicableShopIds?: number[];
@@ -135,8 +135,8 @@ export declare namespace ISystemPricebook {
         discountAmount?: number;
         hasTrial?: boolean;
         trialDays?: number;
-        validFrom?: string;
-        validTo?: string;
+        validFrom?: string | null;
+        validTo?: string | null;
         minQuantity?: number;
         maxQuantity?: number;
         unit?: string;

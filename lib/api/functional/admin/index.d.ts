@@ -69,3 +69,4 @@ export * as utm_sources from "./utm_sources";
 export * as utm_tags from "./utm_tags";
 export * as warehouses from "./warehouses";
 export * as cms from "./cms";
+export * as ai from "./ai";
