@@ -1,3 +1,4 @@
+export * as kitchen from "./kitchen";
 export * as payment_cards from "./payment_cards";
 export * as attendance_overview from "./attendance_overview";
 export * as attendance from "./attendance";

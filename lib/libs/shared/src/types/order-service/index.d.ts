@@ -15,3 +15,4 @@ export * from './ishipping-fee-config.type';
 export * from './imisa-invoice.type';
 export * from './iorder-wallet.type';
 export * from './ie-invoice.type';
+export * from './ireport-kitchen.type';

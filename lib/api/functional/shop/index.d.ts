@@ -10,6 +10,7 @@ export * as rating_criteria_templates_reorder from "./rating_criteria_templates_
 export * as ratings from "./ratings";
 export * as order from "./order";
 export * as e_invoice from "./e_invoice";
+export * as report from "./report";
 export * as misa_invoice from "./misa_invoice";
 export * as wallet from "./wallet";
 export * as orders from "./orders";
@@ -85,7 +86,6 @@ export * as reconciliation_payments from "./reconciliation_payments";
 export * as reconciliations from "./reconciliations";
 export * as reconciliation_transactions from "./reconciliation_transactions";
 export * as reports from "./reports";
-export * as report from "./report";
 export * as payment from "./payment";
 export * as payment_links from "./payment_links";
 export * as payments from "./payments";
