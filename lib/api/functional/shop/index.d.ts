@@ -16,6 +16,7 @@ export * as wallet from "./wallet";
 export * as orders from "./orders";
 export * as sale_orders from "./sale_orders";
 export * as order_subscriptions from "./order_subscriptions";
+export * as treatment_cards from "./treatment_cards";
 export * as partner from "./partner";
 export * as partner_categories from "./partner_categories";
 export * as partners from "./partners";
@@ -35,6 +36,7 @@ export * as recurrence_period_configs_default from "./recurrence_period_configs_
 export * as tags from "./tags";
 export * as taxes from "./taxes";
 export * as tray_items from "./tray_items";
+export * as treatment_configs from "./treatment_configs";
 export * as uom_categories from "./uom_categories";
 export * as uom_uoms from "./uom_uoms";
 export * as reservation from "./reservation";

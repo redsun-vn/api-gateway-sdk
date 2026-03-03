@@ -27,3 +27,5 @@ export * from './irecurrence-period-config';
 export * from './ivariant-period-pricing';
 export * from './iproduct-hour-config';
 export * from './ireport.type';
+export * from './itreatment-config';
+export * from './itreatment-product-item';

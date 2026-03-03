@@ -13,7 +13,8 @@ export declare enum ProductType {
     COMBO = "combo",
     GIFT = "gift",
     VIRTUAL = "virtual",
-    BUNDLED = "bundle"
+    BUNDLED = "bundle",
+    TREATMENT = "treatment"
 }
 export declare enum ConditionType {
     TAG = "tag",
