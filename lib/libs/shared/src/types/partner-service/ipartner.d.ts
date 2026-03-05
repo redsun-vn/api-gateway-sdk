@@ -4,6 +4,7 @@ import { BaseResponse } from '../common.type';
 import { IPartnerAddress } from './ipartner-address';
 import { IPartnerTag } from './ipartner-tag';
 import { IPartnerCategory } from './ipartner-category';
+import { PartnerIdentityType } from '../../enum';
 export declare namespace IPartner {
     interface ICreate {
         branch_id?: number & tags.Type<'int32'>;
@@ -33,6 +34,9 @@ export declare namespace IPartner {
         tagIds?: string[];
         partnerCategoryIds?: number[];
         website_user_uuid?: string;
+        identity_number?: string;
+        identity_type?: PartnerIdentityType;
+        nationality?: string;
     }
     type TypePartnerUpload = 'customer' | 'supplier';
     interface IUpload {
@@ -70,6 +74,9 @@ export declare namespace IPartner {
         addresses?: null | IPartnerAddress.IPartnerAddressResponse[];
         partnerCategories?: null | IPartnerCategory.IResponse[];
         website_user_uuid?: string | null;
+        identity_number?: string | null;
+        identity_type?: string | null;
+        nationality?: string | null;
     }
     interface IUpdateWebsite {
         attachment_id?: number & tags.Type<'int32'>;

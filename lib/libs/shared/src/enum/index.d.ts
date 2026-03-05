@@ -49,3 +49,9 @@ export declare enum CATEGORY_BUSINESS_TYPE_ENUMS {
     HOTEL = "hotel",
     RETAILS = "retails"
 }
+export declare enum PartnerIdentityType {
+    CMND = "cmnd",
+    CCCD = "cccd",
+    PASSPORT = "passport",
+    OTHER = "other"
+}

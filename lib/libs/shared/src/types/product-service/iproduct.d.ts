@@ -8,14 +8,8 @@ import { IProductImage } from './iproduct-image.type';
 import { IProductPackage } from './iproduct-package';
 import { ISelectionGroup } from './iselection-group';
 import { IProductOption } from './iproduct-option';
+import { ProductType } from '../../enum';
 export declare namespace IProduct {
-    enum ProductType {
-        NORMAL = "normal",
-        COMBO = "combo",
-        GIFT = "gift",
-        VIRTUAL = "virtual",
-        BUNDLED = "bundle"
-    }
     interface ISalesChannel {
         id: string;
         name?: string;
