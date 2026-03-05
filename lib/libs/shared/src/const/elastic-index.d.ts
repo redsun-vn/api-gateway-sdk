@@ -145,6 +145,8 @@ export declare const ELASTIC_INDEX: {
     RESERVATION: string;
     RESERVATION_FLOOR_PLAN: string;
     RESERVATION_ROOM: string;
+    RESERVATION_ROOM_NOTE: string;
+    RESERVATION_NOTE: string;
     RESERVATION_TABLE: string;
     RECURRENCE_PERIOD_CONFIG: string;
     RATING_INDEX_NAME: string;

@@ -11,6 +11,7 @@ export * from './report.state';
 export * from './financial-service';
 export * from './vnpay-qrcode';
 export * from './permissions';
+export * from './reservation-note.enum';
 export * from './hr';
 export * from './shop-service';
 export * from './admin-service';

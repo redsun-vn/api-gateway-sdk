@@ -1,6 +1,10 @@
 import type { IConnection, Resolved, Primitive } from "@nestia/fetcher";
 import type { IQuery, IResponse, IResponsePagination } from "../../../../../libs/shared/src/types/common.type";
 import type { IRoom } from "../../../../../libs/shared/src/types/reservation-service/iroom";
+export * as history from "./history";
+export * as stats from "./stats";
+export * as ranking from "./ranking";
+export * as notes from "./notes";
 export declare function findAll(connection: IConnection, query: findAll.Query): Promise<findAll.Output>;
 export declare namespace findAll {
     type Query = Resolved<IQuery>;
