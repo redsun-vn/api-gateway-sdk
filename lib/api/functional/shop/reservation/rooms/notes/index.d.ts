@@ -1,5 +1,5 @@
 import type { IConnection, Resolved, Primitive } from "@nestia/fetcher";
-import type { IResponse } from "../../../../../../libs/shared/src/types/common.type";
+import type { IResponse, IResponsePagination } from "../../../../../../libs/shared/src/types/common.type";
 import type { IRoomNote } from "../../../../../../libs/shared/src/types/reservation-service/iroom-note";
 export * as status from "./status";
 export declare function create(connection: IConnection, roomId: string, data: create.Input): Promise<create.Output>;
@@ -24,7 +24,7 @@ export declare namespace create {
 export declare function findByRoom(connection: IConnection, roomId: string, filter: findByRoom.Query): Promise<findByRoom.Output>;
 export declare namespace findByRoom {
     type Query = Resolved<IRoomNote.IFilter>;
-    type Output = Primitive<IResponse<Array<IRoomNote.IRoomNoteResponse>>>;
+    type Output = Primitive<IResponse<IResponsePagination<IRoomNote.IRoomNoteResponse>>>;
     const METADATA: {
         readonly method: "GET";
         readonly path: "/shop/reservation/rooms/:roomId/notes";

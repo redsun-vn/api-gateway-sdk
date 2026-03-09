@@ -1,3 +1,4 @@
+import { BaseResponse } from '../common.type';
 export declare namespace IZaloOA {
     interface IGetAccessTokenFromRefreshToken {
         grant_type: 'refresh_token';
@@ -127,17 +128,17 @@ export declare namespace IZaloOA {
             user_id: string;
         };
     }
-    interface IAppointmentReminder {
+    interface IAppointmentReminder extends BaseResponse {
         shop_id: number;
         customer_phone: string;
         customer_name: string;
-        appointment_time: Date;
-        service_name?: string;
-        branch_name?: string;
-        branch_address?: string;
-        note?: string;
-        zalo_template_id?: string;
-        remind_before_minutes?: number;
+        appointment_time: Date | string;
+        service_name?: string | null;
+        branch_name?: string | null;
+        branch_address?: string | null;
+        note?: string | null;
+        zalo_template_id?: string | null;
+        remind_before_minutes?: number | null;
         status?: AppointmentReminderStatus;
     }
     enum AppointmentReminderStatus {

@@ -6,6 +6,8 @@ export * from './iroom';
 export * from './iroom-note';
 export * from './ireservation-note';
 export * from './iroom-history';
+export * from './iroom-status';
+export * from './idashboard';
 export * from './itable';
 export * from './iemenu-config';
 export * from './iemenu-qr-item';

@@ -5,6 +5,8 @@ export * as history from "./history";
 export * as stats from "./stats";
 export * as ranking from "./ranking";
 export * as notes from "./notes";
+export * as status from "./status";
+export * as availability from "./availability";
 export declare function findAll(connection: IConnection, query: findAll.Query): Promise<findAll.Output>;
 export declare namespace findAll {
     type Query = Resolved<IQuery>;

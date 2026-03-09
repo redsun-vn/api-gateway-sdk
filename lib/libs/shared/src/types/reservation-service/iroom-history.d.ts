@@ -10,7 +10,7 @@ export declare namespace IRoomHistory {
     interface ITimelineItem {
         type: 'note' | 'reservation';
         timestamp: string;
-        data: any;
+        data: Record<string, unknown>;
     }
     interface IRoomHistoryItem {
         id: number;

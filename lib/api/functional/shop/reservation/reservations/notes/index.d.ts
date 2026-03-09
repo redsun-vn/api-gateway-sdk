@@ -1,5 +1,5 @@
 import type { IConnection, Resolved, Primitive } from "@nestia/fetcher";
-import type { IResponse } from "../../../../../../libs/shared/src/types/common.type";
+import type { IResponse, IResponsePagination } from "../../../../../../libs/shared/src/types/common.type";
 import type { IReservationNote } from "../../../../../../libs/shared/src/types/reservation-service/ireservation-note";
 export * as status from "./status";
 export declare function create(connection: IConnection, reservationId: string, data: create.Input): Promise<create.Output>;
@@ -24,7 +24,7 @@ export declare namespace create {
 export declare function findByReservation(connection: IConnection, reservationId: string, filter: findByReservation.Query): Promise<findByReservation.Output>;
 export declare namespace findByReservation {
     type Query = Resolved<IReservationNote.IFilter>;
-    type Output = Primitive<IResponse<Array<IReservationNote.IReservationNoteResponse>>>;
+    type Output = Primitive<IResponse<IResponsePagination<IReservationNote.IReservationNoteResponse>>>;
     const METADATA: {
         readonly method: "GET";
         readonly path: "/shop/reservation/reservations/:reservationId/notes";
