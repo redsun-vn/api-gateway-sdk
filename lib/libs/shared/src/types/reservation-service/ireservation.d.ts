@@ -1,6 +1,5 @@
 import { tags } from 'typia';
 import { IProductReservation } from './iproduct-reservation';
-import { IRoom } from './iroom';
 import { ITable } from './itable';
 import { BaseResponse } from '../common.type';
 export declare namespace IReservation {
@@ -26,7 +25,6 @@ export declare namespace IReservation {
         status?: ReservationStatus;
         tags?: string;
         tableIds?: string[];
-        roomIds?: string[];
         personInChargeId?: number;
     }
     interface IUpdate extends Partial<ICreate> {
@@ -47,7 +45,6 @@ export declare namespace IReservation {
         tags?: string | null;
         productReservations?: null | IProductReservation.IProductReservationResponse[];
         tables?: null | ITable.ITableResponse[];
-        rooms?: null | IRoom.IRoomResponse[];
         personInChargeId?: number | string | null;
     }
     interface IReservationOverlap {

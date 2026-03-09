@@ -10,11 +10,11 @@ export declare enum ReservationPermission {
     UPDATE = "reservation-update",
     DELETE = "reservation-delete"
 }
-export declare enum RoomNotePermission {
-    VIEW = "room-note-view",
-    CREATE = "room-note-create",
-    UPDATE = "room-note-update",
-    DELETE = "room-note-delete"
+export declare enum TableNotePermission {
+    VIEW = "table-note-view",
+    CREATE = "table-note-create",
+    UPDATE = "table-note-update",
+    DELETE = "table-note-delete"
 }
 export declare enum ReservationNotePermission {
     VIEW = "reservation-note-view",

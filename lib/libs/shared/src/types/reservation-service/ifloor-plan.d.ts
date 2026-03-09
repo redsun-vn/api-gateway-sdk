@@ -1,5 +1,4 @@
 import { BaseResponse } from '../common.type';
-import { IRoom } from './iroom';
 import { ITable } from './itable';
 export declare namespace IFloorPlan {
     interface ICreate {
@@ -17,6 +16,5 @@ export declare namespace IFloorPlan {
         description?: string | null;
         active: boolean;
         tables?: null | ITable.ITableResponse[];
-        rooms?: null | IRoom.IRoomResponse[];
     }
 }

@@ -19,7 +19,7 @@ export declare namespace IDashboard {
     }
     interface IDashboardAlert {
         type: 'overdue_checkout' | 'stale_note' | 'low_occupancy';
-        room_id: number;
+        table_id: number;
         message: string;
         severity: 'warning' | 'error';
     }

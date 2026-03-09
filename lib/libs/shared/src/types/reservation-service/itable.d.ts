@@ -3,7 +3,7 @@ export declare namespace ITable {
     interface ICreate {
         branch_id: number;
         floor_plan_id?: number;
-        room_id?: number;
+        product_id?: number;
         name: string;
         maxAdult?: number;
         maxChild?: number;
@@ -16,7 +16,7 @@ export declare namespace ITable {
         shop_id: number | string;
         branch_id: number | string;
         floor_plan_id: number | string | null;
-        room_id: number | string | null;
+        product_id: number | string | null;
         name: string;
         maxAdult?: number | null;
         maxChild?: number | null;
