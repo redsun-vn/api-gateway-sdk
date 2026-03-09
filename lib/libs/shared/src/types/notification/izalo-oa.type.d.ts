@@ -169,7 +169,7 @@ export declare namespace IZaloOA {
         secret_key: string;
         refresh_token: string;
         access_token?: string | null;
-        access_token_expires_at?: Date | null;
+        access_token_expires_at?: string | null;
         zns_template_id?: string | null;
         remind_before_minutes?: number | null;
         is_active: boolean;

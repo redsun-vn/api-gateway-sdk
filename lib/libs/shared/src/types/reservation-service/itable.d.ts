@@ -16,7 +16,7 @@ export declare namespace ITable {
         shop_id: number | string;
         branch_id: number | string;
         floor_plan_id: number | string | null;
-        product_id: number | string | null;
+        product_id?: number | string | null;
         name: string;
         maxAdult?: number | null;
         maxChild?: number | null;
