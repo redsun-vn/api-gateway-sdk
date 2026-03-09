@@ -128,7 +128,7 @@ export declare namespace IZaloOA {
             user_id: string;
         };
     }
-    interface IAppointmentReminder extends BaseResponse {
+    interface IAppointmentReminder {
         shop_id: number;
         customer_phone: string;
         customer_name: string;
@@ -140,6 +140,21 @@ export declare namespace IZaloOA {
         zalo_template_id?: string | null;
         remind_before_minutes?: number | null;
         status?: AppointmentReminderStatus;
+    }
+    interface IAppointmentReminderResponse extends BaseResponse {
+        shop_id: number;
+        customer_phone: string;
+        customer_name: string;
+        appointment_time: Date | string;
+        service_name?: string | null;
+        branch_name?: string | null;
+        branch_address?: string | null;
+        note?: string | null;
+        zalo_template_id?: string | null;
+        remind_before_minutes?: number | null;
+        status: AppointmentReminderStatus;
+        error_message?: string | null;
+        tracking_id?: string | null;
     }
     enum AppointmentReminderStatus {
         PENDING = "pending",
