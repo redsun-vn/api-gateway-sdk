@@ -3,6 +3,7 @@ import type { IResponse } from "../../../../libs/shared/src/types/common.type";
 import type { ITreatmentConfig } from "../../../../libs/shared/src/types/product-service/itreatment-config";
 export * as product from "./product";
 export * as variant_config from "./variant_config";
+export * as variant_configs from "./variant_configs";
 export * as product_items from "./product_items";
 export declare function create(connection: IConnection, input: create.Input): Promise<create.Output>;
 export declare namespace create {
