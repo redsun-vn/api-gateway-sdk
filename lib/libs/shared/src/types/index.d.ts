@@ -67,3 +67,4 @@ export * from './admin-service';
 export * from './seed-data.type';
 export * from './ai-generation';
 export * from './omnichannel-service';
+export * from './notification';

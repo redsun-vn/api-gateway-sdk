@@ -1,6 +1,8 @@
 import { tags } from 'typia';
 import { TreatmentProductItemType } from '../../enum/treatment';
 import { BaseResponse } from '../common.type';
+import { IProduct } from './iproduct';
+import { IVariant } from './ivariant';
 export declare namespace ITreatmentProductItem {
     interface ICreate {
         treatment_config_id: number & tags.Type<'uint64'>;
@@ -31,5 +33,7 @@ export declare namespace ITreatmentProductItem {
         quantity: number;
         item_type: TreatmentProductItemType;
         shop_id: number | string;
+        product?: IProduct.IProductResponse;
+        variant?: IVariant.IVariantResponse;
     }
 }
