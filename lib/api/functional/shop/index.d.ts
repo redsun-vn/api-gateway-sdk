@@ -1,3 +1,5 @@
+export * as appointment_reminder from "./appointment_reminder";
+export * as zalo_oa from "./zalo_oa";
 export * as comment from "./comment";
 export * as comments from "./comments";
 export * as rating_criteria_templates from "./rating_criteria_templates";
