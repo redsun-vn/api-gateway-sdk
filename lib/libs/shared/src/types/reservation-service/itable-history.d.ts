@@ -8,13 +8,13 @@ export declare namespace ITableHistory {
         limit?: number;
     }
     interface ITimelineItem {
-        type: 'note' | 'reservation';
+        type?: 'note' | 'reservation';
         timestamp: string;
         data: Record<string, unknown>;
     }
     interface ITableHistoryItem {
-        id: number;
-        partner_id: number;
+        id: number | string;
+        partner_id: number | string;
         partner_name?: string;
         partner_phone?: string;
         partner_cmnd?: string;
@@ -25,36 +25,36 @@ export declare namespace ITableHistory {
         created_at: string;
     }
     interface ITableStats {
-        total_reservations: number;
-        total_notes: number;
-        open_notes: number;
-        resolved_notes: number;
+        total_reservations: number | string;
+        total_notes: number | string;
+        open_notes: number | string;
+        resolved_notes: number | string;
         notes_by_category: Array<{
             category: string;
             count: number;
         }>;
     }
     interface ITableStatsEnhanced extends ITableStats {
-        occupancy_rate?: number;
-        avg_resolve_time_hours?: number;
-        total_guests?: number;
+        occupancy_rate?: number | string;
+        avg_resolve_time_hours?: number | string;
+        total_guests?: number | string;
     }
     interface ITableRanking {
-        table_id: number;
+        table_id: number | string;
         table_name?: string;
-        total_reservations: number;
-        total_notes: number;
-        open_notes: number;
-        occupancy_rate?: number;
+        total_reservations: number | string;
+        total_notes: number | string;
+        open_notes: number | string;
+        occupancy_rate?: number | string;
     }
     interface IPeriodComparison {
         period_1: ITableStatsEnhanced;
         period_2: ITableStatsEnhanced;
         delta: {
-            total_reservations: number;
-            total_notes: number;
-            open_notes: number;
-            occupancy_rate?: number;
+            total_reservations: number | string;
+            total_notes: number | string;
+            open_notes: number | string;
+            occupancy_rate?: number | string;
         };
     }
     interface IStatsFilter {
@@ -85,15 +85,15 @@ export declare namespace ITableHistory {
         endDate: string;
     }
     interface IOccupancyResult {
-        table_id: number;
+        table_id: number | string;
         occupied_nights: number;
         total_nights: number;
-        occupancy_rate: number;
-        total_reservations: number;
-        total_guests: number;
+        occupancy_rate: number | string;
+        total_reservations: number | string;
+        total_guests: number | string;
     }
     interface ITimelineResponse {
-        items: ITimelineItem[];
+        items: ITableHistoryItem[];
         meta: {
             page: number;
             limit: number;
