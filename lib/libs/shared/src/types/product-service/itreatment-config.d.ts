@@ -9,14 +9,14 @@ export declare namespace ITreatmentConfig {
         expiryDays?: number | null;
         allowSelfCheckin?: boolean;
         steps?: ITreatmentStepInput[];
-        sessionTotal?: number;
+        sessionTotal?: number | null;
     }
     interface IUpdate {
         treatmentType?: TreatmentType;
         expiryDays?: number | null;
         allowSelfCheckin?: boolean;
         steps?: ITreatmentStepInput[];
-        sessionTotal?: number;
+        sessionTotal?: number | null;
     }
     interface IResponse extends BaseResponse {
         product_id: number | string;
@@ -25,7 +25,7 @@ export declare namespace ITreatmentConfig {
         expiryDays: number | null;
         allowSelfCheckin: boolean;
         steps?: ITreatmentStepResponse[];
-        sessionTotal?: number;
+        sessionTotal?: number | null;
     }
 }
 export interface ITreatmentStepInput {
