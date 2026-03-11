@@ -178,7 +178,7 @@ export declare namespace IZaloOA {
         oa_id?: string | null;
         app_id: string;
         secret_key: string;
-        refresh_token: string;
+        refresh_token: string | null;
         access_token?: string | null;
         access_token_expires_at?: string | null;
         zns_template_id?: string | null;
@@ -190,7 +190,7 @@ export declare namespace IZaloOA {
         oa_id?: string;
         app_id: string;
         secret_key: string;
-        refresh_token: string;
+        refresh_token?: string;
         zns_appointment_template_id?: string;
         remind_before_minutes?: number;
     }
