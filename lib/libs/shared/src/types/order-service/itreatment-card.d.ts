@@ -1,6 +1,7 @@
 import { tags } from 'typia';
 import { TreatmentType, TreatmentCardStatus, TreatmentProductItemType, CheckInType, SessionLogStatus } from '../../enum/treatment';
 import { BaseResponse } from '../common.type';
+import { IPartner } from '../partner-service';
 export declare namespace ITreatmentCard {
     interface IQuery {
         customer_id?: string;
@@ -64,6 +65,7 @@ export declare namespace ITreatmentCard {
         purchasedAt: string;
         expiryDate: string | null;
         status: TreatmentCardStatus;
+        customer?: IPartner.IPartnerResponse | null;
     }
     interface ISessionLogResponse extends BaseResponse {
         treatmentCardId: number | string;
