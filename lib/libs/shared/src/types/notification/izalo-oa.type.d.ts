@@ -24,6 +24,17 @@ export declare namespace IZaloOA {
         error_description: string;
         error: number;
     }
+    interface IOAuthCallbackInput {
+        shop_id: number;
+        code: string;
+        state?: string;
+        code_verifier?: string;
+    }
+    interface IOAuthCallbackResult {
+        success: boolean;
+        shop_id: number;
+        error?: string;
+    }
     type IAccessTokenResponse = IAccessTokenSuccess | IAccessTokenError;
     interface IZNSTemplateGetRequest {
         shop_id: number;

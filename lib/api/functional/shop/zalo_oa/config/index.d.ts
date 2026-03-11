@@ -3,6 +3,7 @@ import type { IResponse } from "../../../../../libs/shared/src/types/common.type
 import type { IZaloOA } from "../../../../../libs/shared/src/types/notification/izalo-oa.type";
 export * as toggle from "./toggle";
 export * as verify from "./verify";
+export * as oauth from "./oauth";
 export declare function createConfig(connection: IConnection, input: createConfig.Input): Promise<createConfig.Output>;
 export declare namespace createConfig {
     type Input = Resolved<Omit<IZaloOA.ICreateShopZaloOAConfig, "shop_id">>;
