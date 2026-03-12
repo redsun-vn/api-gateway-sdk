@@ -66,6 +66,7 @@ export declare namespace ITreatmentCard {
         expiryDate: string | null;
         status: TreatmentCardStatus;
         customer?: IPartner.IPartnerResponse | null;
+        sessionLogs?: ISessionLogResponse[];
     }
     interface ISessionLogResponse extends BaseResponse {
         treatmentCardId: number | string;
@@ -78,6 +79,7 @@ export declare namespace ITreatmentCard {
         reservationId: number | string | null;
         notes: string | null;
         status: SessionLogStatus;
+        consumedItems?: IConsumedItemResponse[];
     }
     interface IConsumedItemInput {
         product_id: number;
