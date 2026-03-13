@@ -176,8 +176,6 @@ export declare namespace IZaloOA {
     interface IShopZaloOAConfig {
         shop_id: number | string;
         oa_id?: string | null;
-        app_id: string;
-        secret_key: string;
         refresh_token: string | null;
         access_token?: string | null;
         access_token_expires_at?: string | null;
@@ -188,8 +186,6 @@ export declare namespace IZaloOA {
     interface ICreateShopZaloOAConfig {
         shop_id: number;
         oa_id?: string;
-        app_id: string;
-        secret_key: string;
         refresh_token?: string;
         zns_appointment_template_id?: string;
         remind_before_minutes?: number;
@@ -197,8 +193,6 @@ export declare namespace IZaloOA {
     interface IUpdateShopZaloOAConfig {
         shop_id: number;
         oa_id?: string;
-        app_id?: string;
-        secret_key?: string;
         refresh_token?: string;
         zns_appointment_template_id?: string;
         remind_before_minutes?: number;
