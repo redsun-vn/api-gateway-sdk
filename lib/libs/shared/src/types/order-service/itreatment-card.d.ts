@@ -27,6 +27,7 @@ export declare namespace ITreatmentCard {
         consumedItems?: IConsumedItemInput[];
         schedule?: {
             branch_id: number;
+            partner_id: number;
             startDate: string;
             endDate: string;
         };
