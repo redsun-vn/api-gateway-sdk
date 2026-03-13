@@ -77,6 +77,7 @@ export declare namespace IPartner {
         identity_number?: string | null;
         identity_type?: string | null;
         nationality?: string | null;
+        last_order?: string | null;
     }
     interface IUpdateWebsite {
         attachment_id?: number & tags.Type<'int32'>;

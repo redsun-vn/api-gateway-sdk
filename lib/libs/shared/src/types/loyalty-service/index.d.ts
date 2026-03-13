@@ -12,3 +12,4 @@ export * from './iloyalty-config';
 export * from './iwallet';
 export * from './iwallet-transaction';
 export * from './ireport';
+export * from './icampaign.type';

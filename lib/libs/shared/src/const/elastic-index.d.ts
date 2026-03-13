@@ -103,6 +103,7 @@ export declare const ELASTIC_INDEX: {
     LOYALTY_COUPON: string;
     LOYALTY_LEVEL: string;
     LOYALTY_PROGRAM: string;
+    CAMPAIGN: string;
     MANUFACTURER: string;
     MIX_INGREDIENT: string;
     NAMESPACES: string;
