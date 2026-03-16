@@ -2,6 +2,7 @@ import { tags } from 'typia';
 import { TreatmentType, TreatmentCardStatus, TreatmentProductItemType, CheckInType, SessionLogStatus } from '../../enum/treatment';
 import { BaseResponse } from '../common.type';
 import { IPartner } from '../partner-service';
+import { IStaff } from '../istaff';
 export declare namespace ITreatmentCard {
     interface IQuery {
         customer_id?: string;
@@ -81,6 +82,7 @@ export declare namespace ITreatmentCard {
         notes: string | null;
         status: SessionLogStatus;
         consumedItems?: IConsumedItemResponse[];
+        staff?: IStaff.IStaffResponse | null;
     }
     interface IConsumedItemInput {
         product_id: number;
