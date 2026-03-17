@@ -4,7 +4,7 @@ import type { IResponse } from "../../../../../../libs/shared/src/types/common.t
 export declare function getHistory(connection: IConnection, query: getHistory.Query): Promise<getHistory.Output>;
 export declare namespace getHistory {
     type Query = Resolved<IAiCredit.IHistoryQuery>;
-    type Output = Primitive<IResponse<IAiPaginationResult<IAiCredit.ICreditHistoryResponse>>>;
+    type Output = Primitive<IResponse<IAiPaginationResult<IAiCredit.ICreditTransaction>>>;
     const METADATA: {
         readonly method: "GET";
         readonly path: "/shop/ai/credit/history";

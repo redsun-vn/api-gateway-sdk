@@ -31,15 +31,18 @@ export declare namespace IAiContent {
         review_text?: string;
         review_rating?: number;
         brand_voice_id?: number;
+        language?: string;
     }
     interface IEstimateRequest {
         content_type: AIContentType;
         product_id?: number;
+        language?: string;
     }
     interface IKeywordSuggestRequest {
         product_name: string;
         category?: string;
         features?: string[];
+        language?: string;
     }
     interface IBatchGenerateRequest {
         brand_voice_id?: number;
@@ -54,6 +57,7 @@ export declare namespace IAiContent {
         keywords?: string[];
         industry_context?: Record<string, any>;
         brand_voice_id?: number;
+        language?: string;
     }
     interface IBlogGenerateRequest {
         content_type: AIContentType;
@@ -63,9 +67,11 @@ export declare namespace IAiContent {
         keywords?: string[];
         custom_prompt?: string;
         brand_voice_id?: number;
+        language?: string;
     }
     interface IBlogEstimateRequest {
         content_type: AIContentType;
+        language?: string;
     }
     interface IBrandVoiceUpsertRequest {
         is_default?: boolean;
@@ -113,7 +119,7 @@ export declare namespace IAiContent {
         status: string;
         progress?: number;
         result?: {
-            content: string;
+            content: any;
             tokens: number | string;
             credits: number | string;
         };
