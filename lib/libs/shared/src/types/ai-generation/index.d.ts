@@ -91,7 +91,7 @@ export declare namespace IAiContent {
         limit?: number;
     }
     interface IJobCreatedResponse {
-        jobId: number;
+        jobId: number | string;
     }
     interface ISuccessResponse {
         success: boolean;
@@ -108,43 +108,43 @@ export declare namespace IAiContent {
         tokens: number;
     }
     interface IJobStatusResponse {
-        jobId: number;
-        shopId: number;
+        jobId: number | string;
+        shopId: number | string;
         status: string;
         progress?: number;
         result?: {
             content: string;
-            tokens: number;
-            credits: number;
+            tokens: number | string;
+            credits: number | string;
         };
         error?: string;
         updatedAt: number;
     }
     interface IBatchGenerateResponse {
-        jobIds: number[];
+        jobIds: number | string[];
     }
     interface IContentJob {
-        id: number;
-        shop_id: number;
-        product_id: number | null;
-        product_name: string | null;
-        content_type: string;
-        tone: string | null;
-        status: string;
-        input_data: Record<string, any> | null;
-        output_data: Record<string, any> | null;
-        tokens_used: number | null;
-        credit_cost: number | null;
-        error_message: string | null;
-        user_id: string | null;
-        estimated_credits: number | null;
-        industry: string | null;
-        createdAt: Date;
-        updatedAt: Date;
+        id?: number | string;
+        shop_id?: number | string;
+        product_id?: number | string | null;
+        product_name?: string | null;
+        content_type?: string;
+        tone?: string | null;
+        status?: string;
+        input_data?: Record<string, any> | null;
+        output_data?: Record<string, any> | null;
+        tokens_used?: number | string | null;
+        credit_cost?: number | string | null;
+        error_message?: string | null;
+        user_id?: string | null;
+        estimated_credits?: number | string | null;
+        industry?: string | null;
+        createdAt?: Date | string;
+        updatedAt?: Date | string;
     }
     interface IBrandVoice {
-        id: number;
-        shop_id: number;
+        id: number | string;
+        shop_id: number | string;
         is_default: boolean;
         brand_name: string | null;
         approved_phrases: string[] | null;
@@ -153,8 +153,8 @@ export declare namespace IAiContent {
         custom_instructions: string | null;
         default_tone: string | null;
         industry: string | null;
-        createdAt: Date;
-        updatedAt: Date;
+        createdAt: Date | string;
+        updatedAt: Date | string;
     }
 }
 export declare namespace IAiCredit {
@@ -168,30 +168,32 @@ export declare namespace IAiCredit {
         limit?: number;
     }
     interface IBalanceResponse {
-        shop_id: number;
-        balance_cents: number;
-        spent_lifetime_cents: number;
+        shop_id: number | string;
+        balance_cents: number | string;
+        spent_lifetime_cents: number | string;
+        balance_credits: number | string;
+        spent_lifetime_credits: number | string;
     }
     interface ICreditTransaction {
-        id: number;
-        account_id: number;
-        type: string;
-        amount_cents: number;
-        balance_after_cents: number;
-        idempotency_key: string | null;
-        reference_type: string | null;
-        reference_id: number | null;
-        metadata: Record<string, any> | null;
-        status: string;
-        createdAt: Date;
-        updatedAt: Date;
+        id?: number | string;
+        account_id?: number | string;
+        type?: string;
+        amount_cents?: number | string;
+        balance_after_cents?: number | string;
+        idempotency_key?: string | null;
+        reference_type?: string | null;
+        reference_id?: number | string | null;
+        metadata?: Record<string, any> | null;
+        status?: string;
+        createdAt?: Date | string;
+        updatedAt?: Date | string;
     }
     interface ICreditDataResponse<T> {
         data: T;
     }
     interface ICreditHistoryResponse {
         items: ICreditTransaction[];
-        total: number;
+        total: number | string;
     }
 }
 export declare namespace IAiImage {
@@ -249,41 +251,41 @@ export declare namespace IAiImage {
         seed?: number;
     }
     interface IJobCreatedResponse {
-        jobId: number;
+        jobId: number | string;
     }
     interface IEstimateResponse {
-        credits: number;
+        credits: number | string;
         provider: string;
         model: string;
     }
     interface IFileData {
-        id: number;
+        id: number | string;
         url: string;
         path: string;
         title: string;
         mime: string;
         ext: string;
-        size: number;
-        width: number | null;
-        height: number | null;
+        size: number | string;
+        width: number | string | null;
+        height: number | string | null;
         slug?: string;
         status?: string;
     }
     interface IJobStatusResponse {
-        jobId: number;
-        shopId: number;
+        jobId: number | string;
+        shopId: number | string;
         status: string;
-        progress?: number;
+        progress?: number | string;
         result?: {
             file?: IFileData;
             provider?: string;
             operation?: string;
-            generationTimeMs?: number;
-            tokens: number;
-            credits: number;
+            generationTimeMs?: number | string;
+            tokens: number | string;
+            credits: number | string;
         };
         error?: string;
-        updatedAt: number;
+        updatedAt: number | string;
     }
 }
 export declare namespace IAiCreditPackage {
@@ -291,19 +293,19 @@ export declare namespace IAiCreditPackage {
         data: T;
     }
     interface ICreditPackage {
-        id: number;
+        id: number | string;
         name: string;
         description?: string;
-        credits: number;
-        originalPrice: number;
-        vndPrice: number;
-        discountPercent?: number;
+        credits: number | string;
+        originalPrice: number | string;
+        vndPrice: number | string;
+        discountPercent?: number | string;
         badge?: string;
-        validityDays?: number;
-        sortOrder: number;
+        validityDays?: number | string;
+        sortOrder: number | string;
         active: boolean;
-        createdAt: Date;
-        updatedAt: Date;
+        createdAt: Date | string;
+        updatedAt: Date | string;
     }
     interface ICreateRequest {
         name: string;
@@ -342,14 +344,14 @@ export declare namespace IAiCreditPackage {
         shop_id?: number;
     }
     interface IPurchase {
-        id: number;
-        shopId: number;
-        packageId: number;
+        id: number | string;
+        shopId: number | string;
+        packageId: number | string;
         packageName: string;
-        credits: number;
-        amountPaid: number;
-        transactionId?: number;
-        createdAt: Date;
+        credits: number | string;
+        amountPaid: number | string;
+        transactionId?: number | string;
+        createdAt: Date | string;
     }
     interface IDeleteResponse {
         success: boolean;
@@ -382,7 +384,7 @@ export declare namespace IAiSystemConfig {
         success: boolean;
     }
     interface ICreditPriceVndResponse {
-        price_vnd: number;
+        price_vnd: number | string;
     }
     interface IGetTextCreditsRequest {
         tier: string;
@@ -391,12 +393,12 @@ export declare namespace IAiSystemConfig {
         provider_key: string;
     }
     interface ICreditsResponse {
-        credits: number;
+        credits: number | string;
     }
     interface ICreditPackage {
         name: string;
-        credits: number;
-        vnd_price: number;
+        credits: number | string;
+        vnd_price: number | string;
         active: boolean;
     }
 }
