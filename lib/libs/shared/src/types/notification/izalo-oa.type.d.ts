@@ -48,6 +48,13 @@ export declare namespace IZaloOA {
         limit?: number;
         status?: number;
     }
+    enum ZNSTemplateStatus {
+        ENABLE = 1,
+        PENDING_REVIEW = 2,
+        REJECT = 3,
+        DISABLE = 4
+    }
+    const ZNSTemplateStatusMap: Record<ZNSTemplateStatus, IZNSTemplateListItem['status']>;
     interface IZNSTemplateSendRequest {
         shop_id: number;
         phone: string;
