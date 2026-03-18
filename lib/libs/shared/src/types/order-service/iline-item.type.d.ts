@@ -1,5 +1,6 @@
 import { tags } from 'typia';
 import { BaseResponse, ITimeSlot } from '../common.type';
+import { BillingType } from '../../enum/billing/billing-type.enum';
 import { KitchenProcessingStatus, OrderFulfillmentStatus } from '../../enum';
 import { ILineItemTaxLine } from './iline-item-tax-line.type';
 import { IOrder } from './iorder.type';
@@ -49,6 +50,7 @@ export declare namespace ILineItem {
         lineItemTaxLines?: ILineItemTaxLine.IInputLineItemTaxLine[] | null;
         selectionGroups?: ILineItemSelectionGroup.IInputLineItemSelectionGroup[] | null;
         isCalculatedByHour?: boolean;
+        billingType?: BillingType | null;
         isRecurring?: boolean;
         recurrencePeriod?: string;
         recurrenceDuration?: number | string;
@@ -103,6 +105,7 @@ export declare namespace ILineItem {
         sequenece?: number;
         userId?: string;
         isCalculatedByHour?: boolean;
+        billingType?: BillingType | null;
         isRecurring?: boolean;
         recurrencePeriod?: string;
         recurrenceDuration?: number | string;
@@ -164,6 +167,7 @@ export declare namespace ILineItem {
         selectionGroups?: ILineItemSelectionGroup.IDetailLineItemSelectionGroupResponse[] | null;
         saleOrder?: ISaleOrder.IResponse | null;
         isCalculatedByHour?: boolean;
+        billingType?: BillingType | null;
         isRecurring?: boolean;
         recurrencePeriod?: string;
         recurrenceDuration?: number | string;

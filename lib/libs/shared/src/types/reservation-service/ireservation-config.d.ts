@@ -12,6 +12,12 @@ export declare namespace IReservationConfig {
     interface ICreate {
         product_ids?: string[];
         staff_ids?: string[];
+        nightlyCheckInTime?: string;
+        nightlyCheckOutTime?: string;
+        earlyCheckInSurchargePerHour?: number;
+        lateCheckOutSurchargePerHour?: number;
+        cancellationMinimumCharge?: number | null;
+        cancellationFeePercent?: number | null;
         automation_settings?: AutomationSettings;
     }
     interface IUpdate extends Partial<ICreate> {
@@ -20,6 +26,11 @@ export declare namespace IReservationConfig {
         shop_id: number | string;
         product_ids?: string[] | null;
         staff_ids?: string[] | null;
+        nightlyCheckInTime?: string | null;
+        nightlyCheckOutTime?: string | null;
+        lateCheckOutSurchargePerHour?: number | null;
+        cancellationMinimumCharge?: number | null;
+        cancellationFeePercent?: number | null;
         automation_settings?: AutomationSettings | null;
     }
 }

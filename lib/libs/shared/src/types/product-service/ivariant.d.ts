@@ -4,6 +4,7 @@ import { IStockQuantity } from '../inventory-service';
 import { IProduct } from './iproduct';
 import { IUnit } from './iunit';
 import { IProductOption } from './iproduct-option';
+import { BillingType } from '../../enum/billing/billing-type.enum';
 export declare namespace IVariant {
     interface IVariantStockInput {
         stock_location_id: number & tags.Type<'uint64'>;
@@ -43,6 +44,7 @@ export declare namespace IVariant {
         totalInventory?: number;
         weight?: number;
         expiredAt?: string & tags.Format<'date-time'>;
+        billingType?: BillingType | null;
         userId?: string;
         unit?: IRefCreateUnit;
         selectedOptionIds?: number[];
@@ -68,6 +70,7 @@ export declare namespace IVariant {
         totalInventory?: number;
         weight?: number;
         expiredAt?: string & tags.Format<'date-time'>;
+        billingType?: BillingType | null;
         userId?: string;
         selectedOptionIds?: number[];
         variantStocks?: IVariantStockInput[];
@@ -95,6 +98,7 @@ export declare namespace IVariant {
         expiredAt: string | undefined | null;
         createdBy?: string | undefined | null;
         updatedBy?: string | undefined | null;
+        billingType?: BillingType | string | null;
         unit?: IUnit.IDetailUnitResponse | null;
         variantStocks?: IStockQuantity.IStockQuantityResponse[] | null;
         selectedOptions?: IProductOption.IDetailProductOptionResponse[] | null;
