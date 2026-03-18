@@ -49,12 +49,12 @@ export declare namespace IZaloOA {
         status?: number;
     }
     interface IZNSTemplateSendRequest {
-        access_token?: string;
+        shop_id: number;
         phone: string;
-        template_id: string;
-        template_data: Record<string, any>;
-        tracking_id?: string;
-        mode?: 'development';
+        templateId: string;
+        data: Record<string, any>;
+        trackingId?: string;
+        mode?: 'development' | 'production';
     }
     interface IZNSTemplateSendResponse {
         error: number;
@@ -155,7 +155,7 @@ export declare namespace IZaloOA {
         status?: AppointmentReminderStatus;
     }
     interface IAppointmentReminderResponse extends BaseResponse {
-        shop_id: number;
+        shop_id: number | string;
         customer_phone: string;
         customer_name: string;
         appointment_time: Date | string;
@@ -164,6 +164,7 @@ export declare namespace IZaloOA {
         branch_address?: string | null;
         note?: string | null;
         zalo_template_id?: string | null;
+        zalo_template_data?: Record<string, any> | null;
         remind_before_minutes?: number | null;
         status: AppointmentReminderStatus;
         error_message?: string | null;

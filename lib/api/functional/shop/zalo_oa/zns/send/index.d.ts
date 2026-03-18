@@ -3,7 +3,7 @@ import type { IResponse } from "../../../../../../libs/shared/src/types/common.t
 import type { IZaloOA } from "../../../../../../libs/shared/src/types/notification/izalo-oa.type";
 export declare function sendZNSTemplate(connection: IConnection, input: sendZNSTemplate.Input): Promise<sendZNSTemplate.Output>;
 export declare namespace sendZNSTemplate {
-    type Input = Resolved<IZaloOA.IZNSTemplateSendRequest>;
+    type Input = Resolved<Omit<IZaloOA.IZNSTemplateSendRequest, "shop_id">>;
     type Output = Primitive<IResponse<IZaloOA.IZNSTemplateSendResponse>>;
     const METADATA: {
         readonly method: "POST";
