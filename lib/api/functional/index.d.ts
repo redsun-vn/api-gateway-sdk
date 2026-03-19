@@ -23,6 +23,7 @@ export * as product from "./product";
 export * as pricebook from "./pricebook";
 export * as uom_uoms from "./uom_uoms";
 export * as variants from "./variants";
+export * as booking from "./booking";
 export * as e_menu from "./e_menu";
 export * as qr_order from "./qr_order";
 export * as application from "./application";

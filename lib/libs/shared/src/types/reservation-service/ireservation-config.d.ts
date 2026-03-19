@@ -28,9 +28,9 @@ export declare namespace IReservationConfig {
         staff_ids?: string[] | null;
         nightlyCheckInTime?: string | null;
         nightlyCheckOutTime?: string | null;
-        lateCheckOutSurchargePerHour?: number | null;
-        cancellationMinimumCharge?: number | null;
-        cancellationFeePercent?: number | null;
+        lateCheckOutSurchargePerHour?: number | string | null;
+        cancellationMinimumCharge?: number | string | null;
+        cancellationFeePercent?: number | string | null;
         automation_settings?: AutomationSettings | null;
     }
 }

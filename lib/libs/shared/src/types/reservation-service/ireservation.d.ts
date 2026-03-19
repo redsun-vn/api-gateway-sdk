@@ -47,6 +47,46 @@ export declare namespace IReservation {
         tables?: null | ITable.ITableResponse[];
         personInChargeId?: number | string | null;
     }
+    interface IBookingConfigQuery {
+        shop_id: number;
+        branch_id: number;
+    }
+    interface IBookingAvailabilityQuery extends IBookingConfigQuery {
+        startDate: string;
+        endDate: string;
+    }
+    interface IGuestReservationCreate {
+        shop_id: number;
+        branch_id: number;
+        table_ids: string[];
+        startDate: string;
+        endDate: string;
+        adult: number;
+        child?: number;
+        guest_name: string;
+        guest_phone: string;
+        guest_email?: string;
+        note?: string;
+    }
+    interface IBookingConfigTable {
+        id: number | string;
+        name: string;
+        maxAdult: number | null;
+        maxChild: number | null;
+        description: string | null;
+        product_id: number | null;
+    }
+    interface IBookingConfigResponse {
+        tables: IBookingConfigTable[];
+    }
+    interface IBookingAvailabilityResponse {
+        available_tables: IBookingConfigTable[];
+    }
+    interface IGuestReservationResponse {
+        reservation_code: string;
+        status: ReservationStatus;
+        message: string;
+    }
     interface IReservationOverlap {
         message: string;
         data: IReservationResponse[];
