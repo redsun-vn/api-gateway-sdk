@@ -86,7 +86,7 @@ export declare namespace IAiContent {
     interface IHistoryQuery {
         page?: number;
         limit?: number;
-        content_type?: AIContentType;
+        content_type?: string;
         status?: string;
         from_date?: string;
         to_date?: string;
