@@ -49,6 +49,7 @@ export * as shops from "./shops";
 export * as shop_sales_channels from "./shop_sales_channels";
 export * as otp from "./otp";
 export * as staffs from "./staffs";
+export * as shop_subscription_public from "./shop_subscription_public";
 export * as public_inventory from "./public_inventory";
 export * as omnichannel from "./omnichannel";
 export * as shipping_providers from "./shipping_providers";

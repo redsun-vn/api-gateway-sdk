@@ -34,8 +34,8 @@ export declare namespace IReservation {
         branch_id: number | string;
         partner_id: number | string;
         staff_id: number | string;
-        adult?: number | null;
-        child?: number | null;
+        adult?: number | string | null;
+        child?: number | string | null;
         startDate: string;
         endDate: string;
         confirmed: boolean;
@@ -71,10 +71,10 @@ export declare namespace IReservation {
     interface IBookingConfigTable {
         id: number | string;
         name: string;
-        maxAdult: number | null;
-        maxChild: number | null;
+        maxAdult: number | string | null;
+        maxChild: number | string | null;
         description: string | null;
-        product_id: number | null;
+        product_id: number | string | null;
     }
     interface IBookingConfigResponse {
         tables: IBookingConfigTable[];

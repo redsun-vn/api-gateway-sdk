@@ -30,6 +30,14 @@ export declare namespace ISubscription {
         userRemain: number;
         plans: IPackagePlan.IResponse[];
     };
+    type IStatsPublic = {
+        branchTotalRemain: number;
+        deviceRemain: number;
+        daysRemain: number;
+        userRemain: number;
+        plans: IPackagePlan.IResponse[];
+        controllers?: string[];
+    };
     interface ISubscriptionResponse extends BaseResponse {
         package_id: string;
         shop_id: string;
