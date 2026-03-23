@@ -139,6 +139,9 @@ export declare namespace IAiContent {
         status?: string;
         input_data?: Record<string, any> | null;
         output_data?: Record<string, any> | null;
+        output_media?: Record<string, any> | null;
+        image_provider?: string | null;
+        image_operation?: string | null;
         tokens_used?: number | string | null;
         credit_cost?: number | string | null;
         error_message?: string | null;
@@ -147,6 +150,7 @@ export declare namespace IAiContent {
         industry?: string | null;
         createdAt?: Date | string;
         updatedAt?: Date | string;
+        completed_at?: Date | string;
     }
     interface IBrandVoice {
         id: number | string;
