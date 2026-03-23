@@ -27,7 +27,7 @@ export declare enum RECEIPT_LINE_ITEM_TYPE_ENUM {
     BRANCH_QUANTITY = "branch_quantity",
     THEME = "theme",
     DOMAIN = "domain",
-    AI_CREDIT = "ai_credit"
+    AI_CREDIT_PACKAGE = "ai_credit_package"
 }
 export declare enum RECEIPT_PRIORITY_ENUM {
     URGENT = "urgent",
