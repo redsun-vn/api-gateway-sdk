@@ -205,6 +205,37 @@ export declare namespace IAiCredit {
         items: ICreditTransaction[];
         total: number | string;
     }
+    interface IStatsQuery {
+        from?: string;
+        to?: string;
+    }
+    interface IStatsMonthlyUsage {
+        period: string;
+        total_credits: number | string;
+        total_transactions: number | string;
+        prev_month_credits: number | string;
+        change_percent: number | string;
+    }
+    interface IStatsDailyTrend {
+        date: string;
+        credits: number | string;
+        count: number | string;
+    }
+    interface IStatsUsageByType {
+        type: string;
+        credits: number | string;
+        count: number | string;
+        percent: number | string;
+    }
+    interface IStatsResponse {
+        balance: {
+            current_credits: number | string;
+            spent_lifetime_credits: number | string;
+        };
+        monthly_usage: IStatsMonthlyUsage;
+        daily_trend: IStatsDailyTrend[];
+        usage_by_type: IStatsUsageByType[];
+    }
 }
 export declare namespace IAiImage {
     interface IGenerateRequest {
@@ -305,13 +336,13 @@ export declare namespace IAiCreditPackage {
     interface ICreditPackage {
         id: number | string;
         name: string;
-        description?: string;
+        description?: string | null;
         credits: number | string;
         originalPrice: number | string;
         vndPrice: number | string;
-        discountPercent?: number | string;
-        badge?: string;
-        validityDays?: number | string;
+        discountPercent?: number | string | null;
+        badge?: string | null;
+        validityDays?: number | string | null;
         sortOrder: number | string;
         active: boolean;
         createdAt: Date | string;
