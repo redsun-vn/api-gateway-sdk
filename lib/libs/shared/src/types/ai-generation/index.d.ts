@@ -338,12 +338,12 @@ export declare namespace IAiCreditPackage {
         name: string;
         description?: string | null;
         credits: number | string;
-        originalPrice: number | string;
-        vndPrice: number | string;
-        discountPercent?: number | string | null;
+        original_price: number | string;
+        vnd_price: number | string;
+        discount_percent?: number | string | null;
         badge?: string | null;
-        validityDays?: number | string | null;
-        sortOrder: number | string;
+        validity_days?: number | string | null;
+        sort_order: number | string;
         active: boolean;
         createdAt: Date | string;
         updatedAt: Date | string;
