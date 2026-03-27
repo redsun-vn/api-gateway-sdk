@@ -3,3 +3,4 @@ export * from './deal';
 export * from './quote';
 export * from './crm';
 export * from './customer';
+export * from './customer-company';

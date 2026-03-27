@@ -150,7 +150,7 @@ export declare namespace IAiContent {
         industry?: string | null;
         createdAt?: Date | string;
         updatedAt?: Date | string;
-        completed_at?: Date | string;
+        completed_at?: Date | string | null;
     }
     interface IBrandVoice {
         id: number | string;
@@ -402,10 +402,10 @@ export declare namespace IAiSystemConfig {
     interface IConfigEntity {
         config_key: string;
         config_value: Record<string, any> | string | number | boolean | null;
-        description?: string;
-        updated_by?: string;
-        created_at?: string;
-        updated_at?: string;
+        description?: string | null;
+        updated_by?: string | null;
+        createdAt?: string;
+        updatedAt?: string;
     }
     interface IGetRequest {
         config_key: string;
