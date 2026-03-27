@@ -184,4 +184,25 @@ export declare namespace IOmnichannelShopConfig {
             error: string;
         }>;
     }
+    interface IAuthorizeToken {
+        provider: string;
+        code: string;
+        shopId?: string;
+        redirectUri?: string;
+    }
+    interface IRefreshTokenForProvider {
+        provider: string;
+        refreshToken?: string;
+        configId?: number;
+    }
+    interface IGetShopInfo {
+        provider: string;
+        configId?: number;
+    }
+    interface IUpdate {
+        isActive?: boolean;
+        shopName?: string;
+        accessToken?: string;
+        refreshToken?: string;
+    }
 }

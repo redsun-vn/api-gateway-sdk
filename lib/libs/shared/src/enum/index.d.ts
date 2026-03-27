@@ -19,6 +19,7 @@ export * from './admin-service';
 export * from './cms';
 export * from './seed-data.enum';
 export * from './comment-service';
+export * from './treatment';
 export * from './omnichannel-service';
 export * from './ai-content';
 export * from './billing';

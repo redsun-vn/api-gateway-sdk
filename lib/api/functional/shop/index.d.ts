@@ -69,6 +69,7 @@ export * as subscriptions from "./subscriptions";
 export * as system_pricebook from "./system_pricebook";
 export * as inventory from "./inventory";
 export * as omnichannel_configs from "./omnichannel_configs";
+export * as omnichannel from "./omnichannel";
 export * as activity from "./activity";
 export * as fulfillment_orders from "./fulfillment_orders";
 export * as fulfillments from "./fulfillments";
