@@ -10,6 +10,7 @@ export * as business_types from "./business_types";
 export * as category_business from "./category_business";
 export * as category_print_template from "./category_print_template";
 export * as invoices from "./invoices";
+export * as main_packages from "./main_packages";
 export * as packages from "./packages";
 export * as payment_methods from "./payment_methods";
 export * as print_template from "./print_template";

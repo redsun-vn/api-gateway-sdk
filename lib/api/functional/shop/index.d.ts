@@ -51,6 +51,7 @@ export * as domains from "./domains";
 export * as groups from "./groups";
 export * as hr_report from "./hr_report";
 export * as invoices from "./invoices";
+export * as main_packages from "./main_packages";
 export * as payment_configs from "./payment_configs";
 export * as pos_configs from "./pos_configs";
 export * as pos_printers from "./pos_printers";

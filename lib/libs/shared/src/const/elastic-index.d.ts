@@ -111,6 +111,7 @@ export declare const ELASTIC_INDEX: {
     ORDER: string;
     ORDER_RECONCILIATION: string;
     PACKAGE: string;
+    PACKAGE_MAIN: string;
     PAYMENT_CONFIG: string;
     PAYMENT_CARD: string;
     PAYMENT_METHOD: string;

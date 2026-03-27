@@ -25,6 +25,10 @@ export declare namespace IPackage {
         business_ids?: string[];
         sale_channel_ids?: string[];
         category_business_id?: number | null;
+        mainPackageId?: number;
+        creditAI?: number;
+        limitProduct?: number;
+        limitOrderPerMonth?: number;
     }
     interface IUpdate extends Omit<Partial<ICreate>, 'packageAdditions'> {
     }
@@ -55,6 +59,10 @@ export declare namespace IPackage {
         level?: number | null;
         packageAdditions?: IPackageAddition.IResponse[];
         appPlan?: IApplicationPlan.IResponse[];
+        mainPackageId?: number | string | null;
+        creditAI?: number | string | null;
+        limitProduct?: number | string | null;
+        limitOrderPerMonth?: number | string | null;
     }
     interface PackageReportRequest {
         periodDays?: number;
@@ -106,5 +114,45 @@ export declare namespace IPackage {
         summary: PackageReportSummary;
         generatedAt: Date | string;
         periodDays: number;
+    }
+}
+export declare namespace IPackageMain {
+    interface ICreate {
+        name: string;
+        active?: boolean;
+        code?: string;
+        description?: string;
+        limitUser?: number;
+        limitDevice?: number;
+        limitBranch?: number;
+        numberOfGuides?: number;
+        metadata?: string[];
+        sale_channel_ids?: string[];
+        category_business_id?: number | null;
+        creditAI?: number;
+        limitProduct?: number;
+        limitOrderPerMonth?: number;
+        icon?: string;
+        color?: string;
+    }
+    type IUpdate = Omit<Partial<ICreate>, 'code'>;
+    interface IResponse extends BaseResponse {
+        name: string;
+        code?: string | null;
+        active: boolean;
+        description?: string | null;
+        limitUser?: number | null;
+        limitDevice?: number | null;
+        limitBranch?: number | null;
+        numberOfGuides?: number | null;
+        metadata?: string[] | null;
+        sale_channel_ids?: string[] | null;
+        category_business_id?: string | number | null;
+        creditAI?: number | null;
+        limitProduct?: number | null;
+        limitOrderPerMonth?: number | null;
+        icon?: string | null;
+        color?: string | null;
+        packages?: IPackage.IPackageResponse[];
     }
 }
