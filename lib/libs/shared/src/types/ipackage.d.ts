@@ -29,6 +29,7 @@ export declare namespace IPackage {
         creditAI?: number;
         limitProduct?: number;
         limitOrderPerMonth?: number;
+        isFeatured?: boolean;
     }
     interface IUpdate extends Omit<Partial<ICreate>, 'packageAdditions'> {
     }
@@ -63,6 +64,7 @@ export declare namespace IPackage {
         creditAI?: number | string | null;
         limitProduct?: number | string | null;
         limitOrderPerMonth?: number | string | null;
+        isFeatured?: boolean | null;
     }
     interface PackageReportRequest {
         periodDays?: number;
