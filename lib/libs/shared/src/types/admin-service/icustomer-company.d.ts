@@ -29,6 +29,8 @@ export declare namespace IAdminCustomerCompany {
         customerId: number;
         shopIds?: number[] | null;
         companyId?: string;
+        customerType?: string;
+        startDate?: string;
     }
     interface IUpdate extends Partial<ICreate> {
     }
@@ -51,6 +53,8 @@ export declare namespace IAdminCustomerCompany {
         contactPhone?: string | null;
         contactPosition?: string | null;
         customerId?: number | string | null;
+        customerType?: string | null;
+        startDate?: string | null;
         shops?: IAdminCustomerCompanyShop.IResponse[] | null;
     }
 }
