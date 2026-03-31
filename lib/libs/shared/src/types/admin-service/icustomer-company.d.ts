@@ -1,6 +1,7 @@
 import { tags } from 'typia';
 import { BaseResponse } from '../common.type';
 import { AdminCCompanySize, AdminCustomerCompanyStatus } from '../../enum/admin-service/customer-company';
+import { IStaff } from '../istaff';
 export declare namespace IAdminCustomerCompanyShop {
     interface IResponse extends BaseResponse {
         shopId?: number | null;
@@ -26,11 +27,20 @@ export declare namespace IAdminCustomerCompany {
         contactEmail?: (string & tags.Format<'email'>) | null;
         contactPhone?: string | null;
         contactPosition?: string | null;
-        customerId: number;
+        customerId?: number;
         shopIds?: number[] | null;
         companyId?: string;
         customerType?: string;
         startDate?: string;
+        city?: string;
+        ward?: string;
+        interestLevel?: string;
+        estimatedBudget?: string;
+        leadSource?: string;
+        funnelStatus?: string;
+        assignedStaffId?: string;
+        isSendEmailCongratulation?: boolean;
+        enableNotiPay?: boolean;
     }
     interface IUpdate extends Partial<ICreate> {
     }
@@ -56,5 +66,15 @@ export declare namespace IAdminCustomerCompany {
         customerType?: string | null;
         startDate?: string | null;
         shops?: IAdminCustomerCompanyShop.IResponse[] | null;
+        city?: string | null;
+        ward?: string | null;
+        interestLevel?: string | null;
+        estimatedBudget?: string | null;
+        leadSource?: string | null;
+        funnelStatus?: string | null;
+        assignedStaffId?: string | null;
+        assignedStaff?: IStaff.IStaffResponse | null;
+        isSendEmailCongratulation?: boolean;
+        enableNotiPay?: boolean;
     }
 }
