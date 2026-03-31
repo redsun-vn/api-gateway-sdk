@@ -76,7 +76,6 @@ export declare namespace IAdminCustomerCompany {
         funnelStatus?: string | null;
         assignedStaffId?: string | null;
         assignedStaff?: IStaff.IStaffResponse | null;
-        isSendEmailCongratulation?: boolean;
-        enableNotiPay?: boolean;
+        advancedSetting?: any;
     }
 }
