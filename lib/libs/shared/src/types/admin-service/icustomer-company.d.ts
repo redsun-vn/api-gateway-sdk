@@ -34,6 +34,7 @@ export declare namespace IAdminCustomerCompany {
         startDate?: string;
         city?: string;
         ward?: string;
+        interestedProduct?: string | null;
         interestLevel?: string;
         estimatedBudget?: string;
         leadSource?: string;
@@ -68,6 +69,7 @@ export declare namespace IAdminCustomerCompany {
         shops?: IAdminCustomerCompanyShop.IResponse[] | null;
         city?: string | null;
         ward?: string | null;
+        interestedProduct?: string | null;
         interestLevel?: string | null;
         estimatedBudget?: string | null;
         leadSource?: string | null;
