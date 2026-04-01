@@ -1,6 +1,6 @@
 import { tags } from 'typia';
 import { BaseResponse } from './common.type';
-import { PACKAGE_LEVEL_SUPPORT_ENUM } from '../enum/shop-service';
+import { PACKAGE_LEVEL_SUPPORT_ENUM, PACKAGE_MAIN_SALES_STATUS_ENUM } from '../enum/shop-service';
 import { IPackageAddition } from './ipackage-addition';
 import { IApplicationPlan } from './shop-service';
 export declare namespace IPackage {
@@ -136,6 +136,8 @@ export declare namespace IPackageMain {
         limitOrderPerMonth?: number;
         icon?: string;
         color?: string;
+        version?: string;
+        salesStatus?: PACKAGE_MAIN_SALES_STATUS_ENUM;
     }
     type IUpdate = Omit<Partial<ICreate>, 'code'>;
     interface IResponse extends BaseResponse {
@@ -156,5 +158,7 @@ export declare namespace IPackageMain {
         icon?: string | null;
         color?: string | null;
         packages?: IPackage.IPackageResponse[];
+        version?: string | null;
+        salesStatus?: string | null;
     }
 }

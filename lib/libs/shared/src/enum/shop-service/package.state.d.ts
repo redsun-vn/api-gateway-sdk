@@ -19,3 +19,9 @@ export declare enum PACKAGE_ADDITION_TARGET_ENUM {
     USER = "user",
     BRANCH = "branch"
 }
+export declare enum PACKAGE_MAIN_SALES_STATUS_ENUM {
+    ACTIVE_HIDDEN = "active_hidden",
+    ACTIVE_SELLING = "active_selling",
+    MAINTAINING = "maintaining",
+    INACTIVE = "inactive"
+}
