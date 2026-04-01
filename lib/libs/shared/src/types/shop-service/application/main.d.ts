@@ -2,6 +2,7 @@ import { tags } from 'typia';
 import { BaseResponse } from '../../common.type';
 import { IApplication } from './application';
 import { IApplicationCategory } from './category';
+import { APPLICATION_MAIN_SALES_STATUS_ENUM } from '../../../enum';
 export declare namespace IApplicationMain {
     interface ICreate {
         name: string;
@@ -17,6 +18,8 @@ export declare namespace IApplicationMain {
         fullName?: string;
         isSystem?: boolean;
         isActive?: boolean;
+        version?: string;
+        salesStatus?: APPLICATION_MAIN_SALES_STATUS_ENUM;
     }
     interface IUpdate extends Partial<ICreate> {
     }
@@ -35,5 +38,7 @@ export declare namespace IApplicationMain {
         fullName?: string | null;
         isSystem?: boolean | null;
         isActive?: boolean | null;
+        version?: string | null;
+        salesStatus?: string | null;
     }
 }

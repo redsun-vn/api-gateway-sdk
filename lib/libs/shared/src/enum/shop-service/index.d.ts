@@ -14,3 +14,9 @@ export declare enum CREATE_SHOP_FROM_SOURCE_ENUM {
     SIPOS = "sipos.vn",
     WEBINO = "webino.vn"
 }
+export declare enum APPLICATION_MAIN_SALES_STATUS_ENUM {
+    ACTIVE_HIDDEN = "active_hidden",
+    ACTIVE_SELLING = "active_selling",
+    MAINTAINING = "maintaining",
+    INACTIVE = "inactive"
+}
