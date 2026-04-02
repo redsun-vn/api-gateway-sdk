@@ -3,6 +3,7 @@ import { IApplicationMain } from './main';
 import { IApplicationController } from './controller';
 import { IApplicationPlan } from './application-plan';
 import { BaseResponse } from '../../common.type';
+import { APPLICATION_MAIN_SALES_STATUS_ENUM } from '../../../enum/shop-service';
 export declare namespace IApplication {
     interface ICreate {
         name: string;
@@ -26,6 +27,7 @@ export declare namespace IApplication {
         isPopular?: boolean;
         rating?: number;
         totalRating?: number;
+        salesStatus?: APPLICATION_MAIN_SALES_STATUS_ENUM;
     }
     interface IUpdate extends Partial<ICreate> {
     }
@@ -53,5 +55,6 @@ export declare namespace IApplication {
         isPopular?: boolean | null;
         rating?: number | string | null;
         totalRating?: number | string | null;
+        salesStatus?: string | null;
     }
 }
