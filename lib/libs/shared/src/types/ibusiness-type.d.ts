@@ -16,6 +16,7 @@ export declare namespace IBusinessType {
         description?: string;
         icon?: string;
         metadata?: Record<string, unknown>;
+        category_business_id?: string;
     }
     interface IBusinessTypeResponse extends BaseResponse {
         name: string;
