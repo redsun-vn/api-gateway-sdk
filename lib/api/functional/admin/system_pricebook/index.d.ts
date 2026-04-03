@@ -3,6 +3,7 @@ import type { IResponse, IQuery, IResponsePagination } from "../../../../libs/sh
 import type { ISystemPricebook } from "../../../../libs/shared/src/types/shop-service/system-pricebook.type";
 export * as entry from "./entry";
 export * as entry_bulk from "./entry_bulk";
+export * as price from "./price";
 export declare function create(connection: IConnection, data: create.Input): Promise<create.Output>;
 export declare namespace create {
     type Input = Resolved<ISystemPricebook.ICreate>;

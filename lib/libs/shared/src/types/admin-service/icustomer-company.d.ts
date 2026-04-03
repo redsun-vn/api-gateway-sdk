@@ -4,8 +4,8 @@ import { AdminCCompanySize, AdminCustomerCompanyStatus } from '../../enum/admin-
 import { IStaff } from '../istaff';
 export declare namespace IAdminCustomerCompanyShop {
     interface IResponse extends BaseResponse {
-        shopId?: number | null;
-        customerCompanyId?: number | null;
+        shopId?: number | string | null;
+        customerCompanyId?: number | string | null;
     }
 }
 export declare namespace IAdminCustomerCompany {
