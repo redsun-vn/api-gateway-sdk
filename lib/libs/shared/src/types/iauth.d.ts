@@ -67,4 +67,8 @@ export declare namespace IAuth {
         phone: string;
         first_name?: null | string;
     }
+    interface IResetPasswordFromAdmin {
+        user_id: string & tags.Format<'uuid'>;
+        password: string;
+    }
 }
