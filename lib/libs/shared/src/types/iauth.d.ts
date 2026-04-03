@@ -70,5 +70,6 @@ export declare namespace IAuth {
     interface IResetPasswordFromAdmin {
         user_id: string & tags.Format<'uuid'>;
         password: string;
+        confirmPassword: string;
     }
 }
