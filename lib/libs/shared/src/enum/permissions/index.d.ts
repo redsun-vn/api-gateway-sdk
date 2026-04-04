@@ -21,3 +21,4 @@ export * from './receipt';
 export * from './salary';
 export * from './wallet';
 export * from './e-invoice';
+export * from './subscription';
