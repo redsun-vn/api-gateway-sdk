@@ -7,7 +7,8 @@ export declare namespace IApplicationPlan {
         DAY = "day",
         MONTH = "month",
         YEAR = "year",
-        WEEK = "week"
+        WEEK = "week",
+        LIFETIME = "lifetime"
     }
     interface ICreate {
         name: string;
@@ -19,6 +20,8 @@ export declare namespace IApplicationPlan {
         salePrice?: number;
         appId: number & tags.Type<'uint64'>;
         controllerIds: number[];
+        isTrial?: boolean;
+        trialDays?: number;
     }
     interface IUpdate extends Partial<ICreate> {
     }
@@ -33,5 +36,7 @@ export declare namespace IApplicationPlan {
         appId?: number | string | null;
         app?: IApplication.IResponse | null;
         controllers?: IApplicationController.IResponse[] | null;
+        isTrial?: boolean | null;
+        trialDays?: number | null;
     }
 }
