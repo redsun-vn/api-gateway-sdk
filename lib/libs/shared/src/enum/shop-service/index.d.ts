@@ -3,6 +3,7 @@ export * from './receipt';
 export * from './promotion';
 export * from './invoice';
 export * from './system-pricebook';
+export * from './resource-addon';
 export declare enum E_INVOICE_PROVIDER_ENUM {
     MOBI_INVOICE = "mobi",
     VIETTEL_INVOICE = "viettel",
@@ -19,4 +20,9 @@ export declare enum APPLICATION_MAIN_SALES_STATUS_ENUM {
     ACTIVE_SELLING = "active_selling",
     MAINTAINING = "maintaining",
     INACTIVE = "inactive"
+}
+export declare enum APPLICATION_PRICING_TYPE_ENUM {
+    FREE = "free",
+    LIFETIME = "lifetime",
+    SUBSCRIPTION = "subscription"
 }

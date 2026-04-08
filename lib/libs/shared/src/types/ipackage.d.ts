@@ -3,6 +3,7 @@ import { BaseResponse } from './common.type';
 import { PACKAGE_LEVEL_SUPPORT_ENUM, PACKAGE_MAIN_SALES_STATUS_ENUM } from '../enum/shop-service';
 import { IPackageAddition } from './ipackage-addition';
 import { IApplicationPlan } from './shop-service';
+import { IResourceAddon } from './iresource-addon';
 export declare namespace IPackage {
     interface ICreate {
         name: string;
@@ -22,6 +23,7 @@ export declare namespace IPackage {
         level?: number;
         packageAdditions?: IPackageAddition.ICreate[];
         appPlanIds?: number[] | [];
+        resourceAddonIds?: number[] | [];
         business_ids?: string[];
         sale_channel_ids?: string[];
         category_business_id?: number | null;
@@ -31,8 +33,7 @@ export declare namespace IPackage {
         limitOrderPerMonth?: number;
         isFeatured?: boolean;
     }
-    interface IUpdate extends Omit<Partial<ICreate>, 'packageAdditions'> {
-    }
+    type IUpdate = Omit<Partial<ICreate>, 'packageAdditions' | 'code'> & {};
     interface ICreateAdditions {
         packageAdditions: IPackageAddition.ICreate[];
     }
@@ -60,6 +61,7 @@ export declare namespace IPackage {
         level?: number | null;
         packageAdditions?: IPackageAddition.IResponse[];
         appPlan?: IApplicationPlan.IResponse[];
+        resourceAddons?: IResourceAddon.IResponse[];
         mainPackageId?: number | string | null;
         creditAI?: number | string | null;
         limitProduct?: number | string | null;

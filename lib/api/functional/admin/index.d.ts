@@ -19,6 +19,7 @@ export * as vouchers from "./vouchers";
 export * as receipts from "./receipts";
 export * as receipts_stats from "./receipts_stats";
 export * as receipts_refund_stats from "./receipts_refund_stats";
+export * as resource_addons from "./resource_addons";
 export * as sales_channels from "./sales_channels";
 export * as shipping_methods from "./shipping_methods";
 export * as shops from "./shops";
