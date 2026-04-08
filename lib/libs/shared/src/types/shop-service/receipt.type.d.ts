@@ -61,6 +61,7 @@ export declare namespace IReceipt {
         packageId?: number;
         packageAdditionIds?: number[];
         appPlanIds?: number[];
+        resourceAddonIds?: number[];
         billingCycle?: string;
         quantity?: number;
         paymentMethod?: string;

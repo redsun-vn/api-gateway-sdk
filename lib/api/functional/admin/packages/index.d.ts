@@ -55,7 +55,7 @@ export declare namespace create {
 }
 export declare function update(connection: IConnection, id: string, data: update.Input): Promise<update.Output>;
 export declare namespace update {
-    type Input = Resolved<Omit<Partial<IPackage.ICreate>, "code" | "packageAdditions">>;
+    type Input = Resolved<IPackage.IUpdate>;
     type Output = Primitive<IResponse<false | true>>;
     const METADATA: {
         readonly method: "PUT";
