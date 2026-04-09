@@ -33,7 +33,7 @@ export declare namespace IPackage {
         limitOrderPerMonth?: number;
         isFeatured?: boolean;
     }
-    interface IUpdate extends Omit<Partial<ICreate>, 'packageAdditions' | 'code'> {
+    interface IUpdate extends Omit<Partial<ICreate>, 'packageAdditions'> {
     }
     interface ICreateAdditions {
         packageAdditions: IPackageAddition.ICreate[];
