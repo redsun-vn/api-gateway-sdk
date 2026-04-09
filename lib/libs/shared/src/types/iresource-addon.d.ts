@@ -28,7 +28,7 @@ export declare namespace IResourceAddon {
     }
     interface IResponse extends BaseResponse {
         name: string;
-        description?: string;
+        description?: string | null;
         active: boolean;
         type: RESOURCE_ADDON_TYPE_ENUM;
         value: number;
