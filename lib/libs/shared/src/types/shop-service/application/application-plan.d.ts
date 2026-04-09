@@ -21,7 +21,6 @@ export declare namespace IApplicationPlan {
         appId: number & tags.Type<'uint64'>;
         controllerIds: number[];
         isTrial?: boolean;
-        trialDays?: number;
     }
     interface IUpdate extends Partial<ICreate> {
     }
@@ -37,6 +36,5 @@ export declare namespace IApplicationPlan {
         app?: IApplication.IResponse | null;
         controllers?: IApplicationController.IResponse[] | null;
         isTrial?: boolean | null;
-        trialDays?: number | null;
     }
 }
