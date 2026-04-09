@@ -70,7 +70,7 @@ export declare namespace IReceipt {
         email?: string;
         phone?: string;
         address?: string;
-        receiptType?: string;
+        receiptType?: string | RECEIPT_TYPE_ENUM;
         refCode?: string | null;
         createdById?: number;
         lineItems?: Array<Partial<IReceipt.IReceiptLineItems>>;
