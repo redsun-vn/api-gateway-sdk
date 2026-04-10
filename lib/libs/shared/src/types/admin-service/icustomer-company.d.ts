@@ -2,6 +2,7 @@ import { tags } from 'typia';
 import { BaseResponse } from '../common.type';
 import { AdminCCompanySize, AdminCustomerCompanyStatus } from '../../enum/admin-service/customer-company';
 import { IStaff } from '../istaff';
+import { IAdminCustomer } from './icustomer';
 export declare namespace IAdminCustomerCompanyShop {
     interface IResponse extends BaseResponse {
         shopId?: number | string | null;
@@ -77,5 +78,6 @@ export declare namespace IAdminCustomerCompany {
         assignedStaffId?: string | null;
         assignedStaff?: IStaff.IStaffResponse | null;
         advancedSetting?: any;
+        customer?: IAdminCustomer.IResponse | null;
     }
 }
