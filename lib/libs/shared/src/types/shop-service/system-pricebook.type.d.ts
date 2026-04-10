@@ -89,7 +89,6 @@ export declare namespace ISystemPricebook {
         pricingModel?: string & PRICING_MODEL_ENUM;
         billingCycle?: string & BILLING_CYCLE_ENUM;
         billingCycleDays?: number;
-        billingCycleMonths?: number;
         listPrice: number;
         unitPrice?: number;
         minPrice?: number;
@@ -127,7 +126,6 @@ export declare namespace ISystemPricebook {
         pricingModel?: string & PRICING_MODEL_ENUM;
         billingCycle?: string & BILLING_CYCLE_ENUM;
         billingCycleDays?: number;
-        billingCycleMonths?: number;
         listPrice?: number;
         unitPrice?: number;
         minPrice?: number;
@@ -179,7 +177,6 @@ export declare namespace ISystemPricebook {
         pricingModel: string;
         billingCycle: string;
         billingCycleDays?: number | string | null;
-        billingCycleMonths?: number | string | null;
         listPrice: number | string;
         unitPrice: number | string;
         minPrice?: number | string | null;

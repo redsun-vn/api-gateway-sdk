@@ -6,3 +6,4 @@ export * as configs from "./configs";
 export * as sync_product from "./sync_product";
 export * as products from "./products";
 export * as tiktok_shop from "./tiktok_shop";
+export * as auth_configs from "./auth_configs";

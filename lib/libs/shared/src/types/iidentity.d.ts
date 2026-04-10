@@ -12,4 +12,8 @@ export declare namespace IIdentity {
         username: string;
         id: string;
     }
+    interface ILockOrUnlockUser {
+        isLock: boolean;
+        id: string;
+    }
 }
