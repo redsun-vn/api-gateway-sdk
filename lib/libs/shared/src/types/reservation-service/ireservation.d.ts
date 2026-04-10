@@ -26,6 +26,7 @@ export declare namespace IReservation {
         tags?: string;
         tableIds?: string[];
         personInChargeId?: number;
+        billingType?: 'HOURLY' | 'DAILY' | 'STANDARD';
     }
     interface IUpdate extends Partial<ICreate> {
     }
@@ -46,6 +47,7 @@ export declare namespace IReservation {
         productReservations?: null | IProductReservation.IProductReservationResponse[];
         tables?: null | ITable.ITableResponse[];
         personInChargeId?: number | string | null;
+        billingType?: string | null;
     }
     interface IBookingConfigQuery {
         shop_id: number;
