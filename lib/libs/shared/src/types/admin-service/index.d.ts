@@ -11,3 +11,6 @@ export * from './device';
 export * from './utm';
 export * from './crm';
 export * from './iactivity';
+export * from './itemplate-category';
+export * from './itemplate';
+export * from './itemplate-version';

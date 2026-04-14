@@ -57,6 +57,8 @@ export * as groups from "./groups";
 export * as languages from "./languages";
 export * as namespace from "./namespace";
 export * as notify from "./notify";
+export * as template_categories from "./template_categories";
+export * as templates from "./templates";
 export * as ticket_categories from "./ticket_categories";
 export * as ticket_comments from "./ticket_comments";
 export * as tickets from "./tickets";

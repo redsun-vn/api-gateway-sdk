@@ -18,6 +18,8 @@ export declare const ELASTIC_INDEX: {
     ADMIN_DEVICE: string;
     ADMIN_DEVICE_CATEGORY: string;
     ADMIN_DEVICE_VARIANT: string;
+    ADMIN_TEMPLATE: string;
+    ADMIN_TEMPLATE_CATEGORY: string;
     ADMIN_UTM_SOURCE_INDEX_NAME: string;
     ADMIN_UTM_MEDIUM_INDEX_NAME: string;
     ADMIN_UTM_CAMPAIGN_INDEX_NAME: string;
