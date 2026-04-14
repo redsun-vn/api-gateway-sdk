@@ -3,6 +3,7 @@ import type { IResponse } from "../../../../../../libs/shared/src/types/common.t
 import type { IOmnichannel } from "../../../../../../libs/shared/src/types/omnichannel-service/omnichannel.type";
 export * as stats from "./stats";
 export * as bulk_create from "./bulk_create";
+export * as by_order from "./by_order";
 export declare function list(connection: IConnection, query: list.Query): Promise<list.Output>;
 export declare namespace list {
     type Query = Resolved<IOmnichannel.MappingListQuery>;

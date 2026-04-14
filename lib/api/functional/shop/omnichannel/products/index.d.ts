@@ -1,4 +1,5 @@
 import type { IConnection, Primitive } from "@nestia/fetcher";
+export * as mapping from "./mapping";
 export declare function getProductsOnProvider(connection: IConnection, provider: string): Promise<getProductsOnProvider.Output>;
 export declare namespace getProductsOnProvider {
     type Output = Primitive<any>;
