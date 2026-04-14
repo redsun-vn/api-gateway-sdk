@@ -1,32 +1,58 @@
 import { AdminBaseResponse as BaseResponse } from '../common.type';
-import { IAdminTemplateCategory, TemplateType } from './itemplate-category';
+export declare enum TemplateType {
+    EMAIL = "EMAIL",
+    SMS = "SMS",
+    ZMS = "ZMS",
+    RECEIPT = "RECEIPT",
+    DEBT = "DEBT",
+    NOTIFICATION = "NOTIFICATION",
+    INVOICE = "INVOICE",
+    CONTRACT = "CONTRACT",
+    PRINT = "PRINT",
+    OTHER = "OTHER"
+}
+export declare enum TemplateCategoryType {
+    TRANSACTION = "TRANSACTION",
+    MARKETING = "MARKETING",
+    NOTIFICATION = "NOTIFICATION",
+    SYSTEM = "SYSTEM",
+    REPORT = "REPORT",
+    OTHER = "OTHER"
+}
+export declare enum TemplateStatus {
+    ACTIVE = "active",
+    INACTIVE = "inactive",
+    DRAFT = "draft",
+    ARCHIVED = "archived"
+}
 export declare namespace IAdminTemplate {
     interface ICreate {
-        code: string;
         name: string;
         type: TemplateType;
-        categoryId?: number | string;
-        content?: string;
+        categoryType?: TemplateCategoryType;
+        subject?: string;
+        header?: string;
+        body?: string;
         variables?: object[];
         metadata?: object;
         isDefault?: boolean;
-        active?: boolean;
+        status?: TemplateStatus;
         companyId?: string;
     }
     interface IUpdate extends Partial<ICreate> {
         changeNote?: string;
     }
     interface IResponse extends BaseResponse {
-        code: string;
         name: string;
         type: string;
-        categoryId?: number | null;
-        category?: IAdminTemplateCategory.IResponse;
-        content?: string | null;
+        categoryType?: string;
+        subject?: string | null;
+        header?: string | null;
+        body?: string | null;
         variables?: object[] | null;
         metadata?: object | null;
         currentVersion: number;
         isDefault: boolean;
-        active: boolean;
+        status: string;
     }
 }
