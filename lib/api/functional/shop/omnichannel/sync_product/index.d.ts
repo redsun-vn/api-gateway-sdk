@@ -1,5 +1,20 @@
 import type { IConnection, Primitive } from "@nestia/fetcher";
 import type { IResponse } from "../../../../../libs/shared/src/types/common.type";
+export declare function deleteProductOnProvider(connection: IConnection, provider: string, providerProductId: string): Promise<deleteProductOnProvider.Output>;
+export declare namespace deleteProductOnProvider {
+    type Output = Primitive<IResponse<false | true>>;
+    const METADATA: {
+        readonly method: "DELETE";
+        readonly path: "/shop/omnichannel/sync-product/:provider/:providerProductId";
+        readonly request: null;
+        readonly response: {
+            readonly type: "application/json";
+            readonly encrypted: false;
+        };
+        readonly status: 200;
+    };
+    const path: (provider: string, providerProductId: string) => string;
+}
 export declare function syncCreateProduct(connection: IConnection, provider: string, data: syncCreateProduct.Input): Promise<syncCreateProduct.Output>;
 export declare namespace syncCreateProduct {
     type Input = Primitive<any>;
