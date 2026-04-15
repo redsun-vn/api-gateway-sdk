@@ -49,8 +49,8 @@ export declare namespace IAdminTemplate {
         subject?: string | null;
         header?: string | null;
         body?: string | null;
-        variables?: object[] | null;
-        metadata?: object | null;
+        variables?: any[] | null;
+        metadata?: any | null;
         isDefault: boolean;
         status: string;
     }
