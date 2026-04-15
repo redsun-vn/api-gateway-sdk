@@ -28,6 +28,7 @@ export declare enum TemplateStatus {
 export declare namespace IAdminTemplate {
     interface ICreate {
         name: string;
+        description?: string;
         type: TemplateType;
         categoryType?: TemplateCategoryType;
         subject?: string;
@@ -44,6 +45,7 @@ export declare namespace IAdminTemplate {
     }
     interface IResponse extends BaseResponse {
         name: string;
+        description?: string | null;
         type: string;
         categoryType?: string;
         subject?: string | null;
