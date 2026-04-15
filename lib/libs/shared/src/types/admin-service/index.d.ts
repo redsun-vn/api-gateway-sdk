@@ -12,4 +12,3 @@ export * from './utm';
 export * from './crm';
 export * from './iactivity';
 export * from './itemplate';
-export * from './itemplate-version';

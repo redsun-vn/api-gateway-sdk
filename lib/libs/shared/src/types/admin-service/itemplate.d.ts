@@ -40,9 +40,7 @@ export declare namespace IAdminTemplate {
         status?: TemplateStatus;
         companyId?: string;
     }
-    interface IUpdate extends Partial<ICreate> {
-        changeNote?: string;
-    }
+    type IUpdate = Partial<ICreate>;
     interface IResponse extends BaseResponse {
         name: string;
         description?: string | null;
@@ -53,7 +51,6 @@ export declare namespace IAdminTemplate {
         body?: string | null;
         variables?: object[] | null;
         metadata?: object | null;
-        currentVersion: number;
         isDefault: boolean;
         status: string;
     }
