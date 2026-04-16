@@ -32,13 +32,11 @@ export declare namespace IAdminTemplate {
         type: TemplateType;
         categoryType?: TemplateCategoryType;
         subject?: string;
-        header?: string;
         body?: string;
         variables?: object[];
         metadata?: object;
         isDefault?: boolean;
-        status?: TemplateStatus;
-        companyId?: string;
+        status?: string;
     }
     type IUpdate = Partial<ICreate>;
     interface IResponse extends BaseResponse {
@@ -47,9 +45,8 @@ export declare namespace IAdminTemplate {
         type: string;
         categoryType?: string;
         subject?: string | null;
-        header?: string | null;
         body?: string | null;
-        variables?: any[] | null;
+        variables?: object[] | null;
         metadata?: any | null;
         isDefault: boolean;
         status: string;
