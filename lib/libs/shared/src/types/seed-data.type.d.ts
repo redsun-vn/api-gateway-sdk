@@ -1,4 +1,4 @@
-import { CATEGORY_BUSINESS_TYPE_ENUMS, SeedDataModule } from '../enum';
+import { CATEGORY_BUSINESS_TYPE_ENUMS, ProductType, SeedDataModule } from '../enum';
 export declare namespace ISeedData {
     interface SeedRequestBody {
         business_type: CATEGORY_BUSINESS_TYPE_ENUMS;
@@ -9,6 +9,7 @@ export declare namespace ISeedData {
             warehouseId?: number;
             dateFrom?: string;
             dateTo?: string;
+            typeProduct?: ProductType;
         };
     }
 }

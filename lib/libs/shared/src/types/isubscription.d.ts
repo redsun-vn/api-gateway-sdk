@@ -39,7 +39,7 @@ export declare namespace ISubscription {
         controllers?: string[];
     };
     interface ISubscriptionResponse extends BaseResponse {
-        package_id: string;
+        package_id?: string | number | null;
         shop_id: string;
         active?: boolean | null;
         paymentCode?: string | null;
