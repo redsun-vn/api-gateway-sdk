@@ -1,5 +1,5 @@
 import type { IConnection, Resolved, Primitive } from "@nestia/fetcher";
-import type { IResponse } from "../../../../../../libs/shared/src/types/common.type";
+import type { IResponse, IResponsePagination } from "../../../../../../libs/shared/src/types/common.type";
 import type { IOmnichannel } from "../../../../../../libs/shared/src/types/omnichannel-service/omnichannel.type";
 export * as stats from "./stats";
 export * as bulk_create from "./bulk_create";
@@ -7,7 +7,7 @@ export * as by_order from "./by_order";
 export declare function list(connection: IConnection, query: list.Query): Promise<list.Output>;
 export declare namespace list {
     type Query = Resolved<IOmnichannel.MappingListQuery>;
-    type Output = Primitive<IResponse<any>>;
+    type Output = Primitive<IResponse<IResponsePagination<any>>>;
     const METADATA: {
         readonly method: "GET";
         readonly path: "/shop/omnichannel/orders/mapping";
