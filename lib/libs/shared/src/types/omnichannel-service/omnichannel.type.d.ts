@@ -65,5 +65,6 @@ export declare namespace IOmnichannel {
         toDate?: string;
         page?: number;
         limit?: number;
+        unmapped?: boolean;
     }
 }

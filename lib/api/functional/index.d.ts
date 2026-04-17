@@ -71,3 +71,4 @@ export * as utm_sources from "./utm_sources";
 export * as debts from "./debts";
 export * as cms from "./cms";
 export * as web_builder from "./web_builder";
+export * as icd10 from "./icd10";
