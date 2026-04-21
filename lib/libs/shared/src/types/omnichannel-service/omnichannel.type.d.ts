@@ -60,7 +60,7 @@ export declare namespace IOmnichannel {
     interface MappingListQuery {
         provider?: string;
         status?: string;
-        providerOrderId?: string;
+        providerOrderStatus?: string;
         fromDate?: string;
         toDate?: string;
         page?: number;
