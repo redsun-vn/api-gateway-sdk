@@ -17,6 +17,29 @@ export declare namespace ISubscription {
     interface IUpdate {
         active?: boolean;
     }
+    interface ICreateTrial {
+        packageId: number;
+        refCode?: string;
+    }
+    interface ITrialResponse {
+        id: number;
+        shopId: number;
+        packageId: number;
+        packageName: string;
+        startDate: string;
+        endDate: string;
+        active: boolean;
+        price: number;
+        isRenewal: boolean;
+        plans: Array<{
+            id: number;
+            name: string;
+            type: string;
+            target: string;
+            value: number;
+            price: number;
+        }>;
+    }
     interface IShopUpdate {
         paymentCode?: string;
         email?: string & tags.Format<'email'>;
