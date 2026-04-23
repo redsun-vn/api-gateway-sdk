@@ -22,22 +22,22 @@ export declare namespace ISubscription {
         refCode?: string;
     }
     interface ITrialResponse {
-        id: number;
-        shopId: number;
-        packageId: number;
-        packageName: string;
+        id: number | string;
+        shopId: number | string;
+        packageId: number | string;
+        packageName: string | null;
         startDate: string;
         endDate: string;
         active: boolean;
-        price: number;
+        price: number | string;
         isRenewal: boolean;
         plans: Array<{
-            id: number;
+            id: number | string;
             name: string;
             type: string;
             target: string;
             value: number;
-            price: number;
+            price: number | string;
         }>;
     }
     interface IShopUpdate {
