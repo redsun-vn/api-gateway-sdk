@@ -1,10 +1,10 @@
 import type { IConnection, Resolved, Primitive } from "@nestia/fetcher";
 import type { IResponse } from "../../../../../libs/shared/src/types/common.type";
-import type { ISeedData } from "../../../../../libs/shared/src/types/seed-data.type";
+import type { ISeedData, ISeedDataResult } from "../../../../../libs/shared/src/types/seed-data.type";
 export declare function generateSample(connection: IConnection, data: generateSample.Input): Promise<generateSample.Output>;
 export declare namespace generateSample {
     type Input = Resolved<ISeedData.SeedRequestBody>;
-    type Output = Primitive<IResponse<false | true>>;
+    type Output = Primitive<IResponse<ISeedDataResult>>;
     const METADATA: {
         readonly method: "POST";
         readonly path: "/shop/seed/sample";

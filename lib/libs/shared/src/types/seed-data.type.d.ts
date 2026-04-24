@@ -13,3 +13,7 @@ export declare namespace ISeedData {
         };
     }
 }
+export interface ISeedDataResult {
+    success: boolean;
+    modules: Record<string, any>;
+}
