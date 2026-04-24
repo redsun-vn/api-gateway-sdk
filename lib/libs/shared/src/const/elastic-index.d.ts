@@ -46,6 +46,11 @@ export declare const ELASTIC_INDEX: {
     BRAND: string;
     BRANCH: string;
     BUSINESS_TYPE: string;
+    CLINIC_VISITS: string;
+    CLINIC_PRESCRIPTIONS: string;
+    CLINIC_PATIENT_PROFILES: string;
+    CLINIC_AUDIT_LOGS_READ: string;
+    CLINIC_ATTACHMENTS: string;
     CATEGORY: string;
     CATEGORY_BUSINESS: string;
     CATEGORY_CARD: string;

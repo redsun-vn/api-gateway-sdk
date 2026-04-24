@@ -1,3 +1,4 @@
+export * from './clinic';
 export * from './errors';
 export * from './file.status';
 export * from './filter.rule';

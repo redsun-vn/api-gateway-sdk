@@ -23,3 +23,4 @@ export * from './wallet';
 export * from './e-invoice';
 export * from './subscription';
 export * from './template';
+export * from './clinic';

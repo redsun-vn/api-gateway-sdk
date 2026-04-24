@@ -11,17 +11,17 @@ export declare namespace ILeave {
         salary_percentage: number | string;
         active: boolean;
         requires_attachment: boolean;
-        max_days_per_time?: number | string;
-        min_days_before_request?: number | string;
+        max_days_per_time?: number | string | null;
+        min_days_before_request?: number | string | null;
         gender_specific: string;
         requires_approval: boolean;
-        auto_approve_after_days?: number | string;
+        auto_approve_after_days?: number | string | null;
     }
     interface ILeaveRequestResponse extends BaseResponse {
         shop_id: number | string;
         staff_id: number | string;
         leave_type_id: number | string;
-        leave_type: ILeaveTypeResponse;
+        leave_type?: ILeaveTypeResponse | null;
         start_date: string;
         end_date: string;
         total_days: number | string;

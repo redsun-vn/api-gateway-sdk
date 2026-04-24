@@ -27,12 +27,14 @@ export declare namespace IFile {
         metadata?: null | {
             [key: string]: string | string[] | boolean | number | undefined;
         };
+        needs_encryption?: boolean;
     }
     interface IReqUpload {
         branch_id?: number | null;
         parent_id?: number | null;
         space_id?: number | null;
         fileUpload: Express.Multer.File;
+        needs_encryption?: boolean;
     }
     interface IAdminReqUpload {
         user_id: string;
@@ -69,6 +71,19 @@ export declare namespace IFile {
         is_folder: boolean;
         slug?: string;
         parent?: IResponse | null;
+    }
+    interface IssueShareUrlRequest {
+        fileId: number;
+        requesterId?: number | null;
+        requesterRole?: string | null;
+        requesterShopId?: number | null;
+        requestedTtlSec?: number;
+    }
+    interface IssueShareUrlResponse {
+        url?: string;
+        token?: string;
+        expiresAt?: number;
+        error?: 'NOT_FOUND' | 'FORBIDDEN' | 'INVALID_REQUEST';
     }
 }
 export interface EditorJsUploadResponse {

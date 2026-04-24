@@ -5,5 +5,6 @@ export declare enum SeedDataModule {
     FINANCIAL = "financial",
     RESERVATION = "reservation",
     CMS = "cms",
-    LOYALTY = "loyalty"
+    LOYALTY = "loyalty",
+    INVENTORY = "inventory"
 }

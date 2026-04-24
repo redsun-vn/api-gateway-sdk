@@ -26,11 +26,12 @@ export declare namespace ISubscription {
         shopId: number | string;
         packageId: number | string;
         packageName: string | null;
-        startDate: string;
-        endDate: string;
-        active: boolean;
+        startDate: string | null;
+        endDate: string | null;
+        active: boolean | null;
         price: number | string;
         isRenewal: boolean;
+        isTrial: boolean;
         plans: Array<{
             id: number | string;
             name: string;

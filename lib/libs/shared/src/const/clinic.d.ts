@@ -1,0 +1,25 @@
+export declare const CLINIC_VISIT_INDEX_NAME = "clinic_visits";
+export declare const CLINIC_PRESCRIPTION_INDEX_NAME = "clinic_prescriptions";
+export declare const CLINIC_PATIENT_PROFILE_INDEX_NAME = "clinic_patient_profiles";
+export declare const CLINIC_AUDIT_LOG_READ_ALIAS = "clinic_audit_logs_read";
+export declare const CLINIC_AUDIT_LOG_INDEX_PATTERN = "clinic_audit_logs_";
+export declare const CLINIC_PHI_FIELDS: readonly string[];
+export declare const CLINIC_VISITS_SORT_FIELDS: readonly ["created_at", "updated_at", "signed_at", "visit_date"];
+export declare const CLINIC_VISITS_SEARCH_FIELDS: readonly ["patient_name_snapshot", "doctor_name_snapshot"];
+export declare const CLINIC_VISITS_FILTER_FIELDS: readonly ["id", "shop_id", "branch_id", "doctor_id", "patient_id", "reservation_id", "order_id", "parent_visit_id", "status", "industry_type", "has_prescription", "created_at", "signed_at"];
+export declare const CLINIC_PRESCRIPTIONS_SORT_FIELDS: readonly ["created_at", "updated_at", "issued_at", "printed_at"];
+export declare const CLINIC_PRESCRIPTIONS_SEARCH_FIELDS: readonly ["prescription_code", "patient_name_snapshot"];
+export declare const CLINIC_PRESCRIPTIONS_FILTER_FIELDS: readonly ["id", "shop_id", "branch_id", "visit_id", "doctor_id", "patient_id", "status", "prescription_code", "issued_at", "printed_at"];
+export declare const CLINIC_PATIENT_PROFILES_SORT_FIELDS: readonly ["created_at", "updated_at", "consent_signed_at"];
+export declare const CLINIC_PATIENT_PROFILES_SEARCH_FIELDS: readonly ["full_name", "phone"];
+export declare const CLINIC_PATIENT_PROFILES_FILTER_FIELDS: readonly ["id", "shop_id", "partner_id", "gender", "blood_type", "has_profile", "birth_date"];
+export declare const CLINIC_AUDIT_LOGS_SORT_FIELDS: readonly ["changed_at"];
+export declare const CLINIC_AUDIT_LOGS_SEARCH_FIELDS: readonly ["changed_by_name", "reason"];
+export declare const CLINIC_AUDIT_LOGS_FILTER_FIELDS: readonly ["id", "shop_id", "branch_id", "entity_type", "entity_id", "action", "changed_by_id", "changed_at"];
+export declare const CLINIC_ATTACHMENTS_SORT_FIELDS: readonly ["uploaded_at"];
+export declare const CLINIC_ATTACHMENTS_SEARCH_FIELDS: readonly ["metadata.file_name"];
+export declare const CLINIC_ATTACHMENTS_FILTER_FIELDS: readonly ["id", "shop_id", "branch_id", "visit_id", "uploaded_by_id", "attachment_id", "type", "uploaded_at"];
+export declare const CLINIC_STATION_DEFAULTS: {
+    readonly clinic: "consultation";
+    readonly wellness: "treatment_room";
+};
