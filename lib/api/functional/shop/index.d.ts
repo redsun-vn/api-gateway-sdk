@@ -113,3 +113,4 @@ export * as cms from "./cms";
 export * as seed from "./seed";
 export * as ai from "./ai";
 export * as clinic from "./clinic";
+export * as languages from "./languages";

@@ -51,7 +51,11 @@ export declare enum CATEGORY_BUSINESS_TYPE_ENUMS {
     SALON = "salon",
     FNB = "fnb",
     HOTEL = "hotel",
-    RETAILS = "retails"
+    RETAILS = "retails",
+    CLINIC = "clinic",
+    WELLNESS = "wellness",
+    ORG = "org",
+    WEBBUILDER = "webbuilder"
 }
 export declare enum PartnerIdentityType {
     CMND = "cmnd",

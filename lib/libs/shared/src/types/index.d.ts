@@ -71,3 +71,4 @@ export * from './omnichannel-service';
 export * from './notification';
 export * from './iresource-addon';
 export * from './icd10.types';
+export * from './translation-service';

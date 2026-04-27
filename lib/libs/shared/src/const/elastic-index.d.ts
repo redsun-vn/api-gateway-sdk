@@ -163,6 +163,7 @@ export declare const ELASTIC_INDEX: {
     RECURRENCE_PERIOD_CONFIG: string;
     RATING_INDEX_NAME: string;
     RATING_CRITERIA_TEMPLATE_INDEX_NAME: string;
+    SHOP_LANGUAGE_INDEX_NAME: string;
     TABLE_RESERVATION: string;
     TAG: string;
     TAX: string;

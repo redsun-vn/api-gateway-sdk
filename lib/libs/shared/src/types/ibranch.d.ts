@@ -23,7 +23,7 @@ export declare namespace IBranch {
         isDefault?: boolean;
     }
     interface IBranchResponse extends BaseProfileResponse, BaseResponse {
-        shop_id: string;
+        shop_id: string | number;
         name: string;
         isDefault: boolean;
         active: boolean;
