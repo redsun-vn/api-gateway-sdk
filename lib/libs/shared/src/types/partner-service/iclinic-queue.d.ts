@@ -34,6 +34,8 @@ export declare namespace IClinicQueue {
         left_at?: string | null;
         leave_reason?: string | null;
         notes?: string | null;
+        created_at?: string;
+        updated_at?: string;
     }
     interface IDetailResponse extends IResponse {
     }

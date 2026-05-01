@@ -68,6 +68,8 @@ export declare namespace IClinicVisit {
         has_prescription?: boolean | null;
         signed_at?: string | null;
         amendment_closes_at?: string | null;
+        created_at?: string;
+        updated_at?: string;
     }
     interface IDetailResponse extends IResponse {
         vitals?: Record<string, unknown> | null;

@@ -16,7 +16,7 @@ export declare namespace IFile {
         mime: string;
         ext: string;
         path: string;
-        size: string | number;
+        size: string | number | null;
         user_id: string;
         shop_id?: string | number | null;
         branch_id?: string | number | null;

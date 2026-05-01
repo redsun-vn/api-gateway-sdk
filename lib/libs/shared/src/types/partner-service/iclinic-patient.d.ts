@@ -20,7 +20,6 @@ export declare namespace IClinicPatient {
     }
     interface IResponse extends BaseResponse {
         partner_id?: string | null;
-        shop_id: string;
         branch_ids?: string[] | null;
         full_name?: string | null;
         phone?: string | null;
@@ -29,6 +28,8 @@ export declare namespace IClinicPatient {
         birth_date?: string | null;
         has_profile?: boolean | null;
         consent_signed_at?: string | null;
+        created_at?: string;
+        updated_at?: string;
     }
     interface IDetailResponse extends IResponse {
         bhyt_id?: string | null;

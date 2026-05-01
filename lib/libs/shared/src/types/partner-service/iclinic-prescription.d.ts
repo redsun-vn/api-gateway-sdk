@@ -12,6 +12,7 @@ export declare namespace IClinicPrescription {
         product_id?: number;
         variant_id?: number;
         unit_price?: number;
+        item_kind?: 'drug' | 'service' | 'lab' | 'procedure';
     }
     interface ICreate {
         visit_id: string;
@@ -32,7 +33,6 @@ export declare namespace IClinicPrescription {
         visit_id?: string | null;
         doctor_id?: string | null;
         patient_id?: string | null;
-        shop_id: string;
         branch_id?: string | null;
         prescription_code?: string | null;
         status?: string | null;
@@ -42,6 +42,9 @@ export declare namespace IClinicPrescription {
         printed_at?: string | null;
         snapshot_json?: Record<string, unknown> | null;
         notes?: string | null;
+        created_at?: string;
+        updated_at?: string;
+        item_kind?: string | null;
     }
     interface IDetailResponse extends IResponse {
         notes?: string | null;
