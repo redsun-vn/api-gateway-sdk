@@ -1,4 +1,5 @@
 import { BaseResponse } from '../common.type';
+import { IClinicQueue } from './iclinic-queue';
 export declare namespace IClinicVisit {
     interface ICreate {
         patient_id: string;
@@ -7,6 +8,24 @@ export declare namespace IClinicVisit {
         shop_id: number | string;
         reservation_id?: string;
         chief_complaint?: string;
+        enqueue?: {
+            station?: string;
+            priority?: 'urgent' | 'vip' | 'normal';
+        };
+    }
+    interface ICheckInWalkInDto {
+        shop_id: number | string;
+        branch_id?: string;
+        patient_id: string;
+        doctor_id?: string;
+        station?: string;
+        priority?: 'urgent' | 'vip' | 'normal';
+        chief_complaint?: string;
+        reservation_id?: string;
+    }
+    interface ICheckInWalkInResponse {
+        visit: IResponse;
+        queue_item: IClinicQueue.IResponse;
     }
     interface IUpdate {
         chief_complaint?: string;
@@ -76,7 +95,7 @@ export declare namespace IClinicVisit {
     }
     interface IQuery {
         patientId?: string;
-        shopId?: number;
+        shopId?: number | string;
         status?: string;
         branchId?: string;
         page?: number;

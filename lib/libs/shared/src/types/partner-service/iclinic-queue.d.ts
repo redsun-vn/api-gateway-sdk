@@ -13,7 +13,11 @@ export declare namespace IClinicQueue {
         notes?: string;
     }
     interface IStart {
-        visit_id: string;
+        visitId?: string | null;
+        fallbackVisitDto?: {
+            chief_complaint?: string;
+            doctor_id?: string;
+        };
     }
     interface ILeave {
         reason?: string;
