@@ -72,6 +72,7 @@ export declare namespace IElastic {
         filters?: IFilteringMultiple;
         search?: ISearch;
         shopId?: string;
+        shopIdFields?: string[];
         script?: string;
         scriptShould?: string;
     }

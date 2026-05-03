@@ -11,6 +11,18 @@ export declare namespace IReservation {
         CANCELED = "canceled",
         COMPLETED = "completed"
     }
+    enum ClinicPriority {
+        URGENT = "urgent",
+        VIP = "vip",
+        NORMAL = "normal"
+    }
+    enum ClinicBookingChannel {
+        WALK_IN = "walk_in",
+        PHONE = "phone",
+        ONLINE = "online",
+        ZALO = "zalo",
+        APP = "app"
+    }
     interface ICreate {
         branch_id: number;
         partner_id: number;
@@ -27,6 +39,10 @@ export declare namespace IReservation {
         tableIds?: string[];
         personInChargeId?: number;
         billingType?: 'HOURLY' | 'DAILY' | 'STANDARD';
+        appointmentType?: string;
+        priority?: ClinicPriority;
+        bookingChannel?: ClinicBookingChannel;
+        visitId?: string;
     }
     interface IUpdate extends Partial<ICreate> {
     }
@@ -48,6 +64,10 @@ export declare namespace IReservation {
         tables?: null | ITable.ITableResponse[];
         personInChargeId?: number | string | null;
         billingType?: string | null;
+        appointmentType?: string | null;
+        priority?: string | null;
+        bookingChannel?: string | null;
+        visitId?: string | null;
     }
     interface IBookingConfigQuery {
         shop_id: number;
