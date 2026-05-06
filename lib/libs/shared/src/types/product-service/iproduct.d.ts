@@ -9,6 +9,7 @@ import { IProductPackage } from './iproduct-package';
 import { ISelectionGroup } from './iselection-group';
 import { IProductOption } from './iproduct-option';
 import { ProductType } from '../../enum';
+import { ITranslation } from '../translation-service/itranslation.type';
 export declare namespace IProduct {
     interface ISalesChannel {
         id: string;
@@ -42,6 +43,7 @@ export declare namespace IProduct {
         isCalculatedByHour?: boolean;
         isRecurring?: boolean;
         isWallet?: boolean;
+        translations?: Pick<ITranslation.ICreate, 'locale' | 'content'>[];
     }
     interface ICreateProduct extends IReqCreateProduct {
         shop_id: number & tags.Type<'uint64'>;
@@ -72,6 +74,7 @@ export declare namespace IProduct {
         isCalculatedByHour?: boolean;
         isRecurring?: boolean;
         isWallet?: boolean;
+        translations?: Pick<ITranslation.ICreate, 'locale' | 'content'>[];
     }
     interface ITagReponse {
         id: string | number | null;

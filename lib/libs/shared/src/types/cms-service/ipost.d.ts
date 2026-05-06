@@ -1,5 +1,6 @@
 import { tags } from 'typia';
 import { CMSBaseResponse, SEOBase } from '../common.type';
+import { ITranslation } from '../translation-service/itranslation.type';
 import { ICMSCategory, ICMSTag } from './cms.icategory';
 import { IWebsite } from './iwebsite';
 export declare namespace ICMSPost {
@@ -14,6 +15,7 @@ export declare namespace ICMSPost {
         website_ids?: string[] | null;
         isIndex?: boolean;
         isPublished?: boolean;
+        translations?: Pick<ITranslation.ICreate, 'locale' | 'content'>[];
     }
     interface ICreate extends ICreateReq {
         shop_id?: (number & tags.Type<'uint64'>) | null;

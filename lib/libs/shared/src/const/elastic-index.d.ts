@@ -173,6 +173,7 @@ export declare const ELASTIC_INDEX: {
     TRANSACTION_RECONCILIATION: string;
     TRANSLATIONS: string;
     TRANSLATION_KEYS: string;
+    TRANSLATION_INDEX_NAME: string;
     TREATMENT_CARD: string;
     TREATMENT_CARD_SESSION_LOG: string;
     SALES_CHANNEL: string;

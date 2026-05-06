@@ -49,6 +49,7 @@ export declare namespace IHRReport {
         staff_code: string;
         full_name: string;
         avatar_id?: string | null;
+        avatar_url?: string | null;
         position?: string | null;
         department_id?: number | string | null;
         department_name?: string | null;
