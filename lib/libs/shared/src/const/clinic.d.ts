@@ -6,7 +6,7 @@ export declare const CLINIC_AUDIT_LOG_INDEX_PATTERN = "clinic_audit_logs_";
 export declare const CLINIC_PHI_FIELDS: readonly string[];
 export declare const CLINIC_VISITS_SORT_FIELDS: readonly ["created_at", "updated_at", "signed_at", "visit_date"];
 export declare const CLINIC_VISITS_SEARCH_FIELDS: readonly ["patient_name_snapshot", "doctor_name_snapshot"];
-export declare const CLINIC_VISITS_FILTER_FIELDS: readonly ["id", "shop_id", "branch_id", "doctor_id", "patient_id", "reservation_id", "order_id", "parent_visit_id", "status", "industry_type", "has_prescription", "created_at", "signed_at"];
+export declare const CLINIC_VISITS_FILTER_FIELDS: readonly ["id", "shop_id", "branch_id", "doctor_id", "patient_id", "reservation_id", "order_id", "parent_visit_id", "status", "industry_type", "has_prescription", "created_at", "signed_at", "icd10_codes"];
 export declare const CLINIC_PRESCRIPTIONS_SORT_FIELDS: readonly ["created_at", "updated_at", "issued_at", "printed_at"];
 export declare const CLINIC_PRESCRIPTIONS_SEARCH_FIELDS: readonly ["prescription_code", "patient_name_snapshot"];
 export declare const CLINIC_PRESCRIPTIONS_FILTER_FIELDS: readonly ["id", "shop_id", "branch_id", "visit_id", "doctor_id", "patient_id", "status", "prescription_code", "issued_at", "printed_at"];

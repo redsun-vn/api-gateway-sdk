@@ -4,7 +4,7 @@ export declare namespace ITranslation {
     interface ICreate {
         shop_id: number & tags.Type<'uint64'>;
         translatableType: string & tags.MaxLength<32>;
-        translatableId: number & tags.Type<'uint64'>;
+        translatableId: string;
         locale: string & tags.MaxLength<10>;
         content: Record<string, unknown>;
     }
@@ -18,7 +18,7 @@ export declare namespace ITranslation {
     interface IResponse extends BaseResponse {
         shop_id: number | string;
         translatableType: string;
-        translatableId: number | string;
+        translatableId: string;
         locale: string;
         content: Record<string, unknown>;
     }

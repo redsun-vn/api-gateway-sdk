@@ -1,15 +1,14 @@
 import { tags } from 'typia';
+import { ProductType } from '../../enum';
 import { BaseResponse } from '../common.type';
-import { IVariant } from './ivariant';
-import { ITax } from './itax';
-import { IManufacturer } from './imanufacturer';
 import { IAttribute } from './iattribute';
+import { IManufacturer } from './imanufacturer';
 import { IProductImage } from './iproduct-image.type';
+import { IProductOption } from './iproduct-option';
 import { IProductPackage } from './iproduct-package';
 import { ISelectionGroup } from './iselection-group';
-import { IProductOption } from './iproduct-option';
-import { ProductType } from '../../enum';
-import { ITranslation } from '../translation-service/itranslation.type';
+import { ITax } from './itax';
+import { IVariant } from './ivariant';
 export declare namespace IProduct {
     interface ISalesChannel {
         id: string;
@@ -43,7 +42,6 @@ export declare namespace IProduct {
         isCalculatedByHour?: boolean;
         isRecurring?: boolean;
         isWallet?: boolean;
-        translations?: Pick<ITranslation.ICreate, 'locale' | 'content'>[];
     }
     interface ICreateProduct extends IReqCreateProduct {
         shop_id: number & tags.Type<'uint64'>;
@@ -74,7 +72,6 @@ export declare namespace IProduct {
         isCalculatedByHour?: boolean;
         isRecurring?: boolean;
         isWallet?: boolean;
-        translations?: Pick<ITranslation.ICreate, 'locale' | 'content'>[];
     }
     interface ITagReponse {
         id: string | number | null;
