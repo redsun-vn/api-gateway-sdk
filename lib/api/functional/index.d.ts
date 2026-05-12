@@ -72,3 +72,4 @@ export * as debts from "./debts";
 export * as cms from "./cms";
 export * as web_builder from "./web_builder";
 export * as icd10 from "./icd10";
+export * as translation from "./translation";
