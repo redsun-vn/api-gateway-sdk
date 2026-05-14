@@ -67,7 +67,6 @@ export * from './admin-service';
 export * from './seed-data.type';
 export * from './omnichannel-service';
 export * from './ai-generation';
-export * from './omnichannel-service';
 export * from './notification';
 export * from './iresource-addon';
 export * from './icd10.types';

@@ -99,10 +99,4 @@ export declare namespace IShop {
     interface ISoftDelete {
         name: string;
     }
-    interface IStats {
-        totalShops: number | string;
-        totalPendingPayment: number | string;
-        totalExpired: number | string;
-        totalActive: number | string;
-    }
 }
