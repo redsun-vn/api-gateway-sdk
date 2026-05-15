@@ -58,6 +58,7 @@ export declare namespace ILineItemReport {
         total_quantity: number;
         total_revenue: number;
         total_profit?: number;
+        total_refunded?: number;
         order_count?: number;
     }
     interface IKitchenPerformanceItem {
