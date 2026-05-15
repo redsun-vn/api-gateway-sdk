@@ -41,7 +41,7 @@ export declare namespace create {
 }
 export declare function update(connection: IConnection, id: number, data: update.Input): Promise<update.Output>;
 export declare namespace update {
-    type Input = Resolved<Omit<IOmnichannelShopConfig.IUpdateRequest, "id" | "shopId">>;
+    type Input = Resolved<Omit<IOmnichannelShopConfig.IUpdateRequest, "shopId" | "id">>;
     type Output = Primitive<IResponse<IOmnichannelShopConfig.IResponse>>;
     const METADATA: {
         readonly method: "PUT";
