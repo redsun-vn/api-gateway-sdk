@@ -1,6 +1,7 @@
 import type { IConnection, Resolved, Primitive } from "@nestia/fetcher";
 import type { IRating } from "../../../libs/shared/src/types/comment-service/irating.type";
 import type { IResponse } from "../../../libs/shared/src/types/common.type";
+export * as timeline from "./timeline";
 export declare function getPublicStatistics(connection: IConnection, query: getPublicStatistics.Query): Promise<getPublicStatistics.Output>;
 export declare namespace getPublicStatistics {
     type Query = Resolved<IRating.IQueryStatistics>;

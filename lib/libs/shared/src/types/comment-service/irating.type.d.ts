@@ -107,4 +107,26 @@ export declare namespace IRating {
             [criteria_code: string]: number | string;
         };
     }
+    type RatingTimelineBucket = 'day' | 'week' | 'month';
+    interface IQueryTimeline {
+        shopId: number;
+        fromDate: string;
+        toDate: string;
+        bucketBy?: RatingTimelineBucket;
+        branchId?: number;
+        businessType?: string;
+        criteriaContext?: string;
+    }
+    interface IQueryTimelineShop extends Omit<IRating.IQueryTimeline, 'shopId'> {
+    }
+    interface IRatingTimelineBucket {
+        bucket: string;
+        totalRatings: number;
+        averageRating: number;
+    }
+    interface IRatingTimeline {
+        shop_id: number | string;
+        bucketBy: RatingTimelineBucket;
+        buckets: IRatingTimelineBucket[];
+    }
 }
