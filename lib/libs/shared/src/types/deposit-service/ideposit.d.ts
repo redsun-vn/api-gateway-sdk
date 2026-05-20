@@ -7,6 +7,7 @@ export declare namespace IDeposit {
     }
     enum DepositStatus {
         PENDING = "pending",
+        PARTIALLY_RECEIVED = "partially_received",
         RECEIVED = "received",
         IN_USE = "in_use",
         CONSUMED = "consumed",
@@ -45,8 +46,10 @@ export declare namespace IDeposit {
         idempotency_key?: string;
     }
     interface IConfirmReceived {
+        amount?: number;
         received_at?: string;
         reference?: string;
+        idempotency_key?: string;
     }
     interface IApplySelection {
         deposit_id: string | number;
