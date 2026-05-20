@@ -116,13 +116,19 @@ export declare namespace IRating {
         branchId?: number;
         businessType?: string;
         criteriaContext?: string;
+        includeCriteria?: boolean;
     }
     interface IQueryTimelineShop extends Omit<IRating.IQueryTimeline, 'shopId'> {
+    }
+    interface IRatingTimelineCriteriaScore {
+        total: number;
+        average: number;
     }
     interface IRatingTimelineBucket {
         bucket: string;
         totalRatings: number;
         averageRating: number;
+        criteriaScores?: Record<string, IRatingTimelineCriteriaScore>;
     }
     interface IRatingTimeline {
         shop_id: number | string;
