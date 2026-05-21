@@ -79,6 +79,11 @@ export declare namespace IStaff {
         user_id?: string;
         user_ids?: string[];
     }
+    interface IMyShopStatus {
+        hasShop: boolean;
+        activeShopIds: string[];
+        ownedShopIds: string[];
+    }
     interface IResetPassword {
         password: string;
     }
