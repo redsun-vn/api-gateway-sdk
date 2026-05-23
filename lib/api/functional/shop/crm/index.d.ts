@@ -1,0 +1,11 @@
+export * as activities from "./activities";
+export * as opportunity from "./opportunity";
+export * as attachments from "./attachments";
+export * as dashboard from "./dashboard";
+export * as leads from "./leads";
+export * as onboarding from "./onboarding";
+export * as opportunities from "./opportunities";
+export * as pipelines from "./pipelines";
+export * as scoring_rules from "./scoring_rules";
+export * as shop_config from "./shop_config";
+export * as tasks from "./tasks";
