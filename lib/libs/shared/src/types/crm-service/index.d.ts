@@ -1,5 +1,7 @@
 export * from './ilead';
 export * from './iopportunity';
+export * from './ipipeline';
+export * from './iadmin';
 export * from './iactivity';
 export * from './itask';
 export * from './ionboarding';
