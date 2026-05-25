@@ -1,6 +1,9 @@
 import type { IConnection, Resolved, Primitive } from "@nestia/fetcher";
 import type { IResponse } from "../../../../../libs/shared/src/types/common.type";
 import type { ICrmDashboard } from "../../../../../libs/shared/src/types/crm-service/idashboard";
+export * as revenue_trend from "./revenue_trend";
+export * as lead_conversion from "./lead_conversion";
+export * as activity_per_opp from "./activity_per_opp";
 export * as widgets_config from "./widgets_config";
 export declare function kpi(connection: IConnection, query: kpi.Query): Promise<kpi.Output>;
 export declare namespace kpi {

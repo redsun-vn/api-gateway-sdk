@@ -56,4 +56,21 @@ export declare namespace ICrmDashboard {
     interface IUpdateWidgetsConfig {
         widgets: IWidget[] & tags.MinItems<0> & tags.MaxItems<12>;
     }
+    interface IRevenueTrendBucket {
+        week_start: string;
+        revenue: number;
+    }
+    interface IRevenueTrendResponse {
+        weeks: IRevenueTrendBucket[];
+    }
+    interface ILeadConversionResponse {
+        total_leads: number;
+        converted_leads: number;
+        conversion_rate: number;
+    }
+    interface IActivityPerOppResponse {
+        activity_count: number;
+        opportunity_count: number;
+        ratio: number;
+    }
 }
