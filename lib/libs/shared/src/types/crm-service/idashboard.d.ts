@@ -83,4 +83,20 @@ export declare namespace ICrmDashboard {
     interface ILeadSourceAnalyticsResponse {
         items: ILeadSourceAnalyticsItem[];
     }
+    interface IRecentActivityQuery {
+        limit?: number & tags.Type<'int32'> & tags.Minimum<1> & tags.Maximum<50>;
+    }
+    interface IRecentActivityItem {
+        id: string;
+        type: string;
+        subject: string;
+        related_to_type: string;
+        related_to_id: number;
+        owner_id: number;
+        direction: string | null;
+        created_at: string;
+    }
+    interface IRecentActivityResponse {
+        items: IRecentActivityItem[];
+    }
 }
