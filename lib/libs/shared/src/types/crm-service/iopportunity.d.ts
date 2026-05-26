@@ -83,4 +83,14 @@ export declare namespace ICrmOpportunity {
     interface IAutoPromoteConfig {
         auto_promote_thresholds: Record<string, IAutoPromoteThreshold>;
     }
+    interface IBulkAssign {
+        opportunity_ids: Array<number> & tags.MinItems<1> & tags.MaxItems<100>;
+        owner_id: number;
+        reason?: string;
+    }
+    interface IBulkAssignResponse {
+        success: boolean;
+        count: number;
+        opportunity_ids: number[];
+    }
 }

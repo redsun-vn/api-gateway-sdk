@@ -1,5 +1,12 @@
 import { ICrmBant } from './ibant';
+import { ICrmAdmin } from './iadmin';
 export declare namespace ICrmShopConfig {
+    interface IRecomputeStatus {
+        last_rubric_recompute_at: string | null;
+        last_rubric_recompute_job_id: string | null;
+        last_rubric_recompute_state: ICrmAdmin.JobState | 'idle';
+        last_rubric_recompute_progress: number;
+    }
     interface ICustomizations {
         bant_rubric?: ICrmBant.IRubric;
         dashboard_widgets?: Array<{
@@ -23,6 +30,7 @@ export declare namespace ICrmShopConfig {
         updatedAt: string;
         effective?: Record<string, unknown>;
         bant_rubric?: ICrmBant.IRubric;
+        recompute_status?: IRecomputeStatus;
     }
     interface IUpdateCustomizations {
         bant_rubric?: Partial<ICrmBant.IRubric>;

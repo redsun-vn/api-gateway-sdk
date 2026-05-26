@@ -1,6 +1,7 @@
 import type { IConnection, Resolved, Primitive } from "@nestia/fetcher";
 import type { IQuery, IResponse } from "../../../../../libs/shared/src/types/common.type";
 import type { ICrmOpportunity } from "../../../../../libs/shared/src/types/crm-service/iopportunity";
+export * as bulk_reassign from "./bulk_reassign";
 export declare function findAll(connection: IConnection, query: findAll.Query): Promise<findAll.Output>;
 export declare namespace findAll {
     type Query = Resolved<IQuery>;

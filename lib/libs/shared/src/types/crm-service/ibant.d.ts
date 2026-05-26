@@ -45,6 +45,20 @@ export declare namespace ICrmBant {
         authority_warning: boolean;
         breakdown?: IBreakdown | null;
     }
+    interface IPreviewRequest {
+        rubric: IRubric;
+        sample_lead_ids?: number[];
+    }
+    interface IPreviewResultItem {
+        lead_id: number;
+        before_score: number;
+        before_classification: CrmBantClassification;
+        after_score: number;
+        after_classification: CrmBantClassification;
+    }
+    interface IPreviewResponse {
+        results: IPreviewResultItem[];
+    }
     interface IRubric {
         weights: {
             budget: number & tags.Minimum<0> & tags.Maximum<100>;

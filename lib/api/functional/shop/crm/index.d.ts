@@ -2,6 +2,7 @@ export * as activities from "./activities";
 export * as admin from "./admin";
 export * as opportunity from "./opportunity";
 export * as attachments from "./attachments";
+export * as bant from "./bant";
 export * as dashboard from "./dashboard";
 export * as leads from "./leads";
 export * as onboarding from "./onboarding";

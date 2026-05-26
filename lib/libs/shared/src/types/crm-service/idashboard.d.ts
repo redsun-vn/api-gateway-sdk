@@ -73,4 +73,14 @@ export declare namespace ICrmDashboard {
         opportunity_count: number;
         ratio: number;
     }
+    interface ILeadSourceAnalyticsItem {
+        source: string;
+        leads_count: number;
+        conversion_count: number;
+        conversion_rate: number;
+        avg_deal_size: number;
+    }
+    interface ILeadSourceAnalyticsResponse {
+        items: ILeadSourceAnalyticsItem[];
+    }
 }
