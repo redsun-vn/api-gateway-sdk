@@ -1,10 +1,10 @@
 import type { IConnection, Resolved, Primitive } from "@nestia/fetcher";
-import type { IResponse, IResponsePagination } from "../../../../../libs/shared/src/types/common.type";
+import type { IResponse } from "../../../../../libs/shared/src/types/common.type";
 import type { ICrmActivity } from "../../../../../libs/shared/src/types/crm-service/iactivity";
 export declare function findAll(connection: IConnection, query: findAll.Query): Promise<findAll.Output>;
 export declare namespace findAll {
     type Query = Resolved<ICrmActivity.IListQuery>;
-    type Output = Primitive<IResponse<IResponsePagination<ICrmActivity.ICrmActivityResponse>>>;
+    type Output = Primitive<IResponse<Array<ICrmActivity.ICrmActivityResponse>>>;
     const METADATA: {
         readonly method: "GET";
         readonly path: "/shop/crm/activities";

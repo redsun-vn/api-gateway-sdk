@@ -100,7 +100,7 @@ export declare namespace IDeposit {
         policy_snapshot: Record<string, unknown>;
         note: string | null;
     }
-    interface IDepositTransactionResponse extends BaseResponse {
+    interface IDepositTransactionResponse {
         deposit_id: string | number;
         type: DepositTransactionType;
         amount: string | number;
