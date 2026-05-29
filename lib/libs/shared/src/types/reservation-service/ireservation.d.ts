@@ -97,6 +97,7 @@ export declare namespace IReservation {
         maxChild: number | string | null;
         description: string | null;
         product_id: number | string | null;
+        floor_plan_id: number | string | null;
     }
     interface IBookingConfigResponse {
         tables: IBookingConfigTable[];
