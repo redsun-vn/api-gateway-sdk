@@ -93,4 +93,18 @@ export declare namespace ICrmOpportunity {
         count: number;
         opportunity_ids: number[];
     }
+    interface IQuotePrefill {
+        partner_uuid: string | null;
+        currency: string;
+        email?: string | null;
+        expected_value?: number | null;
+    }
+    interface ILinkSaleOrder {
+        sale_order_id: number & tags.Type<'uint64'>;
+    }
+    interface ILinkSaleOrderResult {
+        linked: boolean;
+        opportunity_id: number;
+        sale_order_id: number;
+    }
 }
