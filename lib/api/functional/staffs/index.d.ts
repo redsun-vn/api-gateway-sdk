@@ -3,6 +3,7 @@ import type { IQuery, IResponse, IResponsePagination } from "../../../libs/share
 import type { IStaff } from "../../../libs/shared/src/types/istaff";
 export * as reset_password from "./reset_password";
 export * as lock_or_unlock from "./lock_or_unlock";
+export * as me from "./me";
 export declare function findAll(connection: IConnection, query: findAll.Query): Promise<findAll.Output>;
 export declare namespace findAll {
     type Query = Resolved<IQuery>;

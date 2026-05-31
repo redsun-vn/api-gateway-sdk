@@ -16,3 +16,6 @@ export declare enum CrmAttachmentPermission {
     VIEW = "crm_attachment-view",
     MANAGE = "crm_attachment-manage"
 }
+export declare enum CrmKpiTargetPermission {
+    VIEW = "crm_kpi_target-view"
+}

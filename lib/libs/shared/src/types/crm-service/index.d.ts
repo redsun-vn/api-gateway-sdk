@@ -10,3 +10,4 @@ export * from './ibant';
 export * from './ishop-config';
 export * from './idashboard';
 export * from './iattachment';
+export * from './kpi-target';
