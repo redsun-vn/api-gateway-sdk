@@ -31,20 +31,20 @@ export interface IKpiTargetCascadeApply {
     children: IKpiTargetCascadeChild[];
 }
 export interface IKpiTargetResponse {
-    id: number;
-    shop_id: number;
+    id: number | string;
+    shop_id: number | string;
     kpi_id: string;
     period: string;
     period_start: string;
     period_end: string;
     assignee_type: KpiTargetAssigneeType;
-    assignee_id: number | null;
-    parent_id: number | null;
+    assignee_id: number | string | null;
+    parent_id: number | string | null;
     target_value: string;
     currency: string;
     allocation_pct: string | null;
     status: KpiTargetStatus;
-    resolved_staff_ids: number[] | null;
+    resolved_staff_ids: number[] | string[] | null;
     resolved_at: string | null;
     created_at: string;
     updated_at: string;
