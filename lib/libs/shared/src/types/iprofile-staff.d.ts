@@ -23,5 +23,6 @@ export declare namespace IStaffProfile {
         zipcode?: null | string;
         attachment_id?: null | string;
         shop_id: string | null;
+        active?: boolean;
     }
 }
