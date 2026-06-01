@@ -73,5 +73,39 @@ export declare namespace ICrmBant {
             timeline_gte: number & tags.Minimum<0> & tags.Maximum<100>;
             authority_missing_behavior: 'warn' | 'block';
         };
+        evidence_options?: IEvidenceOptions;
+    }
+    interface IEvidenceOptions {
+        budget?: IBudgetOption[];
+        authority?: IAuthorityOption[];
+        need?: INeedOption[];
+        timeline?: ITimelineOption[];
+    }
+    interface IBudgetOption {
+        value: string;
+        label: string;
+        labelKey?: string;
+        band: 'low' | 'medium' | 'high';
+        confirmed: boolean;
+    }
+    interface IAuthorityOption {
+        value: string;
+        label: string;
+        labelKey?: string;
+        role: 'unknown' | 'user' | 'influencer' | 'decision_maker';
+        confirmed: boolean;
+    }
+    interface INeedOption {
+        value: string;
+        label: string;
+        labelKey?: string;
+        pain_score: number & tags.Minimum<0> & tags.Maximum<100>;
+        fit_score: number & tags.Minimum<0> & tags.Maximum<100>;
+    }
+    interface ITimelineOption {
+        value: string;
+        label: string;
+        labelKey?: string;
+        days_to_purchase: number & tags.Minimum<0>;
     }
 }
