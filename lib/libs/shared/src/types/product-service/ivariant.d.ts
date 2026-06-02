@@ -53,6 +53,27 @@ export declare namespace IVariant {
     interface ICreateVariant extends IReqCreateVariant {
         shop_id: number & tags.Type<'uint64'>;
     }
+    interface IReqBulkCreateVariant {
+        variants: IReqCreateVariant[];
+    }
+    interface IBulkCreateVariant {
+        variants: ICreateVariant[];
+    }
+    interface IBulkCreateVariantError {
+        index: number;
+        message: string;
+    }
+    interface IBulkCreateVariantResponse {
+        success: IVariantResponse[];
+        errors: IBulkCreateVariantError[];
+    }
+    interface IReqBulkUpdateVariant {
+        variants: IUpdateVariant[];
+    }
+    interface IBulkUpdateVariantResponse {
+        success: IVariantResponse[];
+        errors: IBulkCreateVariantError[];
+    }
     interface IUpdateVariant {
         id?: string;
         image_id?: number & tags.Type<'uint64'>;

@@ -4,6 +4,7 @@ import type { IShop } from "../../../libs/shared/src/types/ishop";
 export * as deleted from "./deleted";
 export * as soft from "./soft";
 export * as register from "./register";
+export * as register_v2 from "./register_v2";
 export * as find_by_name from "./find_by_name";
 export declare function findAll(connection: IConnection, query: findAll.Query): Promise<findAll.Output>;
 export declare namespace findAll {

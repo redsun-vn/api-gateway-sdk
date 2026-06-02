@@ -5,3 +5,4 @@ export * as me from "./me";
 export * as register from "./register";
 export * as register_temporary from "./register_temporary";
 export * as complete_registration from "./complete_registration";
+export * as complete_registration_v2 from "./complete_registration_v2";

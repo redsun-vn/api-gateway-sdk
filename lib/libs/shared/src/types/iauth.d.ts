@@ -67,6 +67,10 @@ export declare namespace IAuth {
         phone: string;
         first_name?: null | string;
     }
+    interface ICompleteRegistrationV2Response {
+        user_id: string;
+        phone: string;
+    }
     interface IResetPasswordFromAdmin {
         user_id: string & tags.Format<'uuid'>;
         password: string;
