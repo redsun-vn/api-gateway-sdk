@@ -74,6 +74,13 @@ export declare namespace IVariant {
         success: IVariantResponse[];
         errors: IBulkCreateVariantError[];
     }
+    interface IReqBulkDeleteVariant {
+        ids: string[];
+    }
+    interface IBulkDeleteVariantResponse {
+        success: string[];
+        errors: IBulkCreateVariantError[];
+    }
     interface IUpdateVariant {
         id?: string;
         image_id?: number & tags.Type<'uint64'>;
