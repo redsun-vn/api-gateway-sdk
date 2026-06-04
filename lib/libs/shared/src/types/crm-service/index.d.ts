@@ -11,3 +11,5 @@ export * from './ishop-config';
 export * from './idashboard';
 export * from './iattachment';
 export * from './kpi-target';
+export * from './icustom-field';
+export * from './istage';
