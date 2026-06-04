@@ -14,10 +14,23 @@ export declare namespace ICrmLead {
         owner_id?: number | null;
         custom_fields?: Record<string, unknown>;
         assign_reason?: string;
+        force_create?: boolean;
+        force_create_reason?: string;
     }
-    type IUpdate = Partial<Omit<ICreate, 'owner_id'>> & {
+    type IUpdate = Partial<Omit<ICreate, 'owner_id' | 'force_create' | 'force_create_reason'>> & {
         owner_id?: number | string | null;
     };
+    interface IDuplicateLeadError {
+        code: 'duplicate_lead_phone';
+        existing: {
+            lead_id: number;
+            name: string;
+            owner_id: number | null;
+            status: CrmLeadStatus;
+            created_at: string;
+        };
+        hint: string;
+    }
     interface ICrmLeadResponse extends BaseResponse {
         shop_id: number | string;
         branch_id?: number | string | null;
@@ -75,20 +88,24 @@ export declare namespace ICrmLead {
     interface IImportEntry extends Omit<ICreate, 'shop_id'> {
         _row_index?: number;
     }
+    type OnDuplicateMode = 'reject' | 'skip' | 'update_existing' | 'force_create';
     interface IImportRequest {
         leads: Array<IImportEntry> & tags.MinItems<1> & tags.MaxItems<500>;
         options?: {
             skip_workflow_rules?: boolean;
+            on_duplicate?: OnDuplicateMode;
+            force_create_reason?: string;
         };
     }
     type ImportAssignOrigin = 'workflow_rule' | 'auto_round_robin' | 'unassigned' | 'manual';
     interface IImportRowResult {
         row_index: number;
-        status: 'created' | 'failed';
+        status: 'created' | 'skipped' | 'updated' | 'failed';
         lead_id?: number;
         duplicate_of_lead_id?: number;
         owner_id?: number | null;
         origin?: ImportAssignOrigin;
+        action_taken?: string;
         error_code?: string;
         error_message?: string;
         error_fields?: string[];
@@ -97,6 +114,9 @@ export declare namespace ICrmLead {
         success_count: number;
         error_count: number;
         duplicate_warning_count: number;
+        duplicate_skip_count: number;
+        duplicate_update_count: number;
+        duplicate_force_created_count: number;
         results: IImportRowResult[];
     }
     interface IScoreRecomputeResponse {
