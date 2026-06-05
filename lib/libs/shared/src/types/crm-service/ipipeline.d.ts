@@ -1,6 +1,6 @@
 import { tags } from 'typia';
 import { BaseResponse } from '../common.type';
-export type StageWinState = 'NONE' | 'WON' | 'LOST';
+export type StageWinState = 'none' | 'won' | 'lost';
 export interface IStageResponse {
     id: number | string;
     pipeline_id: number | string;
@@ -9,6 +9,11 @@ export interface IStageResponse {
     probability: number;
     win_state: StageWinState;
     ui_color: string | null;
+    required_fields_to_enter: Array<{
+        key: string;
+        validation?: string;
+    }> | null;
+    updated_at: string;
 }
 export declare namespace ICrmPipeline {
     interface IFindAllQuery {

@@ -6,6 +6,7 @@ export declare namespace ICustomField {
         key: string & tags.Pattern<'^[a-z][a-z0-9_]{1,40}$'>;
         label: string & tags.MinLength<1> & tags.MaxLength<255>;
         type: string;
+        ref_to?: (string & tags.MinLength<1> & tags.MaxLength<64>) | null;
         options?: Record<string, unknown> | null;
         validation?: Record<string, unknown> | null;
         required_from_stage_order_index?: number | null;
@@ -27,15 +28,16 @@ export declare namespace ICustomField {
         include_inactive?: boolean;
     }
     interface ICustomFieldResponse {
-        id: number;
-        shop_id: number;
+        id: number | string;
+        shop_id: number | string;
         entity_type: string;
         key: string;
         label: string;
         type: string;
+        ref_to: string | null;
         options: Record<string, unknown> | null;
         validation: Record<string, unknown> | null;
-        required_from_stage_order_index: number | null;
+        required_from_stage_order_index: number | string | null;
         indexable: boolean;
         encrypt: boolean;
         active: boolean;

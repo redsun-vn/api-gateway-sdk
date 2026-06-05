@@ -11,11 +11,11 @@ export declare namespace IStage {
         }> | null;
     }
     interface IStageResponse {
-        id: number;
-        pipeline_id: number;
+        id: number | string;
+        pipeline_id: number | string;
         name: string;
-        order_index: number;
-        probability: number;
+        order_index: number | string;
+        probability: number | string;
         win_state: string;
         required_fields_to_enter: unknown;
         ui_color: string | null;
