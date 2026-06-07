@@ -49,4 +49,14 @@ export declare namespace ICrmScoringRule {
         entity_type?: CrmScoringRuleEntityType;
         category?: CrmScoringRuleCategory;
     }
+    interface IFieldDescriptor {
+        key: string;
+        label: string;
+        type: 'numeric' | 'date' | 'text';
+        presence_only: boolean;
+    }
+    interface IFieldCatalogResponse {
+        core: IFieldDescriptor[];
+        custom_fields: IFieldDescriptor[];
+    }
 }

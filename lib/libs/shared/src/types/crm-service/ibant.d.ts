@@ -75,7 +75,7 @@ export declare namespace ICrmBant {
         };
         evidence_options?: IEvidenceOptions;
         field_mapping?: IBantFieldMapping;
-        evidence_required_scope?: 'always' | 'optional';
+        evidence_required_scope?: 'always' | 'optional' | 'stage_gate_only';
     }
     interface IBantFieldMapping {
         budget?: string[];

@@ -1,6 +1,7 @@
 import type { IConnection, Resolved, Primitive } from "@nestia/fetcher";
 import type { IResponse } from "../../../../../libs/shared/src/types/common.type";
 import type { ICrmScoringRule } from "../../../../../libs/shared/src/types/crm-service/iscoring-rule";
+export * as fields from "./fields";
 export declare function findAll(connection: IConnection, query: findAll.Query): Promise<findAll.Output>;
 export declare namespace findAll {
     type Query = Resolved<ICrmScoringRule.IListQuery>;
