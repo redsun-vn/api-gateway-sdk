@@ -1,5 +1,6 @@
 import { tags } from 'typia';
 import { BaseResponse } from '../common.type';
+import { CrmBantClassification } from '../../enum/crm-service/lead';
 export type StageWinState = 'none' | 'won' | 'lost';
 export interface IStageResponse {
     id: number | string;
@@ -24,7 +25,7 @@ export declare namespace ICrmPipeline {
         shop_id: number | string;
         name: string;
         template_id: number | string;
-        template_version: number;
+        template_version: number | string;
         active: boolean;
         is_default: boolean;
     }
@@ -34,5 +35,41 @@ export declare namespace ICrmPipeline {
     }
     interface IFindOneResponse extends IPipelineResponse {
         stages: IStageResponse[];
+    }
+    interface IQualifyGate {
+        mode: 'off' | 'warn' | 'block' | 'auto_qualify';
+        thresholds: {
+            bant_score_gte?: number & tags.Minimum<0> & tags.Maximum<100>;
+            budget_gte?: number & tags.Minimum<0> & tags.Maximum<100>;
+            authority_gte?: number & tags.Minimum<0> & tags.Maximum<100>;
+            need_gte?: number & tags.Minimum<0> & tags.Maximum<100>;
+            timeline_gte?: number & tags.Minimum<0> & tags.Maximum<100>;
+            bant_classification_in?: CrmBantClassification[];
+            score_gte?: number & tags.Minimum<0> & tags.Maximum<100>;
+        };
+        authority_missing_behavior?: 'warn' | 'block';
+        auto_create_opportunity?: boolean;
+    }
+    interface IQualifyGateFailedResponse {
+        errorCode: 'qualify_gate_failed';
+        lead_id: number | string;
+        pipeline_id: number | string;
+        gate_mode: 'block';
+        failed_signals: Array<{
+            signal: 'bant_score' | 'budget' | 'authority' | 'need' | 'timeline' | 'classification' | 'score' | 'authority_warning';
+            actual: number | string | boolean;
+            required: number | string[] | true;
+            op: 'gte' | 'in' | 'warn_flag';
+        }>;
+        lead_scores: {
+            bant_score: number | string;
+            bant_budget_score: number | string;
+            bant_authority_score: number | string;
+            bant_need_score: number | string;
+            bant_timeline_score: number | string;
+            bant_classification: CrmBantClassification;
+            score: number | string;
+            authority_warning: boolean;
+        };
     }
 }

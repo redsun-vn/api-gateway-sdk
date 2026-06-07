@@ -2,6 +2,7 @@ import type { IConnection, Resolved, Primitive } from "@nestia/fetcher";
 import type { IResponse } from "../../../../../libs/shared/src/types/common.type";
 import type { ICrmPipeline } from "../../../../../libs/shared/src/types/crm-service/ipipeline";
 export * as auto_promote from "./auto_promote";
+export * as qualify_gate from "./qualify_gate";
 export declare function findAll(connection: IConnection, query: findAll.Query): Promise<findAll.Output>;
 export declare namespace findAll {
     type Query = Resolved<ICrmPipeline.IFindAllQuery>;

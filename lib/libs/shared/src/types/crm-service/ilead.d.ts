@@ -16,6 +16,7 @@ export declare namespace ICrmLead {
         assign_reason?: string;
         force_create?: boolean;
         force_create_reason?: string;
+        intended_pipeline_id?: number | null;
     }
     type IUpdate = Partial<Omit<ICreate, 'owner_id' | 'force_create' | 'force_create_reason'>> & {
         owner_id?: number | string | null;
@@ -58,6 +59,7 @@ export declare namespace ICrmLead {
         converted_opportunity_id?: number | string | null;
         custom_fields?: Record<string, unknown> | null;
         needs_reassignment?: boolean;
+        intended_pipeline_id?: number | string | null;
     }
     interface IAssign {
         owner_id: number;
