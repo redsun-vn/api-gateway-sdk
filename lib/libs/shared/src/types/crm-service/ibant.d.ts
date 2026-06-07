@@ -74,6 +74,14 @@ export declare namespace ICrmBant {
             authority_missing_behavior: 'warn' | 'block';
         };
         evidence_options?: IEvidenceOptions;
+        field_mapping?: IBantFieldMapping;
+        evidence_required_scope?: 'always' | 'optional';
+    }
+    interface IBantFieldMapping {
+        budget?: string[];
+        authority?: string[];
+        need?: string[];
+        timeline?: string[];
     }
     interface IEvidenceOptions {
         budget?: IBudgetOption[];
