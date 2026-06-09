@@ -89,4 +89,11 @@ export declare namespace IPartner {
         website?: string;
         gender?: number & tags.Maximum<1>;
     }
+    interface IKpiSummary {
+        ltv: number;
+        deals_count: number;
+        deals_won_count: number;
+        last_contact_at: string | null;
+        owner_id: number | string | null;
+    }
 }

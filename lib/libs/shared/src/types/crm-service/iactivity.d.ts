@@ -35,5 +35,6 @@ export declare namespace ICrmActivity {
         related_to_id?: number;
         owner_id?: number;
         type?: CrmActivityType;
+        partner_uuid?: string & tags.Format<'uuid'>;
     }
 }

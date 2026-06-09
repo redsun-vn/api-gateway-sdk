@@ -10,6 +10,7 @@ export declare namespace ICrmTask {
         related_to_id?: number;
         due_from?: string & tags.Format<'date-time'>;
         due_to?: string & tags.Format<'date-time'>;
+        partner_uuid?: string & tags.Format<'uuid'>;
     }
     interface ICreate {
         assignee_id: number;
