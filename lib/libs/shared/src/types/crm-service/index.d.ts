@@ -13,3 +13,4 @@ export * from './iattachment';
 export * from './kpi-target';
 export * from './icustom-field';
 export * from './istage';
+export * from './iworkflow-rule';

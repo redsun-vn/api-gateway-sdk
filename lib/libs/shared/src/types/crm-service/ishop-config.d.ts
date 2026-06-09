@@ -1,5 +1,6 @@
 import { ICrmBant } from './ibant';
 import { ICrmAdmin } from './iadmin';
+import { IWorkflowRuleSchema } from './iworkflow-rule';
 export declare namespace ICrmShopConfig {
     interface IRecomputeStatus {
         last_rubric_recompute_at: string | null;
@@ -15,7 +16,7 @@ export declare namespace ICrmShopConfig {
             position?: number;
             group_by?: string;
         }>;
-        workflow_rules?: Array<Record<string, unknown>>;
+        workflow_rules?: IWorkflowRuleSchema.IWorkflowRule[];
         [key: string]: unknown;
     }
     interface ICrmShopConfigResponse {
@@ -40,7 +41,7 @@ export declare namespace ICrmShopConfig {
             position?: number;
             group_by?: string;
         }>;
-        workflow_rules?: Array<Record<string, unknown>>;
+        workflow_rules?: IWorkflowRuleSchema.IWorkflowRule[];
         [key: string]: unknown;
     }
 }
