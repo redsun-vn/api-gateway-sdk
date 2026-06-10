@@ -5,6 +5,7 @@ export * as attachments from "./attachments";
 export * as bant from "./bant";
 export * as custom_fields from "./custom_fields";
 export * as dashboard from "./dashboard";
+export * as facebook from "./facebook";
 export * as kpi_targets from "./kpi_targets";
 export * as leads from "./leads";
 export * as onboarding from "./onboarding";
