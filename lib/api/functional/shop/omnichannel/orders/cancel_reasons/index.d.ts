@@ -1,12 +1,10 @@
 import type { IConnection, Primitive } from "@nestia/fetcher";
-export * as mapping from "./mapping";
-export * as cancel_reasons from "./cancel_reasons";
-export declare function getOrdersOnProvider(connection: IConnection, provider: string): Promise<getOrdersOnProvider.Output>;
-export declare namespace getOrdersOnProvider {
+export declare function getOrderCancelReasons(connection: IConnection, provider: string): Promise<getOrderCancelReasons.Output>;
+export declare namespace getOrderCancelReasons {
     type Output = Primitive<any>;
     const METADATA: {
         readonly method: "GET";
-        readonly path: "/shop/omnichannel/:provider/orders";
+        readonly path: "/shop/omnichannel/:provider/orders/cancel-reasons";
         readonly request: null;
         readonly response: {
             readonly type: "application/json";

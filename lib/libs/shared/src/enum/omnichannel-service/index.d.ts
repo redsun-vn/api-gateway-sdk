@@ -1,4 +1,5 @@
 export * from './omnichannel';
+export * from './provider-order-status';
 export declare enum OMNI_CHANNEL_TARGET_ENUM {
     ORDER = "order",
     PRODUCT = "product",
