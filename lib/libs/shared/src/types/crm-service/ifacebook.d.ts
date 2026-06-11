@@ -10,6 +10,7 @@ export declare namespace ICrmFacebook {
         field_mapping: Record<string, string>;
         default_owner_id?: number;
         pipeline_id?: number;
+        default_branch_id?: number;
     }
     interface ISyncLogQuery {
         status?: FbSyncStatus;
@@ -43,6 +44,7 @@ export declare namespace ICrmFacebook {
         fb_form_id: string;
         field_mapping: Record<string, string>;
         default_owner_id: number | string | null;
+        default_branch_id: number | string | null;
         pipeline_id: number | string | null;
         is_active: boolean;
     }

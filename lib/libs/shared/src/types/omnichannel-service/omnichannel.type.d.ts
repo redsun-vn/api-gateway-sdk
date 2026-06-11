@@ -67,4 +67,7 @@ export declare namespace IOmnichannel {
         limit?: number;
         unmapped?: boolean;
     }
+    interface MappingStatsQuery {
+        provider?: string;
+    }
 }

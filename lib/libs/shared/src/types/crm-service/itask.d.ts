@@ -36,6 +36,7 @@ export declare namespace ICrmTask {
         due_at: string;
         reminder_at?: string | null;
         completed_at?: string | null;
+        created_by_id?: number | string | null;
     }
     interface IComplete {
         completion_notes?: string;
