@@ -21,7 +21,7 @@ export declare enum LAZADA_ORDER_STATUS_ENUM {
     SHIPPED = "shipped",
     CONFIRMED = "confirmed",
     DELIVERED = "delivered",
-    CANCELED = "canceled",
+    CANCELED = "cancelled",
     RETURNED = "returned",
     FAILED = "failed",
     LOST_BY_3PL = "lost_by_3pl",
