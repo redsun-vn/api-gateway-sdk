@@ -85,3 +85,22 @@ export declare namespace update {
     };
     const path: (id: string) => string;
 }
+export declare function review(connection: IConnection, data: review.Input): Promise<review.Output>;
+export declare namespace review {
+    type Input = Resolved<ITemplate.IReview>;
+    type Output = Primitive<IResponse<ITemplate.IResponse>>;
+    const METADATA: {
+        readonly method: "POST";
+        readonly path: "/admin/cms/templates/review";
+        readonly request: {
+            readonly type: "application/json";
+            readonly encrypted: false;
+        };
+        readonly response: {
+            readonly type: "application/json";
+            readonly encrypted: false;
+        };
+        readonly status: 201;
+    };
+    const path: () => string;
+}
