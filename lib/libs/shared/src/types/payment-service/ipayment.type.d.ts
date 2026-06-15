@@ -58,11 +58,4 @@ export declare namespace IPayment {
         bankAccount?: IBankAccount.IBankAccountResponse | null;
         qrCode?: string;
     }
-    interface IDepositPaymentConrfirmReceived {
-        gateway_ref?: string;
-    }
-    interface IDepositPaymentConrfirmReceivedResponse {
-        payment_id: number;
-        status: string;
-    }
 }

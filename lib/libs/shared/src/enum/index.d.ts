@@ -25,7 +25,6 @@ export * from './ai-content';
 export * from './billing';
 export * from './reservation';
 export * from './treatment';
-export * from './crm-service';
 export declare enum RecurrencePeriod {
     HOURLY = "HOURLY",
     DAILY = "DAILY",

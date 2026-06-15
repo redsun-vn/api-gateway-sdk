@@ -8,7 +8,6 @@ export declare namespace ISaleOrder {
     interface ICreate {
         branch_id: number & tags.Type<'uint64'>;
         created_by: number & tags.Type<'uint64'>;
-        opportunity_id?: number & tags.Type<'uint64'>;
         responsible_by?: number & tags.Type<'uint64'>;
         shipping_method_id?: number & tags.Type<'uint64'>;
         payment_term_id?: number & tags.Type<'uint64'>;
@@ -83,7 +82,6 @@ export declare namespace ISaleOrder {
         expectedDate: string | null;
         dateOrder: string | null;
         isExpired: boolean;
-        opportunity_id: number | string | null;
         order?: IOrder.IDetailOrderResponse | null;
         lineItems?: ILineItem.IDetailLineItemResponse[] | null;
         combiningPromotions?: ICombiningPromotion.IDetailCombiningPromotionResponse[] | null;

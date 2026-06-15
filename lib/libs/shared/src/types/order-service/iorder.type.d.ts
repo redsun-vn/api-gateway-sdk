@@ -151,25 +151,7 @@ export declare namespace IOrder {
         isEInvoice?: boolean;
         isEInvoicePublished?: boolean;
     }
-    interface IDetailOrderPublicResponse extends Omit<IDetailOrderResponse, 'draf_order_id' | 'shift_id' | 'idempotency_key' | 'originTotal' | 'shippingTotal' | 'refundable' | 'refundedTotal' | 'returnedTotal' | 'customerAcceptMarketing' | 'clientIp' | 'discountCode' | 'drafOrder' | 'combiningPromotions'> {
+    interface IDetailOrderPublicResponse extends Omit<IDetailOrderResponse, 'draf_order_id' | 'shift_id' | 'idempotency_key' | 'subTotal' | 'taxTotal' | 'originTotal' | 'shippingTotal' | 'refundable' | 'refundedTotal' | 'returnedTotal' | 'customerAcceptMarketing' | 'clientIp' | 'discountCode' | 'drafOrder' | 'combiningPromotions'> {
         lineItems?: ILineItem.IDetailLineItemPublicResponse[] | null;
-    }
-    interface IApplyDepositInput {
-        deposit_id: string;
-        amount?: number;
-    }
-    interface IApplyDeposit {
-        deposits: IApplyDepositInput[];
-        idempotency_key?: string;
-    }
-    interface IApplyDepositResult {
-        applied: Array<{
-            deposit_id: string | number;
-            amount: number;
-            transaction_id: string | number;
-        }>;
-        order_outstanding_after: number;
-        order_paid_total: number;
-        order_financial_status: string;
     }
 }

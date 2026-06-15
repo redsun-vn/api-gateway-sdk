@@ -67,10 +67,4 @@ export declare namespace IOmnichannel {
         limit?: number;
         unmapped?: boolean;
     }
-    interface MappingStatsQuery {
-        provider?: string;
-    }
-    interface OrderCancelReasonsQuery {
-        providerOrderId: string;
-    }
 }

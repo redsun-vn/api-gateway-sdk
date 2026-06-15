@@ -1,5 +1,10 @@
 export * from './omnichannel';
-export * from './provider-order-status';
+export declare enum OMNI_CHANNEL_PROVIDER_ENUM {
+    SHOPEE_SHOP = "shopee_shop",
+    TIKTOK_SHOP = "tiktok_shop",
+    AMAZON = "amazon",
+    LAZADA = "lazada"
+}
 export declare enum OMNI_CHANNEL_TARGET_ENUM {
     ORDER = "order",
     PRODUCT = "product",

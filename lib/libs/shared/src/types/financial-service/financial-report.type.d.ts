@@ -5,7 +5,6 @@ export declare namespace IFinancialReport {
         startDate: string;
         endDate: string;
         currency?: string;
-        partner_uuid?: string;
     }
     interface IProfitLossReport {
         revenue: IRevenueSection;
