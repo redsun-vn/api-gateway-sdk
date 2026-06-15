@@ -7,6 +7,7 @@ export declare namespace IDepartment {
         parent_id?: string | number;
         description?: string;
         parent_flatten_ids?: string;
+        head_id?: string;
     }
     type IUpdate = Omit<Partial<ICreate>, 'owner_id'>;
     interface IResponse extends BaseResponse {
@@ -16,5 +17,6 @@ export declare namespace IDepartment {
         parent_id: string | number | null;
         description: string | null;
         parent_flatten_ids: string | null;
+        head_id?: string | null;
     }
 }

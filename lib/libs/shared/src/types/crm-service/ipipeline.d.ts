@@ -14,6 +14,8 @@ export interface IStageResponse {
         key: string;
         validation?: string;
     }> | null;
+    allowed_next_stages: string[] | null;
+    allowed_prev_stages: string[] | null;
     updated_at: string;
 }
 export declare namespace ICrmPipeline {

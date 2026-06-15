@@ -7,10 +7,10 @@ import { IPartnerCategory } from './ipartner-category';
 import { PartnerIdentityType } from '../../enum';
 export declare namespace IPartner {
     interface ICreate {
-        branch_id?: number & tags.Type<'int32'>;
+        branch_id?: number;
         user_id?: string;
         created_by_id: string;
-        attachment_id?: number & tags.Type<'int32'>;
+        attachment_id?: number;
         uuid?: string;
         first_name?: string;
         last_name?: string;
@@ -37,6 +37,7 @@ export declare namespace IPartner {
         identity_number?: string;
         identity_type?: PartnerIdentityType;
         nationality?: string;
+        owner_id?: string;
     }
     type TypePartnerUpload = 'customer' | 'supplier';
     interface IUpload {
@@ -78,6 +79,8 @@ export declare namespace IPartner {
         identity_type?: string | null;
         nationality?: string | null;
         last_order?: string | null;
+        source_lead_id?: number | string | null;
+        owner_id?: number | string | null;
     }
     interface IUpdateWebsite {
         attachment_id?: number & tags.Type<'int32'>;

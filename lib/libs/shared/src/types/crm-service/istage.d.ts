@@ -9,6 +9,8 @@ export declare namespace IStage {
             key: string;
             validation?: string;
         }> | null;
+        allowed_next_stages?: string[];
+        allowed_prev_stages?: string[];
     }
     interface IStageResponse {
         id: number | string;
@@ -20,5 +22,7 @@ export declare namespace IStage {
         required_fields_to_enter: unknown;
         ui_color: string | null;
         updated_at: string;
+        allowed_next_stages: string[] | null;
+        allowed_prev_stages: string[] | null;
     }
 }
