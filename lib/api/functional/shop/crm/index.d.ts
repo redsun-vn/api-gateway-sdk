@@ -1,0 +1,17 @@
+export * as activities from "./activities";
+export * as admin from "./admin";
+export * as opportunity from "./opportunity";
+export * as attachments from "./attachments";
+export * as bant from "./bant";
+export * as custom_fields from "./custom_fields";
+export * as dashboard from "./dashboard";
+export * as facebook from "./facebook";
+export * as kpi_targets from "./kpi_targets";
+export * as leads from "./leads";
+export * as onboarding from "./onboarding";
+export * as opportunities from "./opportunities";
+export * as pipelines from "./pipelines";
+export * as scoring_rules from "./scoring_rules";
+export * as shop_config from "./shop_config";
+export * as stages from "./stages";
+export * as tasks from "./tasks";

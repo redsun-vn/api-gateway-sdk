@@ -11,6 +11,7 @@ export declare namespace IBranch {
         longitude?: string;
         timeZone?: string;
         isDefault?: boolean;
+        head_id?: string;
     }
     interface IUpdate extends BaseProfile {
         staff_id?: string[];
@@ -21,6 +22,7 @@ export declare namespace IBranch {
         timeZone?: string;
         active?: boolean;
         isDefault?: boolean;
+        head_id?: string;
     }
     interface IBranchResponse extends BaseProfileResponse, BaseResponse {
         shop_id: string | number;
@@ -33,5 +35,6 @@ export declare namespace IBranch {
         timeZone: string;
         staffs?: IStaff.IStaffResponse[];
         shop?: IShop.IShopResponse;
+        head_id?: string | null;
     }
 }

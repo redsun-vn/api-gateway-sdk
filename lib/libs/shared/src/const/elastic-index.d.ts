@@ -213,6 +213,10 @@ export declare const ELASTIC_INDEX: {
     SYSTEM_PRICEBOOK_INDEX_NAME: string;
     SYSTEM_PRICEBOOK_ENTRY_INDEX_NAME: string;
     SYSTEM_PRICEBOOK_TIER_INDEX_NAME: string;
+    CRM_LEAD: string;
+    CRM_OPPORTUNITY: string;
+    CRM_ACTIVITY: string;
+    CRM_DASHBOARD_SNAPSHOT: string;
     UOM: string;
     UOM_CATEGORY: string;
     UNIT: string;
