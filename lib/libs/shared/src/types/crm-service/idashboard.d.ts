@@ -5,6 +5,7 @@ export declare namespace ICrmDashboard {
         date_to?: string;
         branch_id?: number;
         pipeline_id?: number;
+        format?: 'csv' | 'xlsx';
     }
     interface IKpiResponse {
         revenue: number;

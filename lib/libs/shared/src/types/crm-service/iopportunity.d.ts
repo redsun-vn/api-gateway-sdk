@@ -43,6 +43,8 @@ export declare namespace ICrmOpportunity {
         order_id?: number | string | null;
         reservation_id?: number | string | null;
         custom_fields?: Record<string, unknown> | null;
+        stage_since?: string | null;
+        first_responded_at?: string | null;
     }
     interface IMove {
         target_stage_id: number;

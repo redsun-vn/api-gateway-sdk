@@ -29,7 +29,7 @@ export declare namespace ICrmActivity {
         completed_at?: string | null;
         due_at?: string | null;
         metadata?: Record<string, unknown> | null;
-        created_by_id: string;
+        created_by_id?: string | null;
     }
     interface IListQuery {
         related_to_type?: CrmActivityRelatedToType;

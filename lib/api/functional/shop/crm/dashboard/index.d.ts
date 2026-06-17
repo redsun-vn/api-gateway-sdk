@@ -7,6 +7,21 @@ export * as activity_per_opp from "./activity_per_opp";
 export * as lead_source_analytics from "./lead_source_analytics";
 export * as recent_activity from "./recent_activity";
 export * as widgets_config from "./widgets_config";
+export declare function $export(connection: IConnection, query: $export.Query): Promise<void>;
+export declare namespace $export {
+    type Query = Resolved<ICrmDashboard.IDateRangeQuery>;
+    const METADATA: {
+        readonly method: "GET";
+        readonly path: "/shop/crm/dashboard/export";
+        readonly request: null;
+        readonly response: {
+            readonly type: "application/json";
+            readonly encrypted: false;
+        };
+        readonly status: 200;
+    };
+    const path: (query: $export.Query) => string;
+}
 export declare function kpi(connection: IConnection, query: kpi.Query): Promise<kpi.Output>;
 export declare namespace kpi {
     type Query = Resolved<ICrmDashboard.IDateRangeQuery>;

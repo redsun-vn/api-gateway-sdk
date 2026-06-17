@@ -81,6 +81,7 @@ export declare namespace IOrder {
     }
     interface IUpdateOrder extends Omit<Partial<ICreateOrder>, 'branch_id' | 'staff_id' | 'pos_session_id' | 'sale_channel_id' | 'isDebtOrder' | 'debtAmount' | 'debtDueDate' | 'debtPaidAt'> {
         uuid?: string & tags.Format<'uuid'>;
+        cancelOnProvider?: boolean;
     }
     interface IDetailOrderResponse extends BaseResponse {
         shop_id: number | string;

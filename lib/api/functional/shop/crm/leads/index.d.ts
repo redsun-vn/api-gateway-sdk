@@ -1,6 +1,7 @@
 import type { IConnection, Resolved, Primitive } from "@nestia/fetcher";
 import type { IQuery, IResponse, IResponsePagination } from "../../../../../libs/shared/src/types/common.type";
 import type { ICrmLead } from "../../../../../libs/shared/src/types/crm-service/ilead";
+export * as scoped from "./scoped";
 export * as bulk_assign from "./bulk_assign";
 export * as recompute_score from "./recompute_score";
 export * as score_breakdown from "./score_breakdown";
@@ -21,6 +22,21 @@ export declare namespace findAll {
         readonly status: 200;
     };
     const path: (query: findAll.Query) => string;
+}
+export declare function $export(connection: IConnection, query: $export.Query): Promise<void>;
+export declare namespace $export {
+    type Query = Resolved<IQuery>;
+    const METADATA: {
+        readonly method: "GET";
+        readonly path: "/shop/crm/leads/export";
+        readonly request: null;
+        readonly response: {
+            readonly type: "application/json";
+            readonly encrypted: false;
+        };
+        readonly status: 200;
+    };
+    const path: (query: $export.Query) => string;
 }
 export declare function create(connection: IConnection, body: create.Input): Promise<create.Output>;
 export declare namespace create {

@@ -2,6 +2,8 @@ import type { IConnection, Resolved, Primitive } from "@nestia/fetcher";
 import type { IQuery, IResponse } from "../../../../../libs/shared/src/types/common.type";
 import type { ICrmOpportunity } from "../../../../../libs/shared/src/types/crm-service/iopportunity";
 export * as bulk_reassign from "./bulk_reassign";
+export * as kanban from "./kanban";
+export * as scoped from "./scoped";
 export * as quote_prefill from "./quote_prefill";
 export * as link_sale_order from "./link_sale_order";
 export declare function findAll(connection: IConnection, query: findAll.Query): Promise<findAll.Output>;
@@ -20,13 +22,12 @@ export declare namespace findAll {
     };
     const path: (query: findAll.Query) => string;
 }
-export declare function kanban(connection: IConnection, query: kanban.Query): Promise<kanban.Output>;
-export declare namespace kanban {
-    type Query = Resolved<ICrmOpportunity.IQueryPipeline>;
-    type Output = Primitive<IResponse<ICrmOpportunity.IKanbanResponse>>;
+export declare function $export(connection: IConnection, query: $export.Query): Promise<void>;
+export declare namespace $export {
+    type Query = Resolved<IQuery>;
     const METADATA: {
         readonly method: "GET";
-        readonly path: "/shop/crm/opportunities/kanban";
+        readonly path: "/shop/crm/opportunities/export";
         readonly request: null;
         readonly response: {
             readonly type: "application/json";
@@ -34,7 +35,7 @@ export declare namespace kanban {
         };
         readonly status: 200;
     };
-    const path: (query: kanban.Query) => string;
+    const path: (query: $export.Query) => string;
 }
 export declare function create(connection: IConnection, body: create.Input): Promise<create.Output>;
 export declare namespace create {

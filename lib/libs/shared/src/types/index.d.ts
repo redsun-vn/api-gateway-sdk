@@ -9,6 +9,7 @@ export * from './iprofile-staff';
 export * from './ifile';
 export * from './iKeycloakUser';
 export * from './ibranch';
+export * from './ivisible-staff';
 export * from './ibrand';
 export * from './idomain';
 export * from './igroup';

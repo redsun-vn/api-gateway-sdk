@@ -60,6 +60,8 @@ export declare namespace ICrmLead {
         custom_fields?: Record<string, unknown> | null;
         needs_reassignment?: boolean;
         intended_pipeline_id?: number | string | null;
+        assigned_at?: string | null;
+        first_responded_at?: string | null;
     }
     interface IAssign {
         owner_id: number;
