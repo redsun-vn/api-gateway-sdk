@@ -144,6 +144,25 @@ export declare namespace assign {
     };
     const path: (id: number) => string;
 }
+export declare function merge(connection: IConnection, id: number, body: merge.Input): Promise<merge.Output>;
+export declare namespace merge {
+    type Input = Resolved<ICrmLead.IMerge>;
+    type Output = Primitive<IResponse<ICrmLead.ICrmLeadResponse>>;
+    const METADATA: {
+        readonly method: "POST";
+        readonly path: "/shop/crm/leads/:id/merge";
+        readonly request: {
+            readonly type: "application/json";
+            readonly encrypted: false;
+        };
+        readonly response: {
+            readonly type: "application/json";
+            readonly encrypted: false;
+        };
+        readonly status: 201;
+    };
+    const path: (id: number) => string;
+}
 export declare function $import(connection: IConnection, body: $import.Input): Promise<$import.Output>;
 export declare namespace $import {
     type Input = Resolved<ICrmLead.IImportRequest>;

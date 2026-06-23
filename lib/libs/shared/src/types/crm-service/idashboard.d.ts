@@ -80,6 +80,9 @@ export declare namespace ICrmDashboard {
         conversion_count: number;
         conversion_rate: number;
         avg_deal_size: number;
+        hot_lead_count: number;
+        scored_count: number;
+        avg_bant_score: number;
     }
     interface ILeadSourceAnalyticsResponse {
         items: ILeadSourceAnalyticsItem[];
@@ -99,5 +102,89 @@ export declare namespace ICrmDashboard {
     }
     interface IRecentActivityResponse {
         items: IRecentActivityItem[];
+    }
+    interface ISlaComplianceMetric {
+        total: number;
+        breached: number;
+        compliance_pct: number | null;
+    }
+    interface ISlaTrendBucket {
+        date: string;
+        breached: number;
+    }
+    interface ISlaByStageRow {
+        stage_id: number | null;
+        label: string;
+        breached: number;
+    }
+    interface ISlaLeaderboardRow {
+        owner_id: number;
+        total: number;
+        breached: number;
+        compliance_pct: number | null;
+    }
+    interface ISlaComplianceResponse {
+        first_response: ISlaComplianceMetric;
+        stage_stuck: ISlaComplianceMetric;
+        trend: ISlaTrendBucket[];
+        by_stage: ISlaByStageRow[];
+        leaderboard: ISlaLeaderboardRow[];
+    }
+    interface IWinLossStageRow {
+        stage_id: number;
+        label: string;
+        won: number;
+        lost: number;
+        win_rate: number | null;
+    }
+    interface IWinLossOwnerRow {
+        owner_id: number;
+        won: number;
+        lost: number;
+        win_rate: number | null;
+    }
+    interface IWinLossReasonRow {
+        reason: string;
+        count: number;
+    }
+    interface IWinLossTrendBucket {
+        date: string;
+        won: number;
+        lost: number;
+    }
+    interface IWinLossResponse {
+        won_count: number;
+        lost_count: number;
+        open_count: number;
+        win_rate: number;
+        won_value: number;
+        lost_value: number;
+        by_stage: IWinLossStageRow[];
+        by_owner: IWinLossOwnerRow[];
+        top_lost_reasons: IWinLossReasonRow[];
+        trend: IWinLossTrendBucket[];
+    }
+    interface IPipelineHealthStageRow {
+        stage_id: number;
+        label: string;
+        open_count: number;
+        overdue_count: number;
+        avg_age_days: number;
+    }
+    interface IPipelineHealthResponse {
+        total_open: number;
+        total_overdue: number;
+        by_stage: IPipelineHealthStageRow[];
+    }
+    interface ILeadScoringBucket {
+        classification: string;
+        count: number;
+    }
+    interface ILeadScoringDistributionResponse {
+        total: number;
+        scored_count: number;
+        avg_score: number;
+        avg_bant_score: number;
+        distribution: ILeadScoringBucket[];
     }
 }

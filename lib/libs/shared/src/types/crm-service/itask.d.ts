@@ -4,6 +4,7 @@ import { CrmTaskPriority, CrmTaskStatus, CrmTaskRelatedToType } from '../../enum
 export declare namespace ICrmTask {
     interface ITaskListQuery {
         assignee_id?: number;
+        owner_id?: number;
         status?: CrmTaskStatus;
         priority?: CrmTaskPriority;
         related_to_type?: CrmTaskRelatedToType;

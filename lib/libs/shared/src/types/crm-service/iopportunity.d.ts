@@ -1,6 +1,7 @@
 import { tags } from 'typia';
 import { BaseResponse } from '../common.type';
 import { CrmOpportunityVisibility } from '../../enum/crm-service/opportunity';
+import { CrmSlaPriority } from '../../enum/crm-service/sla';
 export declare namespace ICrmOpportunity {
     interface ICreate {
         owning_branch_id?: number | null;
@@ -17,6 +18,7 @@ export declare namespace ICrmOpportunity {
         source?: string;
         source_ref?: string;
         custom_fields?: Record<string, unknown>;
+        sla_priority?: CrmSlaPriority;
     }
     type IUpdate = Partial<ICreate>;
     interface ICrmOpportunityResponse extends BaseResponse {
@@ -39,6 +41,7 @@ export declare namespace ICrmOpportunity {
         owner_id: number | string;
         source?: string | null;
         source_ref?: string | null;
+        sla_priority?: CrmSlaPriority;
         sale_order_id?: number | string | null;
         order_id?: number | string | null;
         reservation_id?: number | string | null;

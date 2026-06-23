@@ -2,7 +2,8 @@ export declare enum CrmLeadPermission {
     VIEW = "crm_lead-view",
     CREATE = "crm_lead-create",
     UPDATE = "crm_lead-update",
-    ASSIGN = "crm_lead-assign"
+    ASSIGN = "crm_lead-assign",
+    MERGE = "crm_lead-merge"
 }
 export declare enum CrmOpportunityPermission {
     VIEW = "crm_opportunity-view",
@@ -18,4 +19,7 @@ export declare enum CrmAttachmentPermission {
 }
 export declare enum CrmKpiTargetPermission {
     VIEW = "crm_kpi_target-view"
+}
+export declare enum CrmCompliancePermission {
+    VIEW = "crm_compliance-view"
 }

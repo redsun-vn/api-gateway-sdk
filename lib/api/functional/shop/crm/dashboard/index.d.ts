@@ -1,6 +1,10 @@
 import type { IConnection, Resolved, Primitive } from "@nestia/fetcher";
 import type { IResponse } from "../../../../../libs/shared/src/types/common.type";
 import type { ICrmDashboard } from "../../../../../libs/shared/src/types/crm-service/idashboard";
+export * as sla_compliance from "./sla_compliance";
+export * as win_loss from "./win_loss";
+export * as pipeline_health from "./pipeline_health";
+export * as lead_scoring_distribution from "./lead_scoring_distribution";
 export * as revenue_trend from "./revenue_trend";
 export * as lead_conversion from "./lead_conversion";
 export * as activity_per_opp from "./activity_per_opp";

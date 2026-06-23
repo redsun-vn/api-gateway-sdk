@@ -1,3 +1,4 @@
+import { CrmSlaPriority } from '../../enum/crm-service/sla';
 export declare namespace ICrmFacebook {
     type FbSyncSource = 'webhook' | 'polling' | 'retry';
     type FbSyncStatus = 'success' | 'failed' | 'skipped' | 'linked_existing' | 'skipped_conflict' | 'skipped_no_mapping' | 'auth_failed';
@@ -14,6 +15,7 @@ export declare namespace ICrmFacebook {
         default_owner_id?: number;
         pipeline_id?: number;
         default_branch_id?: number;
+        default_sla_priority?: CrmSlaPriority;
     }
     interface ISyncLogQuery {
         status?: FbSyncStatus;
@@ -49,6 +51,7 @@ export declare namespace ICrmFacebook {
         default_owner_id: number | string | null;
         default_branch_id: number | string | null;
         pipeline_id: number | string | null;
+        default_sla_priority?: 'low' | 'medium' | 'high' | 'urgent' | null;
         is_active: boolean;
     }
     interface IFbSyncLogResponse {

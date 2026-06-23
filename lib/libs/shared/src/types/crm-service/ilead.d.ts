@@ -1,6 +1,7 @@
 import { tags } from 'typia';
 import { BaseResponse } from '../common.type';
 import { CrmLeadSource, CrmLeadStatus, CrmBantClassification } from '../../enum/crm-service/lead';
+import { CrmSlaPriority } from '../../enum/crm-service/sla';
 export declare namespace ICrmLead {
     interface ICreate {
         branch_id?: number | null;
@@ -17,6 +18,8 @@ export declare namespace ICrmLead {
         force_create?: boolean;
         force_create_reason?: string;
         intended_pipeline_id?: number | null;
+        sla_priority?: CrmSlaPriority;
+        tags?: string[];
     }
     type IUpdate = Partial<Omit<ICreate, 'owner_id' | 'force_create' | 'force_create_reason'>> & {
         owner_id?: number | string | null;
@@ -54,10 +57,12 @@ export declare namespace ICrmLead {
         authority_warning: boolean;
         bant_breakdown?: Record<string, unknown> | null;
         status: CrmLeadStatus;
+        sla_priority?: CrmSlaPriority;
         owner_id?: number | string | null;
         converted_partner_uuid?: string | null;
         converted_opportunity_id?: number | string | null;
         custom_fields?: Record<string, unknown> | null;
+        tags?: string[] | null;
         needs_reassignment?: boolean;
         intended_pipeline_id?: number | string | null;
         assigned_at?: string | null;
@@ -66,6 +71,9 @@ export declare namespace ICrmLead {
     interface IAssign {
         owner_id: number;
         reason?: string;
+    }
+    interface IMerge {
+        source_lead_id: number;
     }
     interface IBulkAssign {
         lead_ids: Array<number> & tags.MinItems<1> & tags.MaxItems<100>;
