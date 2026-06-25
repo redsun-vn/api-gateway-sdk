@@ -19,3 +19,4 @@ export * from './istage';
 export * from './iworkflow-rule';
 export * from './ifacebook';
 export * from './inotification';
+export * from './iconversation';

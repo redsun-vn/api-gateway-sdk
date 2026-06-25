@@ -94,10 +94,22 @@ export declare namespace ICrmFacebook {
         ad_id?: string;
         ad_group_id?: string;
     }
+    interface IFbMessagingEvent {
+        sender?: {
+            id: string;
+        };
+        recipient?: {
+            id: string;
+        };
+        timestamp?: number;
+        message?: Record<string, unknown>;
+        [key: string]: unknown;
+    }
     interface IFbWebhookEntry {
         id: string;
         time?: number | string;
         changes?: IFbWebhookChange[];
+        messaging?: IFbMessagingEvent[];
     }
     interface IFbLeadgenWebhookBody {
         object: string;

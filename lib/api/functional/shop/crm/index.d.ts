@@ -4,6 +4,7 @@ export * as opportunity from "./opportunity";
 export * as attachments from "./attachments";
 export * as bant from "./bant";
 export * as notifications from "./notifications";
+export * as conversations from "./conversations";
 export * as custom_fields from "./custom_fields";
 export * as dashboard from "./dashboard";
 export * as facebook from "./facebook";
