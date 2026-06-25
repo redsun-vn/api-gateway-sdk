@@ -8,6 +8,11 @@ export declare namespace IConversation {
         page?: number;
         limit?: number;
     }
+    interface ICountsResponse {
+        mine: number | string;
+        unassigned: number | string;
+        all: number | string;
+    }
     interface IConversationItem {
         id: number | string;
         shop_id: number | string;
@@ -18,6 +23,9 @@ export declare namespace IConversation {
         assigned_staff_id: number | string | null;
         owning_branch_id: number | string | null;
         channel_identity_id: number | string | null;
+        customer_name: string | null;
+        customer_phone: string | null;
+        last_message_text: string | null;
         last_message_at: string | null;
         window_expires_at: string | null;
         unread_count: number;
