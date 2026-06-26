@@ -2,6 +2,9 @@ import type { IConnection, Resolved, Primitive } from "@nestia/fetcher";
 import type { IResponse } from "../../../../../libs/shared/src/types/common.type";
 import type { IConversation } from "../../../../../libs/shared/src/types/crm-service/iconversation";
 export * as reply from "./reply";
+export * as read from "./read";
+export * as assign from "./assign";
+export * as attachments from "./attachments";
 export declare function findAll(connection: IConnection, query: findAll.Query): Promise<findAll.Output>;
 export declare namespace findAll {
     type Query = Resolved<IConversation.IListQuery>;

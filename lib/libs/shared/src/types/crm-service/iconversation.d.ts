@@ -5,6 +5,7 @@ export declare namespace IConversation {
         status?: string;
         assignment?: 'mine' | 'unassigned' | 'all';
         since?: string & tags.Format<'date-time'>;
+        partner_uuid?: string;
         page?: number;
         limit?: number;
     }
@@ -51,6 +52,12 @@ export declare namespace IConversation {
         error_code: string | null;
         sent_at: string;
         createdAt: string;
+        media_refs?: IMediaRef[];
+    }
+    interface IMediaRef {
+        id: string;
+        content_type: string | null;
+        media_status: string;
     }
     interface IListResponse {
         items: IConversationItem[];
@@ -74,5 +81,20 @@ export declare namespace IConversation {
         message_id: number | string;
         status: string;
         external_msg_id: string | null;
+    }
+    interface IMarkReadResponse {
+        id: number | string;
+        unread_count: number;
+    }
+    interface IAttachmentAccessResponse {
+        url: string;
+        expires_at: number | null;
+    }
+    interface IReassignBody {
+        staff_id: number;
+    }
+    interface IReassignResponse {
+        conversation_id: number | string;
+        assigned_staff_id: number | string;
     }
 }

@@ -1,7 +1,7 @@
 import { tags } from 'typia';
 import { BaseResponse } from '../common.type';
 import { ILineItem } from './iline-item.type';
-import { CODStatus, OrderStatus, OrderFinancialStatus, OrderFulfillmentStatus, OrderProcessingStatus } from '../../enum';
+import { CODStatus, OrderStatus, OrderFinancialStatus, OrderFulfillmentStatus, OrderProcessingStatus, ORDER_UPDATE_SOURCE_ENUM } from '../../enum';
 import { IDrafOrder } from './idraf-order.type';
 import { ITableReservation } from './itable-reservation.type';
 import { ICombiningPromotion } from './icombining-promotion.type';
@@ -82,6 +82,7 @@ export declare namespace IOrder {
     interface IUpdateOrder extends Omit<Partial<ICreateOrder>, 'branch_id' | 'staff_id' | 'pos_session_id' | 'sale_channel_id' | 'isDebtOrder' | 'debtAmount' | 'debtDueDate' | 'debtPaidAt'> {
         uuid?: string & tags.Format<'uuid'>;
         cancelOnProvider?: boolean;
+        source?: ORDER_UPDATE_SOURCE_ENUM;
     }
     interface IDetailOrderResponse extends BaseResponse {
         shop_id: number | string;

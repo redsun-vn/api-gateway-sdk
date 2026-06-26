@@ -1,6 +1,7 @@
 export * from './pos.session.state';
 export * from './product.state';
 export * from './order.state';
+export * from './order-update-source.enum';
 export * from './webhook.state';
 export * from './fulfillment-order.state';
 export * from './activity-log.state';

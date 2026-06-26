@@ -5,6 +5,10 @@ export declare enum CrmLeadPermission {
     ASSIGN = "crm_lead-assign",
     MERGE = "crm_lead-merge"
 }
+export declare enum CrmConversationPermission {
+    VIEW = "crm_conversation-read",
+    REPLY = "crm_conversation-reply"
+}
 export declare enum CrmOpportunityPermission {
     VIEW = "crm_opportunity-view",
     UPDATE = "crm_opportunity-update",
