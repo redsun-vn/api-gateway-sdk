@@ -13,7 +13,8 @@ export declare enum E_INVOICE_PROVIDER_ENUM {
 }
 export declare enum CREATE_SHOP_FROM_SOURCE_ENUM {
     SIPOS = "sipos.vn",
-    WEBINO = "webino.vn"
+    WEBINO = "webino.vn",
+    BOS = "bos.redsun.vn"
 }
 export declare enum APPLICATION_MAIN_SALES_STATUS_ENUM {
     ACTIVE_HIDDEN = "active_hidden",

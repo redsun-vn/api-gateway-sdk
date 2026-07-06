@@ -30,6 +30,8 @@ export declare namespace IConversation {
         last_message_at: string | null;
         window_expires_at: string | null;
         unread_count: number;
+        last_inbound_at?: string | null;
+        first_response_at?: string | null;
         createdAt: string;
         updatedAt: string;
     }
@@ -50,6 +52,9 @@ export declare namespace IConversation {
         request_id: string | null;
         send_status: string | null;
         error_code: string | null;
+        delivery_status?: string | null;
+        delivered_at?: string | null;
+        read_at?: string | null;
         sent_at: string;
         createdAt: string;
         media_refs?: IMediaRef[];
@@ -96,5 +101,21 @@ export declare namespace IConversation {
     interface IReassignResponse {
         conversation_id: number | string;
         assigned_staff_id: number | string;
+    }
+    interface IInitiateBody {
+        channel: string;
+        channel_identity_id?: number | string;
+        recipient_external_id?: string;
+        partner_uuid?: string;
+        text?: string;
+        attachment?: ISendAttachment;
+        request_id: string & tags.Format<'uuid'>;
+    }
+    interface IInitiateResponse {
+        conversation_id: number | string;
+        message_id: number | string;
+        status: string;
+        external_msg_id: string | null;
+        window_expires_at: Date | string | null;
     }
 }

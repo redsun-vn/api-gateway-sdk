@@ -20,3 +20,7 @@ export * from './iworkflow-rule';
 export * from './ifacebook';
 export * from './inotification';
 export * from './iconversation';
+export * from './iconversation-canned-reply';
+export * from './iconversation-search';
+export * from './ilead-webhook';
+export * from './imarketing-campaign';

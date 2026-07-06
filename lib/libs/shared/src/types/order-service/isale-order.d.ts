@@ -4,6 +4,7 @@ import { ILineItem } from './iline-item.type';
 import { IOrder } from './iorder.type';
 import { ICombiningPromotion } from './icombining-promotion.type';
 import { IAdditionalFee } from './iadditional-fee.type';
+import { ISaleOrderApproval } from './isale-order-approval';
 export declare namespace ISaleOrder {
     interface ICreate {
         branch_id: number & tags.Type<'uint64'>;
@@ -88,5 +89,6 @@ export declare namespace ISaleOrder {
         lineItems?: ILineItem.IDetailLineItemResponse[] | null;
         combiningPromotions?: ICombiningPromotion.IDetailCombiningPromotionResponse[] | null;
         additionalFees?: IAdditionalFee.IDetailAdditionalFeeResponse[] | null;
+        approval?: ISaleOrderApproval.IResponse | null;
     }
 }

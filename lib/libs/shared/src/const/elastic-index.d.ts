@@ -199,6 +199,7 @@ export declare const ELASTIC_INDEX: {
     STOCK_PICKING: string;
     STOCK_PICKING_TYPE: string;
     STOCK_QUANTITY: string;
+    STOCK_RESERVATION: string;
     STOCK_ROUTER: string;
     STOCK_RULE: string;
     SUBSCRIPTION: string;
