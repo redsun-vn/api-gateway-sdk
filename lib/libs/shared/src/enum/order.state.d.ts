@@ -139,34 +139,10 @@ export declare enum KDSState {
 }
 export declare enum SaleOrderStatus {
     DRAFT = "draft",
-    PENDING_APPROVAL = "pending_approval",
-    APPROVED = "approved",
     SENT = "sent",
     SALE_ORDER = "sale",
     DONE = "done",
     CANCEL = "cancel"
-}
-export declare enum SaleOrderApprovalStatus {
-    PENDING = "pending",
-    APPROVED = "approved",
-    REJECTED = "rejected",
-    CANCELLED = "cancelled"
-}
-export declare enum SaleOrderApprovalTierStatus {
-    PENDING = "pending",
-    APPROVED = "approved",
-    SKIPPED = "skipped"
-}
-export declare enum SaleOrderApprovalEventType {
-    SUBMITTED = "submitted",
-    TIER_APPROVED = "tier_approved",
-    APPROVED = "approved",
-    REJECTED = "rejected",
-    CANCELLED = "cancelled",
-    REOPENED = "reopened",
-    WARNING = "warning",
-    BREACH = "breach",
-    ESCALATION = "escalation"
 }
 export declare enum FEE_CALCULATION_TYPE {
     FIXED = "FIXED",

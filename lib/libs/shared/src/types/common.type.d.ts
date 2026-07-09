@@ -10,14 +10,6 @@ export interface BaseResponse {
     createdById?: number | string | null;
     updatedById?: number | string | null;
 }
-export interface BaseResponseLowCase {
-    id: number | string | null;
-    created_at: string;
-    updated_at: string;
-    deleted_at?: string | null;
-    created_by_id?: number | string | null;
-    updated_by_id?: number | string | null;
-}
 export interface ISorting {
     property: string;
     direction: string;

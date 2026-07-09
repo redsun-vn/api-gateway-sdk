@@ -1,13 +1,6 @@
 import type { IConnection, Resolved, Primitive } from "@nestia/fetcher";
 import type { IQuery, IResponse, IResponsePagination } from "../../../../libs/shared/src/types/common.type";
 import type { ISaleOrder } from "../../../../libs/shared/src/types/order-service/isale-order";
-export * as approvals from "./approvals";
-export * as approval_config from "./approval_config";
-export * as approval from "./approval";
-export * as submit_approval from "./submit_approval";
-export * as approve from "./approve";
-export * as reject from "./reject";
-export * as cancel_approval from "./cancel_approval";
 export * as send_to_partner from "./send_to_partner";
 export * as confirm from "./confirm";
 export declare function findAll(connection: IConnection, query: findAll.Query): Promise<findAll.Output>;

@@ -24,4 +24,3 @@ export * from './e-invoice';
 export * from './subscription';
 export * from './template';
 export * from './clinic';
-export * from './crm';

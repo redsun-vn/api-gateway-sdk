@@ -2,8 +2,8 @@ import { BaseResponse } from '../common.type';
 export declare namespace IDepositPolicy {
     enum ScopeType {
         SHOP = "shop",
-        RESOURCE_TYPE = "resource_type",
-        RESOURCE = "resource",
+        ROOM_TYPE = "room_type",
+        ROOM = "room",
         SERVICE_CATEGORY = "service_category",
         TIME_WINDOW = "time_window"
     }
@@ -87,8 +87,8 @@ export declare namespace IDepositPolicy {
         party_size?: number;
         start_time?: string;
         end_time?: string;
-        resource_id?: string | number;
-        resource_type_id?: string | number;
+        room_id?: string | number;
+        room_type_id?: string | number;
         service_category_ids?: string | number[];
         customer_tier?: string;
     }

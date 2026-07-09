@@ -6,7 +6,6 @@ export * as stock_moves from "./stock_moves";
 export * as stock_picking_types from "./stock_picking_types";
 export * as stock_pickings from "./stock_pickings";
 export * as stock_quantity from "./stock_quantity";
-export * as stock_reservations from "./stock_reservations";
 export * as stock_routers from "./stock_routers";
 export * as stock_rules from "./stock_rules";
 export * as stocktakes from "./stocktakes";

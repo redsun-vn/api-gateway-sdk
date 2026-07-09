@@ -118,4 +118,3 @@ export * as languages from "./languages";
 export * as translations from "./translations";
 export * as deposit_policies from "./deposit_policies";
 export * as deposits from "./deposits";
-export * as crm from "./crm";

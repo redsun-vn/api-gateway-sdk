@@ -28,7 +28,6 @@ export declare namespace IStockQuantity {
         stock_location_id?: number | string | null;
         inventoryQuantity: number | string;
         availableQuantity: number | string;
-        reservedQuantity?: number | string;
         lastStocktakeQuantity?: number | string;
         lastStocktakeDate?: string | null;
         stockLocation?: IStockLocation.IStockLocationResponse;

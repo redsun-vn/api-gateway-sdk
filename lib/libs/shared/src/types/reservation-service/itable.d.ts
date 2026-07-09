@@ -9,7 +9,6 @@ export declare namespace ITable {
         maxChild?: number;
         description?: string;
         active?: boolean;
-        resource_type_id?: number | string;
     }
     interface IUpdate extends Partial<ICreate> {
     }
@@ -23,6 +22,5 @@ export declare namespace ITable {
         maxChild?: number | null;
         description?: string | null;
         active: boolean;
-        resource_type_id?: number | string | null;
     }
 }

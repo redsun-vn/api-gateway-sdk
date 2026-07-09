@@ -1,7 +1,7 @@
 import { tags } from 'typia';
 import { BaseResponse } from '../common.type';
 import { ILineItem } from './iline-item.type';
-import { CODStatus, OrderStatus, OrderFinancialStatus, OrderFulfillmentStatus, OrderProcessingStatus, ORDER_UPDATE_SOURCE_ENUM } from '../../enum';
+import { CODStatus, OrderStatus, OrderFinancialStatus, OrderFulfillmentStatus, OrderProcessingStatus } from '../../enum';
 import { IDrafOrder } from './idraf-order.type';
 import { ITableReservation } from './itable-reservation.type';
 import { ICombiningPromotion } from './icombining-promotion.type';
@@ -81,8 +81,6 @@ export declare namespace IOrder {
     }
     interface IUpdateOrder extends Omit<Partial<ICreateOrder>, 'branch_id' | 'staff_id' | 'pos_session_id' | 'sale_channel_id' | 'isDebtOrder' | 'debtAmount' | 'debtDueDate' | 'debtPaidAt'> {
         uuid?: string & tags.Format<'uuid'>;
-        cancelOnProvider?: boolean;
-        source?: ORDER_UPDATE_SOURCE_ENUM;
     }
     interface IDetailOrderResponse extends BaseResponse {
         shop_id: number | string;
@@ -153,7 +151,7 @@ export declare namespace IOrder {
         isEInvoice?: boolean;
         isEInvoicePublished?: boolean;
     }
-    interface IDetailOrderPublicResponse extends Omit<IDetailOrderResponse, 'draf_order_id' | 'shift_id' | 'idempotency_key' | 'originTotal' | 'shippingTotal' | 'refundable' | 'refundedTotal' | 'returnedTotal' | 'customerAcceptMarketing' | 'clientIp' | 'discountCode' | 'drafOrder' | 'combiningPromotions'> {
+    interface IDetailOrderPublicResponse extends Omit<IDetailOrderResponse, 'draf_order_id' | 'shift_id' | 'idempotency_key' | 'subTotal' | 'taxTotal' | 'originTotal' | 'shippingTotal' | 'refundable' | 'refundedTotal' | 'returnedTotal' | 'customerAcceptMarketing' | 'clientIp' | 'discountCode' | 'drafOrder' | 'combiningPromotions'> {
         lineItems?: ILineItem.IDetailLineItemPublicResponse[] | null;
     }
     interface IApplyDepositInput {

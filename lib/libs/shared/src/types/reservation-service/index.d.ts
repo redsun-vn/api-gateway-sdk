@@ -4,7 +4,6 @@ export * from './iproduct-reservation';
 export * from './ireservation-config';
 export * from './ireservation-note';
 export * from './itable';
-export * from './iresource-type';
 export * from './itable-note';
 export * from './itable-history';
 export * from './itable-status';
