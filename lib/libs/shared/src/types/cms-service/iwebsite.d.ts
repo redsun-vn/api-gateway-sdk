@@ -5,6 +5,13 @@ export declare namespace IWebsite {
     interface IQueryFindByDomain {
         domain?: string;
     }
+    interface IOnboardingState {
+        is_completed: boolean;
+        current_step: string;
+        skipped_steps: string[];
+        started_at: string | null;
+        completed_at: string | null;
+    }
     interface ICreateReq extends SEOBase {
         domain: string;
         homeUrl: string;
@@ -24,6 +31,7 @@ export declare namespace IWebsite {
         warehouseId?: number;
         availablePaymentMethodIds?: string[];
         availableShippingMethodIds?: string[];
+        onboardingState?: IOnboardingState | null;
     }
     interface ICreate extends ICreateReq {
         shop_id?: (number & tags.Type<'uint64'>) | null;
@@ -59,6 +67,7 @@ export declare namespace IWebsite {
         warehouseId?: number | string | null;
         availablePaymentMethodIds?: string[] | null;
         availableShippingMethodIds?: string[] | null;
+        onboardingState?: IOnboardingState | null;
     }
     interface ICreateRealmReq {
         domain: string;

@@ -37,6 +37,8 @@ export declare namespace IDeposit {
         nights?: number;
         first_night_rate?: number;
         party_size?: number;
+        resource_id?: string | number;
+        resource_type_id?: string | number;
         policy_id?: string | number;
         start_time?: string;
         expires_at?: string;

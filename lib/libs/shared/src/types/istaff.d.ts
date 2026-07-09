@@ -25,6 +25,7 @@ export declare namespace IStaff {
         bank_name?: string;
         bank_branch?: string;
         position?: string;
+        manager_id?: string;
     }
     interface ICreateRegister {
         first_name?: null | string;
@@ -59,6 +60,7 @@ export declare namespace IStaff {
         sessions?: null | IPosSession.IPosSessionResponse[];
         branches?: null | IBranch.IBranchResponse[];
         department_id?: number | string | null;
+        manager_id?: string | null;
         social_insurance?: boolean;
         social_insurance_code?: string | null;
         health_insurance_code?: string | null;
@@ -94,6 +96,9 @@ export declare namespace IStaff {
         confirmPassword: string & tags.MinLength<6>;
         username: string;
     }
+    interface IUpdateManager {
+        manager_id: string | null;
+    }
     interface IUpdate extends IStaffProfile.IUpdate {
         password?: string & tags.MinLength<6>;
         permission?: string[] | null;
@@ -101,6 +106,7 @@ export declare namespace IStaff {
         branches?: string[] | null;
         active?: boolean;
         department_id?: string | null;
+        manager_id?: string | null;
         social_insurance?: boolean;
         social_insurance_code?: string;
         health_insurance_code?: string;

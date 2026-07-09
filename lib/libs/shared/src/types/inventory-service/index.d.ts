@@ -7,6 +7,7 @@ export * from './istock-move.type';
 export * from './istock-picking-type.type';
 export * from './istock-picking.type';
 export * from './istock-quantity.type';
+export * from './istock-reservation.type';
 export * from './istocktake-line.type';
 export * from './istocktake.type';
 export * from './istock-rule.type';

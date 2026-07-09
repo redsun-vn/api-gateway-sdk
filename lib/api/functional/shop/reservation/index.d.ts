@@ -6,6 +6,7 @@ export * as floor_plans from "./floor_plans";
 export * as products from "./products";
 export * as reservation_notes from "./reservation_notes";
 export * as reservation_note_status from "./reservation_note_status";
+export * as resource_types from "./resource_types";
 export * as table_histories from "./table_histories";
 export * as table_stats from "./table_stats";
 export * as table_stats_enhanced from "./table_stats_enhanced";
