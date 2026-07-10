@@ -1,6 +1,7 @@
 export * as orders from "./orders";
 export * as sync from "./sync";
 export * as authorize from "./authorize";
+export * as oauth from "./oauth";
 export * as refresh_token from "./refresh_token";
 export * as info from "./info";
 export * as configs from "./configs";

@@ -11,6 +11,7 @@ export declare namespace ICustomField {
         validation?: Record<string, unknown> | null;
         required_from_stage_order_index?: number | null;
         indexable?: boolean;
+        pipeline_id?: string;
     }
     interface IUpdateBody {
         expected_updated_at: string;
@@ -26,10 +27,12 @@ export declare namespace ICustomField {
     interface IFindAllQuery {
         entity_type?: EntityTypeLiteral;
         include_inactive?: boolean;
+        pipeline_id?: string;
     }
     interface ICustomFieldResponse {
         id: number | string;
         shop_id: number | string;
+        pipeline_id?: number | string | null;
         entity_type: string;
         key: string;
         label: string;

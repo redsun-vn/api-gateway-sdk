@@ -24,3 +24,4 @@ export * from './iconversation-canned-reply';
 export * from './iconversation-search';
 export * from './ilead-webhook';
 export * from './imarketing-campaign';
+export * from './iteam';

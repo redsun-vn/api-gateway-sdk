@@ -16,11 +16,13 @@ export declare namespace ICrmScoringRule {
         delta: number & tags.Minimum<-50> & tags.Maximum<50>;
         order_index: number;
         active?: boolean;
+        pipeline_id?: string;
     }
     type IUpdate = Partial<ICreate>;
     interface ICrmScoringRuleResponse extends BaseResponse {
         shop_id: number | string;
         template_id?: number | string | null;
+        pipeline_id?: number | string | null;
         entity_type: CrmScoringRuleEntityType;
         name: string;
         category: CrmScoringRuleCategory;
@@ -48,6 +50,7 @@ export declare namespace ICrmScoringRule {
     interface IListQuery {
         entity_type?: CrmScoringRuleEntityType;
         category?: CrmScoringRuleCategory;
+        pipeline_id?: string;
     }
     interface IFieldDescriptor {
         key: string;

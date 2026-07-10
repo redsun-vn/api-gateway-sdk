@@ -18,12 +18,22 @@ export declare namespace ICrmLead {
         force_create?: boolean;
         force_create_reason?: string;
         intended_pipeline_id?: number | null;
+        team_id?: number | string | null;
         sla_priority?: CrmSlaPriority;
         tags?: string[];
     }
-    type IUpdate = Partial<Omit<ICreate, 'owner_id' | 'force_create' | 'force_create_reason'>> & {
+    type IUpdate = Partial<Omit<ICreate, 'owner_id' | 'force_create' | 'force_create_reason' | 'team_id'>> & {
         owner_id?: number | string | null;
     };
+    interface IAssignTeam {
+        lead_id: number | string;
+        team_id: number | string | null;
+    }
+    interface IAssignTeamResponse {
+        lead_id: number | string;
+        team_id: number | string | null;
+        needs_reassignment: boolean;
+    }
     interface IDuplicateLeadError {
         code: 'duplicate_lead_phone';
         existing: {

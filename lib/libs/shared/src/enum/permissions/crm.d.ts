@@ -27,3 +27,9 @@ export declare enum CrmKpiTargetPermission {
 export declare enum CrmCompliancePermission {
     VIEW = "crm_compliance-view"
 }
+export declare enum CrmTeamPermission {
+    VIEW = "crm_team-view",
+    CREATE = "crm_team-create",
+    UPDATE = "crm_team-update",
+    DELETE = "crm_team-delete"
+}

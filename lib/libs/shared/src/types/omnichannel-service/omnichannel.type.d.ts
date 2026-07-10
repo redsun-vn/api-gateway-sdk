@@ -26,6 +26,13 @@ export declare namespace IOmnichannel {
         code: string;
         provider: OMNI_CHANNEL_PROVIDER_ENUM;
     }
+    interface ICreateOAuthState {
+        provider: OMNI_CHANNEL_PROVIDER_ENUM;
+        returnUrl: string;
+    }
+    interface ICreateOAuthStateResult {
+        state: string;
+    }
     type ProviderType = 'shopee_shop' | 'tiktok_shop' | 'amazon' | 'lazada' | 'facebook_shop';
     interface AuthorizeProviderDto {
         provider: ProviderType;

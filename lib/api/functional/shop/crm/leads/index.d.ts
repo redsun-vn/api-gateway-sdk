@@ -2,6 +2,7 @@ import type { IConnection, Resolved, Primitive } from "@nestia/fetcher";
 import type { IQuery, IResponse, IResponsePagination } from "../../../../../libs/shared/src/types/common.type";
 import type { ICrmLead } from "../../../../../libs/shared/src/types/crm-service/ilead";
 export * as scoped from "./scoped";
+export * as team from "./team";
 export * as bulk_assign from "./bulk_assign";
 export * as recompute_score from "./recompute_score";
 export * as score_breakdown from "./score_breakdown";

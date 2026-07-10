@@ -38,6 +38,31 @@ export declare namespace ICrmPipeline {
     }
     interface IFindOneResponse extends IPipelineResponse {
         stages: IStageResponse[];
+        bant_rubric?: Record<string, unknown> | null;
+    }
+    interface IInstantiateBody {
+        template_id: number | string;
+        name: string & tags.MaxLength<255>;
+    }
+    interface IUpdateBody {
+        id: number | string;
+        name?: string & tags.MaxLength<255>;
+        active?: boolean;
+    }
+    interface IDeactivateBody {
+        id: number | string;
+    }
+    interface IDeactivateResponse {
+        id: number | string;
+        active: boolean;
+    }
+    interface IBantRubricUpdateBody {
+        id: number | string;
+        bant_rubric: Record<string, unknown> | null;
+    }
+    interface IBantRubricResponse {
+        pipeline_id: number | string;
+        bant_rubric: Record<string, unknown> | null;
     }
     interface IQualifyGate {
         mode: 'off' | 'warn' | 'block' | 'auto_qualify';

@@ -21,6 +21,7 @@ export declare namespace ILeadWebhook {
         field_mapping: Record<string, string>;
         default_owner_id: number | string | null;
         default_branch_id: number | string | null;
+        default_team_id: number | string | null;
         pipeline_id: number | string | null;
         default_sla_priority: CrmSlaPriority | null;
         default_source: CrmLeadSource;
@@ -39,6 +40,7 @@ export declare namespace ILeadWebhook {
         field_mapping: Record<string, string>;
         default_owner_id?: number | string | null;
         default_branch_id?: number | string | null;
+        default_team_id?: number | string | null;
         pipeline_id?: number | string | null;
         default_sla_priority?: CrmSlaPriority | null;
         default_source?: CrmLeadSource;
