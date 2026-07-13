@@ -75,6 +75,7 @@ export declare const ELASTIC_INDEX: {
     DRAF_ORDER: string;
     DEPARTMENT: string;
     DEBT: string;
+    DEPOSIT: string;
     EMENU_QR_ITEM: string;
     EMENU_CONFIG: string;
     FULFILLMENT: string;

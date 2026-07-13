@@ -13,6 +13,8 @@ export declare namespace ILeadWebhook {
         shop_id: number | string;
         source_ref?: string | null;
         utm: IUtmParams;
+        pipeline_id?: string;
+        team_id?: string;
         raw: Record<string, unknown>;
     }
     interface IMappingResponse {

@@ -37,6 +37,12 @@ export declare namespace IZaloOA {
         oa_id: string;
         error?: string;
     }
+    interface ICreateOAuthStateInput {
+        returnUrl: string;
+    }
+    interface ICreateOAuthStateResult {
+        state: string;
+    }
     type IAccessTokenResponse = IAccessTokenSuccess | IAccessTokenError;
     interface IZNSTemplateGetRequest {
         shop_id: number;

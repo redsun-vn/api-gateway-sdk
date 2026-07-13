@@ -87,6 +87,23 @@ export declare namespace ICrmDashboard {
     interface ILeadSourceAnalyticsResponse {
         items: ILeadSourceAnalyticsItem[];
     }
+    interface ILeadStatsSourceBucket {
+        source: string;
+        count: number;
+    }
+    interface ILeadStatsStatusBucket {
+        status: string;
+        count: number;
+    }
+    interface ILeadStatsResponse {
+        total_leads: number;
+        qualified_count: number;
+        conversion_rate: number;
+        avg_bant_score: number;
+        new_leads_last_7d: number;
+        sources: ILeadStatsSourceBucket[];
+        funnel: ILeadStatsStatusBucket[];
+    }
     interface IRecentActivityQuery {
         limit?: number & tags.Type<'int32'> & tags.Minimum<1> & tags.Maximum<50>;
     }

@@ -1,8 +1,9 @@
 import type { IConnection, Resolved, Primitive } from "@nestia/fetcher";
-import type { IResponse } from "../../../../libs/shared/src/types/common.type";
+import type { IResponse, IQuery, IResponsePagination } from "../../../../libs/shared/src/types/common.type";
 import type { IDeposit } from "../../../../libs/shared/src/types/deposit-service/ideposit";
 export * as confirm_received from "./confirm_received";
 export * as apply_to_order from "./apply_to_order";
+export * as by_target from "./by_target";
 export * as summary from "./summary";
 export declare function create(connection: IConnection, body: create.Input): Promise<create.Output>;
 export declare namespace create {
@@ -80,6 +81,22 @@ export declare namespace cancel {
     };
     const path: (id: string) => string;
 }
+export declare function findAll(connection: IConnection, query: findAll.Query): Promise<findAll.Output>;
+export declare namespace findAll {
+    type Query = Resolved<IQuery>;
+    type Output = Primitive<IResponse<IResponsePagination<IDeposit.IDepositResponse>>>;
+    const METADATA: {
+        readonly method: "GET";
+        readonly path: "/shop/deposits";
+        readonly request: null;
+        readonly response: {
+            readonly type: "application/json";
+            readonly encrypted: false;
+        };
+        readonly status: 200;
+    };
+    const path: (query: findAll.Query) => string;
+}
 export declare function findOne(connection: IConnection, id: string): Promise<findOne.Output>;
 export declare namespace findOne {
     type Output = Primitive<IResponse<IDeposit.IDepositResponse>>;
@@ -94,22 +111,6 @@ export declare namespace findOne {
         readonly status: 200;
     };
     const path: (id: string) => string;
-}
-export declare function findAll(connection: IConnection, query: findAll.Query): Promise<findAll.Output>;
-export declare namespace findAll {
-    type Query = Resolved<IDeposit.IFindByTarget>;
-    type Output = Primitive<IResponse<Array<IDeposit.IDepositResponse>>>;
-    const METADATA: {
-        readonly method: "GET";
-        readonly path: "/shop/deposits";
-        readonly request: null;
-        readonly response: {
-            readonly type: "application/json";
-            readonly encrypted: false;
-        };
-        readonly status: 200;
-    };
-    const path: (query: findAll.Query) => string;
 }
 export declare function transactions(connection: IConnection, id: string): Promise<transactions.Output>;
 export declare namespace transactions {

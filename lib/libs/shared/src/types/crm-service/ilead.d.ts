@@ -121,11 +121,11 @@ export declare namespace ICrmLead {
     }
     type ImportAssignOrigin = 'workflow_rule' | 'auto_round_robin' | 'unassigned' | 'manual';
     interface IImportRowResult {
-        row_index: number;
+        row_index: number | string;
         status: 'created' | 'skipped' | 'updated' | 'failed';
-        lead_id?: number;
-        duplicate_of_lead_id?: number;
-        owner_id?: number | null;
+        lead_id?: number | string;
+        duplicate_of_lead_id?: number | string;
+        owner_id?: number | string | null;
         origin?: ImportAssignOrigin;
         action_taken?: string;
         error_code?: string;

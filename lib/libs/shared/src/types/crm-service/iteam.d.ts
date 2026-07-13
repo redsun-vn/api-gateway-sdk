@@ -80,6 +80,7 @@ export declare namespace ICrmTeam {
     export interface IFindByStaffInput {
         shop_id: number | string;
         staff_id: number | string;
+        is_owner?: boolean;
     }
     export interface IDashboardDateRange {
         from: string;

@@ -4,6 +4,7 @@ export * as admin from "./admin";
 export * as auth from "./auth";
 export * as notification from "./notification";
 export * as shop from "./shop";
+export * as zalo_oa from "./zalo_oa";
 export * as comments from "./comments";
 export * as rating_criteria_templates from "./rating_criteria_templates";
 export * as ratings from "./ratings";
