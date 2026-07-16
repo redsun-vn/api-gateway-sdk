@@ -11,6 +11,7 @@ export * from './iKeycloakUser';
 export * from './ibranch';
 export * from './ivisible-staff';
 export * from './ibrand';
+export * from './brand/ibrand-auth';
 export * from './idomain';
 export * from './igroup';
 export * from './ipackage';

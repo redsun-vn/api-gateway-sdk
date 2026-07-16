@@ -12,3 +12,4 @@ export * from './utm';
 export * from './crm';
 export * from './iactivity';
 export * from './itemplate';
+export * from './icskh-email-config';

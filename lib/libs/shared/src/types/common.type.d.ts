@@ -4,8 +4,8 @@ export type CustomDataType = {
 };
 export interface BaseResponse {
     id: number | string | null;
-    createdAt: string;
-    updatedAt: string;
+    createdAt?: string | null;
+    updatedAt?: string | null;
     deletedAt?: string | null;
     createdById?: number | string | null;
     updatedById?: number | string | null;

@@ -25,3 +25,4 @@ export * from './subscription';
 export * from './template';
 export * from './clinic';
 export * from './crm';
+export * from './cskh-email-config';
