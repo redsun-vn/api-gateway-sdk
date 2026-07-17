@@ -37,6 +37,8 @@ export declare namespace IAdminTemplate {
         metadata?: object;
         isDefault?: boolean;
         status?: string;
+        locale?: string;
+        eventKey?: string | null;
     }
     type IUpdate = Partial<ICreate>;
     interface IResponse extends BaseResponse {
@@ -50,5 +52,7 @@ export declare namespace IAdminTemplate {
         metadata?: any | null;
         isDefault: boolean;
         status: string;
+        locale?: string;
+        eventKey?: string | null;
     }
 }
