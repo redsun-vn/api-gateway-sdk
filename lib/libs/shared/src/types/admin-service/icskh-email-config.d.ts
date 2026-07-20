@@ -21,8 +21,15 @@ export declare namespace ICskhEmailConfig {
         eventToggles: Record<string, IEventToggle>;
         defaultOffsets: number[];
     }
-    interface ISendTest {
+    interface ISendTestA {
         email: string & tags.Format<'email'>;
+        eventKey: string;
+    }
+    interface ISendTestB {
+        email: string & tags.Format<'email'>;
+        templateId?: number;
+        eventKey?: string;
+        locale?: string;
     }
     interface ISendTestResult {
         accepted: boolean;

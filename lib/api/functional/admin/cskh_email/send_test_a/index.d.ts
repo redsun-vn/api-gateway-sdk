@@ -3,7 +3,7 @@ import type { ICskhEmailConfig } from "../../../../../libs/shared/src/types/admi
 import type { IResponse } from "../../../../../libs/shared/src/types/common.type";
 export declare function sendTestA(connection: IConnection, data: sendTestA.Input): Promise<sendTestA.Output>;
 export declare namespace sendTestA {
-    type Input = Resolved<ICskhEmailConfig.ISendTest>;
+    type Input = Resolved<ICskhEmailConfig.ISendTestA>;
     type Output = Primitive<IResponse<ICskhEmailConfig.ISendTestResult>>;
     const METADATA: {
         readonly method: "POST";
