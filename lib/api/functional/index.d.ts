@@ -64,6 +64,7 @@ export * as payments from "./payments";
 export * as vnpay_qrcode from "./vnpay_qrcode";
 export * as vnpay_web from "./vnpay_web";
 export * as crm from "./crm";
+export * as cskh_email from "./cskh_email";
 export * as admin_customer from "./admin_customer";
 export * as notify from "./notify";
 export * as admin_users from "./admin_users";

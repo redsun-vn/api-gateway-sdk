@@ -34,4 +34,38 @@ export declare namespace ICskhEmailConfig {
     interface ISendTestResult {
         accepted: boolean;
     }
+    interface IUnsubscribeRequest {
+        token: string;
+    }
+    interface IUnsubscribeResult {
+        success: boolean;
+    }
+    interface ISendLogQuery {
+        status?: string;
+        eventType?: string;
+        shopId?: string;
+        flow?: string;
+        dateFrom?: string;
+        dateTo?: string;
+        page?: number & tags.Type<'uint32'>;
+        limit?: number & tags.Type<'uint32'>;
+    }
+    interface INovuWebhookAck {
+        received: boolean;
+    }
+    interface ISendLogView {
+        id: number;
+        eventType: string;
+        milestoneOffset: number;
+        recipient: string;
+        flow: string;
+        referenceId: string;
+        shopId: string | null;
+        status: string;
+        errorCode: number | null;
+        errorMessage: string | null;
+        retryCount: number;
+        sentAt: (string & tags.Format<'date-time'>) | Date | null;
+        createdAt?: (string & tags.Format<'date-time'>) | Date;
+    }
 }
