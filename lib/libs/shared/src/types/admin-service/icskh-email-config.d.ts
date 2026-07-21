@@ -54,7 +54,7 @@ export declare namespace ICskhEmailConfig {
         received: boolean;
     }
     interface ISendLogView {
-        id: number;
+        id: number | string;
         eventType: string;
         milestoneOffset: number;
         recipient: string;
@@ -65,7 +65,7 @@ export declare namespace ICskhEmailConfig {
         errorCode: number | null;
         errorMessage: string | null;
         retryCount: number;
-        sentAt: (string & tags.Format<'date-time'>) | Date | null;
-        createdAt?: (string & tags.Format<'date-time'>) | Date;
+        sentAt: (string & tags.Format<'date-time'>) | null;
+        createdAt?: string & tags.Format<'date-time'>;
     }
 }
