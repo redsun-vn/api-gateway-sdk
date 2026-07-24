@@ -115,8 +115,15 @@ export declare namespace ICrmFacebook {
         object: string;
         entry: IFbWebhookEntry[];
     }
+    interface IFbStartOAuthQuery {
+        frontend_redirect?: string;
+    }
     interface IFbStartOAuthResponse {
         redirect_url: string;
+    }
+    interface IFbOAuthDisconnectResponse {
+        disconnected_pages: number;
+        user_token_removed: boolean;
     }
     interface IFbManagedPage {
         fb_page_id: string;

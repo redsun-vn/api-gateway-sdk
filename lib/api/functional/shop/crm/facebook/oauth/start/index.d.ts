@@ -1,8 +1,9 @@
-import type { IConnection, Primitive } from "@nestia/fetcher";
+import type { IConnection, Resolved, Primitive } from "@nestia/fetcher";
 import type { IResponse } from "../../../../../../../libs/shared/src/types/common.type";
 import type { ICrmFacebook } from "../../../../../../../libs/shared/src/types/crm-service/ifacebook";
-export declare function startOAuth(connection: IConnection): Promise<startOAuth.Output>;
+export declare function startOAuth(connection: IConnection, query: startOAuth.Query): Promise<startOAuth.Output>;
 export declare namespace startOAuth {
+    type Query = Resolved<ICrmFacebook.IFbStartOAuthQuery>;
     type Output = Primitive<IResponse<ICrmFacebook.IFbStartOAuthResponse>>;
     const METADATA: {
         readonly method: "GET";
@@ -14,5 +15,5 @@ export declare namespace startOAuth {
         };
         readonly status: 200;
     };
-    const path: () => string;
+    const path: (query: startOAuth.Query) => string;
 }

@@ -26,6 +26,9 @@ export declare namespace IConversation {
         channel_identity_id: number | string | null;
         customer_name: string | null;
         customer_phone: string | null;
+        contact_type?: 'customer' | 'lead' | null;
+        partner_uuid?: string | null;
+        lead_id?: number | string | null;
         last_message_text: string | null;
         last_message_at: string | null;
         window_expires_at: string | null;
