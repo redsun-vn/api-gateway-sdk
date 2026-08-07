@@ -143,8 +143,12 @@ export declare namespace IAiContent {
         image_provider?: string | null;
         image_operation?: string | null;
         tokens_used?: number | string | null;
+        input_tokens?: number | string | null;
+        output_tokens?: number | string | null;
+        model?: string | null;
         credit_cost?: number | string | null;
         error_message?: string | null;
+        error_code?: string | null;
         user_id?: string | null;
         estimated_credits?: number | string | null;
         industry?: string | null;

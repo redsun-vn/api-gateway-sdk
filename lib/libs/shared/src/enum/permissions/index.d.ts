@@ -23,6 +23,8 @@ export * from './wallet';
 export * from './e-invoice';
 export * from './subscription';
 export * from './template';
+export * from './sms';
 export * from './clinic';
+export * from './ai';
 export * from './crm';
 export * from './cskh-email-config';

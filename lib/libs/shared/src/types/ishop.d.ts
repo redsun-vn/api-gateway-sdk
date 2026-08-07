@@ -11,11 +11,16 @@ import { ISubscription } from './isubscription';
 import { tags } from 'typia';
 import { CREATE_SHOP_FROM_SOURCE_ENUM } from '../enum';
 export declare namespace IShop {
+    interface IMetadata {
+        tax_code?: string;
+        [key: string]: unknown;
+    }
     interface ICreate extends BaseProfile {
         name: string & tags.MinLength<5>;
         shopOwnerId: string;
         business_type_id?: string;
         source?: CREATE_SHOP_FROM_SOURCE_ENUM;
+        metadata?: IMetadata;
     }
     interface IUpdate extends BaseProfile {
         active?: boolean;
@@ -27,9 +32,11 @@ export declare namespace IShop {
         business_type_id?: string;
         paymentMethods?: string[];
         shippingMethods?: string[];
+        metadata?: IMetadata;
     }
     interface IAdminUpdate extends BaseProfile {
         active?: boolean;
+        metadata?: IMetadata;
     }
     interface IShopResponse extends BaseResponse, BaseProfileResponse {
         name: string;
@@ -40,7 +47,7 @@ export declare namespace IShop {
         defaultCurrencyCode: string;
         business_type_id?: null | string;
         shopOwnerId: string;
-        metadata?: string | null;
+        metadata?: IMetadata | null;
         businessType?: null | IBusinessType.IBusinessTypeResponse;
         brand?: null | IBrand.IBrandResponse;
         domain?: null | IDomain.IDomainResponse;
@@ -61,7 +68,7 @@ export declare namespace IShop {
         defaultCurrencyCode: string;
         business_type_id?: null | string;
         shopOwnerId: string;
-        metadata?: string | null;
+        metadata?: IMetadata | null;
         businessType?: null | IBusinessType.IBusinessTypeResponse;
         brand?: null | IBrand.IBrandResponse;
         domain?: null | IDomain.IDomainResponse;
@@ -85,7 +92,7 @@ export declare namespace IShop {
         defaultCurrencyCode: string;
         business_type_id?: null | string;
         shopOwnerId: string;
-        metadata?: string | null;
+        metadata?: IMetadata | null;
         businessType?: null | IBusinessType.IBusinessTypeResponse;
         brand?: null | IBrand.IBrandResponse;
         domain?: null | IDomain.IDomainResponse;

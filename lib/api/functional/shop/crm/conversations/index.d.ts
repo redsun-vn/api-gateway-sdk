@@ -5,6 +5,7 @@ import type { IConversationSearch } from "../../../../../libs/shared/src/types/c
 export * as reply from "./reply";
 export * as read from "./read";
 export * as assign from "./assign";
+export * as link_contact from "./link_contact";
 export * as attachments from "./attachments";
 export declare function findAll(connection: IConnection, query: findAll.Query): Promise<findAll.Output>;
 export declare namespace findAll {

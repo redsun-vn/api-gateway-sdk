@@ -1,4 +1,5 @@
 export * as appointment_reminder from "./appointment_reminder";
+export * as sms from "./sms";
 export * as zalo_oa from "./zalo_oa";
 export * as comment from "./comment";
 export * as comments from "./comments";

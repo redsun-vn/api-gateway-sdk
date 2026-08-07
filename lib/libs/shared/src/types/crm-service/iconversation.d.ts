@@ -105,6 +105,16 @@ export declare namespace IConversation {
         conversation_id: number | string;
         assigned_staff_id: number | string;
     }
+    interface ILinkContactBody {
+        lead_id?: number | string;
+        partner_uuid?: string;
+    }
+    interface ILinkContactResponse {
+        conversation_id: number | string;
+        lead_id: number | string | null;
+        partner_uuid: string | null;
+        contact_type: 'customer' | 'lead' | null;
+    }
     interface IInitiateBody {
         channel: string;
         channel_identity_id?: number | string;

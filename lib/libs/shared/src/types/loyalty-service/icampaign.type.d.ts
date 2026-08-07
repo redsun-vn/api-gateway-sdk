@@ -51,6 +51,8 @@ export declare namespace ICampaign {
         subject?: string;
         content: string;
         zns_template_id?: string;
+        sms_template_id?: string;
+        sms_template_key?: string;
         variables?: string[];
     }
     interface ICampaignResponse extends BaseResponse {
@@ -75,6 +77,8 @@ export declare namespace ICampaign {
         subject?: string | null;
         content: string;
         zns_template_id?: string | null;
+        sms_template_id?: string | null;
+        sms_template_key?: string | null;
         variables?: string[] | null;
     }
     interface ICampaignExecutionResponse extends BaseResponse {

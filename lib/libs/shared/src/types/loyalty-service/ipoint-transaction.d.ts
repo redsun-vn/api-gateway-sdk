@@ -13,6 +13,7 @@ export declare namespace IPointTransaction {
     interface IResponse extends BaseResponse {
         shop_id?: string | number | null;
         partner_id: string | number;
+        partner_uuid?: string | null;
         points: number;
         transactionType: string | number;
         resource?: string | null;

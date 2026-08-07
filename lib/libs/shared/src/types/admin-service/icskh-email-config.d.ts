@@ -44,6 +44,7 @@ export declare namespace ICskhEmailConfig {
         status?: string;
         eventType?: string;
         shopId?: string;
+        templateId?: string;
         flow?: string;
         dateFrom?: string;
         dateTo?: string;
@@ -65,6 +66,7 @@ export declare namespace ICskhEmailConfig {
         errorCode: number | null;
         errorMessage: string | null;
         retryCount: number;
+        templateId: number | string | null;
         sentAt: (string & tags.Format<'date-time'>) | null;
         createdAt?: string & tags.Format<'date-time'>;
     }
