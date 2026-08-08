@@ -126,6 +126,7 @@ export declare namespace ICrmReportView {
     interface IRunViewResponse {
         view: ICrmReportViewResponse;
         rows: IReportRow[];
+        columns: string[];
         truncated: boolean;
         warnings: string[];
         effective_owner_ids: number[] | null;
