@@ -25,3 +25,4 @@ export * from './iconversation-search';
 export * from './ilead-webhook';
 export * from './imarketing-campaign';
 export * from './iteam';
+export * from './ireport-view';

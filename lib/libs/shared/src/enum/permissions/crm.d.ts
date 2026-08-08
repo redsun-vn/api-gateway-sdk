@@ -34,3 +34,9 @@ export declare enum CrmTeamPermission {
     UPDATE = "crm_team-update",
     DELETE = "crm_team-delete"
 }
+export declare enum CrmReportPermission {
+    VIEW = "crm_report-view",
+    SHARE_TEAM = "crm_report-view-share-team",
+    SHARE_SHOP = "crm_report-view-share-shop",
+    METRIC_MANAGE = "crm_report-metric-manage"
+}

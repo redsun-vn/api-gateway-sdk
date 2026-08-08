@@ -17,6 +17,7 @@ export * as notification_preferences from "./notification_preferences";
 export * as onboarding from "./onboarding";
 export * as opportunities from "./opportunities";
 export * as pipelines from "./pipelines";
+export * as reports from "./reports";
 export * as scoring_rules from "./scoring_rules";
 export * as shop_config from "./shop_config";
 export * as sla from "./sla";
