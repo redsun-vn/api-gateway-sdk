@@ -150,6 +150,37 @@ export declare namespace ICrmReportView {
         metrics: ICatalogMetric[];
         dimensions: IAvailableDimension[];
     }
+    type MetricSource = 'global' | 'industry' | 'shop';
+    interface IAdminMetric {
+        id: number;
+        key: string;
+        label: string;
+        dataset: string;
+        agg: CrmAggregation;
+        field?: string | null;
+        filter?: IFilterCondition[] | null;
+        unit?: string | null;
+        description?: string | null;
+        source: MetricSource;
+        editable: boolean;
+        issues: string[];
+    }
+    interface IWriteMetric {
+        key: string & tags.MinLength<2> & tags.MaxLength<64>;
+        label: string & tags.MinLength<1> & tags.MaxLength<255>;
+        dataset: string;
+        agg: CrmAggregation;
+        field?: string | null;
+        filter?: IFilterCondition[] | null;
+        unit?: (string & tags.MaxLength<16>) | null;
+        description?: string | null;
+    }
+    interface IAdminMetricListResponse {
+        metrics: IAdminMetric[];
+    }
+    interface IAdminMetricQuery {
+        industry_group_code?: string;
+    }
     interface IExportRequest {
         dataset: string;
         metrics: IMetricDefinition[];
