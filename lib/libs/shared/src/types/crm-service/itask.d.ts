@@ -11,6 +11,7 @@ export declare namespace ICrmTask {
         related_to_id?: number;
         due_from?: string & tags.Format<'date-time'>;
         due_to?: string & tags.Format<'date-time'>;
+        limit?: number & tags.Type<'int32'> & tags.Minimum<1> & tags.Maximum<1000>;
         partner_uuid?: string & tags.Format<'uuid'>;
     }
     interface ICreate {
