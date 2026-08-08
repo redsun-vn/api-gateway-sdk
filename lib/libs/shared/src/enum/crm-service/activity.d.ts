@@ -17,3 +17,18 @@ export declare enum CrmActivityDirection {
     INBOUND = "inbound",
     OUTBOUND = "outbound"
 }
+export declare enum CrmActivityOutcome {
+    CONNECTED = "connected",
+    NO_ANSWER = "no_answer",
+    BUSY = "busy",
+    WRONG_NUMBER = "wrong_number",
+    RESCHEDULED = "rescheduled",
+    NO_SHOW = "no_show",
+    CANCELLED = "cancelled"
+}
+export declare enum CrmActivitySource {
+    MANUAL = "manual",
+    SYSTEM = "system",
+    WORKFLOW = "workflow",
+    INTEGRATION = "integration"
+}

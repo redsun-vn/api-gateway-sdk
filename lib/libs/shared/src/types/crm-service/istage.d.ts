@@ -10,8 +10,9 @@ export declare namespace IStage {
             key: string;
             validation?: string;
         }> | null;
-        allowed_next_stages?: string[];
-        allowed_prev_stages?: string[];
+        allowed_next_stages?: string[] | null;
+        allowed_prev_stages?: string[] | null;
+        tags?: (Array<string & tags.Pattern<'^[a-z][a-z0-9_]{1,30}$'>> & tags.MaxItems<10> & tags.UniqueItems) | null;
     }
     interface IStageResponse {
         id: number | string;
@@ -21,10 +22,14 @@ export declare namespace IStage {
         probability: number | string;
         sla_stuck_days: number | string;
         win_state: string;
-        required_fields_to_enter: unknown;
+        required_fields_to_enter: Array<{
+            key: string;
+            validation?: string;
+        }> | null;
         ui_color: string | null;
         updated_at: string;
         allowed_next_stages: string[] | null;
         allowed_prev_stages: string[] | null;
+        tags: string[] | null;
     }
 }
