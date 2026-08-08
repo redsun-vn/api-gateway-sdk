@@ -45,6 +45,9 @@ export declare namespace ICrmActivity {
         partner_uuid?: string & tags.Format<'uuid'>;
         source?: CrmActivitySource;
         direction?: CrmActivityDirection;
+        date_from?: string & tags.Format<'date-time'>;
+        date_to?: string & tags.Format<'date-time'>;
+        limit?: number & tags.Type<'int32'> & tags.Minimum<1> & tags.Maximum<1000>;
     }
 }
 export {};
