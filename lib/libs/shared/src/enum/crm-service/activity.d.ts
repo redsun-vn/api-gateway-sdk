@@ -20,6 +20,7 @@ export declare enum CrmActivityDirection {
 export declare enum CrmActivityOutcome {
     CONNECTED = "connected",
     NO_ANSWER = "no_answer",
+    VOICEMAIL = "voicemail",
     BUSY = "busy",
     WRONG_NUMBER = "wrong_number",
     RESCHEDULED = "rescheduled",
