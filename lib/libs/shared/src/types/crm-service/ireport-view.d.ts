@@ -132,6 +132,15 @@ export declare namespace ICrmReportView {
         effective_owner_ids: number[] | null;
         description: IViewDescription;
     }
+    interface IAdhocRunRequest {
+        dataset: string;
+        metrics: IMetricDefinition[];
+        dimensions?: string[];
+        from: string & tags.Format<'date-time'>;
+        to: string & tags.Format<'date-time'>;
+        grain?: CrmPeriodGrain;
+    }
+    type IAdhocRunResponse = Omit<IRunViewResponse, 'view'>;
     type DimensionSource = 'dataset' | 'custom_field';
     interface IAvailableDimension {
         ref: string;

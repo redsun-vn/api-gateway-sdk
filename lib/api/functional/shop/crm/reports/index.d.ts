@@ -3,6 +3,7 @@ import type { IResponse } from "../../../../../libs/shared/src/types/common.type
 import type { ICrmReportView } from "../../../../../libs/shared/src/types/crm-service/ireport-view";
 export * as metrics from "./metrics";
 export * as views from "./views";
+export * as run from "./run";
 export declare function catalog(connection: IConnection, query: catalog.Query): Promise<catalog.Output>;
 export declare namespace catalog {
     type Query = Resolved<ICrmReportView.ICatalogQuery>;
