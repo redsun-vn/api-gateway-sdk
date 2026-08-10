@@ -25,6 +25,10 @@ export declare enum TemplateStatus {
     DRAFT = "draft",
     ARCHIVED = "archived"
 }
+export declare enum TemplateFlow {
+    INTERNAL = "A",
+    CUSTOMER = "B"
+}
 export declare namespace IAdminTemplate {
     interface ICreate {
         name: string;
@@ -39,6 +43,7 @@ export declare namespace IAdminTemplate {
         status?: string;
         locale?: string;
         eventKey?: string | null;
+        flow?: TemplateFlow;
     }
     type IUpdate = Partial<ICreate>;
     interface IResponse extends BaseResponse {
@@ -54,5 +59,6 @@ export declare namespace IAdminTemplate {
         status: string;
         locale?: string;
         eventKey?: string | null;
+        flow?: string;
     }
 }
