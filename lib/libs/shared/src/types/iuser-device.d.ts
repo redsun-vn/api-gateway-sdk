@@ -9,6 +9,12 @@ export declare namespace IUserDevice {
     }
     interface IUpdate extends Partial<ICreate> {
     }
+    interface ICreateForward extends ICreate {
+        staff_id: string;
+        shop_id: string;
+        ip?: string;
+        user_agent?: string;
+    }
     interface IUserDeviceResponse extends BaseResponse {
         device_id: string;
         refresh_token: string;

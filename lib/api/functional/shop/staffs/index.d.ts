@@ -1,10 +1,13 @@
 import type { IConnection, Resolved, Primitive } from "@nestia/fetcher";
-import type { IQuery, IResponse, IResponsePagination } from "../../../../libs/shared/src/types/common.type";
+import type { IResponse, IResponsePagination } from "../../../../libs/shared/src/types/common.type";
 import type { IStaff } from "../../../../libs/shared/src/types/istaff";
+export * as by_phone from "./by_phone";
+export * as hr_profile from "./hr_profile";
+export * as account from "./account";
 export * as manager from "./manager";
 export declare function findAll(connection: IConnection, query: findAll.Query): Promise<findAll.Output>;
 export declare namespace findAll {
-    type Query = Resolved<IQuery>;
+    type Query = Resolved<IStaff.IStaffListQuery>;
     type Output = Primitive<IResponse<IResponsePagination<IStaff.IStaffResponse>>>;
     const METADATA: {
         readonly method: "GET";

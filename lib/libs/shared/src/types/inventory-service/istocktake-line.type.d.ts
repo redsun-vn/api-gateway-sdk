@@ -11,14 +11,19 @@ export declare namespace IStocktakeLine {
         stocktake_id: number & tags.Type<'uint64'>;
         stock_location_id: number & tags.Type<'uint64'>;
         barcode: string;
-        qantity: number;
+        quantity: number;
         inventoryQuantity: number;
         differentQuantity: number;
     }
     interface IUpdateStocktakeLine {
-        qantity?: number;
+        quantity?: number;
         inventoryQuantity?: number;
         differentQuantity?: number;
+    }
+    interface ICountByBarcode {
+        stocktake_id: number & tags.Type<'uint64'>;
+        barcode: string;
+        quantity: number;
     }
     interface IStocktakeLineResponse extends BaseResponse {
         shop_id: number | string | null;
@@ -28,7 +33,7 @@ export declare namespace IStocktakeLine {
         stocktake_id: number | string | null;
         stock_location_id: number | string | null;
         barcode: string;
-        qantity: number | string;
+        quantity: number | string;
         inventoryQuantity: number | string;
         differentQuantity: number | string;
         stocktake?: IStocktake.IStocktakeResponse;

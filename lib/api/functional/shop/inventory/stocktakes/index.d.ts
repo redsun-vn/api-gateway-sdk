@@ -1,6 +1,8 @@
 import type { IConnection, Resolved, Primitive } from "@nestia/fetcher";
 import type { IQuery, IResponse, IResponsePagination } from "../../../../../libs/shared/src/types/common.type";
 import type { IStocktake } from "../../../../../libs/shared/src/types/inventory-service/istocktake.type";
+export * as generate_lines from "./generate_lines";
+export * as count_by_barcode from "./count_by_barcode";
 export declare function findAll(connection: IConnection, query: findAll.Query): Promise<findAll.Output>;
 export declare namespace findAll {
     type Query = Resolved<IQuery>;
@@ -82,6 +84,36 @@ export declare namespace $delete {
             readonly encrypted: false;
         };
         readonly status: 200;
+    };
+    const path: (id: string) => string;
+}
+export declare function start(connection: IConnection, id: string): Promise<start.Output>;
+export declare namespace start {
+    type Output = Primitive<IResponse<IStocktake.IStocktakeResponse>>;
+    const METADATA: {
+        readonly method: "POST";
+        readonly path: "/shop/inventory/stocktakes/:id/start";
+        readonly request: null;
+        readonly response: {
+            readonly type: "application/json";
+            readonly encrypted: false;
+        };
+        readonly status: 201;
+    };
+    const path: (id: string) => string;
+}
+export declare function complete(connection: IConnection, id: string): Promise<complete.Output>;
+export declare namespace complete {
+    type Output = Primitive<IResponse<IStocktake.IStocktakeResponse>>;
+    const METADATA: {
+        readonly method: "POST";
+        readonly path: "/shop/inventory/stocktakes/:id/complete";
+        readonly request: null;
+        readonly response: {
+            readonly type: "application/json";
+            readonly encrypted: false;
+        };
+        readonly status: 201;
     };
     const path: (id: string) => string;
 }

@@ -74,3 +74,32 @@ export declare enum InventoryTransactionState {
     RESTOCK = "restock",
     CREATE_COMPLETED = "create_completed"
 }
+export declare enum GoodsReceiptState {
+    DRAFT = "draft",
+    CONFIRMED = "confirmed",
+    RECEIVED = "received",
+    CANCELED = "canceled"
+}
+export declare enum StockTransferState {
+    DRAFT = "draft",
+    CONFIRMED = "confirmed",
+    IN_TRANSIT = "in_transit",
+    RECEIVED = "received",
+    CANCELED = "canceled"
+}
+export declare enum StockDestroyState {
+    DRAFT = "draft",
+    WAITING_APPROVAL = "waiting_approval",
+    APPROVED = "approved",
+    DONE = "done",
+    REJECTED = "rejected",
+    CANCELED = "canceled"
+}
+export declare enum StockValuationReferenceType {
+    GOODS_RECEIPT = "goods_receipt",
+    TRANSFER = "transfer",
+    SALE_ORDER = "sale_order",
+    ADJUSTMENT = "adjustment",
+    DESTROY = "destroy",
+    STOCKTAKE = "stocktake"
+}

@@ -9,6 +9,12 @@ export declare namespace IStaffProfile {
         attachment_id?: number;
         display_name?: string & tags.MinLength<5>;
         shop_id?: string;
+        date_of_birth?: string | null;
+        gender?: string | null;
+        nationality?: string | null;
+        ethnicity?: string | null;
+        marital_status?: string | null;
+        permanent_address?: string | null;
     }
     interface IUpdate extends Partial<ICreate> {
     }
@@ -24,5 +30,11 @@ export declare namespace IStaffProfile {
         attachment_id?: null | string;
         shop_id: string | null;
         active?: boolean;
+        date_of_birth?: string | null;
+        gender?: string | null;
+        nationality?: string | null;
+        ethnicity?: string | null;
+        marital_status?: string | null;
+        permanent_address?: string | null;
     }
 }

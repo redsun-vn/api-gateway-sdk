@@ -1,5 +1,5 @@
 import { tags } from 'typia';
-import { BaseProfileResponse, BaseResponse } from './common.type';
+import { BaseProfileResponse, BaseResponse, IQuery } from './common.type';
 import { IStaffProfile } from './iprofile-staff';
 import { IUserDevice } from './iuser-device';
 import { IPosSession } from './ipos-session';
@@ -72,6 +72,27 @@ export declare namespace IStaff {
         bank_name?: string | null;
         bank_branch?: string | null;
         position?: string | null;
+        account_status?: TAccountStatus;
+        date_of_birth?: string | null;
+        gender?: string | null;
+        nationality?: string | null;
+        ethnicity?: string | null;
+        marital_status?: string | null;
+        permanent_address?: string | null;
+        id_card_issued_date?: string | null;
+        id_card_issued_place?: string | null;
+        dependents_count?: number | null;
+        employment_type?: string | null;
+        contract_type?: string | null;
+        contract_number?: string | null;
+        contract_start_date?: string | null;
+        contract_end_date?: string | null;
+        probation_end_date?: string | null;
+        emergency_contact_name?: string | null;
+        emergency_contact_phone?: string | null;
+        emergency_contact_relation?: string | null;
+        education_level?: string | null;
+        major?: string | null;
     }
     interface IRegisterResponse extends BaseResponse {
         user_id: string;
@@ -110,16 +131,90 @@ export declare namespace IStaff {
         social_insurance?: boolean;
         social_insurance_code?: string;
         health_insurance_code?: string;
-        start_date?: string;
-        end_date?: string;
+        start_date?: string | null;
+        end_date?: string | null;
         id_card?: string;
         tax_code?: string;
         bank_account?: string;
         bank_name?: string;
         bank_branch?: string;
         position?: string;
+        date_of_birth?: string | null;
+        gender?: string | null;
+        nationality?: string | null;
+        ethnicity?: string | null;
+        marital_status?: string | null;
+        permanent_address?: string | null;
+        id_card_issued_date?: string | null;
+        id_card_issued_place?: string | null;
+        dependents_count?: number | null;
+        employment_type?: string | null;
+        contract_type?: string | null;
+        contract_number?: string | null;
+        contract_start_date?: string | null;
+        contract_end_date?: string | null;
+        probation_end_date?: string | null;
+        emergency_contact_name?: string | null;
+        emergency_contact_phone?: string | null;
+        emergency_contact_relation?: string | null;
+        education_level?: string | null;
+        major?: string | null;
     }
     interface IPermissionMapping {
         permission: string[];
+    }
+    type TAccountStatus = 'NONE' | 'ACTIVE' | 'DISABLED';
+    interface IStaffListQuery extends IQuery {
+        include_hr_only?: boolean;
+    }
+    interface IFindByPhoneQuery {
+        phone: string;
+    }
+    interface IHrProfileCreate extends IStaffProfile.ICreate {
+        phone: string;
+        first_name: string;
+        department_id?: string | null;
+        position?: string;
+        manager_id?: string;
+        prefix_code?: string;
+        social_insurance?: boolean;
+        social_insurance_code?: string;
+        health_insurance_code?: string;
+        start_date?: string | null;
+        end_date?: string | null;
+        id_card?: string;
+        tax_code?: string;
+        bank_account?: string;
+        bank_name?: string;
+        bank_branch?: string;
+        id_card_issued_date?: string | null;
+        id_card_issued_place?: string | null;
+        dependents_count?: number | null;
+        employment_type?: string | null;
+        contract_type?: string | null;
+        contract_number?: string | null;
+        contract_start_date?: string | null;
+        contract_end_date?: string | null;
+        probation_end_date?: string | null;
+        emergency_contact_name?: string | null;
+        emergency_contact_phone?: string | null;
+        emergency_contact_relation?: string | null;
+        education_level?: string | null;
+        major?: string | null;
+    }
+    interface IGrantAccountInput {
+        groups?: string[];
+    }
+    interface IHrProfileResponse extends Omit<IStaffResponse, 'user_id'> {
+        user_id: string | null;
+        account_status: TAccountStatus;
+    }
+    interface IStaffByPhoneResponse {
+        id: number | string;
+        code: string;
+        name: string;
+        position: string | null;
+        user_id: string | null;
+        account_status: TAccountStatus;
     }
 }

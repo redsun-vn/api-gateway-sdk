@@ -49,6 +49,7 @@ export interface ISearchOptions {
     shopId?: string;
     script?: string;
     scriptShould?: string;
+    includeHrOnly?: boolean;
 }
 export interface IFilterTranslation {
     keyTranslation: string;
