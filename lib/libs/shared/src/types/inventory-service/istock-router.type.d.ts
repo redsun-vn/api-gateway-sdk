@@ -24,7 +24,7 @@ export declare namespace IStockRouter {
         referentType: string;
         referentAction: string;
         action?: boolean | string;
-        stockRule?: IStockRule.IStockRuleResponse;
-        warehouse?: IWarehouse.IWarehouseResponse;
+        stockRule?: IStockRule.IStockRuleResponse | null;
+        warehouse?: IWarehouse.IWarehouseResponse | null;
     }
 }

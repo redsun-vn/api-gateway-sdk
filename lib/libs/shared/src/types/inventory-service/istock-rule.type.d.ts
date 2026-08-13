@@ -27,9 +27,9 @@ export declare namespace IStockRule {
         name: string;
         sequence: number | string;
         active?: boolean | string;
-        warehouse?: IWarehouse.IWarehouseResponse;
-        locationDest?: IStockLocation.IStockLocationResponse;
-        locationSrc?: IStockLocation.IStockLocationResponse;
-        pickingType?: IStockPickingType.IStockPickingTypeResponse;
+        warehouse?: IWarehouse.IWarehouseResponse | null;
+        locationDest?: IStockLocation.IStockLocationResponse | null;
+        locationSrc?: IStockLocation.IStockLocationResponse | null;
+        pickingType?: IStockPickingType.IStockPickingTypeResponse | null;
     }
 }

@@ -69,9 +69,9 @@ export declare namespace IStockMove {
         origin?: number | string;
         picking?: IStockPicking.IStockPickingResponse | null;
         pickingType?: IStockPickingType.IStockPickingTypeResponse | null;
-        warehouse?: IWarehouse.IWarehouseResponse;
-        locationSrc?: IStockLocation.IStockLocationResponse;
-        locationDest?: IStockLocation.IStockLocationResponse;
+        warehouse?: IWarehouse.IWarehouseResponse | null;
+        locationSrc?: IStockLocation.IStockLocationResponse | null;
+        locationDest?: IStockLocation.IStockLocationResponse | null;
         stockQuantity?: IStockQuantity.IStockQuantityResponse | null;
         stockMoveLines?: IStockMoveLine.IStockMoveLineResponse[] | null;
     }

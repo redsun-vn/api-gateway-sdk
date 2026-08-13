@@ -79,8 +79,8 @@ export declare namespace IStockTransfer {
         state: StockTransferState;
         transferDate: Date | string;
         expectedDate: Date | string | null;
-        srcWarehouse?: IWarehouse.IWarehouseResponse;
-        destWarehouse?: IWarehouse.IWarehouseResponse;
+        srcWarehouse?: IWarehouse.IWarehouseResponse | null;
+        destWarehouse?: IWarehouse.IWarehouseResponse | null;
         lines?: IStockTransferLineResponse[];
     }
 }

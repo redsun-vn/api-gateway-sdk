@@ -50,8 +50,8 @@ export declare namespace IWarehouse {
         latitude?: string | null;
         longitude?: string | null;
         sequence: number | string;
-        viewLocation?: IStockLocation.IStockLocationResponse;
-        stockLocation?: IStockLocation.IStockLocationResponse;
-        groupWarehouse?: IGroupWarehouse.IGroupWarehouseResponse;
+        viewLocation?: IStockLocation.IStockLocationResponse | null;
+        stockLocation?: IStockLocation.IStockLocationResponse | null;
+        groupWarehouse?: IGroupWarehouse.IGroupWarehouseResponse | null;
     }
 }

@@ -49,8 +49,8 @@ export declare namespace IStockPicking {
         dateDeadline?: string | null;
         dateDone?: string | null;
         printed?: boolean;
-        pickingType?: IStockPickingType.IStockPickingTypeResponse;
-        locationSrc?: IStockLocation.IStockLocationResponse;
-        locationDest?: IStockLocation.IStockLocationResponse;
+        pickingType?: IStockPickingType.IStockPickingTypeResponse | null;
+        locationSrc?: IStockLocation.IStockLocationResponse | null;
+        locationDest?: IStockLocation.IStockLocationResponse | null;
     }
 }

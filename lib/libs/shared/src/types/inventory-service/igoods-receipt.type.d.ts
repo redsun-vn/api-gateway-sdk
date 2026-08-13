@@ -72,8 +72,8 @@ export declare namespace IGoodsReceipt {
         totalAmount: number | string;
         state: GoodsReceiptState;
         receiptDate: Date | string;
-        warehouse?: IWarehouse.IWarehouseResponse;
-        location?: IStockLocation.IStockLocationResponse;
+        warehouse?: IWarehouse.IWarehouseResponse | null;
+        location?: IStockLocation.IStockLocationResponse | null;
         lines?: IGoodsReceiptLineResponse[];
     }
 }

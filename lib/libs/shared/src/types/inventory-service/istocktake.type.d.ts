@@ -34,7 +34,7 @@ export declare namespace IStocktake {
         type: string;
         status: string;
         stocktakeDate: string | null;
-        warehouse?: IWarehouse.IWarehouseResponse;
-        location?: IStockLocation.IStockLocationResponse;
+        warehouse?: IWarehouse.IWarehouseResponse | null;
+        location?: IStockLocation.IStockLocationResponse | null;
     }
 }

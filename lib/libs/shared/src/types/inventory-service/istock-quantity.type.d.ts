@@ -31,6 +31,6 @@ export declare namespace IStockQuantity {
         reservedQuantity?: number | string;
         lastStocktakeQuantity?: number | string;
         lastStocktakeDate?: string | null;
-        stockLocation?: IStockLocation.IStockLocationResponse;
+        stockLocation?: IStockLocation.IStockLocationResponse | null;
     }
 }

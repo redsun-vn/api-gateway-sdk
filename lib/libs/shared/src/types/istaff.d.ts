@@ -170,6 +170,9 @@ export declare namespace IStaff {
     interface IFindByPhoneQuery {
         phone: string;
     }
+    interface IGrantAccountInput {
+        password?: string;
+    }
     interface IHrProfileCreate extends IStaffProfile.ICreate {
         phone: string;
         first_name: string;

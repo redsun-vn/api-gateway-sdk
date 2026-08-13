@@ -36,7 +36,7 @@ export declare namespace IStocktakeLine {
         quantity: number | string;
         inventoryQuantity: number | string;
         differentQuantity: number | string;
-        stocktake?: IStocktake.IStocktakeResponse;
-        location?: IStockLocation.IStockLocationResponse;
+        stocktake?: IStocktake.IStocktakeResponse | null;
+        location?: IStockLocation.IStockLocationResponse | null;
     }
 }
