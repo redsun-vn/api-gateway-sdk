@@ -1,6 +1,7 @@
 import type { IConnection, Primitive } from "@nestia/fetcher";
 import type { IResponse } from "../../../../../libs/shared/src/types/common.type";
 import type { IStaff } from "../../../../../libs/shared/src/types/istaff";
+export * as reinstate from "./reinstate";
 export declare function grantAccount(connection: IConnection, id: string): Promise<grantAccount.Output>;
 export declare namespace grantAccount {
     type Output = Primitive<IResponse<IStaff.IHrProfileResponse>>;

@@ -28,7 +28,7 @@ export declare namespace IStaffProfile {
         last_name?: null | string;
         zipcode?: null | string;
         attachment_id?: null | string;
-        shop_id: string | null;
+        shop_id: number | string | null;
         active?: boolean;
         date_of_birth?: string | null;
         gender?: string | null;

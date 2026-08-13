@@ -49,8 +49,8 @@ export declare namespace IStaff {
         groupIds?: number[];
     }
     interface IStaffResponse extends BaseResponse, BaseProfileResponse {
-        shop_id: string | null;
-        user_id: string;
+        shop_id: number | string | null;
+        user_id?: string | null;
         profile: IStaffProfile.IStaffProfileResponse | null;
         code: string;
         permission?: null | string[];
