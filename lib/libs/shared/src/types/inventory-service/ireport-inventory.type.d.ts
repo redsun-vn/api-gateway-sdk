@@ -1,5 +1,14 @@
 import { tags } from 'typia';
 export declare namespace IReport {
+    interface IWarehouseScopedQuery {
+        warehouse_id?: number;
+    }
+    interface IOverdueTransferQuery {
+        thresholdDays?: number;
+    }
+    interface IOversellQuery {
+        onlyReserved?: boolean;
+    }
     interface IReportFilterRequest {
         shop_id: number & tags.Type<'uint32'>;
         warehouse_id?: number & tags.Type<'uint32'>;

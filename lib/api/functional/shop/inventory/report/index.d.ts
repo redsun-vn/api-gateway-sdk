@@ -9,3 +9,4 @@ export * as warehouse_summary from "./warehouse_summary";
 export * as movement_history from "./movement_history";
 export * as expiring_stock from "./expiring_stock";
 export * as daily from "./daily";
+export * as reports from "./reports";

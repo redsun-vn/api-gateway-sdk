@@ -1,12 +1,14 @@
 export * as goods_receipts from "./goods_receipts";
 export * as group_warehouses from "./group_warehouses";
 export * as report from "./report";
+export * as stock_destroys from "./stock_destroys";
 export * as stock_locations from "./stock_locations";
 export * as stock_lots from "./stock_lots";
 export * as stock_moves from "./stock_moves";
 export * as stock_picking_types from "./stock_picking_types";
 export * as stock_pickings from "./stock_pickings";
 export * as stock_quantity from "./stock_quantity";
+export * as stock_quantities from "./stock_quantities";
 export * as stock_reservations from "./stock_reservations";
 export * as stock_routers from "./stock_routers";
 export * as stock_rules from "./stock_rules";

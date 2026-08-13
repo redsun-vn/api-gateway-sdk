@@ -3,6 +3,14 @@ import { BaseResponse } from '../common.type';
 import { IWarehouse } from './iwarehouse.type';
 import { IStockQuantity } from './istock-quantity.type';
 export declare namespace IStockLot {
+    interface IExpiringLotQuery {
+        thresholdDays?: number;
+        warehouse_id?: number;
+    }
+    interface IAvailableByLotQuery {
+        variant_id: number;
+        warehouse_id?: number;
+    }
     interface ICreateStockLot {
         shop_id?: number & tags.Type<'uint64'>;
         warehouse_id: number & tags.Type<'uint64'>;

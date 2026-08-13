@@ -1,6 +1,8 @@
 import type { IConnection, Resolved, Primitive } from "@nestia/fetcher";
 import type { IQuery, IResponse, IResponsePagination } from "../../../../../libs/shared/src/types/common.type";
 import type { IStockLot } from "../../../../../libs/shared/src/types/inventory-service/istock-lot.type";
+export * as expiring from "./expiring";
+export * as available_by_lot from "./available_by_lot";
 export declare function findAll(connection: IConnection, query: findAll.Query): Promise<findAll.Output>;
 export declare namespace findAll {
     type Query = Resolved<IQuery>;

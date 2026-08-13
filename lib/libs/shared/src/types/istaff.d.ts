@@ -211,6 +211,7 @@ export declare namespace IStaff {
     interface IHrProfileResponse extends Omit<IStaffResponse, 'user_id'> {
         user_id: string | null;
         account_status: TAccountStatus;
+        identity_reused?: boolean;
     }
     interface IStaffByPhoneResponse {
         id: number | string;

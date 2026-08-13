@@ -16,3 +16,5 @@ export * from './igroup-warehouse.type';
 export * from './ireport-inventory.type';
 export * from './igoods-receipt.type';
 export * from './istock-transfer.type';
+export * from './istock-destroy.type';
+export * from './istock-valuation.type';
