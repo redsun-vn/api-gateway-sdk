@@ -221,4 +221,97 @@ export declare namespace IStaff {
         user_id: string | null;
         account_status: TAccountStatus;
     }
+    type TImportDuplicateMode = 'skip' | 'update_existing' | 'reject';
+    type TImportRowStatus = 'created' | 'updated' | 'skipped' | 'error';
+    interface IImportEntry {
+        _row_index?: number;
+        code?: string;
+        phone: string;
+        first_name: string;
+        position?: string;
+        department_name?: string;
+        manager_name?: string;
+        employment_type?: string;
+        start_date?: string;
+        end_date?: string;
+        contract_type?: string;
+        contract_number?: string;
+        contract_start_date?: string;
+        contract_end_date?: string;
+        probation_end_date?: string;
+        email?: string;
+        province?: string;
+        ward?: string;
+        address1?: string;
+        permanent_address?: string;
+        date_of_birth?: string;
+        gender?: string;
+        marital_status?: string;
+        nationality?: string;
+        ethnicity?: string;
+        id_card?: string;
+        id_card_issued_date?: string;
+        id_card_issued_place?: string;
+        emergency_contact_name?: string;
+        emergency_contact_phone?: string;
+        emergency_contact_relation?: string;
+        education_level?: string;
+        major?: string;
+        tax_code?: string;
+        dependents_count?: number;
+        social_insurance_code?: string;
+        health_insurance_code?: string;
+        bank_account?: string;
+        bank_name?: string;
+        bank_branch?: string;
+    }
+    interface IImportRequest {
+        batch_id: string;
+        rows: Array<IImportEntry> & tags.MinItems<1> & tags.MaxItems<500>;
+        options?: {
+            on_duplicate?: TImportDuplicateMode;
+        };
+    }
+    interface IImportRowResult {
+        row_index: number;
+        status: TImportRowStatus;
+        staff_id?: number | string;
+        error_code?: string;
+        error_message?: string;
+    }
+    interface IImportResponse {
+        results: IImportRowResult[];
+        summary: {
+            created: number;
+            updated: number;
+            skipped: number;
+            error: number;
+        };
+        es_warning?: {
+            failed_ids: Array<number | string>;
+        };
+    }
+    interface IExportQuery {
+        filters?: string;
+        search?: string;
+        include_hr_only?: boolean;
+        format?: 'xlsx' | 'csv';
+    }
+    interface IExportLabels {
+        columns: string[];
+        enums?: {
+            employment_type?: Record<string, string>;
+            gender?: Record<string, string>;
+            marital_status?: Record<string, string>;
+            account_status?: Record<string, string>;
+        };
+    }
+    interface IExportHydrateCommand {
+        shop_id: string;
+        ids: Array<number | string>;
+        include_sensitive: boolean;
+    }
+    interface IExportHydrateResponse {
+        rows: Array<(string | number | null)[]>;
+    }
 }

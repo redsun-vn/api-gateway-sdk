@@ -1,6 +1,7 @@
 import type { IConnection, Resolved, Primitive } from "@nestia/fetcher";
 import type { IQuery, IResponse, IResponsePagination } from "../../../../../libs/shared/src/types/common.type";
 import type { IStocktake } from "../../../../../libs/shared/src/types/inventory-service/istocktake.type";
+export * as lines from "./lines";
 export * as generate_lines from "./generate_lines";
 export * as count_by_barcode from "./count_by_barcode";
 export declare function findAll(connection: IConnection, query: findAll.Query): Promise<findAll.Output>;
