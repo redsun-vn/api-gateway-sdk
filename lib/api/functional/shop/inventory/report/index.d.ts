@@ -10,3 +10,4 @@ export * as movement_history from "./movement_history";
 export * as expiring_stock from "./expiring_stock";
 export * as daily from "./daily";
 export * as reports from "./reports";
+export * as daily_snapshot from "./daily_snapshot";

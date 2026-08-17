@@ -18,3 +18,4 @@ export * from './igoods-receipt.type';
 export * from './istock-transfer.type';
 export * from './istock-destroy.type';
 export * from './istock-valuation.type';
+export * from './idaily-snapshot.type';
