@@ -8,6 +8,7 @@ import { IBranch } from './ibranch';
 export declare namespace IStaff {
     interface ICreate extends IStaffProfile.ICreate {
         password: string & tags.MinLength<6>;
+        code?: string;
         permission?: string[];
         groups?: string[];
         prefix_code?: string;
@@ -126,6 +127,7 @@ export declare namespace IStaff {
     }
     interface IUpdate extends IStaffProfile.IUpdate {
         password?: string & tags.MinLength<6>;
+        code?: string;
         permission?: string[] | null;
         groups?: string[] | null;
         branches?: string[] | null;
@@ -179,6 +181,7 @@ export declare namespace IStaff {
     }
     interface IHrProfileCreate extends IStaffProfile.ICreate {
         phone: string;
+        code?: string;
         first_name: string;
         department_id?: string | null;
         position?: string;
