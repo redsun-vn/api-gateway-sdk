@@ -28,3 +28,4 @@ export * from './clinic';
 export * from './ai';
 export * from './crm';
 export * from './cskh-email-config';
+export * from './email';

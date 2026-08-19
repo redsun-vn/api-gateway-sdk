@@ -52,6 +52,7 @@ export declare namespace ICampaign {
         content: string;
         zns_template_id?: string;
         sms_template_id?: string;
+        email_template_id?: number | string | null;
         sms_template_key?: string;
         variables?: string[];
     }
@@ -78,6 +79,7 @@ export declare namespace ICampaign {
         content: string;
         zns_template_id?: string | null;
         sms_template_id?: string | null;
+        email_template_id?: number | string | null;
         sms_template_key?: string | null;
         variables?: string[] | null;
     }

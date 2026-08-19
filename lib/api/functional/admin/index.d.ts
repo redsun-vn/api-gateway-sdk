@@ -54,6 +54,7 @@ export * as departments from "./departments";
 export * as device_category from "./device_category";
 export * as device_variant from "./device_variant";
 export * as device from "./device";
+export * as email from "./email";
 export * as groups from "./groups";
 export * as languages from "./languages";
 export * as namespace from "./namespace";
