@@ -111,6 +111,10 @@ export declare namespace IStaff {
     interface IResetPassword {
         password: string;
     }
+    interface ISetPassword {
+        password: string & tags.MinLength<6>;
+        confirmPassword: string & tags.MinLength<6>;
+    }
     interface IUpdatePassword {
         password: string & tags.MinLength<6>;
         newPassword: string & tags.MinLength<6>;

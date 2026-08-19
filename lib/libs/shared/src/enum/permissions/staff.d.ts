@@ -4,6 +4,12 @@ export declare enum StaffsPermission {
     UPDATE = "staff-update",
     DELETE = "staff-delete"
 }
+export declare enum EmployeePermission {
+    VIEW = "employee-view",
+    CREATE = "employee-create",
+    UPDATE = "employee-update",
+    DELETE = "employee-delete"
+}
 export declare enum GroupsPermission {
     VIEW = "staff_role-view",
     CREATE = "staff_role-create",
