@@ -97,4 +97,43 @@ export declare namespace IAttendanceDetail {
         time_late_in?: string | null;
         time_early_out?: string | null;
     }
+    type TImportDuplicateMode = 'skip' | 'update_existing' | 'reject';
+    interface IImportBatchEntry {
+        _row_index?: number;
+        staff_code: string;
+        date: string;
+        check_in: string;
+        check_out: string;
+        shift_name?: string;
+        branch_name?: string;
+    }
+    interface IImportBatchRequest {
+        batch_id: string & tags.Format<'uuid'>;
+        rows: Array<IImportBatchEntry> & tags.MinItems<1> & tags.MaxItems<500>;
+        options?: IImportBatchOptions;
+    }
+    interface IImportBatchOptions {
+        on_duplicate?: TImportDuplicateMode;
+    }
+    interface IImportBatchRowResult {
+        row_index: number;
+        status: 'created' | 'updated' | 'skipped' | 'error';
+        attendance_id?: number | string;
+        error_code?: string;
+        error_message?: string;
+    }
+    interface IImportBatchSummary {
+        created: number;
+        updated: number;
+        skipped: number;
+        error: number;
+    }
+    interface IImportBatchEsWarning {
+        failed_ids: Array<number | string>;
+    }
+    interface IImportBatchResponse {
+        results: IImportBatchRowResult[];
+        summary: IImportBatchSummary;
+        es_warning?: IImportBatchEsWarning;
+    }
 }
