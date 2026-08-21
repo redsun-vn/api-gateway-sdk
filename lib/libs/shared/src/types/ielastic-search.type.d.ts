@@ -56,6 +56,8 @@ export declare namespace IElastic {
     interface IFilteringMultiple {
         andFilter: IFiltering[];
         orFilter: IFiltering[];
+        mustOrFilter?: IFiltering[];
+        mustOrFilterGroups?: IFiltering[][];
     }
     interface ISearch {
         s: string;

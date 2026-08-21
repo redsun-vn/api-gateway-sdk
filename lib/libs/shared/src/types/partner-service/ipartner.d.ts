@@ -29,6 +29,7 @@ export declare namespace IPartner {
         is_supplier?: boolean;
         tax_code?: string;
         website?: string;
+        company_address?: string;
         note?: string;
         gender?: number & tags.Maximum<1>;
         tagIds?: string[];
@@ -44,6 +45,15 @@ export declare namespace IPartner {
         fileUpload: Express.Multer.File;
         type: TypePartnerUpload;
     }
+    interface IFindIdentityNumbersInput {
+        shop_id: string;
+        ids: (number | string)[];
+    }
+    interface IIdentityNumberItem {
+        id: number | string;
+        identity_number: string | null;
+    }
+    type IFindIdentityNumbersResponse = IIdentityNumberItem[];
     type IUpdate = Partial<ICreate>;
     interface IPartnerResponse extends BaseResponse {
         shop_id: number | string;
@@ -69,6 +79,7 @@ export declare namespace IPartner {
         is_supplier: boolean;
         tax_code?: string | null;
         website?: string | null;
+        company_address?: string | null;
         note?: string | null;
         gender?: number | null;
         tags?: null | IPartnerTag.IPartnerTagResponse[];

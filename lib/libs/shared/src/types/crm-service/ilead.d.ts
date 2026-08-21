@@ -119,7 +119,7 @@ export declare namespace ICrmLead {
             force_create_reason?: string;
         };
     }
-    type ImportAssignOrigin = 'workflow_rule' | 'auto_round_robin' | 'unassigned' | 'manual';
+    type ImportAssignOrigin = 'workflow_rule' | 'auto_round_robin' | 'unassigned' | 'manual' | 'creator';
     interface IImportRowResult {
         row_index: number | string;
         status: 'created' | 'skipped' | 'updated' | 'failed';

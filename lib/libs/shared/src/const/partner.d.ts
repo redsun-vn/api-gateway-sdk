@@ -16,6 +16,9 @@ export declare const typePartnerMapping: {
     is_customer: string;
     is_company: string;
 };
+export declare const identityTypeExportMapping: {
+    [key: string]: string;
+};
 export declare const typePartnerList: string[];
 export declare const PARTNER_HEADER_MAPPING_KEY: {
     [key: string]: string;

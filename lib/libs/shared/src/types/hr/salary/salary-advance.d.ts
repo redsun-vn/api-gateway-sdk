@@ -26,6 +26,13 @@ export declare namespace ISalaryAdvance {
         is_settled?: boolean;
         salary_calculation_id?: number;
     }
+    interface ICreateMyRequest {
+        branch_id?: number;
+        month: number;
+        year: number;
+        amount: number;
+        reason?: string;
+    }
     type IUpdate = Omit<Partial<ICreate>, 'shop_id'>;
     interface IResponse extends BaseResponse {
         shop_id: number | string;

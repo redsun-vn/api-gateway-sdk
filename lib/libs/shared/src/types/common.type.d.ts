@@ -30,6 +30,8 @@ export interface IFiltering {
 export interface IFilteringMultiple {
     andFilter: IFiltering[];
     orFilter: IFiltering[];
+    mustOrFilter?: IFiltering[];
+    mustOrFilterGroups?: IFiltering[][];
 }
 export interface ISearch {
     s: string;
