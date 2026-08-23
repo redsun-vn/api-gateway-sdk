@@ -32,8 +32,8 @@ export declare namespace IStaffContractType {
     interface ICreateInput {
         name: string & tags.MaxLength<100>;
         code: EContractTypeCode;
-        default_duration_months?: number | null;
-        max_probation_days?: number | null;
+        default_duration_months?: (number & tags.Type<'int32'> & tags.Minimum<1> & tags.Maximum<120>) | null;
+        max_probation_days?: (number & tags.Type<'int32'> & tags.Minimum<1> & tags.Maximum<180>) | null;
         requires_end_date?: boolean;
         requires_attachment?: boolean;
         description?: string | null;
@@ -42,8 +42,8 @@ export declare namespace IStaffContractType {
     }
     interface IUpdateInput {
         name?: string & tags.MaxLength<100>;
-        default_duration_months?: number | null;
-        max_probation_days?: number | null;
+        default_duration_months?: (number & tags.Type<'int32'> & tags.Minimum<1> & tags.Maximum<120>) | null;
+        max_probation_days?: (number & tags.Type<'int32'> & tags.Minimum<1> & tags.Maximum<180>) | null;
         requires_end_date?: boolean;
         requires_attachment?: boolean;
         description?: string | null;
@@ -81,7 +81,7 @@ export declare namespace IStaffContract {
         end_date?: string | null;
         position?: string | null;
         department_id?: string | null;
-        base_salary?: number | null;
+        base_salary?: (number & tags.Minimum<0>) | null;
         file_id?: string | null;
         note?: string | null;
     }
@@ -93,7 +93,7 @@ export declare namespace IStaffContract {
         end_date?: string | null;
         position?: string | null;
         department_id?: string | null;
-        base_salary?: number | null;
+        base_salary?: (number & tags.Minimum<0>) | null;
         file_id?: string | null;
         note?: string | null;
     }
@@ -105,7 +105,7 @@ export declare namespace IStaffContract {
         end_date?: string | null;
         position?: string | null;
         department_id?: string | null;
-        base_salary?: number | null;
+        base_salary?: (number & tags.Minimum<0>) | null;
         file_id?: string | null;
         note?: string | null;
     }
@@ -126,6 +126,7 @@ export declare namespace IStaffContract {
         status: EContractStatus;
         terminated_at: string | null;
         termination_reason: string | null;
+        terminated_by: string | null;
         closed_reason: string | null;
         position: string | null;
         department_id: number | string | null;
@@ -136,6 +137,8 @@ export declare namespace IStaffContract {
         expiry_stage: EExpiryStage | null;
         remaining_days: number | null;
         contract_type?: IStaffContractType.IResponse | null;
+        created_by: string | null;
+        updated_by: string | null;
     }
     interface IListResponse {
         items: IResponse[];
