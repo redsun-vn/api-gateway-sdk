@@ -16,6 +16,20 @@ export declare enum EContractStatus {
     TERMINATED = "TERMINATED",
     SUPERSEDED = "SUPERSEDED"
 }
+export declare enum ETerminationReason {
+    MUTUAL_AGREEMENT = "MUTUAL_AGREEMENT",
+    EMPLOYEE_RESIGNED = "EMPLOYEE_RESIGNED",
+    EMPLOYER_TERMINATED = "EMPLOYER_TERMINATED",
+    PROBATION_FAILED = "PROBATION_FAILED",
+    WORK_COMPLETED = "WORK_COMPLETED",
+    REDUNDANCY = "REDUNDANCY",
+    DISMISSED = "DISMISSED",
+    EMPLOYEE_DECEASED = "EMPLOYEE_DECEASED",
+    IMPRISONED = "IMPRISONED",
+    WORK_PERMIT_EXPIRED = "WORK_PERMIT_EXPIRED",
+    DEPORTED = "DEPORTED",
+    EMPLOYER_CEASED = "EMPLOYER_CEASED"
+}
 export declare enum EExpiryStage {
     D60 = "D60",
     D30 = "D30",
@@ -111,6 +125,7 @@ export declare namespace IStaffContract {
     }
     interface ITerminateInput {
         terminated_at: string;
+        termination_reason_code: ETerminationReason;
         termination_reason?: string | null;
     }
     interface IResponse extends BaseResponse {
@@ -125,6 +140,7 @@ export declare namespace IStaffContract {
         end_date: string | null;
         status: EContractStatus;
         terminated_at: string | null;
+        termination_reason_code: ETerminationReason | null;
         termination_reason: string | null;
         terminated_by: string | null;
         closed_reason: string | null;
