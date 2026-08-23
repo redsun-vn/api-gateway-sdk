@@ -29,3 +29,4 @@ export * from './ai';
 export * from './crm';
 export * from './cskh-email-config';
 export * from './email';
+export * from './hr-contract';
