@@ -185,6 +185,18 @@ export declare namespace IStaffContract {
         page?: number;
         limit?: number;
     }
+    interface IStaffSummaryQuery {
+        staff_ids: string & tags.MaxLength<2000>;
+    }
+    interface IStaffSummaryItem {
+        staff_id: number | string;
+        code: EContractTypeCode | null;
+        contract_type_name: string | null;
+        end_date: string | null;
+        expiry_stage: EExpiryStage | null;
+        has_any: boolean;
+        has_upcoming: boolean;
+    }
     interface IExportQuery {
         staff_id?: string;
         contract_type_id?: string;

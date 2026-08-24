@@ -1,6 +1,7 @@
 import type { IConnection, Resolved, Primitive } from "@nestia/fetcher";
 import type { IResponse } from "../../../../../libs/shared/src/types/common.type";
 import type { IStaffContract } from "../../../../../libs/shared/src/types/hr/istaff-contract";
+export * as staff_summary from "./staff_summary";
 export * as $export from "./$export";
 export * as file_url from "./file_url";
 export declare function findAll(connection: IConnection, query: findAll.Query): Promise<findAll.Output>;
