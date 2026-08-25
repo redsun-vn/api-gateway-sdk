@@ -13,6 +13,7 @@ import { CREATE_SHOP_FROM_SOURCE_ENUM } from '../enum';
 export declare namespace IShop {
     interface IMetadata {
         tax_code?: string;
+        half_day_threshold_percentage?: number;
         [key: string]: unknown;
     }
     interface ICreate extends BaseProfile {

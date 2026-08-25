@@ -35,5 +35,18 @@ export declare namespace IAttendanceTimesheet {
         symbols_in_use: string[];
         rows: ITimesheetRow[];
         truncated?: boolean;
+        violations?: IViolationRow[];
+    }
+    interface IViolationRow {
+        staff_id: number | string;
+        full_name: string;
+        date: string;
+        shift_name: string;
+        check_in: string;
+        check_out: string;
+        late_minutes: number;
+        early_minutes: number;
+        worked_minutes: number;
+        shift_minutes: number;
     }
 }

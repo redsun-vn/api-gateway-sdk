@@ -67,6 +67,7 @@ export declare namespace ILeave {
         end_date: string;
         reason?: string | null;
         attachments?: string[];
+        is_backdated_by_hr?: boolean;
     }
     interface IUpdateLeaveRequest {
         id: number | string;

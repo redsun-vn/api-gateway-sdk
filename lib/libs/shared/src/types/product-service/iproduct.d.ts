@@ -59,6 +59,8 @@ export declare namespace IProduct {
         selectionGroupIds?: number[];
         salesChannel?: ISalesChannel[];
         name?: string;
+        barcode?: string;
+        sku?: string;
         active?: boolean;
         needToCook?: boolean;
         type?: ProductType;

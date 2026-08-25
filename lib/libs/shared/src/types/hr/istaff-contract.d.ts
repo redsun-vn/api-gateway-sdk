@@ -174,6 +174,7 @@ export declare namespace IStaffContract {
         by_status: Record<string, number>;
         by_code: Record<string, number>;
         by_stage: IStageSummary;
+        no_active_contract: number;
     }
     interface IListQuery {
         staff_id?: string;
