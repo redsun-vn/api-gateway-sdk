@@ -37,6 +37,27 @@ export declare namespace IAttendanceTimesheet {
         truncated?: boolean;
         violations?: IViolationRow[];
     }
+    interface IMyTimesheetQuery {
+        from: string & tags.Format<'date-time'>;
+        to: string & tags.Format<'date-time'>;
+    }
+    interface IMyTimesheetDay {
+        date: string;
+        symbol: string;
+        check_in: string;
+        check_out: string;
+        late_minutes: number;
+        early_minutes: number;
+        worked_minutes: number;
+        shift_minutes: number;
+        shift_name: string;
+    }
+    interface IMyTimesheetResponse {
+        period: IPeriod;
+        symbols_in_use: string[];
+        days: IMyTimesheetDay[];
+        tally: ITally;
+    }
     interface IViolationRow {
         staff_id: number | string;
         full_name: string;
