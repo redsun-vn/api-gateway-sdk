@@ -40,6 +40,13 @@ export declare namespace IShopConfig {
             name: E_INVOICE_PROVIDER_ENUM;
             enabled: boolean;
         } | null;
+        onboardingState?: {
+            is_completed: boolean;
+            current_step: string;
+            skipped_steps: string[];
+            started_at: string;
+            completed_at: string;
+        } | null;
     }
     interface IUpdate extends Partial<ICreate> {
     }
@@ -82,5 +89,6 @@ export declare namespace IShopConfig {
             name: E_INVOICE_PROVIDER_ENUM;
             enabled: boolean;
         } | null;
+        onboardingState?: any;
     }
 }

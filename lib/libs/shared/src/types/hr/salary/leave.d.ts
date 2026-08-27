@@ -16,6 +16,9 @@ export declare namespace ILeave {
         gender_specific: string;
         requires_approval: boolean;
         auto_approve_after_days?: number | string | null;
+        consumes_annual_quota?: boolean;
+        has_own_quota?: boolean;
+        has_ledger_entries?: boolean;
     }
     interface ILeaveRequestResponse extends BaseResponse {
         shop_id: number | string;
@@ -100,6 +103,8 @@ export declare namespace ILeave {
         gender_specific: string;
         requires_approval: boolean;
         auto_approve_after_days?: number;
+        consumes_annual_quota?: boolean;
+        has_own_quota?: boolean;
     }
     interface IUpdateLeaveType extends Partial<Omit<ICreateLeaveType, 'shop_id' | 'code' | 'gender_specific'>> {
         id: number;

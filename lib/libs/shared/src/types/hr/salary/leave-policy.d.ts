@@ -1,3 +1,4 @@
+import { LeaveAccrualMode, LeaveProrateRounding } from '../../../enum';
 import { BaseResponse } from '../../common.type';
 export declare namespace ILeavePolicy {
     interface ILeavePolicyResponse extends BaseResponse {
@@ -9,6 +10,9 @@ export declare namespace ILeavePolicy {
         carry_forward_expiry_months: number | string;
         progressive_leave: boolean;
         progressive_rules: ILeavePolicyProgressiveRule[] | null;
+        probation_months?: number | string;
+        accrual_mode?: LeaveAccrualMode;
+        prorate_rounding?: LeaveProrateRounding;
     }
     interface ILeavePolicyProgressiveRule {
         years_of_service: number | string;
@@ -23,6 +27,9 @@ export declare namespace ILeavePolicy {
         carry_forward_expiry_months?: number;
         progressive_leave?: boolean;
         progressive_rules?: ILeavePolicyProgressiveRule[];
+        probation_months?: number;
+        accrual_mode?: LeaveAccrualMode;
+        prorate_rounding?: LeaveProrateRounding;
     }
     interface ICreateLeavePolicyRequest extends Omit<ICreateLeavePolicy, 'shop_id'> {
         active?: boolean;

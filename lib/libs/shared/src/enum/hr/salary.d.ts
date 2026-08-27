@@ -145,3 +145,12 @@ export declare enum LeaveTypeCode {
     WORK_FROM_HOME = "WORK_FROM_HOME",
     OTHER = "OTHER"
 }
+export declare enum LeaveAccrualMode {
+    UPFRONT = "UPFRONT",
+    MONTHLY = "MONTHLY"
+}
+export declare enum LeaveProrateRounding {
+    DOWN = "DOWN",
+    NEAREST = "NEAREST",
+    HALF_UP = "HALF_UP"
+}
