@@ -57,6 +57,7 @@ export declare namespace ILeaveLedger {
         adjustment: number;
         expiry: number;
         balance: number;
+        is_open: boolean;
     }
     interface IBalanceResponse {
         items: IBalanceRow[];
