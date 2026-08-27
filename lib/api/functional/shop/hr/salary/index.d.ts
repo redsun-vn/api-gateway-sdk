@@ -6,6 +6,7 @@ export * as commissions from "./commissions";
 export * as configs from "./configs";
 export * as holidays from "./holidays";
 export * as insurances from "./insurances";
+export * as leave_ledger from "./leave_ledger";
 export * as leave_policies from "./leave_policies";
 export * as leave_requests from "./leave_requests";
 export * as leave_summaries from "./leave_summaries";
