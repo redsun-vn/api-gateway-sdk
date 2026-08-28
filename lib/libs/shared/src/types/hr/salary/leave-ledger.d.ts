@@ -74,6 +74,7 @@ export declare namespace ILeaveLedger {
         quota_key?: string;
         note: string & tags.MinLength<1> & tags.MaxLength<500>;
         effective_date?: string;
+        idempotency_key: string & tags.MinLength<8> & tags.MaxLength<100>;
     }
     interface IAdjustmentResult {
         created: boolean;
