@@ -67,4 +67,37 @@ export declare namespace ILeaveLedger {
         quota_key?: string;
         period_years?: number[];
     }
+    interface IAdjustmentBody {
+        staff_id: string;
+        period_year: number & tags.Type<'int32'>;
+        days: number;
+        quota_key?: string;
+        note: string & tags.MinLength<1> & tags.MaxLength<500>;
+        effective_date?: string;
+    }
+    interface IAdjustmentResult {
+        created: boolean;
+        staff_id: number | string;
+        period_year: number;
+        quota_key: number | string;
+        balance: number;
+    }
+    interface INegativeBalanceQuery {
+        period_year?: number;
+        page?: number;
+        limit?: number;
+    }
+    interface INegativeBalanceRow {
+        staff_id: number | string;
+        employment_episode: number;
+        quota_key: number | string;
+        period_year: number;
+        balance: number;
+    }
+    interface INegativeBalanceResponse {
+        items: INegativeBalanceRow[];
+        total: number;
+        page: number;
+        limit: number;
+    }
 }

@@ -7,6 +7,7 @@ export * as configs from "./configs";
 export * as holidays from "./holidays";
 export * as insurances from "./insurances";
 export * as leave_accrual from "./leave_accrual";
+export * as leave_adjustment from "./leave_adjustment";
 export * as leave_ledger from "./leave_ledger";
 export * as leave_policies from "./leave_policies";
 export * as leave_requests from "./leave_requests";
