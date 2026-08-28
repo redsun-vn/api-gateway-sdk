@@ -14,3 +14,4 @@ export * from './leave';
 export * from './leave-summary';
 export * from './leave-policy';
 export * from './leave-ledger';
+export * from './leave-accrual';
