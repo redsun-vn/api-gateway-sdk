@@ -21,7 +21,7 @@ export declare namespace listActions {
 export declare function updateAction(connection: IConnection, modelKey: string, actionKey: string, dto: updateAction.Input): Promise<updateAction.Output>;
 export declare namespace updateAction {
     type Input = Resolved<IEmailTemplate.IActionUpdateRequest>;
-    type Output = Primitive<IResponse<IEmailTemplate.IActionResponse>>;
+    type Output = Primitive<IResponse<IEmailTemplate.IActionUpdateResponse>>;
     const METADATA: {
         readonly method: "PUT";
         readonly path: "/admin/email/actions/:model_key/:action_key";

@@ -174,6 +174,15 @@ export declare namespace IEmailTemplate {
         sample_payload?: Record<string, unknown>;
         default_templates?: Record<string, IDefaultTemplate>;
     }
+    interface IActionUpdateWarning {
+        code: 'UNREGISTERED_VARIABLE';
+        variable: string;
+        message: string;
+    }
+    interface IActionUpdateResponse {
+        action: IActionResponse;
+        warnings: IActionUpdateWarning[];
+    }
 }
 export declare namespace IEmailHistory {
     interface IListQuery {
