@@ -7,6 +7,7 @@ export * as $import from "./$import";
 export * as hr_profile from "./hr_profile";
 export * as account from "./account";
 export * as password from "./password";
+export * as permissions from "./permissions";
 export * as manager from "./manager";
 export declare function findAll(connection: IConnection, query: findAll.Query): Promise<findAll.Output>;
 export declare namespace findAll {

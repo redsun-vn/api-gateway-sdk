@@ -42,6 +42,11 @@ export declare namespace IStaff {
         shopId: string;
         userId: string;
     }
+    interface IUpdatePermissions {
+        permission?: string[] | null;
+        permission_denied?: string[] | null;
+        groups?: string[] | null;
+    }
     interface IInvite {
         phone: string;
         shopName: string;
@@ -55,6 +60,7 @@ export declare namespace IStaff {
         profile: IStaffProfile.IStaffProfileResponse | null;
         code: string;
         permission?: null | string[];
+        permission_denied?: null | string[];
         groups?: null | IGroup.IGroupResponse[];
         active: boolean;
         devices?: null | IUserDevice.IUserDeviceResponse[];
