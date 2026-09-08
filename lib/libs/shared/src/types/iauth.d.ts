@@ -71,6 +71,25 @@ export declare namespace IAuth {
         user_id: string;
         phone: string;
     }
+    interface IRegisterTemporaryEmailRequest {
+        verification_id: string & tags.Format<'uuid'>;
+        otp: string;
+        password: string & tags.MinLength<6>;
+        confirm_password: string & tags.MinLength<6>;
+        email: string & tags.Format<'email'>;
+        first_name?: null | string;
+    }
+    interface ICompleteRegistrationEmailV2Response {
+        user_id: string;
+        email: string;
+    }
+    interface IResetPasswordEmailRequest {
+        verification_id: string & tags.Format<'uuid'>;
+        otp: string;
+        email: string & tags.Format<'email'>;
+        password: string & tags.MinLength<6>;
+        confirm_password: string & tags.MinLength<6>;
+    }
     interface IResetPasswordFromAdmin {
         user_id: string & tags.Format<'uuid'>;
         password: string;

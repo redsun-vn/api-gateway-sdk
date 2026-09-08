@@ -24,5 +24,6 @@ export declare namespace INotification {
     interface ITriggerPayloadOptions {
         workflowIdentifier: string;
         data: any;
+        audience?: 'shop_customer' | 'system';
     }
 }
