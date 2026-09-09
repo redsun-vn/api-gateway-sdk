@@ -29,6 +29,11 @@ export declare namespace IFile {
         };
         needs_encryption?: boolean;
     }
+    interface IUpdate {
+        title?: string;
+        alt?: string | null;
+        caption?: string | null;
+    }
     interface IReqUpload {
         branch_id?: number | null;
         parent_id?: number | null;

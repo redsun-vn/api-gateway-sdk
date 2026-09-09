@@ -52,6 +52,25 @@ export declare namespace findOne {
     };
     const path: (id: string) => string;
 }
+export declare function update(connection: IConnection, id: string, input: update.Input): Promise<update.Output>;
+export declare namespace update {
+    type Input = Resolved<IFile.IUpdate>;
+    type Output = Primitive<IResponse<IFile.IResponse>>;
+    const METADATA: {
+        readonly method: "PATCH";
+        readonly path: "/attachments/shop/files/:id";
+        readonly request: {
+            readonly type: "application/json";
+            readonly encrypted: false;
+        };
+        readonly response: {
+            readonly type: "application/json";
+            readonly encrypted: false;
+        };
+        readonly status: 200;
+    };
+    const path: (id: string) => string;
+}
 export declare function $delete(connection: IConnection, id: string): Promise<$delete.Output>;
 export declare namespace $delete {
     type Output = Primitive<IResponse<false | true>>;

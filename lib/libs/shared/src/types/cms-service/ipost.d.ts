@@ -14,6 +14,11 @@ export declare namespace ICMSPost {
         website_ids?: string[] | null;
         isIndex?: boolean;
         isPublished?: boolean;
+        isFeatured?: boolean;
+        isNew?: boolean;
+        isPopular?: boolean;
+        isTrending?: boolean;
+        featuredOrder?: (number & tags.Type<'int32'>) | null;
     }
     interface ICreate extends ICreateReq {
         shop_id?: (number & tags.Type<'uint64'>) | null;
@@ -27,6 +32,11 @@ export declare namespace ICMSPost {
         updated_by_id?: number & tags.Type<'uint64'>;
     }
     interface IResponse extends CMSBaseResponse {
+        isFeatured: boolean;
+        isNew: boolean;
+        isPopular: boolean;
+        isTrending: boolean;
+        featuredOrder: number | null;
         categories?: ICMSCategory.IResponse[] | null;
         tags?: ICMSTag.IResponse[] | null;
         websites?: IWebsite.IResponse[] | null;
