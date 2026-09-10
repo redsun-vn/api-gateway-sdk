@@ -13,6 +13,7 @@ export declare namespace ILeavePolicy {
         probation_months?: number | string;
         accrual_mode?: LeaveAccrualMode;
         prorate_rounding?: LeaveProrateRounding;
+        standard_hours_per_day?: number | string;
     }
     interface ILeavePolicyProgressiveRule {
         years_of_service: number | string;
@@ -30,6 +31,7 @@ export declare namespace ILeavePolicy {
         probation_months?: number;
         accrual_mode?: LeaveAccrualMode;
         prorate_rounding?: LeaveProrateRounding;
+        standard_hours_per_day?: number;
     }
     interface ICreateLeavePolicyRequest extends Omit<ICreateLeavePolicy, 'shop_id'> {
         active?: boolean;
