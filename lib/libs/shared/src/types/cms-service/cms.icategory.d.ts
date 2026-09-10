@@ -6,7 +6,7 @@ export declare namespace ICMSCategory {
         name: string;
         isActive: boolean;
         description?: string | null;
-        attachment_id?: number & tags.Type<'uint64'>;
+        attachment_id?: (number & tags.Type<'uint64'>) | null;
         parent_uuid?: string | null;
         website_ids?: string[] | null;
         slug?: string;
