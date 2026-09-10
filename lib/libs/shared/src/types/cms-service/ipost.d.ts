@@ -32,11 +32,11 @@ export declare namespace ICMSPost {
         updated_by_id?: number & tags.Type<'uint64'>;
     }
     interface IResponse extends CMSBaseResponse {
-        isFeatured: boolean;
-        isNew: boolean;
-        isPopular: boolean;
-        isTrending: boolean;
-        featuredOrder: number | null;
+        isFeatured?: boolean;
+        isNew?: boolean;
+        isPopular?: boolean;
+        isTrending?: boolean;
+        featuredOrder?: number | null;
         categories?: ICMSCategory.IResponse[] | null;
         tags?: ICMSTag.IResponse[] | null;
         websites?: IWebsite.IResponse[] | null;

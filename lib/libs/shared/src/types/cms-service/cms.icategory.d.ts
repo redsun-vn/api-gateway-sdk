@@ -9,6 +9,8 @@ export declare namespace ICMSCategory {
         attachment_id?: number & tags.Type<'uint64'>;
         parent_uuid?: string | null;
         website_ids?: string[] | null;
+        slug?: string;
+        featuredOrder?: (number & tags.Type<'int32'>) | null;
     }
     interface ICreate extends ICreateReq {
         shop_id?: (number & tags.Type<'uint64'>) | null;
@@ -28,6 +30,7 @@ export declare namespace ICMSCategory {
         attachment_id?: number | string | null;
         websites?: IWebsite.IResponse[] | null;
         parent?: IResponse;
+        featuredOrder?: number | null;
     }
 }
 export declare namespace ICMSTag {
