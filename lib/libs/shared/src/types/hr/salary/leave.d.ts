@@ -1,4 +1,4 @@
-import { LeaveRequestStatus } from '../../../enum';
+import { LeaveDurationUnit, LeaveHalfDayPeriod, LeaveRequestStatus } from '../../../enum';
 import { BaseResponse } from '../../common.type';
 export declare namespace ILeave {
     interface ILeaveTypeResponse extends BaseResponse {
@@ -19,6 +19,13 @@ export declare namespace ILeave {
         consumes_annual_quota?: boolean;
         has_own_quota?: boolean;
         has_ledger_entries?: boolean;
+        min_request_unit?: LeaveDurationUnit;
+    }
+    interface ILeaveDayBreakdown {
+        date: string;
+        leave_minutes: number;
+        scheduled_minutes: number;
+        days: number;
     }
     interface ILeaveRequestResponse extends BaseResponse {
         shop_id: number | string;
@@ -29,6 +36,10 @@ export declare namespace ILeave {
         end_date: string;
         total_days: number | string;
         reason?: string | null;
+        duration_unit?: LeaveDurationUnit;
+        half_day_period?: LeaveHalfDayPeriod | null;
+        total_hours?: number | string | null;
+        duration_breakdown?: ILeaveDayBreakdown[] | null;
         status: LeaveRequestStatus | string;
         approved_by_id?: string | null;
         approved_at?: string | null;
@@ -70,6 +81,8 @@ export declare namespace ILeave {
         end_date: string;
         reason?: string | null;
         attachments?: string[];
+        duration_unit?: LeaveDurationUnit;
+        half_day_period?: LeaveHalfDayPeriod | null;
         is_backdated_by_hr?: boolean;
     }
     interface IUpdateLeaveRequest {
@@ -105,6 +118,7 @@ export declare namespace ILeave {
         auto_approve_after_days?: number;
         consumes_annual_quota?: boolean;
         has_own_quota?: boolean;
+        min_request_unit?: LeaveDurationUnit;
     }
     interface IUpdateLeaveType extends Partial<Omit<ICreateLeaveType, 'shop_id' | 'code' | 'gender_specific'>> {
         id: number;

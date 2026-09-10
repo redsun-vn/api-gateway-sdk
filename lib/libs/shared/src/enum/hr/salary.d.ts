@@ -154,3 +154,12 @@ export declare enum LeaveProrateRounding {
     NEAREST = "NEAREST",
     HALF_UP = "HALF_UP"
 }
+export declare enum LeaveDurationUnit {
+    DAY = "DAY",
+    HALF_DAY = "HALF_DAY",
+    HOUR = "HOUR"
+}
+export declare enum LeaveHalfDayPeriod {
+    AM = "AM",
+    PM = "PM"
+}
