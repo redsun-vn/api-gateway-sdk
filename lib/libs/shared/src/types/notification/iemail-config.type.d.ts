@@ -151,6 +151,10 @@ export declare namespace IEmailTemplate {
         sample_payload: Record<string, unknown>;
         default_template_langs: string[];
         is_active: boolean;
+        audience: string | null;
+        nature: string | null;
+        trigger_kind: string | null;
+        recipient_hint: string | null;
     }
     interface IActionListQuery {
         model_key?: string;
