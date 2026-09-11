@@ -58,6 +58,7 @@ export declare namespace ILeaveLedger {
         expiry: number;
         balance: number;
         is_open: boolean;
+        hours_per_day?: number | null;
     }
     interface IBalanceResponse {
         items: IBalanceRow[];
