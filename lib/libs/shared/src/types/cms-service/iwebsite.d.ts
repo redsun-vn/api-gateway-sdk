@@ -1,6 +1,8 @@
 import { tags } from 'typia';
 import { SEOBaseResponse, SEOBase } from '../common.type';
 import { ITheme } from './itheme';
+export type THealthStatus = 'online' | 'offline' | 'ssl_error' | 'suspended' | 'checking' | 'unknown';
+export type TDomainLinkStatus = 'pointing_ok' | 'pointing_elsewhere' | 'unresolved' | 'unknown';
 export declare namespace IWebsite {
     interface IQueryFindByDomain {
         domain?: string;
@@ -68,6 +70,34 @@ export declare namespace IWebsite {
         availablePaymentMethodIds?: string[] | null;
         availableShippingMethodIds?: string[] | null;
         onboardingState?: IOnboardingState | null;
+        healthStatus?: THealthStatus;
+        domainLinkStatus?: TDomainLinkStatus;
+        lastCheckedAt?: Date | string | null;
+        lastCheckErrorCode?: string | null;
+        isSuspended?: boolean;
+        suspendedAt?: Date | string | null;
+    }
+    interface ISuspensionReq {
+        suspended: boolean;
+        reason?: (string & tags.MaxLength<500>) | null;
+    }
+    interface IStatusResponse {
+        healthStatus: THealthStatus;
+        domainLinkStatus: TDomainLinkStatus;
+        lastCheckedAt: Date | string | null;
+        lastCheckErrorCode: string | null;
+        isSuspended: boolean;
+    }
+    interface IRequestCheckResponse {
+        accepted: boolean;
+    }
+    interface ISuspensionLogItem {
+        id: string;
+        websiteId: string;
+        suspended: boolean;
+        reason: string | null;
+        staffId: string;
+        createdAt: Date | string;
     }
     interface ICreateRealmReq {
         domain: string;

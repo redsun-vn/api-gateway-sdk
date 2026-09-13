@@ -4,6 +4,8 @@ import type { IQuery, IResponse, IResponsePagination } from "../../../../../libs
 export * as verify_domain from "./verify_domain";
 export * as create_realm from "./create_realm";
 export * as delete_realm from "./delete_realm";
+export * as check from "./check";
+export * as suspension from "./suspension";
 export declare function findAll(connection: IConnection, query: findAll.Query): Promise<findAll.Output>;
 export declare namespace findAll {
     type Query = Resolved<IQuery>;
@@ -80,6 +82,21 @@ export declare namespace update {
             readonly type: "application/json";
             readonly encrypted: false;
         };
+        readonly response: {
+            readonly type: "application/json";
+            readonly encrypted: false;
+        };
+        readonly status: 200;
+    };
+    const path: (id: string) => string;
+}
+export declare function status(connection: IConnection, id: string): Promise<status.Output>;
+export declare namespace status {
+    type Output = Primitive<IResponse<IWebsite.IStatusResponse>>;
+    const METADATA: {
+        readonly method: "GET";
+        readonly path: "/shop/cms/websites/:id/status";
+        readonly request: null;
         readonly response: {
             readonly type: "application/json";
             readonly encrypted: false;
