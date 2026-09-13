@@ -39,6 +39,7 @@ export declare namespace ICrmTask {
         reminder_at?: string | null;
         completed_at?: string | null;
         created_by_id?: number | string | null;
+        source?: 'manual' | 'workflow_rule' | 'ai';
     }
     interface IComplete {
         completion_notes?: string;

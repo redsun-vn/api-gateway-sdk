@@ -1,6 +1,8 @@
 import type { IConnection, Resolved, Primitive } from "@nestia/fetcher";
 import type { IQuery, IResponse } from "../../../../../libs/shared/src/types/common.type";
 import type { ICrmOpportunity } from "../../../../../libs/shared/src/types/crm-service/iopportunity";
+export * as ai_summary from "./ai_summary";
+export * as ai_suggestions from "./ai_suggestions";
 export * as bulk_reassign from "./bulk_reassign";
 export * as kanban from "./kanban";
 export * as scoped from "./scoped";

@@ -27,3 +27,4 @@ export * from './ilead-webhook';
 export * from './imarketing-campaign';
 export * from './iteam';
 export * from './ireport-view';
+export * from './iai-assist';

@@ -1,6 +1,7 @@
 import type { IConnection, Primitive } from "@nestia/fetcher";
 import type { IResponse } from "../../../../../libs/shared/src/types/common.type";
 import type { ICrmShopConfig } from "../../../../../libs/shared/src/types/crm-service/ishop-config";
+export * as ai_profile from "./ai_profile";
 export * as customizations from "./customizations";
 export * as reset from "./reset";
 export declare function findEffectiveConfig(connection: IConnection): Promise<findEffectiveConfig.Output>;

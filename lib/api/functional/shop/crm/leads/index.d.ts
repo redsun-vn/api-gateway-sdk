@@ -1,6 +1,8 @@
 import type { IConnection, Resolved, Primitive } from "@nestia/fetcher";
 import type { IQuery, IResponse, IResponsePagination } from "../../../../../libs/shared/src/types/common.type";
 import type { ICrmLead } from "../../../../../libs/shared/src/types/crm-service/ilead";
+export * as ai_summary from "./ai_summary";
+export * as ai_suggestions from "./ai_suggestions";
 export * as scoped from "./scoped";
 export * as team from "./team";
 export * as bulk_assign from "./bulk_assign";
@@ -41,7 +43,7 @@ export declare namespace $export {
 }
 export declare function create(connection: IConnection, body: create.Input): Promise<create.Output>;
 export declare namespace create {
-    type Input = Resolved<ICrmLead.ICreate>;
+    type Input = Resolved<ICrmLead.ICreateWithAiPrefill>;
     type Output = Primitive<IResponse<ICrmLead.ICrmLeadResponse>>;
     const METADATA: {
         readonly method: "POST";

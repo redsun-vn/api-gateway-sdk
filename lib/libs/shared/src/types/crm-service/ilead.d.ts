@@ -1,5 +1,6 @@
 import { tags } from 'typia';
 import { BaseResponse } from '../common.type';
+import { ICrmAiAssist } from './iai-assist';
 import { CrmLeadSource, CrmLeadStatus, CrmBantClassification } from '../../enum/crm-service/lead';
 import { CrmSlaPriority } from '../../enum/crm-service/sla';
 export declare namespace ICrmLead {
@@ -22,6 +23,9 @@ export declare namespace ICrmLead {
         sla_priority?: CrmSlaPriority;
         tags?: string[];
     }
+    type ICreateWithAiPrefill = ICreate & {
+        ai_prefill?: ICrmAiAssist.IPrefillCommitRef;
+    };
     type IUpdate = Partial<Omit<ICreate, 'owner_id' | 'force_create' | 'force_create_reason' | 'team_id'>> & {
         owner_id?: number | string | null;
     };
