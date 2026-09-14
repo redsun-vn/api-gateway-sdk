@@ -24,7 +24,7 @@ export declare namespace ICategory {
         name?: string;
         active?: boolean;
         icon?: string | null | undefined;
-        image_id?: number & tags.Type<'uint64'>;
+        image_id?: (number & tags.Type<'uint64'>) | null;
         description?: string | null;
         htmlContent?: string | null;
         userId?: string | null;
