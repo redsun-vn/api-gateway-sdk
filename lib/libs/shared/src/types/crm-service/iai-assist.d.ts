@@ -1,3 +1,4 @@
+import { tags } from 'typia';
 export declare namespace ICrmAiAssist {
     type SuggestionKind = 'field_update' | 'task_create' | 'activity_update' | 'prefill';
     type SuggestionStatus = 'pending' | 'applying' | 'accepted' | 'rejected' | 'reverted' | 'expired' | 'failed';
@@ -5,6 +6,7 @@ export declare namespace ICrmAiAssist {
     type Tier = 'suggestion' | 'generated' | 'rule';
     type RejectReason = 'wrong_value' | 'not_relevant' | 'already_done' | 'other';
     type GenerationState = 'ready' | 'generating' | 'not_enough_data' | 'unavailable';
+    type SummaryUnavailableReason = 'daily_limit' | 'budget_limit' | 'failed' | 'busy';
     type SuggestionValue = string | number | boolean | string[] | null;
     interface IViewerScope {
         all: boolean;
@@ -35,8 +37,8 @@ export declare namespace ICrmAiAssist {
         reason?: RejectReason;
     }
     interface IPrefillCommitRef {
-        suggestion_id: number | string;
-        conversation_id: number | string;
+        suggestion_id: (number & tags.Type<'uint64'> & tags.Minimum<1>) | (string & tags.Pattern<'^[1-9][0-9]*$'>);
+        conversation_id: (number & tags.Type<'uint64'> & tags.Minimum<1>) | (string & tags.Pattern<'^[1-9][0-9]*$'>);
     }
     interface ISummaryContent {
         need: string;
@@ -50,12 +52,19 @@ export declare namespace ICrmAiAssist {
         subject: string;
         occurred_at: Date | string | null;
     }
+    interface IPreviousSummary {
+        summary: ISummaryContent;
+        citations: ISummaryCitation[];
+        generated_at: Date | string;
+    }
     interface ISummaryResponse {
         state: GenerationState;
         tier: 'generated';
         summary?: ISummaryContent;
         citations?: ISummaryCitation[];
         generated_at?: Date | string;
+        reason?: SummaryUnavailableReason;
+        previous?: IPreviousSummary;
     }
     interface ISuggestionItem {
         id: number | string;
@@ -66,6 +75,7 @@ export declare namespace ICrmAiAssist {
         field_label: string | null;
         current_value: SuggestionValue;
         proposed_value: SuggestionValue;
+        applied_before: SuggestionValue;
         evidence: string | null;
         subject: string | null;
         due_at: Date | string | null;

@@ -10,6 +10,11 @@ export declare namespace ICategory {
         description?: string;
         htmlContent?: string;
         userId?: string;
+        categorySlug?: string;
+        metaTitle?: string | null;
+        metaDescription?: string | null;
+        metaKeywords?: string | null;
+        metaOgImage?: (number & tags.Type<'uint64'>) | null;
     }
     interface ICreateCategory extends IReqCreateCategory {
         shop_id: number & tags.Type<'uint64'>;
@@ -23,6 +28,11 @@ export declare namespace ICategory {
         htmlContent?: string | null;
         userId?: string | null;
         parent_id?: number & tags.Type<'uint64'>;
+        categorySlug?: string;
+        metaTitle?: string | null;
+        metaDescription?: string | null;
+        metaKeywords?: string | null;
+        metaOgImage?: (number & tags.Type<'uint64'>) | null;
     }
     interface IDetailResponse extends BaseResponse {
         shop_id: string | number | null;
@@ -42,5 +52,10 @@ export declare namespace ICategory {
         updatedBy?: string | null;
         parent?: IDetailResponse | null;
         childrens?: IDetailResponse[] | null;
+        categorySlug?: string | null;
+        metaTitle?: string | null;
+        metaDescription?: string | null;
+        metaKeywords?: string | null;
+        metaOgImage?: string | number | null;
     }
 }

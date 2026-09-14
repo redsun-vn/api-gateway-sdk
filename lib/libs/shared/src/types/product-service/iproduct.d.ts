@@ -42,6 +42,11 @@ export declare namespace IProduct {
         isCalculatedByHour?: boolean;
         isRecurring?: boolean;
         isWallet?: boolean;
+        productSlug?: string;
+        metaTitle?: string | null;
+        metaDescription?: string | null;
+        metaKeywords?: string | null;
+        metaOgImage?: (number & tags.Type<'uint64'>) | null;
     }
     interface ICreateProduct extends IReqCreateProduct {
         shop_id: number & tags.Type<'uint64'>;
@@ -74,6 +79,11 @@ export declare namespace IProduct {
         isCalculatedByHour?: boolean;
         isRecurring?: boolean;
         isWallet?: boolean;
+        productSlug?: string;
+        metaTitle?: string | null;
+        metaDescription?: string | null;
+        metaKeywords?: string | null;
+        metaOgImage?: (number & tags.Type<'uint64'>) | null;
     }
     interface ITagReponse {
         id: string | number | null;
@@ -157,5 +167,9 @@ export declare namespace IProduct {
         isCalculatedByHour?: boolean;
         isRecurring?: boolean;
         isWallet?: boolean;
+        metaTitle?: string | null;
+        metaDescription?: string | null;
+        metaKeywords?: string | null;
+        metaOgImage?: string | number | null;
     }
 }
