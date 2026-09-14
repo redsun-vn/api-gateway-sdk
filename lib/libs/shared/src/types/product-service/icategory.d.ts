@@ -15,6 +15,7 @@ export declare namespace ICategory {
         metaDescription?: string | null;
         metaKeywords?: string | null;
         metaOgImage?: (number & tags.Type<'uint64'>) | null;
+        featuredOrder?: (number & tags.Type<'int32'>) | null;
     }
     interface ICreateCategory extends IReqCreateCategory {
         shop_id: number & tags.Type<'uint64'>;
@@ -33,6 +34,7 @@ export declare namespace ICategory {
         metaDescription?: string | null;
         metaKeywords?: string | null;
         metaOgImage?: (number & tags.Type<'uint64'>) | null;
+        featuredOrder?: (number & tags.Type<'int32'>) | null;
     }
     interface IDetailResponse extends BaseResponse {
         shop_id: string | number | null;
@@ -57,5 +59,6 @@ export declare namespace ICategory {
         metaDescription?: string | null;
         metaKeywords?: string | null;
         metaOgImage?: string | number | null;
+        featuredOrder?: number | null;
     }
 }

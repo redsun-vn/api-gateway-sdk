@@ -25,7 +25,8 @@ export declare enum CrmActivityOutcome {
     WRONG_NUMBER = "wrong_number",
     RESCHEDULED = "rescheduled",
     NO_SHOW = "no_show",
-    CANCELLED = "cancelled"
+    CANCELLED = "cancelled",
+    NO_RESPONSE = "no_response"
 }
 export declare enum CrmActivitySource {
     MANUAL = "manual",

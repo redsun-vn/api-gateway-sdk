@@ -7,6 +7,8 @@ export declare namespace ICrmAiAssist {
     type RejectReason = 'wrong_value' | 'not_relevant' | 'already_done' | 'other';
     type GenerationState = 'ready' | 'generating' | 'not_enough_data' | 'unavailable';
     type SummaryUnavailableReason = 'daily_limit' | 'budget_limit' | 'failed' | 'busy';
+    type SummaryBasis = 'activities' | 'record_facts';
+    type StarterMissingSlot = 'budget' | 'authority' | 'need' | 'timeline';
     type SuggestionValue = string | number | boolean | string[] | null;
     interface IViewerScope {
         all: boolean;
@@ -52,10 +54,38 @@ export declare namespace ICrmAiAssist {
         subject: string;
         occurred_at: Date | string | null;
     }
+    interface ISummaryNextStepTask {
+        id: number | string;
+        subject: string;
+        due_at: Date | string;
+    }
     interface IPreviousSummary {
         summary: ISummaryContent;
         citations: ISummaryCitation[];
         generated_at: Date | string;
+        basis: SummaryBasis;
+        next_step_task?: ISummaryNextStepTask;
+    }
+    interface ISummaryStarter {
+        tier: 'rule';
+        known_facts: Array<{
+            label: string;
+            value: string;
+        }>;
+        activities_with_body: number;
+        received_at: Date | string | null;
+        first_contact_at: Date | string | null;
+        first_contact_sla: {
+            status: 'on_time' | 'warning' | 'breached';
+            remaining_business_minutes: number;
+        } | null;
+        missing: StarterMissingSlot[] | null;
+        next_step: {
+            kind: 'first_contact' | 'template' | 'open_task';
+            subject: string;
+            due_at: Date | string;
+            task_id?: number | string;
+        };
     }
     interface ISummaryResponse {
         state: GenerationState;
@@ -63,8 +93,11 @@ export declare namespace ICrmAiAssist {
         summary?: ISummaryContent;
         citations?: ISummaryCitation[];
         generated_at?: Date | string;
+        next_step_task?: ISummaryNextStepTask;
         reason?: SummaryUnavailableReason;
         previous?: IPreviousSummary;
+        basis?: SummaryBasis;
+        starter?: ISummaryStarter;
     }
     interface ISuggestionItem {
         id: number | string;

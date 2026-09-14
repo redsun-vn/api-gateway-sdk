@@ -1,6 +1,7 @@
 import { tags } from 'typia';
 import { BaseResponse } from '../common.type';
 import { CrmTaskPriority, CrmTaskStatus, CrmTaskRelatedToType } from '../../enum/crm-service/task';
+import { CrmActivityOutcome, CrmActivityType } from '../../enum/crm-service/activity';
 export declare namespace ICrmTask {
     interface ITaskListQuery {
         assignee_id?: number;
@@ -40,8 +41,12 @@ export declare namespace ICrmTask {
         completed_at?: string | null;
         created_by_id?: number | string | null;
         source?: 'manual' | 'workflow_rule' | 'ai';
+        activity_id?: number | string;
     }
     interface IComplete {
         completion_notes?: string;
+        log_activity?: boolean;
+        outcome?: CrmActivityOutcome;
+        activity_type?: CrmActivityType;
     }
 }
