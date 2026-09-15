@@ -327,4 +327,7 @@ export declare namespace IStaff {
     interface IExportHydrateResponse {
         rows: Array<(string | number | null)[]>;
     }
+    interface ICheckIdentifier {
+        identifier: string & tags.MinLength<1>;
+    }
 }

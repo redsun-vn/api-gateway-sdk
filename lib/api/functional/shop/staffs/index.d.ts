@@ -2,6 +2,7 @@ import type { IConnection, Resolved, Primitive } from "@nestia/fetcher";
 import type { IResponse, IResponsePagination } from "../../../../libs/shared/src/types/common.type";
 import type { IStaff } from "../../../../libs/shared/src/types/istaff";
 export * as by_phone from "./by_phone";
+export * as check_identifier from "./check_identifier";
 export * as $export from "./$export";
 export * as $import from "./$import";
 export * as hr_profile from "./hr_profile";

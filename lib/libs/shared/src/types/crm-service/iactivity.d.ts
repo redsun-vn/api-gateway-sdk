@@ -1,10 +1,10 @@
 import { tags } from 'typia';
 import { BaseResponse } from '../common.type';
-import { CrmActivityType, CrmActivityRelatedToType, CrmActivityDirection, CrmActivityOutcome, CrmActivitySource } from '../../enum/crm-service/activity';
+import { CrmActivityType, CrmActivityCreateType, CrmActivityRelatedToType, CrmActivityDirection, CrmActivityOutcome, CrmActivitySource } from '../../enum/crm-service/activity';
 type PurposeTags = Array<string & tags.Pattern<'^[a-z][a-z0-9_]{1,30}$'>> & tags.MaxItems<10> & tags.UniqueItems;
 export declare namespace ICrmActivity {
     interface ICreate {
-        type: CrmActivityType;
+        type: CrmActivityCreateType;
         related_to_type: CrmActivityRelatedToType;
         related_to_id: number;
         owner_id: number;
@@ -24,7 +24,7 @@ export declare namespace ICrmActivity {
         type: CrmActivityType;
         related_to_type: CrmActivityRelatedToType;
         related_to_id: number | string;
-        owner_id: number | string;
+        owner_id: number | string | null;
         subject: string;
         body?: string | null;
         direction?: CrmActivityDirection | null;

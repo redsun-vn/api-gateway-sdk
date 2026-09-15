@@ -6,6 +6,17 @@ export declare enum CrmActivityType {
     SMS = "sms",
     WHATSAPP = "whatsapp",
     WINBACK = "winback",
+    STAGE_CHANGE = "stage_change",
+    CHAT = "chat"
+}
+export declare enum CrmActivityCreateType {
+    CALL = "call",
+    EMAIL = "email",
+    MEETING = "meeting",
+    NOTE = "note",
+    SMS = "sms",
+    WHATSAPP = "whatsapp",
+    WINBACK = "winback",
     STAGE_CHANGE = "stage_change"
 }
 export declare enum CrmActivityRelatedToType {

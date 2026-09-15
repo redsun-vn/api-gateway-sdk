@@ -32,6 +32,9 @@ export declare namespace ICrmAiAssist {
         conversation_id: number;
         viewer_scope: IViewerScope;
     }
+    interface IContactCandidatesPayload extends IConversationPayload {
+        scoped_owner_ids?: number[];
+    }
     interface IAcceptBody {
         value?: SuggestionValue;
     }
@@ -125,12 +128,14 @@ export declare namespace ICrmAiAssist {
     interface IDecisionResponse {
         item: ISuggestionItem;
     }
+    type ConversationUnavailableReason = SummaryUnavailableReason | 'window_expired';
     interface IConversationSummaryResponse {
         state: GenerationState;
         tier: 'generated';
         summary?: ISummaryContent;
         cited_message_ids?: Array<number | string>;
         generated_at?: Date | string;
+        reason?: ConversationUnavailableReason;
     }
     interface IPrefillLeadResponse {
         state: GenerationState;
@@ -138,12 +143,26 @@ export declare namespace ICrmAiAssist {
         suggestion_id?: number | string;
         fields?: Record<string, SuggestionValue>;
         evidence?: Record<string, string>;
+        reason?: ConversationUnavailableReason;
     }
     interface IReplyDraftResponse {
         state: GenerationState;
         tier: 'generated';
         draft?: string;
         generated_at?: Date | string;
+        reason?: ConversationUnavailableReason;
+    }
+    type ContactCandidateMatch = 'conversation_phone' | 'extracted_phone' | 'extracted_email' | 'linked_lead_email' | 'suggested_phone' | 'suggested_email';
+    interface IContactCandidate {
+        lead_id: number | string;
+        name: string | null;
+        status: string;
+        owner_id: number | null;
+        match: ContactCandidateMatch;
+        linked: boolean;
+    }
+    interface IContactCandidatesResponse {
+        candidates: IContactCandidate[];
     }
 }
 export declare namespace ICrmAiProfile {

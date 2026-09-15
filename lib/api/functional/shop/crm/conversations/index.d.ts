@@ -5,6 +5,7 @@ import type { IConversationSearch } from "../../../../../libs/shared/src/types/c
 export * as ai_summary from "./ai_summary";
 export * as ai_prefill_lead from "./ai_prefill_lead";
 export * as ai_reply_draft from "./ai_reply_draft";
+export * as contact_candidates from "./contact_candidates";
 export * as reply from "./reply";
 export * as read from "./read";
 export * as assign from "./assign";
