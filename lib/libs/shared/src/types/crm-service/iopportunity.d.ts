@@ -1,5 +1,5 @@
 import { tags } from 'typia';
-import { BaseResponse } from '../common.type';
+import { BaseResponse, IQuery } from '../common.type';
 import { CrmOpportunityVisibility } from '../../enum/crm-service/opportunity';
 import { CrmSlaPriority } from '../../enum/crm-service/sla';
 export declare namespace ICrmOpportunity {
@@ -64,6 +64,11 @@ export declare namespace ICrmOpportunity {
     interface IListColumn {
         items: ICrmOpportunityResponse[];
         total: number;
+        digest_snapshot_unavailable?: boolean;
+    }
+    interface IScopedListQuery extends IQuery {
+        digest_date?: string;
+        digest_bucket?: string;
     }
     interface IKanbanColumn {
         stage_id: number | string;

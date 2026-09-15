@@ -43,6 +43,7 @@ export declare namespace ICrmActivity {
         owner_id?: number;
         type?: CrmActivityType;
         partner_uuid?: string & tags.Format<'uuid'>;
+        include_source_lead?: boolean;
         source?: CrmActivitySource;
         direction?: CrmActivityDirection;
         date_from?: string & tags.Format<'date-time'>;

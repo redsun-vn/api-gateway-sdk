@@ -1,5 +1,5 @@
 import { tags } from 'typia';
-import { BaseResponse } from '../common.type';
+import { BaseResponse, IQuery, IResponsePagination } from '../common.type';
 import { ICrmAiAssist } from './iai-assist';
 import { CrmLeadSource, CrmLeadStatus, CrmBantClassification } from '../../enum/crm-service/lead';
 import { CrmSlaPriority } from '../../enum/crm-service/sla';
@@ -161,5 +161,16 @@ export declare namespace ICrmLead {
         filters?: unknown;
         sort?: unknown;
         search?: unknown;
+    }
+    interface IScopedListQuery extends IQuery {
+        digest_date?: string;
+        digest_bucket?: string;
+    }
+    interface IScopedListResponse extends IResponsePagination<ICrmLeadResponse> {
+        digest_snapshot_unavailable?: boolean;
+    }
+    interface IDigestBacklogResolveResult {
+        available: boolean;
+        ids: number[];
     }
 }

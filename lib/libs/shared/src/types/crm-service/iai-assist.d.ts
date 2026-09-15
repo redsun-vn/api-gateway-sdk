@@ -90,8 +90,12 @@ export declare namespace ICrmAiAssist {
             task_id?: number | string;
         };
     }
+    interface IConvertedOpportunityRef {
+        id: number | string;
+        name: string | null;
+    }
     interface ISummaryResponse {
-        state: GenerationState;
+        state: GenerationState | 'converted';
         tier: 'generated';
         summary?: ISummaryContent;
         citations?: ISummaryCitation[];
@@ -101,6 +105,7 @@ export declare namespace ICrmAiAssist {
         previous?: IPreviousSummary;
         basis?: SummaryBasis;
         starter?: ISummaryStarter;
+        converted_opportunity?: IConvertedOpportunityRef | null;
     }
     interface ISuggestionItem {
         id: number | string;
@@ -163,6 +168,16 @@ export declare namespace ICrmAiAssist {
     }
     interface IContactCandidatesResponse {
         candidates: IContactCandidate[];
+    }
+    interface IConversationSignalItem {
+        intent: string;
+        kind: 'buying' | 'negative';
+        evidence: string | null;
+        message_id: number | string | null;
+        detected_at: Date | string;
+    }
+    interface IConversationSignalsResponse {
+        items: IConversationSignalItem[];
     }
 }
 export declare namespace ICrmAiProfile {
