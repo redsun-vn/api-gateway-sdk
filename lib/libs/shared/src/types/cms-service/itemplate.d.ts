@@ -16,6 +16,7 @@ export declare namespace ITemplate {
         thumbnailLabel?: string | null;
         isPublic?: boolean;
         isActive?: boolean;
+        category_uuid?: (string & tags.Format<'uuid'>) | null;
     }
     interface ICreate extends ICreateReq {
         shop_id?: (number & tags.Type<'uint64'>) | null;
@@ -32,6 +33,7 @@ export declare namespace ITemplate {
         isActive?: boolean;
         reviewStatus?: string & TEMPLATE_REVIEW_STATUS;
         reviewById?: number & tags.Type<'uint64'>;
+        category_uuid?: (string & tags.Format<'uuid'>) | null;
     }
     interface IUpdate extends IUpdateReq {
         id: string;
@@ -58,6 +60,7 @@ export declare namespace ITemplate {
         reviewById?: number | string | null;
         isPublic?: boolean | null;
         isActive?: boolean | null;
+        category_uuid?: string | null;
     }
     interface IGroupCountTree {
         group: string | null;

@@ -5,9 +5,10 @@ export declare namespace ICMSPage {
     interface ICreateReq extends SEOBase {
         isPublished: boolean;
         title: string;
+        slug?: string | null;
         description?: string | null;
         content?: string | null;
-        attachment_id?: number & tags.Type<'uint64'>;
+        attachment_id?: (number & tags.Type<'uint64'>) | null;
         website_ids?: string[] | null;
         themeId?: string | null;
         isHome?: boolean;

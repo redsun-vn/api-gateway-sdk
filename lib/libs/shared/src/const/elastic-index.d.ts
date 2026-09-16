@@ -66,6 +66,7 @@ export declare const ELASTIC_INDEX: {
     CMS_TAG: string;
     CMS_DOCUMENT: string;
     CMS_TEMPLATE: string;
+    CMS_TEMPLATE_CATEGORY: string;
     CHECKOUT: string;
     COLLECTION: string;
     COMMENT: string;
