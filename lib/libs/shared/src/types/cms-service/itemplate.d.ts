@@ -37,6 +37,11 @@ export declare namespace ITemplate {
     }
     interface IUpdate extends IUpdateReq {
         id: string;
+        shop_id?: (number & tags.Type<'uint64'>) | null;
+    }
+    interface IDelete {
+        id: string;
+        shop_id?: (number & tags.Type<'uint64'>) | null;
     }
     interface IReview {
         id: string;
