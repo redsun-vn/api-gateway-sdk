@@ -59,6 +59,7 @@ export * as groups from "./groups";
 export * as languages from "./languages";
 export * as namespace from "./namespace";
 export * as notify from "./notify";
+export * as platform_email from "./platform_email";
 export * as sms from "./sms";
 export * as templates from "./templates";
 export * as ticket_categories from "./ticket_categories";
