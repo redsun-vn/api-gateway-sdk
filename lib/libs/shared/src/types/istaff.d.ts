@@ -54,6 +54,14 @@ export declare namespace IStaff {
         branchIds?: number[];
         groupIds?: number[];
     }
+    interface IInviteV2 {
+        identifier: string;
+        phone?: string;
+        shopName: string;
+        shopId?: string;
+        branchIds?: number[];
+        groupIds?: number[];
+    }
     interface IStaffResponse extends BaseResponse, BaseProfileResponse {
         shop_id: number | string | null;
         user_id?: string | null;
@@ -182,8 +190,12 @@ export declare namespace IStaff {
     interface IFindByPhoneQuery {
         phone: string;
     }
+    interface IFindByEmailQuery {
+        email: string & tags.Format<'email'>;
+    }
     interface IGrantAccountInput {
         password?: string;
+        identifierKind?: 'phone' | 'email';
     }
     interface IHrProfileCreate extends IStaffProfile.ICreate {
         phone: string;

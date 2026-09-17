@@ -2,6 +2,7 @@ import type { IConnection, Resolved, Primitive } from "@nestia/fetcher";
 import type { IResponse } from "../../../../libs/shared/src/types/common.type";
 import type { IStaff } from "../../../../libs/shared/src/types/istaff";
 export * as profiles from "./profiles";
+export * as invite_v2 from "./invite_v2";
 export * as password from "./password";
 export * as user_devices from "./user_devices";
 export declare function invite(connection: IConnection, input: invite.Input): Promise<invite.Output>;
