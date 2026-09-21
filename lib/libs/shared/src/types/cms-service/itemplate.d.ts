@@ -1,6 +1,6 @@
 import { tags } from 'typia';
 import { TEMPLATE_REVIEW_STATUS } from '../../enum/cms';
-import { BaseResponse, NoCodeComponentEntry } from '../common.type';
+import { BaseResponse, IQuery, NoCodeComponentEntry } from '../common.type';
 export declare namespace ITemplate {
     interface ICreateReq {
         website_id?: string & tags.Format<'uuid'>;
@@ -76,4 +76,8 @@ export declare namespace ITemplate {
         matchedCount: number;
         total: number;
     }>;
+    type IGroupCountBy = 'group.keyword' | 'category_uuid';
+    interface IGroupCountQuery extends IQuery {
+        groupBy?: IGroupCountBy;
+    }
 }
