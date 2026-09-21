@@ -1,3 +1,4 @@
+import { tags } from 'typia';
 export declare namespace IPlatformEmail {
     interface IEventGroup {
         key: string;
@@ -19,7 +20,7 @@ export declare namespace IPlatformEmail {
         isWired: boolean;
     }
     interface IBrand {
-        id: number;
+        id: number | string;
         code: string;
         name: string;
         senderDisplayName: string;
@@ -37,7 +38,7 @@ export declare namespace IPlatformEmail {
     }
     type IBrandUpdate = Partial<IBrandCreate>;
     interface ITemplate {
-        id: number;
+        id: number | string;
         eventKey: string;
         flow: string;
         brandCode: string;
@@ -91,7 +92,7 @@ export declare namespace IPlatformEmail {
         int: boolean;
     }
     interface IConfig {
-        id: number;
+        id: number | string;
         brandCode: string;
         masterEnabled: boolean;
         flowCusEnabled: boolean;
@@ -121,14 +122,14 @@ export declare namespace IPlatformEmail {
         skipped: number;
     }
     interface ISender {
-        id: number;
+        id: number | string;
         brand_code: string;
         provider: string;
         from_email: string;
         from_name: string;
         reply_to: string | null;
         is_active: boolean;
-        last_test_ok_at: Date | null;
+        last_test_ok_at: (string & tags.Format<'date-time'>) | null;
         transport_config: unknown;
     }
     interface ISenderUpsert {
