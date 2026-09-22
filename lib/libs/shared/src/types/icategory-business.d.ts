@@ -17,7 +17,7 @@ export declare namespace ICategoryBusiness {
         metadata?: string;
         code?: string;
         active?: boolean;
-        default_theme_uuid?: string;
+        default_theme_uuid?: string | null;
     }
     interface ICategoryBusinessResponse extends BaseResponse {
         name: string;
