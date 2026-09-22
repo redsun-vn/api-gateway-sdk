@@ -1,4 +1,5 @@
 import { tags } from 'typia';
+import { AdminBaseResponse, BaseResponse } from '../common.type';
 export declare namespace IPlatformEmail {
     interface IEventGroup {
         key: string;
@@ -19,8 +20,7 @@ export declare namespace IPlatformEmail {
         sendDelay?: string;
         isWired: boolean;
     }
-    interface IBrand {
-        id: number | string;
+    interface IBrand extends AdminBaseResponse {
         code: string;
         name: string;
         senderDisplayName: string;
@@ -37,8 +37,7 @@ export declare namespace IPlatformEmail {
         shopSource?: string | null;
     }
     type IBrandUpdate = Partial<IBrandCreate>;
-    interface ITemplate {
-        id: number | string;
+    interface ITemplate extends AdminBaseResponse {
         eventKey: string;
         flow: string;
         brandCode: string;
@@ -91,8 +90,7 @@ export declare namespace IPlatformEmail {
         cus: boolean;
         int: boolean;
     }
-    interface IConfig {
-        id: number | string;
+    interface IConfig extends AdminBaseResponse {
         brandCode: string;
         masterEnabled: boolean;
         flowCusEnabled: boolean;
@@ -121,8 +119,7 @@ export declare namespace IPlatformEmail {
         failed: number;
         skipped: number;
     }
-    interface ISender {
-        id: number | string;
+    interface ISender extends BaseResponse {
         brand_code: string;
         provider: string;
         from_email: string;
