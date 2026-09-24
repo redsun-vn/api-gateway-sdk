@@ -103,4 +103,17 @@ export declare namespace IDrafOrder {
     interface IUpdateCart extends Omit<Partial<ICreateDrafOrder>, 'staff_id'> {
         cart_session_id: string;
     }
+    interface ICheckoutCustomer {
+        fullName: string & tags.MinLength<2>;
+        phone: string & tags.MinLength<9>;
+        email?: string;
+        address: string & tags.MinLength<5>;
+        province: string;
+        ward: string;
+        district?: string;
+        country?: string;
+    }
+    interface ICompleteCart {
+        customer?: ICheckoutCustomer;
+    }
 }

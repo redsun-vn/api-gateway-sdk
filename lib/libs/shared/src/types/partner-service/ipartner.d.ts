@@ -110,4 +110,21 @@ export declare namespace IPartner {
         last_contact_at: string | null;
         owner_id: number | string | null;
     }
+    interface IResolveCheckoutCustomerInput {
+        shop_id: string;
+        full_name: string;
+        phone: string;
+        email?: string;
+        address: string;
+        province: string;
+        ward: string;
+        district?: string;
+        country?: string;
+    }
+    interface IResolveCheckoutCustomerResponse {
+        partner_uuid: string;
+        shipping_address_id: number | string;
+        phone: string;
+        email: string | null;
+    }
 }
