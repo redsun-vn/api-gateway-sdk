@@ -38,8 +38,9 @@ export declare namespace ICMSTag {
         name: string;
         isActive: boolean;
         description?: string | null;
-        attachment_id?: number & tags.Type<'uint64'>;
+        attachment_id?: (number & tags.Type<'uint64'>) | null;
         website_ids?: string[] | null;
+        slug?: string;
     }
     interface ICreate extends ICreateReq {
         shop_id?: (number & tags.Type<'uint64'>) | null;

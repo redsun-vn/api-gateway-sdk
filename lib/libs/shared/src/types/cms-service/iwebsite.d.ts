@@ -14,6 +14,15 @@ export declare namespace IWebsite {
         started_at: string | null;
         completed_at: string | null;
     }
+    interface ICookieConsent {
+        enabled?: boolean;
+        message?: string;
+        acceptLabel?: string;
+        declineLabel?: string;
+        policyLink?: string;
+        position?: 'bottom' | 'top' | 'bottomLeft' | 'bottomRight';
+        rememberDays?: number & tags.ExclusiveMinimum<0>;
+    }
     interface ICreateReq extends SEOBase {
         domain: string;
         homeUrl: string;
@@ -34,6 +43,7 @@ export declare namespace IWebsite {
         availablePaymentMethodIds?: string[];
         availableShippingMethodIds?: string[];
         onboardingState?: IOnboardingState | null;
+        cookieConsent?: ICookieConsent | null;
     }
     interface ICreate extends ICreateReq {
         shop_id?: (number & tags.Type<'uint64'>) | null;
@@ -70,6 +80,7 @@ export declare namespace IWebsite {
         availablePaymentMethodIds?: string[] | null;
         availableShippingMethodIds?: string[] | null;
         onboardingState?: IOnboardingState | null;
+        cookieConsent?: ICookieConsent | null;
         healthStatus?: THealthStatus;
         domainLinkStatus?: TDomainLinkStatus;
         lastCheckedAt?: Date | string | null;
