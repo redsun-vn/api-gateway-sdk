@@ -33,6 +33,7 @@ export declare namespace IStaff {
         password: string & tags.MinLength<6>;
         phone: string;
         shop_id?: string;
+        email?: null | (string & tags.Format<'email'>);
     }
     interface ICreate2 extends IStaffProfile.ICreate {
         permission?: string[];
