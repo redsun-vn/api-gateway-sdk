@@ -28,6 +28,8 @@ export declare namespace IPlatformEmail {
         shopSource: string | null;
         isSystem: boolean;
         status: string;
+        logoUrl: string | null;
+        brandColor: string | null;
     }
     interface IBrandCreate {
         code: string;
@@ -35,6 +37,8 @@ export declare namespace IPlatformEmail {
         senderDisplayName: string;
         deptMailbox: string;
         shopSource?: string | null;
+        logoUrl?: string | null;
+        brandColor?: string | null;
     }
     type IBrandUpdate = Partial<IBrandCreate>;
     interface ITemplate extends AdminBaseResponse {
@@ -58,6 +62,8 @@ export declare namespace IPlatformEmail {
         sendDelay: string | null;
         dailySendHour: string | null;
         reminderOffsets: number[];
+        updatedByName: string | null;
+        updatedByEmail: string | null;
     }
     interface ITemplateCreate {
         eventKey: string;
