@@ -2,6 +2,7 @@ import type { IConnection, Resolved, Primitive } from "@nestia/fetcher";
 import type { IPlatformEmail } from "../../../../../libs/shared/src/types/admin-service/iplatform-email";
 import type { IResponse } from "../../../../../libs/shared/src/types/common.type";
 export * as publish from "./publish";
+export * as test_send from "./test_send";
 export declare function listTemplates(connection: IConnection, query: listTemplates.Query): Promise<listTemplates.Output>;
 export declare namespace listTemplates {
     type Query = Resolved<IPlatformEmail.ITemplateListQuery>;

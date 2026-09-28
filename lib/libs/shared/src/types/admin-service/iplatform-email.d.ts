@@ -41,6 +41,13 @@ export declare namespace IPlatformEmail {
         brandColor?: string | null;
     }
     type IBrandUpdate = Partial<IBrandCreate>;
+    interface ITestSendResult {
+        ok: boolean;
+        errorMessage?: string;
+    }
+    interface ITestSendInput {
+        recipient: string & tags.Format<'email'>;
+    }
     interface ITemplate extends AdminBaseResponse {
         eventKey: string;
         flow: string;
