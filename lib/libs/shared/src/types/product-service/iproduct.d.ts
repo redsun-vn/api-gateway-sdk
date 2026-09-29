@@ -37,6 +37,7 @@ export declare namespace IProduct {
         originPrice?: number;
         icon?: string;
         description?: string;
+        shortDescription?: string | null;
         userId?: string;
         isManageInventory?: boolean;
         isCalculatedByHour?: boolean;
@@ -74,6 +75,7 @@ export declare namespace IProduct {
         originPrice?: number;
         icon?: string;
         description?: string;
+        shortDescription?: string | null;
         userId?: string;
         isManageInventory?: boolean;
         isCalculatedByHour?: boolean;
@@ -113,6 +115,7 @@ export declare namespace IProduct {
         ProductImage = "productImage",
         VariantStock = "variantStock",
         Description = "description",
+        ShortDescription = "shortDescription",
         ProductPackage = "productPackage"
     }
     interface IProductCopyCondition {
@@ -153,6 +156,7 @@ export declare namespace IProduct {
         originPrice: string | number | null;
         salePrice: string | number | null;
         description?: string | null;
+        shortDescription?: string | null;
         salesChannel?: ISalesChannel[] | null;
         categories?: ICategoryReponse[] | null;
         tags?: ITagReponse[] | null;
