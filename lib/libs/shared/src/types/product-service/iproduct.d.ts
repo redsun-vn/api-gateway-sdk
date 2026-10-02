@@ -15,6 +15,10 @@ export declare namespace IProduct {
         name?: string;
         code?: string;
     }
+    interface IProductVariantRef {
+        product_id: string;
+        variant_id: string;
+    }
     interface IReqCreateProduct {
         tax_id?: number & tags.Type<'uint64'>;
         product_brand_id?: number & tags.Type<'uint64'>;
@@ -38,6 +42,8 @@ export declare namespace IProduct {
         icon?: string;
         description?: string;
         shortDescription?: string | null;
+        upsell?: IProductVariantRef[] | null;
+        crossSell?: IProductVariantRef[] | null;
         userId?: string;
         isManageInventory?: boolean;
         isCalculatedByHour?: boolean;
@@ -76,6 +82,8 @@ export declare namespace IProduct {
         icon?: string;
         description?: string;
         shortDescription?: string | null;
+        upsell?: IProductVariantRef[] | null;
+        crossSell?: IProductVariantRef[] | null;
         userId?: string;
         isManageInventory?: boolean;
         isCalculatedByHour?: boolean;
@@ -157,6 +165,8 @@ export declare namespace IProduct {
         salePrice: string | number | null;
         description?: string | null;
         shortDescription?: string | null;
+        upsell?: IProductVariantRef[] | null;
+        crossSell?: IProductVariantRef[] | null;
         salesChannel?: ISalesChannel[] | null;
         categories?: ICategoryReponse[] | null;
         tags?: ITagReponse[] | null;
