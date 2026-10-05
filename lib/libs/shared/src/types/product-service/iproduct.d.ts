@@ -187,5 +187,10 @@ export declare namespace IProduct {
         metaDescription?: string | null;
         metaKeywords?: string | null;
         metaOgImage?: string | number | null;
+        isBelowMinStock?: boolean;
+        internalTotalInventory?: number | null;
+        internalAvailableStock?: number | null;
+        minPrice?: number | null;
+        maxPrice?: number | null;
     }
 }

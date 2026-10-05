@@ -47,6 +47,7 @@ export declare namespace IElastic {
     interface ISorting {
         property: string;
         direction: string;
+        unmappedType?: string;
     }
     interface IFiltering {
         property: string;
@@ -62,6 +63,8 @@ export declare namespace IElastic {
     interface ISearch {
         s: string;
         properties: string[];
+        prefixFields?: string[];
+        prefixText?: string;
     }
     interface IPaginationOptions {
         limit: number | string;
@@ -70,6 +73,7 @@ export declare namespace IElastic {
     interface ISeachOptions {
         pagination?: IPaginationOptions;
         sort?: ISorting;
+        secondarySort?: ISorting[];
         filter?: IFiltering;
         filters?: IFilteringMultiple;
         search?: ISearch;

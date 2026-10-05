@@ -1,10 +1,15 @@
 import type { IConnection, Resolved, Primitive } from "@nestia/fetcher";
-import type { IQuery, IResponse, IResponsePagination } from "../../../../libs/shared/src/types/common.type";
+import type { IResponse, IResponsePagination } from "../../../../libs/shared/src/types/common.type";
 import type { IProduct } from "../../../../libs/shared/src/types/product-service/iproduct";
+import type { IProductListQuery } from "../../../../libs/shared/src/types/product-service/iproduct-list-query";
+export * as bulk_status from "./bulk_status";
+export * as bulk_categories from "./bulk_categories";
+export * as bulk_sales_channels from "./bulk_sales_channels";
+export * as bulk_delete from "./bulk_delete";
 export * as copy from "./copy";
 export declare function findAll(connection: IConnection, query: findAll.Query): Promise<findAll.Output>;
 export declare namespace findAll {
-    type Query = Resolved<IQuery>;
+    type Query = Resolved<IProductListQuery.IShopQuery>;
     type Output = Primitive<IResponse<IResponsePagination<IProduct.IProductResponse>>>;
     const METADATA: {
         readonly method: "GET";

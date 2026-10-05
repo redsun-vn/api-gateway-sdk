@@ -29,3 +29,6 @@ export * from './iproduct-hour-config';
 export * from './ireport.type';
 export * from './itreatment-config';
 export * from './itreatment-product-item';
+export * from './iproduct-bulk';
+export * from './iproduct-list-query';
+export * from './iproduct-import';
