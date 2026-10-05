@@ -85,6 +85,8 @@ export declare namespace IVariant {
         id?: string;
         image_id?: number & tags.Type<'uint64'>;
         name?: string;
+        barcode?: string;
+        sku?: string;
         active?: boolean;
         icon?: string;
         price?: number;

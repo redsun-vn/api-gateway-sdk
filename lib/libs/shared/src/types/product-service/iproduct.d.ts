@@ -54,6 +54,7 @@ export declare namespace IProduct {
         metaDescription?: string | null;
         metaKeywords?: string | null;
         metaOgImage?: (number & tags.Type<'uint64'>) | null;
+        isFeature?: boolean;
     }
     interface ICreateProduct extends IReqCreateProduct {
         shop_id: number & tags.Type<'uint64'>;
@@ -94,6 +95,7 @@ export declare namespace IProduct {
         metaDescription?: string | null;
         metaKeywords?: string | null;
         metaOgImage?: (number & tags.Type<'uint64'>) | null;
+        isFeature?: boolean;
     }
     interface ITagReponse {
         id: string | number | null;

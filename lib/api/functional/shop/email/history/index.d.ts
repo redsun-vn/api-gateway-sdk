@@ -1,6 +1,7 @@
 import type { IConnection, Resolved, Primitive } from "@nestia/fetcher";
 import type { IResponse } from "../../../../../libs/shared/src/types/common.type";
 import type { IEmailHistory } from "../../../../../libs/shared/src/types/notification/iemail-config.type";
+export * as stats from "./stats";
 export declare function listHistory(connection: IConnection, query: listHistory.Query): Promise<listHistory.Output>;
 export declare namespace listHistory {
     type Query = Resolved<IEmailHistory.IListQuery>;

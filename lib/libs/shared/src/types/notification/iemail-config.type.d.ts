@@ -62,6 +62,46 @@ export declare namespace IEmailConfig {
         providerMessageId?: string | null;
         errorCode?: string;
         errorMessage?: string;
+        activated?: boolean;
+        is_active?: boolean;
+    }
+}
+export declare namespace IEmailSenderIdentity {
+    interface ICreateRequest {
+        display_name: string;
+        from_email: string;
+        reply_to?: string | null;
+    }
+    interface IUpdateRequest {
+        display_name?: string;
+        from_email?: string;
+        reply_to?: string | null;
+    }
+    interface ITestSendRequest {
+        to: string;
+    }
+    interface ISetDefaultRequest {
+        is_default: boolean;
+    }
+    interface IResponse {
+        id: number;
+        provider_config_id: number;
+        display_name: string;
+        from_email: string;
+        reply_to: string | null;
+        is_default: boolean;
+        verified_at: string | Date | null;
+        is_usable: boolean;
+        template_count: number;
+        action_count: number;
+    }
+    interface IActionSenderResponse {
+        model_key: string;
+        action_key: string;
+        sender_identity_id: number;
+    }
+    interface IActionSenderSetRequest {
+        sender_identity_id: number | null;
     }
 }
 export declare namespace IEmailTemplate {
@@ -81,6 +121,7 @@ export declare namespace IEmailTemplate {
         design_json?: Record<string, unknown> | null;
         lang?: string;
         attachments?: IAttachment[];
+        sender_identity_id?: number | null;
     }
     interface IUpdateRequest {
         name?: string;
@@ -89,6 +130,7 @@ export declare namespace IEmailTemplate {
         body_text?: string | null;
         design_json?: Record<string, unknown> | null;
         attachments?: IAttachment[];
+        sender_identity_id?: number | null;
     }
     interface IDuplicateRequest {
         name: string;
@@ -112,6 +154,7 @@ export declare namespace IEmailTemplate {
         attachments: IAttachment[];
         variables: string[];
         is_active: boolean;
+        sender_identity_id?: number | null;
     }
     interface IWarning {
         code: 'UNKNOWN_VARIABLE';
@@ -194,8 +237,26 @@ export declare namespace IEmailHistory {
         to?: string;
         from_date?: string;
         to_date?: string;
+        model_key?: string;
+        action_key?: string;
+        provider?: string;
         limit?: number;
         offset?: number;
+    }
+    interface IActionStatsQuery {
+        days?: number;
+    }
+    interface IActionStat {
+        model_key: string;
+        action_key: string;
+        sent: number;
+        failed: number;
+    }
+    interface IActionStatsResponse {
+        days: number;
+        since: string;
+        until: string;
+        items: IActionStat[];
     }
     interface IItem {
         id: number;
