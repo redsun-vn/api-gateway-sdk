@@ -49,6 +49,7 @@ export declare namespace ITheme {
         id: string;
         reviewStatus: string & THEME_REVIEW_STATUS;
         reviewById: number & tags.Type<'uint64'>;
+        reason?: string & tags.MaxLength<2000>;
     }
     interface IResponse extends SEOBaseResponse {
         shop_id?: number | string | null;
@@ -76,5 +77,13 @@ export declare namespace ITheme {
         rating?: number | string | null;
         totalReview?: number | string | null;
         sequence?: number | string | null;
+    }
+    interface IAdminResponse extends IResponse {
+        statusChangedAt?: string | null;
+        statusChangedByName?: string | null;
+        version?: string | null;
+        submitNote?: string | null;
+        returnCount?: number | string | null;
+        draftOfId?: string | null;
     }
 }

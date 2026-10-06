@@ -12,6 +12,7 @@ export declare namespace IDocument {
     }
     interface ICreate extends ICreateReq {
         shop_id?: (number & tags.Type<'uint64'>) | null;
+        callerShopId?: number;
     }
     interface IUpdateReq extends Partial<ICreateReq> {
     }

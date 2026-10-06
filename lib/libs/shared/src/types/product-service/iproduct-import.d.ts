@@ -25,6 +25,21 @@ export declare namespace IProductImport {
             toCreate: number;
             products: number;
         };
+        summary?: ISummary;
+        result?: IResult;
+    }
+    interface ISummary {
+        createRows: number;
+        updateRows: number;
+        newProducts: number;
+        existingProducts: number;
+    }
+    interface IResult {
+        createdProducts: number;
+        updatedProducts: number;
+        createdCategories: string[];
+        createdTags: string[];
+        createdBrands: string[];
     }
     interface IRowIssue {
         row: number;
@@ -37,6 +52,7 @@ export declare namespace IProductImport {
         kind: 'category' | 'brand' | 'tag' | 'supplier';
         name: string;
         rows: number[];
+        note?: string;
     }
     interface IProductItem {
         name: string;

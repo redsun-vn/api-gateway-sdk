@@ -18,6 +18,7 @@ export declare namespace ICMSPage {
     }
     interface ICreate extends ICreateReq {
         shop_id?: (number & tags.Type<'uint64'>) | null;
+        callerShopId?: number;
         author_id?: number & tags.Type<'uint64'>;
         updated_by_id?: number & tags.Type<'uint64'>;
     }

@@ -20,3 +20,4 @@ export declare const CMS_PAGE_ENTITY_NAME = "CMSPageEntity";
 export declare const CMS_POST_ENTITY_NAME = "CMSPostEntity";
 export declare const CMS_TAG_ENTITY_NAME = "CMSTagEntity";
 export declare const CMS_MENU_ENTITY_NAME = "CMSMenuEntity";
+export * from './itheme-publish';
