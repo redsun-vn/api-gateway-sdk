@@ -7,6 +7,12 @@ export declare namespace IWebsite {
     interface IQueryFindByDomain {
         domain?: string;
     }
+    interface IQueryTlsAsk {
+        domain?: string;
+    }
+    interface ITlsAskResponse {
+        allowed: boolean;
+    }
     interface IOnboardingState {
         is_completed: boolean;
         current_step: string;
