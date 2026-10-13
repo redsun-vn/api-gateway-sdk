@@ -37,6 +37,8 @@ export declare namespace ILineItem {
         quantity: number;
         uomRatio?: number;
         unitPrice?: number;
+        list_unit_price?: number | null;
+        is_price_overridden?: boolean;
         price?: number;
         originPrice?: number;
         discountTotal?: number;
@@ -146,6 +148,8 @@ export declare namespace ILineItem {
         uomRatio?: number | string;
         quantity?: number | string;
         unitPrice?: number | string;
+        list_unit_price?: number | string | null;
+        is_price_overridden?: boolean;
         price?: number | string;
         originPrice?: number | string;
         subTotal?: number | string;

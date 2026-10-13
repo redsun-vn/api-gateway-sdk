@@ -5,7 +5,19 @@ import { IOrder } from './iorder.type';
 import { ICombiningPromotion } from './icombining-promotion.type';
 import { IAdditionalFee } from './iadditional-fee.type';
 import { ISaleOrderApproval } from './isale-order-approval';
+import { ISaleOrderTemplate } from './isale-order-template';
+import { ILoyaltyProgram } from '../loyalty-service/iloyalty-program';
+import { OrderCombiningPromotionType } from '../../enum';
 export declare namespace ISaleOrder {
+    interface ICombiningInput {
+        type: OrderCombiningPromotionType;
+        value: number;
+        amount: number;
+        program_id?: (number & tags.Type<'uint64'>) | null;
+        coupon_id?: (number & tags.Type<'uint64'>) | null;
+        discount_code?: string | null;
+        line_item_uuid?: (string & tags.Format<'uuid'>) | null;
+    }
     interface ICreate {
         branch_id: number & tags.Type<'uint64'>;
         created_by: number & tags.Type<'uint64'>;
@@ -21,6 +33,8 @@ export declare namespace ISaleOrder {
         email?: string;
         phone?: string;
         note?: string;
+        template_id?: (number & tags.Type<'uint64'>) | null;
+        terms?: string | null;
         discountCode?: string | null;
         discountOrder?: number;
         shippingTotal?: number;
@@ -30,20 +44,66 @@ export declare namespace ISaleOrder {
         expectedDate?: (string & tags.Format<'date-time'>) | null;
         dateOrder?: (string & tags.Format<'date-time'>) | null;
         lineItems: ILineItem.IInputLineItem[];
+        combiningPromotions?: ICombiningInput[];
     }
     interface IDuplicate {
+        shop_id: number & tags.Type<'uint64'>;
         created_by: number & tags.Type<'uint64'>;
         duplicateId: (number & tags.Type<'uint64'>) | (string & tags.Format<'uuid'>);
     }
-    interface IUpdate extends Omit<Partial<ICreate>, 'branch_id' | 'created_by'> {
+    interface IShopScopedById {
         id: string;
+        shop_id: number & tags.Type<'uint64'>;
+    }
+    interface IShopScopedAction extends IShopScopedById {
         updated_by: number & tags.Type<'uint64'>;
     }
-    interface IConfirmSaleOrder {
-        id: string;
+    type IUpdateBody = Omit<Partial<ICreate>, 'branch_id' | 'created_by'>;
+    interface IUpdate extends IUpdateBody, IShopScopedAction {
+    }
+    interface IConfirmBody {
         warehouse_id: number & tags.Type<'uint64'>;
         price_book_id?: number & tags.Type<'uint64'>;
     }
+    interface IConfirmSaleOrder extends IConfirmBody, IShopScopedAction {
+    }
+    interface ISendEmailBody {
+        to: (string & tags.Format<'email'>)[] & tags.MinItems<1> & tags.MaxItems<20>;
+        cc_staff_ids?: (number & tags.Type<'uint64'>)[] & tags.MaxItems<20>;
+        message?: string & tags.MaxLength<2000>;
+        attachment_ids?: (number & tags.Type<'uint64'>)[] & tags.MaxItems<10>;
+    }
+    interface ISendEmailInput extends ISendEmailBody {
+        id: string;
+        shop_id: number & tags.Type<'uint64'>;
+        staff_id: number & tags.Type<'uint64'>;
+    }
+    interface IEmailCapabilityInput {
+        shop_id: number & tags.Type<'uint64'>;
+    }
+    interface IEmailCapabilityResponse {
+        can_send: boolean;
+        supports_message: boolean;
+        reason?: 'CHANNEL_UNAVAILABLE' | 'TEMPLATE_UNAVAILABLE' | 'UNREACHABLE';
+    }
+    interface ILoyaltyValidateLineItem {
+        product_id: number & tags.Type<'uint64'>;
+        variant_id: number & tags.Type<'uint64'>;
+        quantity: number;
+        price: number;
+        isGift?: boolean;
+        uuid?: string;
+    }
+    interface ILoyaltyValidateBody {
+        lineItems: ILoyaltyValidateLineItem[];
+        total: number;
+        totalPrice: number;
+        discountCode?: string | null;
+    }
+    interface ILoyaltyValidateInput extends ILoyaltyValidateBody {
+        shop_id: number & tags.Type<'uint64'>;
+    }
+    type ILoyaltyValidateResponse = ILoyaltyProgram.ILoyaltyProgramResponse[];
     interface IQuerySaleOrder {
         phone?: string;
         email?: string;
@@ -68,6 +128,9 @@ export declare namespace ISaleOrder {
         currencyCode: string | null;
         phone: string | null;
         note: string | null;
+        template_id?: number | string | null;
+        terms?: string | null;
+        template?: ISaleOrderTemplate.IResponse | null;
         discountCode: string | null;
         total: string | number;
         totalPrice: string | number;
@@ -90,5 +153,20 @@ export declare namespace ISaleOrder {
         combiningPromotions?: ICombiningPromotion.IDetailCombiningPromotionResponse[] | null;
         additionalFees?: IAdditionalFee.IDetailAdditionalFeeResponse[] | null;
         approval?: ISaleOrderApproval.IResponse | null;
+    }
+    type IPublicLineItem = Omit<ILineItem.IDetailLineItemResponse, 'originPrice'>;
+    interface IPublicResponse extends Omit<IResponse, 'originTotal' | 'created_by' | 'lineItems' | 'order' | 'approval' | 'template' | 'template_id' | 'terms'> {
+        lineItems?: IPublicLineItem[] | null;
+        order?: Omit<IOrder.IDetailOrderResponse, 'originTotal'> | null;
+        template: ISaleOrderTemplate.IPublicTemplate | null;
+        terms: string | null;
+    }
+    interface IPublicContact {
+        phone?: string;
+        email?: string;
+    }
+    interface IFindOnePublicInput {
+        uuid: string;
+        contact: IPublicContact;
     }
 }

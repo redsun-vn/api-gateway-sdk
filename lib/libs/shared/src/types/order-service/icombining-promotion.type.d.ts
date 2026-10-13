@@ -23,6 +23,14 @@ export declare namespace ICombiningPromotion {
         status?: CombiningPromotionStatus;
         type?: OrderCombiningPromotionType;
     }
+    type CombiningPromotionSource = 'public';
+    interface ICreateCombiningPromotionPayload extends ICreateCombiningPromotion {
+        source: CombiningPromotionSource;
+    }
+    interface IDeleteCombiningPromotionPayload {
+        id: string;
+        source: CombiningPromotionSource;
+    }
     interface IUpdateCombiningPromotion extends Omit<Partial<ICreateCombiningPromotion>, 'shop_id' | 'uuid'> {
     }
     interface IDetailCombiningPromotionResponse extends BaseResponse {

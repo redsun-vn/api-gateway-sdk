@@ -186,3 +186,8 @@ export declare const FEE_CALCULATION_DESCRIPTION: {
     PROVIDER_API: string;
     CUSTOM_FORMULA: string;
 };
+export declare enum SaleOrderActivityAction {
+    PRINT = "print",
+    DOWNLOAD = "download",
+    EMAIL_SENT = "email_sent"
+}

@@ -7,6 +7,7 @@ export declare namespace ITemplate {
         target?: string | null;
         target_id?: string & tags.Format<'uuid'>;
         label: string;
+        description?: string | null;
         entry: NoCodeComponentEntry;
         width?: number;
         widthAuto?: boolean;
@@ -23,6 +24,7 @@ export declare namespace ITemplate {
     }
     interface IUpdateReq {
         label?: string;
+        description?: string | null;
         entry?: NoCodeComponentEntry;
         width?: number;
         widthAuto?: boolean;
@@ -54,6 +56,7 @@ export declare namespace ITemplate {
         target?: string | null;
         target_id?: string | null;
         label: string;
+        description?: string | null;
         thumbnail?: string | null;
         thumbnailLabel?: string | null;
         isUserDefined: boolean;

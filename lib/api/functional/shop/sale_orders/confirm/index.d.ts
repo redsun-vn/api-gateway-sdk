@@ -3,7 +3,7 @@ import type { IResponse } from "../../../../../libs/shared/src/types/common.type
 import type { ISaleOrder } from "../../../../../libs/shared/src/types/order-service/isale-order";
 export declare function partnerConfirm(connection: IConnection, id: string, body: partnerConfirm.Input): Promise<partnerConfirm.Output>;
 export declare namespace partnerConfirm {
-    type Input = Resolved<ISaleOrder.IConfirmSaleOrder>;
+    type Input = Resolved<ISaleOrder.IConfirmBody>;
     type Output = Primitive<IResponse<ISaleOrder.IResponse>>;
     const METADATA: {
         readonly method: "POST";

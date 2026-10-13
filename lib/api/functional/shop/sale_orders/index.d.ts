@@ -3,11 +3,16 @@ import type { IQuery, IResponse, IResponsePagination } from "../../../../libs/sh
 import type { ISaleOrder } from "../../../../libs/shared/src/types/order-service/isale-order";
 export * as approvals from "./approvals";
 export * as approval_config from "./approval_config";
+export * as templates from "./templates";
+export * as email_capability from "./email_capability";
+export * as loyalty_programs from "./loyalty_programs";
 export * as approval from "./approval";
 export * as submit_approval from "./submit_approval";
 export * as approve from "./approve";
 export * as reject from "./reject";
 export * as cancel_approval from "./cancel_approval";
+export * as activities from "./activities";
+export * as send_email from "./send_email";
 export * as send_to_partner from "./send_to_partner";
 export * as confirm from "./confirm";
 export declare function findAll(connection: IConnection, query: findAll.Query): Promise<findAll.Output>;
@@ -92,7 +97,7 @@ export declare namespace create {
 }
 export declare function update(connection: IConnection, id: string, body: update.Input): Promise<update.Output>;
 export declare namespace update {
-    type Input = Resolved<ISaleOrder.IUpdate>;
+    type Input = Resolved<ISaleOrder.IUpdateBody>;
     type Output = Primitive<IResponse<ISaleOrder.IResponse>>;
     const METADATA: {
         readonly method: "PUT";

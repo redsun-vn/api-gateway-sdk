@@ -11,6 +11,8 @@ export * from './iline-item-selection-group.type';
 export * from './ikds-item.type';
 export * from './isale-order';
 export * from './isale-order-approval';
+export * from './isale-order-template';
+export * from './isale-order-activity';
 export * from './isubscription.type';
 export * from './ishipping-fee-config.type';
 export * from './imisa-invoice.type';
