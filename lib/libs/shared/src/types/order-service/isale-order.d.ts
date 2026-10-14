@@ -45,6 +45,8 @@ export declare namespace ISaleOrder {
         dateOrder?: (string & tags.Format<'date-time'>) | null;
         lineItems: ILineItem.IInputLineItem[];
         combiningPromotions?: ICombiningInput[];
+        bank_account_id?: (number & tags.Type<'uint64'>) | null;
+        contact_address_uuid?: (string & tags.Format<'uuid'>) | null;
     }
     interface IDuplicate {
         shop_id: number & tags.Type<'uint64'>;
@@ -57,6 +59,11 @@ export declare namespace ISaleOrder {
     }
     interface IShopScopedAction extends IShopScopedById {
         updated_by: number & tags.Type<'uint64'>;
+    }
+    interface ISendToPartnerQuery {
+        notify?: boolean;
+    }
+    interface ISendToPartner extends IShopScopedAction, ISendToPartnerQuery {
     }
     type IUpdateBody = Omit<Partial<ICreate>, 'branch_id' | 'created_by'>;
     interface IUpdate extends IUpdateBody, IShopScopedAction {
@@ -108,6 +115,15 @@ export declare namespace ISaleOrder {
         phone?: string;
         email?: string;
     }
+    interface IBankAccountSnapshot {
+        id: number | string;
+        bank_name: string | null;
+        bank_full_name: string | null;
+        bank_code: string | null;
+        account_name: string | null;
+        account_number: string | null;
+        bank_address: string | null;
+    }
     interface IResponse extends BaseResponse {
         shop_id: string | number;
         branch_id: string | number | null;
@@ -148,6 +164,9 @@ export declare namespace ISaleOrder {
         dateOrder: string | null;
         isExpired: boolean;
         opportunity_id: number | string | null;
+        bank_account_id?: number | string | null;
+        bank_account?: IBankAccountSnapshot | null;
+        contact_address_uuid?: string | null;
         order?: IOrder.IDetailOrderResponse | null;
         lineItems?: ILineItem.IDetailLineItemResponse[] | null;
         combiningPromotions?: ICombiningPromotion.IDetailCombiningPromotionResponse[] | null;
