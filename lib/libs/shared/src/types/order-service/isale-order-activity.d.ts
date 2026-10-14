@@ -10,6 +10,15 @@ export declare namespace ISaleOrderActivity {
         template_id?: number | string;
         has_message?: boolean;
         attachment_ids?: (number | string)[];
+        order_id?: number | string;
+        order_code?: string;
+        duplicated_from?: string;
+        reason?: string;
+        tier?: number;
+        final?: boolean;
+        auto_approved?: boolean;
+        notify?: boolean;
+        source?: 'edit_reopen' | 'order_status_sync';
     }
     interface ICreateBody {
         action: SaleOrderActivityAction.PRINT | SaleOrderActivityAction.DOWNLOAD;

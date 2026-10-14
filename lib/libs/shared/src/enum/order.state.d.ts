@@ -189,5 +189,16 @@ export declare const FEE_CALCULATION_DESCRIPTION: {
 export declare enum SaleOrderActivityAction {
     PRINT = "print",
     DOWNLOAD = "download",
-    EMAIL_SENT = "email_sent"
+    EMAIL_SENT = "email_sent",
+    CREATED = "created",
+    UPDATED = "updated",
+    SENT = "sent",
+    MARKED_SENT = "marked_sent",
+    SUBMITTED = "submitted",
+    APPROVED = "approved",
+    REJECTED = "rejected",
+    APPROVAL_CANCELED = "approval_canceled",
+    CONVERTED = "converted",
+    CANCELED = "canceled",
+    COMPLETED = "completed"
 }
