@@ -47,6 +47,7 @@ export * from './product-service';
 export * from './reconciliation-service';
 export * from './payment-service';
 export * from './report-service';
+export * from './analytics-service';
 export * from './ipackage-addition';
 export * from './webhook';
 export * from './iapi-key.type';

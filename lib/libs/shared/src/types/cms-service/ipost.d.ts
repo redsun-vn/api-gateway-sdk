@@ -34,6 +34,17 @@ export declare namespace ICMSPost {
         id: string;
         updated_by_id?: number & tags.Type<'uint64'>;
     }
+    type HighlightFlag = 'featured' | 'new' | 'popular' | 'trending';
+    interface IHighlightOrderReq {
+        flag: HighlightFlag;
+        post_ids: (string & tags.Format<'uuid'>)[];
+    }
+    interface IHighlightOrder extends IHighlightOrderReq {
+        shop_id: number;
+    }
+    interface IHighlightOrderRes {
+        changed: number;
+    }
     interface IResponse extends CMSBaseResponse {
         isFeatured?: boolean;
         isNew?: boolean;

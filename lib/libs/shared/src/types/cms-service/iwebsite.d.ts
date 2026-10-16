@@ -57,13 +57,6 @@ export declare namespace IWebsite {
     interface IAdminCreateReq extends ICreateReq {
         shop_id?: (number & tags.Type<'uint64'>) | null;
     }
-    interface IAdminProvisionReq {
-        domain: string;
-        email: string & tags.Format<'email'>;
-        phone?: string | null;
-        owner_staff_id: string;
-        default_theme_uuid?: (string & tags.Format<'uuid'>) | null;
-    }
     interface IDomainVerification {
         id: string;
     }

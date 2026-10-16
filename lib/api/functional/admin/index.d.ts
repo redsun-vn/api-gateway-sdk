@@ -33,6 +33,7 @@ export * as reconciliations from "./reconciliations";
 export * as reconciliation_transactions from "./reconciliation_transactions";
 export * as reports from "./reports";
 export * as sync_report from "./sync_report";
+export * as analytics from "./analytics";
 export * as payments from "./payments";
 export * as activities from "./activities";
 export * as health_check from "./health_check";
