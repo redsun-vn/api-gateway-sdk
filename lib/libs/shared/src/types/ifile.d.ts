@@ -123,6 +123,10 @@ export declare namespace ISpace {
     interface ICreate extends IBase {
         type?: FileSpaceType;
     }
+    interface IAdminCreate extends ICreate {
+        shop_id: number;
+        owner_id: string;
+    }
     interface IUpdate extends Partial<ICreate> {
         id: number;
     }

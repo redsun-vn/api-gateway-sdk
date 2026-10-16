@@ -28,6 +28,10 @@ export declare namespace IStaff {
         position?: string;
         manager_id?: string;
     }
+    interface IAdminRegisterV2 extends Omit<ICreateRegister, 'password'> {
+        user_id: string;
+        shop_id: string;
+    }
     interface ICreateRegister {
         first_name?: null | string;
         password: string & tags.MinLength<6>;

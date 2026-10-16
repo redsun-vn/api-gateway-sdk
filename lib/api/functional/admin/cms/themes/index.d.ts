@@ -8,6 +8,7 @@ export * as $return from "./$return";
 export * as draft from "./draft";
 export * as discard from "./discard";
 export * as pricing from "./pricing";
+export * as duplicate_for_shop from "./duplicate_for_shop";
 export declare function approve(connection: IConnection, body: approve.Input): Promise<approve.Output>;
 export declare namespace approve {
     type Input = Resolved<IThemePublish.IApproveReq>;

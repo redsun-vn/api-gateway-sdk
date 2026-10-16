@@ -84,6 +84,9 @@ export declare namespace ICMSMenu {
     interface IEnsureDefault extends IEnsureDefaultReq {
         shop_id?: (number & tags.Type<'uint64'>) | null;
     }
+    interface IAdminEnsureDefault extends IEnsureDefaultReq {
+        shop_id: number & tags.Type<'uint64'>;
+    }
     interface IEnsureDefaultResponse {
         created: boolean;
         menu: IResponse;

@@ -6,6 +6,7 @@ export * from './product.state';
 export * from './elastic-index';
 export * from './order';
 export * from './report';
+export * from './analytics';
 export * from './partner';
 export * from './hr';
 export * from './table';

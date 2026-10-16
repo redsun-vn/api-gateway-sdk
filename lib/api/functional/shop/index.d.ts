@@ -100,6 +100,7 @@ export * as reconciliation_payments from "./reconciliation_payments";
 export * as reconciliations from "./reconciliations";
 export * as reconciliation_transactions from "./reconciliation_transactions";
 export * as reports from "./reports";
+export * as analytics from "./analytics";
 export * as payment from "./payment";
 export * as deposit_payments from "./deposit_payments";
 export * as payment_links from "./payment_links";
