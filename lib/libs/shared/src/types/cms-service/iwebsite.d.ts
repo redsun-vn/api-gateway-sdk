@@ -54,6 +54,9 @@ export declare namespace IWebsite {
     interface ICreate extends ICreateReq {
         shop_id?: (number & tags.Type<'uint64'>) | null;
     }
+    interface IAdminCreateReq extends ICreateReq {
+        shop_id?: (number & tags.Type<'uint64'>) | null;
+    }
     interface IAdminProvisionReq {
         domain: string;
         email: string & tags.Format<'email'>;

@@ -23,6 +23,7 @@ export * as resource_addons from "./resource_addons";
 export * as sales_channels from "./sales_channels";
 export * as shipping_methods from "./shipping_methods";
 export * as shops from "./shops";
+export * as staffs from "./staffs";
 export * as subscriptions from "./subscriptions";
 export * as system_pricebook from "./system_pricebook";
 export * as fulfillments from "./fulfillments";

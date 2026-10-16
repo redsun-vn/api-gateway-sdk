@@ -51,7 +51,7 @@ export declare namespace $delete {
 }
 export declare function create(connection: IConnection, data: create.Input): Promise<create.Output>;
 export declare namespace create {
-    type Input = Resolved<IWebsite.ICreateReq>;
+    type Input = Resolved<IWebsite.IAdminCreateReq>;
     type Output = Primitive<IResponse<IWebsite.IResponse>>;
     const METADATA: {
         readonly method: "POST";

@@ -35,6 +35,10 @@ export declare namespace ITheme {
     interface IDuplicate extends IDuplicateReq {
         shop_id?: (number & tags.Type<'uint64'>) | null;
     }
+    interface IAdminDuplicateForShop {
+        theme_id: string & tags.Format<'uuid'>;
+        shop_id: number & tags.Type<'uint64'>;
+    }
     interface IUpdateReq extends Partial<ICreate> {
     }
     interface IUpdate extends IUpdateReq {
