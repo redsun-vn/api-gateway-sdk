@@ -28,6 +28,11 @@ export declare enum CrmKpiTargetPermission {
 export declare enum CrmCompliancePermission {
     VIEW = "crm_compliance-view"
 }
+export declare enum CrmCallPermission {
+    VIEW = "crm_call-view",
+    MAKE = "crm_call-make",
+    LISTEN_RECORDING = "crm_call-listen_recording"
+}
 export declare enum CrmTeamPermission {
     VIEW = "crm_team-view",
     CREATE = "crm_team-create",

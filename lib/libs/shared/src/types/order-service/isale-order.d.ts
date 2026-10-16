@@ -167,6 +167,9 @@ export declare namespace ISaleOrder {
         bank_account_id?: number | string | null;
         bank_account?: IBankAccountSnapshot | null;
         contact_address_uuid?: string | null;
+        approval_status?: 'none' | 'pending' | 'approved' | 'rejected' | 'cancelled';
+        last_sent_at?: string | null;
+        email_sent_count?: number;
         order?: IOrder.IDetailOrderResponse | null;
         lineItems?: ILineItem.IDetailLineItemResponse[] | null;
         combiningPromotions?: ICombiningPromotion.IDetailCombiningPromotionResponse[] | null;

@@ -23,6 +23,18 @@ export declare namespace IShop {
         source?: CREATE_SHOP_FROM_SOURCE_ENUM;
         metadata?: IMetadata;
     }
+    interface IAdminRegisterV2Owner {
+        phone: string;
+        email?: (string & tags.Format<'email'>) | null;
+        first_name?: string | null;
+    }
+    interface IAdminCreateRegisterV2 extends ICreate {
+        owner: IAdminRegisterV2Owner;
+    }
+    interface IAdminCreateRegisterV2Response {
+        shop: IShopResponse;
+        owner_staff_id: string;
+    }
     interface IUpdate extends BaseProfile {
         active?: boolean;
         needConfig?: boolean;

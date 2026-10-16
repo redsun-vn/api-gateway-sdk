@@ -23,5 +23,6 @@ export * as reports from "./reports";
 export * as scoring_rules from "./scoring_rules";
 export * as sla from "./sla";
 export * as stages from "./stages";
+export * as stringee from "./stringee";
 export * as tasks from "./tasks";
 export * as teams from "./teams";

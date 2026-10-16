@@ -1,6 +1,7 @@
 import type { IConnection, Resolved, Primitive } from "@nestia/fetcher";
 import type { IAdminAuth } from "../../../../libs/shared/src/types/admin-service/iauth";
 import type { IResponse } from "../../../../libs/shared/src/types/common.type";
+export * as customer_accounts from "./customer_accounts";
 export * as login from "./login";
 export * as refresh_token from "./refresh_token";
 export * as me from "./me";
