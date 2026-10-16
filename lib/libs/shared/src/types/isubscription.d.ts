@@ -54,6 +54,21 @@ export declare namespace ISubscription {
         userRemain: number;
         plans: IPackagePlan.IResponse[];
     };
+    type ControllerStatus = 'active' | 'trial' | 'expired' | 'none';
+    interface IControllerStatusRequest {
+        shop_id: string;
+        controller_paths: string[];
+    }
+    interface IControllerEntitlement {
+        status: ControllerStatus;
+        ends_at: string | null;
+    }
+    interface IControllerStatusItem extends IControllerEntitlement {
+        controller_path: string;
+    }
+    interface IControllerStatusResponse {
+        items: IControllerStatusItem[];
+    }
     type IStatsPublic = {
         branchTotalRemain: number;
         deviceRemain: number;

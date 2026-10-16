@@ -33,6 +33,11 @@ export declare enum CrmCallPermission {
     MAKE = "crm_call-make",
     LISTEN_RECORDING = "crm_call-listen_recording"
 }
+export declare enum CrmMarketingPermission {
+    VIEW = "crm_marketing-view",
+    MANAGE = "crm_marketing-manage"
+}
+export declare const CRM_MARKETING_PERMISSION_PREFIX = "crm_marketing-";
 export declare enum CrmTeamPermission {
     VIEW = "crm_team-view",
     CREATE = "crm_team-create",

@@ -30,3 +30,4 @@ export * from './ireport-view';
 export * from './iai-assist';
 export * from './istringee-config';
 export * from './istringee-webhook';
+export * from './imkt-os';
