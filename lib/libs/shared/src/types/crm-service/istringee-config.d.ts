@@ -92,6 +92,7 @@ export declare namespace IStringeeConfig {
         cti_enabled: boolean;
         last_verified_at: Date | string | null;
         callsettings_synced_at: Date | string | null;
+        callout_synced_at: Date | string | null;
         updated_at: Date | string;
     }
     interface IWebhookUrls {

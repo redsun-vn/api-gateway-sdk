@@ -28,5 +28,6 @@ export * from './imarketing-campaign';
 export * from './iteam';
 export * from './ireport-view';
 export * from './iai-assist';
+export * from './icall';
 export * from './istringee-config';
 export * from './istringee-webhook';

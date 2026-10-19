@@ -8,6 +8,7 @@ export * as opportunity from "./opportunity";
 export * as attachments from "./attachments";
 export * as audit_log from "./audit_log";
 export * as bant from "./bant";
+export * as calls from "./calls";
 export * as notifications from "./notifications";
 export * as conversation_canned_replies from "./conversation_canned_replies";
 export * as custom_fields from "./custom_fields";
