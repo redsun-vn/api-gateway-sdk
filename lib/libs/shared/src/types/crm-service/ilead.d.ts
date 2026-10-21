@@ -173,4 +173,29 @@ export declare namespace ICrmLead {
         available: boolean;
         ids: number[];
     }
+    interface IAwaitingFirstResponseInput {
+        shop_id: number | string;
+        scoped_owner_ids?: number[] | null;
+        owner_id?: number | string;
+        page_size?: number;
+    }
+    interface IAwaitingFirstResponseItem {
+        id: number | string;
+        name: string;
+        phone: string | null;
+        email: string | null;
+        status: CrmLeadStatus;
+        source: CrmLeadSource;
+        owner_id: number | string | null;
+        score: number;
+        bant_score: number;
+        bant_classification: CrmBantClassification;
+        assigned_at: Date | string | null;
+        created_at: Date | string;
+        updated_at: Date | string;
+    }
+    interface IAwaitingFirstResponseResponse {
+        items: IAwaitingFirstResponseItem[];
+        total: number;
+    }
 }

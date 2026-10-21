@@ -10,5 +10,12 @@ export declare enum AiAgentPermission {
     CRM_LEAD = "ai_agent-crm_lead",
     CRM_OPPORTUNITY = "ai_agent-crm_opportunity",
     CRM_CAMPAIGN = "ai_agent-crm_campaign",
-    CRM_TASK = "ai_agent-crm_task"
+    CRM_TASK = "ai_agent-crm_task",
+    SALES_REPORT = "ai_agent-sales_report",
+    FINANCE_REPORT = "ai_agent-finance_report",
+    INVENTORY_REPORT = "ai_agent-inventory_report",
+    LOYALTY_REPORT = "ai_agent-loyalty_report",
+    HR_REPORT = "ai_agent-hr_report",
+    SALARY_REPORT = "ai_agent-salary_report",
+    FNB_REPORT = "ai_agent-fnb_report"
 }
