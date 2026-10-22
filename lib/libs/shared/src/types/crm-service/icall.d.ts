@@ -5,7 +5,7 @@ export declare namespace ICall {
     type CallStatus = 'ringing' | 'answered' | 'ended';
     type CallOutcome = 'connected' | 'no_answer' | 'busy' | 'missed' | 'failed';
     type WrapupOutcome = 'connected' | 'no_answer' | 'busy' | 'voicemail' | 'wrong_number';
-    type MatchStatus = 'intent' | 'matched' | 'ambiguous' | 'unmatched';
+    type MatchStatus = 'intent' | 'matched' | 'ambiguous' | 'unmatched' | 'manual';
     interface IStaffScope {
         shop_id: Id;
         staff_id: Id;
@@ -139,5 +139,26 @@ export declare namespace ICall {
     interface IHistoryDetailInput extends IStaffScope {
         stringee_call_id: string;
         scoped_owner_ids?: number[];
+    }
+    interface ILinkRecordRequest {
+        related_type: RelatedType;
+        related_id: string;
+    }
+    interface ILinkRecordInput extends ILinkRecordRequest, IStaffScope {
+        stringee_call_id: string;
+        scoped_owner_ids?: number[];
+    }
+    interface ICreateLeadFromCallRequest {
+        name: string;
+        team_id?: Id;
+        note?: string;
+    }
+    interface ICreateLeadFromCallInput extends ICreateLeadFromCallRequest, IStaffScope {
+        stringee_call_id: string;
+        scoped_owner_ids?: number[];
+    }
+    interface ICreateLeadFromCallResponse {
+        lead_id: Id;
+        item: IHistoryItem;
     }
 }
