@@ -4,6 +4,7 @@ import type { IStringeeEnvelope } from "../../../../../modules/crm-service/strin
 export * as softphone from "./softphone";
 export * as client_token from "./client_token";
 export * as wrap_up from "./wrap_up";
+export * as history from "./history";
 export declare function place(connection: IConnection, body: place.Input): Promise<place.Output>;
 export declare namespace place {
     type Input = Resolved<ICall.IPlaceRequest>;
@@ -11,6 +12,25 @@ export declare namespace place {
     const METADATA: {
         readonly method: "POST";
         readonly path: "/shop/crm/calls/place";
+        readonly request: {
+            readonly type: "application/json";
+            readonly encrypted: false;
+        };
+        readonly response: {
+            readonly type: "application/json";
+            readonly encrypted: false;
+        };
+        readonly status: 200;
+    };
+    const path: () => string;
+}
+export declare function dial(connection: IConnection, body: dial.Input): Promise<dial.Output>;
+export declare namespace dial {
+    type Input = Resolved<ICall.IDialRequest>;
+    type Output = Primitive<IStringeeEnvelope<ICall.IPlaceResponse>>;
+    const METADATA: {
+        readonly method: "POST";
+        readonly path: "/shop/crm/calls/dial";
         readonly request: {
             readonly type: "application/json";
             readonly encrypted: false;

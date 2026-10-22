@@ -17,6 +17,12 @@ export declare namespace ICall {
         can_make: boolean;
         outbound_ready: boolean;
         stringee_user_id: string | null;
+        can_dial: boolean;
+        hotlines: IHotline[];
+    }
+    interface IHotline {
+        number: string;
+        nickname: string | null;
     }
     type IClientTokenInput = IStaffScope;
     interface IClientTokenResponse {
@@ -27,6 +33,7 @@ export declare namespace ICall {
     interface IPlaceRequest {
         related_type: RelatedType;
         related_id: Id;
+        hotline_number?: string;
     }
     interface IPlaceInput extends IPlaceRequest, IStaffScope {
         scoped_owner_ids?: number[];
@@ -34,6 +41,14 @@ export declare namespace ICall {
     interface IPlaceResponse {
         stringee_call_id: string;
         agent_user_id: string;
+    }
+    interface IDialRequest {
+        number?: string;
+        source_stringee_call_id?: string;
+        hotline_number?: string;
+    }
+    interface IDialInput extends IDialRequest, IStaffScope {
+        scoped_owner_ids?: number[];
     }
     interface ILookupRequest {
         stringee_call_id: string;
@@ -98,5 +113,31 @@ export declare namespace ICall {
     }
     interface IRecentResponse {
         call: ICallRecordItem | null;
+    }
+    interface IHistoryQuery {
+        direction?: Direction;
+        status?: string;
+        agent_staff_id?: string;
+        from?: string;
+        to?: string;
+        page?: number;
+        limit?: number;
+    }
+    interface IHistoryInput extends IHistoryQuery, IStaffScope {
+        scoped_owner_ids?: number[];
+    }
+    interface IHistoryItem extends ICallRecordItem {
+        related_name: string | null;
+        customer_label: string;
+    }
+    interface IHistoryResponse {
+        items: IHistoryItem[];
+        total: number;
+        page: number;
+        limit: number;
+    }
+    interface IHistoryDetailInput extends IStaffScope {
+        stringee_call_id: string;
+        scoped_owner_ids?: number[];
     }
 }

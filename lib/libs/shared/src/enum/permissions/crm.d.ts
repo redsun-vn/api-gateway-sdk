@@ -31,6 +31,7 @@ export declare enum CrmCompliancePermission {
 export declare enum CrmCallPermission {
     VIEW = "crm_call-view",
     MAKE = "crm_call-make",
+    DIAL = "crm_call-dial",
     LISTEN_RECORDING = "crm_call-listen_recording"
 }
 export declare enum CrmTeamPermission {
