@@ -129,6 +129,7 @@ export declare namespace ICall {
     interface IHistoryItem extends ICallRecordItem {
         related_name: string | null;
         customer_label: string;
+        transcript_status: string | null;
     }
     interface IHistoryResponse {
         items: IHistoryItem[];
@@ -160,5 +161,36 @@ export declare namespace ICall {
     interface ICreateLeadFromCallResponse {
         lead_id: Id;
         item: IHistoryItem;
+    }
+    type TranscriptRole = 'agent' | 'customer' | 'unknown';
+    type TranscriptRoleSource = 'rule' | 'llm' | 'manual';
+    interface ITranscriptSegment {
+        start_ms: number;
+        end_ms: number;
+        speaker: number;
+        role: TranscriptRole;
+        text: string;
+    }
+    interface ITranscriptSummary {
+        line: string;
+        need: string;
+        done: string;
+        blocker: string;
+        next_step: string;
+    }
+    interface ITranscriptInput extends IStaffScope {
+        stringee_call_id: string;
+        scoped_owner_ids?: number[];
+    }
+    type ITranscriptSwapRolesInput = ITranscriptInput;
+    type ITranscriptRetryInput = ITranscriptInput;
+    type ITranscriptResummarizeInput = ITranscriptInput;
+    interface ITranscriptResponse {
+        status: string;
+        segments: ITranscriptSegment[];
+        role_source: TranscriptRoleSource | null;
+        version: number;
+        summary: ITranscriptSummary | null;
+        updated_at: Date | string;
     }
 }

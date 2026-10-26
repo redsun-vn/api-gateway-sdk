@@ -3,6 +3,7 @@ import type { ICall } from "../../../../../../libs/shared/src/types/crm-service/
 import type { IStringeeEnvelope } from "../../../../../../modules/crm-service/stringee-config-resource/stringee-config-envelope";
 export * as link from "./link";
 export * as lead from "./lead";
+export * as transcript from "./transcript";
 export declare function history(connection: IConnection, query: history.Query): Promise<history.Output>;
 export declare namespace history {
     type Query = Resolved<ICall.IHistoryQuery>;

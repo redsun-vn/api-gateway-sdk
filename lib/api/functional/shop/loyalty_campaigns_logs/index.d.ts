@@ -4,7 +4,7 @@ import type { ICampaign } from "../../../../libs/shared/src/types/loyalty-servic
 export declare function findLogs(connection: IConnection, id: string, query: findLogs.Query): Promise<findLogs.Output>;
 export declare namespace findLogs {
     type Query = Resolved<ICampaign.ICampaignFindLogs>;
-    type Output = Primitive<IResponse<IResponsePagination<ICampaign.ICampaignExecutionResponse>>>;
+    type Output = Primitive<IResponse<IResponsePagination<ICampaign.ICampaignExecutionLogResponse>>>;
     const METADATA: {
         readonly method: "GET";
         readonly path: "/shop/loyalty-campaigns-logs/:id";

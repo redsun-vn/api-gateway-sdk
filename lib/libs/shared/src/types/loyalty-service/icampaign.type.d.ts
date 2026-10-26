@@ -98,6 +98,23 @@ export declare namespace ICampaign {
         retry_count: number | string;
         next_retry_at?: string | null;
     }
+    interface ICampaignExecutionLogResponse {
+        id: number | string | null;
+        createdAt?: string | null;
+        updatedAt?: string | null;
+        shop_id: number | string;
+        campaign_id: number | string;
+        customer_id: number | string;
+        trigger_event?: string | null;
+        channels_sent?: string[] | null;
+        status: string;
+        scheduled_at?: string | null;
+        sent_at?: string | null;
+        error?: string | null;
+        trigger_date?: string | null;
+        retry_count: number | string;
+        next_retry_at?: string | null;
+    }
     interface ICampaignUpdateStatus {
         status: CampaignStatus;
     }

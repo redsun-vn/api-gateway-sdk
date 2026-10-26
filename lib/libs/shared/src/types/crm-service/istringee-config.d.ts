@@ -20,6 +20,10 @@ export declare namespace IStringeeConfig {
         hotlines: IHotlineInput[];
         agents: IAgentMapInput[];
         cti_enabled: boolean;
+        transcription_enabled?: boolean;
+        transcription_ack?: boolean;
+        transcript_retention_days?: number;
+        transcribe_min_talk_sec?: number;
     }
     interface IUpsertInput extends IUpsertRequest {
         shop_id: Id;
@@ -90,6 +94,10 @@ export declare namespace IStringeeConfig {
         groups: IPccGroup[];
         greetings: IPccGreeting[];
         cti_enabled: boolean;
+        transcription_enabled: boolean;
+        transcript_retention_days: number;
+        transcribe_min_talk_sec: number;
+        ai_assist_enabled: boolean;
         last_verified_at: Date | string | null;
         callsettings_synced_at: Date | string | null;
         callout_synced_at: Date | string | null;

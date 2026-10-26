@@ -33,3 +33,19 @@ export declare namespace findOne {
     };
     const path: (id: string) => string;
 }
+export declare function revision(connection: IConnection, id: string, query: revision.Query): Promise<revision.Output>;
+export declare namespace revision {
+    type Query = Resolved<ITheme.IRevisionQuery>;
+    type Output = Primitive<IResponse<ITheme.IRevision>>;
+    const METADATA: {
+        readonly method: "GET";
+        readonly path: "/cms/themes/:id/revision";
+        readonly request: null;
+        readonly response: {
+            readonly type: "application/json";
+            readonly encrypted: false;
+        };
+        readonly status: 200;
+    };
+    const path: (id: string, query: revision.Query) => string;
+}
