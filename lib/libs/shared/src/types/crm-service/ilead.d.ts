@@ -106,6 +106,9 @@ export declare namespace ICrmLead {
         expected_value?: number;
         expected_close_date?: string & tags.Format<'date'>;
     }
+    interface ISetUnqualified {
+        unqualified: boolean;
+    }
     interface IQualifyResponse {
         lead: ICrmLeadResponse;
         partner_uuid: string;
