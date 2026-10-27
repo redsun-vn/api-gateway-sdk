@@ -20,3 +20,19 @@ export declare namespace saveDraft {
     };
     const path: () => string;
 }
+export declare function deleteDraft(connection: IConnection, query: deleteDraft.Query): Promise<deleteDraft.Output>;
+export declare namespace deleteDraft {
+    type Query = Resolved<IMktOs.IBrandProfileDraftDeleteQuery>;
+    type Output = Primitive<IResponse<IMktOs.IBrandProfileDraftDeleted>>;
+    const METADATA: {
+        readonly method: "DELETE";
+        readonly path: "/shop/mkt-os/brand-profile/draft";
+        readonly request: null;
+        readonly response: {
+            readonly type: "application/json";
+            readonly encrypted: false;
+        };
+        readonly status: 200;
+    };
+    const path: (query: deleteDraft.Query) => string;
+}

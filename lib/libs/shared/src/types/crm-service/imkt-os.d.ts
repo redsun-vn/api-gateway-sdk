@@ -26,6 +26,7 @@ export declare namespace IMktOs {
         suggest_opp_quote_days: number;
         suggest_opp_no_contact_days: number;
         suggest_customer_inactive_days: number;
+        monthly_budget: number | null;
     }
     interface ISettingsResponse {
         settings: ISettings;
@@ -44,6 +45,7 @@ export declare namespace IMktOs {
         suggest_opp_quote_days?: number;
         suggest_opp_no_contact_days?: number;
         suggest_customer_inactive_days?: number;
+        monthly_budget?: number | null;
     }
     interface ISettingsUpdateRequest {
         data: ISettingsUpdateData;
@@ -141,6 +143,13 @@ export declare namespace IMktOs {
         ok: true;
         saved_at: string;
     }
+    interface IBrandProfileDraftDeleteQuery {
+        brand_voice_id?: PositiveInt;
+    }
+    interface IBrandProfileDraftDeleted {
+        ok: true;
+        deleted: boolean;
+    }
     interface IBrandProfileSaveRequest {
         data: IBrandProfileDataInput;
         request_id: string & tags.MinLength<1> & tags.MaxLength<64>;
@@ -151,8 +160,11 @@ export declare namespace IMktOs {
         version: number;
     }
     type UnsubscribeChannel = 'email' | 'sms';
+    type UnsubscribeMethod = 'email_link' | 'one_click' | 'staff_manual';
     interface IUnsubscribesQuery {
         channel: UnsubscribeChannel;
+        method?: UnsubscribeMethod;
+        q?: string;
         page?: PositiveInt;
         page_size?: PositiveInt;
     }
@@ -161,6 +173,13 @@ export declare namespace IMktOs {
         recipient_type: 'lead' | 'partner';
         recipient_ref: string;
         display_name: string | null;
+        method: UnsubscribeMethod | null;
+        reason: string | null;
+        campaign_id: number | null;
+        campaign_name: string | null;
+        recorded_by: number | null;
+        recorded_by_name: string | null;
+        contact_masked?: string | null;
         created_at: string;
     }
     interface IUnsubscribesResponse {
