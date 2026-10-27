@@ -6,7 +6,7 @@ export declare namespace ICategoryBusiness {
         code: string;
         description?: string;
         icon?: string;
-        metadata?: string;
+        metadata?: Record<string, unknown>;
         active?: boolean;
         default_theme_uuid?: string;
     }
@@ -14,7 +14,7 @@ export declare namespace ICategoryBusiness {
         name?: string;
         description?: string;
         icon?: string;
-        metadata?: string;
+        metadata?: Record<string, unknown>;
         code?: string;
         active?: boolean;
         default_theme_uuid?: string | null;
@@ -24,7 +24,7 @@ export declare namespace ICategoryBusiness {
         code?: string | null;
         description?: null | string;
         icon?: null | string;
-        metadata?: string | null;
+        metadata?: Record<string, unknown> | null;
         active?: boolean;
         default_theme_uuid?: string | null;
         businessTypes?: null | IBusinessType.IBusinessTypeResponse[];
