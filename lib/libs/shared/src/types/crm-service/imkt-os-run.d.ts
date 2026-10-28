@@ -131,6 +131,8 @@ export declare namespace IMktOsRun {
         channel: Channel;
         content_artifact_id: number | null;
         status: string;
+        approved_version: number | null;
+        content_hash: string | null;
     }
     interface ICampaignActivity {
         id: number;
@@ -152,12 +154,32 @@ export declare namespace IMktOsRun {
         brief: Record<string, unknown> | null;
         submit_seq: number;
         pending_submit_seq: number | null;
+        content_hash: string;
+        submitted_by: number | null;
+        submitted_at: string | null;
+        approved_by: number | null;
+        approved_at: string | null;
+        notified_staff_ids: number[];
+        reminded_at: string | null;
+        can_approve: boolean;
         created_by: number;
         created_at: string;
         activities: ICampaignActivity[];
     }
     interface ICampaignGetResponse {
         item: ICampaignDetail;
+    }
+    interface ICampaignSaved {
+        ok: true;
+        item: ICampaignDetail;
+    }
+    interface ICampaignApproveRequest {
+        content_hash: string & tags.MinLength<1>;
+        submit_seq: (number & tags.Type<'uint32'>) | null;
+    }
+    interface ICampaignRemindResponse {
+        ok: true;
+        reminded_at: string;
     }
 }
 export {};

@@ -32,3 +32,67 @@ export declare namespace get {
     };
     const path: (id: number) => string;
 }
+export declare function submit(connection: IConnection, id: number): Promise<submit.Output>;
+export declare namespace submit {
+    type Output = Primitive<IResponse<IMktOsRun.ICampaignSaved>>;
+    const METADATA: {
+        readonly method: "POST";
+        readonly path: "/shop/mkt-os/campaigns/:id/submit";
+        readonly request: null;
+        readonly response: {
+            readonly type: "application/json";
+            readonly encrypted: false;
+        };
+        readonly status: 201;
+    };
+    const path: (id: number) => string;
+}
+export declare function approve(connection: IConnection, id: number, body: approve.Input): Promise<approve.Output>;
+export declare namespace approve {
+    type Input = Resolved<IMktOsRun.ICampaignApproveRequest>;
+    type Output = Primitive<IResponse<IMktOsRun.ICampaignSaved>>;
+    const METADATA: {
+        readonly method: "POST";
+        readonly path: "/shop/mkt-os/campaigns/:id/approve";
+        readonly request: {
+            readonly type: "application/json";
+            readonly encrypted: false;
+        };
+        readonly response: {
+            readonly type: "application/json";
+            readonly encrypted: false;
+        };
+        readonly status: 201;
+    };
+    const path: (id: number) => string;
+}
+export declare function withdraw(connection: IConnection, id: number): Promise<withdraw.Output>;
+export declare namespace withdraw {
+    type Output = Primitive<IResponse<IMktOsRun.ICampaignSaved>>;
+    const METADATA: {
+        readonly method: "POST";
+        readonly path: "/shop/mkt-os/campaigns/:id/withdraw";
+        readonly request: null;
+        readonly response: {
+            readonly type: "application/json";
+            readonly encrypted: false;
+        };
+        readonly status: 201;
+    };
+    const path: (id: number) => string;
+}
+export declare function remind(connection: IConnection, id: number): Promise<remind.Output>;
+export declare namespace remind {
+    type Output = Primitive<IResponse<IMktOsRun.ICampaignRemindResponse>>;
+    const METADATA: {
+        readonly method: "POST";
+        readonly path: "/shop/mkt-os/campaigns/:id/remind";
+        readonly request: null;
+        readonly response: {
+            readonly type: "application/json";
+            readonly encrypted: false;
+        };
+        readonly status: 201;
+    };
+    const path: (id: number) => string;
+}
