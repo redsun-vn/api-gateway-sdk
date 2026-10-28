@@ -29,6 +29,7 @@ export * from './iteam';
 export * from './ireport-view';
 export * from './iai-assist';
 export * from './imkt-os';
+export * from './imkt-os-run';
 export * from './imkt-os-audience';
 export * from './icall';
 export * from './istringee-config';

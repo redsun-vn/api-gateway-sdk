@@ -1,0 +1,163 @@
+import { tags } from 'typia';
+import { IMktOsAudience } from './imkt-os-audience';
+type PositiveInt = number & tags.Type<'uint32'> & tags.Minimum<1>;
+export declare namespace IMktOsRun {
+    type Stage = 'context' | 'audience' | 'signal_digest' | 'brief' | 'plan' | 'content' | 'guard' | 'review' | 'execute' | 'measure';
+    type UiStage = 'research' | 'insights' | 'creative' | 'plan' | 'create' | 'edit' | 'publish' | 'measure';
+    type StepStatus = 'pending' | 'running' | 'awaiting_review' | 'approved' | 'rejected' | 'failed' | 'skipped';
+    type RunStatus = 'composing' | 'needs_brand_profile' | 'failed' | 'awaiting_review' | 'confirmed';
+    type JourneyTemplate = 'win_back' | 'nurture_new_lead' | 'quote_follow_up' | 'birthday' | 'periodic_reminder';
+    type ArtifactType = 'SignalDigest' | 'CampaignBrief' | 'CampaignPlan' | 'EmailContent' | 'GuardReport';
+    type CampaignStatus = 'draft' | 'awaiting_approval' | 'active' | 'paused' | 'completed' | 'stopped';
+    type GoalMetric = 'lead_replied' | 'lead_to_opportunity';
+    type Channel = 'email' | 'sms' | 'zalo_oa' | 'zns';
+    interface IHolder {
+        type: 'ai' | 'staff';
+        staff_id?: number | null;
+    }
+    interface IStep {
+        stage: Stage;
+        status: StepStatus;
+        attempt: number;
+        error: string | null;
+        actor_type: 'ai' | 'staff' | null;
+        actor_id: number | null;
+        started_at: string | null;
+        finished_at: string | null;
+        approved_by: number | null;
+        approved_at: string | null;
+    }
+    interface IArtifact {
+        id: number;
+        stage: Stage;
+        type: ArtifactType;
+        schema_version: number;
+        version: number;
+        author: 'ai' | 'user';
+        author_id: number | null;
+        content: Record<string, unknown>;
+        created_at: string;
+    }
+    interface IRunDetail {
+        id: number;
+        name: string;
+        target: IMktOsAudience.Target;
+        audience_id: number;
+        audience_name: string;
+        audience_version_id: number;
+        journey_template: JourneyTemplate | null;
+        status: RunStatus;
+        ui_stage: UiStage;
+        holder: IHolder;
+        campaign_id: number | null;
+        created_by: number;
+        created_at: string;
+        updated_at: string;
+        steps: IStep[];
+        artifacts: IArtifact[];
+    }
+    interface ICreateRequest {
+        audience_id: PositiveInt;
+    }
+    interface IRunSaved {
+        ok: true;
+        item: IRunDetail;
+    }
+    interface IGetResponse {
+        item: IRunDetail;
+    }
+    interface IArtifactUpdateRequest {
+        content: Record<string, unknown>;
+        expected_version: number & tags.Type<'uint32'>;
+    }
+    interface IStepRetryRequest {
+        journey_template?: JourneyTemplate;
+    }
+    type JourneySort = 'updated' | 'newest' | 'name';
+    interface IJourneyListQuery {
+        q?: string;
+        status?: CampaignStatus;
+        ui_stage?: UiStage;
+        author_id?: PositiveInt;
+        target?: IMktOsAudience.Target;
+        sort?: JourneySort;
+        page?: PositiveInt;
+        page_size?: PositiveInt;
+    }
+    type StageState = 'pending' | 'running' | 'failed' | 'awaiting_review' | 'approved';
+    interface IStageMini {
+        ui_stage: UiStage;
+        state: StageState;
+    }
+    interface IJourneySummary {
+        run_id: number;
+        campaign_id: number | null;
+        name: string;
+        target: IMktOsAudience.Target;
+        audience_id: number;
+        audience_name: string;
+        status: CampaignStatus;
+        ui_stage: UiStage;
+        holder: IHolder;
+        steps_mini: IStageMini[];
+        created_by: number;
+        created_at: string;
+        updated_at: string;
+    }
+    interface IJourneyCounts {
+        active: number;
+        awaiting_approval: number;
+        paused: number;
+        draft: number;
+    }
+    interface IJourneyListResponse {
+        items: IJourneySummary[];
+        total: number;
+        counts: IJourneyCounts;
+    }
+    interface IAudienceJourney {
+        run_id: number;
+        campaign_id: number | null;
+        name: string;
+        status: CampaignStatus;
+        audience_version_id: number;
+        on_old_version: boolean;
+    }
+    interface IAudienceJourneysResponse {
+        items: IAudienceJourney[];
+    }
+    interface ICampaignVariant {
+        id: number;
+        channel: Channel;
+        content_artifact_id: number | null;
+        status: string;
+    }
+    interface ICampaignActivity {
+        id: number;
+        seq: number;
+        trigger: 'start' | 'after_parent';
+        delay_minutes: number;
+        variants: ICampaignVariant[];
+    }
+    interface ICampaignDetail {
+        id: number;
+        run_id: number;
+        name: string;
+        status: CampaignStatus;
+        target: IMktOsAudience.Target;
+        audience_id: number;
+        audience_version_id: number;
+        goal_metric: GoalMetric | null;
+        goal_target: number | null;
+        brief: Record<string, unknown> | null;
+        submit_seq: number;
+        pending_submit_seq: number | null;
+        created_by: number;
+        created_at: string;
+        activities: ICampaignActivity[];
+    }
+    interface ICampaignGetResponse {
+        item: ICampaignDetail;
+    }
+}
+export {};

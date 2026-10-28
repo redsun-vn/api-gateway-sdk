@@ -56,6 +56,19 @@ export declare namespace IMktOs {
         saved_at: string | null;
         saved_by: number | null;
     }
+    interface IChannelReadiness {
+        ready: boolean;
+        reason: string | null;
+    }
+    interface IZnsReadiness extends IChannelReadiness {
+        disabled_by_shop?: boolean;
+    }
+    interface IChannelReadinessResponse {
+        email: IChannelReadiness;
+        sms: IChannelReadiness;
+        zalo_oa: IChannelReadiness;
+        zns: IZnsReadiness;
+    }
     type BrandProfileSource = 'ai_hub' | 'mkt_os';
     interface IBrandProfileAudience {
         name?: string | null;
