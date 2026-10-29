@@ -162,6 +162,8 @@ export declare namespace IMktOsRun {
         notified_staff_ids: number[];
         reminded_at: string | null;
         can_approve: boolean;
+        first_send_at: string | null;
+        participant_count: number;
         created_by: number;
         created_at: string;
         activities: ICampaignActivity[];
