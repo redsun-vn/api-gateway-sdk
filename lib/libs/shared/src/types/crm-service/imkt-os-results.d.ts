@@ -53,10 +53,37 @@ export declare namespace IMktOsResults {
         skipped: number;
         failed: number;
         exited: number;
+        tasks: number;
         skip_reasons: Array<{
             reason: string | null;
             count: number;
         }>;
+    }
+    interface IResultCost {
+        currency: 'VND';
+        sms: {
+            sends: number;
+            amount: number;
+            unpriced_sends: number;
+            unit_price: number | null;
+            missing_unit_price: boolean;
+        };
+        total: number;
+    }
+    interface INextStepCondition {
+        field: string;
+        op: string;
+        value: string[];
+    }
+    interface IResultNextStep {
+        received_not_replied: number;
+        audience: {
+            target: 'lead';
+            name: string;
+            filter: {
+                all: INextStepCondition[];
+            };
+        };
     }
     interface ILeadSourceRow {
         source: string;
@@ -89,7 +116,8 @@ export declare namespace IMktOsResults {
             capped: number;
             warning: string | null;
         };
-        cost: null;
+        cost: IResultCost | null;
+        next_step: IResultNextStep;
     }
     interface IParticipantListQuery {
         status?: ParticipantStatus;
@@ -116,7 +144,7 @@ export declare namespace IMktOsResults {
         page: number;
         page_size: number;
     }
-    type TimelineEventType = 'enrolled' | 'scheduled' | 'deferred' | 'skipped' | 'sent' | 'failed' | 'replied' | 'converted' | 'exited';
+    type TimelineEventType = 'enrolled' | 'scheduled' | 'deferred' | 'skipped' | 'sent' | 'failed' | 'replied' | 'converted' | 'exited' | 'task_created' | 'labeled';
     interface ITimelineEvent {
         at: string;
         type: TimelineEventType;
@@ -217,6 +245,15 @@ export declare namespace IMktOsResults {
         strength: number;
         observed_at: string | null;
         expires_at: string | null;
+    }
+    type UnsubscribeRecordType = 'lead' | 'customer';
+    interface IRecordUnsubscribeRequest {
+        channel: 'sms';
+        reason?: string & tags.MaxLength<300>;
+    }
+    interface IRecordUnsubscribeResponse {
+        ok: true;
+        created: boolean;
     }
     interface IRecordMarketing {
         type: 'lead';

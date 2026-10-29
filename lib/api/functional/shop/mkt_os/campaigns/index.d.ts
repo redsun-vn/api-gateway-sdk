@@ -113,6 +113,21 @@ export declare namespace resume {
     };
     const path: (id: number) => string;
 }
+export declare function duplicate(connection: IConnection, id: number): Promise<duplicate.Output>;
+export declare namespace duplicate {
+    type Output = Primitive<IResponse<IMktOsRun.IRunSaved>>;
+    const METADATA: {
+        readonly method: "POST";
+        readonly path: "/shop/mkt-os/campaigns/:id/duplicate";
+        readonly request: null;
+        readonly response: {
+            readonly type: "application/json";
+            readonly encrypted: false;
+        };
+        readonly status: 201;
+    };
+    const path: (id: number) => string;
+}
 export declare function stop(connection: IConnection, id: number): Promise<stop.Output>;
 export declare namespace stop {
     type Output = Primitive<IResponse<IMktOsRun.ICampaignSaved>>;

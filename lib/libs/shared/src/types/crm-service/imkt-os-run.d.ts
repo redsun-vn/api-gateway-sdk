@@ -9,9 +9,9 @@ export declare namespace IMktOsRun {
     type JourneyTemplate = 'win_back' | 'nurture_new_lead' | 'quote_follow_up' | 'birthday' | 'periodic_reminder';
     type ArtifactType = 'SignalDigest' | 'CampaignBrief' | 'CampaignPlan' | 'EmailContent' | 'GuardReport';
     type CampaignStatus = 'draft' | 'awaiting_approval' | 'active' | 'paused' | 'completed' | 'stopped';
-    type PauseReason = 'manual' | 'content_changed' | 'unsubscribe_rate' | 'approver_inactive';
+    type PauseReason = 'manual' | 'content_changed' | 'unsubscribe_rate' | 'approver_inactive' | 'budget';
     type GoalMetric = 'lead_replied' | 'lead_to_opportunity';
-    type Channel = 'email' | 'sms' | 'zalo_oa' | 'zns';
+    type Channel = 'email' | 'sms' | 'zalo_oa' | 'zns' | 'sales_task' | 'crm_label';
     interface IHolder {
         type: 'ai' | 'staff';
         staff_id?: number | null;
@@ -145,6 +145,14 @@ export declare namespace IMktOsRun {
         delay_minutes: number;
         variants: ICampaignVariant[];
     }
+    interface ICampaignCostEstimate {
+        currency: 'VND';
+        sms_messages: number;
+        unit_price: number | null;
+        missing_unit_price: boolean;
+        amount: number | null;
+        budget_cap: number | null;
+    }
     interface ICampaignDetail {
         id: number;
         run_id: number;
@@ -168,6 +176,7 @@ export declare namespace IMktOsRun {
         can_approve: boolean;
         first_send_at: string | null;
         participant_count: number;
+        cost_estimate: ICampaignCostEstimate | null;
         pause_reason: PauseReason | null;
         paused_by: number | null;
         paused_by_name: string | null;
@@ -193,5 +202,6 @@ export declare namespace IMktOsRun {
         ok: true;
         reminded_at: string;
     }
+    type ICampaignDuplicated = IRunSaved;
 }
 export {};
