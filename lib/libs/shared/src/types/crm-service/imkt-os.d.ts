@@ -33,6 +33,8 @@ export declare namespace IMktOs {
         saved_at: string | null;
         saved_by: number | null;
         defaults?: ISettings;
+        monthly_spent?: number;
+        spent_month?: string;
     }
     interface ISettingsUpdateData {
         zns_cap_per_day?: number;

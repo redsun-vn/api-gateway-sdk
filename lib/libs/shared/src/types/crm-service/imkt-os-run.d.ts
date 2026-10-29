@@ -9,8 +9,8 @@ export declare namespace IMktOsRun {
     type JourneyTemplate = 'win_back' | 'nurture_new_lead' | 'quote_follow_up' | 'birthday' | 'periodic_reminder';
     type ArtifactType = 'SignalDigest' | 'CampaignBrief' | 'CampaignPlan' | 'EmailContent' | 'GuardReport';
     type CampaignStatus = 'draft' | 'awaiting_approval' | 'active' | 'paused' | 'completed' | 'stopped';
-    type PauseReason = 'manual' | 'content_changed' | 'unsubscribe_rate' | 'approver_inactive' | 'budget';
-    type GoalMetric = 'lead_replied' | 'lead_to_opportunity';
+    type PauseReason = 'manual' | 'content_changed' | 'unsubscribe_rate' | 'approver_inactive' | 'budget' | 'package_expired' | 'crm_package_expired';
+    type GoalMetric = 'lead_replied' | 'lead_to_opportunity' | 'opportunity_stage_changed' | 'opportunity_won' | 'customer_new_order' | 'revenue';
     type Channel = 'email' | 'sms' | 'zalo_oa' | 'zns' | 'sales_task' | 'crm_label';
     interface IHolder {
         type: 'ai' | 'staff';
@@ -145,13 +145,33 @@ export declare namespace IMktOsRun {
         delay_minutes: number;
         variants: ICampaignVariant[];
     }
+    interface ICampaignZnsEstimate {
+        messages: number;
+        amount: number;
+        unpriced_messages: number;
+    }
+    interface ICampaignMonthlyBudget {
+        amount: number;
+        spent: number;
+        remaining: number;
+        exceeded: boolean;
+    }
     interface ICampaignCostEstimate {
         currency: 'VND';
         sms_messages: number;
         unit_price: number | null;
         missing_unit_price: boolean;
         amount: number | null;
+        zns?: ICampaignZnsEstimate | null;
+        total?: number;
         budget_cap: number | null;
+        monthly_budget?: ICampaignMonthlyBudget | null;
+    }
+    interface ICampaignOwnerApproval {
+        required: true;
+        pending: number;
+        approved: number;
+        declined: number;
     }
     interface ICampaignDetail {
         id: number;
@@ -177,6 +197,7 @@ export declare namespace IMktOsRun {
         first_send_at: string | null;
         participant_count: number;
         cost_estimate: ICampaignCostEstimate | null;
+        owner_approval?: ICampaignOwnerApproval | null;
         pause_reason: PauseReason | null;
         paused_by: number | null;
         paused_by_name: string | null;

@@ -1,7 +1,7 @@
 import type { IConnection, Primitive } from "@nestia/fetcher";
 import type { IResponse } from "../../../../../../libs/shared/src/types/common.type";
 import type { IMktOsResults } from "../../../../../../libs/shared/src/types/crm-service/imkt-os-results";
-export declare function recordMarketing(connection: IConnection, type: string, id: number): Promise<recordMarketing.Output>;
+export declare function recordMarketing(connection: IConnection, type: string, id: string): Promise<recordMarketing.Output>;
 export declare namespace recordMarketing {
     type Output = Primitive<IResponse<IMktOsResults.IRecordMarketing>>;
     const METADATA: {
@@ -14,5 +14,5 @@ export declare namespace recordMarketing {
         };
         readonly status: 200;
     };
-    const path: (type: string, id: number) => string;
+    const path: (type: string, id: string) => string;
 }

@@ -1,7 +1,7 @@
 import { tags } from 'typia';
 type PositiveInt = number & tags.Type<'uint32'> & tags.Minimum<1>;
 export declare namespace IMktOsAudience {
-    type Target = 'lead' | 'opportunity';
+    type Target = 'lead' | 'opportunity' | 'customer';
     type Mode = 'snapshot' | 'dynamic';
     type FilterOperator = 'eq' | 'neq' | 'in' | 'not_in' | 'gt' | 'lt' | 'between' | 'contains' | 'not_contains' | 'is_null' | 'within_last_days' | 'older_than_days' | 'within_next_days';
     interface IFilterNode {
@@ -111,7 +111,7 @@ export declare namespace IMktOsAudience {
         job_id: string;
     }
     type PreviewStatus = 'pending' | 'running' | 'done' | 'failed';
-    type ExclusionRule = 'recent_staff_contact' | 'opportunity_recent_contact' | 'existing_customer' | 'unqualified' | 'converted' | 'no_consent' | 'unsubscribed_email';
+    type ExclusionRule = 'recent_staff_contact' | 'opportunity_recent_contact' | 'existing_customer' | 'unqualified' | 'converted' | 'no_consent' | 'unsubscribed_email' | 'open_opportunity';
     interface IExclusion {
         rule: ExclusionRule;
         count: number;
@@ -125,10 +125,11 @@ export declare namespace IMktOsAudience {
         has_zalo: boolean;
         contact_masked?: string | null;
     }
-    type PreviewChannel = 'email';
+    type PreviewChannel = 'email' | 'zns';
     interface IChannelReach {
         channel: PreviewChannel;
-        reachable: number;
+        reachable: number | null;
+        disabled_by_shop?: boolean;
     }
     interface IPreviewResult {
         matched: number;

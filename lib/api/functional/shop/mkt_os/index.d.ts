@@ -3,6 +3,7 @@ export * as audiences from "./audiences";
 export * as brand_profile from "./brand_profile";
 export * as campaigns from "./campaigns";
 export * as records from "./records";
+export * as approvals from "./approvals";
 export * as entitlement from "./entitlement";
 export * as settings from "./settings";
 export * as channels from "./channels";
