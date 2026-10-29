@@ -16,6 +16,12 @@ export declare namespace ILeadWebhook {
         pipeline_id?: string;
         team_id?: string;
         raw: Record<string, unknown>;
+        consent?: IConsent;
+    }
+    interface IConsent {
+        accepts_marketing: true;
+        text_version: string;
+        consented_at?: string;
     }
     interface IMappingResponse {
         id: number | string;

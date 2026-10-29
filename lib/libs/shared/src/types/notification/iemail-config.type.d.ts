@@ -272,6 +272,7 @@ export declare namespace IEmailHistory {
         error_code: string | null;
         error_message: string | null;
         idempotency_key: string | null;
+        source?: string | null;
         sent_at: string | null;
         created_at: string | null;
         updated_at: string | null;

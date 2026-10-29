@@ -23,9 +23,13 @@ export declare namespace ICrmLead {
         sla_priority?: CrmSlaPriority;
         tags?: string[];
     }
-    type ICreateWithAiPrefill = ICreate & {
+    type ICreateWithAiPrefill = ICreate & IStaffConsent & {
         ai_prefill?: ICrmAiAssist.IPrefillCommitRef;
     };
+    interface IStaffConsent {
+        accepts_marketing?: boolean;
+        consent_text_version?: string & tags.MinLength<1> & tags.MaxLength<32>;
+    }
     type IUpdate = Partial<Omit<ICreate, 'owner_id' | 'force_create' | 'force_create_reason' | 'team_id'>> & {
         owner_id?: number | string | null;
     };
@@ -116,10 +120,14 @@ export declare namespace ICrmLead {
     }
     interface IImportEntry extends Omit<ICreate, 'shop_id'> {
         _row_index?: number;
+        accepts_marketing?: boolean | string | null;
+        consented_at?: string | null;
+        consent_text_version?: string & tags.MinLength<1> & tags.MaxLength<32>;
     }
     type OnDuplicateMode = 'reject' | 'skip' | 'update_existing' | 'force_create';
     interface IImportRequest {
         leads: Array<IImportEntry> & tags.MinItems<1> & tags.MaxItems<500>;
+        file_name?: string & tags.MaxLength<255>;
         options?: {
             skip_workflow_rules?: boolean;
             on_duplicate?: OnDuplicateMode;

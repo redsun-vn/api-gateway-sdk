@@ -142,5 +142,7 @@ export declare namespace ICrmFacebook {
         connected: boolean;
         expires_at: string | null;
         expiring_soon: boolean;
+        has_ads_read?: boolean;
+        ads_read_requested?: boolean;
     }
 }

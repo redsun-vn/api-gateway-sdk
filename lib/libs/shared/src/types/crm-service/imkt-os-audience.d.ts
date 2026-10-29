@@ -111,7 +111,7 @@ export declare namespace IMktOsAudience {
         job_id: string;
     }
     type PreviewStatus = 'pending' | 'running' | 'done' | 'failed';
-    type ExclusionRule = 'recent_staff_contact' | 'opportunity_recent_contact' | 'existing_customer' | 'unqualified' | 'converted';
+    type ExclusionRule = 'recent_staff_contact' | 'opportunity_recent_contact' | 'existing_customer' | 'unqualified' | 'converted' | 'no_consent' | 'unsubscribed_email';
     interface IExclusion {
         rule: ExclusionRule;
         count: number;
@@ -125,11 +125,17 @@ export declare namespace IMktOsAudience {
         has_zalo: boolean;
         contact_masked?: string | null;
     }
+    type PreviewChannel = 'email';
+    interface IChannelReach {
+        channel: PreviewChannel;
+        reachable: number;
+    }
     interface IPreviewResult {
         matched: number;
         unique: number;
         excluded: IExclusion[];
         final: number;
+        channels?: IChannelReach[];
         sample: ISampleRow[] | null;
         sample_hidden: 'below_minimum' | null;
         counted_at: string;
