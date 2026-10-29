@@ -9,6 +9,7 @@ export declare namespace IMktOsRun {
     type JourneyTemplate = 'win_back' | 'nurture_new_lead' | 'quote_follow_up' | 'birthday' | 'periodic_reminder';
     type ArtifactType = 'SignalDigest' | 'CampaignBrief' | 'CampaignPlan' | 'EmailContent' | 'GuardReport';
     type CampaignStatus = 'draft' | 'awaiting_approval' | 'active' | 'paused' | 'completed' | 'stopped';
+    type PauseReason = 'manual' | 'content_changed' | 'unsubscribe_rate' | 'approver_inactive';
     type GoalMetric = 'lead_replied' | 'lead_to_opportunity';
     type Channel = 'email' | 'sms' | 'zalo_oa' | 'zns';
     interface IHolder {
@@ -100,6 +101,9 @@ export declare namespace IMktOsRun {
         ui_stage: UiStage;
         holder: IHolder;
         steps_mini: IStageMini[];
+        pause_reason: PauseReason | null;
+        paused_by: number | null;
+        paused_by_name: string | null;
         created_by: number;
         created_at: string;
         updated_at: string;
@@ -164,6 +168,12 @@ export declare namespace IMktOsRun {
         can_approve: boolean;
         first_send_at: string | null;
         participant_count: number;
+        pause_reason: PauseReason | null;
+        paused_by: number | null;
+        paused_by_name: string | null;
+        can_pause: boolean;
+        can_resume: boolean;
+        can_stop: boolean;
         created_by: number;
         created_at: string;
         activities: ICampaignActivity[];

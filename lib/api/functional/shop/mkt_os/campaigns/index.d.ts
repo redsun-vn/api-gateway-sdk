@@ -81,6 +81,51 @@ export declare namespace withdraw {
     };
     const path: (id: number) => string;
 }
+export declare function pause(connection: IConnection, id: number): Promise<pause.Output>;
+export declare namespace pause {
+    type Output = Primitive<IResponse<IMktOsRun.ICampaignSaved>>;
+    const METADATA: {
+        readonly method: "POST";
+        readonly path: "/shop/mkt-os/campaigns/:id/pause";
+        readonly request: null;
+        readonly response: {
+            readonly type: "application/json";
+            readonly encrypted: false;
+        };
+        readonly status: 201;
+    };
+    const path: (id: number) => string;
+}
+export declare function resume(connection: IConnection, id: number): Promise<resume.Output>;
+export declare namespace resume {
+    type Output = Primitive<IResponse<IMktOsRun.ICampaignSaved>>;
+    const METADATA: {
+        readonly method: "POST";
+        readonly path: "/shop/mkt-os/campaigns/:id/resume";
+        readonly request: null;
+        readonly response: {
+            readonly type: "application/json";
+            readonly encrypted: false;
+        };
+        readonly status: 201;
+    };
+    const path: (id: number) => string;
+}
+export declare function stop(connection: IConnection, id: number): Promise<stop.Output>;
+export declare namespace stop {
+    type Output = Primitive<IResponse<IMktOsRun.ICampaignSaved>>;
+    const METADATA: {
+        readonly method: "POST";
+        readonly path: "/shop/mkt-os/campaigns/:id/stop";
+        readonly request: null;
+        readonly response: {
+            readonly type: "application/json";
+            readonly encrypted: false;
+        };
+        readonly status: 201;
+    };
+    const path: (id: number) => string;
+}
 export declare function remind(connection: IConnection, id: number): Promise<remind.Output>;
 export declare namespace remind {
     type Output = Primitive<IResponse<IMktOsRun.ICampaignRemindResponse>>;
