@@ -1,6 +1,8 @@
 import type { IConnection, Resolved, Primitive } from "@nestia/fetcher";
 import type { IResponse } from "../../../../../libs/shared/src/types/common.type";
+import type { IMktOsResults } from "../../../../../libs/shared/src/types/crm-service/imkt-os-results";
 import type { IMktOsRun } from "../../../../../libs/shared/src/types/crm-service/imkt-os-run";
+export * as participants from "./participants";
 export declare function list(connection: IConnection, query: list.Query): Promise<list.Output>;
 export declare namespace list {
     type Query = Resolved<IMktOsRun.IJourneyListQuery>;
@@ -140,4 +142,35 @@ export declare namespace remind {
         readonly status: 201;
     };
     const path: (id: number) => string;
+}
+export declare function results(connection: IConnection, id: number): Promise<results.Output>;
+export declare namespace results {
+    type Output = Primitive<IResponse<IMktOsResults.IResultReport>>;
+    const METADATA: {
+        readonly method: "GET";
+        readonly path: "/shop/mkt-os/campaigns/:id/results";
+        readonly request: null;
+        readonly response: {
+            readonly type: "application/json";
+            readonly encrypted: false;
+        };
+        readonly status: 200;
+    };
+    const path: (id: number) => string;
+}
+export declare function activity(connection: IConnection, id: number, query: activity.Query): Promise<activity.Output>;
+export declare namespace activity {
+    type Query = Resolved<IMktOsResults.IActivityQuery>;
+    type Output = Primitive<IResponse<IMktOsResults.IActivityPage>>;
+    const METADATA: {
+        readonly method: "GET";
+        readonly path: "/shop/mkt-os/campaigns/:id/activity";
+        readonly request: null;
+        readonly response: {
+            readonly type: "application/json";
+            readonly encrypted: false;
+        };
+        readonly status: 200;
+    };
+    const path: (id: number, query: activity.Query) => string;
 }
