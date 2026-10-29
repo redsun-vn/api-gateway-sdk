@@ -27,6 +27,7 @@ export declare namespace IMktOs {
         suggest_opp_no_contact_days: number;
         suggest_customer_inactive_days: number;
         monthly_budget: number | null;
+        market_research_enabled?: boolean;
     }
     interface ISettingsResponse {
         settings: ISettings;
@@ -48,6 +49,7 @@ export declare namespace IMktOs {
         suggest_opp_no_contact_days?: number;
         suggest_customer_inactive_days?: number;
         monthly_budget?: number | null;
+        market_research_enabled?: boolean;
     }
     interface ISettingsUpdateRequest {
         data: ISettingsUpdateData;
@@ -218,11 +220,15 @@ export declare namespace IMktOs {
     interface ICompetitorsResponse {
         items: ICompetitor[];
     }
-    interface ICompetitorCreateRequest {
+    interface ICompetitorManualCreateRequest {
         name: string;
         website?: string | null;
         fanpage?: string | null;
     }
+    interface ICompetitorConfirmSuggestionRequest {
+        suggestion_id: PositiveInt;
+    }
+    type ICompetitorCreateRequest = ICompetitorManualCreateRequest | ICompetitorConfirmSuggestionRequest;
     interface ICompetitorUpdateRequest {
         name?: string;
         website?: string | null;
@@ -233,5 +239,39 @@ export declare namespace IMktOs {
         ok: true;
         item: ICompetitor;
     }
+    type MarketDigestStatus = 'off' | 'ready' | 'stale' | 'pending' | 'provider_error' | 'empty';
+    interface IMarketDigestSource {
+        url: string;
+        source_name: string;
+        published_at: string;
+    }
+    interface IMarketDigestItem {
+        type: 'competitor' | 'market';
+        title: string;
+        summary: string;
+        fits: string;
+        sources: IMarketDigestSource[];
+    }
+    interface ICompetitorSuggestionOutcome {
+        status: 'suggested' | 'skipped' | 'failed';
+        reason: null | 'missing_service_area' | 'missing_industry' | 'no_places' | 'provider_error' | 'ai_error' | 'not_configured';
+        count: number;
+    }
+    interface IMarketDigest {
+        enabled: boolean;
+        configured: boolean;
+        status: MarketDigestStatus;
+        digest_date: string | null;
+        items: IMarketDigestItem[];
+        updated_at: string | null;
+        refreshed_today: boolean;
+        can_refresh: boolean;
+        competitor_suggestion: ICompetitorSuggestionOutcome | null;
+    }
+    interface IMarketDigestRefreshed {
+        ok: true;
+        digest: IMarketDigest;
+    }
+    type MarketDigestRefreshRefusal = 'already_refreshed' | 'disabled' | 'not_configured' | 'package_inactive';
 }
 export {};

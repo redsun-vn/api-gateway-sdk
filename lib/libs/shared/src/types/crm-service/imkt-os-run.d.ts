@@ -9,6 +9,7 @@ export declare namespace IMktOsRun {
     type JourneyTemplate = 'win_back' | 'nurture_new_lead' | 'quote_follow_up' | 'birthday' | 'periodic_reminder';
     type ArtifactType = 'SignalDigest' | 'CampaignBrief' | 'CampaignPlan' | 'EmailContent' | 'GuardReport';
     type CampaignStatus = 'draft' | 'awaiting_approval' | 'active' | 'paused' | 'completed' | 'stopped';
+    type BudgetScope = 'shop_month' | 'run';
     type PauseReason = 'manual' | 'content_changed' | 'unsubscribe_rate' | 'approver_inactive' | 'budget' | 'package_expired' | 'crm_package_expired';
     type GoalMetric = 'lead_replied' | 'lead_to_opportunity' | 'opportunity_stage_changed' | 'opportunity_won' | 'customer_new_order' | 'revenue';
     type Channel = 'email' | 'sms' | 'zalo_oa' | 'zns' | 'sales_task' | 'crm_label';
@@ -102,6 +103,7 @@ export declare namespace IMktOsRun {
         holder: IHolder;
         steps_mini: IStageMini[];
         pause_reason: PauseReason | null;
+        budget_scope?: BudgetScope | null;
         paused_by: number | null;
         paused_by_name: string | null;
         created_by: number;
@@ -199,6 +201,7 @@ export declare namespace IMktOsRun {
         cost_estimate: ICampaignCostEstimate | null;
         owner_approval?: ICampaignOwnerApproval | null;
         pause_reason: PauseReason | null;
+        budget_scope?: BudgetScope | null;
         paused_by: number | null;
         paused_by_name: string | null;
         can_pause: boolean;

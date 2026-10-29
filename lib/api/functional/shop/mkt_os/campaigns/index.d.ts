@@ -2,6 +2,7 @@ import type { IConnection, Resolved, Primitive } from "@nestia/fetcher";
 import type { IResponse } from "../../../../../libs/shared/src/types/common.type";
 import type { IMktOsResults } from "../../../../../libs/shared/src/types/crm-service/imkt-os-results";
 import type { IMktOsRun } from "../../../../../libs/shared/src/types/crm-service/imkt-os-run";
+import type { IMktOsToday } from "../../../../../libs/shared/src/types/crm-service/imkt-os-today";
 export * as participants from "./participants";
 export declare function list(connection: IConnection, query: list.Query): Promise<list.Output>;
 export declare namespace list {
@@ -18,6 +19,22 @@ export declare namespace list {
         readonly status: 200;
     };
     const path: (query: list.Query) => string;
+}
+export declare function calendar(connection: IConnection, query: calendar.Query): Promise<calendar.Output>;
+export declare namespace calendar {
+    type Query = Resolved<IMktOsToday.ICalendarQuery>;
+    type Output = Primitive<IResponse<IMktOsToday.ICalendar>>;
+    const METADATA: {
+        readonly method: "GET";
+        readonly path: "/shop/mkt-os/campaigns/calendar";
+        readonly request: null;
+        readonly response: {
+            readonly type: "application/json";
+            readonly encrypted: false;
+        };
+        readonly status: 200;
+    };
+    const path: (query: calendar.Query) => string;
 }
 export declare function get(connection: IConnection, id: number): Promise<get.Output>;
 export declare namespace get {

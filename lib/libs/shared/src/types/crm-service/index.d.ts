@@ -35,3 +35,4 @@ export * from './icall';
 export * from './istringee-config';
 export * from './istringee-webhook';
 export * from './imkt-os-results';
+export * from './imkt-os-today';

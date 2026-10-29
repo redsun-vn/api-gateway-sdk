@@ -17,10 +17,12 @@ export declare namespace IMktOsAudience {
     }
     type ListStatus = 'in_use' | 'unused' | 'archived';
     type ListSort = 'recent_use' | 'newest' | 'most_people' | 'name';
+    type Origin = 'user' | 'suggestion';
     interface IListQuery {
         q?: string;
         target?: Target;
         status?: ListStatus;
+        origin?: Origin;
         sort?: ListSort;
         page?: PositiveInt;
         page_size?: PositiveInt;
@@ -29,7 +31,7 @@ export declare namespace IMktOsAudience {
         id: number;
         name: string;
         target: Target;
-        origin: 'user';
+        origin: Origin;
         mode: Mode;
         last_count: number | null;
         last_counted_at: string | null;
