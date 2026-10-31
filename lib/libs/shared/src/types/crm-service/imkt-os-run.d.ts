@@ -106,9 +106,17 @@ export declare namespace IMktOsRun {
         budget_scope?: BudgetScope | null;
         paused_by: number | null;
         paused_by_name: string | null;
+        progress?: IJourneyProgress | null;
         created_by: number;
         created_at: string;
         updated_at: string;
+    }
+    interface IJourneyProgress {
+        entered: number;
+        active: number;
+        completed: number;
+        exited: number;
+        messages_sent: number;
     }
     interface IJourneyCounts {
         active: number;

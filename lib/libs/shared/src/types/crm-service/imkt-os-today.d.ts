@@ -49,15 +49,39 @@ export declare namespace IMktOsToday {
         to?: CalendarDay;
         view?: CalendarView;
     }
-    interface ICalendarBlock {
+    interface ICalendarTimeSpan {
+        from: string;
+        to: string;
+    }
+    interface ICalendarDeferral {
+        reason: string;
+        count: number;
+    }
+    interface ICalendarCounts {
+        sent: number;
+        planned: number;
+        sent_people?: number;
+        planned_people?: number;
+        sent_at?: ICalendarTimeSpan | null;
+        planned_at?: ICalendarTimeSpan | null;
+        deferred?: ICalendarDeferral[];
+        capped?: number;
+    }
+    interface ICalendarStep extends ICalendarCounts {
+        activity_id: number;
+        seq: number;
+        purpose: string | null;
+        channel: string;
+    }
+    interface ICalendarBlock extends ICalendarCounts {
         campaign_id: number;
         run_id: number;
         name: string;
         status: string;
         pending_approval: boolean;
         channel: string;
-        sent: number;
-        planned: number;
+        steps_total?: number;
+        steps?: ICalendarStep[];
     }
     interface ICalendarDay {
         date: string;
@@ -167,6 +191,7 @@ export declare namespace IMktOsToday {
             from: string;
             to: string;
             days: ICalendarDay[];
+            overlaps?: ICalendarOverlap[];
         };
         week_results: {
             from: string;
