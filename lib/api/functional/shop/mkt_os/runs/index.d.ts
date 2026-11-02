@@ -1,6 +1,8 @@
 import type { IConnection, Resolved, Primitive } from "@nestia/fetcher";
 import type { IResponse } from "../../../../../libs/shared/src/types/common.type";
 import type { IMktOsRun } from "../../../../../libs/shared/src/types/crm-service/imkt-os-run";
+export * as email_layout from "./email_layout";
+export * as messages from "./messages";
 export * as artifacts from "./artifacts";
 export * as steps from "./steps";
 export declare function create(connection: IConnection, body: create.Input): Promise<create.Output>;

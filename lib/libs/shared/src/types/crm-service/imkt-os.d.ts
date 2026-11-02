@@ -36,6 +36,11 @@ export declare namespace IMktOs {
         defaults?: ISettings;
         monthly_spent?: number;
         spent_month?: string;
+        email_layout?: ISettingsEmailLayout | null;
+    }
+    interface ISettingsEmailLayout {
+        id: number;
+        name: string | null;
     }
     interface ISettingsUpdateData {
         zns_cap_per_day?: number;
@@ -50,6 +55,7 @@ export declare namespace IMktOs {
         suggest_customer_inactive_days?: number;
         monthly_budget?: number | null;
         market_research_enabled?: boolean;
+        email_layout_template_id?: PositiveInt | null;
     }
     interface ISettingsUpdateRequest {
         data: ISettingsUpdateData;
@@ -59,6 +65,16 @@ export declare namespace IMktOs {
         settings: ISettings;
         saved_at: string | null;
         saved_by: number | null;
+        email_layout?: ISettingsEmailLayout | null;
+    }
+    interface IEmailLayout {
+        id: number;
+        name: string;
+        updated_at: string | null;
+        hash: string;
+    }
+    interface IEmailLayoutsResponse {
+        items: IEmailLayout[];
     }
     interface IChannelReadiness {
         ready: boolean;

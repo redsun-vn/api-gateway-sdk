@@ -75,6 +75,21 @@ export declare namespace IMktOsRun {
     interface IStepRetryRequest {
         journey_template?: JourneyTemplate;
     }
+    interface IEmailLayoutCopy {
+        template_id: number;
+        name: string;
+        hash: string;
+        source: 'settings' | 'journey';
+    }
+    interface IEmailLayoutSetRequest {
+        expected_version: number & tags.Type<'uint32'>;
+        template_id: PositiveInt | null;
+    }
+    interface IEmailTestSendResponse {
+        ok: boolean;
+        error_code?: string;
+        message?: string;
+    }
     type JourneySort = 'updated' | 'newest' | 'name';
     interface IJourneyListQuery {
         q?: string;

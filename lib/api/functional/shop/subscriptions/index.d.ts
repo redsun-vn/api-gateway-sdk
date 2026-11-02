@@ -19,6 +19,21 @@ export declare namespace findAll {
     };
     const path: (query: findAll.Query) => string;
 }
+export declare function current(connection: IConnection): Promise<current.Output>;
+export declare namespace current {
+    type Output = Primitive<IResponse<ISubscription.ICurrentResponse>>;
+    const METADATA: {
+        readonly method: "GET";
+        readonly path: "/shop/subscriptions/current";
+        readonly request: null;
+        readonly response: {
+            readonly type: "application/json";
+            readonly encrypted: false;
+        };
+        readonly status: 200;
+    };
+    const path: () => string;
+}
 export declare function findOne(connection: IConnection, id: string): Promise<findOne.Output>;
 export declare namespace findOne {
     type Output = Primitive<IResponse<ISubscription.ISubscriptionResponse>>;
