@@ -12,6 +12,7 @@ export declare namespace ICrmLead {
         email?: string & tags.Format<'email'>;
         phone?: string & tags.MaxLength<50>;
         company_name?: string;
+        is_company?: boolean;
         note?: string;
         owner_id?: number | null;
         custom_fields?: Record<string, unknown>;
@@ -62,6 +63,7 @@ export declare namespace ICrmLead {
         email?: string | null;
         phone?: string | null;
         company_name?: string | null;
+        is_company?: boolean;
         note?: string | null;
         score: number;
         score_breakdown?: Record<string, unknown> | null;

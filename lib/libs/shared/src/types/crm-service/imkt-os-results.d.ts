@@ -20,16 +20,16 @@ export declare namespace IMktOsResults {
             sends: number;
         };
         engagement: {
-            replied: number;
+            replied: number | null;
             reply_rate: number | null;
             unsubscribed: number;
             unsubscribe_rate: number | null;
         };
         conversion: {
-            returned: number;
-            converted: number;
+            returned: number | null;
+            converted: number | null;
             conversion_rate: number | null;
-            opportunities: number;
+            opportunities: number | null;
             opportunity_rate: number | null;
         };
         comparison: {
@@ -37,6 +37,7 @@ export declare namespace IMktOsResults {
             reply_rate: number | null;
             opportunity_rate: number | null;
             won_rate?: number | null;
+            unsubscribe_rate?: number | null;
         } | null;
         opportunity?: IOpportunityTier | null;
         customer?: ICustomerTier | null;
@@ -58,13 +59,21 @@ export declare namespace IMktOsResults {
         direct: {
             conversions: number;
             value: number;
-        };
+        } | null;
         time_window: {
             orders: number;
             customers: number;
             value: number;
             window_days: number;
-        };
+        } | null;
+    }
+    interface IChannelLine {
+        channel: 'email' | 'sms' | 'zns';
+        reached: number;
+        sends: number;
+        unsubscribed: number | null;
+        unsubscribe_rate: number | null;
+        failed: number;
     }
     interface ITarget {
         metric: string | null;
@@ -111,8 +120,9 @@ export declare namespace IMktOsResults {
     interface IResultNextStep {
         received_not_replied: number;
         received_not_returned?: number;
+        not_received?: number | null;
         audience: {
-            target: 'lead' | 'opportunity' | 'customer';
+            target: 'lead' | 'opportunity' | 'customer' | 'subscriber';
             name: string;
             filter: {
                 all: INextStepCondition[];
@@ -140,6 +150,7 @@ export declare namespace IMktOsResults {
         headline: IHeadline[];
         tiers: ITiers;
         attribution?: IAttribution;
+        by_channel?: IChannelLine[] | null;
         target: ITarget;
         steps: IStepFunnel[];
         channels: Array<{
@@ -165,6 +176,7 @@ export declare namespace IMktOsResults {
         id: number;
         name: string | null;
         has_email: boolean;
+        has_phone?: boolean;
         status: ParticipantStatus;
         status_reason: string | null;
         step_seq: number | null;

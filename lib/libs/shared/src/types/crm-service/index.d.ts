@@ -31,6 +31,7 @@ export * from './iai-assist';
 export * from './imkt-os';
 export * from './imkt-os-run';
 export * from './imkt-os-audience';
+export * from './imkt-os-subscriber';
 export * from './icall';
 export * from './istringee-config';
 export * from './istringee-webhook';

@@ -203,7 +203,7 @@ export declare namespace IMktOs {
     }
     interface IUnsubscribeItem {
         channel: UnsubscribeChannel;
-        recipient_type: 'lead' | 'partner';
+        recipient_type: 'lead' | 'partner' | 'subscriber';
         recipient_ref: string;
         display_name: string | null;
         method: UnsubscribeMethod | null;

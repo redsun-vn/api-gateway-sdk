@@ -6,7 +6,7 @@ export declare namespace IMktOsRun {
     type UiStage = 'research' | 'insights' | 'creative' | 'plan' | 'create' | 'edit' | 'publish' | 'measure';
     type StepStatus = 'pending' | 'running' | 'awaiting_review' | 'approved' | 'rejected' | 'failed' | 'skipped';
     type RunStatus = 'composing' | 'needs_brand_profile' | 'failed' | 'awaiting_review' | 'confirmed';
-    type JourneyTemplate = 'win_back' | 'nurture_new_lead' | 'quote_follow_up' | 'birthday' | 'periodic_reminder';
+    type JourneyTemplate = 'win_back' | 'nurture_new_lead' | 'quote_follow_up' | 'birthday' | 'periodic_reminder' | 'welcome_subscriber' | 'newsletter';
     type ArtifactType = 'SignalDigest' | 'CampaignBrief' | 'CampaignPlan' | 'EmailContent' | 'GuardReport';
     type CampaignStatus = 'draft' | 'awaiting_approval' | 'active' | 'paused' | 'completed' | 'stopped';
     type BudgetScope = 'shop_month' | 'run';
