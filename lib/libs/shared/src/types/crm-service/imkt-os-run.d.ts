@@ -1,5 +1,6 @@
 import { tags } from 'typia';
 import { IMktOsAudience } from './imkt-os-audience';
+import { IMktOsEmail } from './imkt-os-email';
 type PositiveInt = number & tags.Type<'uint32'> & tags.Minimum<1>;
 export declare namespace IMktOsRun {
     type Stage = 'context' | 'audience' | 'signal_digest' | 'brief' | 'plan' | 'content' | 'guard' | 'review' | 'execute' | 'measure';
@@ -71,12 +72,21 @@ export declare namespace IMktOsRun {
     interface IRunSaved {
         ok: true;
         item: IRunDetail;
+        warnings?: IMktOsEmail.IWarning[];
     }
     interface IGetResponse {
         item: IRunDetail;
     }
+    interface IArtifactUpdateContent {
+        messages?: IEmailMessageEdit[];
+        [key: string]: unknown;
+    }
+    interface IEmailMessageEdit {
+        blocks?: IMktOsEmail.IBlocks;
+        [key: string]: unknown;
+    }
     interface IArtifactUpdateRequest {
-        content: Record<string, unknown>;
+        content: IArtifactUpdateContent;
         expected_version: number & tags.Type<'uint32'>;
         zns_risk_ack?: boolean;
     }
@@ -91,6 +101,7 @@ export declare namespace IMktOsRun {
         name: string;
         hash: string;
         source: 'settings' | 'journey';
+        theme?: IMktOsEmail.ITheme;
     }
     interface IEmailLayoutSetRequest {
         expected_version: number & tags.Type<'uint32'>;
@@ -254,6 +265,7 @@ export declare namespace IMktOsRun {
     interface ICampaignSaved {
         ok: true;
         item: ICampaignDetail;
+        warnings?: IMktOsEmail.IWarning[];
     }
     interface ICampaignApproveRequest {
         content_hash: string & tags.MinLength<1>;

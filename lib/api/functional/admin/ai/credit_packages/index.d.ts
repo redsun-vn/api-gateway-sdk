@@ -2,6 +2,7 @@ import type { IConnection, Resolved, Primitive } from "@nestia/fetcher";
 import type { IAiCreditPackage, IAiPaginationResult } from "../../../../../libs/shared/src/types/ai-generation/index";
 import type { IResponse } from "../../../../../libs/shared/src/types/common.type";
 export * as purchases from "./purchases";
+export * as purchase from "./purchase";
 export declare function list(connection: IConnection, query: list.Query): Promise<list.Output>;
 export declare namespace list {
     type Query = Resolved<IAiCreditPackage.IQueryRequest>;

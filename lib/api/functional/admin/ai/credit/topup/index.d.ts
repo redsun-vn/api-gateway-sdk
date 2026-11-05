@@ -3,11 +3,11 @@ import type { IAiCredit } from "../../../../../../libs/shared/src/types/ai-gener
 import type { IResponse } from "../../../../../../libs/shared/src/types/common.type";
 export declare function topUp(connection: IConnection, data: topUp.Input): Promise<topUp.Output>;
 export declare namespace topUp {
-    type Input = Resolved<IAiCredit.ITopUpRequest>;
+    type Input = Resolved<IAiCredit.IAdminTopUpRequest>;
     type Output = Primitive<IResponse<IAiCredit.ICreditTransaction>>;
     const METADATA: {
         readonly method: "POST";
-        readonly path: "/shop/ai/credit/topup";
+        readonly path: "/admin/ai/credit/topup";
         readonly request: {
             readonly type: "application/json";
             readonly encrypted: false;

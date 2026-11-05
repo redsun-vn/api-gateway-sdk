@@ -4,3 +4,5 @@ export * from './promotion';
 export * from './invoice.type';
 export * from './system-pricebook.type';
 export * from './hr-report';
+export * from './ibosvideo-plans';
+export * from './iconsumer-checkout';

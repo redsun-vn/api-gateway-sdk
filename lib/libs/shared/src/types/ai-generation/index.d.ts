@@ -177,6 +177,9 @@ export declare namespace IAiCredit {
         reason: string;
         metadata?: Record<string, any>;
     }
+    interface IAdminTopUpRequest extends ITopUpRequest {
+        shop_id: number & tags.Type<'uint64'>;
+    }
     interface IHistoryQuery {
         page?: number;
         limit?: number;
@@ -334,6 +337,9 @@ export declare namespace IAiImage {
     }
 }
 export declare namespace IAiCreditPackage {
+    interface IAdminPurchaseRequest {
+        shop_id: number & tags.Type<'uint64'>;
+    }
     interface ICreditDataResponse<T> {
         data: T;
     }
