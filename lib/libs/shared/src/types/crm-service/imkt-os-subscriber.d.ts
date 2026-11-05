@@ -46,6 +46,7 @@ export declare namespace IMktOsSubscriber {
         staff_id: number | null;
         file_name?: string;
         row_number?: number;
+        sheet_row?: number;
         confirmed_at?: string;
         note?: string;
     }
@@ -163,6 +164,7 @@ export declare namespace IMktOsSubscriber {
     }
     interface IImportRow {
         row_number: PositiveInt;
+        sheet_row?: PositiveInt;
         email?: (string & tags.MaxLength<400>) | number;
         phone?: (string & tags.MaxLength<100>) | number;
         name?: (string & tags.MaxLength<400>) | number;
@@ -198,6 +200,7 @@ export declare namespace IMktOsSubscriber {
     }
     interface IImportProblem {
         row_number: number;
+        sheet_row?: number;
         reason: ImportProblemReason;
         contact_masked?: string;
     }
@@ -227,6 +230,56 @@ export declare namespace IMktOsSubscriber {
         problems: IImportProblem[];
         existing_total: number;
         over_limit: boolean;
+    }
+    interface IFilter {
+        q?: string & tags.MaxLength<254>;
+        kind?: Kind;
+        status?: Status;
+        list_id?: PositiveInt;
+        source?: Source;
+        subscribed_from?: string & tags.Format<'date'>;
+        subscribed_to?: string & tags.Format<'date'>;
+    }
+    interface ISelection {
+        ids?: PositiveInt[] & tags.MinItems<1> & tags.MaxItems<500>;
+        filter?: IFilter;
+    }
+    interface IBulkListMembersRequest {
+        selection: ISelection;
+        list_id: PositiveInt;
+        mode: 'add' | 'remove';
+    }
+    interface IBulkUnsubscribeRequest {
+        selection: ISelection;
+        channel: UnsubscribeChannel;
+        reason?: string & tags.MaxLength<600>;
+    }
+    interface IBulkDeleteRequest {
+        selection: ISelection;
+    }
+    type BulkAction = 'list_add' | 'list_remove' | 'unsubscribe' | 'delete';
+    type BulkStatus = 'queued' | 'running' | 'done' | 'failed';
+    interface IBulkJob {
+        id: string;
+        action: BulkAction;
+        status: BulkStatus;
+        list_id: string | null;
+        channel: UnsubscribeChannel | null;
+        total: number;
+        processed: number;
+        done: number;
+        skipped: number;
+        error: string | null;
+        created_by: string;
+        created_at: string;
+        started_at: string | null;
+        finished_at: string | null;
+    }
+    interface IBulkJobsResponse {
+        items: IBulkJob[];
+    }
+    interface IExportQuery extends IFilter {
+        format?: 'xlsx' | 'csv';
     }
 }
 export {};

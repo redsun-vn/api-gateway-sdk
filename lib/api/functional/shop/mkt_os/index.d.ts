@@ -13,6 +13,7 @@ export * as entitlement from "./entitlement";
 export * as settings from "./settings";
 export * as channels from "./channels";
 export * as unsubscribes from "./unsubscribes";
+export * as subscriber_bulk_jobs from "./subscriber_bulk_jobs";
 export * as subscriber_imports from "./subscriber_imports";
 export * as subscribers from "./subscribers";
 export * as subscriber_lists from "./subscriber_lists";

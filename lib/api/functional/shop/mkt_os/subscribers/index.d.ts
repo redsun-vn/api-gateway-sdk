@@ -38,6 +38,21 @@ export declare namespace create {
     };
     const path: () => string;
 }
+export declare function $export(connection: IConnection, query: $export.Query): Promise<void>;
+export declare namespace $export {
+    type Query = Resolved<IMktOsSubscriber.IExportQuery>;
+    const METADATA: {
+        readonly method: "GET";
+        readonly path: "/shop/mkt-os/subscribers/export";
+        readonly request: null;
+        readonly response: {
+            readonly type: "application/json";
+            readonly encrypted: false;
+        };
+        readonly status: 200;
+    };
+    const path: (query: $export.Query) => string;
+}
 export declare function get(connection: IConnection, id: number): Promise<get.Output>;
 export declare namespace get {
     type Output = Primitive<IResponse<IMktOsSubscriber.IDetail>>;

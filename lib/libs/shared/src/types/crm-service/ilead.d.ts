@@ -120,7 +120,7 @@ export declare namespace ICrmLead {
         partner_uuid: string;
         opportunity_id?: number | null;
     }
-    interface IImportEntry extends Omit<ICreate, 'shop_id'> {
+    interface IImportEntry extends Omit<ICreate, 'shop_id' | 'is_company'> {
         _row_index?: number;
         accepts_marketing?: boolean | string | null;
         consented_at?: string | null;
