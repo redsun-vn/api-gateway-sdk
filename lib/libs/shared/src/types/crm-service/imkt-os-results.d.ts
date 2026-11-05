@@ -74,6 +74,7 @@ export declare namespace IMktOsResults {
         unsubscribed: number | null;
         unsubscribe_rate: number | null;
         failed: number;
+        cost?: number | null;
     }
     interface ITarget {
         metric: string | null;

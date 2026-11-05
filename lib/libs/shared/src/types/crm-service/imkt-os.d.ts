@@ -10,6 +10,7 @@ export declare namespace IMktOs {
     interface IFieldError {
         field: string;
         message: string;
+        code?: string;
     }
     interface IFieldErrorsResult {
         ok: false;

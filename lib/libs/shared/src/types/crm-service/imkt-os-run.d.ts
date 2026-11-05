@@ -57,6 +57,13 @@ export declare namespace IMktOsRun {
         updated_at: string;
         steps: IStep[];
         artifacts: IArtifact[];
+        zns_risk_ack_required?: boolean;
+        zns_risk_ack?: IZnsRiskAck | null;
+    }
+    interface IZnsRiskAck {
+        staff_id: number;
+        at: string;
+        text_version: string;
     }
     interface ICreateRequest {
         audience_id: PositiveInt;
@@ -71,9 +78,13 @@ export declare namespace IMktOsRun {
     interface IArtifactUpdateRequest {
         content: Record<string, unknown>;
         expected_version: number & tags.Type<'uint32'>;
+        zns_risk_ack?: boolean;
     }
     interface IStepRetryRequest {
         journey_template?: JourneyTemplate;
+    }
+    interface IStepConfirmRequest {
+        zns_risk_ack?: boolean;
     }
     interface IEmailLayoutCopy {
         template_id: number;
@@ -227,6 +238,9 @@ export declare namespace IMktOsRun {
         budget_scope?: BudgetScope | null;
         paused_by: number | null;
         paused_by_name: string | null;
+        zns_risk_ack?: (IZnsRiskAck & {
+            staff_name: string | null;
+        }) | null;
         can_pause: boolean;
         can_resume: boolean;
         can_stop: boolean;
