@@ -21,6 +21,7 @@ export * as subscriber_lists from "./subscriber_lists";
 export * as subscriber_fields from "./subscriber_fields";
 export * as suggestions from "./suggestions";
 export * as ads from "./ads";
+export * as social from "./social";
 export declare function daily(connection: IConnection): Promise<daily.Output>;
 export declare namespace daily {
     type Output = Primitive<IResponse<IMktOsToday.IDaily>>;

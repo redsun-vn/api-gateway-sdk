@@ -32,6 +32,8 @@ export declare namespace IAiContent {
         review_rating?: number;
         brand_voice_id?: number;
         language?: string;
+        platform?: 'facebook' | 'instagram' | 'tiktok' | 'gbp';
+        cta?: string & tags.MaxLength<80>;
     }
     interface IEstimateRequest {
         content_type: AIContentType;

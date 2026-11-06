@@ -80,3 +80,4 @@ export * as icd10 from "./icd10";
 export * as translation from "./translation";
 export * as translation_resource from "./translation_resource";
 export * as ads from "./ads";
+export * as social from "./social";

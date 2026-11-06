@@ -1,7 +1,9 @@
+import { tags } from 'typia';
 export declare namespace IStaffApiKey {
     interface ICreateBody {
         name: string;
         expires_in_days?: number | null;
+        scopes?: Array<'crm.read' | 'social.read' | 'social.write'> & tags.MinItems<1> & tags.UniqueItems;
     }
     interface IListItem {
         id: number | string;

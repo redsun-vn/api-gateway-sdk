@@ -20,6 +20,7 @@ export declare enum AIContentType {
     ABOUT_PAGE = "about_page",
     PROMOTION_COPY = "promotion_copy",
     REVIEW_RESPONSE = "review_response",
+    SOCIAL_POST = "social_post",
     FNB_MENU_ITEM = "fnb_menu_item",
     FNB_RESTAURANT_PROFILE = "fnb_restaurant_profile",
     FNB_DAILY_SPECIAL = "fnb_daily_special",

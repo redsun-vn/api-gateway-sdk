@@ -4,3 +4,7 @@ export * from './iads-spend';
 export * from './iads-mapping';
 export * from './iads-connection';
 export * from './iads-oauth';
+export * from './isocial-channel';
+export * from './isocial-post';
+export * from './isocial-analytics';
+export * from './isocial-automation';
