@@ -261,6 +261,7 @@ export declare namespace IMktOsRun {
     }
     interface ICampaignGetResponse {
         item: ICampaignDetail;
+        warnings?: IMktOsEmail.IWarning[];
     }
     interface ICampaignSaved {
         ok: true;
