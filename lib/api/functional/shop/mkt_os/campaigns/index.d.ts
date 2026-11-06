@@ -3,6 +3,7 @@ import type { IResponse } from "../../../../../libs/shared/src/types/common.type
 import type { IMktOsResults } from "../../../../../libs/shared/src/types/crm-service/imkt-os-results";
 import type { IMktOsRun } from "../../../../../libs/shared/src/types/crm-service/imkt-os-run";
 import type { IMktOsToday } from "../../../../../libs/shared/src/types/crm-service/imkt-os-today";
+export * as links from "./links";
 export * as participants from "./participants";
 export declare function list(connection: IConnection, query: list.Query): Promise<list.Output>;
 export declare namespace list {

@@ -23,12 +23,30 @@ export declare namespace IMktOsRun {
         status: StepStatus;
         attempt: number;
         error: string | null;
+        error_detail?: IStepErrorDetail | null;
         actor_type: 'ai' | 'staff' | null;
         actor_id: number | null;
         started_at: string | null;
         finished_at: string | null;
         approved_by: number | null;
         approved_at: string | null;
+    }
+    interface IStepErrorDetail {
+        category: 'transient' | 'fixable' | 'fatal';
+        kind?: string;
+        http_status?: number;
+        where?: {
+            source: 'message' | 'brand_profile' | 'industry_notes' | 'audience_filter' | 'unknown';
+            seq?: number;
+            block_id?: string;
+            field?: string;
+        };
+    }
+    interface IToneReviewAck {
+        staff_id: number;
+        at: string;
+        content_hash: string;
+        guard_report_id: number;
     }
     interface IArtifact {
         id: number;
@@ -252,6 +270,10 @@ export declare namespace IMktOsRun {
         zns_risk_ack?: (IZnsRiskAck & {
             staff_name: string | null;
         }) | null;
+        tone_review_required?: boolean;
+        tone_review_ack?: (IToneReviewAck & {
+            staff_name: string | null;
+        }) | null;
         can_pause: boolean;
         can_resume: boolean;
         can_stop: boolean;
@@ -271,6 +293,7 @@ export declare namespace IMktOsRun {
     interface ICampaignApproveRequest {
         content_hash: string & tags.MinLength<1>;
         submit_seq: (number & tags.Type<'uint32'>) | null;
+        tone_review_ack?: boolean;
     }
     interface ICampaignRemindResponse {
         ok: true;

@@ -3,9 +3,9 @@ type PositiveInt = number & tags.Type<'uint32'> & tags.Minimum<1>;
 type Id = number | string;
 type Reason = string & tags.Pattern<'^[a-z_]{1,48}$'>;
 export declare namespace IMktOsResults {
-    type ParticipantStatus = 'waiting' | 'sent' | 'replied' | 'returned' | 'skipped' | 'failed' | 'exited';
-    type ActivityType = 'send' | 'reply' | 'order' | 'user_change' | 'system';
-    interface IHeadline {
+    export type ParticipantStatus = 'waiting' | 'sent' | 'replied' | 'returned' | 'skipped' | 'failed' | 'exited' | 'clicked';
+    export type ActivityType = 'send' | 'reply' | 'order' | 'user_change' | 'system';
+    export interface IHeadline {
         key: 'reached' | 'replied' | 'returned';
         value: number;
         rate: number | null;
@@ -13,7 +13,7 @@ export declare namespace IMktOsResults {
             status: 'sent' | 'replied' | 'returned';
         };
     }
-    interface ITiers {
+    export interface ITiers {
         enrolled: number;
         sent: {
             reached: number;
@@ -42,20 +42,20 @@ export declare namespace IMktOsResults {
         opportunity?: IOpportunityTier | null;
         customer?: ICustomerTier | null;
     }
-    interface IOpportunityTier {
+    export interface IOpportunityTier {
         stage_changed: number;
         stage_changed_rate: number | null;
         won: number;
         won_rate: number | null;
         won_value: number;
     }
-    interface ICustomerTier {
+    export interface ICustomerTier {
         new_order_customers: number;
         new_order_rate: number | null;
         orders: number;
         revenue: number;
     }
-    interface IAttribution {
+    export interface IAttribution {
         direct: {
             conversions: number;
             value: number;
@@ -66,8 +66,48 @@ export declare namespace IMktOsResults {
             value: number;
             window_days: number;
         } | null;
+        utm?: {
+            orders: number;
+            value: number;
+            window_days: number;
+        } | null;
     }
-    interface IChannelLine {
+    export type ClickTracking = 'tracked' | 'partial' | 'not_tracked';
+    export interface IClickBreakdownRow {
+        key: string;
+        clicks: number;
+    }
+    export interface IResultClicks {
+        clicked: number;
+        clicks: number;
+        click_rate: number | null;
+        reached_tracked: number;
+        by_step: Array<{
+            activity_id: number;
+            seq: number;
+            clicked: number;
+            clicks: number;
+        }>;
+        by_channel: Array<{
+            channel: string;
+            clicked: number;
+            clicks: number;
+            click_tracking: ClickTracking;
+        }>;
+        by_link: Array<{
+            channel: string;
+            display_url: string;
+            param_name: string | null;
+            clicked: number;
+            clicks: number;
+        }>;
+        breakdown: {
+            device_type: IClickBreakdownRow[];
+            referrer_app: IClickBreakdownRow[];
+            region_code: IClickBreakdownRow[];
+        };
+    }
+    export interface IChannelLine {
         channel: 'email' | 'sms' | 'zns';
         reached: number;
         sends: number;
@@ -76,13 +116,13 @@ export declare namespace IMktOsResults {
         failed: number;
         cost?: number | null;
     }
-    interface ITarget {
+    export interface ITarget {
         metric: string | null;
         target: number | null;
         actual: number | null;
         progress: number | null;
     }
-    interface IStepFunnel {
+    export interface IStepFunnel {
         activity_id: number;
         seq: number;
         channel: string | null;
@@ -97,7 +137,7 @@ export declare namespace IMktOsResults {
             count: number;
         }>;
     }
-    interface IResultCost {
+    export interface IResultCost {
         currency: 'VND';
         sms: {
             sends: number;
@@ -113,24 +153,29 @@ export declare namespace IMktOsResults {
         } | null;
         total: number;
     }
-    interface INextStepCondition {
+    export interface INextStepCondition {
         field: string;
         op: string;
         value: string[];
     }
-    interface IResultNextStep {
+    export interface IResultNextStep {
         received_not_replied: number;
         received_not_returned?: number;
         not_received?: number | null;
-        audience: {
-            target: 'lead' | 'opportunity' | 'customer' | 'subscriber';
-            name: string;
-            filter: {
-                all: INextStepCondition[];
-            };
+        audience: INextStepAudience;
+        clicked_not_converted?: {
+            count: number | null;
+            audience: INextStepAudience;
         };
     }
-    interface ILeadSourceRow {
+    export interface INextStepAudience {
+        target: 'lead' | 'opportunity' | 'customer' | 'subscriber';
+        name: string;
+        filter: {
+            all: INextStepCondition[];
+        };
+    }
+    export interface ILeadSourceRow {
         source: string;
         enrolled: number;
         reached: number;
@@ -139,7 +184,7 @@ export declare namespace IMktOsResults {
         reply_rate: number | null;
         opportunity_rate: number | null;
     }
-    interface IResultReport {
+    export interface IResultReport {
         campaign: {
             id: number;
             name: string | null;
@@ -165,15 +210,16 @@ export declare namespace IMktOsResults {
         };
         cost: IResultCost | null;
         next_step: IResultNextStep;
+        clicks?: IResultClicks;
     }
-    interface IParticipantListQuery {
+    export interface IParticipantListQuery {
         status?: ParticipantStatus;
         step?: PositiveInt;
         reason?: Reason;
         q?: string & tags.MaxLength<100>;
         page?: PositiveInt;
     }
-    interface IParticipantRow {
+    export interface IParticipantRow {
         id: number;
         name: string | null;
         has_email: boolean;
@@ -186,21 +232,24 @@ export declare namespace IMktOsResults {
         replied_at: string | null;
         last_sent_at: string | null;
     }
-    interface IParticipantPage {
+    export interface IParticipantPage {
         items: IParticipantRow[];
         total: number;
         page: number;
         page_size: number;
     }
-    type TimelineEventType = 'enrolled' | 'scheduled' | 'deferred' | 'skipped' | 'sent' | 'failed' | 'replied' | 'converted' | 'exited' | 'task_created' | 'labeled';
-    interface ITimelineEvent {
+    export type TimelineEventType = 'enrolled' | 'scheduled' | 'deferred' | 'skipped' | 'sent' | 'failed' | 'replied' | 'converted' | 'exited' | 'task_created' | 'labeled' | 'link_clicked';
+    export interface ITimelineEvent {
         at: string;
         type: TimelineEventType;
         step_seq: number | null;
         reason: string | null;
         assignee_name?: string | null;
+        channel?: string;
+        display_url?: string;
+        device_type?: string | null;
     }
-    interface IParticipantDetail {
+    export interface IParticipantDetail {
         id: number;
         campaign_id: number;
         name: string | null;
@@ -217,23 +266,23 @@ export declare namespace IMktOsResults {
         } | null;
         events: ITimelineEvent[];
     }
-    interface IParticipantExitRequest {
+    export interface IParticipantExitRequest {
         reason: string & tags.MinLength<1> & tags.MaxLength<200>;
     }
-    interface IParticipantExitResponse {
+    export interface IParticipantExitResponse {
         ok: true;
         item: IParticipantRow;
     }
-    interface IActivityQuery {
+    export interface IActivityQuery {
         type?: ActivityType;
         page?: PositiveInt;
     }
-    interface IActivityActor {
+    export interface IActivityActor {
         kind: 'ai' | 'staff' | 'system';
         staff_id: number | null;
         name: string;
     }
-    interface IActivityItem {
+    export interface IActivityItem {
         at: string;
         type: ActivityType;
         code: string;
@@ -241,13 +290,13 @@ export declare namespace IMktOsResults {
         text: string;
         participant_id: number | null;
     }
-    interface IActivityPage {
+    export interface IActivityPage {
         items: IActivityItem[];
         total: number;
         page: number;
         page_size: number;
     }
-    interface IMarketingLead {
+    export interface IMarketingLead {
         id: Id;
         shop_id: Id;
         branch_id: Id | null;
@@ -269,7 +318,7 @@ export declare namespace IMktOsResults {
         has_phone: boolean;
         has_email: boolean;
     }
-    interface IMarketingJourney {
+    export interface IMarketingJourney {
         participant_id: number;
         campaign_id: number;
         name: string | null;
@@ -287,8 +336,13 @@ export declare namespace IMktOsResults {
             source_event: string;
             occurred_at: string | null;
         }>;
+        clicks?: Array<{
+            at: string | null;
+            step_seq: number | null;
+            display_url: string;
+        }>;
     }
-    interface IMarketingSignal {
+    export interface IMarketingSignal {
         signal_type: string;
         intent_type: string;
         topic_ref: string | null;
@@ -296,16 +350,57 @@ export declare namespace IMktOsResults {
         observed_at: string | null;
         expires_at: string | null;
     }
-    type UnsubscribeRecordType = 'lead' | 'customer';
-    interface IRecordUnsubscribeRequest {
+    type CampaignLinkUrl = string & tags.Pattern<'^[hH][tT][tT][pP][sS]?://'> & tags.MaxLength<2000>;
+    export interface ICampaignLinkStats {
+        clicks: number;
+        visitors_estimated: number;
+        breakdown: {
+            device_type: IClickBreakdownRow[];
+            referrer_app: IClickBreakdownRow[];
+            region_code: IClickBreakdownRow[];
+        };
+    }
+    export interface ICampaignLink {
+        id: number;
+        campaign_id: number;
+        label: string | null;
+        url: string;
+        final_url: string;
+        short_url: string | null;
+        token: string;
+        utm_medium: string;
+        status: 'active' | 'disabled';
+        outside_business_domains: boolean;
+        is_bos_website: boolean;
+        created_at: string;
+        updated_at: string;
+        stats: ICampaignLinkStats;
+    }
+    export interface ICampaignLinkList {
+        items: ICampaignLink[];
+    }
+    export interface ICampaignLinkCreateRequest {
+        url: CampaignLinkUrl;
+        label?: (string & tags.MaxLength<60>) | null;
+    }
+    export interface ICampaignLinkUpdateRequest {
+        url?: CampaignLinkUrl;
+        label?: (string & tags.MaxLength<60>) | null;
+    }
+    export interface ICampaignLinkSaved {
+        ok: true;
+        item: ICampaignLink;
+    }
+    export type UnsubscribeRecordType = 'lead' | 'customer';
+    export interface IRecordUnsubscribeRequest {
         channel: 'sms';
         reason?: string & tags.MaxLength<300>;
     }
-    interface IRecordUnsubscribeResponse {
+    export interface IRecordUnsubscribeResponse {
         ok: true;
         created: boolean;
     }
-    interface IMarketingCustomer {
+    export interface IMarketingCustomer {
         id: Id;
         uuid: string | null;
         shop_id: Id;
@@ -326,7 +421,7 @@ export declare namespace IMktOsResults {
         has_phone: boolean;
         has_email: boolean;
     }
-    interface IMarketingTask {
+    export interface IMarketingTask {
         id: number;
         subject: string;
         status: string;
@@ -339,22 +434,22 @@ export declare namespace IMktOsResults {
         };
         created_at: string | null;
     }
-    interface IRecordMarketing {
+    export interface IRecordMarketing {
         type: 'lead' | 'customer';
         record: IMarketingLead | IMarketingCustomer;
         journeys: IMarketingJourney[];
         signals: IMarketingSignal[];
         tasks?: IMarketingTask[];
     }
-    type ApprovalStatus = 'pending' | 'approved' | 'declined';
-    interface IApprovalListQuery {
+    export type ApprovalStatus = 'pending' | 'approved' | 'declined';
+    export interface IApprovalListQuery {
         view?: 'mine' | 'progress';
         campaign_id?: PositiveInt;
         opportunity_id?: PositiveInt;
         status?: ApprovalStatus;
         page?: PositiveInt;
     }
-    interface IApprovalItem {
+    export interface IApprovalItem {
         campaign_id: number;
         journey_name: string | null;
         opportunity_id: number;
@@ -376,24 +471,24 @@ export declare namespace IMktOsResults {
         others_waiting: number;
         can_decide: boolean;
     }
-    interface IApprovalProgress {
+    export interface IApprovalProgress {
         owner_id: number | null;
         owner_name: string | null;
         pending: number;
         approved: number;
         declined: number;
     }
-    interface IApprovalPage {
+    export interface IApprovalPage {
         items: IApprovalItem[];
         total: number;
         page: number;
         page_size: number;
         progress: IApprovalProgress[] | null;
     }
-    interface IApprovalGetQuery {
+    export interface IApprovalGetQuery {
         campaign_id: PositiveInt;
     }
-    interface IApprovalMessage {
+    export interface IApprovalMessage {
         seq: number;
         channel: string;
         subject?: string;
@@ -404,26 +499,27 @@ export declare namespace IMktOsResults {
         zns_template_id?: number | null;
         params?: Array<Record<string, unknown>>;
     }
-    interface IApprovalDetail extends IApprovalItem {
+    export interface IApprovalDetail extends IApprovalItem {
         messages: IApprovalMessage[];
     }
-    interface IApprovalDecideRequest {
+    export interface IApprovalDecideRequest {
         campaign_id: PositiveInt;
         opportunity_ids?: Array<PositiveInt> & tags.MinItems<1> & tags.MaxItems<100>;
         decision: 'approve' | 'decline';
         reason?: string & tags.MaxLength<300>;
     }
-    interface IApprovalDecided {
+    export interface IApprovalDecided {
         ok: true;
         items: IApprovalItem[];
     }
-    interface IApprovalRemindRequest {
+    export interface IApprovalRemindRequest {
         campaign_id: PositiveInt;
         owner_id?: PositiveInt;
     }
-    interface IApprovalReminded {
+    export interface IApprovalReminded {
         ok: true;
         reminded: number;
     }
+    export {};
 }
 export {};

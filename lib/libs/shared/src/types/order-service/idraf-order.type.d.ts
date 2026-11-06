@@ -113,7 +113,15 @@ export declare namespace IDrafOrder {
         district?: string;
         country?: string;
     }
+    interface ICartAttribution {
+        utm_source?: string;
+        utm_medium?: string;
+        utm_campaign?: string;
+        utm_content?: string;
+        mkt_ref?: string;
+    }
     interface ICompleteCart {
         customer?: ICheckoutCustomer;
+        attribution?: ICartAttribution;
     }
 }

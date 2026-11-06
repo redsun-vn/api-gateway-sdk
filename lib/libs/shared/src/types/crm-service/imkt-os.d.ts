@@ -2,21 +2,21 @@ import { tags } from 'typia';
 import { ISubscription } from '../isubscription';
 type PositiveInt = number & tags.Type<'uint32'> & tags.Minimum<1>;
 export declare namespace IMktOs {
-    interface IEntitlementResponse {
+    export interface IEntitlementResponse {
         mkt_os: ISubscription.IControllerEntitlement;
         crm_package: ISubscription.IControllerEntitlement;
         has_crm_package: boolean;
     }
-    interface IFieldError {
+    export interface IFieldError {
         field: string;
         message: string;
         code?: string;
     }
-    interface IFieldErrorsResult {
+    export interface IFieldErrorsResult {
         ok: false;
         errors: IFieldError[];
     }
-    interface ISettings {
+    export interface ISettings {
         zns_cap_per_day: number;
         total_cap_per_24h: number;
         exclude_sales_activity_days: number;
@@ -29,8 +29,15 @@ export declare namespace IMktOs {
         suggest_customer_inactive_days: number;
         monthly_budget: number | null;
         market_research_enabled?: boolean;
+        link_tracking_enabled?: boolean;
+        utm_tagging_enabled?: boolean;
+        pixel_facebook_id?: string | null;
+        pixel_ga4_id?: string | null;
+        pixel_tiktok_id?: string | null;
+        privacy_policy_url?: string | null;
     }
-    interface ISettingsResponse {
+    type PixelIdInput = string & tags.Pattern<'^[A-Za-z0-9 -]*$'> & tags.MaxLength<40>;
+    export interface ISettingsResponse {
         settings: ISettings;
         saved_at: string | null;
         saved_by: number | null;
@@ -39,11 +46,11 @@ export declare namespace IMktOs {
         spent_month?: string;
         email_layout?: ISettingsEmailLayout | null;
     }
-    interface ISettingsEmailLayout {
+    export interface ISettingsEmailLayout {
         id: number;
         name: string | null;
     }
-    interface ISettingsUpdateData {
+    export interface ISettingsUpdateData {
         zns_cap_per_day?: number;
         total_cap_per_24h?: number;
         exclude_sales_activity_days?: number;
@@ -57,46 +64,52 @@ export declare namespace IMktOs {
         monthly_budget?: number | null;
         market_research_enabled?: boolean;
         email_layout_template_id?: PositiveInt | null;
+        link_tracking_enabled?: boolean;
+        utm_tagging_enabled?: boolean;
+        pixel_facebook_id?: PixelIdInput | null;
+        pixel_ga4_id?: PixelIdInput | null;
+        pixel_tiktok_id?: PixelIdInput | null;
+        privacy_policy_url?: (string & tags.MaxLength<500>) | null;
     }
-    interface ISettingsUpdateRequest {
+    export interface ISettingsUpdateRequest {
         data: ISettingsUpdateData;
     }
-    interface ISettingsSaved {
+    export interface ISettingsSaved {
         ok: true;
         settings: ISettings;
         saved_at: string | null;
         saved_by: number | null;
         email_layout?: ISettingsEmailLayout | null;
     }
-    interface IEmailLayout {
+    export interface IEmailLayout {
         id: number;
         name: string;
         updated_at: string | null;
         hash: string;
     }
-    interface IEmailLayoutsResponse {
+    export interface IEmailLayoutsResponse {
         items: IEmailLayout[];
     }
-    interface IChannelReadiness {
+    export interface IChannelReadiness {
         ready: boolean;
         reason: string | null;
     }
-    interface IZnsReadiness extends IChannelReadiness {
+    export interface IZnsReadiness extends IChannelReadiness {
         disabled_by_shop?: boolean;
     }
-    interface IChannelReadinessResponse {
+    export interface IChannelReadinessResponse {
         email: IChannelReadiness;
         sms: IChannelReadiness;
         zalo_oa: IChannelReadiness;
         zns: IZnsReadiness;
     }
-    type BrandProfileSource = 'ai_hub' | 'mkt_os';
-    interface IBrandProfileAudience {
+    export type BrandProfileSource = 'ai_hub' | 'mkt_os';
+    export interface IBrandProfileAudience {
         name?: string | null;
         description?: string | null;
         need?: string | null;
     }
-    interface IBrandProfileFields {
+    export interface IBrandProfileFields {
         schema_version?: number;
         description?: string | null;
         service_area?: string | null;
@@ -113,28 +126,28 @@ export declare namespace IMktOs {
         signature?: string | null;
         industry_notes?: string[] | null;
     }
-    interface IBrandProfileData {
+    export interface IBrandProfileData {
         brand_name: string | null;
         default_tone: string | null;
         forbidden_words: string[] | null;
         profile: IBrandProfileFields | null;
     }
-    interface IBrandProfileDataInput {
+    export interface IBrandProfileDataInput {
         brand_name?: string | null;
         default_tone?: string | null;
         forbidden_words?: string[] | null;
         profile?: IBrandProfileFields | null;
     }
-    interface IBrandProfileDraft {
+    export interface IBrandProfileDraft {
         data: IBrandProfileDataInput;
         saved_at: string;
         created_by: number | null;
     }
-    interface IBrandProfileQuery {
+    export interface IBrandProfileQuery {
         version?: PositiveInt;
         brand_voice_id?: PositiveInt;
     }
-    interface IBrandProfileResponse {
+    export interface IBrandProfileResponse {
         brand_voice_id: number | null;
         version: number | null;
         saved_at: string | null;
@@ -145,64 +158,64 @@ export declare namespace IMktOs {
         mkt_ready: boolean;
         missing_fields: string[];
     }
-    interface IBrandProfileVersionsQuery {
+    export interface IBrandProfileVersionsQuery {
         brand_voice_id?: PositiveInt;
         page?: PositiveInt;
         page_size?: PositiveInt;
     }
-    interface IBrandProfileVersionItem {
+    export interface IBrandProfileVersionItem {
         version: number;
         source: BrandProfileSource;
         created_by: number | null;
         created_at: string;
     }
-    interface IBrandProfileVersionsResponse {
+    export interface IBrandProfileVersionsResponse {
         items: IBrandProfileVersionItem[];
         total: number;
     }
-    interface IBrandProfileExamples {
+    export interface IBrandProfileExamples {
         schema_version?: number;
         field_examples?: Record<string, string[]>;
         industry_notes?: string[];
         tone_hints?: Record<string, unknown>;
     }
-    interface IBrandProfileExamplesResponse {
+    export interface IBrandProfileExamplesResponse {
         source: 'business_type' | 'category' | 'generic';
         examples: IBrandProfileExamples;
     }
-    interface IBrandProfileDraftRequest {
+    export interface IBrandProfileDraftRequest {
         data: IBrandProfileDataInput;
     }
-    interface IBrandProfileDraftSaved {
+    export interface IBrandProfileDraftSaved {
         ok: true;
         saved_at: string;
     }
-    interface IBrandProfileDraftDeleteQuery {
+    export interface IBrandProfileDraftDeleteQuery {
         brand_voice_id?: PositiveInt;
     }
-    interface IBrandProfileDraftDeleted {
+    export interface IBrandProfileDraftDeleted {
         ok: true;
         deleted: boolean;
     }
-    interface IBrandProfileSaveRequest {
+    export interface IBrandProfileSaveRequest {
         data: IBrandProfileDataInput;
         request_id: string & tags.MinLength<1> & tags.MaxLength<64>;
     }
-    interface IBrandProfileSaved {
+    export interface IBrandProfileSaved {
         ok: true;
         brand_voice_id: number;
         version: number;
     }
-    type UnsubscribeChannel = 'email' | 'sms';
-    type UnsubscribeMethod = 'email_link' | 'one_click' | 'staff_manual';
-    interface IUnsubscribesQuery {
+    export type UnsubscribeChannel = 'email' | 'sms';
+    export type UnsubscribeMethod = 'email_link' | 'one_click' | 'staff_manual';
+    export interface IUnsubscribesQuery {
         channel: UnsubscribeChannel;
         method?: UnsubscribeMethod;
         q?: string;
         page?: PositiveInt;
         page_size?: PositiveInt;
     }
-    interface IUnsubscribeItem {
+    export interface IUnsubscribeItem {
         channel: UnsubscribeChannel;
         recipient_type: 'lead' | 'partner' | 'subscriber';
         recipient_ref: string;
@@ -216,15 +229,15 @@ export declare namespace IMktOs {
         contact_masked?: string | null;
         created_at: string;
     }
-    interface IUnsubscribesResponse {
+    export interface IUnsubscribesResponse {
         items: IUnsubscribeItem[];
         total: number;
     }
-    type CompetitorStatus = 'suggested' | 'confirmed' | 'dropped';
-    interface ICompetitorsQuery {
+    export type CompetitorStatus = 'suggested' | 'confirmed' | 'dropped';
+    export interface ICompetitorsQuery {
         status?: CompetitorStatus;
     }
-    interface ICompetitor {
+    export interface ICompetitor {
         id: number;
         name: string;
         website: string | null;
@@ -234,47 +247,47 @@ export declare namespace IMktOs {
         created_at: string;
         updated_at: string;
     }
-    interface ICompetitorsResponse {
+    export interface ICompetitorsResponse {
         items: ICompetitor[];
     }
-    interface ICompetitorManualCreateRequest {
+    export interface ICompetitorManualCreateRequest {
         name: string;
         website?: string | null;
         fanpage?: string | null;
     }
-    interface ICompetitorConfirmSuggestionRequest {
+    export interface ICompetitorConfirmSuggestionRequest {
         suggestion_id: PositiveInt;
     }
-    type ICompetitorCreateRequest = ICompetitorManualCreateRequest | ICompetitorConfirmSuggestionRequest;
-    interface ICompetitorUpdateRequest {
+    export type ICompetitorCreateRequest = ICompetitorManualCreateRequest | ICompetitorConfirmSuggestionRequest;
+    export interface ICompetitorUpdateRequest {
         name?: string;
         website?: string | null;
         fanpage?: string | null;
         status?: 'confirmed' | 'dropped';
     }
-    interface ICompetitorSaved {
+    export interface ICompetitorSaved {
         ok: true;
         item: ICompetitor;
     }
-    type MarketDigestStatus = 'off' | 'ready' | 'stale' | 'pending' | 'provider_error' | 'empty';
-    interface IMarketDigestSource {
+    export type MarketDigestStatus = 'off' | 'ready' | 'stale' | 'pending' | 'provider_error' | 'empty';
+    export interface IMarketDigestSource {
         url: string;
         source_name: string;
         published_at: string;
     }
-    interface IMarketDigestItem {
+    export interface IMarketDigestItem {
         type: 'competitor' | 'market';
         title: string;
         summary: string;
         fits: string;
         sources: IMarketDigestSource[];
     }
-    interface ICompetitorSuggestionOutcome {
+    export interface ICompetitorSuggestionOutcome {
         status: 'suggested' | 'skipped' | 'failed';
         reason: null | 'missing_service_area' | 'missing_industry' | 'no_places' | 'provider_error' | 'ai_error' | 'not_configured';
         count: number;
     }
-    interface IMarketDigest {
+    export interface IMarketDigest {
         enabled: boolean;
         configured: boolean;
         status: MarketDigestStatus;
@@ -285,10 +298,11 @@ export declare namespace IMktOs {
         can_refresh: boolean;
         competitor_suggestion: ICompetitorSuggestionOutcome | null;
     }
-    interface IMarketDigestRefreshed {
+    export interface IMarketDigestRefreshed {
         ok: true;
         digest: IMarketDigest;
     }
-    type MarketDigestRefreshRefusal = 'already_refreshed' | 'disabled' | 'not_configured' | 'package_inactive';
+    export type MarketDigestRefreshRefusal = 'already_refreshed' | 'disabled' | 'not_configured' | 'package_inactive';
+    export {};
 }
 export {};

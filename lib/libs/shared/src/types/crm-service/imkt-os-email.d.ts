@@ -136,6 +136,11 @@ export declare namespace IMktOsEmail {
         message_seq: number | null;
         block_id?: string;
     }
+    interface IGuardReport {
+        checks: IGuardCheck[];
+        blocked: boolean;
+        tone_unchecked?: boolean;
+    }
     interface IWarning {
         field: string;
         message: string;
