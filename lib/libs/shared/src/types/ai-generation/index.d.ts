@@ -192,7 +192,14 @@ export declare namespace IAiCredit {
         spent_lifetime_cents: number | string;
         balance_credits: number | string;
         spent_lifetime_credits: number | string;
+        purchased_balance?: number | string;
+        plan_balance?: number | string;
+        plan_usable?: number | string;
+        plan_expires_at?: string | null;
+        plan_next_reset_at?: string | null;
     }
+    type CreditBucket = 'plan' | 'purchased' | 'staff_quota';
+    type CreditResetPeriod = 'week' | 'month' | 'year';
     interface ICreditTransaction {
         id?: number | string;
         account_id?: number | string;
@@ -204,8 +211,28 @@ export declare namespace IAiCredit {
         reference_id?: number | string | null;
         metadata?: Record<string, any> | null;
         status?: string;
+        bucket?: CreditBucket;
+        staff_id?: number | string | null;
         createdAt?: Date | string;
         updatedAt?: Date | string;
+    }
+    interface IStaffCreditLimit {
+        staff_id: number | string;
+        credit_limit: number | string;
+        used_in_period: number | string;
+        remaining: number | string;
+        reset_enabled: boolean;
+        reset_period: CreditResetPeriod | null;
+        period_start: string | null;
+        next_reset_at: string | null;
+    }
+    interface IStaffCreditLimitUpsertRequest {
+        credit_limit: number & tags.Type<'int32'> & tags.Minimum<0>;
+        reset_enabled: boolean;
+        reset_period?: CreditResetPeriod | null;
+    }
+    interface IStaffCreditLimitRemoveResponse {
+        success: boolean;
     }
     interface ICreditDataResponse<T> {
         data: T;

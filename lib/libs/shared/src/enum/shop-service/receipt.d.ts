@@ -27,7 +27,8 @@ export declare enum RECEIPT_LINE_ITEM_TYPE_ENUM {
     BRANCH_QUANTITY = "branch_quantity",
     THEME = "theme",
     DOMAIN = "domain",
-    AI_CREDIT_PACKAGE = "ai_credit_package"
+    AI_CREDIT_PACKAGE = "ai_credit_package",
+    AI_CREDIT_RESET = "ai_credit_reset"
 }
 export declare enum RECEIPT_PRIORITY_ENUM {
     URGENT = "urgent",
@@ -50,7 +51,8 @@ export declare enum RECEIPT_TYPE_ENUM {
     REFUND = "refund",
     ADJUSTMENT = "adjustment",
     DIGITAL_PURCHASE = "digital_purchase",
-    AI_CREDIT_PACKAGE = "ai_credit_package"
+    AI_CREDIT_PACKAGE = "ai_credit_package",
+    AI_CREDIT_RESET = "ai_credit_reset"
 }
 export declare enum RECEIPT_PAYMENT_METHOD_ENUM {
     CREDIT_CARD = "credit_card",

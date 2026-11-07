@@ -6,6 +6,11 @@ export declare enum PACKAGE_LEVEL_SUPPORT_ENUM {
     ELITE = "elite",
     LUXURY = "luxury"
 }
+export declare enum CREDIT_AI_RESET_PERIOD_ENUM {
+    WEEK = "week",
+    MONTH = "month",
+    YEAR = "year"
+}
 export declare enum PACKAGE_ADDITION_TYPE_ENUM {
     REPLACE_DURATION = "replace_duration",
     ADD_DURATION = "add_duration",
