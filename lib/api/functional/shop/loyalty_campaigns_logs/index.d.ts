@@ -17,3 +17,19 @@ export declare namespace findLogs {
     };
     const path: (id: string, query: findLogs.Query) => string;
 }
+export declare function findCustomerLogs(connection: IConnection, query: findCustomerLogs.Query): Promise<findCustomerLogs.Output>;
+export declare namespace findCustomerLogs {
+    type Query = Resolved<ICampaign.ICampaignFindCustomerLogs>;
+    type Output = Primitive<IResponse<IResponsePagination<ICampaign.ICampaignCustomerLogResponse>>>;
+    const METADATA: {
+        readonly method: "GET";
+        readonly path: "/shop/loyalty-campaigns-logs";
+        readonly request: null;
+        readonly response: {
+            readonly type: "application/json";
+            readonly encrypted: false;
+        };
+        readonly status: 200;
+    };
+    const path: (query: findCustomerLogs.Query) => string;
+}

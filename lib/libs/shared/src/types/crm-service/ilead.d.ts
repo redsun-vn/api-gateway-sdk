@@ -12,6 +12,7 @@ export declare namespace ICrmLead {
         email?: string & tags.Format<'email'>;
         phone?: string & tags.MaxLength<50>;
         company_name?: string;
+        is_company?: boolean;
         note?: string;
         owner_id?: number | null;
         custom_fields?: Record<string, unknown>;
@@ -23,9 +24,13 @@ export declare namespace ICrmLead {
         sla_priority?: CrmSlaPriority;
         tags?: string[];
     }
-    type ICreateWithAiPrefill = ICreate & {
+    type ICreateWithAiPrefill = ICreate & IStaffConsent & {
         ai_prefill?: ICrmAiAssist.IPrefillCommitRef;
     };
+    interface IStaffConsent {
+        accepts_marketing?: boolean;
+        consent_text_version?: string & tags.MinLength<1> & tags.MaxLength<32>;
+    }
     type IUpdate = Partial<Omit<ICreate, 'owner_id' | 'force_create' | 'force_create_reason' | 'team_id'>> & {
         owner_id?: number | string | null;
     };
@@ -58,6 +63,7 @@ export declare namespace ICrmLead {
         email?: string | null;
         phone?: string | null;
         company_name?: string | null;
+        is_company?: boolean;
         note?: string | null;
         score: number;
         score_breakdown?: Record<string, unknown> | null;
@@ -106,6 +112,9 @@ export declare namespace ICrmLead {
         expected_value?: number;
         expected_close_date?: string & tags.Format<'date'>;
     }
+    interface ISetUnqualified {
+        unqualified: boolean;
+    }
     interface IQualifyResponse {
         lead: ICrmLeadResponse;
         partner_uuid: string;
@@ -113,10 +122,14 @@ export declare namespace ICrmLead {
     }
     interface IImportEntry extends Omit<ICreate, 'shop_id'> {
         _row_index?: number;
+        accepts_marketing?: boolean | string | null;
+        consented_at?: string | null;
+        consent_text_version?: string & tags.MinLength<1> & tags.MaxLength<32>;
     }
     type OnDuplicateMode = 'reject' | 'skip' | 'update_existing' | 'force_create';
     interface IImportRequest {
         leads: Array<IImportEntry> & tags.MinItems<1> & tags.MaxItems<500>;
+        file_name?: string & tags.MaxLength<255>;
         options?: {
             skip_workflow_rules?: boolean;
             on_duplicate?: OnDuplicateMode;
@@ -172,5 +185,30 @@ export declare namespace ICrmLead {
     interface IDigestBacklogResolveResult {
         available: boolean;
         ids: number[];
+    }
+    interface IAwaitingFirstResponseInput {
+        shop_id: number | string;
+        scoped_owner_ids?: number[] | null;
+        owner_id?: number | string;
+        page_size?: number;
+    }
+    interface IAwaitingFirstResponseItem {
+        id: number | string;
+        name: string;
+        phone: string | null;
+        email: string | null;
+        status: CrmLeadStatus;
+        source: CrmLeadSource;
+        owner_id: number | string | null;
+        score: number;
+        bant_score: number;
+        bant_classification: CrmBantClassification;
+        assigned_at: Date | string | null;
+        created_at: Date | string;
+        updated_at: Date | string;
+    }
+    interface IAwaitingFirstResponseResponse {
+        items: IAwaitingFirstResponseItem[];
+        total: number;
     }
 }

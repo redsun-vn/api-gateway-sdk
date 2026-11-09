@@ -115,6 +115,14 @@ export declare namespace ICampaign {
         retry_count: number | string;
         next_retry_at?: string | null;
     }
+    interface ICampaignCustomerExecutionResponse extends ICampaignExecutionResponse {
+        campaign_name?: string | null;
+        origin?: string | null;
+    }
+    interface ICampaignCustomerLogResponse extends ICampaignExecutionLogResponse {
+        campaign_name: string | null;
+        origin: string | null;
+    }
     interface ICampaignUpdateStatus {
         status: CampaignStatus;
     }
@@ -122,6 +130,9 @@ export declare namespace ICampaign {
         page?: number & tags.Type<'uint32'>;
         limit?: number & tags.Type<'uint32'>;
         status?: string;
+    }
+    interface ICampaignFindCustomerLogs extends ICampaignFindLogs {
+        customer_id: string & tags.MinLength<1> & tags.MaxLength<64>;
     }
     interface ICampaignStats {
         active_count: number | string;

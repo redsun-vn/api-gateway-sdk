@@ -18,6 +18,7 @@ export interface IStageResponse {
     allowed_prev_stages: string[] | null;
     updated_at: string;
     sla_stuck_days: number | string;
+    tags?: string[] | null;
 }
 export declare namespace ICrmPipeline {
     interface IFindAllQuery {

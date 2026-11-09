@@ -77,4 +77,5 @@ export * from './icd10.types';
 export * from './translation-service';
 export * from './deposit-service';
 export * from './crm-service';
+export * from './ads-service';
 export * from './istaff-api-key.type';

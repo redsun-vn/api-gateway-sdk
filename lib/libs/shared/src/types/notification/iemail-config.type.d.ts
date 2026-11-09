@@ -157,7 +157,7 @@ export declare namespace IEmailTemplate {
         sender_identity_id?: number | null;
     }
     interface IWarning {
-        code: 'UNKNOWN_VARIABLE';
+        code: 'UNKNOWN_VARIABLE' | 'MISSING_UNSUBSCRIBE';
         message: string;
         variable: string;
     }
@@ -179,7 +179,7 @@ export declare namespace IEmailTemplate {
         label: string;
         sample: unknown;
         scope: 'system' | 'user' | 'action' | 'event';
-        kind: 'scalar' | 'block' | 'link' | 'list';
+        kind: 'scalar' | 'block' | 'link' | 'list' | 'slot';
         item_schema?: IVariable[];
     }
     interface IActionResponse {
@@ -272,6 +272,7 @@ export declare namespace IEmailHistory {
         error_code: string | null;
         error_message: string | null;
         idempotency_key: string | null;
+        source?: string | null;
         sent_at: string | null;
         created_at: string | null;
         updated_at: string | null;

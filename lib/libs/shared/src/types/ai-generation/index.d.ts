@@ -32,6 +32,8 @@ export declare namespace IAiContent {
         review_rating?: number;
         brand_voice_id?: number;
         language?: string;
+        platform?: 'facebook' | 'instagram' | 'tiktok' | 'gbp';
+        cta?: string & tags.MaxLength<80>;
     }
     interface IEstimateRequest {
         content_type: AIContentType;
@@ -177,6 +179,9 @@ export declare namespace IAiCredit {
         reason: string;
         metadata?: Record<string, any>;
     }
+    interface IAdminTopUpRequest extends ITopUpRequest {
+        shop_id: number & tags.Type<'uint64'>;
+    }
     interface IHistoryQuery {
         page?: number;
         limit?: number;
@@ -187,7 +192,14 @@ export declare namespace IAiCredit {
         spent_lifetime_cents: number | string;
         balance_credits: number | string;
         spent_lifetime_credits: number | string;
+        purchased_balance?: number | string;
+        plan_balance?: number | string;
+        plan_usable?: number | string;
+        plan_expires_at?: string | null;
+        plan_next_reset_at?: string | null;
     }
+    type CreditBucket = 'plan' | 'purchased' | 'staff_quota';
+    type CreditResetPeriod = 'week' | 'month' | 'year';
     interface ICreditTransaction {
         id?: number | string;
         account_id?: number | string;
@@ -199,8 +211,28 @@ export declare namespace IAiCredit {
         reference_id?: number | string | null;
         metadata?: Record<string, any> | null;
         status?: string;
+        bucket?: CreditBucket;
+        staff_id?: number | string | null;
         createdAt?: Date | string;
         updatedAt?: Date | string;
+    }
+    interface IStaffCreditLimit {
+        staff_id: number | string;
+        credit_limit: number | string;
+        used_in_period: number | string;
+        remaining: number | string;
+        reset_enabled: boolean;
+        reset_period: CreditResetPeriod | null;
+        period_start: string | null;
+        next_reset_at: string | null;
+    }
+    interface IStaffCreditLimitUpsertRequest {
+        credit_limit: number & tags.Type<'int32'> & tags.Minimum<0>;
+        reset_enabled: boolean;
+        reset_period?: CreditResetPeriod | null;
+    }
+    interface IStaffCreditLimitRemoveResponse {
+        success: boolean;
     }
     interface ICreditDataResponse<T> {
         data: T;
@@ -334,6 +366,9 @@ export declare namespace IAiImage {
     }
 }
 export declare namespace IAiCreditPackage {
+    interface IAdminPurchaseRequest {
+        shop_id: number & tags.Type<'uint64'>;
+    }
     interface ICreditDataResponse<T> {
         data: T;
     }

@@ -26,6 +26,7 @@ export * from './template';
 export * from './sms';
 export * from './clinic';
 export * from './ai';
+export * from './ai-credit';
 export * from './crm';
 export * from './cskh-email-config';
 export * from './email';

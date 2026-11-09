@@ -40,6 +40,7 @@ export declare namespace IVNPayWeb {
         return_url: string & tags.Format<'url'>;
         order_info: string;
         bank_code: string;
+        expire_minutes?: number & tags.Type<'uint32'>;
     }
     interface ICreatePublicPaymentURL {
         shop_id: number & tags.Type<'uint64'>;
@@ -51,6 +52,7 @@ export declare namespace IVNPayWeb {
     }
     interface IResponsePaymentURL {
         payment_url: string & tags.Format<'url'>;
+        expiresAt?: string;
     }
     interface IVNPayVerifyIPNRequest {
         vnp_OrderInfo: string;

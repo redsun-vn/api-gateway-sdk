@@ -5,6 +5,7 @@ export * as ai_summary from "./ai_summary";
 export * as ai_suggestions from "./ai_suggestions";
 export * as scoped from "./scoped";
 export * as team from "./team";
+export * as unqualified from "./unqualified";
 export * as bulk_assign from "./bulk_assign";
 export * as recompute_score from "./recompute_score";
 export * as score_breakdown from "./score_breakdown";

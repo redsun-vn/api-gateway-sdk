@@ -79,6 +79,7 @@ export declare namespace ISmsConfig {
         error_code: string | null;
         error_message: string | null;
         created_at?: string | null;
+        source?: string | null;
     }
     interface IHistoryResponse {
         items: IHistoryItem[];

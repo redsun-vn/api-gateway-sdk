@@ -107,4 +107,59 @@ export declare namespace ISubscription {
         year?: number;
         date?: string;
     }
+    interface ICurrentInput {
+        shop_id: string;
+    }
+    interface ICurrentSubscription {
+        id: number | string;
+        name: string;
+        packageId: number | string | null;
+        isTrial: boolean;
+        active: boolean | null;
+        price: number | string;
+        day: number;
+        month: number | string;
+        startDate: Date | string | null;
+        endDate: Date | string | null;
+        trialEndsAt: Date | string | null;
+        createdAt: Date | string;
+        source: string | null;
+    }
+    interface ICurrentStatus {
+        isExpired: boolean;
+        daysRemain: number;
+    }
+    interface ICurrentPackage {
+        id: number | string;
+        name: string;
+        code: string | null;
+        level: number | null;
+        isTrial: boolean | null;
+        limitUser: number | null;
+        limitBranch: number | null;
+        limitDevice: number | null;
+        creditAI: number | string | null;
+        limitProduct: number | string | null;
+        limitOrderPerMonth: number | string | null;
+        supportLevel: string | null;
+    }
+    interface ICurrentUsage {
+        branchTotalRemain: number;
+        userRemain: number;
+        deviceRemain: number;
+    }
+    interface ICurrentController {
+        id: number | string | null;
+        path: string;
+        name: string;
+        appPlanId: number | string | null;
+    }
+    interface ICurrentResponse {
+        subscription: ICurrentSubscription | null;
+        status: ICurrentStatus;
+        package: ICurrentPackage | null;
+        usage: ICurrentUsage;
+        plans: IPackagePlan.IResponse[];
+        controllers: ICurrentController[];
+    }
 }

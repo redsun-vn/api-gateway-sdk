@@ -4,6 +4,8 @@ export declare namespace IConversation {
         channel?: string;
         status?: string;
         assignment?: 'mine' | 'unassigned' | 'all';
+        awaiting_reply?: boolean;
+        sort?: 'waiting_longest';
         since?: string & tags.Format<'date-time'>;
         partner_uuid?: string;
         page?: number;

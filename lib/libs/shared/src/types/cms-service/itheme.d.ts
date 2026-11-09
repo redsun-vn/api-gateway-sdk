@@ -3,6 +3,29 @@ import { SEOBaseResponse, SEOBase } from '../common.type';
 import { IThemeCategory, IThemeTag } from './itheme-category';
 import { THEME_REVIEW_STATUS } from '../../enum';
 export declare namespace ITheme {
+    interface IRevision {
+        themeId: string;
+        shopId: string | null;
+        themeUpdatedAt: number;
+        documents: Array<{
+            id: string;
+            updatedAt: number | null;
+        }>;
+        page?: IRevisionPage | null;
+        documentId?: string | null;
+    }
+    interface IRevisionPage {
+        id: string;
+        slug: string;
+        template: string | null;
+        type: string;
+        isHome: boolean;
+    }
+    interface IRevisionQuery {
+        documentId?: string & tags.Format<'uuid'>;
+        slug?: string & tags.MinLength<1> & tags.MaxLength<512>;
+        template?: string & tags.MinLength<1> & tags.MaxLength<512>;
+    }
     interface ICreateReq extends SEOBase {
         name: string;
         isSystem?: boolean;

@@ -1,6 +1,6 @@
 import { tags } from 'typia';
 import { BaseResponse } from './common.type';
-import { PACKAGE_LEVEL_SUPPORT_ENUM, PACKAGE_MAIN_SALES_STATUS_ENUM } from '../enum/shop-service';
+import { CREDIT_AI_RESET_PERIOD_ENUM, PACKAGE_LEVEL_SUPPORT_ENUM, PACKAGE_MAIN_SALES_STATUS_ENUM } from '../enum/shop-service';
 import { IPackageAddition } from './ipackage-addition';
 import { IApplicationPlan } from './shop-service';
 import { IResourceAddon } from './iresource-addon';
@@ -29,6 +29,8 @@ export declare namespace IPackage {
         category_business_id?: number | null;
         mainPackageId?: number;
         creditAI?: number;
+        creditAIResetEnabled?: boolean;
+        creditAIResetPeriod?: `${CREDIT_AI_RESET_PERIOD_ENUM}`;
         limitProduct?: number;
         limitOrderPerMonth?: number;
         isFeatured?: boolean;
@@ -65,6 +67,8 @@ export declare namespace IPackage {
         resourceAddons?: IResourceAddon.IResponse[];
         mainPackageId?: number | string | null;
         creditAI?: number | string | null;
+        creditAIResetEnabled?: boolean;
+        creditAIResetPeriod?: CREDIT_AI_RESET_PERIOD_ENUM | string;
         limitProduct?: number | string | null;
         limitOrderPerMonth?: number | string | null;
         isFeatured?: boolean | null;

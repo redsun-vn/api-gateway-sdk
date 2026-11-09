@@ -117,6 +117,7 @@ export declare namespace ICrmFacebook {
     }
     interface IFbStartOAuthQuery {
         frontend_redirect?: string;
+        purpose?: 'social';
     }
     interface IFbStartOAuthResponse {
         redirect_url: string;
@@ -142,5 +143,7 @@ export declare namespace ICrmFacebook {
         connected: boolean;
         expires_at: string | null;
         expiring_soon: boolean;
+        has_ads_read?: boolean;
+        ads_read_requested?: boolean;
     }
 }

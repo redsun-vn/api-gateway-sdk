@@ -250,6 +250,7 @@ export declare namespace IStaff {
         position: string | null;
         user_id: string | null;
         account_status: TAccountStatus;
+        active?: boolean;
     }
     type TImportDuplicateMode = 'skip' | 'update_existing' | 'reject';
     type TImportRowStatus = 'created' | 'updated' | 'skipped' | 'error';

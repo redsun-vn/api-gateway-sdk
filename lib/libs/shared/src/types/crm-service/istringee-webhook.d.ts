@@ -17,10 +17,13 @@ export declare namespace IStringeeWebhook {
         signature: string | null;
         raw_body_b64: string;
         received_at: string;
+        deadline_at?: string;
         remote_ip: string;
     }
-    interface ICalloutDecision {
+    type CalloutBlockReason = 'not_enabled_yet' | 'unknown_token' | 'bad_signature' | 'error' | 'not_enabled' | 'missing_call_id' | 'outbound_not_allowed';
+    interface ICalloutBlock {
         action: 'block';
-        reason: 'not_enabled_yet' | 'unknown_token' | 'bad_signature' | 'error';
+        reason: CalloutBlockReason;
     }
+    type ICalloutDecision = ICalloutBlock;
 }

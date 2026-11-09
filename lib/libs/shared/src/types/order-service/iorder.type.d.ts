@@ -84,6 +84,13 @@ export declare namespace IOrder {
         cancelOnProvider?: boolean;
         source?: ORDER_UPDATE_SOURCE_ENUM;
     }
+    interface IOrderMarketingAttribution {
+        utm_source?: string;
+        utm_medium?: string;
+        utm_campaign?: string;
+        utm_content?: string;
+        mkt_ref?: string;
+    }
     interface IDetailOrderResponse extends BaseResponse {
         shop_id: number | string;
         branch_id: number | string | null;
@@ -152,6 +159,11 @@ export declare namespace IOrder {
         debtPaidAt?: Date | string | null;
         isEInvoice?: boolean;
         isEInvoicePublished?: boolean;
+        utm_source?: string | null;
+        utm_medium?: string | null;
+        utm_campaign?: string | null;
+        utm_content?: string | null;
+        mkt_ref?: string | null;
     }
     interface IDetailOrderPublicResponse extends Omit<IDetailOrderResponse, 'draf_order_id' | 'shift_id' | 'idempotency_key' | 'originTotal' | 'shippingTotal' | 'refundable' | 'refundedTotal' | 'returnedTotal' | 'customerAcceptMarketing' | 'clientIp' | 'discountCode' | 'drafOrder' | 'combiningPromotions'> {
         lineItems?: ILineItem.IDetailLineItemPublicResponse[] | null;

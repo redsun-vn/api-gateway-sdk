@@ -69,6 +69,15 @@ export declare namespace IFile {
         space_id?: string | number | null;
         buffer: ArrayBuffer;
     }
+    interface IUploadChunk {
+        upload_id: string;
+        offset: number;
+        data: string;
+    }
+    type IUploadComplete = Omit<IUploadToService, 'buffer'> & {
+        upload_id: string;
+        sha256: string;
+    };
     interface IResponse extends IFile.IBase, BaseResponse {
         status: FileStatus;
         parent_id?: string | number | null;
