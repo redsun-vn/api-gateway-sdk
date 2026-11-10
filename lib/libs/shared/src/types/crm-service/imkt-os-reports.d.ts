@@ -100,6 +100,7 @@ export declare namespace IMktOsReports {
         cost_per_result: number | null;
         revenue_per_cost: number | null;
         lift: IMktOsResults.ILift | null;
+        advice: IMktOsResults.IAdvice[];
         counts_only: boolean;
     }
     interface ICompanyReport {

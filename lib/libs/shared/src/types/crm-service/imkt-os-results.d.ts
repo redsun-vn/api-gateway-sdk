@@ -215,6 +215,7 @@ export declare namespace IMktOsResults {
     }
     export interface IStepOutcome {
         activity_id: number;
+        seq: number;
         delivered: number;
         replied: number;
         unsubscribed: number;
@@ -239,6 +240,12 @@ export declare namespace IMktOsResults {
         };
         steps: IStepOutcome[];
         lift: ILift | null;
+        advice: IAdvice[];
+    }
+    export interface IAdvice {
+        code: 'lift_negative' | 'lift_positive' | 'lift_unsure' | 'unsubscribe_high' | 'no_result' | 'click_low' | 'cost_high' | 'doing_well';
+        text: string;
+        step_seq?: number;
     }
     export interface ILiftGroup {
         people: number;
