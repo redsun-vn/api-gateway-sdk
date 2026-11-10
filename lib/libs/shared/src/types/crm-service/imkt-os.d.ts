@@ -28,6 +28,7 @@ export declare namespace IMktOs {
         suggest_opp_no_contact_days: number;
         suggest_customer_inactive_days: number;
         monthly_budget: number | null;
+        holdout_pct?: number;
         market_research_enabled?: boolean;
         link_tracking_enabled?: boolean;
         utm_tagging_enabled?: boolean;
@@ -62,6 +63,7 @@ export declare namespace IMktOs {
         suggest_opp_no_contact_days?: number;
         suggest_customer_inactive_days?: number;
         monthly_budget?: number | null;
+        holdout_pct?: number;
         market_research_enabled?: boolean;
         email_layout_template_id?: PositiveInt | null;
         link_tracking_enabled?: boolean;

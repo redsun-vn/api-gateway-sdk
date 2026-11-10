@@ -211,6 +211,50 @@ export declare namespace IMktOsResults {
         cost: IResultCost | null;
         next_step: IResultNextStep;
         clicks?: IResultClicks;
+        effectiveness?: IResultEffectiveness;
+    }
+    export interface IStepOutcome {
+        activity_id: number;
+        delivered: number;
+        replied: number;
+        unsubscribed: number;
+        results: number;
+        result_value: number;
+    }
+    export interface IResultEffectiveness {
+        delivered: number;
+        results: number;
+        revenue: number;
+        revenue_per_recipient: number | null;
+        message_cost: number;
+        ai_credits: number;
+        credit_price_vnd: number | null;
+        ai_cost: number | null;
+        cost_per_result: number | null;
+        revenue_per_cost: number | null;
+        time_to_result: {
+            median_days: number | null;
+            count: number;
+            median_hidden: boolean;
+        };
+        steps: IStepOutcome[];
+        lift: ILift | null;
+    }
+    export interface ILiftGroup {
+        people: number;
+        results: number;
+        revenue: number;
+        rate: number | null;
+    }
+    export interface ILift {
+        treatment: ILiftGroup;
+        control: ILiftGroup;
+        lift_points: number | null;
+        ci_low: number | null;
+        ci_high: number | null;
+        conclusive: boolean | null;
+        revenue_per_person_diff: number | null;
+        counts_only: boolean;
     }
     export interface IParticipantListQuery {
         status?: ParticipantStatus;

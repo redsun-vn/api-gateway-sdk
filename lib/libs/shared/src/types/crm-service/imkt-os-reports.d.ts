@@ -1,4 +1,5 @@
 import { tags } from 'typia';
+import { IMktOsResults } from './imkt-os-results';
 type DateOnly = string & tags.Pattern<'^\\d{4}-\\d{2}-\\d{2}$'>;
 export declare namespace IMktOsReports {
     type Tab = 'mine' | 'staff' | 'company';
@@ -98,7 +99,7 @@ export declare namespace IMktOsReports {
         ai_cost: number | null;
         cost_per_result: number | null;
         revenue_per_cost: number | null;
-        lift: null;
+        lift: IMktOsResults.ILift | null;
         counts_only: boolean;
     }
     interface ICompanyReport {
@@ -135,7 +136,7 @@ export declare namespace IMktOsReports {
             message_cost: number;
             ai_cost: number | null;
         }>;
-        lift: null;
+        lift: IMktOsResults.ILift | null;
     }
 }
 export {};
