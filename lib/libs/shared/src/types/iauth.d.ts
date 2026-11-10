@@ -55,6 +55,9 @@ export declare namespace IAuth {
         user_id: string & tags.Format<'uuid'>;
         otp?: string;
     }
+    interface IPhoneStatusResponse {
+        exists: boolean;
+    }
     interface IRegisterTemporaryResponse {
         verification_id: string & tags.Format<'uuid'>;
         otp?: string;

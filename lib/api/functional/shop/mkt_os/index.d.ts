@@ -10,6 +10,7 @@ export * as email from "./email";
 export * as email_layouts from "./email_layouts";
 export * as records from "./records";
 export * as approvals from "./approvals";
+export * as reports from "./reports";
 export * as entitlement from "./entitlement";
 export * as settings from "./settings";
 export * as channels from "./channels";

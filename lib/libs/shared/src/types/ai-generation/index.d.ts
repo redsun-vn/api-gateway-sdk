@@ -234,6 +234,17 @@ export declare namespace IAiCredit {
     interface IStaffCreditLimitRemoveResponse {
         success: boolean;
     }
+    interface IMyBalanceResponse {
+        spendable: number;
+        shop_balance: number;
+        limit: {
+            credit_limit: number;
+            used_in_period: number;
+            remaining: number;
+            reset_period: CreditResetPeriod | null;
+            next_reset_at: string | null;
+        } | null;
+    }
     interface ICreditDataResponse<T> {
         data: T;
     }
