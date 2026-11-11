@@ -46,7 +46,7 @@ export declare namespace ISocialAutomation {
         name: string & tags.MinLength<1> & tags.MaxLength<120>;
         body: string & tags.MinLength<1> & tags.MaxLength<2000>;
         is_default?: boolean;
-        platforms?: (ISocialChannel.Platform[] & tags.MinItems<1> & tags.MaxItems<4>) | null;
+        platforms?: (ISocialChannel.Platform[] & tags.MinItems<1> & tags.MaxItems<5>) | null;
     }
     type ISignatureUpdate = Partial<ISignatureCreate>;
     interface ISignatureView {

@@ -1,7 +1,7 @@
 import { tags } from 'typia';
 export declare namespace ISocialChannel {
-    type Platform = 'facebook' | 'instagram' | 'tiktok' | 'gbp';
-    type GrantPlatform = 'tiktok' | 'google';
+    type Platform = 'facebook' | 'instagram' | 'tiktok' | 'gbp' | 'linkedin';
+    type GrantPlatform = 'tiktok' | 'google' | 'linkedin';
     type ChannelStatus = 'active' | 'reauth_needed' | 'revoked';
     type GrantStatus = 'pending_confirmation' | 'listing_targets' | 'active' | 'reauth_needed' | 'revoked';
     type MetricChannelName = 'followers' | 'impressions' | 'reach' | 'engagements' | 'views';
