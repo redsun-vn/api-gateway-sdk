@@ -15,6 +15,7 @@ export declare namespace IPackage {
         month: number & tags.Type<'uint64'>;
         metadata?: string[];
         isTrial?: boolean;
+        isFree?: boolean;
         limitUser?: number;
         limitDevice?: number;
         limitBranch?: number;
@@ -55,6 +56,7 @@ export declare namespace IPackage {
         day: number;
         month: number;
         isTrial?: boolean | null;
+        isFree?: boolean | null;
         metadata?: string[] | null;
         limitUser?: number | null;
         limitDevice?: number | null;

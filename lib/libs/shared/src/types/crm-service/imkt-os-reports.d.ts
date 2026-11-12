@@ -14,6 +14,7 @@ export declare namespace IMktOsReports {
     interface IAccess {
         tabs: Tab[];
         all_staff: boolean;
+        staff_ids: number[] | null;
     }
     interface IPeriod {
         from: string;

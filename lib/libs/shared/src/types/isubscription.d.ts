@@ -41,6 +41,18 @@ export declare namespace ISubscription {
             price: number | string;
         }>;
     }
+    interface ICreateFreeInput {
+        shopId: number;
+        packageId: number;
+    }
+    interface IFreeResponse {
+        id: number | string;
+        shopId: number | string;
+        packageId: number | string;
+        name: string;
+        startDate: Date | string | null;
+        endDate: Date | string | null;
+    }
     interface IShopUpdate {
         paymentCode?: string;
         email?: string & tags.Format<'email'>;
@@ -115,6 +127,7 @@ export declare namespace ISubscription {
         name: string;
         packageId: number | string | null;
         isTrial: boolean;
+        isFree?: boolean;
         active: boolean | null;
         price: number | string;
         day: number;
@@ -135,6 +148,7 @@ export declare namespace ISubscription {
         code: string | null;
         level: number | null;
         isTrial: boolean | null;
+        isFree?: boolean | null;
         limitUser: number | null;
         limitBranch: number | null;
         limitDevice: number | null;

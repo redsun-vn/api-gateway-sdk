@@ -69,7 +69,7 @@ export declare namespace ISaleOrderApproval {
         tiers?: ITier[];
         events?: IEvent[];
         sale_order_code?: string | null;
-        my_tier_index?: string;
+        my_tier_index?: number;
         actionable?: boolean;
     }
     interface IListResponse {

@@ -20,6 +20,7 @@ export declare namespace IBosvideoPlans {
         description: string;
     }
     interface IPlan {
+        packageId: number;
         code: string;
         mainCode: string;
         name: string;
@@ -29,6 +30,7 @@ export declare namespace IBosvideoPlans {
         limitUser: number | null;
         limitBranch: number | null;
         features: IFeature[];
+        isFree: boolean;
         cycles: ICycle[];
     }
 }

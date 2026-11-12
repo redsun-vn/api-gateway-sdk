@@ -27,6 +27,10 @@ export declare namespace IConsumerCheckout {
     interface ITrialResponse {
         trialEndsAt: string;
     }
+    interface IFreeResponse {
+        planName: string;
+        endDate: string;
+    }
     type PaymentState = 'pending' | 'expired' | 'paid' | 'failed' | 'review';
     interface IActivation {
         done: boolean;
