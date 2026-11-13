@@ -200,6 +200,17 @@ export declare namespace IMktOsToday {
             returned_customers: number;
             revenue: number;
             cost: number;
+            previous: {
+                from: string;
+                to: string;
+                returned_customers: number;
+                revenue: number;
+                cost: number;
+            };
+        };
+        scope: {
+            all_staff: boolean;
+            staff_ids: number[] | null;
         };
     }
 }
