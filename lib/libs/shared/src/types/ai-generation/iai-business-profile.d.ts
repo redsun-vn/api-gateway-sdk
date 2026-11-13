@@ -2,6 +2,10 @@ import { tags } from 'typia';
 import { IMktOs } from '../crm-service/imkt-os';
 type PositiveInt = number & tags.Type<'uint32'> & tags.Minimum<1>;
 export declare namespace IAiBusinessProfile {
+    type BrandReadingLevel = 'simple' | 'standard' | 'advanced';
+    interface IDataInput extends Omit<IMktOs.IBrandProfileDataInput, 'reading_level'> {
+        reading_level?: BrandReadingLevel | null;
+    }
     interface IQuery {
         version?: PositiveInt;
         brand_voice_id?: PositiveInt;
@@ -12,7 +16,7 @@ export declare namespace IAiBusinessProfile {
     type IVersionsQuery = IMktOs.IBrandProfileVersionsQuery;
     interface IDraftSaveRequest {
         brand_voice_id?: PositiveInt | null;
-        data: IMktOs.IBrandProfileDataInput;
+        data: IDataInput;
     }
     type IDraftDeleteQuery = IMktOs.IBrandProfileDraftDeleteQuery;
     interface ISaveRequest extends IDraftSaveRequest {

@@ -120,6 +120,7 @@ export declare namespace IMktOs {
         service_area?: string | null;
         market_scope?: BrandMarketScope | null;
         target_countries?: string[] | null;
+        industry_keywords?: string[] | null;
         positioning?: string | null;
         differentiators?: string[] | null;
         key_offerings?: string[] | null;
