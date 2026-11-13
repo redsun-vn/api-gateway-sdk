@@ -19,3 +19,7 @@ export declare enum AiAgentPermission {
     SALARY_REPORT = "ai_agent-salary_report",
     FNB_REPORT = "ai_agent-fnb_report"
 }
+export declare enum AiBrandVoicePermission {
+    VIEW = "ai_brandvoice-view",
+    MANAGE = "ai_brandvoice-manage"
+}

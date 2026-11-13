@@ -97,6 +97,7 @@ export declare namespace IMktOsRun {
     }
     interface IArtifactUpdateContent {
         messages?: IEmailMessageEdit[];
+        tone_set_id?: number | null | '';
         [key: string]: unknown;
     }
     interface IEmailMessageEdit {

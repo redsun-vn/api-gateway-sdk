@@ -1,3 +1,4 @@
+export * from './iai-business-profile';
 import { tags } from 'typia';
 import { AIContentIndustry, AIContentType, AIContentTone, AIImageContentType, AIImageStyle, AIImageQuality, AIImageProvider, AIImageRenderingSpeed, AIImageIdeogramStyleType, AIImageOperation } from '../../enum';
 export interface IAiPaginationMeta {
@@ -162,6 +163,8 @@ export declare namespace IAiContent {
         id: number | string;
         shop_id: number | string;
         is_default: boolean;
+        kind?: 'business' | 'tone_set';
+        name?: string | null;
         brand_name: string | null;
         approved_phrases: string[] | null;
         forbidden_words: string[] | null;

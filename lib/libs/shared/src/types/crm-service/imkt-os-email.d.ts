@@ -118,6 +118,8 @@ export declare namespace IMktOsEmail {
     }
     interface IContent {
         messages: IMessage[];
+        tone_set_id?: number;
+        tone_set_version?: number;
         email_layout?: {
             template_id: number;
             name: string;

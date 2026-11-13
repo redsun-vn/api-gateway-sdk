@@ -107,6 +107,8 @@ export declare namespace IMktOs {
         zns: IZnsReadiness;
     }
     export type BrandProfileSource = 'ai_hub' | 'mkt_os';
+    export type BrandMarketScope = 'local' | 'national' | 'international';
+    export type BrandVoiceKind = 'business' | 'tone_set';
     export interface IBrandProfileAudience {
         name?: string | null;
         description?: string | null;
@@ -116,6 +118,8 @@ export declare namespace IMktOs {
         schema_version?: number;
         description?: string | null;
         service_area?: string | null;
+        market_scope?: BrandMarketScope | null;
+        target_countries?: string[] | null;
         positioning?: string | null;
         differentiators?: string[] | null;
         key_offerings?: string[] | null;
@@ -134,12 +138,20 @@ export declare namespace IMktOs {
         default_tone: string | null;
         forbidden_words: string[] | null;
         profile: IBrandProfileFields | null;
+        approved_phrases?: string[] | null;
+        custom_instructions?: string | null;
+        reading_level?: string | null;
+        industry?: string | null;
     }
     export interface IBrandProfileDataInput {
         brand_name?: string | null;
         default_tone?: string | null;
         forbidden_words?: string[] | null;
         profile?: IBrandProfileFields | null;
+        approved_phrases?: string[] | null;
+        custom_instructions?: string | null;
+        reading_level?: string | null;
+        industry?: string | null;
     }
     export interface IBrandProfileDraft {
         data: IBrandProfileDataInput;
@@ -160,6 +172,23 @@ export declare namespace IMktOs {
         draft: IBrandProfileDraft | null;
         mkt_ready: boolean;
         missing_fields: string[];
+        tone_set?: IBrandToneSetRef | null;
+        tone_sets?: IBrandToneSetSummary[];
+    }
+    export interface IBrandToneSetSummary {
+        brand_voice_id: number;
+        kind: BrandVoiceKind;
+        name: string;
+        is_default: boolean;
+        version: number | null;
+        saved_at: string | null;
+        missing_fields: string[];
+    }
+    export interface IBrandToneSetRef {
+        brand_voice_id: number;
+        version: number | null;
+        name: string;
+        is_default: boolean;
     }
     export interface IBrandProfileVersionsQuery {
         brand_voice_id?: PositiveInt;
