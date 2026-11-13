@@ -6,6 +6,7 @@ export * as meta from "./meta";
 export * as oauth from "./oauth";
 export * as grants from "./grants";
 export * as tiktok from "./tiktok";
+export * as posting_times from "./posting_times";
 export declare function list(connection: IConnection): Promise<list.Output>;
 export declare namespace list {
     type Output = Primitive<IResponse<ISocialChannel.IList>>;

@@ -20,8 +20,12 @@ export declare namespace ISocialChannel {
         last_error_code: string | null;
         refresh_expiring_soon: boolean;
         refresh_expires_at: string | null;
+        posting_times: string[];
         created_at: string;
         revoked_at: string | null;
+    }
+    interface IPostingTimesUpdate {
+        times: (string & tags.Pattern<'^([01][0-9]|2[0-3]):[0-5][0-9]$'>)[] & tags.MaxItems<24>;
     }
     interface ITikTokCreatorInfo {
         channel_id: string;

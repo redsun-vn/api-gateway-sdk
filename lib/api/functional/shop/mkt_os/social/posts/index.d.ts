@@ -2,6 +2,7 @@ import type { IConnection, Resolved, Primitive } from "@nestia/fetcher";
 import type { IAdsCommon } from "../../../../../../libs/shared/src/types/ads-service/iads-common";
 import type { ISocialPost } from "../../../../../../libs/shared/src/types/ads-service/isocial-post";
 import type { IResponse } from "../../../../../../libs/shared/src/types/common.type";
+export * as tags from "./tags";
 export * as notes from "./notes";
 export * as targets from "./targets";
 export * as publish_now from "./publish_now";
@@ -154,7 +155,7 @@ export declare namespace calendar {
 }
 export declare function create(connection: IConnection, body: create.Input): Promise<create.Output>;
 export declare namespace create {
-    type Input = Resolved<ISocialPost.IContent>;
+    type Input = Resolved<ISocialPost.ICreate>;
     type Output = Primitive<IResponse<ISocialPost.IView>>;
     const METADATA: {
         readonly method: "POST";

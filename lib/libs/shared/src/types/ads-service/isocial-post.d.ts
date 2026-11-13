@@ -38,8 +38,33 @@ export declare namespace ISocialPost {
         repeat_rule?: IRepeatRule | null;
         set_id?: IAdsCommon.Id | null;
     }
-    type ICreate = IContent;
+    interface ICreate extends IContent {
+        tag_ids?: IAdsCommon.Id[] & tags.MaxItems<10>;
+    }
     type IUpdate = IContent;
+    interface ITagsSet {
+        tag_ids: IAdsCommon.Id[] & tags.MaxItems<10>;
+    }
+    interface INextSlotQuery {
+        channel_ids: string & tags.Pattern<'^[1-9][0-9]{0,18}(,[1-9][0-9]{0,18}){0,19}$'>;
+    }
+    interface INextSlot {
+        at: string;
+        at_vn: string;
+    }
+    interface ITagView {
+        id: string;
+        name: string;
+        color: string;
+    }
+    interface ITagCreate {
+        name: string & tags.MinLength<1> & tags.MaxLength<40>;
+        color: string & tags.Pattern<'^#[0-9A-Fa-f]{6}$'>;
+    }
+    interface ITagUpdate {
+        name?: string & tags.MinLength<1> & tags.MaxLength<40>;
+        color?: string & tags.Pattern<'^#[0-9A-Fa-f]{6}$'>;
+    }
     interface ISchedule {
         scheduled_at?: Instant;
         repeat_rule?: IRepeatRule | null;
@@ -71,6 +96,7 @@ export declare namespace ISocialPost {
     interface IListQuery {
         status?: Status[] & tags.MaxItems<10>;
         channel_id?: IAdsCommon.Id;
+        tag_id?: IAdsCommon.Id;
         from?: Instant;
         to?: Instant;
         page?: number & tags.Type<'uint32'>;
@@ -80,6 +106,7 @@ export declare namespace ISocialPost {
         from: Instant;
         to: Instant;
         channel_id?: IAdsCommon.Id;
+        tag_id?: IAdsCommon.Id;
     }
     interface IMedia {
         file_id: string;
@@ -143,6 +170,7 @@ export declare namespace ISocialPost {
         created_at: string;
         updated_at: string;
         targets: ITargetView[];
+        tags: ITagView[];
     }
     interface IPage {
         items: IView[];
@@ -162,6 +190,7 @@ export declare namespace ISocialPost {
         series_id: string | null;
         late: boolean;
         targets: ICalendarTarget[];
+        tags: ITagView[];
     }
     interface INoteView {
         id: string;

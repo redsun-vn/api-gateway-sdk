@@ -3,9 +3,10 @@ import { ISubscription } from '../isubscription';
 type PositiveInt = number & tags.Type<'uint32'> & tags.Minimum<1>;
 export declare namespace IMktOs {
     export interface IEntitlementResponse {
+        controllers: string[];
+        has_crm_package: boolean;
         mkt_os: ISubscription.IControllerEntitlement;
         crm_package: ISubscription.IControllerEntitlement;
-        has_crm_package: boolean;
     }
     export interface IFieldError {
         field: string;
