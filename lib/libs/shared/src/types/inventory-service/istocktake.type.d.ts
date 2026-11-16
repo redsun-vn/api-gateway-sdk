@@ -25,13 +25,13 @@ export declare namespace IStocktake {
     }
     interface IStocktakeResponse extends BaseResponse {
         shop_id: number | string | null;
-        warehouse_id: number | string | null;
-        stock_location_id: number | string | null;
+        warehouse_id?: number | string | null;
+        stock_location_id?: number | string | null;
         code: string;
         name: string;
-        note?: string;
+        note?: string | null;
         totalLine?: number | string;
-        type: string;
+        type?: string;
         status: string;
         stocktakeDate: string | null;
         warehouse?: IWarehouse.IWarehouseResponse | null;

@@ -1,9 +1,9 @@
 import type { IConnection, Resolved, Primitive } from "@nestia/fetcher";
 import type { ICrmStage } from "../../../../../libs/shared/src/types/admin-service/crm/crm-stage";
 import type { IQuery, IResponse, IResponsePagination } from "../../../../../libs/shared/src/types/common.type";
+export * as winning from "./winning";
 export * as team from "./team";
 export * as company from "./company";
-export * as winning from "./winning";
 export declare function findAll(connection: IConnection, query: findAll.Query): Promise<findAll.Output>;
 export declare namespace findAll {
     type Query = Resolved<IQuery>;

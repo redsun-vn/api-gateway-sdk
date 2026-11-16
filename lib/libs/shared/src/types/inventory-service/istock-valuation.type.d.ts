@@ -16,9 +16,9 @@ export declare namespace IStockValuation {
         shop_id: number | string | null;
         variant_id: number | string | null;
         stock_location_id: number | string | null;
-        stock_move_id: number | string | null;
+        stock_move_id?: number | string | null;
         referenceType: StockValuationReferenceType;
-        referenceId: number | string | null;
+        referenceId?: number | string | null;
         quantity: number | string;
         unitCost: number | string;
         value: number | string;

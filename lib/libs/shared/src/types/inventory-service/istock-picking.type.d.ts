@@ -29,10 +29,10 @@ export declare namespace IStockPicking {
     interface IUpdateStockPicking extends Omit<Partial<ICreateStockPicking>, 'shop_id' | 'picking_type_id'> {
     }
     interface IStockPickingResponse extends BaseResponse {
-        shop_id: number | string | null;
-        location_src_id: number | string | null;
-        location_dest_id: number | string | null;
-        picking_type_id: number | string | null;
+        shop_id?: number | string | null;
+        location_src_id?: number | string | null;
+        location_dest_id?: number | string | null;
+        picking_type_id?: number | string | null;
         picking_address_id?: number | string | null;
         partner_id?: number | string | null;
         updated_by?: number | string | null;
@@ -42,7 +42,7 @@ export declare namespace IStockPicking {
         referent_id?: number | string | null;
         name: string;
         note?: string | null;
-        moveType: string;
+        moveType?: string;
         state?: string;
         priority?: number | string;
         dateScheduled?: string | null;

@@ -1,9 +1,9 @@
 import type { IConnection, Resolved, Primitive } from "@nestia/fetcher";
 import type { ICRMBudgetExpense } from "../../../../../../libs/shared/src/types/admin-service/crm/crm-expense";
 import type { IQuery, IResponse, IResponsePagination } from "../../../../../../libs/shared/src/types/common.type";
+export * as stats from "./stats";
 export * as approve from "./approve";
 export * as reject from "./reject";
-export * as stats from "./stats";
 export declare function findAllExpenses(connection: IConnection, budgetId: string, query: findAllExpenses.Query): Promise<findAllExpenses.Output>;
 export declare namespace findAllExpenses {
     type Query = Resolved<IQuery>;

@@ -57,8 +57,8 @@ export declare namespace IStockDestroy {
         variant_id: number | string | null;
         uom_uom_id: number | string | null;
         stock_destroy_id: number | string | null;
-        stock_lot_id: number | string | null;
-        barcode: string;
+        stock_lot_id?: number | string | null;
+        barcode?: string | null;
         quantity: number | string;
         unitCost: number | string;
         amount: number | string;
@@ -66,20 +66,20 @@ export declare namespace IStockDestroy {
     interface IStockDestroyResponse extends BaseResponse {
         shop_id: number | string | null;
         staff_id: number | string | null;
-        approver_staff_id: number | string | null;
+        approver_staff_id?: number | string | null;
         warehouse_id: number | string | null;
         stock_location_id: number | string | null;
-        stock_picking_id: number | string | null;
+        stock_picking_id?: number | string | null;
         code: string;
         name: string;
         reason: string;
-        rejectedReason: string | null;
-        note: string;
+        rejectedReason?: string | null;
+        note?: string | null;
         totalLine: number | string;
         totalAmount: number | string;
         state: StockDestroyState;
         destroyDate: Date | string;
-        approvedAt: Date | string | null;
+        approvedAt?: Date | string | null;
         warehouse?: IWarehouse.IWarehouseResponse | null;
         location?: IStockLocation.IStockLocationResponse | null;
         lines?: IStockDestroyLineResponse[];

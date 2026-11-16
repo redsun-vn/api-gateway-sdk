@@ -40,7 +40,7 @@ export declare namespace IWarehouse {
         group_warehouse_id?: number | string | null;
         code: string;
         name: string;
-        abbreviation?: string;
+        abbreviation?: string | null;
         country?: string | null;
         province?: string | null;
         state?: string | null;

@@ -50,8 +50,8 @@ export declare namespace IGoodsReceipt {
         variant_id: number | string | null;
         uom_uom_id: number | string | null;
         goods_receipt_id: number | string | null;
-        stock_lot_id: number | string | null;
-        barcode: string;
+        stock_lot_id?: number | string | null;
+        barcode?: string | null;
         quantity: number | string;
         receivedQuantity: number | string;
         unitCost: number | string;
@@ -60,14 +60,14 @@ export declare namespace IGoodsReceipt {
     interface IGoodsReceiptResponse extends BaseResponse {
         shop_id: number | string | null;
         staff_id: number | string | null;
-        supplier_id: number | string | null;
+        supplier_id?: number | string | null;
         warehouse_id: number | string | null;
         stock_location_id: number | string | null;
-        stock_picking_id: number | string | null;
+        stock_picking_id?: number | string | null;
         code: string;
         name: string;
-        supplierInvoiceNo: string;
-        note: string;
+        supplierInvoiceNo?: string | null;
+        note?: string | null;
         totalLine: number | string;
         totalAmount: number | string;
         state: GoodsReceiptState;

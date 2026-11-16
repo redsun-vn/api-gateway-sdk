@@ -42,13 +42,13 @@ export declare namespace IStockLot {
         shop_id: number | string | null;
         warehouse_id?: number | string | null;
         stock_quantity_id?: number | string | null;
-        partner_id: number | string | null;
-        product_id: number | string | null;
-        variant_id: number | string | null;
+        partner_id?: number | string | null;
+        product_id?: number | string | null;
+        variant_id?: number | string | null;
         name: string;
         state: string;
-        note?: string;
-        internalReference?: string;
+        note?: string | null;
+        internalReference?: string | null;
         cost?: number | string;
         quantity?: number | string;
         originQuantity?: number | string;

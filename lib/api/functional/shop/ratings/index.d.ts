@@ -1,8 +1,8 @@
 import type { IConnection, Resolved, Primitive } from "@nestia/fetcher";
 import type { IRating } from "../../../../libs/shared/src/types/comment-service/irating.type";
 import type { IQuery, IResponse, IResponsePagination } from "../../../../libs/shared/src/types/common.type";
-export * as criteria from "./criteria";
 export * as statistics from "./statistics";
+export * as criteria from "./criteria";
 export * as toggle_visibility from "./toggle_visibility";
 export declare function findAll(connection: IConnection, query: findAll.Query): Promise<findAll.Output>;
 export declare namespace findAll {
