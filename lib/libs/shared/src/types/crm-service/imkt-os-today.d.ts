@@ -131,6 +131,7 @@ export declare namespace IMktOsToday {
         submitted_by: number | null;
         submitted_by_name: string | null;
         submitted_at: string | null;
+        reapproval: boolean;
     }
     interface ITodoDraft {
         kind: 'draft';
