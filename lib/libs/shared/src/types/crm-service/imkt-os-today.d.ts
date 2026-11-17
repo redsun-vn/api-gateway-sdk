@@ -123,6 +123,15 @@ export declare namespace IMktOsToday {
         budget_scope?: IMktOsRun.BudgetScope | null;
         resumes_on?: string | null;
     }
+    interface ITodoAwaitingMyApproval {
+        kind: 'awaiting_my_approval';
+        campaign_id: number;
+        run_id: number;
+        name: string;
+        submitted_by: number | null;
+        submitted_by_name: string | null;
+        submitted_at: string | null;
+    }
     interface ITodoDraft {
         kind: 'draft';
         run_id: number;
@@ -130,7 +139,7 @@ export declare namespace IMktOsToday {
         ui_stage: string;
         updated_at: string;
     }
-    type Todo = ITodoBudgetExhausted | ITodoAutoPaused | ITodoDraft;
+    type Todo = ITodoBudgetExhausted | ITodoAutoPaused | ITodoAwaitingMyApproval | ITodoDraft;
     interface IWaitingItem {
         campaign_id: number;
         run_id: number;
