@@ -41,6 +41,7 @@ export declare namespace IMktOsAudience {
         created_at: string;
         updated_at: string;
         archived_at: string | null;
+        filter?: IFilter;
     }
     interface IListResponse {
         items: ISummary[];
