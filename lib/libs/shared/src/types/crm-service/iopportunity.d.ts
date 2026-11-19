@@ -4,6 +4,7 @@ import { CrmOpportunityVisibility } from '../../enum/crm-service/opportunity';
 import { CrmSlaPriority } from '../../enum/crm-service/sla';
 export declare namespace ICrmOpportunity {
     interface ICreate {
+        idempotency_key?: string & tags.MaxLength<100>;
         owning_branch_id?: number | null;
         visibility?: CrmOpportunityVisibility;
         partner_uuid?: string;
@@ -20,7 +21,7 @@ export declare namespace ICrmOpportunity {
         custom_fields?: Record<string, unknown>;
         sla_priority?: CrmSlaPriority;
     }
-    type IUpdate = Partial<ICreate>;
+    type IUpdate = Partial<Omit<ICreate, 'idempotency_key'>>;
     interface ICrmOpportunityResponse extends BaseResponse {
         shop_id: number | string;
         owning_branch_id?: number | string | null;

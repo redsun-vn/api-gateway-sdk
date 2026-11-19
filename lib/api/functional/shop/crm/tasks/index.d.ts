@@ -17,6 +17,21 @@ export declare namespace findAll {
     };
     const path: (query: findAll.Query) => string;
 }
+export declare function counts(connection: IConnection): Promise<counts.Output>;
+export declare namespace counts {
+    type Output = Primitive<IResponse<ICrmTask.ICountsResponse>>;
+    const METADATA: {
+        readonly method: "GET";
+        readonly path: "/shop/crm/tasks/counts";
+        readonly request: null;
+        readonly response: {
+            readonly type: "application/json";
+            readonly encrypted: false;
+        };
+        readonly status: 200;
+    };
+    const path: () => string;
+}
 export declare function create(connection: IConnection, data: create.Input): Promise<create.Output>;
 export declare namespace create {
     type Input = Resolved<ICrmTask.ICreate>;
@@ -38,7 +53,7 @@ export declare namespace create {
 }
 export declare function update(connection: IConnection, id: string, data: update.Input): Promise<update.Output>;
 export declare namespace update {
-    type Input = Resolved<Partial<ICrmTask.ICreate>>;
+    type Input = Resolved<Partial<Omit<ICrmTask.ICreate, "idempotency_key">>>;
     type Output = Primitive<IResponse<false | true>>;
     const METADATA: {
         readonly method: "PUT";

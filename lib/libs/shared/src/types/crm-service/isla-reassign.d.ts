@@ -3,6 +3,7 @@ export declare namespace ICrmSlaReassign {
         id: number | string;
         entity_type: 'lead' | 'opportunity';
         entity_id: number | string;
+        entity_name: string | null;
         current_owner_id: number | string;
         created_at: string;
     }

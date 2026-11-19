@@ -155,6 +155,7 @@ export declare namespace ICall {
         note?: string;
     }
     interface ICreateLeadFromCallInput extends ICreateLeadFromCallRequest, IStaffScope {
+        idempotency_key?: string;
         stringee_call_id: string;
         scoped_owner_ids?: number[];
     }

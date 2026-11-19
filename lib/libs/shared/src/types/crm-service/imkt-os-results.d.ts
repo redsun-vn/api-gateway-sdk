@@ -3,7 +3,7 @@ type PositiveInt = number & tags.Type<'uint32'> & tags.Minimum<1>;
 type Id = number | string;
 type Reason = string & tags.Pattern<'^[a-z_]{1,48}$'>;
 export declare namespace IMktOsResults {
-    export type ParticipantStatus = 'waiting' | 'sent' | 'replied' | 'returned' | 'skipped' | 'failed' | 'exited' | 'clicked';
+    export type ParticipantStatus = 'waiting' | 'sent' | 'replied' | 'returned' | 'skipped' | 'failed' | 'exited' | 'clicked' | 'opened';
     export type ActivityType = 'send' | 'reply' | 'order' | 'user_change' | 'system';
     export interface IHeadline {
         key: 'reached' | 'replied' | 'returned';
@@ -76,6 +76,18 @@ export declare namespace IMktOsResults {
     export interface IClickBreakdownRow {
         key: string;
         clicks: number;
+    }
+    export interface IResultOpens {
+        opened: number;
+        open_rate: number | null;
+        reached_open_tracked: number;
+        apple_only: number;
+        by_step: Array<{
+            activity_id: number;
+            seq: number;
+            opened: number;
+            reached_open_tracked: number;
+        }>;
     }
     export interface IResultClicks {
         clicked: number;
@@ -211,6 +223,7 @@ export declare namespace IMktOsResults {
         cost: IResultCost | null;
         next_step: IResultNextStep;
         clicks?: IResultClicks;
+        opens?: IResultOpens;
         effectiveness?: IResultEffectiveness;
     }
     export interface IStepOutcome {
@@ -289,7 +302,7 @@ export declare namespace IMktOsResults {
         page: number;
         page_size: number;
     }
-    export type TimelineEventType = 'enrolled' | 'scheduled' | 'deferred' | 'skipped' | 'sent' | 'failed' | 'replied' | 'converted' | 'exited' | 'task_created' | 'labeled' | 'link_clicked';
+    export type TimelineEventType = 'enrolled' | 'scheduled' | 'deferred' | 'skipped' | 'sent' | 'failed' | 'replied' | 'converted' | 'exited' | 'task_created' | 'labeled' | 'link_clicked' | 'email_opened';
     export interface ITimelineEvent {
         at: string;
         type: TimelineEventType;
@@ -299,6 +312,7 @@ export declare namespace IMktOsResults {
         channel?: string;
         display_url?: string;
         device_type?: string | null;
+        open_count?: number;
     }
     export interface IParticipantDetail {
         id: number;
@@ -391,6 +405,11 @@ export declare namespace IMktOsResults {
             at: string | null;
             step_seq: number | null;
             display_url: string;
+        }>;
+        opens?: Array<{
+            at: string | null;
+            step_seq: number | null;
+            open_count: number;
         }>;
     }
     export interface IMarketingSignal {

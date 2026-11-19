@@ -38,7 +38,7 @@ export declare namespace create {
 }
 export declare function update(connection: IConnection, id: string, data: update.Input): Promise<update.Output>;
 export declare namespace update {
-    type Input = Resolved<Partial<ICrmActivity.ICreate>>;
+    type Input = Resolved<Partial<Omit<ICrmActivity.ICreate, "idempotency_key">>>;
     type Output = Primitive<IResponse<false | true>>;
     const METADATA: {
         readonly method: "PUT";

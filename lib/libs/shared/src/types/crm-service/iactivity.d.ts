@@ -4,6 +4,7 @@ import { CrmActivityType, CrmActivityCreateType, CrmActivityRelatedToType, CrmAc
 type PurposeTags = Array<string & tags.Pattern<'^[a-z][a-z0-9_]{1,30}$'>> & tags.MaxItems<10> & tags.UniqueItems;
 export declare namespace ICrmActivity {
     interface ICreate {
+        idempotency_key?: string & tags.MaxLength<100>;
         type: CrmActivityCreateType;
         related_to_type: CrmActivityRelatedToType;
         related_to_id: number;
@@ -18,7 +19,7 @@ export declare namespace ICrmActivity {
         outcome?: CrmActivityOutcome;
         purpose_tags?: PurposeTags;
     }
-    type IUpdate = Partial<ICreate>;
+    type IUpdate = Partial<Omit<ICreate, 'idempotency_key'>>;
     interface ICrmActivityResponse extends BaseResponse {
         shop_id: number | string;
         type: CrmActivityType;

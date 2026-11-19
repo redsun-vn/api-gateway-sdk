@@ -13,7 +13,8 @@ export declare enum CrmConversationPermission {
 export declare enum CrmOpportunityPermission {
     VIEW = "crm_opportunity-view",
     UPDATE = "crm_opportunity-update",
-    ASSIGN = "crm_opportunity-assign"
+    ASSIGN = "crm_opportunity-assign",
+    REPORT = "crm_opportunity-report"
 }
 export declare enum CrmConfigPermission {
     UPDATE = "crm_config-update"

@@ -5,6 +5,7 @@ export * as ai_summary from "./ai_summary";
 export * as ai_suggestions from "./ai_suggestions";
 export * as bulk_reassign from "./bulk_reassign";
 export * as kanban from "./kanban";
+export * as board_summary from "./board_summary";
 export * as scoped from "./scoped";
 export * as quote_prefill from "./quote_prefill";
 export * as link_sale_order from "./link_sale_order";
@@ -75,7 +76,7 @@ export declare namespace findOne {
 }
 export declare function update(connection: IConnection, id: number, body: update.Input): Promise<update.Output>;
 export declare namespace update {
-    type Input = Resolved<Partial<ICrmOpportunity.ICreate>>;
+    type Input = Resolved<Partial<Omit<ICrmOpportunity.ICreate, "idempotency_key">>>;
     type Output = Primitive<IResponse<ICrmOpportunity.ICrmOpportunityResponse>>;
     const METADATA: {
         readonly method: "PUT";

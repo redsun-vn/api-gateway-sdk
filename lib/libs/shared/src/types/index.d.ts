@@ -79,3 +79,4 @@ export * from './deposit-service';
 export * from './crm-service';
 export * from './ads-service';
 export * from './istaff-api-key.type';
+export * from './iaccount-deletion';

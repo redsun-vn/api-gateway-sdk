@@ -3,6 +3,7 @@ export * as refresh_token from "./refresh_token";
 export * as logout from "./logout";
 export * as logout_v2 from "./logout_v2";
 export * as me from "./me";
+export * as account from "./account";
 export * as register from "./register";
 export * as phone_status from "./phone_status";
 export * as register_temporary from "./register_temporary";

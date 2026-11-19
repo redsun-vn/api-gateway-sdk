@@ -5,6 +5,7 @@ import { CrmLeadSource, CrmLeadStatus, CrmBantClassification } from '../../enum/
 import { CrmSlaPriority } from '../../enum/crm-service/sla';
 export declare namespace ICrmLead {
     interface ICreate {
+        idempotency_key?: string & tags.MaxLength<100>;
         branch_id?: number | null;
         source: CrmLeadSource;
         source_ref?: string;
@@ -31,7 +32,7 @@ export declare namespace ICrmLead {
         accepts_marketing?: boolean;
         consent_text_version?: string & tags.MinLength<1> & tags.MaxLength<32>;
     }
-    type IUpdate = Partial<Omit<ICreate, 'owner_id' | 'force_create' | 'force_create_reason' | 'team_id'>> & {
+    type IUpdate = Partial<Omit<ICreate, 'owner_id' | 'force_create' | 'force_create_reason' | 'team_id' | 'idempotency_key'>> & {
         owner_id?: number | string | null;
     };
     interface IAssignTeam {
@@ -210,5 +211,25 @@ export declare namespace ICrmLead {
     interface IAwaitingFirstResponseResponse {
         items: IAwaitingFirstResponseItem[];
         total: number;
+    }
+    interface ISlaDueQuery {
+        limit?: number & tags.Type<'int32'> & tags.Minimum<1> & tags.Maximum<20>;
+    }
+    interface ISlaDueRpcInput {
+        shop_id: number | string;
+        viewer_staff_id: number | string;
+        limit?: number;
+    }
+    type SlaDueStatus = 'on_time' | 'warning' | 'breached';
+    interface ISlaDueItem {
+        lead_id: number | string;
+        name: string | null;
+        status: SlaDueStatus;
+        remaining_business_minutes: number;
+        started_at: Date | string;
+    }
+    interface ISlaDueResponse {
+        total: number;
+        items: ISlaDueItem[];
     }
 }

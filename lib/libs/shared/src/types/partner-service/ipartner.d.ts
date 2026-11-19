@@ -93,6 +93,28 @@ export declare namespace IPartner {
         source_lead_id?: number | string | null;
         owner_id?: number | string | null;
     }
+    interface IPartnerListItem extends IPartnerResponse {
+        last_contact_at: Date | string | null;
+        open_opportunity_count: number | null;
+    }
+    interface IPartnerCrmStatsRef {
+        uuid: string | null;
+        id: number | string | null;
+    }
+    interface IPartnerCrmStatsRpcInput {
+        shop_id: number | string;
+        partner_refs: IPartnerCrmStatsRef[];
+        scoped_owner_ids?: (number | string)[];
+    }
+    interface IPartnerCrmStatsItem {
+        partner_uuid: string | null;
+        partner_id: number | string | null;
+        last_contact_at: Date | string | null;
+        open_opportunity_count: number;
+    }
+    interface IPartnerCrmStatsResponse {
+        items: IPartnerCrmStatsItem[];
+    }
     interface IUpdateWebsite {
         attachment_id?: number & tags.Type<'int32'>;
         first_name?: string;

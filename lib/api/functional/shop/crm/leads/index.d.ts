@@ -4,6 +4,7 @@ import type { ICrmLead } from "../../../../../libs/shared/src/types/crm-service/
 export * as ai_summary from "./ai_summary";
 export * as ai_suggestions from "./ai_suggestions";
 export * as scoped from "./scoped";
+export * as sla_due from "./sla_due";
 export * as team from "./team";
 export * as unqualified from "./unqualified";
 export * as bulk_assign from "./bulk_assign";

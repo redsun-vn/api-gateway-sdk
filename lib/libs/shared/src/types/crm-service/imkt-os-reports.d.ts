@@ -89,6 +89,8 @@ export declare namespace IMktOsReports {
         approved_at: string | null;
         reached: number;
         click_rate: number | null;
+        opened?: number;
+        open_rate?: number | null;
         reply_rate: number | null;
         unsubscribe_rate: number | null;
         conversions: number;

@@ -4,7 +4,7 @@ import type { IPartner } from "../../../../../libs/shared/src/types/partner-serv
 export declare function findAllScoped(connection: IConnection, query: findAllScoped.Query): Promise<findAllScoped.Output>;
 export declare namespace findAllScoped {
     type Query = Resolved<IQuery>;
-    type Output = Primitive<IResponse<IResponsePagination<IPartner.IPartnerResponse>>>;
+    type Output = Primitive<IResponse<IResponsePagination<IPartner.IPartnerListItem>>>;
     const METADATA: {
         readonly method: "GET";
         readonly path: "/shop/partners/scoped";
