@@ -11,7 +11,7 @@ export declare namespace IMktOsRun {
     type ArtifactType = 'SignalDigest' | 'CampaignBrief' | 'CampaignPlan' | 'EmailContent' | 'GuardReport';
     type CampaignStatus = 'draft' | 'awaiting_approval' | 'active' | 'paused' | 'completed' | 'stopped';
     type BudgetScope = 'shop_month' | 'run';
-    type PauseReason = 'manual' | 'content_changed' | 'unsubscribe_rate' | 'approver_inactive' | 'budget' | 'package_expired' | 'crm_package_expired';
+    type PauseReason = 'manual' | 'content_changed' | 'unsubscribe_rate' | 'send_failure_rate' | 'approver_inactive' | 'budget' | 'package_expired' | 'crm_package_expired';
     type GoalMetric = 'lead_replied' | 'lead_to_opportunity' | 'opportunity_stage_changed' | 'opportunity_won' | 'customer_new_order' | 'revenue';
     type Channel = 'email' | 'sms' | 'zalo_oa' | 'zns' | 'sales_task' | 'crm_label';
     interface IHolder {
