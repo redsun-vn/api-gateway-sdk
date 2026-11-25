@@ -31,6 +31,7 @@ export declare namespace IMktOs {
         monthly_budget: number | null;
         holdout_pct?: number;
         market_research_enabled?: boolean;
+        journey_social_posts_enabled?: boolean;
         link_tracking_enabled?: boolean;
         utm_tagging_enabled?: boolean;
         pixel_facebook_id?: string | null;
@@ -66,6 +67,7 @@ export declare namespace IMktOs {
         monthly_budget?: number | null;
         holdout_pct?: number;
         market_research_enabled?: boolean;
+        journey_social_posts_enabled?: boolean;
         email_layout_template_id?: PositiveInt | null;
         link_tracking_enabled?: boolean;
         utm_tagging_enabled?: boolean;

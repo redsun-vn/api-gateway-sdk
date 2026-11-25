@@ -361,6 +361,68 @@ export declare namespace IMktOsResults {
         page: number;
         page_size: number;
     }
+    export interface ISocialPostLiveTarget {
+        channel_id: string;
+        platform: string | null;
+        status: string;
+        release_url: string | null;
+        error_message: string | null;
+    }
+    export interface ISocialPostLive {
+        status: string;
+        scheduled_at: string | null;
+        scheduled_at_vn: string | null;
+        approved: boolean;
+        targets: ISocialPostLiveTarget[];
+    }
+    export interface ISocialPostItem {
+        seq: number;
+        at: string;
+        channel_ids: string[];
+        status: string;
+        error_code: string | null;
+        error_message: string | null;
+        ads_post_id: string | null;
+        no_short_link: boolean;
+        cancel_pending: boolean;
+        ads: ISocialPostLive | null;
+        ads_error: string | null;
+    }
+    export interface ISocialPostList {
+        items: ISocialPostItem[];
+    }
+    export interface ISocialPostMetrics {
+        views: number | null;
+        reach: number | null;
+        impressions: number | null;
+        likes: number | null;
+        comments: number | null;
+        shares: number | null;
+        engagements: number | null;
+    }
+    export interface ISocialPostChannelResult {
+        channel_id: string;
+        platform: string | null;
+        status: string | null;
+        published_at: string | null;
+        metrics: ISocialPostMetrics;
+    }
+    export interface ISocialPostResult {
+        seq: number;
+        at: string;
+        channel_ids: string[];
+        status: string;
+        measured: boolean;
+        clicks: number | null;
+        visitors_estimated: number | null;
+        orders: number | null;
+        revenue: number | null;
+        social: ISocialPostChannelResult[] | null;
+        stats_note: string | null;
+    }
+    export interface ISocialPostResultList {
+        items: ISocialPostResult[];
+    }
     export interface IMarketingLead {
         id: Id;
         shop_id: Id;
