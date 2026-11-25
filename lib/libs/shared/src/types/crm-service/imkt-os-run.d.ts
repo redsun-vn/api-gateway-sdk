@@ -78,6 +78,34 @@ export declare namespace IMktOsRun {
         artifacts: IArtifact[];
         zns_risk_ack_required?: boolean;
         zns_risk_ack?: IZnsRiskAck | null;
+        has_social_posts?: boolean;
+        social_posts_editor_id?: number | null;
+        journey_social_posts_enabled?: boolean;
+    }
+    interface ISocialPostSlot {
+        seq?: number & tags.Type<'uint32'>;
+        at_vn: string & tags.MaxLength<16>;
+        channel_ids: Array<string & tags.MaxLength<64>> & tags.MaxItems<10>;
+        target_url?: (string & tags.MaxLength<2048>) | null;
+    }
+    interface ISocialPostContent {
+        seq: number;
+        body: string;
+        hashtags: string[];
+        media: Array<{
+            file_id: string;
+            mime: string;
+            width: number | null;
+            height: number | null;
+        }>;
+        signature: string | null;
+        channel_ids: string[];
+    }
+    interface ISocialPostsSaveRequest {
+        social_posts: ISocialPostSlot[] & tags.MaxItems<5>;
+    }
+    interface ISocialPostsWriteRequest {
+        seqs?: Array<number & tags.Type<'uint32'>> & tags.MaxItems<5>;
     }
     interface IZnsRiskAck {
         staff_id: number;
@@ -86,6 +114,7 @@ export declare namespace IMktOsRun {
     }
     interface ICreateRequest {
         audience_id: PositiveInt;
+        social_posts?: ISocialPostSlot[] & tags.MaxItems<5>;
     }
     interface IRunSaved {
         ok: true;
@@ -98,6 +127,11 @@ export declare namespace IMktOsRun {
     interface IArtifactUpdateContent {
         messages?: IEmailMessageEdit[];
         tone_set_id?: number | null | '';
+        social_posts?: Array<{
+            body?: string;
+            hashtags?: string[];
+            media?: unknown[];
+        }>;
         [key: string]: unknown;
     }
     interface IEmailMessageEdit {
@@ -278,6 +312,9 @@ export declare namespace IMktOsRun {
         can_pause: boolean;
         can_resume: boolean;
         can_stop: boolean;
+        has_social_posts?: boolean;
+        journey_social_posts_enabled?: boolean;
+        social_post_approval_blocked?: boolean;
         created_by: number;
         created_at: string;
         activities: ICampaignActivity[];
@@ -295,6 +332,9 @@ export declare namespace IMktOsRun {
         content_hash: string & tags.MinLength<1>;
         submit_seq: (number & tags.Type<'uint32'>) | null;
         tone_review_ack?: boolean;
+    }
+    interface ICampaignStopRequest {
+        cancel_social_posts?: boolean;
     }
     interface ICampaignRemindResponse {
         ok: true;

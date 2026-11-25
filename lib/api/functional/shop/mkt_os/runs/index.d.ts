@@ -6,6 +6,7 @@ export * as email_layout from "./email_layout";
 export * as messages from "./messages";
 export * as artifacts from "./artifacts";
 export * as steps from "./steps";
+export * as social_posts from "./social_posts";
 export declare function create(connection: IConnection, body: create.Input): Promise<create.Output>;
 export declare namespace create {
     type Input = Resolved<IMktOsRun.ICreateRequest>;

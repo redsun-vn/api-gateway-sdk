@@ -4,7 +4,7 @@ import { ISocialChannel } from './isocial-channel';
 export declare namespace ISocialPost {
     type Status = 'draft' | 'pending_approval' | 'scheduled' | 'publishing' | 'published' | 'partially_failed' | 'failed' | 'unconfirmed' | 'paused' | 'cancelled';
     type TargetStatus = 'scheduled' | 'publishing' | 'processing' | 'published' | 'failed' | 'unconfirmed' | 'paused' | 'cancelled';
-    type Source = 'manual' | 'rss' | 'api' | 'plug';
+    type Source = 'manual' | 'rss' | 'api' | 'plug' | 'journey';
     type RepeatUnit = 'day' | 'week' | 'month';
     type FirstCommentStatus = 'pending' | 'sending' | 'done' | 'failed' | 'unconfirmed';
     type Instant = string & tags.MinLength<10> & tags.MaxLength<40>;
@@ -159,6 +159,7 @@ export declare namespace ISocialPost {
         series_id: string | null;
         occurrence_index: number;
         source: Source;
+        external_ref?: string | null;
         set_id: string | null;
         approved: boolean;
         content_hash: string & tags.Pattern<'^[0-9a-f]{64}$'>;

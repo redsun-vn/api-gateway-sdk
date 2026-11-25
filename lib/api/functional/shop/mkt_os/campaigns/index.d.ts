@@ -4,6 +4,8 @@ import type { IMktOsResults } from "../../../../../libs/shared/src/types/crm-ser
 import type { IMktOsRun } from "../../../../../libs/shared/src/types/crm-service/imkt-os-run";
 import type { IMktOsToday } from "../../../../../libs/shared/src/types/crm-service/imkt-os-today";
 export * as links from "./links";
+export * as social_posts from "./social_posts";
+export * as social_post_results from "./social_post_results";
 export * as participants from "./participants";
 export declare function list(connection: IConnection, query: list.Query): Promise<list.Output>;
 export declare namespace list {
@@ -146,13 +148,17 @@ export declare namespace duplicate {
     };
     const path: (id: number) => string;
 }
-export declare function stop(connection: IConnection, id: number): Promise<stop.Output>;
+export declare function stop(connection: IConnection, id: number, body?: stop.Input): Promise<stop.Output>;
 export declare namespace stop {
+    type Input = Resolved<IMktOsRun.ICampaignStopRequest>;
     type Output = Primitive<IResponse<IMktOsRun.ICampaignSaved>>;
     const METADATA: {
         readonly method: "POST";
         readonly path: "/shop/mkt-os/campaigns/:id/stop";
-        readonly request: null;
+        readonly request: {
+            readonly type: "application/json";
+            readonly encrypted: false;
+        };
         readonly response: {
             readonly type: "application/json";
             readonly encrypted: false;
